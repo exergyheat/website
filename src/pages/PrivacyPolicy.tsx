@@ -11,7 +11,7 @@ const PrivacyPolicy = () => {
     {
       icon: Lock,
       title: "Information Security",
-      content: "All data is encrypted in transit and at rest using state-of-the-art encryption protocols and technologies."
+      content: "All data is securely stored on our private Exergy servers. We avoid big tech platforms to maintain complete control over your data protection."
     },
     {
       icon: Eye,
@@ -77,10 +77,9 @@ const PrivacyPolicy = () => {
               </p>
               <ul className="list-disc pl-6 text-surface-600 space-y-2">
                 <li>Name and contact information</li>
-                <li>Account credentials</li>
-                <li>Payment information</li>
                 <li>System performance data</li>
                 <li>Usage statistics</li>
+                <li>Project location (when required)</li>
               </ul>
             </section>
 
@@ -138,8 +137,7 @@ const PrivacyPolicy = () => {
                 If you have any questions about this Privacy Policy, please contact us at:
               </p>
               <div className="mt-4 p-4 bg-surface-50 rounded-lg">
-                <p className="text-surface-600">Email: privacy@exergyheat.com</p>
-                <p className="text-surface-600">Phone: +1 (555) 123-4567</p>
+                <p className="text-surface-600">Email: admin@exergyheat.com</p>
                 <p className="text-surface-600">Address: 3700 N Franklin St. Denver, CO 80205</p>
               </div>
             </section>
