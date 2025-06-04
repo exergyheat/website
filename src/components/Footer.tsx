@@ -78,9 +78,6 @@ const Footer = () => {
                 </a>
               </div>
             </div>
-            <Link to="/contact" className="inline-block text-surface-400 hover:text-surface-200 transition-colors mb-6">
-              Contact Us
-            </Link>
             <div className="flex space-x-4">
               <a href="https://github.com" className="text-surface-400 hover:text-surface-200 transition-colors">
                 <Github className="h-6 w-6" />
