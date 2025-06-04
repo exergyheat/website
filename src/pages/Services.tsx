@@ -239,7 +239,7 @@ const Services = () => {
             to="/book-call"
             className="inline-flex items-center px-8 py-4 bg-white text-primary-600 rounded-lg hover:bg-primary-50 transition-colors"
           >
-            Get Started
+            Book an Intro Call
             <ArrowRight className="ml-2 h-5 w-5" />
           </Link>
         </div>
