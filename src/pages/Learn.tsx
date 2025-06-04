@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import { BookOpen, Calculator, Users, MessageSquare, HelpCircle } from 'lucide-react'
+import { BookOpen, Calculator, Users, Zap, Bitcoin, Cpu, HelpCircle } from 'lucide-react'
 
 const Learn = () => {
   const resources = [
@@ -11,21 +11,15 @@ const Learn = () => {
       link: "/education"
     },
     {
-      title: "ROI Calculators",
+      title: "Calculators",
       description: "Calculate potential savings and earnings with our interactive tools",
       icon: Calculator,
       link: "/calculators"
     },
     {
-      title: "Community Forum",
-      description: "Connect with other users and share experiences",
+      title: "Technical Forum",
+      description: "Connect with experts and share experiences",
       icon: Users,
-      link: "/forum"
-    },
-    {
-      title: "Discussion Board",
-      description: "Engage in technical discussions and get expert advice",
-      icon: MessageSquare,
       link: "/forum"
     },
     {
@@ -36,8 +30,29 @@ const Learn = () => {
     }
   ]
 
+  const concepts = [
+    {
+      title: "Energy Equivalence",
+      icon: Zap,
+      description: "Electric heaters and Bitcoin miners consume the same energy to produce heat. The key difference? Bitcoin miners reward you for supporting the network while heating your space.",
+      image: "https://images.pexels.com/photos/8293778/pexels-photo-8293778.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+    },
+    {
+      title: "Secure Network",
+      icon: Bitcoin,
+      description: "Bitcoin is a secure, ethical protocol that rewards participants for maintaining network security. Your heater earns these rewards while providing the same warmth as traditional heaters.",
+      image: "https://images.pexels.com/photos/844124/pexels-photo-844124.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+    },
+    {
+      title: "100% Efficiency",
+      icon: Cpu,
+      description: "All electricity used in Bitcoin mining converts to heat - there's no waste. This heat is then captured and distributed throughout your space, making it a perfectly efficient heating solution.",
+      image: "https://images.pexels.com/photos/1036936/pexels-photo-1036936.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+    }
+  ]
+
   return (
-    <div className="bg-surface-50 min-h-screen">
+    <div className="bg-surface-50 dark:bg-surface-900 min-h-screen">
       {/* Hero Section */}
       <div className="bg-gradient-to-r from-primary-600 to-primary-800 py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -45,75 +60,71 @@ const Learn = () => {
             Learn About Hashrate Heating
           </h1>
           <p className="text-xl text-primary-100 max-w-2xl mx-auto">
-            Explore our comprehensive resources and join our community to master the future of heating technology
+            Discover how our innovative technology transforms traditional heating into a revenue-generating solution
           </p>
         </div>
       </div>
 
       {/* Resources Grid */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <h2 className="text-3xl font-bold text-surface-900 dark:text-surface-100 text-center mb-12">
+          Learning Resources
+        </h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {resources.map((resource, index) => (
             <Link
               key={index}
               to={resource.link}
-              className="bg-white rounded-lg shadow-lg p-8 hover:shadow-xl transition-shadow"
+              className="bg-white dark:bg-surface-800 rounded-lg shadow-lg p-8 hover:shadow-xl transition-shadow"
             >
               <div className="flex items-center mb-4">
-                <div className="p-3 bg-primary-100 rounded-lg">
-                  <resource.icon className="h-6 w-6 text-primary-600" />
+                <div className="p-3 bg-primary-100 dark:bg-primary-900 rounded-lg">
+                  <resource.icon className="h-6 w-6 text-primary-600 dark:text-primary-400" />
                 </div>
-                <h3 className="text-xl font-semibold text-surface-900 ml-4">
+                <h3 className="text-xl font-semibold text-surface-900 dark:text-surface-100 ml-4">
                   {resource.title}
                 </h3>
               </div>
-              <p className="text-surface-600">{resource.description}</p>
+              <p className="text-surface-600 dark:text-surface-400">{resource.description}</p>
             </Link>
           ))}
         </div>
       </div>
 
-      {/* Featured Content */}
-      <div className="bg-white py-20">
+      {/* Core Concepts */}
+      <div className="bg-white dark:bg-surface-800 py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold text-surface-900 mb-12 text-center">
-            Featured Learning Paths
+          <h2 className="text-3xl font-bold text-surface-900 dark:text-surface-100 text-center mb-12">
+            Understanding Hashrate Heating
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
-            <div className="space-y-6">
-              <h3 className="text-2xl font-semibold text-surface-900">For Beginners</h3>
-              <ul className="space-y-4">
-                <li className="flex items-center text-surface-700">
-                  <div className="h-2 w-2 bg-primary-600 rounded-full mr-3"></div>
-                  Introduction to Hashrate Heating
-                </li>
-                <li className="flex items-center text-surface-700">
-                  <div className="h-2 w-2 bg-primary-600 rounded-full mr-3"></div>
-                  Basic Setup Guide
-                </li>
-                <li className="flex items-center text-surface-700">
-                  <div className="h-2 w-2 bg-primary-600 rounded-full mr-3"></div>
-                  Understanding ROI
-                </li>
-              </ul>
-            </div>
-            <div className="space-y-6">
-              <h3 className="text-2xl font-semibold text-surface-900">For Advanced Users</h3>
-              <ul className="space-y-4">
-                <li className="flex items-center text-surface-700">
-                  <div className="h-2 w-2 bg-primary-600 rounded-full mr-3"></div>
-                  Advanced Optimization Techniques
-                </li>
-                <li className="flex items-center text-surface-700">
-                  <div className="h-2 w-2 bg-primary-600 rounded-full mr-3"></div>
-                  System Integration Strategies
-                </li>
-                <li className="flex items-center text-surface-700">
-                  <div className="h-2 w-2 bg-primary-600 rounded-full mr-3"></div>
-                  Performance Monitoring
-                </li>
-              </ul>
-            </div>
+          <div className="space-y-20">
+            {concepts.map((concept, index) => (
+              <div 
+                key={index} 
+                className={`flex flex-col ${
+                  index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'
+                } gap-12 items-center`}
+              >
+                <div className="w-full md:w-1/2">
+                  <img
+                    src={concept.image}
+                    alt={concept.title}
+                    className="rounded-lg shadow-2xl w-full h-[400px] object-cover"
+                  />
+                </div>
+                <div className="w-full md:w-1/2 space-y-6">
+                  <div className="inline-block p-3 bg-primary-100 dark:bg-primary-900 rounded-lg">
+                    <concept.icon className="h-8 w-8 text-primary-600 dark:text-primary-400" />
+                  </div>
+                  <h3 className="text-2xl font-bold text-surface-900 dark:text-surface-100">
+                    {concept.title}
+                  </h3>
+                  <p className="text-lg text-surface-600 dark:text-surface-400">
+                    {concept.description}
+                  </p>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       </div>
