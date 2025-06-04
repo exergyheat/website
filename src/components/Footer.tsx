@@ -11,7 +11,7 @@ const Footer = () => {
           <div className="col-span-1 md:col-span-2">
             <div className="flex items-center">
               <Laptop className="h-8 w-8 text-blue-400" />
-              <span className="ml-2 text-xl font-bold">TechStart</span>
+              <span className="ml-2 text-xl font-bold">EXERGY</span>
             </div>
             <p className="mt-4 text-gray-400">
               Upgrade to heat that pays.
@@ -74,7 +74,7 @@ const Footer = () => {
         </div>
 
         <div className="mt-8 pt-8 border-t border-gray-800 text-center text-gray-400">
-          <p>&copy; {new Date().getFullYear()} TechStart. All rights reserved.</p>
+          <p>&copy; {new Date().getFullYear()} EXERGY. All rights reserved.</p>
         </div>
       </div>
     </footer>
