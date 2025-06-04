@@ -2,6 +2,7 @@ import React from 'react'
 import { ArrowRight, Code, Globe, Shield, Bitcoin, Cpu, Flame, ArrowRightCircle } from 'lucide-react'
 import { Link } from 'react-router-dom'
 import { useTypewriter } from '../hooks/useTypewriter'
+import ProjectCarousel from '../components/ProjectCarousel'
 
 const Home = () => {
   const headlineText = useTypewriter("You pay for heat every month.", 75)
@@ -151,6 +152,9 @@ const Home = () => {
           </div>
         </div>
       </div>
+
+      {/* Project Carousel */}
+      <ProjectCarousel />
 
       {/* CTA Section */}
       <div className="bg-primary-600 py-16">

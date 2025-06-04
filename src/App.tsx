@@ -15,6 +15,7 @@ import Forum from './pages/Forum'
 import FAQ from './pages/FAQ'
 import Products from './pages/Products'
 import BookCall from './pages/BookCall'
+import Portfolio from './pages/Portfolio'
 
 function App() {
   return (
@@ -36,6 +37,7 @@ function App() {
               <Route path="/forum" element={<Forum />} />
               <Route path="/faq" element={<FAQ />} />
               <Route path="/book-call" element={<BookCall />} />
+              <Route path="/portfolio" element={<Portfolio />} />
             </Routes>
           </main>
           <Footer />
