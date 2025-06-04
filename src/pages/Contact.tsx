@@ -43,7 +43,7 @@ const Contact = () => {
             <div className="space-y-6">
               <div className="flex items-center">
                 <Mail className="h-6 w-6 text-blue-600" />
-                <span className="ml-4 text-gray-600">contact@techstart.com</span>
+                <span className="ml-4 text-gray-600">contact@exergyheat.com</span>
               </div>
               <div className="flex items-center">
                 <Phone className="h-6 w-6 text-blue-600" />
@@ -51,15 +51,15 @@ const Contact = () => {
               </div>
               <div className="flex items-center">
                 <MapPin className="h-6 w-6 text-blue-600" />
-                <span className="ml-4 text-gray-600">123 Innovation Drive, Tech City, TC 12345</span>
+                <span className="ml-4 text-gray-600">3700 N Franklin St. Denver, CO 80205</span>
               </div>
             </div>
 
             <div className="mt-12">
               <h3 className="text-lg font-semibold text-gray-900 mb-4">Office Hours</h3>
               <div className="space-y-2 text-gray-600">
-                <p>Monday - Friday: 9:00 AM - 6:00 PM</p>
-                <p>Saturday: 10:00 AM - 4:00 PM</p>
+                <p>Monday - Friday: 8:00 AM - 5:00 PM</p>
+                <p>Saturday: Closed</p>
                 <p>Sunday: Closed</p>
               </div>
             </div>
