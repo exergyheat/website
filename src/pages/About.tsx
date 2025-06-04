@@ -214,7 +214,7 @@ const About = () => {
                     <div className={`w-full md:w-1/2 pl-24 md:pl-0 ${index === 0 || index === 2 ? 'md:pr-12 md:text-right' : 'md:pl-12 md:ml-auto'}`}>
                       <h3 className="text-xl font-semibold text-surface-900 dark:text-surface-100 mb-2">{milestone.quarter}</h3>
                       <h4 className="text-lg font-medium text-primary-600 dark:text-primary-400 mb-2">{milestone.title}</h4>
-                      <ul className="space-y-12">
+                      <ul className="space-y-2">
                         {milestone.events.map((event, eventIndex) => (
                           <li key={eventIndex} className="text-surface-600 dark:text-surface-400">{event}</li>
                         ))}
