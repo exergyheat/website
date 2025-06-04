@@ -63,7 +63,7 @@ const Contact = () => {
                   href="https://maps.app.goo.gl/bp9d8a3GEpfzv3Kg7"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="ml-4 text-primary-400 hover:text-primary-600 dark:hover:text-primary-400 transition-colors"
+                  className="ml-4 text-primary-600 dark:text-primary-400 hover:text-primary-400 dark:hover:text-primary-600 transition-colors"
                 >
                   3700 N Franklin St. Denver, CO 80205
                 </a>
