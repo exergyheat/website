@@ -30,7 +30,7 @@ const Home = () => {
               to="/learn"
               className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-primary-600 hover:bg-primary-700 transition-colors"
             >
-              Learn How
+              Learn More
               <ArrowRight className="ml-2 h-5 w-5" />
             </Link>
           </div>
