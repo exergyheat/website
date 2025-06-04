@@ -118,7 +118,7 @@ const Home = () => {
 
           <div className="mt-12 text-center">
             <Link
-              to="/learm"
+              to="/learn"
               className="inline-flex items-center px-6 py-3 bg-primary-600 text-white rounded-lg hover:bg-primary-700 transition-colors"
             >
               About Hashrate Heating
