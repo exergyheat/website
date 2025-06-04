@@ -1,5 +1,5 @@
 import React from 'react'
-import { ArrowRight, Code, Globe, Shield } from 'lucide-react'
+import { ArrowRight, Code, Globe, Shield, Bitcoin, Cpu, Flame, ArrowRightCircle } from 'lucide-react'
 import { Link } from 'react-router-dom'
 import { useTypewriter } from '../hooks/useTypewriter'
 
@@ -33,6 +33,77 @@ const Home = () => {
               Learn More
               <ArrowRight className="ml-2 h-5 w-5" />
             </Link>
+          </div>
+        </div>
+      </div>
+
+      {/* How it Works Section */}
+      <div className="py-20 bg-white dark:bg-surface-800">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl font-bold text-surface-900 dark:text-surface-100 mb-4">How it Works</h2>
+            <p className="text-xl text-surface-600 dark:text-surface-400 max-w-2xl mx-auto">
+              Transform your heating infrastructure into a revenue-generating asset
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {/* Step 1: Bitcoin Miners */}
+            <div className="relative group">
+              <div className="bg-surface-50 dark:bg-surface-700 rounded-lg p-8 h-full transform transition-transform group-hover:scale-105">
+                <div className="absolute -right-4 top-1/2 transform -translate-y-1/2 z-10 hidden md:block">
+                  <ArrowRightCircle className="h-8 w-8 text-primary-600 dark:text-primary-400" />
+                </div>
+                <div className="flex justify-center mb-6">
+                  <div className="p-4 bg-primary-100 dark:bg-primary-900 rounded-full">
+                    <Bitcoin className="h-12 w-12 text-primary-600 dark:text-primary-400" />
+                  </div>
+                </div>
+                <h3 className="text-xl font-semibold text-surface-900 dark:text-surface-100 mb-4 text-center">
+                  Bitcoin Miners
+                </h3>
+                <p className="text-surface-600 dark:text-surface-400 text-center">
+                  Specialized computers that perform one task: mining bitcoin and generating heat as a byproduct.
+                </p>
+              </div>
+            </div>
+
+            {/* Step 2: Energy Conversion */}
+            <div className="relative group">
+              <div className="bg-surface-50 dark:bg-surface-700 rounded-lg p-8 h-full transform transition-transform group-hover:scale-105">
+                <div className="absolute -right-4 top-1/2 transform -translate-y-1/2 z-10 hidden md:block">
+                  <ArrowRightCircle className="h-8 w-8 text-primary-600 dark:text-primary-400" />
+                </div>
+                <div className="flex justify-center mb-6">
+                  <div className="p-4 bg-primary-100 dark:bg-primary-900 rounded-full">
+                    <Flame className="h-12 w-12 text-primary-600 dark:text-primary-400" />
+                  </div>
+                </div>
+                <h3 className="text-xl font-semibold text-surface-900 dark:text-surface-100 mb-4 text-center">
+                  100% Energy Conversion
+                </h3>
+                <p className="text-surface-600 dark:text-surface-400 text-center">
+                  All electrical energy used in mining is converted to heat, ensuring maximum efficiency.
+                </p>
+              </div>
+            </div>
+
+            {/* Step 3: Smart Integration */}
+            <div className="group">
+              <div className="bg-surface-50 dark:bg-surface-700 rounded-lg p-8 h-full transform transition-transform group-hover:scale-105">
+                <div className="flex justify-center mb-6">
+                  <div className="p-4 bg-primary-100 dark:bg-primary-900 rounded-full">
+                    <Cpu className="h-12 w-12 text-primary-600 dark:text-primary-400" />
+                  </div>
+                </div>
+                <h3 className="text-xl font-semibold text-surface-900 dark:text-surface-100 mb-4 text-center">
+                  Smart Integration
+                </h3>
+                <p className="text-surface-600 dark:text-surface-400 text-center">
+                  Advanced systems capture and distribute heat while earning bitcoin rewards for your business.
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </div>
