@@ -39,7 +39,7 @@ const Calculators = () => {
   ]
 
   return (
-    <div className="bg-surface-50 min-h-screen">
+    <div className="bg-surface-50 dark:bg-surface-900 min-h-screen">
       {/* Hero Section */}
       <div className="bg-gradient-to-r from-primary-600 to-primary-800 py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -64,7 +64,7 @@ const Calculators = () => {
               className={`flex items-center p-4 rounded-lg transition-colors ${
                 activeTab === calc.id
                   ? 'bg-primary-600 text-white'
-                  : 'bg-white text-surface-700 hover:bg-primary-50'
+                  : 'bg-white dark:bg-surface-800 text-surface-700 dark:text-surface-300 hover:bg-primary-50 dark:hover:bg-surface-700'
               }`}
             >
               <calc.icon className="h-5 w-5 mr-2" />
@@ -74,15 +74,15 @@ const Calculators = () => {
         </div>
 
         {/* Calculator Form */}
-        <div className="bg-white rounded-lg shadow-lg p-8">
+        <div className="bg-white dark:bg-surface-800 rounded-lg shadow-lg p-8">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
             {/* Input Section */}
             <div className="space-y-6">
-              <h2 className="text-2xl font-semibold text-surface-900 mb-6">
+              <h2 className="text-2xl font-semibold text-surface-900 dark:text-surface-100 mb-6">
                 Enter Your Details
               </h2>
               <div>
-                <label className="block text-sm font-medium text-surface-700 mb-2">
+                <label className="block text-sm font-medium text-surface-700 dark:text-surface-300 mb-2">
                   Current Monthly Heating Bill ($)
                 </label>
                 <input
@@ -90,12 +90,12 @@ const Calculators = () => {
                   name="currentBill"
                   value={values.currentBill}
                   onChange={handleInputChange}
-                  className="w-full p-3 border border-surface-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500"
+                  className="w-full p-3 border border-surface-300 dark:border-surface-600 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500 bg-white dark:bg-surface-700 text-surface-900 dark:text-surface-100"
                   placeholder="e.g., 200"
                 />
               </div>
               <div>
-                <label className="block text-sm font-medium text-surface-700 mb-2">
+                <label className="block text-sm font-medium text-surface-700 dark:text-surface-300 mb-2">
                   Desired System Size (kW)
                 </label>
                 <input
@@ -103,12 +103,12 @@ const Calculators = () => {
                   name="systemSize"
                   value={values.systemSize}
                   onChange={handleInputChange}
-                  className="w-full p-3 border border-surface-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500"
+                  className="w-full p-3 border border-surface-300 dark:border-surface-600 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500 bg-white dark:bg-surface-700 text-surface-900 dark:text-surface-100"
                   placeholder="e.g., 5"
                 />
               </div>
               <div>
-                <label className="block text-sm font-medium text-surface-700 mb-2">
+                <label className="block text-sm font-medium text-surface-700 dark:text-surface-300 mb-2">
                   Electricity Rate ($/kWh)
                 </label>
                 <input
@@ -116,7 +116,7 @@ const Calculators = () => {
                   name="electricityRate"
                   value={values.electricityRate}
                   onChange={handleInputChange}
-                  className="w-full p-3 border border-surface-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500"
+                  className="w-full p-3 border border-surface-300 dark:border-surface-600 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500 bg-white dark:bg-surface-700 text-surface-900 dark:text-surface-100"
                   placeholder="e.g., 0.12"
                 />
               </div>
@@ -126,32 +126,32 @@ const Calculators = () => {
             </div>
 
             {/* Results Section */}
-            <div className="bg-surface-50 rounded-lg p-8">
-              <h2 className="text-2xl font-semibold text-surface-900 mb-6">
+            <div className="bg-surface-50 dark:bg-surface-700 rounded-lg p-8">
+              <h2 className="text-2xl font-semibold text-surface-900 dark:text-surface-100 mb-6">
                 Estimated Results
               </h2>
               <div className="space-y-6">
                 <div>
-                  <h3 className="text-lg font-medium text-surface-700">
+                  <h3 className="text-lg font-medium text-surface-700 dark:text-surface-300">
                     Monthly Savings
                   </h3>
-                  <p className="text-3xl font-bold text-primary-600">
+                  <p className="text-3xl font-bold text-primary-600 dark:text-primary-400">
                     ${values.currentBill ? Math.round(Number(values.currentBill) * 0.6) : '0'}
                   </p>
                 </div>
                 <div>
-                  <h3 className="text-lg font-medium text-surface-700">
+                  <h3 className="text-lg font-medium text-surface-700 dark:text-surface-300">
                     Payback Period
                   </h3>
-                  <p className="text-3xl font-bold text-primary-600">
+                  <p className="text-3xl font-bold text-primary-600 dark:text-primary-400">
                     {values.currentBill ? '18-24 months' : '-'}
                   </p>
                 </div>
                 <div>
-                  <h3 className="text-lg font-medium text-surface-700">
+                  <h3 className="text-lg font-medium text-surface-700 dark:text-surface-300">
                     5-Year ROI
                   </h3>
-                  <p className="text-3xl font-bold text-primary-600">
+                  <p className="text-3xl font-bold text-primary-600 dark:text-primary-400">
                     {values.currentBill ? '250%' : '-'}
                   </p>
                 </div>

@@ -58,7 +58,7 @@ const Forum = () => {
   ]
 
   return (
-    <div className="bg-surface-50 min-h-screen">
+    <div className="bg-surface-50 dark:bg-surface-900 min-h-screen">
       {/* Hero Section */}
       <div className="bg-gradient-to-r from-primary-600 to-primary-800 py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -76,19 +76,19 @@ const Forum = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {categories.map((category, index) => (
-            <div key={index} className="bg-white rounded-lg shadow-lg p-6">
+            <div key={index} className="bg-white dark:bg-surface-800 rounded-lg shadow-lg p-6">
               <div className="flex items-start">
-                <div className="p-3 bg-primary-100 rounded-lg">
-                  <category.icon className="h-6 w-6 text-primary-600" />
+                <div className="p-3 bg-primary-100 dark:bg-primary-900 rounded-lg">
+                  <category.icon className="h-6 w-6 text-primary-600 dark:text-primary-400" />
                 </div>
                 <div className="ml-4 flex-1">
-                  <h3 className="text-xl font-semibold text-surface-900">
+                  <h3 className="text-xl font-semibold text-surface-900 dark:text-surface-100">
                     {category.name}
                   </h3>
-                  <p className="text-surface-600 mt-1">
+                  <p className="text-surface-600 dark:text-surface-400 mt-1">
                     {category.description}
                   </p>
-                  <div className="flex items-center mt-4 text-sm text-surface-500">
+                  <div className="flex items-center mt-4 text-sm text-surface-500 dark:text-surface-400">
                     <span>{category.topics} topics</span>
                     <span className="mx-2">•</span>
                     <span>{category.posts} posts</span>
@@ -101,26 +101,26 @@ const Forum = () => {
       </div>
 
       {/* Recent Topics */}
-      <div className="bg-white py-20">
+      <div className="bg-white dark:bg-surface-800 py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold text-surface-900 mb-12">Recent Discussions</h2>
+          <h2 className="text-3xl font-bold text-surface-900 dark:text-surface-100 mb-12">Recent Discussions</h2>
           <div className="space-y-6">
             {recentTopics.map((topic, index) => (
-              <div key={index} className="bg-surface-50 rounded-lg p-6">
+              <div key={index} className="bg-surface-50 dark:bg-surface-700 rounded-lg p-6">
                 <div className="flex items-center justify-between">
                   <div>
-                    <h3 className="text-lg font-semibold text-surface-900">
+                    <h3 className="text-lg font-semibold text-surface-900 dark:text-surface-100">
                       {topic.title}
                     </h3>
-                    <p className="text-sm text-surface-600 mt-1">
+                    <p className="text-sm text-surface-600 dark:text-surface-400 mt-1">
                       Started by {topic.author}
                     </p>
                   </div>
                   <div className="text-right">
-                    <div className="text-sm text-surface-600">
+                    <div className="text-sm text-surface-600 dark:text-surface-400">
                       {topic.replies} replies • {topic.views} views
                     </div>
-                    <div className="text-sm text-surface-500 mt-1">
+                    <div className="text-sm text-surface-500 dark:text-surface-400 mt-1">
                       Last post {topic.lastPost}
                     </div>
                   </div>

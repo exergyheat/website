@@ -75,7 +75,7 @@ const FAQ = () => {
   })).filter(section => section.questions.length > 0)
 
   return (
-    <div className="bg-surface-50 min-h-screen">
+    <div className="bg-surface-50 dark:bg-surface-900 min-h-screen">
       {/* Hero Section */}
       <div className="bg-gradient-to-r from-primary-600 to-primary-800 py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -90,7 +90,7 @@ const FAQ = () => {
 
       {/* Search Bar */}
       <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 -mt-8">
-        <div className="bg-white rounded-lg shadow-lg p-4">
+        <div className="bg-white dark:bg-surface-800 rounded-lg shadow-lg p-4">
           <div className="relative">
             <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-5 w-5 text-surface-400" />
             <input
@@ -98,7 +98,7 @@ const FAQ = () => {
               placeholder="Search questions..."
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
-              className="w-full pl-10 pr-4 py-3 border border-surface-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500"
+              className="w-full pl-10 pr-4 py-3 border border-surface-300 dark:border-surface-600 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500 bg-white dark:bg-surface-700 text-surface-900 dark:text-surface-100"
             />
           </div>
         </div>
@@ -110,26 +110,26 @@ const FAQ = () => {
           <div key={section.id} className="mb-8">
             <button
               onClick={() => toggleSection(section.id)}
-              className="w-full flex items-center justify-between bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow"
+              className="w-full flex items-center justify-between bg-white dark:bg-surface-800 p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow"
             >
-              <h2 className="text-2xl font-semibold text-surface-900">
+              <h2 className="text-2xl font-semibold text-surface-900 dark:text-surface-100">
                 {section.title}
               </h2>
               {openSection === section.id ? (
-                <Minus className="h-6 w-6 text-primary-600" />
+                <Minus className="h-6 w-6 text-primary-600 dark:text-primary-400" />
               ) : (
-                <Plus className="h-6 w-6 text-primary-600" />
+                <Plus className="h-6 w-6 text-primary-600 dark:text-primary-400" />
               )}
             </button>
             
             {openSection === section.id && (
               <div className="mt-4 space-y-4">
                 {section.questions.map((qa, index) => (
-                  <div key={index} className="bg-white rounded-lg shadow-md p-6">
-                    <h3 className="text-lg font-semibold text-surface-900 mb-3">
+                  <div key={index} className="bg-white dark:bg-surface-800 rounded-lg shadow-md p-6">
+                    <h3 className="text-lg font-semibold text-surface-900 dark:text-surface-100 mb-3">
                       {qa.q}
                     </h3>
-                    <p className="text-surface-600">
+                    <p className="text-surface-600 dark:text-surface-400">
                       {qa.a}
                     </p>
                   </div>
@@ -141,12 +141,12 @@ const FAQ = () => {
       </div>
 
       {/* Contact Section */}
-      <div className="bg-white py-20">
+      <div className="bg-white dark:bg-surface-800 py-20">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl font-bold text-surface-900 mb-6">
+          <h2 className="text-3xl font-bold text-surface-900 dark:text-surface-100 mb-6">
             Still Have Questions?
           </h2>
-          <p className="text-xl text-surface-600 mb-8">
+          <p className="text-xl text-surface-600 dark:text-surface-400 mb-8">
             Our team is here to help you with any questions you might have about our technology
           </p>
           <button className="bg-primary-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-primary-700 transition-colors">

@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 
 const Home = () => {
   return (
-    <div>
+    <div className="bg-surface-50 dark:bg-surface-900">
       {/* Hero Section */}
       <div 
         className="relative bg-cover bg-center h-[600px]" 
@@ -34,11 +34,11 @@ const Home = () => {
       </div>
 
       {/* Features Section */}
-      <div className="py-20 bg-surface-50">
+      <div className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
-            <h2 className="text-3xl font-bold text-surface-900 mb-4">Why Choose Us</h2>
-            <p className="text-xl text-surface-600 max-w-2xl mx-auto">
+            <h2 className="text-3xl font-bold text-surface-900 dark:text-surface-100 mb-4">Why Choose Us</h2>
+            <p className="text-xl text-surface-600 dark:text-surface-400 max-w-2xl mx-auto">
               We're experts in an emerging industry. In fact, we wrote the book on it.
             </p>
           </div>
@@ -46,30 +46,30 @@ const Home = () => {
           <div className="mt-20 grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="text-center">
               <div className="flex justify-center">
-                <Code className="h-12 w-12 text-primary-600" />
+                <Code className="h-12 w-12 text-primary-600 dark:text-primary-400" />
               </div>
-              <h3 className="mt-4 text-xl font-semibold text-surface-900">Custom Solutions</h3>
-              <p className="mt-2 text-surface-600">
+              <h3 className="mt-4 text-xl font-semibold text-surface-900 dark:text-surface-100">Custom Solutions</h3>
+              <p className="mt-2 text-surface-600 dark:text-surface-400">
                 Tailored heating solutions designed to meet your specific demand.
               </p>
             </div>
 
             <div className="text-center">
               <div className="flex justify-center">
-                <Globe className="h-12 w-12 text-primary-600" />
+                <Globe className="h-12 w-12 text-primary-600 dark:text-primary-400" />
               </div>
-              <h3 className="mt-4 text-xl font-semibold text-surface-900">Maximize Savings</h3>
-              <p className="mt-2 text-surface-600">
+              <h3 className="mt-4 text-xl font-semibold text-surface-900 dark:text-surface-100">Maximize Savings</h3>
+              <p className="mt-2 text-surface-600 dark:text-surface-400">
                 Optimized devices that deliver the best bang for your buck.
               </p>
             </div>
 
             <div className="text-center">
               <div className="flex justify-center">
-                <Shield className="h-12 w-12 text-primary-600" />
+                <Shield className="h-12 w-12 text-primary-600 dark:text-primary-400" />
               </div>
-              <h3 className="mt-4 text-xl font-semibold text-surface-900">Security First</h3>
-              <p className="mt-2 text-surface-600">
+              <h3 className="mt-4 text-xl font-semibold text-surface-900 dark:text-surface-100">Security First</h3>
+              <p className="mt-2 text-surface-600 dark:text-surface-400">
                 Enterprise-grade security to protect your business and data.
               </p>
             </div>
@@ -80,7 +80,7 @@ const Home = () => {
       {/* CTA Section */}
       <div className="bg-primary-600 py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl font-bold text-black mb-4">
+          <h2 className="text-3xl font-bold text-white mb-4">
             Ready to get paid for heat?
           </h2>
           <p className="text-xl text-primary-100 mb-8">
