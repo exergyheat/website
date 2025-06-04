@@ -160,7 +160,7 @@ const Products = () => {
   ]
 
   return (
-    <div className="bg-surface-50">
+    <div className="bg-surface-50 dark:bg-surface-900">
       {/* Hero Section */}
       <div className="bg-gradient-to-r from-primary-600 to-primary-800 py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -176,7 +176,7 @@ const Products = () => {
       </div>
 
       {/* Category Navigation */}
-      <div className="sticky top-0 bg-white shadow-md z-10">
+      <div className="sticky top-0 bg-white dark:bg-surface-800 shadow-md z-10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex overflow-x-auto py-4 gap-4">
             {categories.map((category) => (
@@ -186,7 +186,7 @@ const Products = () => {
                 className={`flex items-center px-4 py-2 rounded-lg whitespace-nowrap transition-colors ${
                   activeCategory === category.id
                     ? 'bg-primary-600 text-white'
-                    : 'bg-surface-100 text-surface-700 hover:bg-primary-50'
+                    : 'bg-surface-100 dark:bg-surface-700 text-surface-700 dark:text-surface-300 hover:bg-primary-50 dark:hover:bg-surface-600'
                 }`}
               >
                 <category.icon className="h-5 w-5 mr-2" />
@@ -205,15 +205,15 @@ const Products = () => {
             className={activeCategory === category.id ? 'block' : 'hidden'}
           >
             <div className="text-center mb-16">
-              <h2 className="text-3xl font-bold text-surface-900 mb-4">{category.name}</h2>
-              <p className="text-xl text-surface-600 max-w-3xl mx-auto">
+              <h2 className="text-3xl font-bold text-surface-900 dark:text-surface-100 mb-4">{category.name}</h2>
+              <p className="text-xl text-surface-600 dark:text-surface-400 max-w-3xl mx-auto">
                 {category.description}
               </p>
             </div>
 
             <div className="grid grid-cols-1 gap-16">
               {category.products.map((product) => (
-                <div key={product.id} className="bg-white rounded-lg shadow-xl overflow-hidden">
+                <div key={product.id} className="bg-white dark:bg-surface-800 rounded-lg shadow-xl overflow-hidden">
                   <div className="grid grid-cols-1 lg:grid-cols-2">
                     <div className="relative h-[400px]">
                       <img
@@ -223,31 +223,31 @@ const Products = () => {
                       />
                     </div>
                     <div className="p-8">
-                      <h3 className="text-2xl font-bold text-surface-900 mb-4">{product.name}</h3>
-                      <p className="text-xl font-semibold text-primary-600 mb-4">{product.price}</p>
-                      <p className="text-surface-600 mb-6">{product.description}</p>
+                      <h3 className="text-2xl font-bold text-surface-900 dark:text-surface-100 mb-4">{product.name}</h3>
+                      <p className="text-xl font-semibold text-primary-600 dark:text-primary-400 mb-4">{product.price}</p>
+                      <p className="text-surface-600 dark:text-surface-400 mb-6">{product.description}</p>
 
                       <button
                         onClick={() => setExpandedProduct(expandedProduct === product.id ? null : product.id)}
                         className="flex items-center justify-between w-full text-left mb-4"
                       >
-                        <span className="text-lg font-semibold text-surface-900">Technical Specifications</span>
+                        <span className="text-lg font-semibold text-surface-900 dark:text-surface-100">Technical Specifications</span>
                         {expandedProduct === product.id ? (
-                          <ChevronUp className="h-5 w-5 text-surface-600" />
+                          <ChevronUp className="h-5 w-5 text-surface-600 dark:text-surface-400" />
                         ) : (
-                          <ChevronDown className="h-5 w-5 text-surface-600" />
+                          <ChevronDown className="h-5 w-5 text-surface-600 dark:text-surface-400" />
                         )}
                       </button>
 
                       {expandedProduct === product.id && (
-                        <div className="bg-surface-50 rounded-lg p-4 mb-6">
+                        <div className="bg-surface-50 dark:bg-surface-700 rounded-lg p-4 mb-6">
                           <div className="grid grid-cols-2 gap-4">
                             {Object.entries(product.specs).map(([key, value]) => (
                               <div key={key}>
-                                <dt className="text-sm font-medium text-surface-500 capitalize">
+                                <dt className="text-sm font-medium text-surface-500 dark:text-surface-400 capitalize">
                                   {key.replace(/([A-Z])/g, ' $1').trim()}
                                 </dt>
-                                <dd className="text-lg font-semibold text-surface-900">{value}</dd>
+                                <dd className="text-lg font-semibold text-surface-900 dark:text-surface-100">{value}</dd>
                               </div>
                             ))}
                           </div>
@@ -256,8 +256,8 @@ const Products = () => {
 
                       <div className="space-y-2 mb-8">
                         {product.features.map((feature, index) => (
-                          <div key={index} className="flex items-center text-surface-700">
-                            <ArrowRight className="h-5 w-5 text-primary-600 mr-2" />
+                          <div key={index} className="flex items-center text-surface-700 dark:text-surface-300">
+                            <ArrowRight className="h-5 w-5 text-primary-600 dark:text-primary-400 mr-2" />
                             {feature}
                           </div>
                         ))}
