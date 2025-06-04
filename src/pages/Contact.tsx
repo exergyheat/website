@@ -30,7 +30,7 @@ const Contact = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h1 className="text-4xl font-bold text-white text-center">Contact Us</h1>
           <p className="mt-4 text-xl text-blue-100 text-center max-w-2xl mx-auto">
-            Get in touch with our team to discuss how we can help transform your business.
+            Get in touch with our team to discuss how we can help slash your heating bills.
           </p>
         </div>
       </div>
