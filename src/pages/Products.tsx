@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
-import { ArrowRight, Radiator, Fan, Droplets, Cpu, ChevronDown, ChevronUp } from 'lucide-react'
+import { ArrowRight, Radiation as Radiator, Fan, Droplets, Cpu, ChevronDown, ChevronUp } from 'lucide-react'
 
 const Products = () => {
   const [activeCategory, setActiveCategory] = useState('space-heating')
