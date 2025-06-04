@@ -20,8 +20,8 @@ const Footer = () => {
 
           {/* Home Links */}
           <div>
-            <h3 className="text-lg font-semibold mb-4">Home</h3>
-            <ul className="space-y-2">
+            <Link to="/" className="text-lg font-semibold mb-4 text-surface-100 hover:text-surface-200 transition-colors">Home</Link>
+            <ul className="space-y-2 mt-4">
               <li>
                 <Link to="/products" className="text-surface-400 hover:text-surface-200 transition-colors">Products</Link>
               </li>
@@ -39,8 +39,8 @@ const Footer = () => {
 
           {/* Learn Links */}
           <div>
-            <h3 className="text-lg font-semibold mb-4">Learn</h3>
-            <ul className="space-y-2">
+            <Link to="/learn" className="text-lg font-semibold mb-4 text-surface-100 hover:text-surface-200 transition-colors">Learn</Link>
+            <ul className="space-y-2 mt-4">
               <li>
                 <Link to="/calculators" className="text-surface-400 hover:text-surface-200 transition-colors">Calculators</Link>
               </li>
