@@ -58,9 +58,9 @@ const Home = () => {
               <div className="flex justify-center">
                 <Globe className="h-12 w-12 text-primary-600" />
               </div>
-              <h3 className="mt-4 text-xl font-semibold text-surface-900">Global Reach</h3>
+              <h3 className="mt-4 text-xl font-semibold text-surface-900">Maximize Earnings</h3>
               <p className="mt-2 text-surface-600">
-                Serving clients worldwide with scalable and reliable solutions.
+                Optimized devices that deliver the best bang for your buck.
               </p>
             </div>
 
