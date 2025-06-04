@@ -80,8 +80,8 @@ const Home = () => {
       {/* CTA Section */}
       <div className="bg-primary-600 py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl font-bold text-white mb-4">
-            Ready to Transform Your Business?
+          <h2 className="text-3xl font-bold text-black mb-4">
+            Ready to get paid for heat?
           </h2>
           <p className="text-xl text-primary-100 mb-8">
             Let's discuss how we can help you achieve your goals.
