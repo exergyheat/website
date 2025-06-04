@@ -236,7 +236,7 @@ const Services = () => {
             Contact our team to learn more about our services and how they can benefit your business.
           </p>
           <Link
-            to="/contact"
+            to="/book-call"
             className="inline-flex items-center px-8 py-4 bg-white text-primary-600 rounded-lg hover:bg-primary-50 transition-colors"
           >
             Get Started
