@@ -46,7 +46,7 @@ const Contact = () => {
                 <Mail className="h-6 w-6 text-primary-600" />
                 <a 
                   href="mailto:contact@exergyheat.com" 
-                  className="ml-4 text-primary-600 hover:text-primary-400 dark:hover:text-primary-400 transition-colors"
+                  className="ml-4 text-primary-600 hover:text-primary-400 dark:hover:text-primary-600 transition-colors"
                 >
                   contact@exergyheat.com
                 </a>
