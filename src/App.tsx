@@ -14,6 +14,7 @@ import Education from './pages/Education'
 import Forum from './pages/Forum'
 import FAQ from './pages/FAQ'
 import Products from './pages/Products'
+import BookCall from './pages/BookCall'
 
 function App() {
   return (
@@ -34,6 +35,7 @@ function App() {
               <Route path="/education" element={<Education />} />
               <Route path="/forum" element={<Forum />} />
               <Route path="/faq" element={<FAQ />} />
+              <Route path="/book-call" element={<BookCall />} />
             </Routes>
           </main>
           <Footer />
