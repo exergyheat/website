@@ -33,6 +33,9 @@ export default {
           900: '#18181B'
         }
       },
+      fontFamily: {
+        mono: ['Roboto Mono', 'monospace'],
+      },
     },
   },
   plugins: [],
