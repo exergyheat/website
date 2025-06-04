@@ -44,7 +44,12 @@ const Contact = () => {
             <div className="space-y-6">
               <div className="flex items-center">
                 <Mail className="h-6 w-6 text-primary-600" />
-                <span className="ml-4 text-surface-600 dark:text-surface-400">contact@exergyheat.com</span>
+                <a 
+                  href="mailto:contact@exergyheat.com" 
+                  className="ml-4 text-surface-600 dark:text-surface-400 hover:text-primary-600 dark:hover:text-primary-400 transition-colors"
+                >
+                  contact@exergyheat.com
+                </a>
               </div>
               <div className="flex items-center">
                 <Calendar className="h-6 w-6 text-primary-600" />
@@ -54,7 +59,14 @@ const Contact = () => {
               </div>
               <div className="flex items-center">
                 <MapPin className="h-6 w-6 text-primary-600" />
-                <span className="ml-4 text-surface-600 dark:text-surface-400">3700 N Franklin St. Denver, CO 80205</span>
+                <a 
+                  href="https://maps.app.goo.gl/bp9d8a3GEpfzv3Kg7"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="ml-4 text-surface-600 dark:text-surface-400 hover:text-primary-600 dark:hover:text-primary-400 transition-colors"
+                >
+                  3700 N Franklin St. Denver, CO 80205
+                </a>
               </div>
             </div>
 
