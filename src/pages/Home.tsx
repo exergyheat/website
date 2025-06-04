@@ -27,7 +27,7 @@ const Home = () => {
               Upgrade to heat that pays you instead.
             </p>
             <Link
-              to="/contact"
+              to="/learn"
               className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-primary-600 hover:bg-primary-700 transition-colors"
             >
               Learn How
