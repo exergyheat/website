@@ -50,7 +50,7 @@ const Home = () => {
               </div>
               <h3 className="mt-4 text-xl font-semibold text-surface-900">Custom Solutions</h3>
               <p className="mt-2 text-surface-600">
-                Tailored heating solutions designed to meet your specific demand.
+                Tailored heating solutions designed to meet your specific demand and maximize revenue.
               </p>
             </div>
 
