@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import { Laptop, Github, Twitter, Linkedin } from 'lucide-react'
+import { Laptop, Github, X, Linkedin } from 'lucide-react'
 
 const Footer = () => {
   return (
@@ -63,8 +63,8 @@ const Footer = () => {
               <a href="https://github.com" className="text-surface-400 hover:text-surface-200 transition-colors">
                 <Github className="h-6 w-6" />
               </a>
-              <a href="https://twitter.com" className="text-surface-400 hover:text-surface-200 transition-colors">
-                <Twitter className="h-6 w-6" />
+              <a href="https://x.com" className="text-surface-400 hover:text-surface-200 transition-colors">
+                <X className="h-6 w-6" />
               </a>
               <a href="https://linkedin.com" className="text-surface-400 hover:text-surface-200 transition-colors">
                 <Linkedin className="h-6 w-6" />
