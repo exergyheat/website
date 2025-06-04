@@ -1,6 +1,6 @@
 import React, { createContext, useContext, useEffect, useState } from 'react'
 
-type Theme = 'light' | 'dark' | 'system'
+type Theme = 'light' | 'dark'
 
 interface ThemeContextType {
   theme: Theme
@@ -10,28 +10,13 @@ interface ThemeContextType {
 const ThemeContext = createContext<ThemeContextType | undefined>(undefined)
 
 export function ThemeProvider({ children }: { children: React.ReactNode }) {
-  const [theme, setTheme] = useState<Theme>(() => {
-    const stored = localStorage.getItem('theme')
-    return (stored as Theme) || 'system'
-  })
+  const [theme, setTheme] = useState<Theme>('light')
 
   useEffect(() => {
-    function updateTheme() {
-      const root = window.document.documentElement
-      const systemTheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'
-      const activeTheme = theme === 'system' ? systemTheme : theme
-      
-      root.classList.remove('light', 'dark')
-      root.classList.add(activeTheme)
-    }
-
-    updateTheme()
+    const root = window.document.documentElement
+    root.classList.remove('light', 'dark')
+    root.classList.add(theme)
     localStorage.setItem('theme', theme)
-
-    const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)')
-    mediaQuery.addEventListener('change', updateTheme)
-
-    return () => mediaQuery.removeEventListener('change', updateTheme)
   }, [theme])
 
   return (
