@@ -53,7 +53,7 @@ const Contact = () => {
               </div>
               <div className="flex items-center">
                 <Calendar className="h-6 w-6 text-primary-600" />
-                <Link to="/book-call" className="ml-4 text-primary-400 hover:text-primary-600 dark:hover:text-primary-400 transition-colors">
+                <Link to="/book-call" className="ml-4 text-primary-600 dark:text-primary-400 hover:text-primary-400 dark:hover:text-primary-600 transition-colors">
                   Book a Call with Our Team
                 </Link>
               </div>
