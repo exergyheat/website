@@ -14,7 +14,7 @@ const Footer = () => {
               <span className="ml-2 text-xl font-bold">EXERGY</span>
             </div>
             <p className="mt-4 text-surface-400">
-              Upgrade to heat that pays.
+              Heat That Pays
             </p>
           </div>
 
