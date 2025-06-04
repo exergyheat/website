@@ -4,41 +4,50 @@ import { ArrowRight, FileText, Wrench, Activity, HeartPulse, ChevronDown, Chevro
 
 const Services = () => {
   const [expandedService, setExpandedService] = useState<string | null>(null)
+  const [buildType, setBuildType] = useState<'existing' | 'new'>('existing')
+
+  const getAuditService = (type: 'existing' | 'new') => ({
+    id: 'audit',
+    name: "Heat Audit Analysis",
+    description: "Get a comprehensive analysis of your heating infrastructure and discover your potential savings with hashrate heating.",
+    price: type === 'existing' ? "$400" : "$600",
+    features: [
+      "Detailed heating model",
+      "Heat cost savings projection",
+      "ROI calculations",
+      "1-hour report walkthrough call"
+    ],
+    icon: FileText,
+    image: "https://images.pexels.com/photos/159888/pexels-photo-159888.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+    details: {
+      inputs: type === 'existing' ? [
+        "Current heating bills",
+        "Electricity costs and usage",
+        "Building dimensions and layout",
+        "Insulation specifications",
+        "Location and weather data"
+      ] : [
+        "Building plans and specifications",
+        "Expected occupancy patterns",
+        "Desired temperature zones",
+        "Local energy rates",
+        "Construction timeline"
+      ],
+      deliverables: [
+        "Comprehensive analysis report",
+        "Heat loss calculations",
+        "Cost savings projections",
+        "ROI analysis",
+        type === 'existing' ? "Implementation recommendations" : "Integration specifications",
+        "1-hour consultation call"
+      ]
+    },
+    buttonText: `Purchase ${type === 'existing' ? 'Existing' : 'New'} Build Audit - ${type === 'existing' ? '$400' : '$600'}`,
+    buttonLink: `/contact?service=audit&type=${type}`
+  })
 
   const services = [
-    {
-      id: 'audit',
-      name: "Heat Audit Analysis",
-      description: "Get a comprehensive analysis of your heating infrastructure and discover your potential savings with hashrate heating.",
-      price: "$400",
-      features: [
-        "Detailed heating model",
-        "Heat cost savings projection",
-        "ROI calculations",
-        "1-hour report walkthrough call"
-      ],
-      icon: FileText,
-      image: "https://images.pexels.com/photos/159888/pexels-photo-159888.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-      details: {
-        inputs: [
-          "Current heating bills",
-          "Electricity costs and usage",
-          "Building dimensions and layout",
-          "Insulation specifications",
-          "Location and weather data"
-        ],
-        deliverables: [
-          "Comprehensive analysis report",
-          "Heat loss calculations",
-          "Cost savings projections",
-          "ROI analysis",
-          "Implementation recommendations",
-          "1-hour consultation call"
-        ]
-      },
-      buttonText: "Purchase Audit - $400",
-      buttonLink: "/contact?service=audit"
-    },
+    getAuditService(buildType),
     {
       id: 'upgrade',
       name: "Hashrate Heating System Upgrades",
@@ -166,6 +175,33 @@ const Services = () => {
                   <service.icon className="h-8 w-8 text-primary-600 dark:text-primary-400" />
                 </div>
                 <h2 className="text-3xl font-bold text-surface-900 dark:text-surface-100">{service.name}</h2>
+                
+                {/* Build Type Toggle for Audit Service */}
+                {service.id === 'audit' && (
+                  <div className="flex items-center space-x-4 p-4 bg-surface-100 dark:bg-surface-800 rounded-lg">
+                    <button
+                      onClick={() => setBuildType('existing')}
+                      className={`px-4 py-2 rounded-lg transition-colors ${
+                        buildType === 'existing'
+                          ? 'bg-primary-600 text-white'
+                          : 'bg-surface-200 dark:bg-surface-700 text-surface-700 dark:text-surface-300'
+                      }`}
+                    >
+                      Existing Build
+                    </button>
+                    <button
+                      onClick={() => setBuildType('new')}
+                      className={`px-4 py-2 rounded-lg transition-colors ${
+                        buildType === 'new'
+                          ? 'bg-primary-600 text-white'
+                          : 'bg-surface-200 dark:bg-surface-700 text-surface-700 dark:text-surface-300'
+                      }`}
+                    >
+                      New Build
+                    </button>
+                  </div>
+                )}
+
                 <p className="text-lg text-surface-600 dark:text-surface-400">{service.description}</p>
                 <div className="bg-white dark:bg-surface-800 rounded-lg p-6 shadow-lg">
                   <p className="text-2xl font-bold text-primary-600 dark:text-primary-400 mb-4">{service.price}</p>
