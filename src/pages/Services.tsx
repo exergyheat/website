@@ -10,7 +10,7 @@ const Services = () => {
       id: 'audit',
       name: "Heat Audit Analysis",
       description: "Get a comprehensive analysis of your heating infrastructure and discover your potential savings with hashrate heating.",
-      price: "$400",
+      price: "$400-$600",
       features: [
         "Detailed heat loss analysis",
         "Cost savings projection",
