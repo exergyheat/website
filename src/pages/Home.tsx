@@ -1,8 +1,11 @@
 import React from 'react'
 import { ArrowRight, Code, Globe, Shield } from 'lucide-react'
 import { Link } from 'react-router-dom'
+import { useTypewriter } from '../hooks/useTypewriter'
 
 const Home = () => {
+  const headlineText = useTypewriter("You pay for heat every month.", 75)
+
   return (
     <div className="bg-surface-50 dark:bg-surface-900">
       {/* Hero Section */}
@@ -16,8 +19,9 @@ const Home = () => {
       >
         <div className="absolute inset-0 flex items-center">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-white">
-            <h1 className="text-4xl md:text-6xl font-bold mb-6">
-              You pay for heat every month.
+            <h1 className="text-4xl md:text-6xl font-bold mb-6 font-mono">
+              {headlineText}
+              <span className="animate-pulse">|</span>
             </h1>
             <p className="text-xl md:text-2xl mb-8 max-w-2xl">
               Upgrade to heat that pays you instead.
