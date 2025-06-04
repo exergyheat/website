@@ -29,13 +29,6 @@ const Home = () => {
             </p>
             <div className="flex flex-wrap gap-4">
               <Link
-                to="/learn"
-                className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-primary-600 hover:bg-primary-700 transition-colors"
-              >
-                Learn More
-                <ArrowRight className="ml-2 h-5 w-5" />
-              </Link>
-              <Link
                 to="/book-call"
                 className="inline-flex items-center px-6 py-3 border border-white text-base font-medium rounded-md text-white hover:bg-white hover:text-primary-600 transition-colors"
               >
