@@ -12,6 +12,7 @@ import Calculators from './pages/Calculators'
 import Education from './pages/Education'
 import Forum from './pages/Forum'
 import FAQ from './pages/FAQ'
+import Products from './pages/Products'
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
         <main className="flex-grow">
           <Routes>
             <Route path="/" element={<Home />} />
+            <Route path="/products" element={<Products />} />
             <Route path="/services" element={<Services />} />
             <Route path="/about" element={<About />} />
             <Route path="/contact" element={<Contact />} />
