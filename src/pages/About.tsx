@@ -203,15 +203,15 @@ const About = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl font-bold text-surface-900 dark:text-surface-100 text-center mb-12">Our Roadmap</h2>
           <div className="relative">
-            <div className="absolute left-4 md:left-1/2 transform md:-translate-x-1/2 h-full w-1 bg-primary-200 dark:bg-primary-800"></div>
+            <div className="absolute left-8 md:left-1/2 transform md:-translate-x-1/2 h-full w-1 bg-primary-200 dark:bg-primary-800"></div>
             <div className="space-y-12">
               {roadmap.map((milestone, index) => (
                 <div key={index} className="relative">
                   <div className="flex items-center">
-                    <div className="absolute left-4 md:left-1/2 transform md:-translate-x-1/2 w-8 h-8 bg-primary-600 dark:bg-primary-500 rounded-full text-white flex items-center justify-center">
+                    <div className="absolute left-8 md:left-1/2 transform md:-translate-x-1/2 w-8 h-8 bg-primary-600 dark:bg-primary-500 rounded-full text-white flex items-center justify-center">
                       {index + 1}
                     </div>
-                    <div className={`w-full md:w-1/2 pl-16 md:pl-0 ${index === 0 || index === 2 ? 'md:pr-12 md:text-right' : 'md:pl-12 md:ml-auto'}`}>
+                    <div className={`w-full md:w-1/2 pl-20 md:pl-0 ${index === 0 || index === 2 ? 'md:pr-12 md:text-right' : 'md:pl-12 md:ml-auto'}`}>
                       <h3 className="text-xl font-semibold text-surface-900 dark:text-surface-100 mb-2">{milestone.quarter}</h3>
                       <h4 className="text-lg font-medium text-primary-600 dark:text-primary-400 mb-2">{milestone.title}</h4>
                       <ul className="space-y-2">
@@ -233,21 +233,27 @@ const About = () => {
         <h2 className="text-3xl font-bold text-surface-900 dark:text-surface-100 text-center mb-12">Our Technology Stack</h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div className="bg-white dark:bg-surface-800 rounded-lg shadow-xl p-8 transform hover:scale-105 transition-transform">
-            <Bitcoin className="h-12 w-12 text-primary-600 dark:text-primary-400 mb-6" />
+            <div className="flex justify-center">
+              <Bitcoin className="h-12 w-12 text-primary-600 dark:text-primary-400" />
+            </div>
             <h3 className="mt-4 text-xl font-semibold text-surface-900 dark:text-surface-100">Bitcoin Mining</h3>
             <p className="mt-2 text-surface-600 dark:text-surface-400">
               Utilizing the latest ASIC technology to generate both heat and revenue through Bitcoin mining.
             </p>
           </div>
           <div className="bg-white dark:bg-surface-800 rounded-lg shadow-xl p-8 transform hover:scale-105 transition-transform">
-            <Cpu className="h-12 w-12 text-primary-600 dark:text-primary-400 mb-6" />
+            <div className="flex justify-center">
+              <Cpu className="h-12 w-12 text-primary-600 dark:text-primary-400" />
+            </div>
             <h3 className="mt-4 text-xl font-semibold text-surface-900 dark:text-surface-100">Smart Controls</h3>
             <p className="mt-2 text-surface-600 dark:text-surface-400">
               Advanced control systems for optimal performance and efficiency monitoring.
             </p>
           </div>
           <div className="bg-white dark:bg-surface-800 rounded-lg shadow-xl p-8 transform hover:scale-105 transition-transform">
-            <Award className="h-12 w-12 text-primary-600 dark:text-primary-400 mb-6" />
+            <div className="flex justify-center">
+              <Award className="h-12 w-12 text-primary-600 dark:text-primary-400" />
+            </div>
             <h3 className="mt-4 text-xl font-semibold text-surface-900 dark:text-surface-100">Thermal Innovation</h3>
             <p className="mt-2 text-surface-600 dark:text-surface-400">
               Cutting-edge heat distribution and management technologies.
