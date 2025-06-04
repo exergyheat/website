@@ -27,13 +27,22 @@ const Home = () => {
             <p className="text-xl md:text-2xl mb-8 max-w-2xl">
               Upgrade to heat that pays you instead.
             </p>
-            <Link
-              to="/learn"
-              className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-primary-600 hover:bg-primary-700 transition-colors"
-            >
-              Learn More
-              <ArrowRight className="ml-2 h-5 w-5" />
-            </Link>
+            <div className="flex flex-wrap gap-4">
+              <Link
+                to="/learn"
+                className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-primary-600 hover:bg-primary-700 transition-colors"
+              >
+                Learn More
+                <ArrowRight className="ml-2 h-5 w-5" />
+              </Link>
+              <Link
+                to="/book-call"
+                className="inline-flex items-center px-6 py-3 border border-white text-base font-medium rounded-md text-white hover:bg-white hover:text-primary-600 transition-colors"
+              >
+                Book an Intro Call
+                <ArrowRight className="ml-2 h-5 w-5" />
+              </Link>
+            </div>
           </div>
         </div>
       </div>
@@ -106,6 +115,16 @@ const Home = () => {
               </div>
             </div>
           </div>
+
+          <div className="mt-12 text-center">
+            <Link
+              to="/about"
+              className="inline-flex items-center px-6 py-3 bg-primary-600 text-white rounded-lg hover:bg-primary-700 transition-colors"
+            >
+              About Exergy
+              <ArrowRight className="ml-2 h-5 w-5" />
+            </Link>
+          </div>
         </div>
       </div>
 
@@ -149,16 +168,6 @@ const Home = () => {
                 Enterprise-grade security to protect your business and data.
               </p>
             </div>
-          </div>
-
-          <div className="mt-12 text-center">
-            <Link
-              to="/about"
-              className="inline-flex items-center px-6 py-3 bg-primary-600 text-white rounded-lg hover:bg-primary-700 transition-colors"
-            >
-              About Exergy
-              <ArrowRight className="ml-2 h-5 w-5" />
-            </Link>
           </div>
         </div>
       </div>
