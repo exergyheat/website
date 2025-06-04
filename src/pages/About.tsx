@@ -211,7 +211,7 @@ const About = () => {
                     <div className="absolute left-1/2 transform -translate-x-1/2 w-8 h-8 bg-primary-600 dark:bg-primary-500 rounded-full text-white flex items-center justify-center">
                       {index + 1}
                     </div>
-                    <div className={`w-1/2 ${index % 2 === 0 ? 'pr-12 text-right' : 'pl-12'}`}>
+                    <div className={`w-1/2 ${index === 0 || index === 2 ? 'pr-12 text-right' : 'pl-12 ml-auto'}`}>
                       <h3 className="text-xl font-semibold text-surface-900 dark:text-surface-100 mb-2">{milestone.quarter}</h3>
                       <h4 className="text-lg font-medium text-primary-600 dark:text-primary-400 mb-2">{milestone.title}</h4>
                       <ul className="space-y-2">
