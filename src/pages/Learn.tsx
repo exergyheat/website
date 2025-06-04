@@ -20,7 +20,7 @@ const Learn = () => {
       title: "Technical Forum",
       description: "Connect with experts and share experiences",
       icon: Users,
-      link: "/forum"
+      link: "https://heatpunks.org"
     },
     {
       title: "FAQ",
