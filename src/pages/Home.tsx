@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 import { useTypewriter } from '../hooks/useTypewriter'
 
 const Home = () => {
-  const headlineText = useTypewriter("I  pay for heat every month.", 75)
+  const headlineText = useTypewriter("You  pay for heat every month.", 75)
 
   return (
     <div className="bg-surface-50 dark:bg-surface-900">
