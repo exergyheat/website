@@ -59,6 +59,11 @@ const Footer = () => {
           {/* Social Links */}
           <div>
             <h3 className="text-lg font-semibold mb-4">Connect With Us</h3>
+            <ul className="space-y-2 mb-4">
+              <li>
+                <Link to="/contact" className="text-surface-400 hover:text-surface-200 transition-colors">Contact</Link>
+              </li>
+            </ul>
             <div className="flex space-x-4">
               <a href="https://github.com" className="text-surface-400 hover:text-surface-200 transition-colors">
                 <Github className="h-6 w-6" />
