@@ -157,36 +157,43 @@ const About = () => {
       {/* Mission Section */}
       <div className="bg-white dark:bg-surface-800 py-12">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-8">
+            <div className="inline-block p-3 bg-primary-100 dark:bg-primary-900 rounded-lg mb-4">
+              <Target className="h-12 w-12 text-primary-600 dark:text-primary-400" />
+            </div>
+            <h2 className="text-3xl font-bold text-surface-900 dark:text-surface-100 mb-4">Our Mission</h2>
+          </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
             <div>
-              <div className="inline-flex items-center mb-6">
-                <div className="p-2 bg-primary-100 dark:bg-primary-900 rounded-lg mr-3">
-                  <Target className="h-6 w-6 text-primary-600 dark:text-primary-400" />
-                </div>
-                <h2 className="text-2xl font-bold text-surface-900 dark:text-surface-100">Our Mission</h2>
-              </div>
+              <h3 className="text-2xl font-bold text-surface-900 dark:text-surface-100 mb-4">
+                Revolutionizing Heat Generation
+              </h3>
               <p className="text-lg text-surface-600 dark:text-surface-400 mb-6">
                 We're on a mission to transform the way the world thinks about heating. By combining Bitcoin mining with heating systems, we're creating a future where heat generation isn't just a cost - it's a revenue stream.
               </p>
-              <div className="flex items-start">
-                <div className="p-2 bg-primary-100 dark:bg-primary-900 rounded-lg mr-4">
-                  <Lightbulb className="h-6 w-6 text-primary-600 dark:text-primary-400" />
-                </div>
-                <div>
-                  <h4 className="text-xl font-semibold text-surface-900 dark:text-surface-100">Vision</h4>
-                  <p className="text-surface-600 dark:text-surface-400">A world where every heater contributes to the Bitcoin network while providing efficient, cost-effective heating.</p>
+              <div className="space-y-4">
+                <div className="flex items-start">
+                  <div className="p-2 bg-primary-100 dark:bg-primary-900 rounded-lg mr-4">
+                    <Lightbulb className="h-6 w-6 text-primary-600 dark:text-primary-400" />
+                  </div>
+                  <div>
+                    <h4 className="text-xl font-semibold text-surface-900 dark:text-surface-100">Vision</h4>
+                    <p className="text-surface-600 dark:text-surface-400">A world where every heater contributes to the Bitcoin network while providing efficient, cost-effective heating.</p>
+                  </div>
                 </div>
               </div>
             </div>
             <div className="relative">
-              <img
-                src="https://images.pexels.com/photos/7567560/pexels-photo-7567560.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
-                alt="Mission"
-                className="rounded-lg shadow-2xl h-64 w-full object-cover"
-              />
+              <div className="aspect-square overflow-hidden rounded-lg shadow-2xl">
+                <img
+                  src="https://images.pexels.com/photos/8293769/pexels-photo-8293769.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+                  alt="Mission"
+                  className="w-full h-full object-cover"
+                />
+              </div>
               <div className="absolute -bottom-4 -right-4 bg-white dark:bg-surface-700 p-4 rounded-lg shadow-xl">
-                <p className="text-2xl font-bold text-primary-600 dark:text-primary-400">100%</p>
-                <p className="text-surface-600 dark:text-surface-400">Energy Efficiency</p>
+                <p className="text-xl font-bold text-primary-600 dark:text-primary-400">100%</p>
+                <p className="text-sm text-surface-600 dark:text-surface-400">Energy Efficiency</p>
               </div>
             </div>
           </div>
