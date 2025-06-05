@@ -45,7 +45,7 @@ const Learn = () => {
       image: "https://images.pexels.com/photos/844124/pexels-photo-844124.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
     },
     {
-      title: "100% Efficiency",
+      title: "Smart vs Dumb Heat",
       icon: Cpu,
       description: "All electricity used in Bitcoin mining converts to heat - there's no waste. This heat is then captured and distributed throughout your space, making it a perfectly efficient heating solution.",
       image: "https://images.pexels.com/photos/1036936/pexels-photo-1036936.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
