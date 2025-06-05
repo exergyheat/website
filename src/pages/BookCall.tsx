@@ -26,10 +26,10 @@ const BookCall = () => {
   return (
     <div className="bg-surface-50 dark:bg-surface-900 min-h-screen">
       {/* Hero Section */}
-      <div className="bg-gradient-to-r from-primary-600 to-primary-800 py-16">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h1 className="text-4xl font-bold text-white text-center">Book a Call</h1>
-          <p className="mt-4 text-xl text-primary-100 text-center max-w-2xl mx-auto">
+      <div className="bg-gradient-to-r from-primary-600 to-primary-800 py-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">Book a Call</h1>
+          <p className="text-xl text-primary-100 max-w-2xl mx-auto">
             Schedule a one-on-one consultation with our team to discuss your hashrate heating needs
           </p>
         </div>
