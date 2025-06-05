@@ -441,17 +441,55 @@ const Services = () => {
                 )}
 
                 <p className="text-lg text-surface-600 dark:text-surface-400">{service.description}</p>
-                <div className="bg-white dark:bg-surface-800 rounded-lg p-6 shadow-lg">
-                  <p className="text-2xl font-bold text-primary-600 dark:text-primary-400 mb-4">{service.price}</p>
-                  <ul className="space-y-3">
-                    {service.features.map((feature, featureIndex) => (
-                      <li key={featureIndex} className="flex items-center text-surface-700 dark:text-surface-300">
-                        <ArrowRight className="h-5 w-5 text-primary-600 dark:text-primary-400 mr-2" />
-                        {feature}
-                      </li>
-                    ))}
-                  </ul>
-                  <div className="flex gap-4 mt-6">
+                
+                <div className="bg-white dark:bg-surface-800 rounded-lg p-6 shadow-lg space-y-6">
+                  <div>
+                    <p className="text-2xl font-bold text-primary-600 dark:text-primary-400 mb-4">{service.price}</p>
+                    <ul className="space-y-3">
+                      {service.features.map((feature, featureIndex) => (
+                        <li key={featureIndex} className="flex items-center text-surface-700 dark:text-surface-300">
+                          <ArrowRight className="h-5 w-5 text-primary-600 dark:text-primary-400 mr-2" />
+                          {feature}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+
+                  <div className="pt-6 border-t border-surface-200 dark:border-surface-700">
+                    <button
+                      onClick={() => setExpandedService(expandedService === service.id ? null : service.id)}
+                      className="w-full flex items-center justify-between text-surface-900 dark:text-surface-100 hover:text-primary-600 dark:hover:text-primary-400 transition-colors"
+                    >
+                      <span className="font-semibold">Service Details</span>
+                      {expandedService === service.id ? (
+                        <ChevronUp className="h-5 w-5" />
+                      ) : (
+                        <ChevronDown className="h-5 w-5" />
+                      )}
+                    </button>
+                    
+                    {expandedService === service.id && (
+                      <div className="mt-4 space-y-4">
+                        {Object.entries(service.details).map(([key, items]) => (
+                          <div key={key}>
+                            <h4 className="text-lg font-semibold text-surface-900 dark:text-surface-100 capitalize mb-2">
+                              {key}
+                            </h4>
+                            <ul className="space-y-2">
+                              {items.map((item, i) => (
+                                <li key={i} className="flex items-center text-surface-700 dark:text-surface-300">
+                                  <ArrowRight className="h-4 w-4 text-primary-600 dark:text-primary-400 mr-2" />
+                                  {item}
+                                </li>
+                              ))}
+                            </ul>
+                          </div>
+                        ))}
+                      </div>
+                    )}
+                  </div>
+
+                  <div className="flex gap-4 pt-6 border-t border-surface-200 dark:border-surface-700">
                     <Link
                       to={service.buttonLink}
                       className="flex-1 inline-flex items-center justify-center px-6 py-3 bg-primary-600 text-white rounded-lg hover:bg-primary-700 transition-colors"
@@ -466,40 +504,6 @@ const Services = () => {
                       Demo
                     </button>
                   </div>
-                </div>
-
-                {/* Expandable Details */}
-                <div className="bg-surface-50 dark:bg-surface-800 rounded-lg border border-surface-200 dark:border-surface-700">
-                  <button
-                    onClick={() => setExpandedService(expandedService === service.id ? null : service.id)}
-                    className="w-full px-6 py-4 flex justify-between items-center text-left"
-                  >
-                    <span className="font-semibold text-surface-900 dark:text-surface-100">Service Details</span>
-                    {expandedService === service.id ? (
-                      <ChevronUp className="h-5 w-5 text-surface-600 dark:text-surface-400" />
-                    ) : (
-                      <ChevronDown className="h-5 w-5 text-surface-600 dark:text-surface-400" />
-                    )}
-                  </button>
-                  {expandedService === service.id && (
-                    <div className="px-6 py-4 border-t border-surface-200 dark:border-surface-700">
-                      {Object.entries(service.details).map(([key, items]) => (
-                        <div key={key} className="mb-4 last:mb-0">
-                          <h4 className="text-lg font-semibold text-surface-900 dark:text-surface-100 capitalize mb-2">
-                            {key}
-                          </h4>
-                          <ul className="space-y-2">
-                            {items.map((item, i) => (
-                              <li key={i} className="flex items-center text-surface-700 dark:text-surface-300">
-                                <ArrowRight className="h-4 w-4 text-primary-600 dark:text-primary-400 mr-2" />
-                                {item}
-                              </li>
-                            ))}
-                          </ul>
-                        </div>
-                      ))}
-                    </div>
-                  )}
                 </div>
               </div>
             </div>
