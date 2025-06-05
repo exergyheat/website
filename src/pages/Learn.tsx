@@ -20,7 +20,8 @@ const Learn = () => {
       title: "Technical Forum",
       description: "Deep dive with experts and share experiences on the Heatpunk forum",
       icon: Users,
-      link: "https://heatpunks.org"
+      link: "https://heatpunks.org",
+      external: true
     },
     {
       title: "FAQ",
@@ -72,21 +73,41 @@ const Learn = () => {
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {resources.map((resource, index) => (
-            <Link
-              key={index}
-              to={resource.link}
-              className="bg-white dark:bg-surface-800 rounded-lg shadow-lg p-8 hover:shadow-xl transition-shadow"
-            >
-              <div className="flex items-center mb-4">
-                <div className="p-3 bg-primary-100 dark:bg-primary-900 rounded-lg">
-                  <resource.icon className="h-6 w-6 text-primary-600 dark:text-primary-400" />
+            resource.external ? (
+              <a
+                key={index}
+                href={resource.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-white dark:bg-surface-800 rounded-lg shadow-lg p-8 hover:shadow-xl transition-shadow"
+              >
+                <div className="flex items-center mb-4">
+                  <div className="p-3 bg-primary-100 dark:bg-primary-900 rounded-lg">
+                    <resource.icon className="h-6 w-6 text-primary-600 dark:text-primary-400" />
+                  </div>
+                  <h3 className="text-xl font-semibold text-surface-900 dark:text-surface-100 ml-4">
+                    {resource.title}
+                  </h3>
                 </div>
-                <h3 className="text-xl font-semibold text-surface-900 dark:text-surface-100 ml-4">
-                  {resource.title}
-                </h3>
-              </div>
-              <p className="text-surface-600 dark:text-surface-400">{resource.description}</p>
-            </Link>
+                <p className="text-surface-600 dark:text-surface-400">{resource.description}</p>
+              </a>
+            ) : (
+              <Link
+                key={index}
+                to={resource.link}
+                className="bg-white dark:bg-surface-800 rounded-lg shadow-lg p-8 hover:shadow-xl transition-shadow"
+              >
+                <div className="flex items-center mb-4">
+                  <div className="p-3 bg-primary-100 dark:bg-primary-900 rounded-lg">
+                    <resource.icon className="h-6 w-6 text-primary-600 dark:text-primary-400" />
+                  </div>
+                  <h3 className="text-xl font-semibold text-surface-900 dark:text-surface-100 ml-4">
+                    {resource.title}
+                  </h3>
+                </div>
+                <p className="text-surface-600 dark:text-surface-400">{resource.description}</p>
+              </Link>
+            )
           ))}
         </div>
       </div>
