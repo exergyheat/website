@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { Book, Users, Award, Cpu, Flame, Bitcoin, ArrowRight, Target, Lightbulb, FileText, BarChart as ChartBar, Wrench, CheckCircle2, Mail, X } from 'lucide-react'
 import { Link } from 'react-router-dom'
+import { motion } from 'framer-motion'
 
 const About = () => {
   const [expandedStep, setExpandedStep] = useState<string | null>(null)
@@ -386,37 +387,70 @@ const About = () => {
       <div className="bg-white dark:bg-surface-800 py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-3xl font-bold text-surface-900 dark:text-surface-100 mb-6">Our Process</h2>
-            <p className="text-xl text-surface-600 dark:text-surface-400 max-w-2xl mx-auto">
-              We've developed a comprehensive approach to implementing hashrate heating solutions, backed by years of research and expertise.
-            </p>
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6 }}
+            >
+              <h2 className="text-3xl font-bold text-surface-900 dark:text-surface-100 mb-6">Our Process</h2>
+              <p className="text-xl text-surface-600 dark:text-surface-400 max-w-2xl mx-auto">
+                We've developed a comprehensive approach to implementing hashrate heating solutions, backed by years of research and expertise.
+              </p>
+            </motion.div>
           </div>
 
           <div className="space-y-12">
             {processSteps.map((step, index) => (
-              <div key={step.id} className="relative">
+              <motion.div
+                key={step.id}
+                className="relative"
+                initial={{ opacity: 0, y: 50 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: "-100px" }}
+                transition={{ duration: 0.8, delay: index * 0.2 }}
+              >
                 {index !== processSteps.length - 1 && (
-                  <div className="absolute left-8 top-20 h-full w-0.5 bg-primary-200 dark:bg-primary-800" />
+                  <motion.div
+                    className="absolute left-8 top-20 h-full w-0.5 bg-primary-200 dark:bg-primary-800"
+                    initial={{ scaleY: 0 }}
+                    whileInView={{ scaleY: 1 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 1, delay: 0.5 }}
+                  />
                 )}
                 <div className="relative flex items-start">
-                  <div className="flex h-16 w-16 items-center justify-center rounded-full bg-primary-100 dark:bg-primary-900">
+                  <motion.div
+                    className="flex h-16 w-16 items-center justify-center rounded-full bg-primary-100 dark:bg-primary-900"
+                    initial={{ scale: 0 }}
+                    whileInView={{ scale: 1 }}
+                    viewport={{ once: true }}
+                    transition={{ type: "spring", stiffness: 200, delay: index * 0.2 }}
+                  >
                     <step.icon className="h-8 w-8 text-primary-600 dark:text-primary-400" />
-                  </div>
-                  <div className="ml-6 flex-1">
+                  </motion.div>
+                  <motion.div
+                    className="ml-6 flex-1"
+                    initial={{ opacity: 0, x: 20 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.6, delay: (index * 0.2) + 0.3 }}
+                  >
                     <div className="flex items-center justify-between">
                       <div>
                         <h3 className="text-xl font-bold text-surface-900 dark:text-surface-100">{step.title}</h3>
                         <p className="mt-2 text-surface-600 dark:text-surface-400">{step.description}</p>
                       </div>
-                      <button
+                      <motion.button
                         onClick={() => setExpandedStep(expandedStep === step.id ? null : step.id)}
                         className="ml-4 px-4 py-2 bg-primary-600 text-white rounded-lg hover:bg-primary-700 transition-colors"
+                        whileHover={{ scale: 1.05 }}
+                        whileTap={{ scale: 0.95 }}
                       >
                         {expandedStep === step.id ? 'Close Preview' : 'See Example'}
-                      </button>
+                      </motion.button>
                     </div>
 
-                    {/* Preview Modal */}
                     {expandedStep === step.id && (
                       <div className="fixed inset-0 z-50 overflow-y-auto">
                         <div className="flex items-center justify-center min-h-screen px-4 pt-4 pb-20 text-center sm:block sm:p-0">
@@ -443,9 +477,9 @@ const About = () => {
                         </div>
                       </div>
                     )}
-                  </div>
+                  </motion.div>
                 </div>
-              </div>
+              </motion.div>
             ))}
           </div>
         </div>
@@ -537,8 +571,7 @@ const About = () => {
             </div>
             <h3 className="mt-4 text-xl font-semibold text-surface-900 dark:text-surface-100">Smart Controls</h3>
             <p className="mt-2 text-surface-600 dark:text-surface-400">
-              Advanced control systems for optimal performance an
-d efficiency monitoring.
+              Advanced control systems for optimal performance and efficiency monitoring.
             </p>
           </div>
           <div className="bg-white dark:bg-surface-800 rounded-lg shadow-xl p-8 transform hover:scale-105 transition-transform">
