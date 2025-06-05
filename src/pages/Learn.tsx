@@ -6,7 +6,7 @@ const Learn = () => {
   const resources = [
     {
       title: "Educational Resources",
-      description: "Comprehensive guides and tutorials about hashrate heating technology",
+      description: "Blog posts, comprhensive guides, tutorials and more about hashrate heating",
       icon: BookOpen,
       link: "/education"
     },
