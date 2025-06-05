@@ -24,7 +24,7 @@ const Learn = () => {
     },
     {
       title: "FAQ",
-      description: "Find answers to common questions about our technology",
+      description: "Find answers to common questions about hashrate heating technology",
       icon: HelpCircle,
       link: "/faq"
     }
