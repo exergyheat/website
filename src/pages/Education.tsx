@@ -29,6 +29,15 @@ const Education = () => {
 
   const content: Content[] = [
     {
+      title: "Bitcoin Mining Heat Reuse with Tyler Stevens",
+      description: "In-depth discussion about hashrate heating technology and its applications with EXERGY's founder.",
+      type: 'video',
+      author: "Bitcoin Mining Engineering",
+      link: "https://www.youtube.com/watch?v=H4faYFvQYOQ",
+      image: "https://images.pexels.com/photos/7567560/pexels-photo-7567560.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+      date: "March 20, 2024"
+    },
+    {
       title: "Introduction to Hashrate Heating",
       description: "A comprehensive video overview of hashrate heating technology and its applications.",
       type: 'video',
