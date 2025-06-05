@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import { BookOpen, Calculator, Users, Zap, Bitcoin, Cpu, HelpCircle } from 'lucide-react'
+import { motion } from 'framer-motion'
 
 const Learn = () => {
   const resources = [
@@ -36,19 +37,37 @@ const Learn = () => {
       title: "Electric Power In - Heat Power Out",
       icon: Zap,
       description: "Electric heaters and Bitcoin miners consume the same energy to produce heat. The key difference? Bitcoin miners reward you for supporting the network while heating your space.",
-      image: "https://images.pexels.com/photos/8293778/pexels-photo-8293778.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+      image: "https://images.pexels.com/photos/8293778/pexels-photo-8293778.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+      details: [
+        "100% energy conversion efficiency",
+        "Zero wasted electricity",
+        "Dual-purpose operation",
+        "Continuous revenue generation"
+      ]
     },
     {
       title: "Open Monetary Protocol",
       icon: Bitcoin,
       description: "Bitcoin is a secure, ethical protocol that rewards participants for maintaining network security. Your heater earns these rewards while providing the same warmth as traditional heaters.",
-      image: "https://images.pexels.com/photos/844124/pexels-photo-844124.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+      image: "https://images.pexels.com/photos/844124/pexels-photo-844124.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+      details: [
+        "Decentralized network participation",
+        "Transparent reward system",
+        "Secure mining operations",
+        "Automated payouts"
+      ]
     },
     {
       title: "Smart vs Dumb Heat",
       icon: Cpu,
       description: "All electricity used in Bitcoin mining converts to heat - there's no waste. This heat is then captured and distributed throughout your space, making it a perfectly efficient heating solution.",
-      image: "https://images.pexels.com/photos/1036936/pexels-photo-1036936.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+      image: "https://images.pexels.com/photos/1036936/pexels-photo-1036936.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+      details: [
+        "Intelligent heat distribution",
+        "Real-time monitoring",
+        "Adaptive performance",
+        "Optimized efficiency"
+      ]
     }
   ]
 
@@ -118,33 +137,65 @@ const Learn = () => {
           <h2 className="text-3xl font-bold text-surface-900 dark:text-surface-100 text-center mb-12">
             How Hashrate Heating Works
           </h2>
-          <div className="space-y-20">
+          <div className="space-y-32">
             {concepts.map((concept, index) => (
-              <div 
-                key={index} 
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 100 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: "-100px" }}
+                transition={{ duration: 0.8, ease: "easeOut" }}
                 className={`flex flex-col ${
                   index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'
                 } gap-12 items-center`}
               >
-                <div className="w-full md:w-1/2">
+                <motion.div 
+                  className="w-full md:w-1/2"
+                  initial={{ scale: 0.8 }}
+                  whileInView={{ scale: 1 }}
+                  viewport={{ once: true, margin: "-100px" }}
+                  transition={{ duration: 0.6, ease: "easeOut", delay: 0.2 }}
+                >
                   <img
                     src={concept.image}
                     alt={concept.title}
                     className="rounded-lg shadow-2xl w-full h-[400px] object-cover"
                   />
-                </div>
+                </motion.div>
                 <div className="w-full md:w-1/2 space-y-6">
-                  <div className="inline-block p-3 bg-primary-100 dark:bg-primary-900 rounded-lg">
-                    <concept.icon className="h-8 w-8 text-primary-600 dark:text-primary-400" />
-                  </div>
-                  <h3 className="text-2xl font-bold text-surface-900 dark:text-surface-100">
-                    {concept.title}
-                  </h3>
-                  <p className="text-lg text-surface-600 dark:text-surface-400">
-                    {concept.description}
-                  </p>
+                  <motion.div 
+                    initial={{ opacity: 0, x: index % 2 === 0 ? 50 : -50 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    viewport={{ once: true, margin: "-100px" }}
+                    transition={{ duration: 0.6, ease: "easeOut", delay: 0.4 }}
+                  >
+                    <div className="inline-block p-3 bg-primary-100 dark:bg-primary-900 rounded-lg">
+                      <concept.icon className="h-8 w-8 text-primary-600 dark:text-primary-400" />
+                    </div>
+                    <h3 className="text-2xl font-bold text-surface-900 dark:text-surface-100 mt-4">
+                      {concept.title}
+                    </h3>
+                    <p className="text-lg text-surface-600 dark:text-surface-400 mt-4">
+                      {concept.description}
+                    </p>
+                    <ul className="mt-6 space-y-3">
+                      {concept.details.map((detail, idx) => (
+                        <motion.li
+                          key={idx}
+                          initial={{ opacity: 0, x: 20 }}
+                          whileInView={{ opacity: 1, x: 0 }}
+                          viewport={{ once: true, margin: "-100px" }}
+                          transition={{ duration: 0.4, delay: 0.6 + (idx * 0.1) }}
+                          className="flex items-center text-surface-600 dark:text-surface-400"
+                        >
+                          <div className="h-2 w-2 bg-primary-600 dark:bg-primary-400 rounded-full mr-3" />
+                          {detail}
+                        </motion.li>
+                      ))}
+                    </ul>
+                  </motion.div>
                 </div>
-              </div>
+              </motion.div>
             ))}
           </div>
         </div>
