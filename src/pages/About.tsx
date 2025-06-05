@@ -14,6 +14,49 @@ const About = () => {
     setEmail('')
   }
 
+  const missionPoints = [
+    {
+      icon: Target,
+      title: "Revolutionizing Heat",
+      description: "We're transforming traditional heating costs into revenue streams through innovative Bitcoin mining integration."
+    },
+    {
+      icon: Bitcoin,
+      title: "Supporting the Network",
+      description: "Every heater contributes to Bitcoin's security while providing efficient, cost-effective heating solutions."
+    },
+    {
+      icon: Flame,
+      title: "Maximum Efficiency",
+      description: "Our systems achieve 100% energy efficiency by capturing and utilizing all heat generated from mining operations."
+    }
+  ]
+
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.2
+      }
+    }
+  }
+
+  const itemVariants = {
+    hidden: { 
+      opacity: 0,
+      y: 20
+    },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 0.6,
+        ease: "easeOut"
+      }
+    }
+  }
+
   const team = [
     {
       name: 'Tyler Stevens',
@@ -293,39 +336,79 @@ const About = () => {
       {/* Mission Section */}
       <div className="bg-white dark:bg-surface-800 py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
-            <div>
-              <div className="inline-flex items-center mb-6">
+          <motion.div 
+            className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            variants={containerVariants}
+          >
+            <motion.div variants={itemVariants}>
+              <motion.div 
+                className="inline-flex items-center mb-6"
+                initial={{ scale: 0 }}
+                whileInView={{ scale: 1 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.4 }}
+              >
                 <div className="p-2 bg-primary-100 dark:bg-primary-900 rounded-lg mr-3">
                   <Target className="h-6 w-6 text-primary-600 dark:text-primary-400" />
                 </div>
                 <h2 className="text-2xl font-bold text-surface-900 dark:text-surface-100">Our Mission</h2>
-              </div>
-              <p className="text-lg text-surface-600 dark:text-surface-400 mb-6">
+              </motion.div>
+              <motion.p 
+                className="text-lg text-surface-600 dark:text-surface-400 mb-8"
+                variants={itemVariants}
+              >
                 We're on a mission to transform the way the world thinks about heating. By combining Bitcoin mining with heating systems, we're creating a future where heat generation isn't just a cost - it's a revenue stream.
-              </p>
-              <div className="flex items-start">
-                <div className="p-2 bg-primary-100 dark:bg-primary-900 rounded-lg mr-4">
-                  <Lightbulb className="h-6 w-6 text-primary-600 dark:text-primary-400" />
-                </div>
-                <div>
-                  <h4 className="text-xl font-semibold text-surface-900 dark:text-surface-100">Vision</h4>
-                  <p className="text-surface-600 dark:text-surface-400">A world where every heater contributes to the Bitcoin network while providing efficient, cost-effective heating.</p>
-                </div>
-              </div>
-            </div>
-            <div className="relative">
-              <img
+              </motion.p>
+              
+              <motion.div 
+                className="space-y-6"
+                variants={containerVariants}
+              >
+                {missionPoints.map((point, index) => (
+                  <motion.div
+                    key={index}
+                    className="flex items-start"
+                    variants={itemVariants}
+                  >
+                    <div className="p-2 bg-primary-100 dark:bg-primary-900 rounded-lg mr-4">
+                      <point.icon className="h-6 w-6 text-primary-600 dark:text-primary-400" />
+                    </div>
+                    <div>
+                      <h4 className="text-xl font-semibold text-surface-900 dark:text-surface-100">{point.title}</h4>
+                      <p className="text-surface-600 dark:text-surface-400">{point.description}</p>
+                    </div>
+                  </motion.div>
+                ))}
+              </motion.div>
+            </motion.div>
+            <motion.div 
+              className="relative"
+              variants={itemVariants}
+            >
+              <motion.img
                 src="https://images.pexels.com/photos/7567560/pexels-photo-7567560.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
                 alt="Mission"
                 className="rounded-lg shadow-2xl h-64 w-full object-cover"
+                initial={{ scale: 0.8, opacity: 0 }}
+                whileInView={{ scale: 1, opacity: 1 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6 }}
               />
-              <div className="absolute -bottom-4 -right-4 bg-white dark:bg-surface-700 p-4 rounded-lg shadow-xl">
+              <motion.div 
+                className="absolute -bottom-4 -right-4 bg-white dark:bg-surface-700 p-4 rounded-lg shadow-xl"
+                initial={{ x: 100, opacity: 0 }}
+                whileInView={{ x: 0, opacity: 1 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: 0.3 }}
+              >
                 <p className="text-2xl font-bold text-primary-600 dark:text-primary-400">100%</p>
                 <p className="text-surface-600 dark:text-surface-400">Energy Efficiency</p>
-              </div>
-            </div>
-          </div>
+              </motion.div>
+            </motion.div>
+          </motion.div>
         </div>
       </div>
 
