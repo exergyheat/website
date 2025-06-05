@@ -1,10 +1,11 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
-import { ArrowRight, FileText, Wrench, Activity, HeartPulse, ChevronDown, ChevronUp } from 'lucide-react'
+import { ArrowRight, FileText, Wrench, Activity, HeartPulse, ChevronDown, ChevronUp, X } from 'lucide-react'
 
 const Services = () => {
   const [expandedService, setExpandedService] = useState<string | null>(null)
   const [buildType, setBuildType] = useState<'existing' | 'new'>('existing')
+  const [demoService, setDemoService] = useState<string | null>(null)
 
   const getAuditService = (type: 'existing' | 'new') => ({
     id: 'audit',
@@ -43,7 +44,65 @@ const Services = () => {
       ]
     },
     buttonText: `Purchase ${type === 'existing' ? 'Existing' : 'New'} Build Audit - ${type === 'existing' ? '$400' : '$600'}`,
-    buttonLink: `/contact?service=audit&type=${type}`
+    buttonLink: `/contact?service=audit&type=${type}`,
+    demo: {
+      title: "Sample Heat Audit Report",
+      content: (
+        <div className="space-y-6">
+          <div className="border-b border-surface-200 dark:border-surface-700 pb-4">
+            <h3 className="text-xl font-bold text-surface-900 dark:text-surface-100">Building Overview</h3>
+            <div className="mt-4 grid grid-cols-2 gap-4">
+              <div>
+                <p className="text-sm text-surface-600 dark:text-surface-400">Total Area</p>
+                <p className="font-medium text-surface-900 dark:text-surface-100">50,000 sq ft</p>
+              </div>
+              <div>
+                <p className="text-sm text-surface-600 dark:text-surface-400">Current Heating Load</p>
+                <p className="font-medium text-surface-900 dark:text-surface-100">1.2M BTU/hr</p>
+              </div>
+            </div>
+          </div>
+          
+          <div className="space-y-4">
+            <h3 className="text-xl font-bold text-surface-900 dark:text-surface-100">Cost Analysis</h3>
+            <div className="bg-surface-50 dark:bg-surface-700 p-4 rounded-lg">
+              <div className="grid grid-cols-2 gap-4">
+                <div>
+                  <p className="text-sm text-surface-600 dark:text-surface-400">Current Annual Cost</p>
+                  <p className="font-medium text-surface-900 dark:text-surface-100">$48,000</p>
+                </div>
+                <div>
+                  <p className="text-sm text-surface-600 dark:text-surface-400">Projected Savings</p>
+                  <p className="font-medium text-primary-600">$31,200 (65%)</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div className="space-y-4">
+            <h3 className="text-xl font-bold text-surface-900 dark:text-surface-100">Recommendations</h3>
+            <ul className="space-y-2">
+              <li className="flex items-center text-surface-600 dark:text-surface-400">
+                <ArrowRight className="h-4 w-4 text-primary-600 mr-2" />
+                Install 4x EXERGY SpaceHeat 2000 units
+              </li>
+              <li className="flex items-center text-surface-600 dark:text-surface-400">
+                <ArrowRight className="h-4 w-4 text-primary-600 mr-2" />
+                Integrate with existing HVAC system
+              </li>
+              <li className="flex items-center text-surface-600 dark:text-surface-400">
+                <ArrowRight className="h-4 w-4 text-primary-600 mr-2" />
+                Add smart controls for zone management
+              </li>
+              <li className="flex items-center text-surface-600 dark:text-surface-400">
+                <ArrowRight className="h-4 w-4 text-primary-600 mr-2" />
+                Implement heat recovery system
+              </li>
+            </ul>
+          </div>
+        </div>
+      )
+    }
   })
 
   const services = [
@@ -78,7 +137,65 @@ const Services = () => {
         ]
       },
       buttonText: "Place $1,000 Deposit",
-      buttonLink: "/contact?service=upgrade"
+      buttonLink: "/contact?service=upgrade",
+      demo: {
+        title: "Sample System Design",
+        content: (
+          <div className="space-y-6">
+            <div className="border-b border-surface-200 dark:border-surface-700 pb-4">
+              <h3 className="text-xl font-bold text-surface-900 dark:text-surface-100">System Specifications</h3>
+              <div className="mt-4 grid grid-cols-2 gap-4">
+                <div>
+                  <p className="text-sm text-surface-600 dark:text-surface-400">Total Capacity</p>
+                  <p className="font-medium text-surface-900 dark:text-surface-100">500 kW</p>
+                </div>
+                <div>
+                  <p className="text-sm text-surface-600 dark:text-surface-400">Mining Hashrate</p>
+                  <p className="font-medium text-surface-900 dark:text-surface-100">15 PH/s</p>
+                </div>
+              </div>
+            </div>
+
+            <div className="space-y-4">
+              <h3 className="text-xl font-bold text-surface-900 dark:text-surface-100">Integration Plan</h3>
+              <div className="bg-surface-50 dark:bg-surface-700 p-4 rounded-lg">
+                <ul className="space-y-2">
+                  <li className="flex items-center text-surface-600 dark:text-surface-400">
+                    <ArrowRight className="h-4 w-4 text-primary-600 mr-2" />
+                    Primary heating loop integration
+                  </li>
+                  <li className="flex items-center text-surface-600 dark:text-surface-400">
+                    <ArrowRight className="h-4 w-4 text-primary-600 mr-2" />
+                    Backup system configuration
+                  </li>
+                  <li className="flex items-center text-surface-600 dark:text-surface-400">
+                    <ArrowRight className="h-4 w-4 text-primary-600 mr-2" />
+                    Control system architecture
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <div className="space-y-4">
+              <h3 className="text-xl font-bold text-surface-900 dark:text-surface-100">Timeline</h3>
+              <div className="space-y-2">
+                <div className="flex items-center justify-between py-2 border-b border-surface-200 dark:border-surface-700">
+                  <span className="text-surface-600 dark:text-surface-400">Planning Phase</span>
+                  <span className="text-surface-900 dark:text-surface-100">2 weeks</span>
+                </div>
+                <div className="flex items-center justify-between py-2 border-b border-surface-200 dark:border-surface-700">
+                  <span className="text-surface-600 dark:text-surface-400">Installation</span>
+                  <span className="text-surface-900 dark:text-surface-100">3 weeks</span>
+                </div>
+                <div className="flex items-center justify-between py-2">
+                  <span className="text-surface-600 dark:text-surface-400">Testing & Commissioning</span>
+                  <span className="text-surface-900 dark:text-surface-100">1 week</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        )
+      }
     },
     {
       id: 'monitoring',
@@ -108,7 +225,60 @@ const Services = () => {
         ]
       },
       buttonText: "Contact Us",
-      buttonLink: "/contact?service=monitoring"
+      buttonLink: "/contact?service=monitoring",
+      demo: {
+        title: "Sample Monitoring Dashboard",
+        content: (
+          <div className="space-y-6">
+            <div className="border-b border-surface-200 dark:border-surface-700 pb-4">
+              <h3 className="text-xl font-bold text-surface-900 dark:text-surface-100">System Status</h3>
+              <div className="mt-4 grid grid-cols-2 gap-4">
+                <div>
+                  <p className="text-sm text-surface-600 dark:text-surface-400">Overall Health</p>
+                  <div className="flex items-center">
+                    <div className="h-3 w-3 rounded-full bg-green-500 mr-2"></div>
+                    <p className="font-medium text-surface-900 dark:text-surface-100">Optimal</p>
+                  </div>
+                </div>
+                <div>
+                  <p className="text-sm text-surface-600 dark:text-surface-400">Uptime</p>
+                  <p className="font-medium text-surface-900 dark:text-surface-100">99.9%</p>
+                </div>
+              </div>
+            </div>
+
+            <div className="space-y-4">
+              <h3 className="text-xl font-bold text-surface-900 dark:text-surface-100">Performance Metrics</h3>
+              <div className="grid grid-cols-2 gap-4">
+                <div className="bg-surface-50 dark:bg-surface-700 p-4 rounded-lg">
+                  <p className="text-sm text-surface-600 dark:text-surface-400">Heat Output</p>
+                  <p className="text-xl font-bold text-primary-600">45,000 BTU/hr</p>
+                  <p className="text-sm text-green-500">↑ 2.3% from last week</p>
+                </div>
+                <div className="bg-surface-50 dark:bg-surface-700 p-4 rounded-lg">
+                  <p className="text-sm text-surface-600 dark:text-surface-400">Mining Efficiency</p>
+                  <p className="text-xl font-bold text-primary-600">98.5%</p>
+                  <p className="text-sm text-green-500">↑ 0.5% from last week</p>
+                </div>
+              </div>
+            </div>
+
+            <div className="space-y-4">
+              <h3 className="text-xl font-bold text-surface-900 dark:text-surface-100">Recent Alerts</h3>
+              <div className="space-y-2">
+                <div className="flex items-center text-surface-600 dark:text-surface-400 bg-surface-50 dark:bg-surface-700 p-3 rounded-lg">
+                  <div className="h-2 w-2 rounded-full bg-yellow-500 mr-3"></div>
+                  Filter maintenance recommended in 2 weeks
+                </div>
+                <div className="flex items-center text-surface-600 dark:text-surface-400 bg-surface-50 dark:bg-surface-700 p-3 rounded-lg">
+                  <div className="h-2 w-2 rounded-full bg-green-500 mr-3"></div>
+                  System update completed successfully
+                </div>
+              </div>
+            </div>
+          </div>
+        )
+      }
     },
     {
       id: 'consulting',
@@ -138,7 +308,75 @@ const Services = () => {
         ]
       },
       buttonText: "Contact Us",
-      buttonLink: "/contact?service=consulting"
+      buttonLink: "/contact?service=consulting",
+      demo: {
+        title: "Sample Consulting Report",
+        content: (
+          <div className="space-y-6">
+            <div className="border-b border-surface-200 dark:border-surface-700 pb-4">
+              <h3 className="text-xl font-bold text-surface-900 dark:text-surface-100">Strategic Analysis</h3>
+              <div className="mt-4 space-y-4">
+                <div>
+                  <h4 className="font-medium text-surface-900 dark:text-surface-100">Current State</h4>
+                  <p className="text-surface-600 dark:text-surface-400">Analysis of existing heating infrastructure and operational costs</p>
+                </div>
+                <div>
+                  <h4 className="font-medium text-surface-900 dark:text-surface-100">Opportunities</h4>
+                  <p className="text-surface-600 dark:text-surface-400">Identification of key areas for improvement and optimization</p>
+                </div>
+              </div>
+            </div>
+
+            <div className="space-y-4">
+              <h3 className="text-xl font-bold text-surface-900 dark:text-surface-100">Recommendations</h3>
+              <div className="space-y-3">
+                <div className="bg-surface-50 dark:bg-surface-700 p-4 rounded-lg">
+                  <h4 className="font-medium text-surface-900 dark:text-surface-100">Short Term (0-6 months)</h4>
+                  <ul className="mt-2 space-y-2">
+                    <li className="flex items-center text-surface-600 dark:text-surface-400">
+                      <ArrowRight className="h-4 w-4 text-primary-600 mr-2" />
+                      Pilot program implementation
+                    </li>
+                    <li className="flex items-center text-surface-600 dark:text-surface-400">
+                      <ArrowRight className="h-4 w-4 text-primary-600 mr-2" />
+                      Staff training program
+                    </li>
+                  </ul>
+                </div>
+                <div className="bg-surface-50 dark:bg-surface-700 p-4 rounded-lg">
+                  <h4 className="font-medium text-surface-900 dark:text-surface-100">Long Term (6-18 months)</h4>
+                  <ul className="mt-2 space-y-2">
+                    <li className="flex items-center text-surface-600 dark:text-surface-400">
+                      <ArrowRight className="h-4 w-4 text-primary-600 mr-2" />
+                      Full-scale deployment
+                    </li>
+                    <li className="flex items-center text-surface-600 dark:text-surface-400">
+                      <ArrowRight className="h-4 w-4 text-primary-600 mr-2" />
+                      Integration optimization
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div className="space-y-4">
+              <h3 className="text-xl font-bold text-surface-900 dark:text-surface-100">Expected Outcomes</h3>
+              <div className="grid grid-cols-2 gap-4">
+                <div className="bg-surface-50 dark:bg-surface-700 p-4 rounded-lg">
+                  <p className="text-sm text-surface-600 dark:text-surface-400">Cost Reduction</p>
+                  <p className="text-xl font-bold text-primary-600">65%</p>
+                  <p className="text-sm text-surface-600 dark:text-surface-400">Annual heating costs</p>
+                </div>
+                <div className="bg-surface-50 dark:bg-surface-700 p-4 rounded-lg">
+                  <p className="text-sm text-surface-600 dark:text-surface-400">ROI Period</p>
+                  <p className="text-xl font-bold text-primary-600">18 months</p>
+                  <p className="text-sm text-surface-600 dark:text-surface-400">Full system payback</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        )
+      }
     }
   ]
 
@@ -213,6 +451,21 @@ const Services = () => {
                       </li>
                     ))}
                   </ul>
+                  <div className="flex gap-4 mt-6">
+                    <Link
+                      to={service.buttonLink}
+                      className="flex-1 inline-flex items-center justify-center px-6 py-3 bg-primary-600 text-white rounded-lg hover:bg-primary-700 transition-colors"
+                    >
+                      {service.buttonText}
+                      <ArrowRight className="ml-2 h-5 w-5" />
+                    </Link>
+                    <button
+                      onClick={() => setDemoService(service.id)}
+                      className="px-6 py-3 bg-surface-100 dark:bg-surface-700 text-surface-900 dark:text-surface-100 rounded-lg hover:bg-surface-200 dark:hover:bg-surface-600 transition-colors"
+                    >
+                      Demo
+                    </button>
+                  </div>
                 </div>
 
                 {/* Expandable Details */}
@@ -248,19 +501,39 @@ const Services = () => {
                     </div>
                   )}
                 </div>
-
-                <Link
-                  to={service.buttonLink}
-                  className="inline-flex items-center px-6 py-3 bg-primary-600 text-white rounded-lg hover:bg-primary-700 transition-colors w-full justify-center"
-                >
-                  {service.buttonText}
-                  <ArrowRight className="ml-2 h-5 w-5" />
-                </Link>
               </div>
             </div>
           ))}
         </div>
       </div>
+
+      {/* Demo Modal */}
+      {demoService && (
+        <div className="fixed inset-0 z-50 overflow-y-auto">
+          <div className="flex items-center justify-center min-h-screen px-4 pt-4 pb-20 text-center sm:block sm:p-0">
+            <div className="fixed inset-0 transition-opacity" aria-hidden="true">
+              <div className="absolute inset-0 bg-surface-900 opacity-75"></div>
+            </div>
+
+            <div className="inline-block align-bottom bg-surface-50 dark:bg-surface-900 rounded-lg text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle sm:max-w-4xl sm:w-full">
+              <div className="bg-surface-50 dark:bg-surface-900 px-4 pt-5 pb-4 sm:p-6">
+                <div className="flex justify-between items-center mb-4">
+                  <h3 className="text-2xl font-bold text-surface-900 dark:text-surface-100">
+                    {services.find(s => s.id === demoService)?.demo?.title}
+                  </h3>
+                  <button
+                    onClick={() => setDemoService(null)}
+                    className="text-surface-500 hover:text-surface-700 dark:text-surface-400 dark:hover:text-surface-200"
+                  >
+                    <X className="h-6 w-6" />
+                  </button>
+                </div>
+                {services.find(s => s.id === demoService)?.demo?.content}
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
 
       {/* CTA Section */}
       <div className="bg-surface-900 py-20">
