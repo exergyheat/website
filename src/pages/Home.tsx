@@ -3,9 +3,34 @@ import { ArrowRight, Code, Globe, Shield, Bitcoin, Cpu, Flame, ArrowRightCircle 
 import { Link } from 'react-router-dom'
 import { useTypewriter } from '../hooks/useTypewriter'
 import ProjectCarousel from '../components/ProjectCarousel'
+import { motion } from 'framer-motion'
 
 const Home = () => {
   const headlineText = useTypewriter("You pay for heat every month.", 75)
+
+  const containerVariants = {
+    hidden: {},
+    visible: {
+      transition: {
+        staggerChildren: 0.2
+      }
+    }
+  }
+
+  const cardVariants = {
+    hidden: { 
+      opacity: 0,
+      x: -50
+    },
+    visible: {
+      opacity: 1,
+      x: 0,
+      transition: {
+        type: "spring",
+        stiffness: 100
+      }
+    }
+  }
 
   return (
     <div className="bg-surface-50 dark:bg-surface-900">
@@ -50,9 +75,15 @@ const Home = () => {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <motion.div 
+            className="grid grid-cols-1 md:grid-cols-3 gap-8"
+            variants={containerVariants}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, margin: "-100px" }}
+          >
             {/* Step 1: Bitcoin Miners */}
-            <div className="relative group">
+            <motion.div className="relative group" variants={cardVariants}>
               <div className="bg-surface-50 dark:bg-surface-700 rounded-lg p-8 h-full transform transition-transform group-hover:scale-105">
                 <div className="absolute -right-4 top-1/2 transform -translate-y-1/2 z-10 hidden md:block">
                   <ArrowRightCircle className="h-8 w-8 text-primary-600 dark:text-primary-400" />
@@ -69,10 +100,10 @@ const Home = () => {
                   Specialized computers that perform one task: mining bitcoin and generating heat as a byproduct.
                 </p>
               </div>
-            </div>
+            </motion.div>
 
             {/* Step 2: Energy Conversion */}
-            <div className="relative group">
+            <motion.div className="relative group" variants={cardVariants}>
               <div className="bg-surface-50 dark:bg-surface-700 rounded-lg p-8 h-full transform transition-transform group-hover:scale-105">
                 <div className="absolute -right-4 top-1/2 transform -translate-y-1/2 z-10 hidden md:block">
                   <ArrowRightCircle className="h-8 w-8 text-primary-600 dark:text-primary-400" />
@@ -89,10 +120,10 @@ const Home = () => {
                   All electrical energy used in mining is converted to heat, ensuring maximum efficiency.
                 </p>
               </div>
-            </div>
+            </motion.div>
 
             {/* Step 3: Smart Integration */}
-            <div className="group">
+            <motion.div className="group" variants={cardVariants}>
               <div className="bg-surface-50 dark:bg-surface-700 rounded-lg p-8 h-full transform transition-transform group-hover:scale-105">
                 <div className="flex justify-center mb-6">
                   <div className="p-4 bg-primary-100 dark:bg-primary-900 rounded-full">
@@ -106,8 +137,8 @@ const Home = () => {
                   Advanced systems capture and distribute heat while earning bitcoin rewards for your business.
                 </p>
               </div>
-            </div>
-          </div>
+            </motion.div>
+          </motion.div>
 
           <div className="mt-12 text-center">
             <Link
@@ -204,5 +235,7 @@ const Home = () => {
     </div>
   )
 }
+
+export default Home
 
 export default Home
