@@ -51,7 +51,14 @@ const Footer = () => {
                 <Link to="/education" className="text-surface-400 hover:text-surface-200 transition-colors">Education</Link>
               </li>
               <li>
-                <Link to="/forum" className="text-surface-400 hover:text-surface-200 transition-colors">Forum</Link>
+                <a 
+                  href="https://heatpunks.org"
+                  target="_blank"
+                  rel="noopener noreferrer" 
+                  className="text-surface-400 hover:text-surface-200 transition-colors"
+                >
+                  Forum
+                </a>
               </li>
               <li>
                 <Link to="/faq" className="text-surface-400 hover:text-surface-200 transition-colors">FAQ</Link>
@@ -102,5 +109,3 @@ const Footer = () => {
     </footer>
   )
 }
-
-export default Footer
