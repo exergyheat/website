@@ -585,27 +585,69 @@ const About = () => {
       {/* Roadmap Section */}
       <div className="bg-white dark:bg-surface-800 py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold text-surface-900 dark:text-surface-100 text-center mb-12">Our Roadmap</h2>
+          <motion.h2 
+            className="text-3xl font-bold text-surface-900 dark:text-surface-100 text-center mb-12"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+          >
+            Our Roadmap
+          </motion.h2>
           <div className="relative">
-            <div className="absolute left-11 md:left-1/2 transform md:-translate-x-1/2 h-full w-1 bg-primary-200 dark:bg-primary-800"></div>
+            <motion.div 
+              className="absolute left-1/2 transform -translate-x-1/2 h-full w-1 bg-primary-200 dark:bg-primary-800"
+              initial={{ scaleY: 0 }}
+              whileInView={{ scaleY: 1 }}
+              viewport={{ once: true }}
+              transition={{ duration: 1.5, ease: "easeOut" }}
+            />
             <div className="space-y-12">
-              {roadmap.map((milestone, index) => (
-                <div key={index} className="relative">
+              {roadmap.map((item, index) => (
+                <motion.div 
+                  key={index} 
+                  className="relative"
+                  initial={{ opacity: 0, y: 50 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true, margin: "-100px" }}
+                  transition={{ duration: 0.6, delay: index * 0.2 }}
+                >
                   <div className="flex items-center">
-                    <div className="absolute left-8 md:left-1/2 transform md:-translate-x-1/2 w-8 h-8 bg-primary-600 dark:bg-primary-500 rounded-full text-white flex items-center justify-center">
+                    <motion.div 
+                      className="absolute left-1/2 transform -translate-x-1/2 w-8 h-8 bg-primary-600 dark:bg-primary-500 rounded-full text-white flex items-center justify-center"
+                      initial={{ scale: 0 }}
+                      whileInView={{ scale: 1 }}
+                      viewport={{ once: true }}
+                      transition={{ type: "spring", stiffness: 200, delay: index * 0.2 }}
+                    >
                       {index + 1}
-                    </div>
-                    <div className={`w-full md:w-1/2 pl-20 md:pl-0 ${index === 0 || index === 2 ? 'md:pr-12 md:text-right' : 'md:pl-12 md:ml-auto'}`}>
-                      <h3 className="text-xl font-semibold text-surface-900 dark:text-surface-100 mb-2">{milestone.quarter}</h3>
-                      <h4 className="text-lg font-medium text-primary-600 dark:text-primary-400 mb-2">{milestone.title}</h4>
+                    </motion.div>
+                    <motion.div 
+                      className={`w-1/2 ${index % 2 === 0 ? 'pr-12 text-right' : 'pl-12'}`}
+                      initial={{ opacity: 0, x: index % 2 === 0 ? -50 : 50 }}
+                      whileInView={{ opacity: 1, x: 0 }}
+                      viewport={{ once: true }}
+                      transition={{ duration: 0.6, delay: index * 0.2 + 0.3 }}
+                    >
+                      <h3 className="text-xl font-semibold text-surface-900 dark:text-surface-100 mb-2">{item.quarter}</h3>
+                      <h4 className="text-lg font-medium text-primary-600 dark:text-primary-400 mb-2">{item.title}</h4>
                       <ul className="space-y-2">
-                        {milestone.events.map((event, eventIndex) => (
-                          <li key={eventIndex} className="text-surface-600 dark:text-surface-400">{event}</li>
+                        {item.events.map((event, eventIndex) => (
+                          <motion.li 
+                            key={eventIndex}
+                            initial={{ opacity: 0, y: 10 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true }}
+                            transition={{ duration: 0.4, delay: index * 0.2 + eventIndex * 0.1 + 0.5 }}
+                            className="text-surface-600 dark:text-surface-400"
+                          >
+                            {event}
+                          </motion.li>
                         ))}
                       </ul>
-                    </div>
+                    </motion.div>
                   </div>
-                </div>
+                </motion.div>
               ))}
             </div>
           </div>
