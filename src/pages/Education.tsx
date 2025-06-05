@@ -29,6 +29,15 @@ const Education = () => {
 
   const content: Content[] = [
     {
+      title: "Decentralized Heat: Bitcoin Mining's Game-Changing Energy Solution W/ Tyler Stevens",
+      description: "In this episode of the Home Mining Podcast, host TwoSats and thermal engineer Tyler Stevens explore the innovative concept of heat reuse in Bitcoin mining. They discuss how Bitcoin miners can serve dual purposes by providing heat for homes and businesses while securing the network. The conversation delves into the technical aspects of heat transfer, real-world applications, and the economic benefits of integrating heat reuse into mining operations.",
+      type: 'podcast',
+      author: "Home Mining Podcast by Solo Satoshi",
+      link: "https://www.youtube.com/watch?v=H4faYFvQYOQ",
+      image: "/image.png",
+      date: "March 20, 2024"
+    },
+    {
       title: "Introduction to Hashrate Heating",
       description: "A comprehensive video overview of hashrate heating technology and its applications.",
       type: 'video',
