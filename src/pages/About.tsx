@@ -498,7 +498,7 @@ const About = () => {
                     The definitive guide to hashrate heating technology, written by our founder Tyler Stevens. 
                     With a foreword by Paul Jin Li, CEO of Foghashing.
                   </p>
-                  <div className="flex flex-col sm:flex-row gap-4">
+                  <div className="flex flex-col sm:flex-row gap-4 mb-16 sm:mb-0">
                     <a
                       href="https://braiins.com/books/bitcoin-mining-heat-reuse"
                       target="_blank"
@@ -520,7 +520,7 @@ const About = () => {
                   </div>
                 </div>
               </div>
-              <div className="absolute -bottom-6 -right-6 bg-white dark:bg-surface-700 p-6 rounded-lg shadow-xl">
+              <div className="absolute bottom-0 sm:-bottom-6 right-0 sm:-right-6 bg-white dark:bg-surface-700 p-6 rounded-lg shadow-xl">
                 <p className="text-xl font-bold text-primary-600 dark:text-primary-400">#1</p>
                 <p className="text-surface-600 dark:text-surface-400">Industry Resource</p>
               </div>
@@ -563,7 +563,6 @@ const About = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div className="bg-white dark:bg-surface-800 rounded-lg shadow-xl p-8 transform hover:scale-105 transition-transform">
             <div className="flex justify-center">
-              
               <Bitcoin className="h-12 w-12 text-primary-600 dark:text-primary-400" />
             </div>
             <h3 className="mt-4 text-xl font-semibold text-surface-900 dark:text-surface-100">Bitcoin Mining</h3>
