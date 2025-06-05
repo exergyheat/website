@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { Book, Users, Award, Cpu, Flame, Bitcoin, ArrowRight, Target, Lightbulb, FileText, BarChart as ChartBar, Wrench, CheckCircle2, Mail } from 'lucide-react'
+import { Book, Users, Award, Cpu, Flame, Bitcoin, ArrowRight, Target, Lightbulb, FileText, BarChart as ChartBar, Wrench, CheckCircle2, Mail, X } from 'lucide-react'
 import { Link } from 'react-router-dom'
 
 const About = () => {
@@ -9,7 +9,6 @@ const About = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
-    // Handle email submission here
     setSubmitted(true)
     setEmail('')
   }
@@ -41,17 +40,55 @@ const About = () => {
       title: 'Heat Audit & Analysis',
       description: 'Our proprietary thermal modeling software analyzes your heating needs and potential savings.',
       icon: FileText,
-      details: {
-        title: 'Comprehensive Heat Audit Report',
-        description: 'Our detailed analysis includes:',
-        image: 'https://images.pexels.com/photos/590022/pexels-photo-590022.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-        points: [
-          'Building heat loss calculations',
-          'Energy consumption patterns',
-          'Cost analysis and ROI projections',
-          'System recommendations',
-          'Implementation timeline'
-        ]
+      preview: {
+        title: 'Sample Heat Audit Report',
+        content: (
+          <div className="bg-white dark:bg-surface-800 p-6 rounded-lg shadow-lg">
+            <div className="border-b border-surface-200 dark:border-surface-700 pb-4 mb-4">
+              <h3 className="text-2xl font-bold text-surface-900 dark:text-surface-100">Heat Audit Report</h3>
+              <p className="text-surface-600 dark:text-surface-400">Commercial Office Building - Denver, CO</p>
+            </div>
+            <div className="space-y-6">
+              <div>
+                <h4 className="font-semibold text-surface-900 dark:text-surface-100 mb-2">Building Specifications</h4>
+                <div className="grid grid-cols-2 gap-4 text-sm">
+                  <div>
+                    <p className="text-surface-600 dark:text-surface-400">Total Area</p>
+                    <p className="font-medium text-surface-900 dark:text-surface-100">50,000 sq ft</p>
+                  </div>
+                  <div>
+                    <p className="text-surface-600 dark:text-surface-400">Current Heating Load</p>
+                    <p className="font-medium text-surface-900 dark:text-surface-100">1.2M BTU/hr</p>
+                  </div>
+                </div>
+              </div>
+              <div>
+                <h4 className="font-semibold text-surface-900 dark:text-surface-100 mb-2">Annual Cost Analysis</h4>
+                <div className="bg-surface-50 dark:bg-surface-700 p-4 rounded-lg">
+                  <div className="grid grid-cols-2 gap-4 text-sm">
+                    <div>
+                      <p className="text-surface-600 dark:text-surface-400">Current Heating Cost</p>
+                      <p className="font-medium text-surface-900 dark:text-surface-100">$48,000/year</p>
+                    </div>
+                    <div>
+                      <p className="text-surface-600 dark:text-surface-400">Projected Savings</p>
+                      <p className="font-medium text-primary-600">$31,200/year</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div>
+                <h4 className="font-semibold text-surface-900 dark:text-surface-100 mb-2">Recommendations</h4>
+                <ul className="space-y-2 text-sm text-surface-600 dark:text-surface-400">
+                  <li>• Install 4x EXERGY SpaceHeat 2000 units</li>
+                  <li>• Integrate with existing HVAC system</li>
+                  <li>• Add smart controls for zone management</li>
+                  <li>• Implement heat recovery system</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        )
       }
     },
     {
@@ -59,17 +96,43 @@ const About = () => {
       title: 'System Design',
       description: 'Custom engineering solutions tailored to your specific heating requirements.',
       icon: Wrench,
-      details: {
-        title: 'Engineering Schematics',
-        description: 'Professional system design includes:',
-        image: 'https://images.pexels.com/photos/834892/pexels-photo-834892.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-        points: [
-          'Detailed CAD drawings',
-          'Equipment specifications',
-          'Integration plans',
-          'Control system design',
-          'Safety considerations'
-        ]
+      preview: {
+        title: 'System Design Schematic',
+        content: (
+          <div className="bg-white dark:bg-surface-800 p-6 rounded-lg shadow-lg">
+            <div className="border-b border-surface-200 dark:border-surface-700 pb-4 mb-4">
+              <h3 className="text-2xl font-bold text-surface-900 dark:text-surface-100">System Design</h3>
+              <p className="text-surface-600 dark:text-surface-400">Hydronic Integration Schematic</p>
+            </div>
+            <div className="space-y-6">
+              <img
+                src="https://images.pexels.com/photos/834892/pexels-photo-834892.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+                alt="System Design"
+                className="w-full h-64 object-cover rounded-lg mb-4"
+              />
+              <div className="grid grid-cols-2 gap-4">
+                <div>
+                  <h4 className="font-semibold text-surface-900 dark:text-surface-100 mb-2">Components</h4>
+                  <ul className="space-y-2 text-sm text-surface-600 dark:text-surface-400">
+                    <li>• Heat exchangers</li>
+                    <li>• Circulation pumps</li>
+                    <li>• Control valves</li>
+                    <li>• Temperature sensors</li>
+                  </ul>
+                </div>
+                <div>
+                  <h4 className="font-semibold text-surface-900 dark:text-surface-100 mb-2">Specifications</h4>
+                  <ul className="space-y-2 text-sm text-surface-600 dark:text-surface-400">
+                    <li>• Flow rate: 20 GPM</li>
+                    <li>• Max temp: 180°F</li>
+                    <li>• Pressure: 30 PSI</li>
+                    <li>• Power: 5000W</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        )
       }
     },
     {
@@ -77,17 +140,55 @@ const About = () => {
       title: 'Performance Simulation',
       description: 'Advanced modeling to predict system performance and optimize configurations.',
       icon: ChartBar,
-      details: {
-        title: 'Performance Analysis Tools',
-        description: 'Our simulation software provides:',
-        image: 'https://images.pexels.com/photos/7567473/pexels-photo-7567473.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-        points: [
-          'Heat distribution patterns',
-          'Energy efficiency metrics',
-          'Cost savings projections',
-          'System optimization scenarios',
-          'Performance guarantees'
-        ]
+      preview: {
+        title: 'Performance Analysis',
+        content: (
+          <div className="bg-white dark:bg-surface-800 p-6 rounded-lg shadow-lg">
+            <div className="border-b border-surface-200 dark:border-surface-700 pb-4 mb-4">
+              <h3 className="text-2xl font-bold text-surface-900 dark:text-surface-100">System Performance</h3>
+              <p className="text-surface-600 dark:text-surface-400">Simulation Results</p>
+            </div>
+            <div className="space-y-6">
+              <div className="grid grid-cols-2 gap-4">
+                <div className="bg-surface-50 dark:bg-surface-700 p-4 rounded-lg">
+                  <h4 className="font-semibold text-surface-900 dark:text-surface-100 mb-2">Heating Performance</h4>
+                  <div className="space-y-2">
+                    <div className="flex justify-between text-sm">
+                      <span className="text-surface-600 dark:text-surface-400">Efficiency</span>
+                      <span className="text-primary-600">98%</span>
+                    </div>
+                    <div className="flex justify-between text-sm">
+                      <span className="text-surface-600 dark:text-surface-400">Heat Output</span>
+                      <span className="text-primary-600">45,000 BTU/hr</span>
+                    </div>
+                  </div>
+                </div>
+                <div className="bg-surface-50 dark:bg-surface-700 p-4 rounded-lg">
+                  <h4 className="font-semibold text-surface-900 dark:text-surface-100 mb-2">Mining Performance</h4>
+                  <div className="space-y-2">
+                    <div className="flex justify-between text-sm">
+                      <span className="text-surface-600 dark:text-surface-400">Hashrate</span>
+                      <span className="text-primary-600">100 TH/s</span>
+                    </div>
+                    <div className="flex justify-between text-sm">
+                      <span className="text-surface-600 dark:text-surface-400">Power Usage</span>
+                      <span className="text-primary-600">3500W</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div>
+                <h4 className="font-semibold text-surface-900 dark:text-surface-100 mb-2">Optimization Results</h4>
+                <ul className="space-y-2 text-sm text-surface-600 dark:text-surface-400">
+                  <li>• Optimal operating temperature: 165°F</li>
+                  <li>• Recommended flow rate: 15 GPM</li>
+                  <li>• Expected annual savings: $28,000</li>
+                  <li>• ROI period: 18 months</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        )
       }
     },
     {
@@ -95,17 +196,42 @@ const About = () => {
       title: 'Implementation',
       description: 'Expert installation and integration with existing infrastructure.',
       icon: CheckCircle2,
-      details: {
-        title: 'Professional Installation',
-        description: 'Our implementation process ensures:',
-        image: 'https://images.pexels.com/photos/8293778/pexels-photo-8293778.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-        points: [
-          'Seamless integration',
-          'Minimal disruption',
-          'Quality assurance',
-          'Safety compliance',
-          'Performance verification'
-        ]
+      preview: {
+        title: 'Implementation Plan',
+        content: (
+          <div className="bg-white dark:bg-surface-800 p-6 rounded-lg shadow-lg">
+            <div className="border-b border-surface-200 dark:border-surface-700 pb-4 mb-4">
+              <h3 className="text-2xl font-bold text-surface-900 dark:text-surface-100">Implementation Timeline</h3>
+              <p className="text-surface-600 dark:text-surface-400">Project Execution Plan</p>
+            </div>
+            <div className="space-y-6">
+              <div className="space-y-4">
+                {[
+                  { phase: 'Phase 1: Site Preparation', duration: '1 week' },
+                  { phase: 'Phase 2: Equipment Installation', duration: '2 weeks' },
+                  { phase: 'Phase 3: System Integration', duration: '1 week' },
+                  { phase: 'Phase 4: Testing & Commissioning', duration: '1 week' }
+                ].map((phase, index) => (
+                  <div key={index} className="bg-surface-50 dark:bg-surface-700 p-4 rounded-lg">
+                    <div className="flex justify-between items-center">
+                      <h4 className="font-semibold text-surface-900 dark:text-surface-100">{phase.phase}</h4>
+                      <span className="text-sm text-primary-600">{phase.duration}</span>
+                    </div>
+                  </div>
+                ))}
+              </div>
+              <div>
+                <h4 className="font-semibold text-surface-900 dark:text-surface-100 mb-2">Key Milestones</h4>
+                <ul className="space-y-2 text-sm text-surface-600 dark:text-surface-400">
+                  <li>• Infrastructure assessment</li>
+                  <li>• Equipment delivery and setup</li>
+                  <li>• System integration and testing</li>
+                  <li>• Staff training and handover</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        )
       }
     }
   ]
@@ -277,39 +403,42 @@ const About = () => {
                     <step.icon className="h-8 w-8 text-primary-600 dark:text-primary-400" />
                   </div>
                   <div className="ml-6 flex-1">
-                    <button
-                      onClick={() => setExpandedStep(expandedStep === step.id ? null : step.id)}
-                      className="w-full text-left"
-                    >
-                      <h3 className="text-xl font-bold text-surface-900 dark:text-surface-100">{step.title}</h3>
-                      <p className="mt-2 text-surface-600 dark:text-surface-400">{step.description}</p>
-                    </button>
+                    <div className="flex items-center justify-between">
+                      <div>
+                        <h3 className="text-xl font-bold text-surface-900 dark:text-surface-100">{step.title}</h3>
+                        <p className="mt-2 text-surface-600 dark:text-surface-400">{step.description}</p>
+                      </div>
+                      <button
+                        onClick={() => setExpandedStep(expandedStep === step.id ? null : step.id)}
+                        className="ml-4 px-4 py-2 bg-primary-600 text-white rounded-lg hover:bg-primary-700 transition-colors"
+                      >
+                        {expandedStep === step.id ? 'Close Preview' : 'See Example'}
+                      </button>
+                    </div>
 
+                    {/* Preview Modal */}
                     {expandedStep === step.id && (
-                      <div className="mt-6 bg-surface-50 dark:bg-surface-700 rounded-lg overflow-hidden">
-                        <div className="grid grid-cols-1 md:grid-cols-2">
-                          <div className="p-6">
-                            <h4 className="text-lg font-semibold text-surface-900 dark:text-surface-100 mb-4">
-                              {step.details.title}
-                            </h4>
-                            <p className="text-surface-600 dark:text-surface-400 mb-4">
-                              {step.details.description}
-                            </p>
-                            <ul className="space-y-2">
-                              {step.details.points.map((point, i) => (
-                                <li key={i} className="flex items-center text-surface-600 dark:text-surface-400">
-                                  <ArrowRight className="h-4 w-4 text-primary-600 dark:text-primary-400 mr-2" />
-                                  {point}
-                                </li>
-                              ))}
-                            </ul>
+                      <div className="fixed inset-0 z-50 overflow-y-auto">
+                        <div className="flex items-center justify-center min-h-screen px-4 pt-4 pb-20 text-center sm:block sm:p-0">
+                          <div className="fixed inset-0 transition-opacity" aria-hidden="true">
+                            <div className="absolute inset-0 bg-surface-900 opacity-75"></div>
                           </div>
-                          <div className="relative h-64 md:h-auto">
-                            <img
-                              src={step.details.image}
-                              alt={step.title}
-                              className="absolute inset-0 w-full h-full object-cover"
-                            />
+
+                          <div className="inline-block align-bottom bg-surface-50 dark:bg-surface-900 rounded-lg text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle sm:max-w-4xl sm:w-full">
+                            <div className="bg-surface-50 dark:bg-surface-900 px-4 pt-5 pb-4 sm:p-6">
+                              <div className="flex justify-between items-center mb-4">
+                                <h3 className="text-2xl font-bold text-surface-900 dark:text-surface-100">
+                                  {step.preview.title}
+                                </h3>
+                                <button
+                                  onClick={() => setExpandedStep(null)}
+                                  className="text-surface-500 hover:text-surface-700 dark:text-surface-400 dark:hover:text-surface-200"
+                                >
+                                  <X className="h-6 w-6" />
+                                </button>
+                              </div>
+                              {step.preview.content}
+                            </div>
                           </div>
                         </div>
                       </div>
@@ -408,7 +537,8 @@ const About = () => {
             </div>
             <h3 className="mt-4 text-xl font-semibold text-surface-900 dark:text-surface-100">Smart Controls</h3>
             <p className="mt-2 text-surface-600 dark:text-surface-400">
-              Advanced control systems for optimal performance and efficiency monitoring.
+              Advanced control systems for optimal performance an
+d efficiency monitoring.
             </p>
           </div>
           <div className="bg-white dark:bg-surface-800 rounded-lg shadow-xl p-8 transform hover:scale-105 transition-transform">
