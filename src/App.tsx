@@ -11,6 +11,7 @@ import Learn from './pages/Learn'
 import PrivacyPolicy from './pages/PrivacyPolicy'
 import Calculators from './pages/Calculators'
 import Education from './pages/Education'
+import Forum from './pages/Forum'
 import FAQ from './pages/FAQ'
 import Products from './pages/Products'
 import BookCall from './pages/BookCall'
@@ -33,6 +34,7 @@ function App() {
               <Route path="/privacy-policy" element={<PrivacyPolicy />} />
               <Route path="/calculators" element={<Calculators />} />
               <Route path="/education" element={<Education />} />
+              <Route path="/forum" element={<Forum />} />
               <Route path="/faq" element={<FAQ />} />
               <Route path="/book-call" element={<BookCall />} />
               <Route path="/portfolio" element={<Portfolio />} />
