@@ -13,7 +13,7 @@ const Learn = () => {
     },
     {
       title: "Calculators",
-      description: "Calculate potential savings and earnings with our interactive tools",
+      description: "Estimate rough savings and earnings with our interactive tools",
       icon: Calculator,
       link: "/calculators"
     },
