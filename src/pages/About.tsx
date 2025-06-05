@@ -490,21 +490,40 @@ const About = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
             <div className="relative">
-              <div className="bg-primary-600 rounded-lg p-8 text-white">
-                <Book className="h-12 w-12 mb-4" />
-                <h3 className="text-2xl font-bold mb-4">Bitcoin Mining Heat Reuse</h3>
-                <p className="mb-6">The definitive guide to hashrate heating technology, written by our founder Tyler Stevens.</p>
-                <a
-                  href="https://braiins.com/books/bitcoin-mining-heat-reuse"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center text-white hover:text-primary-100 transition-colors"
-                >
-                  Read the Book
-                  <ArrowRight className="ml-2 h-5 w-5" />
-                </a>
+              <div className="bg-surface-900 rounded-lg p-8 relative overflow-hidden">
+                <div className="relative z-10">
+                  <Book className="h-12 w-12 text-primary-400 mb-4" />
+                  <h3 className="text-2xl font-bold text-white mb-4">Bitcoin Mining Heat Reuse</h3>
+                  <p className="text-surface-300 mb-6">The definitive guide to hashrate heating technology, written by our founder Tyler Stevens. With a foreword by Paul Jin Li, CEO of Foghashing.</p>
+                  <div className="flex flex-col sm:flex-row gap-4">
+                    <a
+                      href="https://braiins.com/books/bitcoin-mining-heat-reuse"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center justify-center px-6 py-3 bg-primary-600 text-white rounded-lg hover:bg-primary-700 transition-colors"
+                    >
+                      Get the Book
+                      <ArrowRight className="ml-2 h-5 w-5" />
+                    </a>
+                    <a
+                      href="https://braiins.com/books/bitcoin-mining-heat-reuse"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center justify-center px-6 py-3 bg-white text-surface-900 rounded-lg hover:bg-surface-100 transition-colors"
+                    >
+                      Learn More
+                      <ArrowRight className="ml-2 h-5 w-5" />
+                    </a>
+                  </div>
+                </div>
+                <div className="absolute inset-0 bg-gradient-to-r from-surface-900 via-surface-900/90 to-transparent z-0"></div>
               </div>
-              <div className="absolute -bottom-6 -right-6 bg-white dark:bg-surface-700 p-6 rounded-lg shadow-xl">
+              <img
+                src="/BookCoverImage.png"
+                alt="Bitcoin Mining Heat Reuse Book Cover"
+                className="absolute -right-6 -bottom-6 w-64 h-auto rounded-lg shadow-2xl transform rotate-6 transition-transform hover:rotate-0"
+              />
+              <div className="absolute -bottom-6 left-8 bg-white dark:bg-surface-700 p-6 rounded-lg shadow-xl">
                 <p className="text-xl font-bold text-primary-600 dark:text-primary-400">#1</p>
                 <p className="text-surface-600 dark:text-surface-400">Industry Resource</p>
               </div>
