@@ -72,7 +72,7 @@ const About = () => {
             What We're About
           </h1>
           <p className="text-xl text-primary-100 max-w-2xl mx-auto">
-            The first new heating technology in over a century, revolutionizing how we think about comfort and efficiency
+            Poineering an industry - supporting bitcoin - saving you money
           </p>
         </div>
       </div>
