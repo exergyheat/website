@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { Plus, Minus, Search } from 'lucide-react'
+import { Plus, Minus, Search, MessageCircle } from 'lucide-react'
 
 const FAQ = () => {
   const [openSection, setOpenSection] = useState<string | null>(null)
@@ -79,6 +79,7 @@ const FAQ = () => {
       {/* Hero Section */}
       <div className="bg-gradient-to-r from-primary-600 to-primary-800 py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <MessageCircle className="h-16 w-16 text-white mx-auto mb-6" />
           <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
             Frequently Asked Questions
           </h1>
