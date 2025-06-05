@@ -33,7 +33,7 @@ const Learn = () => {
 
   const concepts = [
     {
-      title: "Electric Power in - Heat Power out",
+      title: "Electric Power In - Heat Power Out",
       icon: Zap,
       description: "Electric heaters and Bitcoin miners consume the same energy to produce heat. The key difference? Bitcoin miners reward you for supporting the network while heating your space.",
       image: "https://images.pexels.com/photos/8293778/pexels-photo-8293778.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
