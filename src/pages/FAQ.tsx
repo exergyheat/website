@@ -150,9 +150,12 @@ const FAQ = () => {
           <p className="text-xl text-surface-600 dark:text-surface-400 mb-8">
             Our team is here to help you with any questions you might have about our technology
           </p>
-          <button className="bg-primary-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-primary-700 transition-colors">
+          <a
+            href="mailto:support@exergyheat.com"
+            className="inline-block bg-primary-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-primary-700 transition-colors"
+          >
             Contact Support
-          </button>
+          </a>
         </div>
       </div>
     </div>
