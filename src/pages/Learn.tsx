@@ -6,7 +6,7 @@ const Learn = () => {
   const resources = [
     {
       title: "Educational Resources",
-      description: "Hashrate heating blog posts, comprhensive guides, tutorials and more.",
+      description: "Hashrate heating blog posts, comprhensive guides, tutorials and more",
       icon: BookOpen,
       link: "/education"
     },
@@ -18,7 +18,7 @@ const Learn = () => {
     },
     {
       title: "Technical Forum",
-      description: "Connect with experts and share experiences",
+      description: "Deep dive with experts and share experiences on the Heatpunk forum",
       icon: Users,
       link: "https://heatpunks.org"
     },
