@@ -179,8 +179,13 @@ const Home = () => {
       <ProjectCarousel />
 
       {/* CTA Section */}
-      <div className="bg-primary-600 py-16">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <div className="relative bg-primary-600 py-16 overflow-hidden">
+        <div className="absolute inset-0">
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_-20%,#4c5c99,transparent_75%)] animate-pulse"></div>
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_80%,#2f3b69,transparent_50%)] animate-pulse [animation-delay:1s]"></div>
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_50%,#4c5c99,transparent_50%)] animate-pulse [animation-delay:2s]"></div>
+        </div>
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl font-bold text-white mb-4">
             Ready to get paid for heat?
           </h2>
