@@ -498,7 +498,7 @@ const About = () => {
                     The definitive guide to hashrate heating technology, written by our founder Tyler Stevens. 
                     With a foreword by Paul Jin Li, CEO of Foghashing.
                   </p>
-                  <div className="flex flex-col sm:flex-row gap-4 mb-24 sm:mb-0">
+                  <div className="mb-24 sm:mb-0">
                     <a
                       href="https://braiins.com/books/bitcoin-mining-heat-reuse"
                       target="_blank"
@@ -506,15 +506,6 @@ const About = () => {
                       className="inline-flex items-center justify-center px-6 py-3 bg-primary-600 text-white rounded-lg hover:bg-primary-700 transition-colors"
                     >
                       Get the Book
-                      <ArrowRight className="ml-2 h-5 w-5" />
-                    </a>
-                    <a
-                      href="https://braiins.com/books/bitcoin-mining-heat-reuse"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="inline-flex items-center justify-center px-6 py-3 border border-surface-700 text-white rounded-lg hover:bg-surface-800 transition-colors"
-                    >
-                      Learn More
                       <ArrowRight className="ml-2 h-5 w-5" />
                     </a>
                   </div>
