@@ -1,9 +1,18 @@
 import React, { useState } from 'react'
-import { Book, Users, Award, Cpu, Flame, Bitcoin, ArrowRight, Target, Lightbulb, FileText, BarChart as ChartBar, Wrench, CheckCircle2 } from 'lucide-react'
+import { Book, Users, Award, Cpu, Flame, Bitcoin, ArrowRight, Target, Lightbulb, FileText, BarChart as ChartBar, Wrench, CheckCircle2, Mail } from 'lucide-react'
 import { Link } from 'react-router-dom'
 
 const About = () => {
   const [expandedStep, setExpandedStep] = useState<string | null>(null)
+  const [email, setEmail] = useState('')
+  const [submitted, setSubmitted] = useState(false)
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault()
+    // Handle email submission here
+    setSubmitted(true)
+    setEmail('')
+  }
 
   const team = [
     {
@@ -441,6 +450,48 @@ const About = () => {
               ))}
             </div>
           </div>
+        </div>
+      </div>
+
+      {/* Join the Movement Section */}
+      <div className="bg-gradient-to-r from-primary-600 to-primary-800 py-20">
+        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <Mail className="h-16 w-16 text-white mx-auto mb-6" />
+          <h2 className="text-3xl font-bold text-white mb-6">
+            Join the Heatpunk Movement
+          </h2>
+          <p className="text-xl text-primary-100 mb-8">
+            Be part of the revolution in heating technology. Stay informed about our latest developments, products, and opportunities.
+          </p>
+          
+          {submitted ? (
+            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 text-white">
+              <h3 className="text-xl font-semibold mb-2">Welcome to the Movement!</h3>
+              <p>We'll keep you updated on important announcements and developments.</p>
+            </div>
+          ) : (
+            <form onSubmit={handleSubmit} className="max-w-md mx-auto">
+              <div className="flex gap-4">
+                <input
+                  type="email"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                  placeholder="Enter your email"
+                  className="flex-1 px-4 py-3 rounded-lg bg-white/10 backdrop-blur-sm border border-white/20 text-white placeholder-white/60 focus:outline-none focus:ring-2 focus:ring-white/40"
+                  required
+                />
+                <button
+                  type="submit"
+                  className="px-6 py-3 bg-white text-primary-600 rounded-lg font-semibold hover:bg-primary-50 transition-colors"
+                >
+                  Join Us
+                </button>
+              </div>
+              <p className="mt-4 text-sm text-primary-100">
+                We respect your privacy. No spam, just important updates.
+              </p>
+            </form>
+          )}
         </div>
       </div>
     </div>
