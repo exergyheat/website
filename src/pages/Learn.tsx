@@ -58,7 +58,7 @@ const Learn = () => {
       <div className="bg-gradient-to-r from-primary-600 to-primary-800 py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
-            Learn About Hashrate Heating
+            Learn Hashrate Heating
           </h1>
           <p className="text-xl text-primary-100 max-w-2xl mx-auto">
             Discover how our innovative technology transforms traditional heating into a revenue-generating solution
