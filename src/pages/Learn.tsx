@@ -61,7 +61,7 @@ const Learn = () => {
             Learn Hashrate Heating
           </h1>
           <p className="text-xl text-primary-100 max-w-2xl mx-auto">
-            The more revolutionary heating tech in over a century - The only heat that pays
+            The most revolutionary heating tech in over a century - heat that pays
           </p>
         </div>
       </div>
