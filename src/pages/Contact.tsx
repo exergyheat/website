@@ -33,7 +33,7 @@ const Contact = () => {
             Contact Us
           </h1>
           <p className="text-xl text-primary-100 max-w-2xl mx-auto">
-            Get in touch with our team to discuss how we can help slash your heating bills.
+            It's time to slash those heating bills
           </p>
         </div>
       </div>
