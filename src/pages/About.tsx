@@ -490,11 +490,14 @@ const About = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
             <div className="relative">
-              <div className="bg-surface-900 rounded-lg p-8 relative overflow-hidden">
-                <div className="relative z-10">
+              <div className="bg-surface-900 rounded-lg p-8">
+                <div className="max-w-sm">
                   <Book className="h-12 w-12 text-primary-400 mb-4" />
                   <h3 className="text-2xl font-bold text-white mb-4">Bitcoin Mining Heat Reuse</h3>
-                  <p className="text-surface-300 mb-6">The definitive guide to hashrate heating technology, written by our founder Tyler Stevens. With a foreword by Paul Jin Li, CEO of Foghashing.</p>
+                  <p className="text-surface-300 mb-6">
+                    The definitive guide to hashrate heating technology, written by our founder Tyler Stevens. 
+                    With a foreword by Paul Jin Li, CEO of Foghashing.
+                  </p>
                   <div className="flex flex-col sm:flex-row gap-4">
                     <a
                       href="https://braiins.com/books/bitcoin-mining-heat-reuse"
@@ -509,42 +512,25 @@ const About = () => {
                       href="https://braiins.com/books/bitcoin-mining-heat-reuse"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-flex items-center justify-center px-6 py-3 bg-white text-surface-900 rounded-lg hover:bg-surface-100 transition-colors"
+                      className="inline-flex items-center justify-center px-6 py-3 border border-surface-700 text-white rounded-lg hover:bg-surface-800 transition-colors"
                     >
                       Learn More
                       <ArrowRight className="ml-2 h-5 w-5" />
                     </a>
                   </div>
                 </div>
-                <div className="absolute inset-0 bg-gradient-to-r from-surface-900 via-surface-900/90 to-transparent z-0"></div>
               </div>
-              <img
-                src="/BookCoverImage.png"
-                alt="Bitcoin Mining Heat Reuse Book Cover"
-                className="absolute -right-6 -bottom-6 w-64 h-auto rounded-lg shadow-2xl transform rotate-6 transition-transform hover:rotate-0"
-              />
-              <div className="absolute -bottom-6 left-8 bg-white dark:bg-surface-700 p-6 rounded-lg shadow-xl">
+              <div className="absolute -bottom-6 -right-6 bg-white dark:bg-surface-700 p-6 rounded-lg shadow-xl">
                 <p className="text-xl font-bold text-primary-600 dark:text-primary-400">#1</p>
                 <p className="text-surface-600 dark:text-surface-400">Industry Resource</p>
               </div>
             </div>
-            <div>
-              <h2 className="text-3xl font-bold text-surface-900 dark:text-surface-100 mb-6">
-                Pioneering the Heatpunk Movement
-              </h2>
-              <p className="text-lg text-surface-600 dark:text-surface-400 mb-6">
-                Our founder didn't just join the movement - he started it. The term "Heatpunk" was coined to represent the revolutionary approach to heating technology, inspired by the cypherpunk movement in the Bitcoin ecosystem.
-              </p>
-              <div className="space-y-4">
-                <div className="bg-surface-50 dark:bg-surface-700 p-4 rounded-lg">
-                  <h4 className="font-semibold text-surface-900 dark:text-surface-100">Undermine Summit</h4>
-                  <p className="text-surface-600 dark:text-surface-400">The first-ever summit bringing together HVAC experts and ASIC developers.</p>
-                </div>
-                <div className="bg-surface-50 dark:bg-surface-700 p-4 rounded-lg">
-                  <h4 className="font-semibold text-surface-900 dark:text-surface-100">Community Leadership</h4>
-                  <p className="text-surface-600 dark:text-surface-400">Active community of system builders sharing knowledge and solutions.</p>
-                </div>
-              </div>
+            <div className="relative flex justify-center">
+              <img
+                src="/BookCoverImage.png"
+                alt="Bitcoin Mining Heat Reuse Book Cover"
+                className="w-80 h-auto rounded-lg shadow-2xl transform rotate-6 hover:rotate-0 transition-transform duration-300"
+              />
             </div>
           </div>
         </div>
@@ -577,6 +563,7 @@ const About = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div className="bg-white dark:bg-surface-800 rounded-lg shadow-xl p-8 transform hover:scale-105 transition-transform">
             <div className="flex justify-center">
+              
               <Bitcoin className="h-12 w-12 text-primary-600 dark:text-primary-400" />
             </div>
             <h3 className="mt-4 text-xl font-semibold text-surface-900 dark:text-surface-100">Bitcoin Mining</h3>
