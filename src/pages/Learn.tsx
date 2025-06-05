@@ -29,3 +29,5 @@ const resources = [
     link: "/faq"
   }
 ]
+
+export default resources
