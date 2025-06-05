@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { BookOpen, Video, FileText, Podcast, Globe, ArrowRight, Book, X } from 'lucide-react'
+import { BookOpen, Video, FileText, Podcast, Globe, ArrowRight, Book, X, ChevronDown, ChevronUp } from 'lucide-react'
 import { Link } from 'react-router-dom'
 
 type ContentType = 'all' | 'video' | 'podcast' | 'book' | 'blog' | 'website'
@@ -17,6 +17,7 @@ interface Content {
 const Education = () => {
   const [activeType, setActiveType] = useState<ContentType>('all')
   const [showBookModal, setShowBookModal] = useState(false)
+  const [expandedDescription, setExpandedDescription] = useState<string | null>(null)
 
   const contentTypes = [
     { id: 'all', name: 'All Content', icon: FileText },
@@ -30,7 +31,7 @@ const Education = () => {
   const content: Content[] = [
     {
       title: "Decentralized Heat: Bitcoin Mining's Game-Changing Energy Solution W/ Tyler Stevens",
-      description: "In this episode of the Home Mining Podcast, host TwoSats and thermal engineer Tyler Stevens explore the innovative concept of heat reuse in Bitcoin mining. They discuss how Bitcoin miners can serve dual purposes by providing heat for homes and businesses while securing the network. The conversation delves into the technical aspects of heat transfer, real-world applications, and the economic benefits of integrating heat reuse into mining operations.",
+      description: "In this episode of the Home Mining Podcast, host TwoSats and thermal engineer Tyler Stevens explore the innovative concept of heat reuse in Bitcoin mining. They discuss how Bitcoin miners can serve dual purposes by providing heat for homes and businesses while securing the network. The conversation delves into the technical aspects of heat transfer, real-world applications, and the economic benefits of integrating heat reuse into mining operations. Tyler shares insights on the evolution of ASIC design and the potential for future innovations that prioritize heat reuse, ultimately envisioning a future where Bitcoin mining contributes to self-reliant communities and sustainable energy practices. In this conversation, Tyler Stevens discusses the innovative concept of hash rate heating, which utilizes the heat generated from Bitcoin mining for practical applications such as heating water and spaces. He explains the process of binning in chip manufacturing, the potential of the comfort heating market, and how this could revolutionize energy systems. The discussion also touches on the challenges of chip manufacturing, the importance of aligning incentives for success, and the future landscape of Bitcoin mining as it becomes more decentralized and integrated into home energy systems.",
       type: 'podcast',
       author: "Home Mining Podcast by Solo Satoshi",
       link: "https://www.youtube.com/watch?v=H4faYFvQYOQ",
@@ -39,7 +40,7 @@ const Education = () => {
     },
     {
       title: "Introduction to Hashrate Heating",
-      description: "A comprehensive video overview of hashrate heating technology and its applications.",
+      description: "A comprehensive video overview of hashrate heating technology and its applications. Learn about the fundamental principles behind combining Bitcoin mining with heating systems, and discover how this innovative approach is transforming traditional heating infrastructure into revenue-generating assets.",
       type: 'video',
       author: "Bitcoin Magazine",
       link: "https://www.youtube.com/watch?v=example1",
@@ -48,7 +49,7 @@ const Education = () => {
     },
     {
       title: "The Future of Sustainable Bitcoin Mining",
-      description: "In-depth discussion about heat recycling in Bitcoin mining operations.",
+      description: "In-depth discussion about heat recycling in Bitcoin mining operations. Explore how the integration of mining and heating systems is creating new opportunities for sustainable energy usage while maximizing the efficiency of Bitcoin mining operations.",
       type: 'podcast',
       author: "What Bitcoin Did",
       link: "https://www.whatbitcoindid.com/podcast/example",
@@ -57,7 +58,7 @@ const Education = () => {
     },
     {
       title: "Implementing Hashrate Heating Systems",
-      description: "Technical guide for implementing hashrate heating in commercial buildings.",
+      description: "Technical guide for implementing hashrate heating in commercial buildings. This comprehensive guide covers everything from initial planning to final implementation, including system design, integration strategies, and optimization techniques.",
       type: 'blog',
       author: "Braiins Insights",
       link: "https://braiins.com/blog/example",
@@ -66,7 +67,7 @@ const Education = () => {
     },
     {
       title: "Heat Recycling in Data Centers",
-      description: "Case study on implementing heat recycling in large-scale data centers.",
+      description: "Case study on implementing heat recycling in large-scale data centers. Learn from real-world examples of successful implementations, including challenges faced, solutions developed, and lessons learned throughout the process.",
       type: 'website',
       author: "Data Center Dynamics",
       link: "https://www.datacenterdynamics.com/example",
@@ -78,6 +79,14 @@ const Education = () => {
   const filteredContent = activeType === 'all' 
     ? content 
     : content.filter(item => item.type === activeType)
+
+  const truncateDescription = (text: string) => {
+    const words = text.split(' ')
+    if (words.length > 30) {
+      return words.slice(0, 30).join(' ') + '...'
+    }
+    return text
+  }
 
   return (
     <div className="bg-surface-50 dark:bg-surface-900 min-h-screen">
@@ -91,48 +100,6 @@ const Education = () => {
           <p className="text-xl text-primary-100 max-w-2xl mx-auto">
             Your comprehensive guide to understanding and implementing hashrate heating technology
           </p>
-        </div>
-      </div>
-
-      {/* Featured Book Section */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
-        <div className="bg-surface-900 rounded-lg overflow-hidden">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 p-8">
-            <div className="space-y-6">
-              <div className="inline-block p-3 bg-primary-900 rounded-lg">
-                <Book className="h-8 w-8 text-primary-400" />
-              </div>
-              <h2 className="text-3xl font-bold text-white">Bitcoin Mining Heat Reuse</h2>
-              <p className="text-lg text-surface-300">
-                The definitive guide to hashrate heating technology, written by our founder Tyler Stevens. 
-                With a foreword by Paul Jin Li, CEO of Foghashing.
-              </p>
-              <div className="flex flex-wrap gap-4">
-                <a
-                  href="https://braiins.com/books/bitcoin-mining-heat-reuse"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center px-6 py-3 bg-primary-600 text-white rounded-lg hover:bg-primary-700 transition-colors"
-                >
-                  Get the Book
-                  <ArrowRight className="ml-2 h-5 w-5" />
-                </a>
-                <button
-                  onClick={() => setShowBookModal(true)}
-                  className="px-6 py-3 bg-surface-700 text-white rounded-lg hover:bg-surface-600 transition-colors"
-                >
-                  Preview
-                </button>
-              </div>
-            </div>
-            <div className="relative flex justify-center">
-              <img
-                src="/BookCoverImage.png"
-                alt="Bitcoin Mining Heat Reuse Book Cover"
-                className="w-80 h-auto rounded-lg shadow-2xl transform rotate-6 hover:rotate-0 transition-transform duration-300"
-              />
-            </div>
-          </div>
         </div>
       </div>
 
@@ -162,87 +129,70 @@ const Education = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {filteredContent.map((item, index) => (
-            <a
+            <div
               key={index}
-              href={item.link}
-              target="_blank"
-              rel="noopener noreferrer"
               className="bg-white dark:bg-surface-800 rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow"
             >
-              <div className="relative h-48">
-                <img
-                  src={item.image}
-                  alt={item.title}
-                  className="w-full h-full object-cover"
-                />
-                <div className="absolute top-4 right-4 bg-primary-600 text-white px-4 py-1 rounded-full text-sm capitalize">
-                  {item.type}
+              <a
+                href={item.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block"
+              >
+                <div className="relative h-48">
+                  <img
+                    src={item.image}
+                    alt={item.title}
+                    className="w-full h-full object-cover"
+                  />
+                  <div className="absolute top-4 right-4 bg-primary-600 text-white px-4 py-1 rounded-full text-sm capitalize">
+                    {item.type}
+                  </div>
                 </div>
-              </div>
+              </a>
               <div className="p-6">
-                <h3 className="text-xl font-bold text-surface-900 dark:text-surface-100 mb-2">
-                  {item.title}
-                </h3>
-                <p className="text-surface-600 dark:text-surface-400 mb-4">
-                  {item.description}
-                </p>
+                <a
+                  href={item.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block hover:text-primary-600 dark:hover:text-primary-400 transition-colors"
+                >
+                  <h3 className="text-xl font-bold text-surface-900 dark:text-surface-100 mb-2">
+                    {item.title}
+                  </h3>
+                </a>
+                <div className="mb-4">
+                  <p className="text-surface-600 dark:text-surface-400">
+                    {expandedDescription === item.title ? item.description : truncateDescription(item.description)}
+                  </p>
+                  {item.description.split(' ').length > 30 && (
+                    <button
+                      onClick={() => setExpandedDescription(expandedDescription === item.title ? null : item.title)}
+                      className="mt-2 flex items-center text-primary-600 dark:text-primary-400 hover:text-primary-700 dark:hover:text-primary-300 transition-colors"
+                    >
+                      {expandedDescription === item.title ? (
+                        <>
+                          Show Less
+                          <ChevronUp className="ml-1 h-4 w-4" />
+                        </>
+                      ) : (
+                        <>
+                          Read More
+                          <ChevronDown className="ml-1 h-4 w-4" />
+                        </>
+                      )}
+                    </button>
+                  )}
+                </div>
                 <div className="flex justify-between items-center text-sm text-surface-500 dark:text-surface-400">
                   <span>{item.author}</span>
                   <span>{item.date}</span>
                 </div>
               </div>
-            </a>
+            </div>
           ))}
         </div>
       </div>
-
-      {/* Book Preview Modal */}
-      {showBookModal && (
-        <div className="fixed inset-0 z-50 overflow-y-auto">
-          <div className="flex items-center justify-center min-h-screen px-4 pt-4 pb-20 text-center sm:block sm:p-0">
-            <div className="fixed inset-0 transition-opacity" aria-hidden="true">
-              <div className="absolute inset-0 bg-surface-900 opacity-75"></div>
-            </div>
-
-            <div className="inline-block align-bottom bg-surface-50 dark:bg-surface-900 rounded-lg text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle sm:max-w-4xl sm:w-full">
-              <div className="absolute top-0 right-0 pt-4 pr-4">
-                <button
-                  onClick={() => setShowBookModal(false)}
-                  className="text-surface-500 hover:text-surface-700 dark:text-surface-400 dark:hover:text-surface-200"
-                >
-                  <X className="h-6 w-6" />
-                </button>
-              </div>
-              <div className="bg-surface-50 dark:bg-surface-900 p-6 sm:p-8">
-                <h3 className="text-2xl font-bold text-surface-900 dark:text-surface-100 mb-4">
-                  Book Preview
-                </h3>
-                <div className="prose prose-lg dark:prose-invert max-w-none">
-                  <h4 className="text-xl font-semibold mb-4">Table of Contents</h4>
-                  <ol className="list-decimal list-inside space-y-2 text-surface-600 dark:text-surface-400">
-                    <li>Introduction to Hashrate Heating</li>
-                    <li>The Physics of Heat Generation</li>
-                    <li>Bitcoin Mining Fundamentals</li>
-                    <li>System Design and Integration</li>
-                    <li>Implementation Strategies</li>
-                    <li>Case Studies and Examples</li>
-                    <li>Future of Heat Recycling</li>
-                  </ol>
-                  
-                  <div className="mt-8">
-                    <h4 className="text-xl font-semibold mb-4">From the Introduction</h4>
-                    <p className="text-surface-600 dark:text-surface-400">
-                      "Heat is not a waste product - it's a valuable resource that's been overlooked for too long. 
-                      This book presents a revolutionary approach to heating that transforms traditional cost centers 
-                      into revenue-generating assets through the innovative combination of Bitcoin mining and heat recycling..."
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      )}
     </div>
   )
 }
