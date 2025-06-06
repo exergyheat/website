@@ -360,7 +360,7 @@ const About = () => {
                 className="text-lg text-surface-600 dark:text-surface-400 mb-8"
                 variants={itemVariants}
               >
-                Our mission is to revolutionize the heating industry by integrating bitcoin mining into high-performance systems, delivering heat that pays—ethically and securely—turning energy costs into revenue for homes and businesses.
+                Our mission is to revolutionize the heating industry by integrating bitcoin mining into high-performance systems, delivering heat that pays — ethically and securely—turning energy costs into revenue for homes and businesses.
               </motion.p>
               
               <motion.div 
@@ -700,7 +700,7 @@ const About = () => {
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <Mail className="h-16 w-16 text-white mx-auto mb-6" />
           <h2 className="text-3xl font-bold text-white mb-6">
-            Join the Heatpunk Movement
+            Join the Movement
           </h2>
           <p className="text-xl text-primary-100 mb-8">
             Be part of the revolution in heating technology. Stay informed about our latest developments, products, and opportunities.
