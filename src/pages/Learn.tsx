@@ -135,7 +135,7 @@ const Learn = () => {
       <div className="bg-white dark:bg-surface-800 py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl font-bold text-surface-900 dark:text-surface-100 text-center mb-12">
-            How Hashrate Heating Works
+            The Basics
           </h2>
           <div className="space-y-32">
             {concepts.map((concept, index) => (
