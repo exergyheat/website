@@ -579,8 +579,7 @@ const About = () => {
                   <Book className="h-12 w-12 text-primary-400 mb-4" />
                   <h3 className="text-2xl font-bold text-white mb-4">Bitcoin Mining Heat Reuse</h3>
                   <p className="text-surface-300 mb-6">
-                    The definitive guide to hashrate heating technology, written by our founder Tyler Stevens. 
-                    With a foreword by Paul Jin Li, CEO of Foghashing.
+                    The definitive guide to hashrate heating technology, written by our founder Tyler Stevens.
                   </p>
                   <div className="mb-24 sm:mb-0">
                     <a
