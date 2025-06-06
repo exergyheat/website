@@ -22,7 +22,7 @@ const About = () => {
     },
     {
       icon: Bitcoin,
-      title: "Driving Bitcoin Adoption Through Heat",
+      title: "Driving Bitcoin Adoption",
       description: "We're advancing bitcoin adoption with heating solutions that reward homes and businesses for supporting the network."
     },
     {
