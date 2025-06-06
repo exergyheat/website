@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { BookOpen, Video, FileText, Podcast, Globe, ArrowRight, Book, X, ChevronDown, ChevronUp } from 'lucide-react'
+import { BookOpen, Video, FileText, Podcast, Globe, ArrowRight, Book, X, ChevronDown, ChevronUp, ExternalLink } from 'lucide-react'
 import { Link } from 'react-router-dom'
 
 type ContentType = 'all' | 'video' | 'podcast' | 'book' | 'blog' | 'website'
@@ -191,6 +191,29 @@ const Education = () => {
               </div>
             </div>
           ))}
+        </div>
+      </div>
+
+      {/* Hungry for More Section */}
+      <div className="bg-gradient-to-r from-primary-600 to-primary-800 py-20">
+        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <ExternalLink className="h-16 w-16 text-white mx-auto mb-6" />
+          <h2 className="text-3xl font-bold text-white mb-6">
+            Hungry for More?
+          </h2>
+          <p className="text-xl text-primary-100 mb-8">
+            Check out the Hashrate Heatpunk Forum - a technical platform for builders and engineers to showcase their solutions.
+          </p>
+          
+          <a
+            href="https://heatpunks.org"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center px-8 py-4 bg-white text-primary-600 rounded-lg font-semibold hover:bg-primary-50 transition-colors"
+          >
+            Visit Heatpunk Forum
+            <ExternalLink className="ml-2 h-5 w-5" />
+          </a>
         </div>
       </div>
     </div>
