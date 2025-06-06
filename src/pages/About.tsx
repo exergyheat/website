@@ -182,7 +182,7 @@ const About = () => {
     {
       id: 'installation',
       title: 'Procurement & Installation',
-      description: 'We source the best hardware for your system the coordinate install.',
+      description: 'We source the best hardware for your system the coordinate install for smooth integration.',
       icon: ChartBar,
       preview: {
         title: 'Performance Analysis',
@@ -236,9 +236,9 @@ const About = () => {
       }
     },
     {
-      id: 'implementation',
-      title: 'Implementation',
-      description: 'Expert installation and integration with existing infrastructure.',
+      id: 'monitoring',
+      title: 'Remote Monitoring',
+      description: 'Optional remote monitoring ensures your system is always healthy and maximizining earnings',
       icon: CheckCircle2,
       preview: {
         title: 'Implementation Plan',
