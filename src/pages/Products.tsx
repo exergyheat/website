@@ -302,7 +302,7 @@ const Products = () => {
           <p className="text-xl text-surface-300 mb-8 max-w-2xl mx-auto">
             Get a Heat Audit to find the right system and optimize savings - or book an intro call for a quick opinion.
           </p>
-          <div className="flex flex-col items-center gap-4">
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <Link
               to="/services"
               className="inline-flex items-center px-8 py-4 bg-primary-600 text-white rounded-lg hover:bg-primary-700 transition-colors"
