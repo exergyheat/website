@@ -17,18 +17,18 @@ const About = () => {
   const missionPoints = [
     {
       icon: Target,
-      title: "Revolutionizing Heat",
-      description: "We're transforming traditional heating costs into revenue streams through innovative Bitcoin mining integration."
+      title: "A New Standard For Electric Heat",
+      description: "We envision a future where heaters double as revenue generators, keeping you warm while earning money with zero waste."
     },
     {
       icon: Bitcoin,
-      title: "Supporting the Network",
-      description: "Every heater contributes to Bitcoin's security while providing efficient, cost-effective heating solutions."
+      title: "Driving Bitcoin Adoption Through Heat",
+      description: "We’re advancing bitcoin adoption with heating solutions that reward homes and businesses for supporting the network."
     },
     {
       icon: Flame,
-      title: "Maximum Efficiency",
-      description: "Our systems achieve 100% energy efficiency by capturing and utilizing all heat generated from mining operations."
+      title: "Maximum Miner Decentralizaton",
+      description: "We see a world where bitcoin mining is fully decentralized across millions of homes and businesses, with heating systems distributing hashrate and pool choice worldwide."
     }
   ]
 
