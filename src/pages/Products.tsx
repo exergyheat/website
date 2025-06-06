@@ -303,7 +303,7 @@ const Products = () => {
             Contact our team to learn more about our products and find the perfect solution for your needs.
           </p>
           <Link
-            to="/contact"
+            to="/book-call"
             className="inline-flex items-center px-8 py-4 bg-white text-primary-600 rounded-lg hover:bg-primary-50 transition-colors"
           >
             Book an Intro Call
