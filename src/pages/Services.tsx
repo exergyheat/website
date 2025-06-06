@@ -387,10 +387,10 @@ const Services = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              Professional Hashrate Heating Services
+              Expert Hashrate Heating Services
             </h1>
             <p className="text-xl text-primary-100 max-w-2xl mx-auto">
-              From analysis to implementation, we provide comprehensive services to help you harness the power of hashrate heating
+              From concept to implementation, we’ll help you harness hashrate heating for maximum efficiency and rewards
             </p>
           </div>
         </div>
