@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { Calendar, ArrowRight } from 'lucide-react'
 
 const BookCall = () => {
@@ -7,21 +7,69 @@ const BookCall = () => {
       name: 'Tyler Stevens',
       role: 'CEO & Chief Engineer',
       image: '/IMG_5108.JPG',
-      description: 'Chat with Tyler to discuss new projects or technical aspects of hashrate heating.'
+      description: 'Chat with Tyler to discuss new projects or technical aspects of hashrate heating.',
+      calLink: 'tylerkstevens/meeting'
     },
     {
       name: 'Dylan',
       role: 'COO & CFO',
       image: 'https://images.pexels.com/photos/2381069/pexels-photo-2381069.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-      description: 'Schedule time with Dylan to discuss new projects or operations and the numbers.'
+      description: 'Schedule time with Dylan to discuss new projects or operations and the numbers.',
+      calLink: null
     },
     {
       name: 'Mike',
       role: 'CRO',
       image: 'https://images.pexels.com/photos/2379005/pexels-photo-2379005.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-      description: 'Connect with Mike to discuss new projects or explore partnership opportunities.'
+      description: 'Connect with Mike to discuss new projects or explore partnership opportunities.',
+      calLink: null
     }
   ]
+
+  useEffect(() => {
+    // Load Cal.com embed script
+    const script = document.createElement('script')
+    script.src = 'https://app.cal.com/embed/embed.js'
+    script.async = true
+    document.head.appendChild(script)
+
+    script.onload = () => {
+      // Initialize Cal.com
+      if (window.Cal) {
+        window.Cal('init', 'meeting', { origin: 'https://cal.com' })
+        window.Cal.ns.meeting('ui', {
+          cssVarsPerTheme: {
+            light: { 'cal-brand': '#2F3B69' },
+            dark: { 'cal-brand': '#314596' }
+          },
+          hideEventTypeDetails: false,
+          layout: 'month_view'
+        })
+      }
+    }
+
+    return () => {
+      // Cleanup script on unmount
+      const existingScript = document.querySelector('script[src="https://app.cal.com/embed/embed.js"]')
+      if (existingScript) {
+        existingScript.remove()
+      }
+    }
+  }, [])
+
+  const handleCalClick = (calLink: string) => {
+    if (window.Cal) {
+      window.Cal('init', 'meeting', { origin: 'https://cal.com' })
+      window.Cal.ns.meeting('ui', {
+        cssVarsPerTheme: {
+          light: { 'cal-brand': '#2F3B69' },
+          dark: { 'cal-brand': '#314596' }
+        },
+        hideEventTypeDetails: false,
+        layout: 'month_view'
+      })
+    }
+  }
 
   return (
     <div className="bg-surface-50 dark:bg-surface-900 min-h-screen">
@@ -55,14 +103,28 @@ const BookCall = () => {
                 <p className="text-surface-600 dark:text-surface-400 mb-6">
                   {member.description}
                 </p>
-                <button 
-                  className="w-full bg-primary-600 text-white py-3 px-4 rounded-lg hover:bg-primary-700 transition-colors flex items-center justify-center"
-                  onClick={() => {/* Calendar link will be added here */}}
-                >
-                  <Calendar className="h-5 w-5 mr-2" />
-                  Schedule Call
-                  <ArrowRight className="h-5 w-5 ml-2" />
-                </button>
+                {member.calLink ? (
+                  <button 
+                    className="w-full bg-primary-600 text-white py-3 px-4 rounded-lg hover:bg-primary-700 transition-colors flex items-center justify-center"
+                    data-cal-link={member.calLink}
+                    data-cal-namespace="meeting"
+                    data-cal-config='{"layout":"month_view","theme":"auto"}'
+                    onClick={() => handleCalClick(member.calLink)}
+                  >
+                    <Calendar className="h-5 w-5 mr-2" />
+                    Schedule Call
+                    <ArrowRight className="h-5 w-5 ml-2" />
+                  </button>
+                ) : (
+                  <button 
+                    className="w-full bg-surface-300 dark:bg-surface-600 text-surface-600 dark:text-surface-400 py-3 px-4 rounded-lg cursor-not-allowed flex items-center justify-center"
+                    disabled
+                  >
+                    <Calendar className="h-5 w-5 mr-2" />
+                    Coming Soon
+                    <ArrowRight className="h-5 w-5 ml-2" />
+                  </button>
+                )}
               </div>
             </div>
           ))}
