@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { Book, Users, Award, Cpu, Flame, Bitcoin, ArrowRight, Target, Lightbulb, FileText, BarChart as ChartBar, Wrench, CheckCircle2, Mail, X, Zap, Network } from 'lucide-react'
+import { Book, Users, Award, Cpu, Flame, Bitcoin, ArrowRight, Target, Lightbulb, FileText, BarChart as ChartBar, Wrench, CheckCircle2, Mail, X, Zap, Network, Package, Monitor } from 'lucide-react'
 import { Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
 
@@ -183,51 +183,39 @@ const About = () => {
       id: 'installation',
       title: 'Procurement & Installation',
       description: 'We source the best hardware for your system the coordinate install for smooth integration.',
-      icon: ChartBar,
+      icon: Package,
       preview: {
-        title: 'Performance Analysis',
+        title: 'Installation Process',
         content: (
           <div className="bg-white dark:bg-surface-800 p-6 rounded-lg shadow-lg">
             <div className="border-b border-surface-200 dark:border-surface-700 pb-4 mb-4">
-              <h3 className="text-2xl font-bold text-surface-900 dark:text-surface-100">System Performance</h3>
-              <p className="text-surface-600 dark:text-surface-400">Simulation Results</p>
+              <h3 className="text-2xl font-bold text-surface-900 dark:text-surface-100">Installation Timeline</h3>
+              <p className="text-surface-600 dark:text-surface-400">Project Execution Plan</p>
             </div>
             <div className="space-y-6">
-              <div className="grid grid-cols-2 gap-4">
-                <div className="bg-surface-50 dark:bg-surface-700 p-4 rounded-lg">
-                  <h4 className="font-semibold text-surface-900 dark:text-surface-100 mb-2">Heating Performance</h4>
-                  <div className="space-y-2">
-                    <div className="flex justify-between text-sm">
-                      <span className="text-surface-600 dark:text-surface-400">Efficiency</span>
-                      <span className="text-primary-600">98%</span>
-                    </div>
-                    <div className="flex justify-between text-sm">
-                      <span className="text-surface-600 dark:text-surface-400">Heat Output</span>
-                      <span className="text-primary-600">45,000 BTU/hr</span>
-                    </div>
-                  </div>
-                </div>
-                <div className="bg-surface-50 dark:bg-surface-700 p-4 rounded-lg">
-                  <h4 className="font-semibold text-surface-900 dark:text-surface-100 mb-2">Mining Performance</h4>
-                  <div className="space-y-2">
-                    <div className="flex justify-between text-sm">
-                      <span className="text-surface-600 dark:text-surface-400">Hashrate</span>
-                      <span className="text-primary-600">100 TH/s</span>
-                    </div>
-                    <div className="flex justify-between text-sm">
-                      <span className="text-surface-600 dark:text-surface-400">Power Usage</span>
-                      <span className="text-primary-600">3500W</span>
+              <div className="space-y-4">
+                {[
+                  { phase: 'Phase 1: Equipment Procurement', duration: '1-2 weeks' },
+                  { phase: 'Phase 2: Site Preparation', duration: '1 week' },
+                  { phase: 'Phase 3: Hardware Installation', duration: '2 weeks' },
+                  { phase: 'Phase 4: System Integration', duration: '1 week' },
+                  { phase: 'Phase 5: Testing & Commissioning', duration: '1 week' }
+                ].map((phase, index) => (
+                  <div key={index} className="bg-surface-50 dark:bg-surface-700 p-4 rounded-lg">
+                    <div className="flex justify-between items-center">
+                      <h4 className="font-semibold text-surface-900 dark:text-surface-100">{phase.phase}</h4>
+                      <span className="text-sm text-primary-600">{phase.duration}</span>
                     </div>
                   </div>
-                </div>
+                ))}
               </div>
               <div>
-                <h4 className="font-semibold text-surface-900 dark:text-surface-100 mb-2">Optimization Results</h4>
+                <h4 className="font-semibold text-surface-900 dark:text-surface-100 mb-2">Key Deliverables</h4>
                 <ul className="space-y-2 text-sm text-surface-600 dark:text-surface-400">
-                  <li>• Optimal operating temperature: 165°F</li>
-                  <li>• Recommended flow rate: 15 GPM</li>
-                  <li>• Expected annual savings: $28,000</li>
-                  <li>• ROI period: 18 months</li>
+                  <li>• Hardware sourcing and delivery</li>
+                  <li>• Professional installation</li>
+                  <li>• System integration and testing</li>
+                  <li>• Staff training and handover</li>
                 </ul>
               </div>
             </div>
@@ -239,38 +227,51 @@ const About = () => {
       id: 'monitoring',
       title: 'Remote Monitoring',
       description: 'Optional remote monitoring ensures your system is always healthy and maximizining earnings.',
-      icon: CheckCircle2,
+      icon: Monitor,
       preview: {
-        title: 'Implementation Plan',
+        title: 'Monitoring Dashboard',
         content: (
           <div className="bg-white dark:bg-surface-800 p-6 rounded-lg shadow-lg">
             <div className="border-b border-surface-200 dark:border-surface-700 pb-4 mb-4">
-              <h3 className="text-2xl font-bold text-surface-900 dark:text-surface-100">Implementation Timeline</h3>
-              <p className="text-surface-600 dark:text-surface-400">Project Execution Plan</p>
+              <h3 className="text-2xl font-bold text-surface-900 dark:text-surface-100">System Monitoring</h3>
+              <p className="text-surface-600 dark:text-surface-400">Real-time Performance Dashboard</p>
             </div>
             <div className="space-y-6">
-              <div className="space-y-4">
-                {[
-                  { phase: 'Phase 1: Site Preparation', duration: '1 week' },
-                  { phase: 'Phase 2: Equipment Installation', duration: '2 weeks' },
-                  { phase: 'Phase 3: System Integration', duration: '1 week' },
-                  { phase: 'Phase 4: Testing & Commissioning', duration: '1 week' }
-                ].map((phase, index) => (
-                  <div key={index} className="bg-surface-50 dark:bg-surface-700 p-4 rounded-lg">
-                    <div className="flex justify-between items-center">
-                      <h4 className="font-semibold text-surface-900 dark:text-surface-100">{phase.phase}</h4>
-                      <span className="text-sm text-primary-600">{phase.duration}</span>
+              <div className="grid grid-cols-2 gap-4">
+                <div className="bg-surface-50 dark:bg-surface-700 p-4 rounded-lg">
+                  <h4 className="font-semibold text-surface-900 dark:text-surface-100 mb-2">System Health</h4>
+                  <div className="space-y-2">
+                    <div className="flex justify-between text-sm">
+                      <span className="text-surface-600 dark:text-surface-400">Overall Status</span>
+                      <span className="text-green-600">Optimal</span>
+                    </div>
+                    <div className="flex justify-between text-sm">
+                      <span className="text-surface-600 dark:text-surface-400">Uptime</span>
+                      <span className="text-primary-600">99.9%</span>
                     </div>
                   </div>
-                ))}
+                </div>
+                <div className="bg-surface-50 dark:bg-surface-700 p-4 rounded-lg">
+                  <h4 className="font-semibold text-surface-900 dark:text-surface-100 mb-2">Performance</h4>
+                  <div className="space-y-2">
+                    <div className="flex justify-between text-sm">
+                      <span className="text-surface-600 dark:text-surface-400">Heat Output</span>
+                      <span className="text-primary-600">45,000 BTU/hr</span>
+                    </div>
+                    <div className="flex justify-between text-sm">
+                      <span className="text-surface-600 dark:text-surface-400">Mining Efficiency</span>
+                      <span className="text-primary-600">98.5%</span>
+                    </div>
+                  </div>
+                </div>
               </div>
               <div>
-                <h4 className="font-semibold text-surface-900 dark:text-surface-100 mb-2">Key Milestones</h4>
+                <h4 className="font-semibold text-surface-900 dark:text-surface-100 mb-2">Monitoring Features</h4>
                 <ul className="space-y-2 text-sm text-surface-600 dark:text-surface-400">
-                  <li>• Infrastructure assessment</li>
-                  <li>• Equipment delivery and setup</li>
-                  <li>• System integration and testing</li>
-                  <li>• Staff training and handover</li>
+                  <li>• 24/7 system monitoring</li>
+                  <li>• Automated alerts and notifications</li>
+                  <li>• Performance optimization</li>
+                  <li>• Remote diagnostics and support</li>
                 </ul>
               </div>
             </div>
