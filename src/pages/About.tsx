@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { Book, Users, Award, Cpu, Flame, Bitcoin, ArrowRight, Target, Lightbulb, FileText, BarChart as ChartBar, Wrench, CheckCircle2, Mail, X } from 'lucide-react'
+import { Book, Users, Award, Cpu, Flame, Bitcoin, ArrowRight, Target, Lightbulb, FileText, BarChart as ChartBar, Wrench, CheckCircle2, Mail, X, Zap, Network } from 'lucide-react'
 import { Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
 
@@ -16,17 +16,17 @@ const About = () => {
 
   const missionPoints = [
     {
-      icon: Target,
+      icon: Zap,
       title: "A New Standard For Electric Heat",
       description: "We envision a future where heaters double as revenue generators, keeping you warm while earning money with zero waste."
     },
     {
       icon: Bitcoin,
       title: "Driving Bitcoin Adoption Through Heat",
-      description: "We’re advancing bitcoin adoption with heating solutions that reward homes and businesses for supporting the network."
+      description: "We're advancing bitcoin adoption with heating solutions that reward homes and businesses for supporting the network."
     },
     {
-      icon: Flame,
+      icon: Network,
       title: "Maximum Miner Decentralizaton",
       description: "We see a world where bitcoin mining is fully decentralized across millions of homes and businesses, with heating systems distributing hashrate and pool choice worldwide."
     }
