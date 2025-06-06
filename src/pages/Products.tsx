@@ -302,13 +302,22 @@ const Products = () => {
           <p className="text-xl text-surface-300 mb-8 max-w-2xl mx-auto">
             Get a Heat Audit Analysis to find the right system - or schedule an intro call for a quick opinion.
           </p>
-          <Link
-            to="/book-call"
-            className="inline-flex items-center px-8 py-4 bg-white text-primary-600 rounded-lg hover:bg-primary-50 transition-colors"
-          >
-            Book an Intro Call
-            <ArrowRight className="ml-2 h-5 w-5" />
-          </Link>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link
+              to="/services"
+              className="inline-flex items-center px-8 py-4 bg-primary-600 text-white rounded-lg hover:bg-primary-700 transition-colors"
+            >
+              Get a Heat Audit
+              <ArrowRight className="ml-2 h-5 w-5" />
+            </Link>
+            <Link
+              to="/book-call"
+              className="inline-flex items-center px-8 py-4 bg-white text-primary-600 rounded-lg hover:bg-primary-50 transition-colors"
+            >
+              Book an Intro Call
+              <ArrowRight className="ml-2 h-5 w-5" />
+            </Link>
+          </div>
         </div>
       </div>
     </div>
