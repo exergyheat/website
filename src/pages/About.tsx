@@ -328,7 +328,7 @@ const About = () => {
             What We're About
           </h1>
           <p className="text-xl text-primary-100 max-w-2xl mx-auto">
-            Pioneering an industry - supporting bitcoin - saving you money
+            Revolutionizing heating - supporting bitcoin - saving you money
           </p>
         </div>
       </div>
@@ -360,7 +360,7 @@ const About = () => {
                 className="text-lg text-surface-600 dark:text-surface-400 mb-8"
                 variants={itemVariants}
               >
-                We're on a mission to transform the way the world thinks about heating. By combining Bitcoin mining with heating systems, we're creating a future where heat generation isn't just a cost - it's a revenue stream.
+                Our mission is to revolutionize the heating industry by integrating bitcoin mining into high-performance systems, delivering heat that pays—ethically and securely—turning energy costs into revenue for homes and businesses.
               </motion.p>
               
               <motion.div 
