@@ -300,7 +300,7 @@ const Products = () => {
             Not Sure About your Heating Needs?
           </h2>
           <p className="text-xl text-surface-300 mb-8 max-w-2xl mx-auto">
-            Schedule a Heat Audit Analysis to find the right system - or book an intro call for a quick opinion.
+            Schedule a Heat Audit to find the right system - or book an intro call for a quick opinion.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
