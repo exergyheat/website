@@ -297,10 +297,10 @@ const Products = () => {
       <div className="bg-surface-900 py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl font-bold text-white mb-6">
-            Not sure which heating system you need?
+            Not sure about your heating needs?
           </h2>
           <p className="text-xl text-surface-300 mb-8 max-w-2xl mx-auto">
-            Schedule a Heat Audit Analysis to determine exactly how much heating power is right for you, and which systems are ideal for your setup.
+            Get a Heat Audit Analysis to find the right system.
           </p>
           <Link
             to="/book-call"
