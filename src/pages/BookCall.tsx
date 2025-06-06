@@ -7,7 +7,7 @@ const BookCall = () => {
       name: 'Tyler Stevens',
       role: 'CEO & Chief Engineer',
       image: '/IMG_5108.JPG',
-      description: 'Book a call with Tyler to discuss technical aspects of hashrate heating systems and implementation strategies.'
+      description: 'Book a call with Tyler to discuss new projects or technical aspects of hashrate heating systems.'
     },
     {
       name: 'Dylan',
