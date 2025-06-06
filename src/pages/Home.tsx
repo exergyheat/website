@@ -221,7 +221,7 @@ const Home = () => {
             Ready to get paid for heat?
           </h2>
           <p className="text-xl text-primary-100 mb-8">
-            Let's discuss how we can help you achieve your goals.
+            Get in touch to maximize your .
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <Link
