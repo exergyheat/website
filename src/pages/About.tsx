@@ -138,7 +138,7 @@ const About = () => {
     {
       id: 'design',
       title: 'System Design',
-      description: 'Custom engineering solutions tailored to your specific heating requirements.',
+      description: 'Next comes custom engineering and curated solutions tailored to your specific heating requirements.',
       icon: Wrench,
       preview: {
         title: 'System Design Schematic',
