@@ -238,7 +238,7 @@ const About = () => {
     {
       id: 'monitoring',
       title: 'Remote Monitoring',
-      description: 'Optional remote monitoring ensures your system is always healthy and maximizining earnings',
+      description: 'Optional remote monitoring ensures your system is always healthy and maximizining earnings.',
       icon: CheckCircle2,
       preview: {
         title: 'Implementation Plan',
