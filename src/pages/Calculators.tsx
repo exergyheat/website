@@ -169,7 +169,7 @@ const Calculators = () => {
             Want Exact Estimates?
           </h2>
           <p className="text-xl text-surface-600 dark:text-surface-400 mb-8">
-            Schedule a Heat Audit or sign up for System Upgrade. We'll run the numbers for your specific heating profile and maximize heating revenue.
+            Schedule a Heat Audit or sign up for System Upgrade. We'll run the numbers for your specific heating profile and maximize revenue.
           </p>
           <Link
             to="/services"
