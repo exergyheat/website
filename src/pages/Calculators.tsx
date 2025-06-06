@@ -166,7 +166,7 @@ const Calculators = () => {
       <div className="bg-white dark:bg-surface-800 py-20">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl font-bold text-surface-900 dark:text-surface-100 mb-6">
-            Want Exact Estimates?
+            Want Exact Numbers?
           </h2>
           <p className="text-xl text-surface-600 dark:text-surface-400 mb-8">
             Schedule a Heat Audit or sign up for System Upgrade. We'll run the numbers for your specific heating profile and maximize revenue.
