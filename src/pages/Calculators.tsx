@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
-import { Calculator, TrendingUp, Thermometer, DollarSign } from 'lucide-react'
+import { Calculator, TrendingUp, Thermometer, DollarSign, ArrowRight } from 'lucide-react'
+import { Link } from 'react-router-dom'
 
 const Calculators = () => {
   const [activeTab, setActiveTab] = useState('roi')
@@ -158,6 +159,25 @@ const Calculators = () => {
               </div>
             </div>
           </div>
+        </div>
+      </div>
+
+      {/* Want Exact Estimates Section */}
+      <div className="bg-white dark:bg-surface-800 py-20">
+        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 className="text-3xl font-bold text-surface-900 dark:text-surface-100 mb-6">
+            Want Exact Estimates?
+          </h2>
+          <p className="text-xl text-surface-600 dark:text-surface-400 mb-8">
+            Schedule a Heat Audit or sign up for System Upgrade. We'll run the numbers for your specific heating profile and maximize heating revenue.
+          </p>
+          <Link
+            to="/services"
+            className="inline-block bg-primary-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-primary-700 transition-colors"
+          >
+            View Our Services
+            <ArrowRight className="inline ml-2 h-5 w-5" />
+          </Link>
         </div>
       </div>
     </div>
