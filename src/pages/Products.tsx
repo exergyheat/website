@@ -185,7 +185,7 @@ const Products = () => {
         <div className="text-center mb-12">
           <h2 className="text-3xl font-bold text-surface-900 dark:text-surface-100 mb-6">Tailored Hashrate Heating Solutions</h2>
           <p className="text-xl text-surface-600 dark:text-surface-400 max-w-3xl mx-auto">
-            We’ve collaborated with top manufacturers to select the best products for your heating needs, scale, or application, so you don’t have to figure it out.
+            We’ve collaborated with top manufacturers to select the best products for your heating needs, scale, or application - so you don’t have to figure it out.
           </p>
         </div>
       </div>
