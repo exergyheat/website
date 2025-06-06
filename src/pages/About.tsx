@@ -81,8 +81,8 @@ const About = () => {
   const processSteps = [
     {
       id: 'audit',
-      title: 'Heat Audit & Analysis',
-      description: 'Our proprietary thermal modeling software analyzes your heating needs and potential savings.',
+      title: 'Heat Audit Analysis',
+      description: 'We start with thermo-economic modeling to understand you exact your heating needs and potential savings.',
       icon: FileText,
       preview: {
         title: 'Sample Heat Audit Report',
