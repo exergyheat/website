@@ -180,8 +180,8 @@ const About = () => {
       }
     },
     {
-      id: 'simulation',
-      title: 'Performance Simulation',
+      id: 'installation',
+      title: 'Procurement & Installation',
       description: 'Advanced modeling to predict system performance and optimize configurations.',
       icon: ChartBar,
       preview: {
