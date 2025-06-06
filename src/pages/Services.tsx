@@ -548,13 +548,22 @@ const Services = () => {
           <p className="text-xl text-surface-300 mb-8 max-w-2xl mx-auto">
             Book a call to find the right service.
           </p>
-          <Link
-            to="/book-call"
-            className="inline-flex items-center px-8 py-4 bg-white dark:bg-surface-800 text-primary-600 dark:text-primary-400 rounded-lg hover:bg-primary-50 dark:hover:bg-surface-700 transition-colors"
-          >
-            Book an Intro Call
-            <ArrowRight className="ml-2 h-5 w-5" />
-          </Link>
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+            <Link
+              to="/products"
+              className="inline-flex items-center px-8 py-4 bg-primary-600 text-white rounded-lg hover:bg-primary-700 transition-colors"
+            >
+              Our hardware solutions
+              <ArrowRight className="ml-2 h-5 w-5" />
+            </Link>
+            <Link
+              to="/book-call"
+              className="inline-flex items-center px-8 py-4 bg-white dark:bg-surface-800 text-primary-600 dark:text-primary-400 rounded-lg hover:bg-primary-50 dark:hover:bg-surface-700 transition-colors"
+            >
+              Book an Intro Call
+              <ArrowRight className="ml-2 h-5 w-5" />
+            </Link>
+          </div>
         </div>
       </div>
     </div>
