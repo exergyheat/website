@@ -137,7 +137,7 @@ const PrivacyPolicy = () => {
                 If you have any questions about this Privacy Policy, please contact us at:
               </p>
               <div className="mt-4 p-4 bg-surface-50 dark:bg-surface-700 rounded-lg">
-                <p className="text-surface-600 dark:text-surface-400">Email: admin@exergyheat.com</p>
+                <p className="text-surface-600 dark:text-surface-400">Email: support@exergyheat.com</p>
                 <p className="text-surface-600 dark:text-surface-400">Address: 3700 N Franklin St. Denver, CO 80205</p>
               </div>
             </section>
