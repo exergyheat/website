@@ -297,7 +297,7 @@ const Products = () => {
       <div className="bg-surface-900 py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl font-bold text-white mb-6">
-            Ready to Transform Your Heating Infrastructure?
+            Not sure how much heating power you need? Which system is ideal for you?
           </h2>
           <p className="text-xl text-surface-300 mb-8 max-w-2xl mx-auto">
             Contact our team to learn more about our products and find the perfect solution for your needs.
