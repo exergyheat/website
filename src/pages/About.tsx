@@ -182,7 +182,7 @@ const About = () => {
     {
       id: 'installation',
       title: 'Procurement & Installation',
-      description: 'We source the best hardware for our system the coordinate install.',
+      description: 'We source the best hardware for your system the coordinate install.',
       icon: ChartBar,
       preview: {
         title: 'Performance Analysis',
