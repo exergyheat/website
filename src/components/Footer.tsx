@@ -9,10 +9,10 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           {/* Company Info */}
           <div>
-            <div className="flex items-center">
+            <Link to="/" className="flex items-center hover:opacity-80 transition-opacity">
               <Laptop className="h-8 w-8 text-primary-400" />
               <span className="ml-2 text-xl font-bold">EXERGY</span>
-            </div>
+            </Link>
             <p className="mt-4 text-surface-400">
               Heat That Pays
             </p>
