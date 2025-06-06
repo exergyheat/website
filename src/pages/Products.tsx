@@ -300,7 +300,7 @@ const Products = () => {
             Not sure which heating system you need?
           </h2>
           <p className="text-xl text-surface-300 mb-8 max-w-2xl mx-auto">
-            Contact our team to learn more about our products and find the perfect solution for your needs.
+            Schedule a Heat Audit Analysis to determine exactly how much heating power is right for you - and which systems are the best for the job.
           </p>
           <Link
             to="/book-call"
