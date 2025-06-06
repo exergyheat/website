@@ -174,7 +174,7 @@ const Products = () => {
               Leading Hashrate Heating Solutions
             </h1>
             <p className="text-xl text-primary-100 max-w-2xl mx-auto">
-              Explore plug-and-play space heaters, air and water heating systems, and Smart Control devices — all curated for you
+              Explore plug-and-play space heaters, air and water heating systems, and smart control devices — all curated for you
             </p>
           </div>
         </div>
