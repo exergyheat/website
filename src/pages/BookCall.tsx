@@ -13,7 +13,7 @@ const BookCall = () => {
       name: 'Dylan',
       role: 'COO & CFO',
       image: 'https://images.pexels.com/photos/2381069/pexels-photo-2381069.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-      description: 'Schedule time with Dylan to discuss business operations and financial considerations.'
+      description: 'Schedule time with Dylan to discuss new projects or operations and the numbers.'
     },
     {
       name: 'Mike',
