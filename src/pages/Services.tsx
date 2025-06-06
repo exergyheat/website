@@ -553,7 +553,7 @@ const Services = () => {
               to="/products"
               className="inline-flex items-center px-8 py-4 bg-primary-600 text-white rounded-lg hover:bg-primary-700 transition-colors"
             >
-              Our hardware solutions
+              Our Hardware Solutions
               <ArrowRight className="ml-2 h-5 w-5" />
             </Link>
             <Link
