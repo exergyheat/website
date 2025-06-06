@@ -22,7 +22,7 @@ const BookCall = () => {
       role: 'CRO',
       image: 'https://images.pexels.com/photos/2379005/pexels-photo-2379005.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
       description: 'Connect with Mike to discuss new projects or explore partnership opportunities.',
-      calLink: null
+      calLink: 'exergy-mike'
     }
   ]
 
@@ -103,28 +103,17 @@ const BookCall = () => {
                 <p className="text-surface-600 dark:text-surface-400 mb-6">
                   {member.description}
                 </p>
-                {member.calLink ? (
-                  <button 
-                    className="w-full bg-primary-600 text-white py-3 px-4 rounded-lg hover:bg-primary-700 transition-colors flex items-center justify-center"
-                    data-cal-link={member.calLink}
-                    data-cal-namespace="meeting"
-                    data-cal-config='{"layout":"month_view","theme":"auto"}'
-                    onClick={() => handleCalClick(member.calLink)}
-                  >
-                    <Calendar className="h-5 w-5 mr-2" />
-                    Schedule Call
-                    <ArrowRight className="h-5 w-5 ml-2" />
-                  </button>
-                ) : (
-                  <button 
-                    className="w-full bg-surface-300 dark:bg-surface-600 text-surface-600 dark:text-surface-400 py-3 px-4 rounded-lg cursor-not-allowed flex items-center justify-center"
-                    disabled
-                  >
-                    <Calendar className="h-5 w-5 mr-2" />
-                    Coming Soon
-                    <ArrowRight className="h-5 w-5 ml-2" />
-                  </button>
-                )}
+                <button 
+                  className="w-full bg-primary-600 text-white py-3 px-4 rounded-lg hover:bg-primary-700 transition-colors flex items-center justify-center"
+                  data-cal-link={member.calLink}
+                  data-cal-namespace="meeting"
+                  data-cal-config='{"layout":"month_view","theme":"auto"}'
+                  onClick={() => handleCalClick(member.calLink)}
+                >
+                  <Calendar className="h-5 w-5 mr-2" />
+                  Schedule Call
+                  <ArrowRight className="h-5 w-5 ml-2" />
+                </button>
               </div>
             </div>
           ))}
