@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { Book, Users, Award, Cpu, Flame, Bitcoin, ArrowRight, Target, Lightbulb, FileText, BarChart as ChartBar, Wrench, CheckCircle2, Mail, X, Zap, Network, Package, Monitor, BookOpen, Megaphone, Hammer } from 'lucide-react'
+import { Book, Users, Award, Cpu, Flame, Bitcoin, ArrowRight, Target, Lightbulb, FileText, BarChart as ChartBar, Wrench, CheckCircle2, Mail, X, Zap, Network, Package, Monitor, BookOpen, Megaphone, Hammer, Calendar } from 'lucide-react'
 import { Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
 
@@ -449,7 +449,7 @@ const About = () => {
       
       {/* Book & Leadership Section */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center mb-16">
           <div className="relative">
             <div className="bg-surface-900 rounded-lg p-8">
               <div className="max-w-sm">
@@ -482,6 +482,39 @@ const About = () => {
               alt="Bitcoin Mining Heat Reuse Book Cover"
               className="w-80 h-auto rounded-lg shadow-2xl transform rotate-6 hover:rotate-0 transition-transform duration-300"
             />
+          </div>
+        </div>
+
+        {/* Undermine Summit Section */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+          <div className="relative flex justify-center md:order-2">
+            <div className="bg-surface-900 rounded-lg p-8 w-full max-w-sm">
+              <Calendar className="h-12 w-12 text-primary-400 mb-4" />
+              <h3 className="text-2xl font-bold text-white mb-4">Undermine Summit</h3>
+              <p className="text-surface-300 mb-6">
+                The annual Heatpunk Summit is a conference dedicated to hashrate heating, hosted by our founder Tyler Stevens.
+              </p>
+              <a
+                href="https://denver.space/heatpunk_summit"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center px-6 py-3 bg-primary-600 text-white rounded-lg hover:bg-primary-700 transition-colors"
+              >
+                Visit Conference Site
+                <ArrowRight className="ml-2 h-5 w-5" />
+              </a>
+            </div>
+          </div>
+          <div className="relative md:order-1">
+            <img
+              src="https://images.pexels.com/photos/2774556/pexels-photo-2774556.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+              alt="Conference and Summit"
+              className="w-full h-80 object-cover rounded-lg shadow-2xl"
+            />
+            <div className="absolute -bottom-4 -right-4 bg-white dark:bg-surface-700 p-6 rounded-lg shadow-xl">
+              <p className="text-xl font-bold text-primary-600 dark:text-primary-400">2025</p>
+              <p className="text-surface-600 dark:text-surface-400">Next Summit</p>
+            </div>
           </div>
         </div>
       </div>
