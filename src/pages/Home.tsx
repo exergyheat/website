@@ -312,10 +312,10 @@ const Home = () => {
 
           <div className="mt-12 text-center">
             <Link
-              to="/calculators"
+              to="/faq"
               className="inline-flex items-center px-6 py-3 bg-primary-600 text-white rounded-lg hover:bg-primary-700 transition-colors"
             >
-              Estimate Your Earnings
+              See More FAQ
               <ArrowRight className="ml-2 h-5 w-5" />
             </Link>
           </div>
