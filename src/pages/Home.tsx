@@ -145,7 +145,7 @@ const Home = () => {
                     Heaters Powered By Bitcoin = Heat AND Money
                   </h3>
                   <p className="mt-2 text-base text-surface-500 dark:text-surface-400">
-                    Hashrate heating devices do two things at once: Deliver your heating needs while paying you a rebate. Which will it be - smart heat or dumb heat?
+                    Hashrate Heaters do two things at once: Deliver your heating needs while paying you a rebate. Which will it be - smart heat or dumb heat?
                   </p>
                 </div>
               </div>
