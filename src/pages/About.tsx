@@ -412,49 +412,8 @@ const About = () => {
           </motion.div>
         </div>
       </div>
-      
-      {/* Book & Leadership Section */}
-      <div className="bg-white dark:bg-surface-800 py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-            <div className="relative">
-              <div className="bg-surface-900 rounded-lg p-8">
-                <div className="max-w-sm">
-                  <Book className="h-12 w-12 text-primary-400 mb-4" />
-                  <h3 className="text-2xl font-bold text-white mb-4">Bitcoin Mining Heat Reuse</h3>
-                  <p className="text-surface-300 mb-6">
-                    The definitive guide to hashrate heating technology, written by our founder Tyler Stevens.
-                  </p>
-                  <div className="mb-24 sm:mb-0">
-                    <a
-                      href="https://braiins.com/books/bitcoin-mining-heat-reuse"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="inline-flex items-center justify-center px-6 py-3 bg-primary-600 text-white rounded-lg hover:bg-primary-700 transition-colors"
-                    >
-                      Get the Book
-                      <ArrowRight className="ml-2 h-5 w-5" />
-                    </a>
-                  </div>
-                </div>
-              </div>
-              <div className="absolute bottom-4 sm:-bottom-6 right-4 sm:-right-6 bg-white dark:bg-surface-700 p-6 rounded-lg shadow-xl">
-                <p className="text-xl font-bold text-primary-600 dark:text-primary-400">#1</p>
-                <p className="text-surface-600 dark:text-surface-400">Industry Resource</p>
-              </div>
-            </div>
-            <div className="relative flex justify-center">
-              <img
-                src="/BookCoverImage.png"
-                alt="Bitcoin Mining Heat Reuse Book Cover"
-                className="w-80 h-auto rounded-lg shadow-2xl transform rotate-6 hover:rotate-0 transition-transform duration-300"
-              />
-            </div>
-          </div>
-        </div>
-      </div>
 
-      {/* Technology Section */}
+      {/* Our Expertise Section */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
         <h2 className="text-3xl font-bold text-surface-900 dark:text-surface-100 text-center mb-12">Our Expertise</h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -484,6 +443,45 @@ const About = () => {
             <p className="mt-2 text-surface-600 dark:text-surface-400">
               Our experience encompasses thermal engineering, structural engineering, licensed professional certifications and skilled startup building with an entreprenueal spirit.
             </p>
+          </div>
+        </div>
+      </div>
+      
+      {/* Book & Leadership Section */}
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+          <div className="relative">
+            <div className="bg-surface-900 rounded-lg p-8">
+              <div className="max-w-sm">
+                <Book className="h-12 w-12 text-primary-400 mb-4" />
+                <h3 className="text-2xl font-bold text-white mb-4">Bitcoin Mining Heat Reuse</h3>
+                <p className="text-surface-300 mb-6">
+                  The definitive guide to hashrate heating technology, written by our founder Tyler Stevens.
+                </p>
+                <div className="mb-24 sm:mb-0">
+                  <a
+                    href="https://braiins.com/books/bitcoin-mining-heat-reuse"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center justify-center px-6 py-3 bg-primary-600 text-white rounded-lg hover:bg-primary-700 transition-colors"
+                  >
+                    Get the Book
+                    <ArrowRight className="ml-2 h-5 w-5" />
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div className="absolute bottom-4 sm:-bottom-6 right-4 sm:-right-6 bg-white dark:bg-surface-700 p-6 rounded-lg shadow-xl">
+              <p className="text-xl font-bold text-primary-600 dark:text-primary-400">#1</p>
+              <p className="text-surface-600 dark:text-surface-400">Industry Resource</p>
+            </div>
+          </div>
+          <div className="relative flex justify-center">
+            <img
+              src="/BookCoverImage.png"
+              alt="Bitcoin Mining Heat Reuse Book Cover"
+              className="w-80 h-auto rounded-lg shadow-2xl transform rotate-6 hover:rotate-0 transition-transform duration-300"
+            />
           </div>
         </div>
       </div>
