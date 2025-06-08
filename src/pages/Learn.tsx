@@ -89,7 +89,7 @@ const Learn = () => {
       <div className="bg-gradient-to-r from-primary-600 to-primary-800 py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
-            Learn Hashrate Heating
+            Learn The Technology
           </h1>
           <p className="text-xl text-primary-100 max-w-2xl mx-auto">
             The most revolutionary heating tech in over a century - heat that pays
@@ -100,7 +100,7 @@ const Learn = () => {
       {/* Resources Grid */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
         <h2 className="text-3xl font-bold text-surface-900 dark:text-surface-100 text-center mb-12">
-          Learning Resources
+          Resources
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {resources.map((resource, index) => (
