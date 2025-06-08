@@ -1,5 +1,5 @@
 import React from 'react'
-import { ArrowRight, Wrench, Cpu, Bitcoin, Flame, ArrowRightCircle, DollarSign, Zap, Calculator } from 'lucide-react'
+import { ArrowRight, Wrench, Cpu, Bitcoin, Flame, DollarSign, Zap, Calculator } from 'lucide-react'
 import { Link } from 'react-router-dom'
 import { useTypewriter } from '../hooks/useTypewriter'
 import ProjectCarousel from '../components/ProjectCarousel'
@@ -261,12 +261,9 @@ const Home = () => {
             whileInView="visible"
             viewport={{ once: true, margin: "-100px" }}
           >
-            {/* Step 1: Why Bitcoin? */}
-            <motion.div className="relative group" variants={cardVariants}>
+            {/* Card 1: Why Bitcoin? */}
+            <motion.div className="group" variants={cardVariants}>
               <div className="bg-white dark:bg-surface-800 rounded-lg p-8 h-full transform transition-transform group-hover:scale-105 shadow-lg">
-                <div className="absolute -right-4 top-1/2 transform -translate-y-1/2 z-10 hidden md:block">
-                  <ArrowRightCircle className="h-8 w-8 text-primary-600 dark:text-primary-400" />
-                </div>
                 <div className="flex justify-center mb-6">
                   <div className="p-4 bg-primary-100 dark:bg-primary-900 rounded-full">
                     <Bitcoin className="h-12 w-12 text-primary-600 dark:text-primary-400" />
@@ -281,12 +278,9 @@ const Home = () => {
               </div>
             </motion.div>
 
-            {/* Step 2: Does it Heat Well? */}
-            <motion.div className="relative group" variants={cardVariants}>
+            {/* Card 2: Does it Heat Well? */}
+            <motion.div className="group" variants={cardVariants}>
               <div className="bg-white dark:bg-surface-800 rounded-lg p-8 h-full transform transition-transform group-hover:scale-105 shadow-lg">
-                <div className="absolute -right-4 top-1/2 transform -translate-y-1/2 z-10 hidden md:block">
-                  <ArrowRightCircle className="h-8 w-8 text-primary-600 dark:text-primary-400" />
-                </div>
                 <div className="flex justify-center mb-6">
                   <div className="p-4 bg-primary-100 dark:bg-primary-900 rounded-full">
                     <Flame className="h-12 w-12 text-primary-600 dark:text-primary-400" />
@@ -301,7 +295,7 @@ const Home = () => {
               </div>
             </motion.div>
 
-            {/* Step 3: Can I Control It? */}
+            {/* Card 3: Can I Control It? */}
             <motion.div className="group" variants={cardVariants}>
               <div className="bg-white dark:bg-surface-800 rounded-lg p-8 h-full transform transition-transform group-hover:scale-105 shadow-lg">
                 <div className="flex justify-center mb-6">
