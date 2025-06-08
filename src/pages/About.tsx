@@ -413,6 +413,40 @@ const About = () => {
         </div>
       </div>
 
+      {/* Technology Section */}
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+        <h2 className="text-3xl font-bold text-surface-900 dark:text-surface-100 text-center mb-12">Our Technology Stack</h2>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="bg-white dark:bg-surface-800 rounded-lg shadow-xl p-8 transform hover:scale-105 transition-transform">
+            <div className="flex justify-center">
+              <Bitcoin className="h-12 w-12 text-primary-600 dark:text-primary-400" />
+            </div>
+            <h3 className="mt-4 text-xl font-semibold text-surface-900 dark:text-surface-100">Bitcoin Mining</h3>
+            <p className="mt-2 text-surface-600 dark:text-surface-400">
+              Utilizing the latest ASIC technology to generate both heat and revenue through Bitcoin mining.
+            </p>
+          </div>
+          <div className="bg-white dark:bg-surface-800 rounded-lg shadow-xl p-8 transform hover:scale-105 transition-transform">
+            <div className="flex justify-center">
+              <Cpu className="h-12 w-12 text-primary-600 dark:text-primary-400" />
+            </div>
+            <h3 className="mt-4 text-xl font-semibold text-surface-900 dark:text-surface-100">Smart Controls</h3>
+            <p className="mt-2 text-surface-600 dark:text-surface-400">
+              Advanced control systems for optimal performance and efficiency monitoring.
+            </p>
+          </div>
+          <div className="bg-white dark:bg-surface-800 rounded-lg shadow-xl p-8 transform hover:scale-105 transition-transform">
+            <div className="flex justify-center">
+              <Award className="h-12 w-12 text-primary-600 dark:text-primary-400" />
+            </div>
+            <h3 className="mt-4 text-xl font-semibold text-surface-900 dark:text-surface-100">Thermal Innovation</h3>
+            <p className="mt-2 text-surface-600 dark:text-surface-400">
+              Cutting-edge heat distribution and management technologies.
+            </p>
+          </div>
+        </div>
+      </div>
+      
       {/* Book & Leadership Section */}
       <div className="bg-white dark:bg-surface-800 py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -450,40 +484,6 @@ const About = () => {
                 className="w-80 h-auto rounded-lg shadow-2xl transform rotate-6 hover:rotate-0 transition-transform duration-300"
               />
             </div>
-          </div>
-        </div>
-      </div>
-
-      {/* Technology Section */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
-        <h2 className="text-3xl font-bold text-surface-900 dark:text-surface-100 text-center mb-12">Our Technology Stack</h2>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          <div className="bg-white dark:bg-surface-800 rounded-lg shadow-xl p-8 transform hover:scale-105 transition-transform">
-            <div className="flex justify-center">
-              <Bitcoin className="h-12 w-12 text-primary-600 dark:text-primary-400" />
-            </div>
-            <h3 className="mt-4 text-xl font-semibold text-surface-900 dark:text-surface-100">Bitcoin Mining</h3>
-            <p className="mt-2 text-surface-600 dark:text-surface-400">
-              Utilizing the latest ASIC technology to generate both heat and revenue through Bitcoin mining.
-            </p>
-          </div>
-          <div className="bg-white dark:bg-surface-800 rounded-lg shadow-xl p-8 transform hover:scale-105 transition-transform">
-            <div className="flex justify-center">
-              <Cpu className="h-12 w-12 text-primary-600 dark:text-primary-400" />
-            </div>
-            <h3 className="mt-4 text-xl font-semibold text-surface-900 dark:text-surface-100">Smart Controls</h3>
-            <p className="mt-2 text-surface-600 dark:text-surface-400">
-              Advanced control systems for optimal performance and efficiency monitoring.
-            </p>
-          </div>
-          <div className="bg-white dark:bg-surface-800 rounded-lg shadow-xl p-8 transform hover:scale-105 transition-transform">
-            <div className="flex justify-center">
-              <Award className="h-12 w-12 text-primary-600 dark:text-primary-400" />
-            </div>
-            <h3 className="mt-4 text-xl font-semibold text-surface-900 dark:text-surface-100">Thermal Innovation</h3>
-            <p className="mt-2 text-surface-600 dark:text-surface-400">
-              Cutting-edge heat distribution and management technologies.
-            </p>
           </div>
         </div>
       </div>
