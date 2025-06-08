@@ -421,7 +421,7 @@ const About = () => {
             <div className="flex justify-center">
               <Bitcoin className="h-12 w-12 text-primary-600 dark:text-primary-400" />
             </div>
-            <h3 className="mt-4 text-xl font-semibold text-surface-900 dark:text-surface-100">Bitcoin Mining</h3>
+            <h3 className="mt-4 text-xl font-semibold text-surface-900 dark:text-surface-100">Industry Leaders</h3>
             <p className="mt-2 text-surface-600 dark:text-surface-400">
               Utilizing the latest ASIC technology to generate both heat and revenue through Bitcoin mining.
             </p>
@@ -430,7 +430,7 @@ const About = () => {
             <div className="flex justify-center">
               <Cpu className="h-12 w-12 text-primary-600 dark:text-primary-400" />
             </div>
-            <h3 className="mt-4 text-xl font-semibold text-surface-900 dark:text-surface-100">Smart Controls</h3>
+            <h3 className="mt-4 text-xl font-semibold text-surface-900 dark:text-surface-100">Community Builders</h3>
             <p className="mt-2 text-surface-600 dark:text-surface-400">
               Advanced control systems for optimal performance and efficiency monitoring.
             </p>
@@ -439,7 +439,7 @@ const About = () => {
             <div className="flex justify-center">
               <Award className="h-12 w-12 text-primary-600 dark:text-primary-400" />
             </div>
-            <h3 className="mt-4 text-xl font-semibold text-surface-900 dark:text-surface-100">Thermal Innovation</h3>
+            <h3 className="mt-4 text-xl font-semibold text-surface-900 dark:text-surface-100">Engineers at Heart</h3>
             <p className="mt-2 text-surface-600 dark:text-surface-400">
               Cutting-edge heat distribution and management technologies.
             </p>
