@@ -6,6 +6,12 @@ import { motion } from 'framer-motion'
 const Learn = () => {
   const resources = [
     {
+      title: "Blog",
+      description: "Native insights and updates on hashrate heating technology",
+      icon: PenTool,
+      link: "/blog"
+    },
+    {
       title: "Content",
       description: "Educate yourself with hashrate heating blog posts, videos, guides, tutorials and more",
       icon: BookOpen,
@@ -16,12 +22,6 @@ const Learn = () => {
       description: "Estimate rough savings and earnings with our interactive tools",
       icon: Calculator,
       link: "/calculators"
-    },
-    {
-      title: "Blog",
-      description: "Native insights and updates on hashrate heating technology",
-      icon: PenTool,
-      link: "/blog"
     },
     {
       title: "Documentation",
