@@ -33,7 +33,7 @@ const Contact = () => {
             Contact Us
           </h1>
           <p className="text-xl text-primary-100 max-w-2xl mx-auto">
-            It's time to slash those heating bills
+            It's time to get paid for heating
           </p>
         </div>
       </div>
