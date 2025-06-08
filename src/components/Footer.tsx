@@ -51,6 +51,12 @@ const Footer = () => {
                 <Link to="/education" className="text-surface-400 hover:text-surface-200 transition-colors">Education</Link>
               </li>
               <li>
+                <Link to="/docs" className="text-surface-400 hover:text-surface-200 transition-colors">Documentation</Link>
+              </li>
+              <li>
+                <Link to="/blog" className="text-surface-400 hover:text-surface-200 transition-colors">Blog</Link>
+              </li>
+              <li>
                 <a 
                   href="https://heatpunks.org" 
                   target="_blank" 
