@@ -6,8 +6,8 @@ import { motion } from 'framer-motion'
 const Learn = () => {
   const resources = [
     {
-      title: "Educational Content",
-      description: "Hashrate heating blog posts, videos, guides, tutorials and more",
+      title: "Content",
+      description: "Educate yourself with hashrate heating blog posts, videos, guides, tutorials and more",
       icon: BookOpen,
       link: "/education"
     },
