@@ -126,7 +126,7 @@ const Home = () => {
                 </div>
                 <div className="ml-4">
                   <h3 className="text-lg font-medium text-surface-900 dark:text-surface-100">
-                    Bitcoin Miners Reward You for Running Bitcoin
+                    Bitcoin Miners Reward You for Hashing Bitcoin
                   </h3>
                   <p className="mt-2 text-base text-surface-500 dark:text-surface-400">
                     Bitcoin miners perform computations that also convert 100% of electricity into heat. The difference? They earn rewards while heating.
