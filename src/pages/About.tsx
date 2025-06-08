@@ -423,7 +423,7 @@ const About = () => {
             </div>
             <h3 className="mt-4 text-xl font-semibold text-surface-900 dark:text-surface-100">Industry Leaders</h3>
             <p className="mt-2 text-surface-600 dark:text-surface-400">
-              Utilizing the latest ASIC technology to generate both heat and revenue through Bitcoin mining.
+              Our founder wrote the first comprehensive book on hashrate heating.
             </p>
           </div>
           <div className="bg-white dark:bg-surface-800 rounded-lg shadow-xl p-8 transform hover:scale-105 transition-transform">
