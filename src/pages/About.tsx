@@ -432,7 +432,7 @@ const About = () => {
             </div>
             <h3 className="mt-4 text-xl font-semibold text-surface-900 dark:text-surface-100">Community Builders</h3>
             <p className="mt-2 text-surface-600 dark:text-surface-400">
-              Advanced control systems for optimal performance and efficiency monitoring.
+              Our Founders host Undermine, the annual Heatpunk Summit - A first of its kind conference dedicated exclusively to hashrate heating, covering technical developments to tradesmen education. 
             </p>
           </div>
           <div className="bg-white dark:bg-surface-800 rounded-lg shadow-xl p-8 transform hover:scale-105 transition-transform">
