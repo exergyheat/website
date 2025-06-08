@@ -18,16 +18,16 @@ const Learn = () => {
       link: "/calculators"
     },
     {
-      title: "Documentation",
-      description: "Terms of service, contracts, payment processes, and hashrate splits",
-      icon: FileText,
-      link: "/docs"
-    },
-    {
       title: "Blog",
       description: "Native insights and updates on hashrate heating technology",
       icon: PenTool,
       link: "/blog"
+    },
+    {
+      title: "Documentation",
+      description: "Terms of service, contracts, payment processes, and hashrate splits",
+      icon: FileText,
+      link: "/docs"
     },
     {
       title: "FAQ",
