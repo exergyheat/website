@@ -56,6 +56,9 @@ const Footer = () => {
               <li>
                 <Link to="/docs" className="text-surface-400 hover:text-surface-200 transition-colors">Docs</Link>
               </li>
+              <li>
+                <Link to="/faq" className="text-surface-400 hover:text-surface-200 transition-colors">FAQ</Link>
+              </li>
 
               <li>
                 <a 
@@ -66,9 +69,6 @@ const Footer = () => {
                 >
                   Forum
                 </a>
-              </li>
-              <li>
-                <Link to="/faq" className="text-surface-400 hover:text-surface-200 transition-colors">FAQ</Link>
               </li>
             </ul>
           </div>
