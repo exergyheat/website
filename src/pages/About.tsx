@@ -421,7 +421,7 @@ const About = () => {
             <div className="flex justify-center">
               <Bitcoin className="h-12 w-12 text-primary-600 dark:text-primary-400" />
             </div>
-            <h3 className="mt-4 text-xl font-semibold text-surface-900 dark:text-surface-100">Industry Leaders</h3>
+            <h3 className="mt-4 text-xl font-semibold text-surface-900 dark:text-surface-100">Industry Leader</h3>
             <p className="mt-2 text-surface-600 dark:text-surface-400">
               Our CEO wrote the first comprehensive book on hashrate heating - Examaning why this technology matters, who can benefit, how to implement it, and provides insights into potential savings.
             </p>
