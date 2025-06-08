@@ -80,7 +80,7 @@ const ProjectCarousel = () => {
         <div className="text-center mb-12">
           <h2 className="text-3xl font-bold text-surface-900 dark:text-surface-100 mb-4">See it in Action</h2>
           <p className="text-xl text-surface-600 dark:text-surface-400">
-            Explore our successful implementations across various applications
+            Explore successful implementations across various applications
           </p>
         </div>
 
