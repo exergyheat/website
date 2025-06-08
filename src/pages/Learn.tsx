@@ -34,14 +34,14 @@ const Learn = () => {
       description: "Find answers to common questions about hashrate heating technology",
       icon: HelpCircle,
       link: "/faq"
-    }
+    },
     {
       title: "Technical Forum",
       description: "Deep dive with industry experts on the Hashrate Heatpunk forum",
       icon: Users,
       link: "https://heatpunks.org",
       external: true
-    },
+    }
 
   ]
 
