@@ -7,6 +7,7 @@ import { motion } from 'framer-motion'
 
 const Home = () => {
   const headlineText = useTypewriter("You pay for heat every month.", 75)
+  const isTypewriterComplete = headlineText === "You pay for heat every month."
 
   const containerVariants = {
     hidden: {},
@@ -47,12 +48,36 @@ const Home = () => {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-white">
             <h1 className="text-4xl md:text-6xl font-bold mb-6 font-mono">
               {headlineText}
-              <span className="animate-pulse">|</span>
+              {!isTypewriterComplete && <span className="animate-pulse">|</span>}
             </h1>
-            <p className="text-xl md:text-2xl mb-8 max-w-2xl">
+            <motion.p 
+              className="text-xl md:text-2xl mb-8 max-w-2xl"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ 
+                opacity: isTypewriterComplete ? 1 : 0,
+                y: isTypewriterComplete ? 0 : 20
+              }}
+              transition={{ 
+                duration: 0.8,
+                ease: "easeOut",
+                delay: isTypewriterComplete ? 0.5 : 0
+              }}
+            >
               Upgrade to heat that pays you instead.
-            </p>
-            <div className="flex flex-wrap gap-4">
+            </motion.p>
+            <motion.div 
+              className="flex flex-wrap gap-4"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ 
+                opacity: isTypewriterComplete ? 1 : 0,
+                y: isTypewriterComplete ? 0 : 20
+              }}
+              transition={{ 
+                duration: 0.8,
+                ease: "easeOut",
+                delay: isTypewriterComplete ? 1 : 0
+              }}
+            >
               <Link
                 to="/book-call"
                 className="inline-flex items-center px-6 py-3 border border-white text-base font-medium rounded-md text-white hover:bg-white hover:text-primary-600 transition-colors"
@@ -60,7 +85,7 @@ const Home = () => {
                 Book an Intro Call
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Link>
-            </div>
+            </motion.div>
           </div>
         </div>
       </div>
