@@ -244,7 +244,7 @@ const Home = () => {
         </div>
       </div>
 
-      {/* The Technology Section */}
+      {/* The Common FAQ Section */}
       <div className="py-20 bg-surface-50 dark:bg-surface-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
@@ -261,7 +261,7 @@ const Home = () => {
             whileInView="visible"
             viewport={{ once: true, margin: "-100px" }}
           >
-            {/* Step 1: Bitcoin Miners */}
+            {/* Step 1: Why Bitcoin? */}
             <motion.div className="relative group" variants={cardVariants}>
               <div className="bg-white dark:bg-surface-800 rounded-lg p-8 h-full transform transition-transform group-hover:scale-105 shadow-lg">
                 <div className="absolute -right-4 top-1/2 transform -translate-y-1/2 z-10 hidden md:block">
@@ -281,7 +281,7 @@ const Home = () => {
               </div>
             </motion.div>
 
-            {/* Step 2: Energy Conversion */}
+            {/* Step 2: Does it Heat Well? */}
             <motion.div className="relative group" variants={cardVariants}>
               <div className="bg-white dark:bg-surface-800 rounded-lg p-8 h-full transform transition-transform group-hover:scale-105 shadow-lg">
                 <div className="absolute -right-4 top-1/2 transform -translate-y-1/2 z-10 hidden md:block">
@@ -301,7 +301,7 @@ const Home = () => {
               </div>
             </motion.div>
 
-            {/* Step 3: Smart Integration */}
+            {/* Step 3: Can I Control It? */}
             <motion.div className="group" variants={cardVariants}>
               <div className="bg-white dark:bg-surface-800 rounded-lg p-8 h-full transform transition-transform group-hover:scale-105 shadow-lg">
                 <div className="flex justify-center mb-6">
