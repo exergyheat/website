@@ -27,38 +27,33 @@ const BookCall = () => {
   ]
 
   useEffect(() => {
-    // Load Cal.com embed script
-    const script = document.createElement('script')
-    script.src = 'https://app.cal.com/embed/embed.js'
-    script.async = true
-    document.head.appendChild(script)
+    // Check if Cal.com embed script is already loaded
+    const existingScript = document.querySelector('script[src="https://app.cal.com/embed/embed.js"]')
+    
+    if (!existingScript) {
+      // Load Cal.com embed script only if it doesn't exist
+      const script = document.createElement('script')
+      script.src = 'https://app.cal.com/embed/embed.js'
+      script.async = true
+      script.id = 'cal-embed-script'
+      document.head.appendChild(script)
 
-    script.onload = () => {
-      // Initialize Cal.com
-      if (window.Cal) {
-        window.Cal('init', 'meeting', { origin: 'https://cal.com' })
-        window.Cal.ns.meeting('ui', {
-          cssVarsPerTheme: {
-            light: { 'cal-brand': '#2F3B69' },
-            dark: { 'cal-brand': '#314596' }
-          },
-          hideEventTypeDetails: false,
-          layout: 'month_view'
-        })
+      script.onload = () => {
+        // Initialize Cal.com
+        if (window.Cal) {
+          window.Cal('init', 'meeting', { origin: 'https://cal.com' })
+          window.Cal.ns.meeting('ui', {
+            cssVarsPerTheme: {
+              light: { 'cal-brand': '#2F3B69' },
+              dark: { 'cal-brand': '#314596' }
+            },
+            hideEventTypeDetails: false,
+            layout: 'month_view'
+          })
+        }
       }
-    }
-
-    return () => {
-      // Cleanup script on unmount
-      const existingScript = document.querySelector('script[src="https://app.cal.com/embed/embed.js"]')
-      if (existingScript) {
-        existingScript.remove()
-      }
-    }
-  }, [])
-
-  const handleCalClick = (calLink: string) => {
-    if (window.Cal) {
+    } else if (window.Cal) {
+      // If script already exists and Cal is available, just initialize
       window.Cal('init', 'meeting', { origin: 'https://cal.com' })
       window.Cal.ns.meeting('ui', {
         cssVarsPerTheme: {
@@ -69,7 +64,7 @@ const BookCall = () => {
         layout: 'month_view'
       })
     }
-  }
+  }, [])
 
   return (
     <div className="bg-surface-50 dark:bg-surface-900 min-h-screen">
@@ -108,7 +103,6 @@ const BookCall = () => {
                   data-cal-link={member.calLink}
                   data-cal-namespace="meeting"
                   data-cal-config='{"layout":"month_view","theme":"auto"}'
-                  onClick={() => handleCalClick(member.calLink)}
                 >
                   <Calendar className="h-5 w-5 mr-2" />
                   Schedule Call
