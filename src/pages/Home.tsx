@@ -188,7 +188,7 @@ const Home = () => {
               </div>
               <h3 className="mt-4 text-xl font-semibold text-surface-900 dark:text-surface-100">Best-in-Class Hardware</h3>
               <p className="mt-2 text-surface-600 dark:text-surface-400">
-                All miners produce heat, yet few excel as heating devices. We’ve mastered selecting the ideal hardware for your needs."
+                All miners generate heat, but few excel as heaters. We’ve perfected hardware selection for your needs.
               </p>
             </div>
 
