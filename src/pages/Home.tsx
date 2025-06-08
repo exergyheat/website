@@ -248,7 +248,7 @@ const Home = () => {
       <div className="py-20 bg-surface-50 dark:bg-surface-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-3xl font-bold text-surface-900 dark:text-surface-100 mb-4">Your Questions - Answered</h2>
+            <h2 className="text-3xl font-bold text-surface-900 dark:text-surface-100 mb-4">Have Questions? We Have Answers</h2>
             <p className="text-xl text-surface-600 dark:text-surface-400 max-w-2xl mx-auto">
               Transform your heating infrastructure into a revenue-generating asset
             </p>
