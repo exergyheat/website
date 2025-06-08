@@ -1,5 +1,5 @@
 import React from 'react'
-import { ArrowRight, Wrench, Cpu, Bitcoin, Flame, ArrowRightCircle, DollarSign, Zap } from 'lucide-react'
+import { ArrowRight, Wrench, Cpu, Bitcoin, Flame, ArrowRightCircle, DollarSign, Zap, Calculator } from 'lucide-react'
 import { Link } from 'react-router-dom'
 import { useTypewriter } from '../hooks/useTypewriter'
 import ProjectCarousel from '../components/ProjectCarousel'
@@ -165,13 +165,22 @@ const Home = () => {
           </div>
 
           <div className="mt-12 text-center">
-            <Link
-              to="/learn"
-              className="inline-flex items-center px-6 py-3 bg-primary-600 text-white rounded-lg hover:bg-primary-700 transition-colors"
-            >
-              About Hashrate Heating
-              <ArrowRight className="ml-2 h-5 w-5" />
-            </Link>
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+              <Link
+                to="/learn"
+                className="inline-flex items-center px-6 py-3 bg-primary-600 text-white rounded-lg hover:bg-primary-700 transition-colors"
+              >
+                About Hashrate Heating
+                <ArrowRight className="ml-2 h-5 w-5" />
+              </Link>
+              <Link
+                to="/calculators"
+                className="inline-flex items-center px-6 py-3 border border-primary-600 text-primary-600 dark:text-primary-400 rounded-lg hover:bg-primary-50 dark:hover:bg-primary-900 transition-colors"
+              >
+                <Calculator className="mr-2 h-5 w-5" />
+                Estimate Your Earnings
+              </Link>
+            </div>
           </div>
         </div>
       </div>
