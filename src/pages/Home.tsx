@@ -1,5 +1,5 @@
 import React from 'react'
-import { ArrowRight, Code, Globe, Shield, Bitcoin, Cpu, Flame, ArrowRightCircle, CheckCircle, DollarSign, Zap } from 'lucide-react'
+import { ArrowRight, Wrench, Cpu, Bitcoin, Flame, ArrowRightCircle, DollarSign, Zap } from 'lucide-react'
 import { Link } from 'react-router-dom'
 import { useTypewriter } from '../hooks/useTypewriter'
 import ProjectCarousel from '../components/ProjectCarousel'
@@ -184,17 +184,17 @@ const Home = () => {
           <div className="mt-20 grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="text-center">
               <div className="flex justify-center">
-                <Code className="h-12 w-12 text-primary-600 dark:text-primary-400" />
+                <Wrench className="h-12 w-12 text-primary-600 dark:text-primary-400" />
               </div>
               <h3 className="mt-4 text-xl font-semibold text-surface-900 dark:text-surface-100">Best-in-Class Hardware</h3>
               <p className="mt-2 text-surface-600 dark:text-surface-400">
-                All miners generate heat, but few excel as heaters. We’ve perfected hardware selection for your needs.
+                All miners generate heat, but few excel as heaters. We've perfected hardware selection for your needs.
               </p>
             </div>
 
             <div className="text-center">
               <div className="flex justify-center">
-                <Globe className="h-12 w-12 text-primary-600 dark:text-primary-400" />
+                <Cpu className="h-12 w-12 text-primary-600 dark:text-primary-400" />
               </div>
               <h3 className="mt-4 text-xl font-semibold text-surface-900 dark:text-surface-100">Custom Designed Solutions</h3>
               <p className="mt-2 text-surface-600 dark:text-surface-400">
@@ -204,7 +204,7 @@ const Home = () => {
 
             <div className="text-center">
               <div className="flex justify-center">
-                <Shield className="h-12 w-12 text-primary-600 dark:text-primary-400" />
+                <Bitcoin className="h-12 w-12 text-primary-600 dark:text-primary-400" />
               </div>
               <h3 className="mt-4 text-xl font-semibold text-surface-900 dark:text-surface-100">Maximum Earnings</h3>
               <p className="mt-2 text-surface-600 dark:text-surface-400">
