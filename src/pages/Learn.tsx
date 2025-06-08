@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import { BookOpen, Calculator, Users, Zap, Bitcoin, Cpu, HelpCircle, Eye } from 'lucide-react'
+import { BookOpen, Calculator, Users, Zap, Bitcoin, Cpu, HelpCircle, Eye, FileText, PenTool } from 'lucide-react'
 import { motion } from 'framer-motion'
 
 const Learn = () => {
@@ -16,6 +16,18 @@ const Learn = () => {
       description: "Estimate rough savings and earnings with our interactive tools",
       icon: Calculator,
       link: "/calculators"
+    },
+    {
+      title: "Documentation",
+      description: "Terms of service, contracts, payment processes, and hashrate splits",
+      icon: FileText,
+      link: "/docs"
+    },
+    {
+      title: "EXERGY Blog",
+      description: "Native insights and updates on hashrate heating technology",
+      icon: PenTool,
+      link: "/blog"
     },
     {
       title: "Technical Forum",
@@ -90,7 +102,7 @@ const Learn = () => {
         <h2 className="text-3xl font-bold text-surface-900 dark:text-surface-100 text-center mb-12">
           Learning Resources
         </h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {resources.map((resource, index) => (
             resource.external ? (
               <a
