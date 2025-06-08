@@ -113,7 +113,7 @@ const Home = () => {
                     Electronic Devices Convert Energy into Heat
                   </h3>
                   <p className="mt-2 text-base text-surface-500 dark:text-surface-400">
-                    Traditional electric heaters convert 100% of electricity into heat. It's non-negotiable. Thank the 1st Law of Thermodynamics
+                    Traditional electric heaters convert 100% of electricity into heat. It's non-negotiable. Thank the 1st Law of Thermodynamics.
                   </p>
                 </div>
               </div>
