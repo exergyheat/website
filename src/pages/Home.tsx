@@ -129,7 +129,7 @@ const Home = () => {
                     Bitcoin Miners Pay You for Hashing Bitcoin
                   </h3>
                   <p className="mt-2 text-base text-surface-500 dark:text-surface-400">
-                    Bitcoin miners perform computations that also convert 100% of electricity into heat. The difference? They earn rewards while heating.
+                    Bitcoin miners perform "hashing" operations that reward you for settling transactions and issuing coins.
                   </p>
                 </div>
               </div>
