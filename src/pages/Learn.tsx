@@ -24,7 +24,7 @@ const Learn = () => {
       link: "/docs"
     },
     {
-      title: "EXERGY Blog",
+      title: "Blog",
       description: "Native insights and updates on hashrate heating technology",
       icon: PenTool,
       link: "/blog"
