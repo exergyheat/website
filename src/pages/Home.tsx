@@ -196,9 +196,9 @@ const Home = () => {
               <div className="flex justify-center">
                 <Globe className="h-12 w-12 text-primary-600 dark:text-primary-400" />
               </div>
-              <h3 className="mt-4 text-xl font-semibold text-surface-900 dark:text-surface-100">Custom Solutions</h3>
+              <h3 className="mt-4 text-xl font-semibold text-surface-900 dark:text-surface-100">Custom Designed Solutions</h3>
               <p className="mt-2 text-surface-600 dark:text-surface-400">
-                Tailored heating solutions designed to meet your specific demand.
+                Whatever your heating needs, our custom designs and engineering expertise deliver the perfect fit.
               </p>
             </div>
 
