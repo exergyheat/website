@@ -206,7 +206,7 @@ const Home = () => {
               <div className="flex justify-center">
                 <Shield className="h-12 w-12 text-primary-600 dark:text-primary-400" />
               </div>
-              <h3 className="mt-4 text-xl font-semibold text-surface-900 dark:text-surface-100">Maximize Savings</h3>
+              <h3 className="mt-4 text-xl font-semibold text-surface-900 dark:text-surface-100">Maximum Earnings</h3>
               <p className="mt-2 text-surface-600 dark:text-surface-400">
                 Optimized devices that deliver the best bang for your buck.
               </p>
