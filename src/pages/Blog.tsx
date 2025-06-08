@@ -207,7 +207,7 @@ As these technologies mature and converge, we can expect heating systems to beco
         </div>
 
         {/* Article Image */}
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 mb-8">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 mt-8 mb-8">
           <img
             src={selectedPostData.image}
             alt={selectedPostData.title}
