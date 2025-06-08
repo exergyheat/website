@@ -142,7 +142,7 @@ const Home = () => {
                 </div>
                 <div className="ml-4">
                   <h3 className="text-lg font-medium text-surface-900 dark:text-surface-100">
-                    Same Heat + Bitcoin Rewards = Profit
+                    Heaters Powered By Bitcoin Give You Heat + Money
                   </h3>
                   <p className="mt-2 text-base text-surface-500 dark:text-surface-400">
                     By replacing traditional heaters with mining heaters, you get the same warmth plus bitcoin earnings, effectively reducing your heating costs.
