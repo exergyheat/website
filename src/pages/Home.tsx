@@ -293,7 +293,7 @@ const Home = () => {
                   </div>
                 </div>
                 <h3 className="text-xl font-semibold text-surface-900 dark:text-surface-100 mb-4 text-center">
-                  100% Energy Conversion
+                  Does it Heat The Same?
                 </h3>
                 <p className="text-surface-600 dark:text-surface-400 text-center">
                   All electrical energy used in mining is converted to heat, ensuring maximum efficiency.
