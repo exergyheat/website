@@ -186,7 +186,7 @@ const Home = () => {
               <div className="flex justify-center">
                 <Code className="h-12 w-12 text-primary-600 dark:text-primary-400" />
               </div>
-              <h3 className="mt-4 text-xl font-semibold text-surface-900 dark:text-surface-100">Custom Solutions</h3>
+              <h3 className="mt-4 text-xl font-semibold text-surface-900 dark:text-surface-100">Only The Best Hardware</h3>
               <p className="mt-2 text-surface-600 dark:text-surface-400">
                 Tailored heating solutions designed to meet your specific demand.
               </p>
@@ -196,9 +196,9 @@ const Home = () => {
               <div className="flex justify-center">
                 <Globe className="h-12 w-12 text-primary-600 dark:text-primary-400" />
               </div>
-              <h3 className="mt-4 text-xl font-semibold text-surface-900 dark:text-surface-100">Maximize Savings</h3>
+              <h3 className="mt-4 text-xl font-semibold text-surface-900 dark:text-surface-100">Custom Solutions</h3>
               <p className="mt-2 text-surface-600 dark:text-surface-400">
-                Optimized devices that deliver the best bang for your buck.
+                Tailored heating solutions designed to meet your specific demand.
               </p>
             </div>
 
@@ -206,9 +206,9 @@ const Home = () => {
               <div className="flex justify-center">
                 <Shield className="h-12 w-12 text-primary-600 dark:text-primary-400" />
               </div>
-              <h3 className="mt-4 text-xl font-semibold text-surface-900 dark:text-surface-100">Security First</h3>
+              <h3 className="mt-4 text-xl font-semibold text-surface-900 dark:text-surface-100">Maximize Savings</h3>
               <p className="mt-2 text-surface-600 dark:text-surface-400">
-                Enterprise-grade security to protect your business and data.
+                Optimized devices that deliver the best bang for your buck.
               </p>
             </div>
           </div>
