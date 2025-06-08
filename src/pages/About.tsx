@@ -413,56 +413,77 @@ const About = () => {
         </div>
       </div>
 
-      {/* Innovation Section */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-          <div>
-            <h2 className="text-3xl font-bold text-surface-900 dark:text-surface-100 mb-6">
-              Leading the Hashrate Heating Revolution
-            </h2>
-            <p className="text-lg text-surface-600 dark:text-surface-400 mb-6">
-              We're not just another HVAC company. We're pioneering a completely new approach to heating, combining the power of Bitcoin mining with innovative thermal solutions.
-            </p>
-            <div className="space-y-4">
-              <div className="flex items-start">
-                <div className="p-2 bg-primary-100 dark:bg-primary-900 rounded-lg mr-4">
-                  <Flame className="h-6 w-6 text-primary-600 dark:text-primary-400" />
-                </div>
-                <div>
-                  <h3 className="text-xl font-semibold text-surface-900 dark:text-surface-100">Exact Savings Analysis</h3>
-                  <p className="text-surface-600 dark:text-surface-400">Precise modeling of your energy consumption and potential savings.</p>
-                </div>
-              </div>
-              <div className="flex items-start">
-                <div className="p-2 bg-primary-100 dark:bg-primary-900 rounded-lg mr-4">
-                  <Cpu className="h-6 w-6 text-primary-600 dark:text-primary-400" />
-                </div>
-                <div>
-                  <h3 className="text-xl font-semibold text-surface-900 dark:text-surface-100">Expert System Design</h3>
-                  <p className="text-surface-600 dark:text-surface-400">Custom solutions tailored to your specific heating needs.</p>
+      {/* Book & Leadership Section */}
+      <div className="bg-white dark:bg-surface-800 py-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+            <div className="relative">
+              <div className="bg-surface-900 rounded-lg p-8">
+                <div className="max-w-sm">
+                  <Book className="h-12 w-12 text-primary-400 mb-4" />
+                  <h3 className="text-2xl font-bold text-white mb-4">Bitcoin Mining Heat Reuse</h3>
+                  <p className="text-surface-300 mb-6">
+                    The definitive guide to hashrate heating technology, written by our founder Tyler Stevens.
+                  </p>
+                  <div className="mb-24 sm:mb-0">
+                    <a
+                      href="https://braiins.com/books/bitcoin-mining-heat-reuse"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center justify-center px-6 py-3 bg-primary-600 text-white rounded-lg hover:bg-primary-700 transition-colors"
+                    >
+                      Get the Book
+                      <ArrowRight className="ml-2 h-5 w-5" />
+                    </a>
+                  </div>
                 </div>
               </div>
-              <div className="flex items-start">
-                <div className="p-2 bg-primary-100 dark:bg-primary-900 rounded-lg mr-4">
-                  <Bitcoin className="h-6 w-6 text-primary-600 dark:text-primary-400" />
-                </div>
-                <div>
-                  <h3 className="text-xl font-semibold text-surface-900 dark:text-surface-100">Revenue-Generating Heat</h3>
-                  <p className="text-surface-600 dark:text-surface-400">Turn your heating costs into a source of income.</p>
-                </div>
+              <div className="absolute bottom-4 sm:-bottom-6 right-4 sm:-right-6 bg-white dark:bg-surface-700 p-6 rounded-lg shadow-xl">
+                <p className="text-xl font-bold text-primary-600 dark:text-primary-400">#1</p>
+                <p className="text-surface-600 dark:text-surface-400">Industry Resource</p>
               </div>
+            </div>
+            <div className="relative flex justify-center">
+              <img
+                src="/BookCoverImage.png"
+                alt="Bitcoin Mining Heat Reuse Book Cover"
+                className="w-80 h-auto rounded-lg shadow-2xl transform rotate-6 hover:rotate-0 transition-transform duration-300"
+              />
             </div>
           </div>
-          <div className="relative">
-            <img
-              src="https://images.pexels.com/photos/8293778/pexels-photo-8293778.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
-              alt="Innovative Heating Solution"
-              className="rounded-lg shadow-2xl"
-            />
-            <div className="absolute -bottom-6 -right-6 bg-white dark:bg-surface-800 p-6 rounded-lg shadow-xl">
-              <p className="text-2xl font-bold text-primary-600 dark:text-primary-400">60-80%</p>
-              <p className="text-surface-600 dark:text-surface-400">Average Cost Savings</p>
+        </div>
+      </div>
+
+      {/* Technology Section */}
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+        <h2 className="text-3xl font-bold text-surface-900 dark:text-surface-100 text-center mb-12">Our Technology Stack</h2>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="bg-white dark:bg-surface-800 rounded-lg shadow-xl p-8 transform hover:scale-105 transition-transform">
+            <div className="flex justify-center">
+              <Bitcoin className="h-12 w-12 text-primary-600 dark:text-primary-400" />
             </div>
+            <h3 className="mt-4 text-xl font-semibold text-surface-900 dark:text-surface-100">Bitcoin Mining</h3>
+            <p className="mt-2 text-surface-600 dark:text-surface-400">
+              Utilizing the latest ASIC technology to generate both heat and revenue through Bitcoin mining.
+            </p>
+          </div>
+          <div className="bg-white dark:bg-surface-800 rounded-lg shadow-xl p-8 transform hover:scale-105 transition-transform">
+            <div className="flex justify-center">
+              <Cpu className="h-12 w-12 text-primary-600 dark:text-primary-400" />
+            </div>
+            <h3 className="mt-4 text-xl font-semibold text-surface-900 dark:text-surface-100">Smart Controls</h3>
+            <p className="mt-2 text-surface-600 dark:text-surface-400">
+              Advanced control systems for optimal performance and efficiency monitoring.
+            </p>
+          </div>
+          <div className="bg-white dark:bg-surface-800 rounded-lg shadow-xl p-8 transform hover:scale-105 transition-transform">
+            <div className="flex justify-center">
+              <Award className="h-12 w-12 text-primary-600 dark:text-primary-400" />
+            </div>
+            <h3 className="mt-4 text-xl font-semibold text-surface-900 dark:text-surface-100">Thermal Innovation</h3>
+            <p className="mt-2 text-surface-600 dark:text-surface-400">
+              Cutting-edge heat distribution and management technologies.
+            </p>
           </div>
         </div>
       </div>
@@ -569,47 +590,6 @@ const About = () => {
         </div>
       </div>
 
-      {/* Book & Leadership Section */}
-      <div className="bg-white dark:bg-surface-800 py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-            <div className="relative">
-              <div className="bg-surface-900 rounded-lg p-8">
-                <div className="max-w-sm">
-                  <Book className="h-12 w-12 text-primary-400 mb-4" />
-                  <h3 className="text-2xl font-bold text-white mb-4">Bitcoin Mining Heat Reuse</h3>
-                  <p className="text-surface-300 mb-6">
-                    The definitive guide to hashrate heating technology, written by our founder Tyler Stevens.
-                  </p>
-                  <div className="mb-24 sm:mb-0">
-                    <a
-                      href="https://braiins.com/books/bitcoin-mining-heat-reuse"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="inline-flex items-center justify-center px-6 py-3 bg-primary-600 text-white rounded-lg hover:bg-primary-700 transition-colors"
-                    >
-                      Get the Book
-                      <ArrowRight className="ml-2 h-5 w-5" />
-                    </a>
-                  </div>
-                </div>
-              </div>
-              <div className="absolute bottom-4 sm:-bottom-6 right-4 sm:-right-6 bg-white dark:bg-surface-700 p-6 rounded-lg shadow-xl">
-                <p className="text-xl font-bold text-primary-600 dark:text-primary-400">#1</p>
-                <p className="text-surface-600 dark:text-surface-400">Industry Resource</p>
-              </div>
-            </div>
-            <div className="relative flex justify-center">
-              <img
-                src="/BookCoverImage.png"
-                alt="Bitcoin Mining Heat Reuse Book Cover"
-                className="w-80 h-auto rounded-lg shadow-2xl transform rotate-6 hover:rotate-0 transition-transform duration-300"
-              />
-            </div>
-          </div>
-        </div>
-      </div>
-
       {/* Team Section */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
         <h2 className="text-3xl font-bold text-surface-900 dark:text-surface-100 text-center mb-12">Our Team</h2>
@@ -628,40 +608,6 @@ const About = () => {
               <p className="text-surface-600 dark:text-surface-400 text-center">{member.description}</p>
             </div>
           ))}
-        </div>
-      </div>
-
-      {/* Technology Section */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
-        <h2 className="text-3xl font-bold text-surface-900 dark:text-surface-100 text-center mb-12">Our Technology Stack</h2>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          <div className="bg-white dark:bg-surface-800 rounded-lg shadow-xl p-8 transform hover:scale-105 transition-transform">
-            <div className="flex justify-center">
-              <Bitcoin className="h-12 w-12 text-primary-600 dark:text-primary-400" />
-            </div>
-            <h3 className="mt-4 text-xl font-semibold text-surface-900 dark:text-surface-100">Bitcoin Mining</h3>
-            <p className="mt-2 text-surface-600 dark:text-surface-400">
-              Utilizing the latest ASIC technology to generate both heat and revenue through Bitcoin mining.
-            </p>
-          </div>
-          <div className="bg-white dark:bg-surface-800 rounded-lg shadow-xl p-8 transform hover:scale-105 transition-transform">
-            <div className="flex justify-center">
-              <Cpu className="h-12 w-12 text-primary-600 dark:text-primary-400" />
-            </div>
-            <h3 className="mt-4 text-xl font-semibold text-surface-900 dark:text-surface-100">Smart Controls</h3>
-            <p className="mt-2 text-surface-600 dark:text-surface-400">
-              Advanced control systems for optimal performance and efficiency monitoring.
-            </p>
-          </div>
-          <div className="bg-white dark:bg-surface-800 rounded-lg shadow-xl p-8 transform hover:scale-105 transition-transform">
-            <div className="flex justify-center">
-              <Award className="h-12 w-12 text-primary-600 dark:text-primary-400" />
-            </div>
-            <h3 className="mt-4 text-xl font-semibold text-surface-900 dark:text-surface-100">Thermal Innovation</h3>
-            <p className="mt-2 text-surface-600 dark:text-surface-400">
-              Cutting-edge heat distribution and management technologies.
-            </p>
-          </div>
         </div>
       </div>
 
