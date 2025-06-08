@@ -310,7 +310,7 @@ const Home = () => {
                   </div>
                 </div>
                 <h3 className="text-xl font-semibold text-surface-900 dark:text-surface-100 mb-4 text-center">
-                  Smart Integration
+                  Can I Control it Easily?
                 </h3>
                 <p className="text-surface-600 dark:text-surface-400 text-center">
                   Advanced systems capture and distribute heat while earning bitcoin rewards for your business.
