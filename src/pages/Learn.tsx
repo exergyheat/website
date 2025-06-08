@@ -1,9 +1,11 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import { BookOpen, Calculator, Users, Zap, Bitcoin, Cpu, HelpCircle, Eye, FileText, PenTool } from 'lucide-react'
+import { BookOpen, Calculator, Users, Zap, Bitcoin, Cpu, HelpCircle, Eye, FileText, PenTool, ArrowLeft, ArrowRight } from 'lucide-react'
 import { motion } from 'framer-motion'
 
 const Learn = () => {
+  const [currentApplicationIndex, setCurrentApplicationIndex] = React.useState(0)
+
   const resources = [
     {
       title: "Blog",
@@ -82,6 +84,85 @@ const Learn = () => {
       ]
     }
   ]
+
+  const applications = [
+    {
+      id: 'forced-air',
+      title: 'Forced Air Furnaces',
+      description: 'Replace or supplement your traditional furnace with hashrate heating. Perfect for whole-home heating with existing ductwork.',
+      image: 'https://images.pexels.com/photos/8293778/pexels-photo-8293778.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+      features: [
+        'Integrates with existing HVAC',
+        'Zoned temperature control',
+        'High-capacity heating',
+        'Smart thermostat compatible'
+      ]
+    },
+    {
+      id: 'space-heating',
+      title: 'Room Space Heating',
+      description: 'Standalone units for heating individual rooms, garages, workshops, or specific areas. Plug-and-play simplicity.',
+      image: 'https://images.pexels.com/photos/3850512/pexels-photo-3850512.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+      features: [
+        'Portable and flexible',
+        'Quiet operation',
+        'WiFi connectivity',
+        'Mobile app control'
+      ]
+    },
+    {
+      id: 'hydronic',
+      title: 'Hydronic Systems',
+      description: 'Water-based heating systems for radiators, baseboard heaters, and hot water supply. Seamless integration with existing plumbing.',
+      image: 'https://images.pexels.com/photos/8293769/pexels-photo-8293769.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+      features: [
+        'Boiler integration',
+        'Multiple zone control',
+        'Consistent heat distribution',
+        'Hot water generation'
+      ]
+    },
+    {
+      id: 'radiant-floor',
+      title: 'Radiant Floor Heating',
+      description: 'Underfloor heating systems that provide comfortable, even heat distribution throughout your space from the ground up.',
+      image: 'https://images.pexels.com/photos/1115804/pexels-photo-1115804.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+      features: [
+        'Even heat distribution',
+        'Energy efficient',
+        'Silent operation',
+        'Luxury comfort'
+      ]
+    },
+    {
+      id: 'pools-spas',
+      title: 'Pools & Hot Tubs',
+      description: 'Keep your pool and spa at the perfect temperature year-round while generating revenue from the heating process.',
+      image: 'https://images.pexels.com/photos/2132250/pexels-photo-2132250.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+      features: [
+        'Year-round swimming',
+        'Precise temperature control',
+        'Reduced heating costs',
+        'Extended swimming season'
+      ]
+    }
+  ]
+
+  React.useEffect(() => {
+    const timer = setInterval(() => {
+      setCurrentApplicationIndex((prevIndex) => (prevIndex + 1) % applications.length)
+    }, 5000)
+
+    return () => clearInterval(timer)
+  }, [])
+
+  const nextApplication = () => {
+    setCurrentApplicationIndex((prevIndex) => (prevIndex + 1) % applications.length)
+  }
+
+  const prevApplication = () => {
+    setCurrentApplicationIndex((prevIndex) => (prevIndex - 1 + applications.length) % applications.length)
+  }
 
   return (
     <div className="bg-surface-50 dark:bg-surface-900 min-h-screen">
@@ -209,6 +290,93 @@ const Learn = () => {
                 </div>
               </motion.div>
             ))}
+          </div>
+        </div>
+      </div>
+
+      {/* Example Applications Carousel */}
+      <div className="bg-surface-50 dark:bg-surface-900 py-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold text-surface-900 dark:text-surface-100 mb-4">Example Applications</h2>
+            <p className="text-xl text-surface-600 dark:text-surface-400">
+              Discover the versatility of hashrate heating across different applications
+            </p>
+          </div>
+
+          <div className="relative">
+            <div className="overflow-hidden">
+              <div 
+                className="flex transition-transform duration-500 ease-in-out"
+                style={{ transform: `translateX(-${currentApplicationIndex * 100}%)` }}
+              >
+                {applications.map((application) => (
+                  <div key={application.id} className="w-full flex-shrink-0">
+                    <div className="mx-4">
+                      <div className="bg-white dark:bg-surface-800 rounded-lg overflow-hidden shadow-xl">
+                        <div className="relative h-96">
+                          <img
+                            src={application.image}
+                            alt={application.title}
+                            className="w-full h-full object-cover"
+                          />
+                          {/* Blue filter overlay */}
+                          <div 
+                            className="absolute inset-0"
+                            style={{
+                              backgroundColor: 'rgba(47, 59, 105, 0.4)',
+                              mixBlendMode: 'overlay'
+                            }}
+                          />
+                          <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
+                          <div className="absolute bottom-0 left-0 right-0 p-6 text-white">
+                            <h3 className="text-2xl font-bold mb-2">{application.title}</h3>
+                            <p className="text-lg text-surface-100 mb-4">{application.description}</p>
+                            <div className="grid grid-cols-2 gap-2">
+                              {application.features.map((feature, index) => (
+                                <div key={index} className="flex items-center text-sm text-surface-200">
+                                  <div className="h-1.5 w-1.5 bg-primary-400 rounded-full mr-2" />
+                                  {feature}
+                                </div>
+                              ))}
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* Navigation Buttons */}
+            <button
+              onClick={prevApplication}
+              className="absolute left-0 top-1/2 transform -translate-y-1/2 -translate-x-4 bg-white dark:bg-surface-800 p-2 rounded-full shadow-lg hover:bg-surface-100 dark:hover:bg-surface-700 transition-colors"
+            >
+              <ArrowLeft className="h-6 w-6 text-surface-900 dark:text-surface-100" />
+            </button>
+            <button
+              onClick={nextApplication}
+              className="absolute right-0 top-1/2 transform -translate-y-1/2 translate-x-4 bg-white dark:bg-surface-800 p-2 rounded-full shadow-lg hover:bg-surface-100 dark:hover:bg-surface-700 transition-colors"
+            >
+              <ArrowRight className="h-6 w-6 text-surface-900 dark:text-surface-100" />
+            </button>
+
+            {/* Carousel Indicators */}
+            <div className="flex justify-center mt-8 space-x-2">
+              {applications.map((_, index) => (
+                <button
+                  key={index}
+                  onClick={() => setCurrentApplicationIndex(index)}
+                  className={`w-3 h-3 rounded-full transition-colors ${
+                    index === currentApplicationIndex
+                      ? 'bg-primary-600'
+                      : 'bg-surface-300 dark:bg-surface-600'
+                  }`}
+                />
+              ))}
+            </div>
           </div>
         </div>
       </div>
