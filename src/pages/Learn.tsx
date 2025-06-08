@@ -42,7 +42,6 @@ const Learn = () => {
       link: "https://heatpunks.org",
       external: true
     }
-
   ]
 
   const concepts = [
