@@ -174,7 +174,7 @@ const Products = () => {
               Our Favorite Products
             </h1>
             <p className="text-xl text-primary-100 max-w-2xl mx-auto">
-              Explore the best hardware - from plug and play to integrated systems
+              We've got what you need - from plug and play to integrated systems
             </p>
           </div>
         </div>
