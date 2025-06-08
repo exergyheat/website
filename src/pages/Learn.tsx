@@ -12,7 +12,7 @@ const Learn = () => {
       link: "/blog"
     },
     {
-      title: "Content",
+      title: "Education",
       description: "Educate yourself with hashrate heating blog posts, videos, guides, tutorials and more",
       icon: BookOpen,
       link: "/education"
