@@ -174,7 +174,7 @@ const Products = () => {
               Our Favorite Products
             </h1>
             <p className="text-xl text-primary-100 max-w-2xl mx-auto">
-              Explore plug-and-play space heaters, air and water heating systems, and smart control devices — all curated for you
+              Explore the best hashrate heating hardware - from plug and play to integrated systems
             </p>
           </div>
         </div>
