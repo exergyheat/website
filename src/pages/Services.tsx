@@ -390,7 +390,7 @@ const Services = () => {
               Expert Hashrate Heating Services
             </h1>
             <p className="text-xl text-primary-100 max-w-2xl mx-auto">
-              From concept to implementation, we’ll help you harness hashrate heating for maximum efficiency and rewards
+              From concept to implementation, we’ll help you harness Hashrate Heating
             </p>
           </div>
         </div>
