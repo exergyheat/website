@@ -71,7 +71,7 @@ const Home = () => {
           <div className="text-center mb-16">
             <h2 className="text-3xl font-bold text-surface-900 dark:text-surface-100 mb-4">Too Good to Be True?</h2>
             <p className="text-xl text-surface-600 dark:text-surface-400 max-w-2xl mx-auto">
-              Here's How it Works
+              Nope. Here's How it Works
             </p>
           </div>
 
