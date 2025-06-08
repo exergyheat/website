@@ -45,6 +45,9 @@ const Footer = () => {
             <Link to="/learn" className="text-lg font-semibold mb-4 text-surface-100 hover:text-surface-200 transition-colors">Learn</Link>
             <ul className="space-y-2 mt-4">
               <li>
+                <Link to="/blog" className="text-surface-400 hover:text-surface-200 transition-colors">Blog</Link>
+              </li>
+              <li>
                 <Link to="/calculators" className="text-surface-400 hover:text-surface-200 transition-colors">Calculators</Link>
               </li>
               <li>
@@ -53,9 +56,7 @@ const Footer = () => {
               <li>
                 <Link to="/docs" className="text-surface-400 hover:text-surface-200 transition-colors">Documentation</Link>
               </li>
-              <li>
-                <Link to="/blog" className="text-surface-400 hover:text-surface-200 transition-colors">Blog</Link>
-              </li>
+
               <li>
                 <a 
                   href="https://heatpunks.org" 
