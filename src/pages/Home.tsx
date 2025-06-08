@@ -296,7 +296,7 @@ const Home = () => {
                   Does it Heat The Same?
                 </h3>
                 <p className="text-surface-600 dark:text-surface-400 text-center">
-                  Yes! Bitcoin miners deliver low-grade heat that can meet all comfort heating needs. For industrial applications, it depends.
+                  Yes! Hashrate heaters deliver low-grade heat that can meet all comfort heating needs. For industrial applications, it depends.
                 </p>
               </div>
             </motion.div>
