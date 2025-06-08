@@ -177,7 +177,7 @@ const Home = () => {
           <div className="text-center">
             <h2 className="text-3xl font-bold text-surface-900 dark:text-surface-100 mb-4">Why Choose Us</h2>
             <p className="text-xl text-surface-600 dark:text-surface-400 max-w-2xl mx-auto">
-              We're experts in an emerging industry. In fact, we wrote the book on it.
+              We're experts in an emerging industry - in fact, we wrote the book on it
             </p>
           </div>
 
