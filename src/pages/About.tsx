@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { Book, Users, Award, Cpu, Flame, Bitcoin, ArrowRight, Target, Lightbulb, FileText, BarChart as ChartBar, Wrench, CheckCircle2, Mail, X, Zap, Network, Package, Monitor } from 'lucide-react'
+import { Book, Users, Award, Cpu, Flame, Bitcoin, ArrowRight, Target, Lightbulb, FileText, BarChart as ChartBar, Wrench, CheckCircle2, Mail, X, Zap, Network, Package, Monitor, BookOpen, Megaphone, Hammer } from 'lucide-react'
 import { Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
 
@@ -412,40 +412,6 @@ const About = () => {
           </motion.div>
         </div>
       </div>
-
-      {/* Technology Section */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
-        <h2 className="text-3xl font-bold text-surface-900 dark:text-surface-100 text-center mb-12">Our Expertise</h2>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          <div className="bg-white dark:bg-surface-800 rounded-lg shadow-xl p-8 transform hover:scale-105 transition-transform">
-            <div className="flex justify-center">
-              <Bitcoin className="h-12 w-12 text-primary-600 dark:text-primary-400" />
-            </div>
-            <h3 className="mt-4 text-xl font-semibold text-surface-900 dark:text-surface-100">Industry Leader</h3>
-            <p className="mt-2 text-surface-600 dark:text-surface-400">
-              Our CEO wrote the first comprehensive book on hashrate heating - Examaning why this technology matters, who can benefit, how to implement it, and provides insights into potential savings.
-            </p>
-          </div>
-          <div className="bg-white dark:bg-surface-800 rounded-lg shadow-xl p-8 transform hover:scale-105 transition-transform">
-            <div className="flex justify-center">
-              <Cpu className="h-12 w-12 text-primary-600 dark:text-primary-400" />
-            </div>
-            <h3 className="mt-4 text-xl font-semibold text-surface-900 dark:text-surface-100">Community Builders</h3>
-            <p className="mt-2 text-surface-600 dark:text-surface-400">
-              Our Founders host Undermine, the annual Heatpunk Summit - A first of its kind conference dedicated exclusively to hashrate heating, covering technical developments to tradesmen education. 
-            </p>
-          </div>
-          <div className="bg-white dark:bg-surface-800 rounded-lg shadow-xl p-8 transform hover:scale-105 transition-transform">
-            <div className="flex justify-center">
-              <Award className="h-12 w-12 text-primary-600 dark:text-primary-400" />
-            </div>
-            <h3 className="mt-4 text-xl font-semibold text-surface-900 dark:text-surface-100">Engineers at Heart</h3>
-            <p className="mt-2 text-surface-600 dark:text-surface-400">
-              Our experience encompasses thermal engineering, structural engineering, licensed professional certifications and skilled startup building with an entreprenueal spirit.
-            </p>
-          </div>
-        </div>
-      </div>
       
       {/* Book & Leadership Section */}
       <div className="bg-white dark:bg-surface-800 py-20">
@@ -484,6 +450,40 @@ const About = () => {
                 className="w-80 h-auto rounded-lg shadow-2xl transform rotate-6 hover:rotate-0 transition-transform duration-300"
               />
             </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Technology Section */}
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+        <h2 className="text-3xl font-bold text-surface-900 dark:text-surface-100 text-center mb-12">Our Expertise</h2>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="bg-white dark:bg-surface-800 rounded-lg shadow-xl p-8 transform hover:scale-105 transition-transform">
+            <div className="flex justify-center">
+              <BookOpen className="h-12 w-12 text-primary-600 dark:text-primary-400" />
+            </div>
+            <h3 className="mt-4 text-xl font-semibold text-surface-900 dark:text-surface-100">Industry Leader</h3>
+            <p className="mt-2 text-surface-600 dark:text-surface-400">
+              Our CEO wrote the first comprehensive book on hashrate heating - Examaning why this technology matters, who can benefit, how to implement it, and provides insights into potential savings.
+            </p>
+          </div>
+          <div className="bg-white dark:bg-surface-800 rounded-lg shadow-xl p-8 transform hover:scale-105 transition-transform">
+            <div className="flex justify-center">
+              <Megaphone className="h-12 w-12 text-primary-600 dark:text-primary-400" />
+            </div>
+            <h3 className="mt-4 text-xl font-semibold text-surface-900 dark:text-surface-100">Community Builders</h3>
+            <p className="mt-2 text-surface-600 dark:text-surface-400">
+              Our Founders host Undermine, the annual Heatpunk Summit - A first of its kind conference dedicated exclusively to hashrate heating, covering technical developments to tradesmen education. 
+            </p>
+          </div>
+          <div className="bg-white dark:bg-surface-800 rounded-lg shadow-xl p-8 transform hover:scale-105 transition-transform">
+            <div className="flex justify-center">
+              <Hammer className="h-12 w-12 text-primary-600 dark:text-primary-400" />
+            </div>
+            <h3 className="mt-4 text-xl font-semibold text-surface-900 dark:text-surface-100">Engineers at Heart</h3>
+            <p className="mt-2 text-surface-600 dark:text-surface-400">
+              Our experience encompasses thermal engineering, structural engineering, licensed professional certifications and skilled startup building with an entreprenueal spirit.
+            </p>
           </div>
         </div>
       </div>
