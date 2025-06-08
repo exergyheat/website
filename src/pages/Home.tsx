@@ -208,7 +208,7 @@ const Home = () => {
               </div>
               <h3 className="mt-4 text-xl font-semibold text-surface-900 dark:text-surface-100">Maximum Earnings</h3>
               <p className="mt-2 text-surface-600 dark:text-surface-400">
-                Optimized devices that deliver the best bang for your buck.
+                Our advanced analysis software aligns mining power with heat demand for maximum profitability.
               </p>
             </div>
           </div>
