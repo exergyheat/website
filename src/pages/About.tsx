@@ -441,7 +441,7 @@ const About = () => {
             </div>
             <h3 className="mt-4 text-xl font-semibold text-surface-900 dark:text-surface-100">Engineers at Heart</h3>
             <p className="mt-2 text-surface-600 dark:text-surface-400">
-              Our team consists of thermal engineers, licensed professional engineers, and skilled product builders with an entreprenueal spirit.
+              Our experience encompasses thermal engineering, structural engineering, licensed professional certifications and skilled startup building with an entreprenueal spirit.
             </p>
           </div>
         </div>
