@@ -276,7 +276,7 @@ const Home = () => {
                   Why Bitcoin?
                 </h3>
                 <p className="text-surface-600 dark:text-surface-400 text-center">
-                  Specialized computers that perform one task: mining bitcoin and generating heat as a byproduct.
+                  Bitcoin is a digitally native money. It's a neutral protocol - free an open for anyone to use - with no controlling authority.
                 </p>
               </div>
             </motion.div>
