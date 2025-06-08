@@ -186,7 +186,7 @@ const Home = () => {
               <div className="flex justify-center">
                 <Code className="h-12 w-12 text-primary-600 dark:text-primary-400" />
               </div>
-              <h3 className="mt-4 text-xl font-semibold text-surface-900 dark:text-surface-100">Only The Best Hardware</h3>
+              <h3 className="mt-4 text-xl font-semibold text-surface-900 dark:text-surface-100">Best-in-Class Hardware</h3>
               <p className="mt-2 text-surface-600 dark:text-surface-400">
                 All miners create heat. But not all miners are good for heating. We know exactly what's good for what applications.
               </p>
