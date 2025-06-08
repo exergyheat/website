@@ -78,7 +78,7 @@ const ProjectCarousel = () => {
     <div className="bg-white dark:bg-surface-800 py-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
-          <h2 className="text-3xl font-bold text-surface-900 dark:text-surface-100 mb-4">Featured Projects</h2>
+          <h2 className="text-3xl font-bold text-surface-900 dark:text-surface-100 mb-4">See it in Action</h2>
           <p className="text-xl text-surface-600 dark:text-surface-400">
             Explore our successful implementations across various industries
           </p>

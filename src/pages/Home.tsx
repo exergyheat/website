@@ -1,5 +1,5 @@
 import React from 'react'
-import { ArrowRight, Code, Globe, Shield, Bitcoin, Cpu, Flame, ArrowRightCircle } from 'lucide-react'
+import { ArrowRight, Code, Globe, Shield, Bitcoin, Cpu, Flame, ArrowRightCircle, CheckCircle, DollarSign, Zap } from 'lucide-react'
 import { Link } from 'react-router-dom'
 import { useTypewriter } from '../hooks/useTypewriter'
 import ProjectCarousel from '../components/ProjectCarousel'
@@ -65,95 +65,89 @@ const Home = () => {
         </div>
       </div>
 
-      {/* How it Works Section */}
+      {/* Too Good to Be True Section */}
       <div className="py-20 bg-white dark:bg-surface-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-3xl font-bold text-surface-900 dark:text-surface-100 mb-4">The Technology</h2>
+            <h2 className="text-3xl font-bold text-surface-900 dark:text-surface-100 mb-4">Too Good to Be True?</h2>
             <p className="text-xl text-surface-600 dark:text-surface-400 max-w-2xl mx-auto">
-              Transform your heating infrastructure into a revenue-generating asset
+              Here's How it Works
             </p>
           </div>
 
-          <motion.div 
-            className="grid grid-cols-1 md:grid-cols-3 gap-8"
-            variants={containerVariants}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, margin: "-100px" }}
-          >
-            {/* Step 1: Bitcoin Miners */}
-            <motion.div className="relative group" variants={cardVariants}>
-              <div className="bg-surface-50 dark:bg-surface-700 rounded-lg p-8 h-full transform transition-transform group-hover:scale-105">
-                <div className="absolute -right-4 top-1/2 transform -translate-y-1/2 z-10 hidden md:block">
-                  <ArrowRightCircle className="h-8 w-8 text-primary-600 dark:text-primary-400" />
-                </div>
-                <div className="flex justify-center mb-6">
-                  <div className="p-4 bg-primary-100 dark:bg-primary-900 rounded-full">
-                    <Bitcoin className="h-12 w-12 text-primary-600 dark:text-primary-400" />
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+            <div className="space-y-8">
+              <div className="flex items-start">
+                <div className="flex-shrink-0">
+                  <div className="flex items-center justify-center h-12 w-12 rounded-md bg-primary-500 text-white">
+                    <Zap className="h-6 w-6" />
                   </div>
                 </div>
-                <h3 className="text-xl font-semibold text-surface-900 dark:text-surface-100 mb-4 text-center">
-                  Bitcoin Miners
-                </h3>
-                <p className="text-surface-600 dark:text-surface-400 text-center">
-                  Specialized computers that perform one task: mining bitcoin and generating heat as a byproduct.
-                </p>
-              </div>
-            </motion.div>
-
-            {/* Step 2: Energy Conversion */}
-            <motion.div className="relative group" variants={cardVariants}>
-              <div className="bg-surface-50 dark:bg-surface-700 rounded-lg p-8 h-full transform transition-transform group-hover:scale-105">
-                <div className="absolute -right-4 top-1/2 transform -translate-y-1/2 z-10 hidden md:block">
-                  <ArrowRightCircle className="h-8 w-8 text-primary-600 dark:text-primary-400" />
+                <div className="ml-4">
+                  <h3 className="text-lg font-medium text-surface-900 dark:text-surface-100">
+                    Electric Heaters Use 100% of Energy as Heat
+                  </h3>
+                  <p className="mt-2 text-base text-surface-500 dark:text-surface-400">
+                    Traditional electric heaters convert 100% of electricity into heat. No energy is wasted - it all becomes warmth for your space.
+                  </p>
                 </div>
-                <div className="flex justify-center mb-6">
-                  <div className="p-4 bg-primary-100 dark:bg-primary-900 rounded-full">
-                    <Flame className="h-12 w-12 text-primary-600 dark:text-primary-400" />
+              </div>
+
+              <div className="flex items-start">
+                <div className="flex-shrink-0">
+                  <div className="flex items-center justify-center h-12 w-12 rounded-md bg-primary-500 text-white">
+                    <Bitcoin className="h-6 w-6" />
                   </div>
                 </div>
-                <h3 className="text-xl font-semibold text-surface-900 dark:text-surface-100 mb-4 text-center">
-                  100% Energy Conversion
-                </h3>
-                <p className="text-surface-600 dark:text-surface-400 text-center">
-                  All electrical energy used in mining is converted to heat, ensuring maximum efficiency.
-                </p>
+                <div className="ml-4">
+                  <h3 className="text-lg font-medium text-surface-900 dark:text-surface-100">
+                    Bitcoin Miners Also Use 100% of Energy as Heat
+                  </h3>
+                  <p className="mt-2 text-base text-surface-500 dark:text-surface-400">
+                    Bitcoin miners perform computations that also convert 100% of electricity into heat. The difference? They earn rewards while heating.
+                  </p>
+                </div>
               </div>
-            </motion.div>
 
-            {/* Step 3: Smart Integration */}
-            <motion.div className="group" variants={cardVariants}>
-              <div className="bg-surface-50 dark:bg-surface-700 rounded-lg p-8 h-full transform transition-transform group-hover:scale-105">
-                <div className="flex justify-center mb-6">
-                  <div className="p-4 bg-primary-100 dark:bg-primary-900 rounded-full">
-                    <Cpu className="h-12 w-12 text-primary-600 dark:text-primary-400" />
+              <div className="flex items-start">
+                <div className="flex-shrink-0">
+                  <div className="flex items-center justify-center h-12 w-12 rounded-md bg-primary-500 text-white">
+                    <DollarSign className="h-6 w-6" />
                   </div>
                 </div>
-                <h3 className="text-xl font-semibold text-surface-900 dark:text-surface-100 mb-4 text-center">
-                  Smart Integration
-                </h3>
-                <p className="text-surface-600 dark:text-surface-400 text-center">
-                  Advanced systems capture and distribute heat while earning bitcoin rewards for your business.
-                </p>
+                <div className="ml-4">
+                  <h3 className="text-lg font-medium text-surface-900 dark:text-surface-100">
+                    Same Heat + Bitcoin Rewards = Profit
+                  </h3>
+                  <p className="mt-2 text-base text-surface-500 dark:text-surface-400">
+                    By replacing traditional heaters with mining heaters, you get the same warmth plus bitcoin earnings, effectively reducing your heating costs.
+                  </p>
+                </div>
               </div>
-            </motion.div>
-          </motion.div>
+            </div>
 
-          <div className="mt-12 text-center">
-            <Link
-              to="/learn"
-              className="inline-flex items-center px-6 py-3 bg-primary-600 text-white rounded-lg hover:bg-primary-700 transition-colors"
-            >
-              About Hashrate Heating
-              <ArrowRight className="ml-2 h-5 w-5" />
-            </Link>
+            <div className="relative">
+              <img
+                src="https://images.pexels.com/photos/8293778/pexels-photo-8293778.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+                alt="Hashrate heating technology"
+                className="rounded-lg shadow-2xl"
+              />
+              <div className="absolute -bottom-6 -right-6 bg-white dark:bg-surface-800 p-6 rounded-lg shadow-xl">
+                <p className="text-2xl font-bold text-primary-600 dark:text-primary-400">100%</p>
+                <p className="text-surface-600 dark:text-surface-400">Energy Efficiency</p>
+              </div>
+            </div>
           </div>
         </div>
       </div>
 
-      {/* Features Section */}
-      <div className="py-20">
+      {/* See it in Action Section (Project Carousel) */}
+      <div className="bg-surface-50 dark:bg-surface-900">
+        <ProjectCarousel />
+      </div>
+
+      {/* Why Choose Us Section */}
+      <div className="py-20 bg-white dark:bg-surface-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <h2 className="text-3xl font-bold text-surface-900 dark:text-surface-100 mb-4">Why Choose Us</h2>
@@ -206,8 +200,92 @@ const Home = () => {
         </div>
       </div>
 
-      {/* Project Carousel */}
-      <ProjectCarousel />
+      {/* The Technology Section */}
+      <div className="py-20 bg-surface-50 dark:bg-surface-900">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl font-bold text-surface-900 dark:text-surface-100 mb-4">The Technology</h2>
+            <p className="text-xl text-surface-600 dark:text-surface-400 max-w-2xl mx-auto">
+              Transform your heating infrastructure into a revenue-generating asset
+            </p>
+          </div>
+
+          <motion.div 
+            className="grid grid-cols-1 md:grid-cols-3 gap-8"
+            variants={containerVariants}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, margin: "-100px" }}
+          >
+            {/* Step 1: Bitcoin Miners */}
+            <motion.div className="relative group" variants={cardVariants}>
+              <div className="bg-white dark:bg-surface-800 rounded-lg p-8 h-full transform transition-transform group-hover:scale-105 shadow-lg">
+                <div className="absolute -right-4 top-1/2 transform -translate-y-1/2 z-10 hidden md:block">
+                  <ArrowRightCircle className="h-8 w-8 text-primary-600 dark:text-primary-400" />
+                </div>
+                <div className="flex justify-center mb-6">
+                  <div className="p-4 bg-primary-100 dark:bg-primary-900 rounded-full">
+                    <Bitcoin className="h-12 w-12 text-primary-600 dark:text-primary-400" />
+                  </div>
+                </div>
+                <h3 className="text-xl font-semibold text-surface-900 dark:text-surface-100 mb-4 text-center">
+                  Bitcoin Miners
+                </h3>
+                <p className="text-surface-600 dark:text-surface-400 text-center">
+                  Specialized computers that perform one task: mining bitcoin and generating heat as a byproduct.
+                </p>
+              </div>
+            </motion.div>
+
+            {/* Step 2: Energy Conversion */}
+            <motion.div className="relative group" variants={cardVariants}>
+              <div className="bg-white dark:bg-surface-800 rounded-lg p-8 h-full transform transition-transform group-hover:scale-105 shadow-lg">
+                <div className="absolute -right-4 top-1/2 transform -translate-y-1/2 z-10 hidden md:block">
+                  <ArrowRightCircle className="h-8 w-8 text-primary-600 dark:text-primary-400" />
+                </div>
+                <div className="flex justify-center mb-6">
+                  <div className="p-4 bg-primary-100 dark:bg-primary-900 rounded-full">
+                    <Flame className="h-12 w-12 text-primary-600 dark:text-primary-400" />
+                  </div>
+                </div>
+                <h3 className="text-xl font-semibold text-surface-900 dark:text-surface-100 mb-4 text-center">
+                  100% Energy Conversion
+                </h3>
+                <p className="text-surface-600 dark:text-surface-400 text-center">
+                  All electrical energy used in mining is converted to heat, ensuring maximum efficiency.
+                </p>
+              </div>
+            </motion.div>
+
+            {/* Step 3: Smart Integration */}
+            <motion.div className="group" variants={cardVariants}>
+              <div className="bg-white dark:bg-surface-800 rounded-lg p-8 h-full transform transition-transform group-hover:scale-105 shadow-lg">
+                <div className="flex justify-center mb-6">
+                  <div className="p-4 bg-primary-100 dark:bg-primary-900 rounded-full">
+                    <Cpu className="h-12 w-12 text-primary-600 dark:text-primary-400" />
+                  </div>
+                </div>
+                <h3 className="text-xl font-semibold text-surface-900 dark:text-surface-100 mb-4 text-center">
+                  Smart Integration
+                </h3>
+                <p className="text-surface-600 dark:text-surface-400 text-center">
+                  Advanced systems capture and distribute heat while earning bitcoin rewards for your business.
+                </p>
+              </div>
+            </motion.div>
+          </motion.div>
+
+          <div className="mt-12 text-center">
+            <Link
+              to="/learn"
+              className="inline-flex items-center px-6 py-3 bg-primary-600 text-white rounded-lg hover:bg-primary-700 transition-colors"
+            >
+              About Hashrate Heating
+              <ArrowRight className="ml-2 h-5 w-5" />
+            </Link>
+          </div>
+        </div>
+      </div>
 
       {/* CTA Section */}
       <div className="relative bg-primary-600 py-16 overflow-hidden">
