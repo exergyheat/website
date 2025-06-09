@@ -56,7 +56,7 @@ const FAQ = () => {
         },
         {
           q: "Does it cut my heating bills? Or just pay me to offset them?",
-          a: "Many jurisdictions offer tax incentives for energy-efficient heating solutions. We recommend consulting with a tax professional for specific advice."
+          a: "Hashrate heating devices and systems are revenue generating assets with an upfront cost. You can look at the earnings two ways: As a rebate to sunk costs, where the rewards are used each month to lower (or even eliminate) your heating bills. Or as consistent passive revenue, where the earnings are held for long term while you pay the electric heating bill. Holding the bitcoin is the smart move, as it appreciates in value due to its fixed supply."
         },
         {
           q: "Will my monthly bill increase or decrease?",
