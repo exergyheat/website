@@ -105,9 +105,9 @@ const Learn = () => {
       image: 'https://images.pexels.com/photos/8293778/pexels-photo-8293778.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
       features: [
         'Integrates with existing HVAC',
-        'Zoned temperature control',
-        'High-capacity heating',
-        'Smart thermostat compatible'
+        'Optimized temperature control',
+        'Smart thermostat connectivity',
+        'Completely hidden passive income'
       ]
     },
     {
