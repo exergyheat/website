@@ -50,7 +50,7 @@ const Learn = () => {
     {
       title: "Electricity In - Heat Out",
       icon: Zap,
-      description: "Electric heaters and Bitcoin miners consume the same energy to produce heat. The key difference? Bitcoin miners reward you for supporting the network while heating your space.",
+      description: "Electric heaters convert power into heat with no waste. They're efficient and reliable. The problem is that electricity is typically more expensive than gas heating fuels.",
       image: "https://images.pexels.com/photos/8293778/pexels-photo-8293778.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
       details: [
         "100% energy conversion efficiency",
