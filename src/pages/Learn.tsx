@@ -140,10 +140,10 @@ const Learn = () => {
       description: 'Commercial and industrial heating systems for businesses with low-grade heating applications.',
       image: 'https://images.pexels.com/photos/8293769/pexels-photo-8293769.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
       features: [
-        'Boiler integration',
-        'Multiple zone control',
-        'Consistent heat distribution',
-        'Hot water generation'
+        'Breweries & distilleries',
+        'Commercial boilers',
+        'Apartments and large warehouses',
+        'District heating'
       ]
     }
   ]
