@@ -9,7 +9,7 @@ const Learn = () => {
   const resources = [
     {
       title: "Blog",
-      description: "Native insights and updates on hashrate heating technology",
+      description: "Company updates and insights on the hashrate heating industry",
       icon: PenTool,
       link: "/blog"
     },
