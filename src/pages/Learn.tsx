@@ -80,7 +80,7 @@ const Learn = () => {
         "Intelligent heat distribution",
         "Real-time monitoring",
         "Adaptive performance",
-        "Optimized efficiency"
+        "Win-Win. Heat + money at no extra cost."
       ]
     }
   ]
