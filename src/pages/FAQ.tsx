@@ -23,7 +23,7 @@ const FAQ = () => {
           a: "No, hashrate heating is the most efficient possibly way to heat. It converts electricity into heat plus bitcoin with 100% efficiency and zero local emissions."
         },
         {
-          q: "Why Bitcoin? What about other cryptocurrencies?",
+          q: "Why bitcoin? What about other cryptocurrencies?",
           a: "No, hashrate heating is the most efficient possibly way to heat. It converts electricity into heat plus bitcoin with 100% efficiency and zero local emissions."
         }
       ]
