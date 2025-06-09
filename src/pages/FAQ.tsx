@@ -42,7 +42,7 @@ const FAQ = () => {
         },
         {
           q: "What's the installation process?",
-          a: "Installation is handled by our certified technicians and typically takes 1-2 days, including system setup and integration with existing infrastructure."
+          a: "Installation is much different that traditional heating systems. The ins and outs are all the same. Cold and Hot sides for heat, electricity for heating power, and one new connection - internet, so the hashrate heater can communicate with the rest of the network and earn rewards."
         }
       ]
     },
