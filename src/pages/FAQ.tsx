@@ -52,7 +52,7 @@ const FAQ = () => {
       questions: [
         {
           q: "What's the typical ROI period?",
-          a: "The return on investment period typically ranges from 18-24 months, depending on factors like energy costs and cryptocurrency market conditions."
+          a: "The return on investment period typically ranges from 18-24 months, depending on factors like energy costs and bitcoin market conditions. The largest contributing factor to ROI period is whether you hold the bitcoin earned, or sell it to offset heating costs."
         },
         {
           q: "Does it cut my heating bills? Or just pay me to offset them?",
