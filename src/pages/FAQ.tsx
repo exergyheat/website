@@ -24,7 +24,7 @@ const FAQ = () => {
         },
         {
           q: "Why bitcoin? What about other cryptocurrencies?",
-          a: "No, hashrate heating is the most efficient possibly way to heat. It converts electricity into heat plus bitcoin with 100% efficiency and zero local emissions."
+          a: "Bitcoin is neutral, because no one controls it. Bitcoin is ethical, because mining (heater) rewards are proportional to how much energy you contribute. Bitcoin is accessible, because it's free and open source - anyone can audit the code."
         }
       ]
     },
