@@ -135,8 +135,8 @@ const Learn = () => {
       ]
     },
     {
-      id: 'hydronic',
-      title: 'Hydronic Systems',
+      id: 'Industrial',
+      title: 'Industrial Systems',
       description: 'Water-based heating systems for radiators, baseboard heaters, and hot water supply. Seamless integration with existing plumbing.',
       image: 'https://images.pexels.com/photos/8293769/pexels-photo-8293769.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
       features: [
