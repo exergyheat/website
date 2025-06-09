@@ -38,7 +38,7 @@ const FAQ = () => {
         },
         {
           q: "How loud are the systems?",
-          a: "Our systems are designed with noise reduction in mind and typically operate at noise levels similar to a standard home heating system."
+          a: "Our air based systems are designed with noise reduction in mind and typically operate at noise levels similar to a standard forced air heating system. Liquid based systems are effectively silent."
         },
         {
           q: "What's the installation process?",
