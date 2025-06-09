@@ -283,7 +283,7 @@ const About = () => {
 
   const roadmap = [
     {
-      quarter: 'Q3 2025',
+      quarter: 'Q2 2025',
       title: 'Launch & Growth',
       events: [
         'Official company launch',
