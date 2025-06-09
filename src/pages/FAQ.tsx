@@ -19,8 +19,8 @@ const FAQ = () => {
           a: "It saves money by offsetting heating costs with bitcoin mining rewards (which can be converted to local fiat currencies), essentially making your heating system generate income while providing warmth."
         },
         {
-          q: "Is it environmentally friendly?",
-          a: "Yes, hashrate heating is environmentally friendly as it utilizes the heat that would otherwise be wasted in traditional cryptocurrency mining operations."
+          q: "Is it bad for the environment?",
+          a: "No, hashrate heating is the most efficient possibly way to heat. It converts electricity into heat plus bitcoin with 100% efficiency and zero local emissions."
         }
       ]
     },
