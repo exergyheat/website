@@ -27,7 +27,7 @@ const Learn = () => {
     },
     {
       title: "Documentation",
-      description: "Terms of service, contracts, payment processes, and hashrate splits",
+      description: "Terms of service, contracts, payment processes, and more",
       icon: FileText,
       link: "/docs"
     },
