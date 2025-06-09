@@ -111,6 +111,18 @@ const Learn = () => {
       ]
     },
     {
+      id: 'radiant-systems',
+      title: 'Radiant Floor Heating',
+      description: 'Underfloor heating systems that provide comfortable, even heat distribution throughout your space from the ground up.',
+      image: 'https://images.pexels.com/photos/1115804/pexels-photo-1115804.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+      features: [
+        'Even heat distribution',
+        'Energy efficient',
+        'Silent operation',
+        'Luxury comfort'
+      ]
+    },
+    {
       id: 'hydronic',
       title: 'Hydronic Systems',
       description: 'Water-based heating systems for radiators, baseboard heaters, and hot water supply. Seamless integration with existing plumbing.',
@@ -120,18 +132,6 @@ const Learn = () => {
         'Multiple zone control',
         'Consistent heat distribution',
         'Hot water generation'
-      ]
-    },
-    {
-      id: 'radiant-floor',
-      title: 'Radiant Floor Heating',
-      description: 'Underfloor heating systems that provide comfortable, even heat distribution throughout your space from the ground up.',
-      image: 'https://images.pexels.com/photos/1115804/pexels-photo-1115804.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-      features: [
-        'Even heat distribution',
-        'Energy efficient',
-        'Silent operation',
-        'Luxury comfort'
       ]
     },
     {
