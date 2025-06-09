@@ -54,9 +54,9 @@ const Learn = () => {
       image: "https://images.pexels.com/photos/8293778/pexels-photo-8293778.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
       details: [
         "100% energy conversion efficiency",
+        "No gas or liquid infrastructure",
         "Zero wasted electricity",
-        "Zero emissions",
-        "No gas or liquid infrastructure"
+        "Zero emissions"
       ]
     },
     {
