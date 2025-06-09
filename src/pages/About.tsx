@@ -288,16 +288,16 @@ const About = () => {
       events: [
         'Official company launch',
         'Heat Audit & design services',
-        'Establishment of partner network'
+        'Office demo site install'
       ]
     },
     {
       quarter: 'Q3 2025',
-      title: 'Feedback Collection',
+      title: 'Feedback & Optimization',
       events: [
         'Project data collection',
         'Monitoring software development',
-        'Upgrade services'
+        'Establish partner network'
       ]
     },
     {
