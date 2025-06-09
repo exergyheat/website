@@ -34,7 +34,7 @@ const FAQ = () => {
       questions: [
         {
           q: "What maintenance is required?",
-          a: "Regular maintenance includes dust cleaning, system updates, and periodic performance checks. Our monitoring system helps track when maintenance is needed."
+          a: "Regular maintenance includes filter cleaning, system updates, and periodic performance checks. Our monitoring system tracks when maintenance is needed - before you even notice."
         },
         {
           q: "How loud are the systems?",
