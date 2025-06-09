@@ -55,11 +55,15 @@ const FAQ = () => {
           a: "The return on investment period typically ranges from 18-24 months, depending on factors like energy costs and cryptocurrency market conditions."
         },
         {
-          q: "Are there any tax benefits?",
+          q: "Does it cut my heating bills? Or just pay me to offset them?",
           a: "Many jurisdictions offer tax incentives for energy-efficient heating solutions. We recommend consulting with a tax professional for specific advice."
         },
         {
-          q: "What are the operating costs?",
+          q: "Will my monthly bill increase or decrease?",
+          a: "Operating costs primarily consist of electricity usage, which is offset by mining rewards and reduced heating costs."
+        },
+        {
+          q: "Can I get paid in dollars instead of bitcoin?",
           a: "Operating costs primarily consist of electricity usage, which is offset by mining rewards and reduced heating costs."
         }
       ]
