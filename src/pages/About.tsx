@@ -295,16 +295,16 @@ const About = () => {
       quarter: 'Q3 2025',
       title: 'Expansion',
       events: [
-        'New product development',
+        'In house control systems',
         'Market expansion',
         'Enhanced monitoring services'
       ]
     },
     {
-      quarter: 'Q4 2024',
+      quarter: 'Q4 2025',
       title: 'Innovation',
       events: [
-        'Advanced control systems',
+        'New Product Development',
         'Integration partnerships',
         'Community platform launch'
       ]
