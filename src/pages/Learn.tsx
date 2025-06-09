@@ -62,7 +62,7 @@ const Learn = () => {
     {
       title: "Open Monetary Protocol",
       icon: Bitcoin,
-      description: "Bitcoin is a secure, ethical protocol that rewards participants for maintaining network security. Your heater earns these rewards while providing the same warmth as traditional heaters.",
+      description: "Bitcoin mining is a free and open source protocol that rewards participants for contributing work to process bitcoin transactions. The more energy you contribute, the more you earn.",
       image: "https://images.pexels.com/photos/844124/pexels-photo-844124.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
       details: [
         "Decentralized network participation",
