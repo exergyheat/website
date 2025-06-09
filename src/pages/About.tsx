@@ -490,7 +490,7 @@ const About = () => {
           <div className="relative flex justify-center md:order-2">
             <div className="bg-surface-900 rounded-lg p-8 w-full max-w-sm">
               <Calendar className="h-12 w-12 text-primary-400 mb-4" />
-              <h3 className="text-2xl font-bold text-white mb-4">Undermine Summit</h3>
+              <h3 className="text-2xl font-bold text-white mb-4">Undermine</h3>
               <p className="text-surface-300 mb-6">
                 The annual Heatpunk Summit is a conference dedicated to hashrate heating, hosted by our founder Tyler Stevens.
               </p>
