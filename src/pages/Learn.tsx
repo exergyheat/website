@@ -117,7 +117,7 @@ const Learn = () => {
       image: 'https://images.pexels.com/photos/1115804/pexels-photo-1115804.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
       features: [
         'Even heat distribution',
-        'Energy efficient',
+        'Increased efficiency',
         'Silent operation',
         'Luxury comfort'
       ]
