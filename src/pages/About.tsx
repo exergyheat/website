@@ -292,7 +292,7 @@ const About = () => {
       ]
     },
     {
-      quarter: 'Q3 2024',
+      quarter: 'Q3 2025',
       title: 'Expansion',
       events: [
         'New product development',
