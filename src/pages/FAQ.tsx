@@ -16,7 +16,7 @@ const FAQ = () => {
         },
         {
           q: "How does it save money?",
-          a: "It saves money by offsetting heating costs with cryptocurrency mining rewards, essentially making your heating system generate income while providing warmth."
+          a: "It saves money by offsetting heating costs with bitcoin mining rewards (which can be converted to local fiat currencies), essentially making your heating system generate income while providing warmth."
         },
         {
           q: "Is it environmentally friendly?",
