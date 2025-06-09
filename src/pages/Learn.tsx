@@ -133,7 +133,7 @@ const Learn = () => {
         'Reduced heating costs',
         'Extended swimming season'
       ]
-    }
+    },
     {
       id: 'hydronic',
       title: 'Hydronic Systems',
@@ -145,8 +145,7 @@ const Learn = () => {
         'Consistent heat distribution',
         'Hot water generation'
       ]
-    },
-
+    }
   ]
 
   React.useEffect(() => {
