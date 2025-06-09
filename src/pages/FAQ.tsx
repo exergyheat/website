@@ -24,7 +24,7 @@ const FAQ = () => {
         },
         {
           q: "Why bitcoin? What about other cryptocurrencies?",
-          a: "Bitcoin is neutral, because no one controls it. Bitcoin is ethical, because mining (heater) rewards are proportional to how much energy you contribute. Bitcoin is accessible, because it's free and open source - anyone can audit the code."
+          a: "Bitcoin is neutral, because no one controls it. Bitcoin is ethical, because mining (heater) rewards are proportional to how much energy you contribute. Bitcoin is accessible, because it's free and open source - anyone can audit the code. No other crypto will ever be bitcoin."
         }
       ]
     },
