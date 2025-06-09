@@ -151,7 +151,7 @@ const Learn = () => {
   React.useEffect(() => {
     const timer = setInterval(() => {
       setCurrentApplicationIndex((prevIndex) => (prevIndex + 1) % applications.length)
-    }, 5000)
+    }, 7500)
 
     return () => clearInterval(timer)
   }, [])
