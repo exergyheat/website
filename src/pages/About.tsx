@@ -82,7 +82,7 @@ const About = () => {
     {
       id: 'audit',
       title: 'Heat Audit Analysis',
-      description: 'We start with thermo-economic modeling to understand your exact your heating needs and calculate predicted earnings. This tells us which hashrate heater is best for you',
+      description: 'We start with thermo-economic modeling to understand your exact your heating needs and calculate predicted earnings. This tells us which hashrate heater is best for you.',
       icon: FileText,
       preview: {
         title: 'Sample Heat Audit Report',
