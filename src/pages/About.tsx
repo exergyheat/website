@@ -287,17 +287,17 @@ const About = () => {
       title: 'Launch & Growth',
       events: [
         'Official company launch',
-        'Release of Heat Audit Analysis',
+        'Heat Audit & design services',
         'Establishment of partner network'
       ]
     },
     {
       quarter: 'Q3 2025',
-      title: 'Expansion',
+      title: 'Data Collection',
       events: [
-        'In house control systems',
-        'Market expansion',
-        'Enhanced monitoring services'
+        'Project data collection',
+        'Monitoring software development',
+        'Upgrade services'
       ]
     },
     {
@@ -305,7 +305,7 @@ const About = () => {
       title: 'Innovation',
       events: [
         'New product development',
-        'Integration partnerships',
+        'Monitoring software improvements',
         'Hardware product partnerships'
       ]
     },
