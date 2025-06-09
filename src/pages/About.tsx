@@ -287,7 +287,7 @@ const About = () => {
       title: 'Launch & Growth',
       events: [
         'Official company launch',
-        'Release of first product line',
+        'Release of Heat Audit Analysis',
         'Establishment of partner network'
       ]
     },
