@@ -12,7 +12,7 @@ const FAQ = () => {
       questions: [
         {
           q: "What is hashrate heating?",
-          a: "Hashrate heating is an innovative technology that combines cryptocurrency mining with heating solutions, effectively turning computational power into useful heat while generating revenue."
+          a: "Hashrate heating is a new heating technology that combines bitcoin mining with heating infrastructure, effectively turning electric power into useful heat while generating revenue at the same time."
         },
         {
           q: "How does it save money?",
