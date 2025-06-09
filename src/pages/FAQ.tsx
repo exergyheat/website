@@ -42,7 +42,7 @@ const FAQ = () => {
         },
         {
           q: "What's the installation process?",
-          a: "Installation is much different that traditional heating systems. The ins and outs are all the same. Cold and Hot sides for heat, electricity for heating power, and one new connection - internet, so the hashrate heater can communicate with the rest of the network and earn rewards."
+          a: "The installation process mirrors traditional heating systems, using standard inlets and outlets for heat and electricity, with one addition: an internet connection to link your hashrate heater to the network for earning rewards."
         }
       ]
     },
