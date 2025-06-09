@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import { BookOpen, Calculator, Users, Zap, Bitcoin, Cpu, HelpCircle, Eye, FileText, PenTool, ArrowLeft, ArrowRight } from 'lucide-react'
+import { BookOpen, Calculator, Users, Zap, Bitcoin, Cpu, HelpCircle, Eye, FileText, PenTool, ArrowLeft, ArrowRight, ExternalLink } from 'lucide-react'
 import { motion } from 'framer-motion'
 
 const Learn = () => {
@@ -191,8 +191,13 @@ const Learn = () => {
                 href={resource.link}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="bg-white dark:bg-surface-800 rounded-lg shadow-lg p-8 hover:shadow-xl transition-shadow"
+                className="bg-white dark:bg-surface-800 rounded-lg shadow-lg p-8 hover:shadow-xl transition-shadow relative"
               >
+                {/* External Badge */}
+                <div className="absolute top-4 right-4 bg-primary-600 text-white px-3 py-1 rounded-full text-xs font-medium flex items-center">
+                  <ExternalLink className="h-3 w-3 mr-1" />
+                  External
+                </div>
                 <div className="flex items-center mb-4">
                   <div className="p-3 bg-primary-100 dark:bg-primary-900 rounded-lg">
                     <resource.icon className="h-6 w-6 text-primary-600 dark:text-primary-400" />
