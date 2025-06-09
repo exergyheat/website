@@ -64,7 +64,7 @@ const FAQ = () => {
         },
         {
           q: "Can I get paid in dollars instead of bitcoin?",
-          a: "Operating costs primarily consist of electricity usage, which is offset by mining rewards and reduced heating costs."
+          a: "Yes! If you prefer to receive your heating system rebate revenue in USD rather than bitcoin, we can accomodate, or even blend the two."
         }
       ]
     }
