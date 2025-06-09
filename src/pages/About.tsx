@@ -310,12 +310,12 @@ const About = () => {
       ]
     },
     {
-      quarter: 'Q1 2025',
+      quarter: 'Q1 2026',
       title: 'Scale',
       events: [
-        'International expansion',
+        'New market expansion',
         'New product categories',
-        'Enterprise solutions'
+        'Expand service offerings'
       ]
     }
   ]
