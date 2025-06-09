@@ -182,7 +182,7 @@ const About = () => {
     {
       id: 'installation',
       title: 'Procurement & Installation',
-      description: 'When ready, we source the best hashrate heating hardware and coordinate install with partners for smooth integration and bringing your system online',
+      description: 'When ready, we source the best hashrate heating hardware and coordinate install with partners for smooth integration and bringing your system online.',
       icon: Package,
       preview: {
         title: 'Installation Process',
