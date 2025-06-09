@@ -60,7 +60,7 @@ const FAQ = () => {
         },
         {
           q: "Will my monthly bill increase or decrease?",
-          a: "Operating costs primarily consist of electricity usage, which is offset by mining rewards and reduced heating costs."
+          a: "It depends on your electricity rate and heating fuel cost. In the USA, natural gas heat is cheap and plentiful. Hashrate heating systems typically have a higher operational cost due to higher relative electric heat costs. Propane and heating oil are expensive and cumbersome. Often times, switching to hashrate heat is cheaper - before you even factor in the recurring revenue."
         },
         {
           q: "Can I get paid in dollars instead of bitcoin?",
