@@ -304,9 +304,9 @@ const About = () => {
       quarter: 'Q4 2025',
       title: 'Innovation',
       events: [
-        'New Product Development',
+        'New product development',
         'Integration partnerships',
-        'Community platform launch'
+        'Hardware product partnerships'
       ]
     },
     {
