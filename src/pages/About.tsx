@@ -226,7 +226,7 @@ const About = () => {
     {
       id: 'monitoring',
       title: 'Remote Monitoring',
-      description: 'Optional remote monitoring ensures your system is always healthy and earning what it should. Because our heaters are digital - we can sense when it's time for maintenance',
+      description: 'Optional remote monitoring ensures your system is always healthy and earning what it should. Because our heaters are digital - we can sense when it is time for a tune up.',
       icon: Monitor,
       preview: {
         title: 'Monitoring Dashboard',
