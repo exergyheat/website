@@ -82,7 +82,7 @@ const About = () => {
     {
       id: 'audit',
       title: 'Heat Audit Analysis',
-      description: 'We start with thermo-economic modeling to understand you exact your heating needs and potential savings.',
+      description: 'We start with thermo-economic modeling to understand your exact your heating needs and calculate predicted savings.',
       icon: FileText,
       preview: {
         title: 'Sample Heat Audit Report',
