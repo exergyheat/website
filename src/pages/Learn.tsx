@@ -87,18 +87,6 @@ const Learn = () => {
 
   const applications = [
     {
-      id: 'forced-air',
-      title: 'Forced Air Furnaces',
-      description: 'Replace or supplement your traditional furnace with hashrate heating. Perfect for whole-home heating with existing ductwork.',
-      image: 'https://images.pexels.com/photos/8293778/pexels-photo-8293778.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-      features: [
-        'Integrates with existing HVAC',
-        'Zoned temperature control',
-        'High-capacity heating',
-        'Smart thermostat compatible'
-      ]
-    },
-    {
       id: 'space-heating',
       title: 'Room Space Heating',
       description: 'Standalone units for heating individual rooms, garages, workshops, or specific areas. Plug-and-play simplicity.',
@@ -108,6 +96,18 @@ const Learn = () => {
         'Quiet operation',
         'WiFi connectivity',
         'Mobile app control'
+      ]
+    }, 
+    {
+      id: 'forced-air',
+      title: 'Forced Air Furnaces',
+      description: 'Replace or supplement your traditional furnace with hashrate heating. Perfect for whole-home heating with existing ductwork.',
+      image: 'https://images.pexels.com/photos/8293778/pexels-photo-8293778.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+      features: [
+        'Integrates with existing HVAC',
+        'Zoned temperature control',
+        'High-capacity heating',
+        'Smart thermostat compatible'
       ]
     },
     {
