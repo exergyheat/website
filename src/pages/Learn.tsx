@@ -68,7 +68,7 @@ const Learn = () => {
         "Anyone can participate",
         "Earnings proportional to work contribution",
         "Automated payouts in a nativie digital asset - bitcoin",
-        "Converts a lot of power into heat"
+        "Converts all power into heat"
       ]
     },
     {
