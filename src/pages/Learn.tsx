@@ -74,7 +74,7 @@ const Learn = () => {
     {
       title: "Combining the Two: Smart Heat",
       icon: Cpu,
-      description: "All electricity used in Bitcoin mining converts to heat - there's no waste. This heat is then captured and distributed throughout your space, making it a perfectly efficient heating solution.",
+      description: "Bitoin miners are powerful to maximize earnings. This inherently makes them great for heating. ",
       image: "https://images.pexels.com/photos/1036936/pexels-photo-1036936.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
       details: [
         "Intelligent heat distribution",
