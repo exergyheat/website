@@ -56,7 +56,7 @@ const Learn = () => {
         "100% energy conversion efficiency",
         "Zero wasted electricity",
         "Zero emissions",
-        "High performance control"
+        "No gas or liquid infrastructure"
       ]
     },
     {
