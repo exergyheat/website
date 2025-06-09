@@ -293,7 +293,7 @@ const About = () => {
     },
     {
       quarter: 'Q3 2025',
-      title: 'Data Collection',
+      title: 'Feedback Collection',
       events: [
         'Project data collection',
         'Monitoring software development',
