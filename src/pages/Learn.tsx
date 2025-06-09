@@ -130,8 +130,8 @@ const Learn = () => {
       features: [
         'Year-round swimming',
         'Precise temperature control',
-        'Reduced heating costs',
-        'Extended swimming season'
+        'Offset heating costs',
+        'Digital control'
       ]
     },
     {
