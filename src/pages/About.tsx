@@ -138,7 +138,7 @@ const About = () => {
     {
       id: 'design',
       title: 'System Design',
-      description: 'Next comes custom engineering and curated solutions tailored to your specific heating requirements.',
+      description: 'Engineering and custom system design follows the Heat Audit. Once we know how much heat you need, and which hashrate heater is best - we design your integrated system',
       icon: Wrench,
       preview: {
         title: 'System Design Schematic',
