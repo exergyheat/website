@@ -74,7 +74,7 @@ const Learn = () => {
     {
       title: "Combining the Two: Smart Heat",
       icon: Cpu,
-      description: "Bitoin miners are powerful to maximize earnings. This inherently makes them great for heating. Hashrate Heating combines the technologies - electric heat, powered by mining.",
+      description: "Bitoin miners are powerful to maximize earnings. This inherently makes them great for heating. Hashrate Heating combines the technologies - electric heat, powered by mining. The result? Heat that pays.",
       image: "https://images.pexels.com/photos/1036936/pexels-photo-1036936.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
       details: [
         "Intelligent heat distribution",
