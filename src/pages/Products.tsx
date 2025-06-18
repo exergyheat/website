@@ -35,10 +35,10 @@ const Products = () => {
 
   const products = [
     {
-      id: 'sh-1000',
+      id: 'sh-800',
       category: 'space-heating',
-      name: 'EXERGY SpaceHeat 1000',
-      image: 'https://images.pexels.com/photos/3850512/pexels-photo-3850512.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+      name: 'Canaan Avalon Mini 3',
+      image: 'https://www.canaan.io/static/themes/default/images/official/official_mini3_index4.png',
       specs: {
         power: '1000W',
         hashrate: '100 TH/s',
