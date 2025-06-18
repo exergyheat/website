@@ -100,22 +100,23 @@ const Products = () => {
     {
       id: 'hw-3000',
       category: 'hydronic',
-      name: 'EXERGY HydroHeat 3000',
+      name: 'RY3T Mini',
       image: 'https://images.pexels.com/photos/8293769/pexels-photo-8293769.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
       specs: {
-        power: '3000W',
-        hashrate: '300 TH/s',
-        heating: '10,236 BTU/hr',
-        waterTemp: '180°F max',
-        dimensions: '30" x 20" x 20"'
+        power: '5000W',
+        hashrate: '200 TH/s',
+        heating: '17,060 BTU/hr',
+        waterTemp: '149°F max',
+        dimensions: '23.6" x 15.8" x 24.4"'
       },
-      price: '$8,999',
-      description: 'Versatile hydronic heating solution for multiple applications.',
+      price: '$10,000',
+      description: 'Versatile digital boiler for hydronic heating applications.',
       features: [
         'Boiler integration',
-        'Multiple pump outputs',
-        'Temperature monitoring',
-        'Freeze protection'
+        'Hot water tank integration',
+        'Integrated heating loop pump',
+        'Integrated control'
+
       ]
     },
     {
