@@ -40,13 +40,13 @@ const Products = () => {
       name: 'Canaan Avalon Mini 3',
       image: 'https://www.canaan.io/static/themes/default/images/official/official_mini3_index4.png',
       specs: {
-        power: '1000W',
-        hashrate: '100 TH/s',
-        heating: '3,412 BTU/hr',
+        power: '800W',
+        hashrate: '37.5 TH/s',
+        heating: '2,730 BTU/hr',
         noise: '45 dB',
-        dimensions: '15" x 8" x 8"'
+        dimensions: '30" x 4.1" x 8.5"'
       },
-      price: '$2,999',
+      price: '$999',
       description: 'Perfect for heating small to medium-sized rooms while generating passive income through mining.',
       features: [
         'Plug-and-play setup',
