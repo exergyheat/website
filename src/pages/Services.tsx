@@ -1,11 +1,39 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
-import { ArrowRight, FileText, Wrench, Activity, HeartPulse, ChevronDown, ChevronUp, X } from 'lucide-react'
+import { ArrowRight, FileText, Wrench, Activity, HeartPulse, ChevronDown, ChevronUp, X, Search, Cog, Monitor } from 'lucide-react'
 
 const Services = () => {
   const [expandedService, setExpandedService] = useState<string | null>(null)
   const [buildType, setBuildType] = useState<'existing' | 'new'>('existing')
   const [demoService, setDemoService] = useState<string | null>(null)
+  const [hoveredStep, setHoveredStep] = useState<string | null>(null)
+
+  const journeySteps = [
+    {
+      id: 'audit',
+      title: 'Determine Savings with a Heat Audit',
+      description: 'Curious? Get annual savings %, bitcoin earnings, hardware options, costs, ROI, and our recommendation. Ideal for detail-seekers or option-weighers.',
+      icon: Search,
+      hoverText: 'Start at the Heat Audit if you\'re curious, seeking details, or weighing options.',
+      color: 'bg-blue-500'
+    },
+    {
+      id: 'design',
+      title: 'Move to System Design & Quote',
+      description: 'Ready? We design your integrated solution, size components, and provide a complete project plan and quote. We handle hardware, trades, timeline, and install.',
+      icon: Cog,
+      hoverText: 'Start with System Design if you\'re ready to heat with hashrate, and need a tailored solution designed - or already have a solution that you need implemented.',
+      color: 'bg-green-500'
+    },
+    {
+      id: 'monitoring',
+      title: 'Enhance with Remote Monitoring',
+      description: 'Opt in for monitoring with a small hashrate split. Get most rewards, reports, alerts, and upgrade discounts.',
+      icon: Monitor,
+      hoverText: 'Start with Remote Monitoring if you already have a hashrate heating system, and want to get the most out of your heat that pays.',
+      color: 'bg-purple-500'
+    }
+  ]
 
   const getAuditService = (type: 'existing' | 'new') => ({
     id: 'audit',
@@ -390,8 +418,92 @@ const Services = () => {
               Expert Hashrate Heating Services
             </h1>
             <p className="text-xl text-primary-100 max-w-2xl mx-auto">
-              From concept to implementation, we’ll help you harness hashrate heating
+              From concept to implementation, we'll help you harness hashrate heating
             </p>
+          </div>
+        </div>
+      </div>
+
+      {/* Your Hashrate Heating Journey Section */}
+      <div className="bg-white dark:bg-surface-800 py-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl font-bold text-surface-900 dark:text-surface-100 mb-6">
+              Your Hashrate Heating Journey
+            </h2>
+            <p className="text-xl text-surface-600 dark:text-surface-400 max-w-3xl mx-auto">
+              Choose your starting point based on where you are in your hashrate heating journey
+            </p>
+          </div>
+
+          {/* Journey Steps */}
+          <div className="relative">
+            {/* Connection Lines */}
+            <div className="hidden md:block absolute top-1/2 left-0 right-0 h-0.5 bg-surface-300 dark:bg-surface-600 transform -translate-y-1/2 z-0"></div>
+            
+            <div className="relative z-10 grid grid-cols-1 md:grid-cols-3 gap-8">
+              {journeySteps.map((step, index) => (
+                <div
+                  key={step.id}
+                  className="relative"
+                  onMouseEnter={() => setHoveredStep(step.id)}
+                  onMouseLeave={() => setHoveredStep(null)}
+                >
+                  {/* Step Card */}
+                  <div className={`bg-white dark:bg-surface-700 rounded-lg shadow-lg p-6 border-2 transition-all duration-300 cursor-pointer ${
+                    hoveredStep === step.id 
+                      ? 'border-primary-500 shadow-xl transform -translate-y-2' 
+                      : 'border-surface-200 dark:border-surface-600'
+                  }`}>
+                    {/* Step Number and Icon */}
+                    <div className="flex items-center justify-center mb-4">
+                      <div className={`w-16 h-16 rounded-full flex items-center justify-center text-white font-bold text-lg ${step.color}`}>
+                        <step.icon className="h-8 w-8" />
+                      </div>
+                    </div>
+
+                    {/* Step Content */}
+                    <h3 className="text-xl font-bold text-surface-900 dark:text-surface-100 mb-3 text-center">
+                      {step.title}
+                    </h3>
+                    <p className="text-surface-600 dark:text-surface-400 text-center mb-4">
+                      {step.description}
+                    </p>
+
+                    {/* Arrow for desktop */}
+                    {index < journeySteps.length - 1 && (
+                      <div className="hidden md:block absolute top-1/2 -right-4 transform -translate-y-1/2 z-20">
+                        <ArrowRight className="h-8 w-8 text-surface-400 dark:text-surface-500" />
+                      </div>
+                    )}
+                  </div>
+
+                  {/* Hover Tooltip */}
+                  {hoveredStep === step.id && (
+                    <div className="absolute -bottom-20 left-1/2 transform -translate-x-1/2 z-30">
+                      <div className="bg-primary-600 text-white px-4 py-3 rounded-lg shadow-lg max-w-xs text-center">
+                        <div className="absolute -top-2 left-1/2 transform -translate-x-1/2 w-0 h-0 border-l-4 border-r-4 border-b-4 border-transparent border-b-primary-600"></div>
+                        <p className="text-sm font-medium">{step.hoverText}</p>
+                      </div>
+                    </div>
+                  )}
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Call to Action */}
+          <div className="text-center mt-16">
+            <p className="text-lg text-surface-600 dark:text-surface-400 mb-6">
+              Not sure where to start? Book a quick intro call to discuss your specific needs.
+            </p>
+            <Link
+              to="/book-call"
+              className="inline-flex items-center px-6 py-3 bg-primary-600 text-white rounded-lg hover:bg-primary-700 transition-colors"
+            >
+              Book an Intro Call
+              <ArrowRight className="ml-2 h-5 w-5" />
+            </Link>
           </div>
         </div>
       </div>
