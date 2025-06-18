@@ -486,9 +486,9 @@ const About = () => {
         </div>
 
         {/* Undermine Summit Section */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-          <div className="relative flex justify-center md:order-2">
-            <div className="bg-surface-900 rounded-lg p-8 w-full max-w-sm">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
+          <div className="relative lg:order-2">
+            <div className="bg-surface-900 rounded-lg p-6 lg:p-8 w-full max-w-sm mx-auto lg:mx-0">
               <Calendar className="h-12 w-12 text-primary-400 mb-4" />
               <h3 className="text-2xl font-bold text-white mb-4">Undermine</h3>
               <p className="text-surface-300 mb-6">
@@ -505,15 +505,17 @@ const About = () => {
               </a>
             </div>
           </div>
-          <div className="relative md:order-1">
-            <img
-              src="/IMG_3841.PNG"
-              alt="Conference and Summit"
-              className="w-full h-80 object-cover rounded-lg shadow-2xl"
-            />
-            <div className="absolute -bottom-4 -right-4 bg-white dark:bg-surface-700 p-6 rounded-lg shadow-xl">
-              <p className="text-xl font-bold text-primary-600 dark:text-primary-400">2026</p>
-              <p className="text-surface-600 dark:text-surface-400">Next Summit</p>
+          <div className="relative lg:order-1">
+            <div className="relative w-full max-w-lg mx-auto lg:mx-0">
+              <img
+                src="/IMG_3841.PNG"
+                alt="Conference and Summit"
+                className="w-full h-64 sm:h-80 lg:h-80 object-cover object-center rounded-lg shadow-2xl"
+              />
+              <div className="absolute -bottom-4 -right-4 bg-white dark:bg-surface-700 p-4 lg:p-6 rounded-lg shadow-xl">
+                <p className="text-xl font-bold text-primary-600 dark:text-primary-400">2026</p>
+                <p className="text-surface-600 dark:text-surface-400">Next Summit</p>
+              </div>
             </div>
           </div>
         </div>
