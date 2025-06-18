@@ -101,7 +101,7 @@ const Products = () => {
       id: 'hyd-5000',
       category: 'hydronic',
       name: 'RY3T Mini',
-      image: 'https://images.pexels.com/photos/8293769/pexels-photo-8293769.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+      image: 'https://ry3t.com/wp-content/uploads/2025/03/2-1024x1024.png',
       specs: {
         power: '5000W',
         hashrate: '206 TH/s',
