@@ -21,7 +21,7 @@ const Products = () => {
     },
     {
       id: 'hydronic',
-      name: 'Hydronic',
+      name: 'Hydronic & Water',
       icon: Droplets,
       description: 'Water-based heating solutions for radiant heat, hot water, pools, and more. Seamlessly integrates with existing hydronic systems.'
     },
