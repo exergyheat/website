@@ -6,7 +6,7 @@ const Services = () => {
   const [expandedService, setExpandedService] = useState<string | null>(null)
   const [buildType, setBuildType] = useState<'existing' | 'new'>('existing')
   const [demoService, setDemoService] = useState<string | null>(null)
-  const [hoveredStep, setHoveredStep] = useState<string | null>(null)
+  const [flippedCard, setFlippedCard] = useState<string | null>(null)
 
   const journeySteps = [
     {
@@ -14,24 +14,24 @@ const Services = () => {
       title: 'Determine Savings with a Heat Audit',
       description: 'Curious? Get annual savings %, bitcoin earnings, hardware options, costs, ROI, and our recommendation. Ideal for detail-seekers or option-weighers.',
       icon: Search,
-      hoverText: 'Start at the Heat Audit if you\'re curious, seeking details, or weighing options.',
-      color: 'bg-blue-500'
+      flipText: 'Start at the Heat Audit if you\'re curious, seeking details, or weighing options.',
+      link: '/services#audit'
     },
     {
       id: 'design',
       title: 'Move to System Design & Quote',
       description: 'Ready? We design your integrated solution, size components, and provide a complete project plan and quote. We handle hardware, trades, timeline, and install.',
       icon: Cog,
-      hoverText: 'Start with System Design if you\'re ready to heat with hashrate, and need a tailored solution designed - or already have a solution that you need implemented.',
-      color: 'bg-green-500'
+      flipText: 'Start with System Design if you\'re ready to heat with hashrate, and need a tailored solution designed - or already have a solution that you need implemented.',
+      link: '/services#upgrade'
     },
     {
       id: 'monitoring',
       title: 'Enhance with Remote Monitoring',
       description: 'Opt in for monitoring with a small hashrate split. Get most rewards, reports, alerts, and upgrade discounts.',
       icon: Monitor,
-      hoverText: 'Start with Remote Monitoring if you already have a hashrate heating system, and want to get the most out of your heat that pays.',
-      color: 'bg-purple-500'
+      flipText: 'Start with Remote Monitoring if you already have a hashrate heating system, and want to get the most out of your heat that pays.',
+      link: '/services#monitoring'
     }
   ]
 
@@ -445,46 +445,67 @@ const Services = () => {
               {journeySteps.map((step, index) => (
                 <div
                   key={step.id}
-                  className="relative"
-                  onMouseEnter={() => setHoveredStep(step.id)}
-                  onMouseLeave={() => setHoveredStep(null)}
+                  className="relative perspective-1000"
+                  onMouseEnter={() => setFlippedCard(step.id)}
+                  onMouseLeave={() => setFlippedCard(null)}
                 >
-                  {/* Step Card */}
-                  <div className={`bg-white dark:bg-surface-700 rounded-lg shadow-lg p-6 border-2 transition-all duration-300 cursor-pointer ${
-                    hoveredStep === step.id 
-                      ? 'border-primary-500 shadow-xl transform -translate-y-2' 
-                      : 'border-surface-200 dark:border-surface-600'
+                  {/* Card Container with 3D flip effect */}
+                  <div className={`relative w-full h-80 transition-transform duration-700 transform-style-preserve-3d ${
+                    flippedCard === step.id ? 'rotate-y-180' : ''
                   }`}>
-                    {/* Step Number and Icon */}
-                    <div className="flex items-center justify-center mb-4">
-                      <div className={`w-16 h-16 rounded-full flex items-center justify-center text-white font-bold text-lg ${step.color}`}>
-                        <step.icon className="h-8 w-8" />
+                    
+                    {/* Front of Card */}
+                    <div className="absolute inset-0 w-full h-full backface-hidden">
+                      <div className="bg-white dark:bg-surface-700 rounded-lg shadow-lg p-6 border-2 border-surface-200 dark:border-surface-600 h-full flex flex-col justify-between cursor-pointer hover:shadow-xl transition-shadow">
+                        {/* Step Number and Icon */}
+                        <div className="flex items-center justify-center mb-4">
+                          <div className="w-16 h-16 rounded-full bg-primary-600 flex items-center justify-center text-white">
+                            <step.icon className="h-8 w-8" />
+                          </div>
+                        </div>
+
+                        {/* Step Content */}
+                        <div className="flex-grow">
+                          <h3 className="text-xl font-bold text-surface-900 dark:text-surface-100 mb-3 text-center">
+                            {step.title}
+                          </h3>
+                          <p className="text-surface-600 dark:text-surface-400 text-center text-sm">
+                            {step.description}
+                          </p>
+                        </div>
+
+                        {/* Hover indicator */}
+                        <div className="text-center mt-4">
+                          <p className="text-xs text-surface-500 dark:text-surface-400">Hover to see why start here</p>
+                        </div>
                       </div>
                     </div>
 
-                    {/* Step Content */}
-                    <h3 className="text-xl font-bold text-surface-900 dark:text-surface-100 mb-3 text-center">
-                      {step.title}
-                    </h3>
-                    <p className="text-surface-600 dark:text-surface-400 text-center mb-4">
-                      {step.description}
-                    </p>
-
-                    {/* Arrow for desktop */}
-                    {index < journeySteps.length - 1 && (
-                      <div className="hidden md:block absolute top-1/2 -right-4 transform -translate-y-1/2 z-20">
-                        <ArrowRight className="h-8 w-8 text-surface-400 dark:text-surface-500" />
+                    {/* Back of Card */}
+                    <div className="absolute inset-0 w-full h-full backface-hidden rotate-y-180">
+                      <div className="bg-primary-600 text-white rounded-lg shadow-lg p-6 h-full flex flex-col justify-center items-center text-center">
+                        <div className="mb-4">
+                          <step.icon className="h-12 w-12 mx-auto mb-4 opacity-80" />
+                        </div>
+                        <h3 className="text-lg font-bold mb-4">Start Here If:</h3>
+                        <p className="text-primary-100 text-sm leading-relaxed mb-6">
+                          {step.flipText}
+                        </p>
+                        <Link
+                          to={step.link}
+                          className="inline-flex items-center px-4 py-2 bg-white text-primary-600 rounded-lg hover:bg-primary-50 transition-colors text-sm font-medium"
+                        >
+                          Get Started
+                          <ArrowRight className="ml-2 h-4 w-4" />
+                        </Link>
                       </div>
-                    )}
+                    </div>
                   </div>
 
-                  {/* Hover Tooltip */}
-                  {hoveredStep === step.id && (
-                    <div className="absolute -bottom-20 left-1/2 transform -translate-x-1/2 z-30">
-                      <div className="bg-primary-600 text-white px-4 py-3 rounded-lg shadow-lg max-w-xs text-center">
-                        <div className="absolute -top-2 left-1/2 transform -translate-x-1/2 w-0 h-0 border-l-4 border-r-4 border-b-4 border-transparent border-b-primary-600"></div>
-                        <p className="text-sm font-medium">{step.hoverText}</p>
-                      </div>
+                  {/* Arrow for desktop */}
+                  {index < journeySteps.length - 1 && (
+                    <div className="hidden md:block absolute top-1/2 -right-4 transform -translate-y-1/2 z-20">
+                      <ArrowRight className="h-8 w-8 text-surface-400 dark:text-surface-500" />
                     </div>
                   )}
                 </div>
@@ -678,6 +699,22 @@ const Services = () => {
           </div>
         </div>
       </div>
+
+      {/* Custom CSS for 3D flip effect */}
+      <style jsx>{`
+        .perspective-1000 {
+          perspective: 1000px;
+        }
+        .transform-style-preserve-3d {
+          transform-style: preserve-3d;
+        }
+        .backface-hidden {
+          backface-visibility: hidden;
+        }
+        .rotate-y-180 {
+          transform: rotateY(180deg);
+        }
+      `}</style>
     </div>
   )
 }
