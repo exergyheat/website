@@ -104,7 +104,7 @@ const Products = () => {
       image: 'https://images.pexels.com/photos/8293769/pexels-photo-8293769.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
       specs: {
         power: '5000W',
-        hashrate: '200 TH/s',
+        hashrate: '206 TH/s',
         heating: '17,060 BTU/hr',
         waterTemp: '149°F max',
         dimensions: '23.6" x 15.8" x 24.4"'
