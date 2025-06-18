@@ -8,6 +8,16 @@ const Services = () => {
   const [demoService, setDemoService] = useState<string | null>(null)
   const [flippedCard, setFlippedCard] = useState<string | null>(null)
 
+  const scrollToSection = (sectionId: string) => {
+    const element = document.getElementById(sectionId)
+    if (element) {
+      element.scrollIntoView({ 
+        behavior: 'smooth',
+        block: 'start'
+      })
+    }
+  }
+
   const journeySteps = [
     {
       id: 'audit',
@@ -15,7 +25,7 @@ const Services = () => {
       description: 'Curious? Get annual savings %, bitcoin earnings, hardware options, costs, ROI, and our recommendation. Ideal for detail-seekers or option-weighers.',
       icon: Search,
       flipText: 'Start at the Heat Audit if you\'re curious, seeking details, or weighing options.',
-      link: '/services#audit'
+      targetSection: 'audit-service'
     },
     {
       id: 'design',
@@ -23,7 +33,7 @@ const Services = () => {
       description: 'Ready? We design your integrated solution, size components, and provide a complete project plan and quote. We handle hardware, trades, timeline, and install.',
       icon: Cog,
       flipText: 'Start with System Design if you\'re ready to heat with hashrate, and need a tailored solution designed - or already have a solution that you need implemented.',
-      link: '/services#upgrade'
+      targetSection: 'upgrade-service'
     },
     {
       id: 'monitoring',
@@ -31,7 +41,7 @@ const Services = () => {
       description: 'Opt in for monitoring with a small hashrate split. Get most rewards, reports, alerts, and upgrade discounts.',
       icon: Monitor,
       flipText: 'Start with Remote Monitoring if you already have a hashrate heating system, and want to get the most out of your heat that pays.',
-      link: '/services#monitoring'
+      targetSection: 'monitoring-service'
     }
   ]
 
@@ -437,80 +447,68 @@ const Services = () => {
           </div>
 
           {/* Journey Steps */}
-          <div className="relative">
-            {/* Connection Lines */}
-            <div className="hidden md:block absolute top-1/2 left-0 right-0 h-0.5 bg-surface-300 dark:bg-surface-600 transform -translate-y-1/2 z-0"></div>
-            
-            <div className="relative z-10 grid grid-cols-1 md:grid-cols-3 gap-8">
-              {journeySteps.map((step, index) => (
-                <div
-                  key={step.id}
-                  className="relative perspective-1000"
-                  onMouseEnter={() => setFlippedCard(step.id)}
-                  onMouseLeave={() => setFlippedCard(null)}
-                >
-                  {/* Card Container with 3D flip effect */}
-                  <div className={`relative w-full h-80 transition-transform duration-700 transform-style-preserve-3d ${
-                    flippedCard === step.id ? 'rotate-y-180' : ''
-                  }`}>
-                    
-                    {/* Front of Card */}
-                    <div className="absolute inset-0 w-full h-full backface-hidden">
-                      <div className="bg-white dark:bg-surface-700 rounded-lg shadow-lg p-6 border-2 border-surface-200 dark:border-surface-600 h-full flex flex-col justify-between cursor-pointer hover:shadow-xl transition-shadow">
-                        {/* Step Number and Icon */}
-                        <div className="flex items-center justify-center mb-4">
-                          <div className="w-16 h-16 rounded-full bg-primary-600 flex items-center justify-center text-white">
-                            <step.icon className="h-8 w-8" />
-                          </div>
-                        </div>
-
-                        {/* Step Content */}
-                        <div className="flex-grow">
-                          <h3 className="text-xl font-bold text-surface-900 dark:text-surface-100 mb-3 text-center">
-                            {step.title}
-                          </h3>
-                          <p className="text-surface-600 dark:text-surface-400 text-center text-sm">
-                            {step.description}
-                          </p>
-                        </div>
-
-                        {/* Hover indicator */}
-                        <div className="text-center mt-4">
-                          <p className="text-xs text-surface-500 dark:text-surface-400">Hover to see why start here</p>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {journeySteps.map((step) => (
+              <div
+                key={step.id}
+                className="relative perspective-1000"
+                onMouseEnter={() => setFlippedCard(step.id)}
+                onMouseLeave={() => setFlippedCard(null)}
+              >
+                {/* Card Container with 3D flip effect */}
+                <div className={`relative w-full h-80 transition-transform duration-700 transform-style-preserve-3d ${
+                  flippedCard === step.id ? 'rotate-y-180' : ''
+                }`}>
+                  
+                  {/* Front of Card */}
+                  <div className="absolute inset-0 w-full h-full backface-hidden">
+                    <div className="bg-white dark:bg-surface-700 rounded-lg shadow-lg p-6 border-2 border-surface-200 dark:border-surface-600 h-full flex flex-col justify-between cursor-pointer hover:shadow-xl transition-shadow">
+                      {/* Step Number and Icon */}
+                      <div className="flex items-center justify-center mb-4">
+                        <div className="w-16 h-16 rounded-full bg-primary-600 flex items-center justify-center text-white">
+                          <step.icon className="h-8 w-8" />
                         </div>
                       </div>
-                    </div>
 
-                    {/* Back of Card */}
-                    <div className="absolute inset-0 w-full h-full backface-hidden rotate-y-180">
-                      <div className="bg-primary-600 text-white rounded-lg shadow-lg p-6 h-full flex flex-col justify-center items-center text-center">
-                        <div className="mb-4">
-                          <step.icon className="h-12 w-12 mx-auto mb-4 opacity-80" />
-                        </div>
-                        <h3 className="text-lg font-bold mb-4">Start Here If:</h3>
-                        <p className="text-primary-100 text-sm leading-relaxed mb-6">
-                          {step.flipText}
+                      {/* Step Content */}
+                      <div className="flex-grow">
+                        <h3 className="text-xl font-bold text-surface-900 dark:text-surface-100 mb-3 text-center">
+                          {step.title}
+                        </h3>
+                        <p className="text-surface-600 dark:text-surface-400 text-center text-sm">
+                          {step.description}
                         </p>
-                        <Link
-                          to={step.link}
-                          className="inline-flex items-center px-4 py-2 bg-white text-primary-600 rounded-lg hover:bg-primary-50 transition-colors text-sm font-medium"
-                        >
-                          Get Started
-                          <ArrowRight className="ml-2 h-4 w-4" />
-                        </Link>
+                      </div>
+
+                      {/* Hover indicator */}
+                      <div className="text-center mt-4">
+                        <p className="text-xs text-surface-500 dark:text-surface-400">Hover to see why start here</p>
                       </div>
                     </div>
                   </div>
 
-                  {/* Arrow for desktop */}
-                  {index < journeySteps.length - 1 && (
-                    <div className="hidden md:block absolute top-1/2 -right-4 transform -translate-y-1/2 z-20">
-                      <ArrowRight className="h-8 w-8 text-surface-400 dark:text-surface-500" />
+                  {/* Back of Card */}
+                  <div className="absolute inset-0 w-full h-full backface-hidden rotate-y-180">
+                    <div className="bg-primary-600 text-white rounded-lg shadow-lg p-6 h-full flex flex-col justify-center items-center text-center">
+                      <div className="mb-4">
+                        <step.icon className="h-12 w-12 mx-auto mb-4 opacity-80" />
+                      </div>
+                      <h3 className="text-lg font-bold mb-4">Start Here If:</h3>
+                      <p className="text-primary-100 text-sm leading-relaxed mb-6">
+                        {step.flipText}
+                      </p>
+                      <button
+                        onClick={() => scrollToSection(step.targetSection)}
+                        className="inline-flex items-center px-4 py-2 bg-white text-primary-600 rounded-lg hover:bg-primary-50 transition-colors text-sm font-medium"
+                      >
+                        Get Started
+                        <ArrowRight className="ml-2 h-4 w-4" />
+                      </button>
                     </div>
-                  )}
+                  </div>
                 </div>
-              ))}
-            </div>
+              </div>
+            ))}
           </div>
 
           {/* Call to Action */}
@@ -533,7 +531,7 @@ const Services = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
         <div className="grid grid-cols-1 gap-16">
           {services.map((service, index) => (
-            <div key={service.id} className={`flex flex-col md:flex-row gap-8 items-start ${index % 2 === 1 ? 'md:flex-row-reverse' : ''}`}>
+            <div key={service.id} id={`${service.id}-service`} className={`flex flex-col md:flex-row gap-8 items-start ${index % 2 === 1 ? 'md:flex-row-reverse' : ''}`}>
               <div className="w-full md:w-1/2">
                 <img
                   src={service.image}
