@@ -506,11 +506,11 @@ const About = () => {
             </div>
           </div>
           <div className="relative lg:order-1">
-            <div className="relative w-full max-w-lg mx-auto lg:mx-0">
+            <div className="relative w-full">
               <img
                 src="/IMG_3841.PNG"
                 alt="Conference and Summit"
-                className="w-full h-64 sm:h-80 lg:h-80 object-cover object-center rounded-lg shadow-2xl"
+                className="w-full h-48 sm:h-56 md:h-64 object-cover object-center rounded-lg shadow-2xl"
               />
               <div className="absolute -bottom-4 -right-4 bg-white dark:bg-surface-700 p-4 lg:p-6 rounded-lg shadow-xl">
                 <p className="text-xl font-bold text-primary-600 dark:text-primary-400">2026</p>
