@@ -375,7 +375,7 @@ const Services = () => {
               Your Hashrate Heating Journey
             </h2>
             <p className="text-xl text-surface-600 dark:text-surface-400 max-w-3xl mx-auto">
-              Choose your starting point based on where you are in your hashrate heating journey
+              Choose a starting point that suits you
             </p>
           </div>
 
