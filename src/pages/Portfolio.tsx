@@ -109,12 +109,12 @@ const Portfolio = () => {
   return (
     <div className="bg-surface-50 dark:bg-surface-900 min-h-screen">
       {/* Hero Section */}
-      <div className="bg-gradient-to-r from-primary-600 to-primary-800 py-20">
+      <div className="bg-gradient-to-r from-[#4970A5] to-[#718EBC] py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
             Our Projects
           </h1>
-          <p className="text-xl text-primary-100 max-w-2xl mx-auto">
+          <p className="text-xl text-white/90 max-w-2xl mx-auto">
             Explore our successful implementations across various industries
           </p>
         </div>
@@ -188,7 +188,7 @@ const Portfolio = () => {
           </p>
           <Link
             to="/contact"
-            className="inline-flex items-center px-8 py-4 bg-primary-600 text-white rounded-lg hover:bg-primary-700 transition-colors"
+            className="inline-flex items-center px-8 py-4 bg-primary-600 text-white rounded-lg hover:bg-primary-700 transition-colors text-base font-subheading"
           >
             Contact Us
             <ArrowRight className="ml-2 h-5 w-5" />

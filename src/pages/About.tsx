@@ -463,7 +463,7 @@ const About = () => {
                     href="https://braiins.com/books/bitcoin-mining-heat-reuse"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center justify-center px-6 py-3 bg-primary-600 text-white rounded-lg hover:bg-primary-700 transition-colors"
+                    className="inline-flex items-center justify-center px-6 py-3 bg-primary-600 text-white rounded-lg hover:bg-primary-700 transition-colors text-base font-subheading"
                   >
                     Get the Book
                     <ArrowRight className="ml-2 h-5 w-5" />
@@ -498,7 +498,7 @@ const About = () => {
                 href="https://denver.space/heatpunk_summit"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center justify-center px-6 py-3 bg-primary-600 text-white rounded-lg hover:bg-primary-700 transition-colors"
+                className="inline-flex items-center justify-center px-6 py-3 bg-primary-600 text-white rounded-lg hover:bg-primary-700 transition-colors text-base font-subheading"
               >
                 Visit Conference Site
                 <ArrowRight className="ml-2 h-5 w-5" />
@@ -581,7 +581,7 @@ const About = () => {
                       </div>
                       <motion.button
                         onClick={() => setExpandedStep(expandedStep === step.id ? null : step.id)}
-                        className="ml-4 px-4 py-2 bg-primary-600 text-white rounded-lg hover:bg-primary-700 transition-colors"
+                        className="ml-4 px-4 py-2 bg-primary-600 text-white rounded-lg hover:bg-primary-700 transition-colors text-base font-subheading"
                         whileHover={{ scale: 1.05 }}
                         whileTap={{ scale: 0.95 }}
                       >
@@ -703,7 +703,7 @@ const About = () => {
                 />
                 <button
                   type="submit"
-                  className="px-6 py-3 bg-white text-primary-600 rounded-lg font-semibold hover:bg-white/90 transition-colors"
+                  className="px-6 py-3 bg-white text-primary-600 rounded-lg font-semibold hover:bg-white/90 transition-colors text-base font-subheading"
                 >
                   Join Us
                 </button>

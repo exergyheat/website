@@ -99,7 +99,7 @@ const BookCall = () => {
                   {member.description}
                 </p>
                 <button 
-                  className="w-full bg-primary-600 text-white py-3 px-4 rounded-lg hover:bg-primary-700 transition-colors flex items-center justify-center"
+                  className="w-full bg-primary-600 text-white py-3 px-4 rounded-lg hover:bg-primary-700 transition-colors flex items-center justify-center text-base font-subheading"
                   data-cal-link={member.calLink}
                   data-cal-namespace="meeting"
                   data-cal-config='{"layout":"month_view","theme":"auto"}'
