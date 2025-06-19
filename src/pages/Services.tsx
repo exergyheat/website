@@ -489,7 +489,7 @@ const Services = () => {
                           : 'bg-surface-200 dark:bg-surface-700 text-surface-700 dark:text-surface-300'
                       }`}
                     >
-                      Existing Build
+                      Residential
                     </button>
                     <button
                       onClick={() => setBuildType('new')}
@@ -499,7 +499,7 @@ const Services = () => {
                           : 'bg-surface-200 dark:bg-surface-700 text-surface-700 dark:text-surface-300'
                       }`}
                     >
-                      New Build
+                      Commercial
                     </button>
                   </div>
                 )}
