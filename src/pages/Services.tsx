@@ -81,7 +81,7 @@ const Services = () => {
         "1-hour consultation call"
       ]
     },
-    buttonText: `Purchase ${type === 'residential' ? 'Residential' : 'Commercial'} Build Audit - ${type === 'residential' ? '$500' : '$2500'}`,
+    buttonText: `Purchase ${type === 'residential' ? 'Residential' : 'Commercial'} Heat Audit - ${type === 'residential' ? '$500' : '$2500'}`,
     buttonLink: `/contact?service=audit&type=${type}`,
     demo: {
       title: "Sample Heat Audit Report",
@@ -92,11 +92,11 @@ const Services = () => {
             <div className="mt-4 grid grid-cols-2 gap-4">
               <div>
                 <p className="text-sm text-surface-600 dark:text-surface-400">Total Area</p>
-                <p className="font-medium text-surface-900 dark:text-surface-100">50,000 sq ft</p>
+                <p className="font-medium text-surface-900 dark:text-surface-100">{type === 'residential' ? '3,500 sq ft' : '50,000 sq ft'}</p>
               </div>
               <div>
                 <p className="text-sm text-surface-600 dark:text-surface-400">Current Heating Load</p>
-                <p className="font-medium text-surface-900 dark:text-surface-100">1.2M BTU/hr</p>
+                <p className="font-medium text-surface-900 dark:text-surface-100">{type === 'residential' ? '120,000 BTU/hr' : '1.2M BTU/hr'}</p>
               </div>
             </div>
           </div>
@@ -107,11 +107,11 @@ const Services = () => {
               <div className="grid grid-cols-2 gap-4">
                 <div>
                   <p className="text-sm text-surface-600 dark:text-surface-400">Current Annual Cost</p>
-                  <p className="font-medium text-surface-900 dark:text-surface-100">$48,000</p>
+                  <p className="font-medium text-surface-900 dark:text-surface-100">{type === 'residential' ? '$4,800' : '$48,000'}</p>
                 </div>
                 <div>
                   <p className="text-sm text-surface-600 dark:text-surface-400">Projected Savings</p>
-                  <p className="font-medium text-primary-600">$31,200 (65%)</p>
+                  <p className="font-medium text-primary-600">{type === 'residential' ? '$3,120 (65%)' : '$31,200 (65%)'}</p>
                 </div>
               </div>
             </div>
@@ -120,22 +120,22 @@ const Services = () => {
           <div className="space-y-4">
             <h3 className="text-xl font-bold text-surface-900 dark:text-surface-100">Recommendations</h3>
             <ul className="space-y-2">
-              <li className="flex items-center text-surface-600 dark:text-surface-400">
-                <ArrowRight className="h-4 w-4 text-primary-600 mr-2" />
-                Install 4x EXERGY SpaceHeat 2000 units
-              </li>
-              <li className="flex items-center text-surface-600 dark:text-surface-400">
-                <ArrowRight className="h-4 w-4 text-primary-600 mr-2" />
-                Integrate with existing HVAC system
-              </li>
-              <li className="flex items-center text-surface-600 dark:text-surface-400">
-                <ArrowRight className="h-4 w-4 text-primary-600 mr-2" />
-                Add smart controls for zone management
-              </li>
-              <li className="flex items-center text-surface-600 dark:text-surface-400">
-                <ArrowRight className="h-4 w-4 text-primary-600 mr-2" />
-                Implement heat recovery system
-              </li>
+              {type === 'residential' ? [
+                'Install 2x EXERGY SpaceHeat 1000 units',
+                'Integrate with existing HVAC system',
+                'Add smart thermostat controls',
+                'Implement zone management'
+              ] : [
+                'Install 4x EXERGY SpaceHeat 2000 units',
+                'Integrate with existing HVAC system',
+                'Add smart controls for zone management',
+                'Implement heat recovery system'
+              ].map((item, index) => (
+                <li key={index} className="flex items-center text-surface-600 dark:text-surface-400">
+                  <ArrowRight className="h-4 w-4 text-primary-600 mr-2" />
+                  {item}
+                </li>
+              ))}
             </ul>
           </div>
         </div>
@@ -346,7 +346,7 @@ const Services = () => {
         ]
       },
       buttonText: "Contact Us",
-      buttonLink: "/contact?service=consulting",
+      buttonLink: "/contact?service=consulting"
       // No demo property for consulting service
     }
   ]
