@@ -81,7 +81,7 @@ const Services = () => {
         "1-hour consultation call"
       ]
     },
-    buttonText: `Purchase ${type === 'existing' ? 'Existing' : 'New'} Build Audit - ${type === 'existing' ? '$400' : '$600'}`,
+    buttonText: `Purchase ${type === 'residential' ? 'Residential' : 'Commercial'} Build Audit - ${type === 'residential' ? '$500' : '$2500'}`,
     buttonLink: `/contact?service=audit&type=${type}`,
     demo: {
       title: "Sample Heat Audit Report",
