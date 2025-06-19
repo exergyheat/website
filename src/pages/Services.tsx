@@ -45,11 +45,11 @@ const Services = () => {
     }
   ]
 
-  const getAuditService = (type: 'existing' | 'new') => ({
+  const getAuditService = (type: 'residential' | 'commercial') => ({
     id: 'audit',
     name: "Heat Audit Analysis",
     description: "Get a comprehensive analysis of your heating infrastructure and discover your potential savings with hashrate heating.",
-    price: type === 'existing' ? "$400" : "$600",
+    price: type === 'residential' ? "$500" : "$2500",
     features: [
       "Detailed heating model",
       "Heat cost savings projection",
