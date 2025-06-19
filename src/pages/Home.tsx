@@ -325,24 +325,24 @@ const Home = () => {
         </div>
       </div>
 
-      {/* CTA Section */}
-      <div className="relative bg-primary-600 py-16 overflow-hidden">
+      {/* CTA Section with Custom Gradient */}
+      <div className="relative py-16 overflow-hidden bg-gradient-to-r from-[#4970A5] to-[#718EBC]">
         <div className="absolute inset-0">
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_-20%,#4970A5,transparent_75%)] animate-pulse"></div>
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_80%,#2f3b69,transparent_50%)] animate-pulse [animation-delay:1s]"></div>
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_50%,#4970A5,transparent_50%)] animate-pulse [animation-delay:2s]"></div>
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_-20%,rgba(255,255,255,0.1),transparent_75%)] animate-pulse"></div>
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_80%,rgba(47,59,105,0.3),transparent_50%)] animate-pulse [animation-delay:1s]"></div>
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_50%,rgba(255,255,255,0.1),transparent_50%)] animate-pulse [animation-delay:2s]"></div>
         </div>
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl font-heading text-white mb-4">
             Ready to get paid for heat?
           </h2>
-          <p className="text-xl font-body text-secondary-100 mb-8">
+          <p className="text-xl font-body text-white/90 mb-8">
             Get in touch so we can help you achieve your goals.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <Link
               to="/contact"
-              className="inline-flex items-center px-6 py-3 border border-transparent text-base font-subheading rounded-md text-primary-700 bg-white hover:bg-secondary-50 transition-colors"
+              className="inline-flex items-center px-6 py-3 border border-transparent text-base font-subheading rounded-md text-primary-700 bg-white hover:bg-white/90 transition-colors"
             >
               Contact Us
               <ArrowRight className="ml-2 h-5 w-5" />
