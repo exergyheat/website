@@ -361,7 +361,7 @@ const Services = () => {
               Our Services
             </h1>
             <p className="text-xl text-white/90 max-w-2xl mx-auto">
-              From concept to implementation, we'll help you harness hashrate heating
+              From curiosity to implementation, we'll help you harness hashrate heating
             </p>
           </div>
         </div>
