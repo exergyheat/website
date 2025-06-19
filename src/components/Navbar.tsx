@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
-import { Menu, X, Laptop } from 'lucide-react'
+import { Menu, X } from 'lucide-react'
 import ThemeToggle from './ThemeToggle'
 
 const Navbar = () => {
@@ -11,9 +11,12 @@ const Navbar = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between h-16">
           <div className="flex items-center">
-            <Link to="/" className="flex items-center">
-              <Laptop className="h-8 w-8 text-primary-600" />
-              <span className="ml-2 text-xl font-heading text-surface-900 dark:text-surface-100">EXERGY</span>
+            <Link to="/" className="flex items-center hover:opacity-80 transition-opacity">
+              <img
+                src="/Logo1_blue1_horizontal.png"
+                alt="EXERGY"
+                className="h-8 w-auto"
+              />
             </Link>
           </div>
 

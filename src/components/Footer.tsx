@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import { Laptop, Github, X, Linkedin, Mail, MapPin } from 'lucide-react'
+import { Github, X, Linkedin, Mail, MapPin } from 'lucide-react'
 
 const Footer = () => {
   return (
@@ -10,8 +10,11 @@ const Footer = () => {
           {/* Company Info */}
           <div>
             <Link to="/" className="flex items-center hover:opacity-80 transition-opacity">
-              <Laptop className="h-8 w-8 text-primary-400" />
-              <span className="ml-2 text-xl font-heading text-surface-100">EXERGY</span>
+              <img
+                src="/Logo1_blue1_horizontal.png"
+                alt="EXERGY"
+                className="h-8 w-auto filter brightness-0 invert"
+              />
             </Link>
             <p className="mt-4 font-body text-surface-400">
               Heat That Pays
