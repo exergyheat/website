@@ -125,7 +125,7 @@ const Home = () => {
                 </div>
                 <div className="ml-4">
                   <h3 className="text-lg font-subheading text-surface-900 dark:text-surface-100">
-                    Bitcoin Miners Pay You for Hashing Bitcoin
+                    Bitcoin Miners Pay You for Participating
                   </h3>
                   <p className="mt-2 text-base font-body text-surface-500 dark:text-surface-400">
                     Mining devices perform "hashing" operations that reward you for settling bitcoin transactions and issuing coins - And get HOT in the process.
