@@ -347,74 +347,7 @@ const Services = () => {
       },
       buttonText: "Contact Us",
       buttonLink: "/contact?service=consulting",
-      demo: {
-        title: "Sample Consulting Report",
-        content: (
-          <div className="space-y-6">
-            <div className="border-b border-surface-200 dark:border-surface-700 pb-4">
-              <h3 className="text-xl font-bold text-surface-900 dark:text-surface-100">Strategic Analysis</h3>
-              <div className="mt-4 space-y-4">
-                <div>
-                  <h4 className="font-medium text-surface-900 dark:text-surface-100">Current State</h4>
-                  <p className="text-surface-600 dark:text-surface-400">Analysis of existing heating infrastructure and operational costs</p>
-                </div>
-                <div>
-                  <h4 className="font-medium text-surface-900 dark:text-surface-100">Opportunities</h4>
-                  <p className="text-surface-600 dark:text-surface-400">Identification of key areas for improvement and optimization</p>
-                </div>
-              </div>
-            </div>
-
-            <div className="space-y-4">
-              <h3 className="text-xl font-bold text-surface-900 dark:text-surface-100">Recommendations</h3>
-              <div className="space-y-3">
-                <div className="bg-surface-50 dark:bg-surface-700 p-4 rounded-lg">
-                  <h4 className="font-medium text-surface-900 dark:text-surface-100">Short Term (0-6 months)</h4>
-                  <ul className="mt-2 space-y-2">
-                    <li className="flex items-center text-surface-600 dark:text-surface-400">
-                      <ArrowRight className="h-4 w-4 text-primary-600 mr-2" />
-                      Pilot program implementation
-                    </li>
-                    <li className="flex items-center text-surface-600 dark:text-surface-400">
-                      <ArrowRight className="h-4 w-4 text-primary-600 mr-2" />
-                      Staff training program
-                    </li>
-                  </ul>
-                </div>
-                <div className="bg-surface-50 dark:bg-surface-700 p-4 rounded-lg">
-                  <h4 className="font-medium text-surface-900 dark:text-surface-100">Long Term (6-18 months)</h4>
-                  <ul className="mt-2 space-y-2">
-                    <li className="flex items-center text-surface-600 dark:text-surface-400">
-                      <ArrowRight className="h-4 w-4 text-primary-600 mr-2" />
-                      Full-scale deployment
-                    </li>
-                    <li className="flex items-center text-surface-600 dark:text-surface-400">
-                      <ArrowRight className="h-4 w-4 text-primary-600 mr-2" />
-                      Integration optimization
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-
-            <div className="space-y-4">
-              <h3 className="text-xl font-bold text-surface-900 dark:text-surface-100">Expected Outcomes</h3>
-              <div className="grid grid-cols-2 gap-4">
-                <div className="bg-surface-50 dark:bg-surface-700 p-4 rounded-lg">
-                  <p className="text-sm text-surface-600 dark:text-surface-400">Cost Reduction</p>
-                  <p className="text-xl font-bold text-primary-600">65%</p>
-                  <p className="text-sm text-surface-600 dark:text-surface-400">Annual heating costs</p>
-                </div>
-                <div className="bg-surface-50 dark:bg-surface-700 p-4 rounded-lg">
-                  <p className="text-sm text-surface-600 dark:text-surface-400">ROI Period</p>
-                  <p className="text-xl font-bold text-primary-600">18 months</p>
-                  <p className="text-sm text-surface-600 dark:text-surface-400">Full system payback</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        )
-      }
+      // No demo property for consulting service
     }
   ]
 
@@ -620,20 +553,22 @@ const Services = () => {
                     )}
                   </div>
 
-                  <div className="flex gap-4 pt-6 border-t border-surface-200 dark:border-surface-700">
+                  <div className={`${service.demo ? 'flex gap-4' : ''} pt-6 border-t border-surface-200 dark:border-surface-700`}>
                     <Link
                       to={service.buttonLink}
-                      className="flex-1 inline-flex items-center justify-center px-6 py-3 bg-primary-600 text-white rounded-lg hover:bg-primary-700 transition-colors"
+                      className={`${service.demo ? 'flex-1' : 'w-full'} inline-flex items-center justify-center px-6 py-3 bg-primary-600 text-white rounded-lg hover:bg-primary-700 transition-colors`}
                     >
                       {service.buttonText}
                       <ArrowRight className="ml-2 h-5 w-5" />
                     </Link>
-                    <button
-                      onClick={() => setDemoService(service.id)}
-                      className="px-6 py-3 bg-surface-100 dark:bg-surface-700 text-surface-900 dark:text-surface-100 rounded-lg hover:bg-surface-200 dark:hover:bg-surface-600 transition-colors"
-                    >
-                      Demo
-                    </button>
+                    {service.demo && (
+                      <button
+                        onClick={() => setDemoService(service.id)}
+                        className="px-6 py-3 bg-surface-100 dark:bg-surface-700 text-surface-900 dark:text-surface-100 rounded-lg hover:bg-surface-200 dark:hover:bg-surface-600 transition-colors"
+                      >
+                        Example
+                      </button>
+                    )}
                   </div>
                 </div>
               </div>
