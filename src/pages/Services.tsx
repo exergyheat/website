@@ -556,7 +556,7 @@ const Services = () => {
                   <div className={`${service.demo ? 'flex gap-4' : ''} pt-6 border-t border-surface-200 dark:border-surface-700`}>
                     <Link
                       to={service.buttonLink}
-                      className={`${service.demo ? 'flex-1' : 'w-full'} inline-flex items-center justify-center px-6 py-3 bg-primary-600 text-white rounded-lg hover:bg-primary-700 transition-colors`}
+                      className={`${service.demo ? 'flex-1' : 'w-full'} inline-flex items-center justify-center px-6 py-3 bg-primary-600 text-white rounded-lg hover:bg-primary-700 transition-colors text-base font-subheading`}
                     >
                       {service.buttonText}
                       <ArrowRight className="ml-2 h-5 w-5" />
@@ -564,7 +564,7 @@ const Services = () => {
                     {service.demo && (
                       <button
                         onClick={() => setDemoService(service.id)}
-                        className="px-6 py-3 bg-surface-100 dark:bg-surface-700 text-surface-900 dark:text-surface-100 rounded-lg hover:bg-surface-200 dark:hover:bg-surface-600 transition-colors"
+                        className="px-6 py-3 bg-surface-100 dark:bg-surface-700 text-surface-900 dark:text-surface-100 rounded-lg hover:bg-surface-200 dark:hover:bg-surface-600 transition-colors text-base font-subheading"
                       >
                         Example
                       </button>
@@ -617,14 +617,14 @@ const Services = () => {
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <Link
               to="/products"
-              className="inline-flex items-center px-8 py-4 bg-white text-primary-600 rounded-lg hover:bg-white/90 transition-colors"
+              className="inline-flex items-center px-8 py-4 bg-white text-primary-600 rounded-lg hover:bg-white/90 transition-colors text-base font-subheading"
             >
               Our Hardware Solutions
               <ArrowRight className="ml-2 h-5 w-5" />
             </Link>
             <Link
               to="/book-call"
-              className="inline-flex items-center px-8 py-4 border border-white text-white rounded-lg hover:bg-white/10 transition-colors"
+              className="inline-flex items-center px-8 py-4 border border-white text-white rounded-lg hover:bg-white/10 transition-colors text-base font-subheading"
             >
               Book an Intro Call
               <ArrowRight className="ml-2 h-5 w-5" />
