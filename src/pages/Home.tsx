@@ -128,7 +128,7 @@ const Home = () => {
                     Bitcoin Miners Pay You for Participating
                   </h3>
                   <p className="mt-2 text-base font-body text-surface-500 dark:text-surface-400">
-                    Mining devices perform "hashing" operations that reward you for settling bitcoin transactions and issuing coins - And get HOT in the process.
+                    Mininers perform "hashing" operations to settle bitcoin transactions and issue coins. Earnings are automated, and the energy used to run them is all turned into heat.
                   </p>
                 </div>
               </div>
