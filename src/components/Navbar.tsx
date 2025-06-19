@@ -15,7 +15,7 @@ const Navbar = () => {
               <img
                 src="/Logo1_black_horizontal.png"
                 alt="EXERGY"
-                className="h-8 w-auto"
+                className="h-10 w-auto dark:filter dark:brightness-0 dark:invert"
               />
             </Link>
           </div>
