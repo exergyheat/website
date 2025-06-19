@@ -306,7 +306,7 @@ const Home = () => {
                   Can I Control it Easily?
                 </h3>
                 <p className="font-body text-surface-600 dark:text-surface-400 text-center">
-                  Even better. Because hashrate heaters are digital, they offer superior control than traditional heating fuel sources.
+                  Even better. Because they're digital, hashrate heaters offer superior control than traditional heating fuel sources.
                 </p>
               </div>
             </motion.div>
