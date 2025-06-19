@@ -11,7 +11,7 @@ const Footer = () => {
           <div>
             <Link to="/" className="flex items-center hover:opacity-80 transition-opacity">
               <img
-                src="/Logo1_blue1_horizontal.png"
+                src="/Logo1_black_horizontal.png"
                 alt="EXERGY"
                 className="h-8 w-auto filter brightness-0 invert"
               />
