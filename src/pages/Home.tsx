@@ -167,14 +167,14 @@ const Home = () => {
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
               <Link
                 to="/learn"
-                className="inline-flex items-center px-6 py-3 bg-primary-500 text-white rounded-lg hover:bg-primary-600 transition-colors font-subheading"
+                className="inline-flex items-center px-6 py-3 bg-primary-500 text-white rounded-lg hover:bg-primary-600 transition-colors text-base font-subheading"
               >
                 Learn Hashrate Heating
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Link>
               <Link
                 to="/calculators"
-                className="inline-flex items-center px-6 py-3 border border-primary-500 text-primary-500 dark:text-secondary-500 rounded-lg hover:bg-primary-50 dark:hover:bg-primary-900 transition-colors font-subheading"
+                className="inline-flex items-center px-6 py-3 border border-primary-500 text-primary-500 dark:text-secondary-500 rounded-lg hover:bg-primary-50 dark:hover:bg-primary-900 transition-colors text-base font-subheading"
               >
                 <Calculator className="mr-2 h-5 w-5" />
                 Estimate Your Earnings
@@ -234,7 +234,7 @@ const Home = () => {
           <div className="mt-12 text-center">
             <Link
               to="/about"
-              className="inline-flex items-center px-6 py-3 bg-primary-500 text-white rounded-lg hover:bg-primary-600 transition-colors font-subheading"
+              className="inline-flex items-center px-6 py-3 bg-primary-500 text-white rounded-lg hover:bg-primary-600 transition-colors text-base font-subheading"
             >
               More About Us
               <ArrowRight className="ml-2 h-5 w-5" />
@@ -315,7 +315,7 @@ const Home = () => {
           <div className="mt-12 text-center">
             <Link
               to="/faq"
-              className="inline-flex items-center px-6 py-3 bg-primary-500 text-white rounded-lg hover:bg-primary-600 transition-colors font-subheading"
+              className="inline-flex items-center px-6 py-3 bg-primary-500 text-white rounded-lg hover:bg-primary-600 transition-colors text-base font-subheading"
             >
               See More FAQ
               <ArrowRight className="ml-2 h-5 w-5" />
