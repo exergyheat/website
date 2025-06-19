@@ -90,14 +90,14 @@ const Education = () => {
 
   return (
     <div className="bg-surface-50 dark:bg-surface-900 min-h-screen">
-      {/* Hero Section */}
-      <div className="bg-gradient-to-r from-primary-600 to-primary-800 py-20">
+      {/* Hero Section with Custom Gradient */}
+      <div className="bg-gradient-to-r from-[#4970A5] to-[#718EBC] py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <BookOpen className="h-16 w-16 text-white mx-auto mb-6" />
           <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
             Hashrate Heating Resources
           </h1>
-          <p className="text-xl text-primary-100 max-w-2xl mx-auto">
+          <p className="text-xl text-white/90 max-w-2xl mx-auto">
             Your comprehensive guide to understanding and implementing hashrate heating technology
           </p>
         </div>
@@ -113,7 +113,7 @@ const Education = () => {
                 onClick={() => setActiveType(type.id as ContentType)}
                 className={`flex items-center px-4 py-2 rounded-lg whitespace-nowrap transition-colors ${
                   activeType === type.id
-                    ? 'bg-primary-600 text-white'
+                    ? 'bg-primary-500 text-white'
                     : 'bg-surface-100 dark:bg-surface-700 text-surface-700 dark:text-surface-300 hover:bg-primary-50 dark:hover:bg-surface-600'
                 }`}
               >
@@ -145,7 +145,7 @@ const Education = () => {
                     alt={item.title}
                     className="w-full h-full object-cover"
                   />
-                  <div className="absolute top-4 right-4 bg-primary-600 text-white px-4 py-1 rounded-full text-sm capitalize">
+                  <div className="absolute top-4 right-4 bg-primary-500 text-white px-4 py-1 rounded-full text-sm capitalize">
                     {item.type}
                   </div>
                 </div>
@@ -155,7 +155,7 @@ const Education = () => {
                   href={item.link}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="block hover:text-primary-600 dark:hover:text-primary-400 transition-colors"
+                  className="block hover:text-primary-500 dark:hover:text-primary-400 transition-colors"
                 >
                   <h3 className="text-xl font-bold text-surface-900 dark:text-surface-100 mb-2">
                     {item.title}
@@ -168,7 +168,7 @@ const Education = () => {
                   {item.description.split(' ').length > 30 && (
                     <button
                       onClick={() => setExpandedDescription(expandedDescription === item.title ? null : item.title)}
-                      className="mt-2 flex items-center text-primary-600 dark:text-primary-400 hover:text-primary-700 dark:hover:text-primary-300 transition-colors"
+                      className="mt-2 flex items-center text-primary-500 dark:text-primary-400 hover:text-primary-600 dark:hover:text-primary-300 transition-colors"
                     >
                       {expandedDescription === item.title ? (
                         <>
@@ -194,14 +194,14 @@ const Education = () => {
         </div>
       </div>
 
-      {/* Hungry for More Section */}
-      <div className="bg-gradient-to-r from-primary-600 to-primary-800 py-20">
+      {/* Hungry for More Section with Custom Gradient */}
+      <div className="bg-gradient-to-r from-[#4970A5] to-[#718EBC] py-20">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <ExternalLink className="h-16 w-16 text-white mx-auto mb-6" />
           <h2 className="text-3xl font-bold text-white mb-6">
             Hungry for More?
           </h2>
-          <p className="text-xl text-primary-100 mb-8">
+          <p className="text-xl text-white/90 mb-8">
             Check out the Hashrate Heatpunk Forum - a technical platform for builders and engineers to showcase their solutions.
           </p>
           
@@ -209,7 +209,7 @@ const Education = () => {
             href="https://heatpunks.org"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center px-8 py-4 bg-white text-primary-600 rounded-lg font-semibold hover:bg-primary-50 transition-colors"
+            className="inline-flex items-center px-8 py-4 bg-white text-primary-600 rounded-lg font-semibold hover:bg-white/90 transition-colors"
           >
             Visit Heatpunk Forum
             <ExternalLink className="ml-2 h-5 w-5" />

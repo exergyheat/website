@@ -84,14 +84,14 @@ const FAQ = () => {
 
   return (
     <div className="bg-surface-50 dark:bg-surface-900 min-h-screen">
-      {/* Hero Section */}
-      <div className="bg-gradient-to-r from-primary-600 to-primary-800 py-20">
+      {/* Hero Section with Custom Gradient */}
+      <div className="bg-gradient-to-r from-[#4970A5] to-[#718EBC] py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <MessageCircle className="h-16 w-16 text-white mx-auto mb-6" />
           <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
             Frequently Asked Questions
           </h1>
-          <p className="text-xl text-primary-100 max-w-2xl mx-auto">
+          <p className="text-xl text-white/90 max-w-2xl mx-auto">
             Find answers to common questions about our hashrate heating technology
           </p>
         </div>
@@ -125,9 +125,9 @@ const FAQ = () => {
                 {section.title}
               </h2>
               {openSection === section.id ? (
-                <Minus className="h-6 w-6 text-primary-600 dark:text-primary-400" />
+                <Minus className="h-6 w-6 text-primary-500 dark:text-primary-400" />
               ) : (
-                <Plus className="h-6 w-6 text-primary-600 dark:text-primary-400" />
+                <Plus className="h-6 w-6 text-primary-500 dark:text-primary-400" />
               )}
             </button>
             
@@ -160,7 +160,7 @@ const FAQ = () => {
           </p>
           <a
             href="mailto:support@exergyheat.com"
-            className="inline-block bg-primary-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-primary-700 transition-colors"
+            className="inline-block bg-primary-500 text-white px-8 py-3 rounded-lg font-semibold hover:bg-primary-600 transition-colors"
           >
             Contact Support
           </a>

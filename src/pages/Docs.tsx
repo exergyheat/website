@@ -222,12 +222,12 @@ const Docs = () => {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div className="bg-surface-50 dark:bg-surface-700 p-6 rounded-lg">
                 <h4 className="font-semibold text-surface-900 dark:text-surface-100 mb-2">Existing Buildings</h4>
-                <p className="text-2xl font-bold text-primary-600 dark:text-primary-400 mb-2">$400</p>
+                <p className="text-2xl font-bold text-primary-500 dark:text-primary-400 mb-2">$400</p>
                 <p className="text-surface-600 dark:text-surface-400">For buildings with existing heating systems</p>
               </div>
               <div className="bg-surface-50 dark:bg-surface-700 p-6 rounded-lg">
                 <h4 className="font-semibold text-surface-900 dark:text-surface-100 mb-2">New Construction</h4>
-                <p className="text-2xl font-bold text-primary-600 dark:text-primary-400 mb-2">$600</p>
+                <p className="text-2xl font-bold text-primary-500 dark:text-primary-400 mb-2">$600</p>
                 <p className="text-surface-600 dark:text-surface-400">For new builds and major renovations</p>
               </div>
             </div>
@@ -259,7 +259,7 @@ const Docs = () => {
             <div className="bg-surface-50 dark:bg-surface-700 p-6 rounded-lg">
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
                 <div>
-                  <p className="text-3xl font-bold text-primary-600 dark:text-primary-400 mb-2">85%</p>
+                  <p className="text-3xl font-bold text-primary-500 dark:text-primary-400 mb-2">85%</p>
                   <p className="text-surface-900 dark:text-surface-100 font-semibold">Customer Share</p>
                   <p className="text-surface-600 dark:text-surface-400">Mining rewards to customer</p>
                 </div>
@@ -307,14 +307,14 @@ const Docs = () => {
 
   return (
     <div className="bg-surface-50 dark:bg-surface-900 min-h-screen">
-      {/* Hero Section */}
-      <div className="bg-gradient-to-r from-primary-600 to-primary-800 py-20">
+      {/* Hero Section with Custom Gradient */}
+      <div className="bg-gradient-to-r from-[#4970A5] to-[#718EBC] py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <FileText className="h-16 w-16 text-white mx-auto mb-6" />
           <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
             Documentation
           </h1>
-          <p className="text-xl text-primary-100 max-w-2xl mx-auto">
+          <p className="text-xl text-white/90 max-w-2xl mx-auto">
             Comprehensive documentation for EXERGY services, contracts, and policies
           </p>
         </div>
@@ -335,7 +335,7 @@ const Docs = () => {
                       className="w-full flex items-center justify-between p-2 text-left text-surface-700 dark:text-surface-300 hover:bg-surface-50 dark:hover:bg-surface-700 rounded-lg transition-colors"
                     >
                       <div className="flex items-center">
-                        <item.icon className="h-5 w-5 mr-3 text-primary-600 dark:text-primary-400" />
+                        <item.icon className="h-5 w-5 mr-3 text-primary-500 dark:text-primary-400" />
                         <span className="font-medium">{item.title}</span>
                       </div>
                       {expandedItems.includes(item.id) ? (
@@ -352,7 +352,7 @@ const Docs = () => {
                             onClick={() => setActiveSection(child.id)}
                             className={`block w-full text-left p-2 rounded-lg transition-colors ${
                               activeSection === child.id
-                                ? 'bg-primary-50 dark:bg-primary-900 text-primary-600 dark:text-primary-400'
+                                ? 'bg-primary-50 dark:bg-primary-900 text-primary-500 dark:text-primary-400'
                                 : 'text-surface-600 dark:text-surface-400 hover:bg-surface-50 dark:hover:bg-surface-700'
                             }`}
                           >

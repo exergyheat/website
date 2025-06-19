@@ -41,14 +41,14 @@ const Calculators = () => {
 
   return (
     <div className="bg-surface-50 dark:bg-surface-900 min-h-screen">
-      {/* Hero Section */}
-      <div className="bg-gradient-to-r from-primary-600 to-primary-800 py-20">
+      {/* Hero Section with Custom Gradient */}
+      <div className="bg-gradient-to-r from-[#4970A5] to-[#718EBC] py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <Calculator className="h-16 w-16 text-white mx-auto mb-6" />
           <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
             Financial Calculators
           </h1>
-          <p className="text-xl text-primary-100 max-w-2xl mx-auto">
+          <p className="text-xl text-white/90 max-w-2xl mx-auto">
             Estimate your potential savings and earnings with our interactive calculators
           </p>
         </div>
@@ -64,7 +64,7 @@ const Calculators = () => {
               onClick={() => setActiveTab(calc.id)}
               className={`flex items-center p-4 rounded-lg transition-colors ${
                 activeTab === calc.id
-                  ? 'bg-primary-600 text-white'
+                  ? 'bg-primary-500 text-white'
                   : 'bg-white dark:bg-surface-800 text-surface-700 dark:text-surface-300 hover:bg-primary-50 dark:hover:bg-surface-700'
               }`}
             >
@@ -121,7 +121,7 @@ const Calculators = () => {
                   placeholder="e.g., 0.12"
                 />
               </div>
-              <button className="w-full bg-primary-600 text-white py-3 rounded-lg hover:bg-primary-700 transition-colors">
+              <button className="w-full bg-primary-500 text-white py-3 rounded-lg hover:bg-primary-600 transition-colors">
                 Calculate
               </button>
             </div>
@@ -136,7 +136,7 @@ const Calculators = () => {
                   <h3 className="text-lg font-medium text-surface-700 dark:text-surface-300">
                     Monthly Savings
                   </h3>
-                  <p className="text-3xl font-bold text-primary-600 dark:text-primary-400">
+                  <p className="text-3xl font-bold text-primary-500 dark:text-primary-400">
                     ${values.currentBill ? Math.round(Number(values.currentBill) * 0.6) : '0'}
                   </p>
                 </div>
@@ -144,7 +144,7 @@ const Calculators = () => {
                   <h3 className="text-lg font-medium text-surface-700 dark:text-surface-300">
                     Payback Period
                   </h3>
-                  <p className="text-3xl font-bold text-primary-600 dark:text-primary-400">
+                  <p className="text-3xl font-bold text-primary-500 dark:text-primary-400">
                     {values.currentBill ? '18-24 months' : '-'}
                   </p>
                 </div>
@@ -152,7 +152,7 @@ const Calculators = () => {
                   <h3 className="text-lg font-medium text-surface-700 dark:text-surface-300">
                     5-Year ROI
                   </h3>
-                  <p className="text-3xl font-bold text-primary-600 dark:text-primary-400">
+                  <p className="text-3xl font-bold text-primary-500 dark:text-primary-400">
                     {values.currentBill ? '250%' : '-'}
                   </p>
                 </div>
@@ -173,7 +173,7 @@ const Calculators = () => {
           </p>
           <Link
             to="/services"
-            className="inline-block bg-primary-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-primary-700 transition-colors"
+            className="inline-block bg-primary-500 text-white px-8 py-3 rounded-lg font-semibold hover:bg-primary-600 transition-colors"
           >
             View Our Services
             <ArrowRight className="inline ml-2 h-5 w-5" />

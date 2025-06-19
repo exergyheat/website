@@ -185,7 +185,7 @@ As these technologies mature and converge, we can expect heating systems to beco
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
             <button
               onClick={() => setSelectedPost(null)}
-              className="inline-flex items-center text-primary-600 dark:text-primary-400 hover:text-primary-700 dark:hover:text-primary-300 mb-6"
+              className="inline-flex items-center text-primary-500 dark:text-primary-400 hover:text-primary-600 dark:hover:text-primary-300 mb-6"
             >
               ← Back to Blog
             </button>
@@ -233,14 +233,14 @@ As these technologies mature and converge, we can expect heating systems to beco
 
   return (
     <div className="bg-surface-50 dark:bg-surface-900 min-h-screen">
-      {/* Hero Section */}
-      <div className="bg-gradient-to-r from-primary-600 to-primary-800 py-20">
+      {/* Hero Section with Custom Gradient */}
+      <div className="bg-gradient-to-r from-[#4970A5] to-[#718EBC] py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <PenTool className="h-16 w-16 text-white mx-auto mb-6" />
           <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
             EXERGY Blog
           </h1>
-          <p className="text-xl text-primary-100 max-w-2xl mx-auto">
+          <p className="text-xl text-white/90 max-w-2xl mx-auto">
             Insights, updates, and deep dives into hashrate heating technology
           </p>
         </div>
@@ -281,7 +281,7 @@ As these technologies mature and converge, we can expect heating systems to beco
                 onClick={() => setActiveCategory(category.id as BlogCategory)}
                 className={`flex items-center px-4 py-2 rounded-lg whitespace-nowrap transition-colors ${
                   activeCategory === category.id
-                    ? 'bg-primary-600 text-white'
+                    ? 'bg-primary-500 text-white'
                     : 'bg-surface-100 dark:bg-surface-700 text-surface-700 dark:text-surface-300 hover:bg-primary-50 dark:hover:bg-surface-600'
                 }`}
               >
@@ -312,7 +312,7 @@ As these technologies mature and converge, we can expect heating systems to beco
                   {post.category.slice(0, 2).map((cat) => (
                     <span
                       key={cat}
-                      className="bg-primary-600 text-white px-3 py-1 rounded-full text-sm capitalize"
+                      className="bg-primary-500 text-white px-3 py-1 rounded-full text-sm capitalize"
                     >
                       {cat}
                     </span>
@@ -320,7 +320,7 @@ As these technologies mature and converge, we can expect heating systems to beco
                 </div>
               </div>
               <div className="p-6">
-                <h2 className="text-xl font-bold text-surface-900 dark:text-surface-100 mb-3 hover:text-primary-600 dark:hover:text-primary-400 transition-colors">
+                <h2 className="text-xl font-bold text-surface-900 dark:text-surface-100 mb-3 hover:text-primary-500 dark:hover:text-primary-400 transition-colors">
                   {post.title}
                 </h2>
                 <p className="text-surface-600 dark:text-surface-400 mb-4 line-clamp-3">
@@ -339,7 +339,7 @@ As these technologies mature and converge, we can expect heating systems to beco
                   </div>
                   <span>{post.readTime}</span>
                 </div>
-                <div className="mt-4 flex items-center text-primary-600 dark:text-primary-400 hover:text-primary-700 dark:hover:text-primary-300 transition-colors">
+                <div className="mt-4 flex items-center text-primary-500 dark:text-primary-400 hover:text-primary-600 dark:hover:text-primary-300 transition-colors">
                   <span className="mr-2">Read More</span>
                   <ArrowRight className="h-4 w-4" />
                 </div>
