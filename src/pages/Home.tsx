@@ -41,7 +41,6 @@ const Home = () => {
         style={{ 
           backgroundImage: "url('/StockBackgroundHome_Tinted.png')",
           backgroundBlendMode: 'overlay',
-          backgroundColor: 'rgba(47, 59, 105, 0.85)'
         }}
       >
         <div className="absolute inset-0 flex items-center">
