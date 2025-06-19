@@ -158,7 +158,7 @@ const Home = () => {
                 className="rounded-lg shadow-2xl"
               />
               <div className="absolute -bottom-6 -right-6 bg-white dark:bg-surface-800 p-6 rounded-lg shadow-xl">
-                <p className="text-2xl font-heading text-primary-600 dark:text-primary-400">100%</p>
+                <p className="text-2xl font-heading text-primary-500 dark:text-secondary-500">100%</p>
                 <p className="font-body text-surface-600 dark:text-surface-400">Energy Efficiency</p>
               </div>
             </div>
@@ -175,7 +175,7 @@ const Home = () => {
               </Link>
               <Link
                 to="/calculators"
-                className="inline-flex items-center px-6 py-3 border border-primary-600 text-primary-600 dark:text-primary-400 rounded-lg hover:bg-primary-50 dark:hover:bg-primary-900 transition-colors font-subheading"
+                className="inline-flex items-center px-6 py-3 border border-primary-600 text-primary-600 dark:text-secondary-500 rounded-lg hover:bg-primary-50 dark:hover:bg-primary-900 transition-colors font-subheading"
               >
                 <Calculator className="mr-2 h-5 w-5" />
                 Estimate Your Earnings
@@ -203,7 +203,7 @@ const Home = () => {
           <div className="mt-20 grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="text-center">
               <div className="flex justify-center">
-                <Wrench className="h-12 w-12 text-primary-600 dark:text-primary-400" />
+                <Wrench className="h-12 w-12 text-primary-500 dark:text-secondary-500" />
               </div>
               <h3 className="mt-4 text-xl font-subheading text-surface-900 dark:text-surface-100">Best-in-Class Hardware</h3>
               <p className="mt-2 font-body text-surface-600 dark:text-surface-400">
@@ -213,7 +213,7 @@ const Home = () => {
 
             <div className="text-center">
               <div className="flex justify-center">
-                <Cpu className="h-12 w-12 text-primary-600 dark:text-primary-400" />
+                <Cpu className="h-12 w-12 text-primary-500 dark:text-secondary-500" />
               </div>
               <h3 className="mt-4 text-xl font-subheading text-surface-900 dark:text-surface-100">Custom Solutions</h3>
               <p className="mt-2 font-body text-surface-600 dark:text-surface-400">
@@ -223,7 +223,7 @@ const Home = () => {
 
             <div className="text-center">
               <div className="flex justify-center">
-                <Bitcoin className="h-12 w-12 text-primary-600 dark:text-primary-400" />
+                <Bitcoin className="h-12 w-12 text-primary-500 dark:text-secondary-500" />
               </div>
               <h3 className="mt-4 text-xl font-subheading text-surface-900 dark:text-surface-100">Maximum Earnings</h3>
               <p className="mt-2 font-body text-surface-600 dark:text-surface-400">
@@ -265,8 +265,8 @@ const Home = () => {
             <motion.div className="group" variants={cardVariants}>
               <div className="bg-white dark:bg-surface-800 rounded-lg p-8 h-full transform transition-transform group-hover:scale-105 shadow-lg">
                 <div className="flex justify-center mb-6">
-                  <div className="p-4 bg-primary-100 dark:bg-primary-900 rounded-full">
-                    <Bitcoin className="h-12 w-12 text-primary-600 dark:text-primary-400" />
+                  <div className="p-4 bg-secondary-100 dark:bg-secondary-900 rounded-full">
+                    <Bitcoin className="h-12 w-12 text-primary-500 dark:text-secondary-500" />
                   </div>
                 </div>
                 <h3 className="text-xl font-subheading text-surface-900 dark:text-surface-100 mb-4 text-center">
@@ -282,8 +282,8 @@ const Home = () => {
             <motion.div className="group" variants={cardVariants}>
               <div className="bg-white dark:bg-surface-800 rounded-lg p-8 h-full transform transition-transform group-hover:scale-105 shadow-lg">
                 <div className="flex justify-center mb-6">
-                  <div className="p-4 bg-primary-100 dark:bg-primary-900 rounded-full">
-                    <Flame className="h-12 w-12 text-primary-600 dark:text-primary-400" />
+                  <div className="p-4 bg-secondary-100 dark:bg-secondary-900 rounded-full">
+                    <Flame className="h-12 w-12 text-primary-500 dark:text-secondary-500" />
                   </div>
                 </div>
                 <h3 className="text-xl font-subheading text-surface-900 dark:text-surface-100 mb-4 text-center">
@@ -299,8 +299,8 @@ const Home = () => {
             <motion.div className="group" variants={cardVariants}>
               <div className="bg-white dark:bg-surface-800 rounded-lg p-8 h-full transform transition-transform group-hover:scale-105 shadow-lg">
                 <div className="flex justify-center mb-6">
-                  <div className="p-4 bg-primary-100 dark:bg-primary-900 rounded-full">
-                    <Cpu className="h-12 w-12 text-primary-600 dark:text-primary-400" />
+                  <div className="p-4 bg-secondary-100 dark:bg-secondary-900 rounded-full">
+                    <Cpu className="h-12 w-12 text-primary-500 dark:text-secondary-500" />
                   </div>
                 </div>
                 <h3 className="text-xl font-subheading text-surface-900 dark:text-surface-100 mb-4 text-center">
@@ -328,21 +328,21 @@ const Home = () => {
       {/* CTA Section */}
       <div className="relative bg-primary-600 py-16 overflow-hidden">
         <div className="absolute inset-0">
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_-20%,#4c5c99,transparent_75%)] animate-pulse"></div>
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_-20%,#4970A5,transparent_75%)] animate-pulse"></div>
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_80%,#2f3b69,transparent_50%)] animate-pulse [animation-delay:1s]"></div>
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_50%,#4c5c99,transparent_50%)] animate-pulse [animation-delay:2s]"></div>
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_50%,#4970A5,transparent_50%)] animate-pulse [animation-delay:2s]"></div>
         </div>
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl font-heading text-white mb-4">
             Ready to get paid for heat?
           </h2>
-          <p className="text-xl font-body text-primary-100 mb-8">
+          <p className="text-xl font-body text-secondary-100 mb-8">
             Get in touch so we can help you achieve your goals.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <Link
               to="/contact"
-              className="inline-flex items-center px-6 py-3 border border-transparent text-base font-subheading rounded-md text-primary-700 bg-white hover:bg-primary-50 transition-colors"
+              className="inline-flex items-center px-6 py-3 border border-transparent text-base font-subheading rounded-md text-primary-700 bg-white hover:bg-secondary-50 transition-colors"
             >
               Contact Us
               <ArrowRight className="ml-2 h-5 w-5" />

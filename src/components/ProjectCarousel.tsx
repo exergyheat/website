@@ -115,11 +115,11 @@ const ProjectCarousel = () => {
                           <div className="flex space-x-4">
                             <div>
                               <span className="text-surface-200">Savings:</span>
-                              <span className="ml-2 font-bold text-primary-400">{project.stats.savings}</span>
+                              <span className="ml-2 font-bold text-secondary-400">{project.stats.savings}</span>
                             </div>
                             <div>
                               <span className="text-surface-200">Payback:</span>
-                              <span className="ml-2 font-bold text-primary-400">{project.stats.payback}</span>
+                              <span className="ml-2 font-bold text-secondary-400">{project.stats.payback}</span>
                             </div>
                           </div>
                         </div>
