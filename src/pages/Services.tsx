@@ -4,7 +4,7 @@ import { ArrowRight, FileText, Wrench, Activity, HeartPulse, ChevronDown, Chevro
 
 const Services = () => {
   const [expandedService, setExpandedService] = useState<string | null>(null)
-  const [buildType, setBuildType] = useState<'existing' | 'new'>('existing')
+  const [buildType, setBuildType] = useState<'residential' | 'commercial'>('residential')
   const [demoService, setDemoService] = useState<string | null>(null)
   const [flippedCard, setFlippedCard] = useState<string | null>(null)
 
@@ -77,7 +77,7 @@ const Services = () => {
         "Heat loss calculations",
         "Cost savings projections",
         "ROI analysis",
-        type === 'existing' ? "Implementation recommendations" : "Integration specifications",
+        type === 'residential' ? "Implementation recommendations" : "Integration specifications",
         "1-hour consultation call"
       ]
     },
@@ -482,9 +482,9 @@ const Services = () => {
                 {service.id === 'audit' && (
                   <div className="flex items-center space-x-4 p-4 bg-surface-100 dark:bg-surface-800 rounded-lg">
                     <button
-                      onClick={() => setBuildType('existing')}
+                      onClick={() => setBuildType('residential')}
                       className={`px-4 py-2 rounded-lg transition-colors ${
-                        buildType === 'existing'
+                        buildType === 'residential'
                           ? 'bg-primary-600 text-white'
                           : 'bg-surface-200 dark:bg-surface-700 text-surface-700 dark:text-surface-300'
                       }`}
@@ -492,9 +492,9 @@ const Services = () => {
                       Residential
                     </button>
                     <button
-                      onClick={() => setBuildType('new')}
+                      onClick={() => setBuildType('commercial')}
                       className={`px-4 py-2 rounded-lg transition-colors ${
-                        buildType === 'new'
+                        buildType === 'commercial'
                           ? 'bg-primary-600 text-white'
                           : 'bg-surface-200 dark:bg-surface-700 text-surface-700 dark:text-surface-300'
                       }`}
