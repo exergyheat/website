@@ -59,7 +59,7 @@ const Services = () => {
     icon: FileText,
     image: "https://images.pexels.com/photos/159888/pexels-photo-159888.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
     details: {
-      inputs: type === 'existing' ? [
+      inputs: type === 'residential' ? [
         "Current heating bills",
         "Electricity costs and usage",
         "Building dimensions and layout",
