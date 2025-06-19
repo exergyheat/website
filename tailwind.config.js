@@ -34,7 +34,7 @@ export default {
         }
       },
       fontFamily: {
-        'heading': ['Orbitron', 'Impact', 'Arial Black', 'sans-serif'],
+        'heading': ['Valorant', 'Impact', 'Arial Black', 'sans-serif'],
         'subheading': ['Futura PT', 'Futura', 'Avenir', 'Helvetica Neue', 'sans-serif'],
         'body': ['Futura PT', 'Futura', 'Avenir', 'Helvetica Neue', 'sans-serif'],
         'mono': ['Roboto Mono', 'monospace'], // Keep for code/technical elements
