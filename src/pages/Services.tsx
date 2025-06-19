@@ -420,14 +420,14 @@ const Services = () => {
 
   return (
     <div className="bg-surface-50 dark:bg-surface-900">
-      {/* Hero Section */}
-      <div className="bg-gradient-to-r from-primary-600 to-primary-800 py-20">
+      {/* Hero Section with Custom Gradient */}
+      <div className="bg-gradient-to-r from-[#4970A5] to-[#718EBC] py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Expert Hashrate Heating Services
             </h1>
-            <p className="text-xl text-primary-100 max-w-2xl mx-auto">
+            <p className="text-xl text-white/90 max-w-2xl mx-auto">
               From concept to implementation, we'll help you harness hashrate heating
             </p>
           </div>
@@ -670,26 +670,26 @@ const Services = () => {
         </div>
       )}
 
-      {/* CTA Section */}
-      <div className="bg-surface-900 py-20">
+      {/* CTA Section with Custom Gradient */}
+      <div className="bg-gradient-to-r from-[#4970A5] to-[#718EBC] py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl font-bold text-white mb-6">
             Maximize your Heating Revenue
           </h2>
-          <p className="text-xl text-surface-300 mb-8 max-w-2xl mx-auto">
+          <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
             Check out our favorite products - or book a call to find the right service.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <Link
               to="/products"
-              className="inline-flex items-center px-8 py-4 bg-primary-600 text-white rounded-lg hover:bg-primary-700 transition-colors"
+              className="inline-flex items-center px-8 py-4 bg-white text-primary-600 rounded-lg hover:bg-white/90 transition-colors"
             >
               Our Hardware Solutions
               <ArrowRight className="ml-2 h-5 w-5" />
             </Link>
             <Link
               to="/book-call"
-              className="inline-flex items-center px-8 py-4 bg-white dark:bg-surface-800 text-primary-600 dark:text-primary-400 rounded-lg hover:bg-primary-50 dark:hover:bg-surface-700 transition-colors"
+              className="inline-flex items-center px-8 py-4 border border-white text-white rounded-lg hover:bg-white/10 transition-colors"
             >
               Book an Intro Call
               <ArrowRight className="ml-2 h-5 w-5" />

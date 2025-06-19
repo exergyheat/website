@@ -166,13 +166,13 @@ const Learn = () => {
 
   return (
     <div className="bg-surface-50 dark:bg-surface-900 min-h-screen">
-      {/* Hero Section */}
-      <div className="bg-gradient-to-r from-primary-600 to-primary-800 py-20">
+      {/* Hero Section with Custom Gradient */}
+      <div className="bg-gradient-to-r from-[#4970A5] to-[#718EBC] py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
             Learn The Technology
           </h1>
-          <p className="text-xl text-primary-100 max-w-2xl mx-auto">
+          <p className="text-xl text-white/90 max-w-2xl mx-auto">
             The most revolutionary heating tech in over a century - heat that pays
           </p>
         </div>
@@ -386,20 +386,20 @@ const Learn = () => {
         </div>
       </div>
 
-      {/* See it in Action Section */}
-      <div className="bg-gradient-to-r from-primary-600 to-primary-800 py-20">
+      {/* See it in Action Section with Custom Gradient */}
+      <div className="bg-gradient-to-r from-[#4970A5] to-[#718EBC] py-20">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <Eye className="h-16 w-16 text-white mx-auto mb-6" />
           <h2 className="text-3xl font-bold text-white mb-6">
             See it in Action
           </h2>
-          <p className="text-xl text-primary-100 mb-8">
+          <p className="text-xl text-white/90 mb-8">
             Explore real-world implementations of hashrate heating technology across various industries and applications.
           </p>
           
           <Link
             to="/portfolio"
-            className="inline-flex items-center px-8 py-4 bg-white text-primary-600 rounded-lg font-semibold hover:bg-primary-50 transition-colors"
+            className="inline-flex items-center px-8 py-4 bg-white text-primary-600 rounded-lg font-semibold hover:bg-white/90 transition-colors"
           >
             View Project Portfolio
             <Eye className="ml-2 h-5 w-5" />

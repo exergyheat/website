@@ -322,13 +322,13 @@ const About = () => {
 
   return (
     <div className="bg-surface-50 dark:bg-surface-900">
-      {/* Hero Section */}
-      <div className="bg-gradient-to-r from-primary-600 to-primary-800 py-20">
+      {/* Hero Section with Custom Gradient */}
+      <div className="bg-gradient-to-r from-[#4970A5] to-[#718EBC] py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
             What We're About
           </h1>
-          <p className="text-xl text-primary-100 max-w-2xl mx-auto">
+          <p className="text-xl text-white/90 max-w-2xl mx-auto">
             Revolutionizing heating, supporting bitcoin, saving you money
           </p>
         </div>
@@ -674,14 +674,14 @@ const About = () => {
         </div>
       </div>
 
-      {/* Join the Movement Section */}
-      <div className="bg-gradient-to-r from-primary-600 to-primary-800 py-20">
+      {/* Join the Movement Section with Custom Gradient */}
+      <div className="bg-gradient-to-r from-[#4970A5] to-[#718EBC] py-20">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <Mail className="h-16 w-16 text-white mx-auto mb-6" />
           <h2 className="text-3xl font-bold text-white mb-6">
             Join the Movement
           </h2>
-          <p className="text-xl text-primary-100 mb-8">
+          <p className="text-xl text-white/90 mb-8">
             Be part of the revolution in heating technology. Stay informed about our latest developments, products, and opportunities.
           </p>
           
@@ -703,12 +703,12 @@ const About = () => {
                 />
                 <button
                   type="submit"
-                  className="px-6 py-3 bg-white text-primary-600 rounded-lg font-semibold hover:bg-primary-50 transition-colors"
+                  className="px-6 py-3 bg-white text-primary-600 rounded-lg font-semibold hover:bg-white/90 transition-colors"
                 >
                   Join Us
                 </button>
               </div>
-              <p className="mt-4 text-sm text-primary-100">
+              <p className="mt-4 text-sm text-white/90">
                 We respect your privacy. No spam, just important updates.
               </p>
             </form>
