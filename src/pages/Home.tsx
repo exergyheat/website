@@ -112,7 +112,7 @@ const Home = () => {
                     Electronic Devices Convert Energy into Heat
                   </h3>
                   <p className="mt-2 text-base font-body text-surface-500 dark:text-surface-400">
-                    All electronics - from a television to a cellphone - convert energy consumed into heat. It's non-negotiable. Thank the 1st Law of Thermodynamics. 
+                    All electronics - from a television to a cellphone - convert electricity into heat. It's non-negotiable. Thank the 1st Law of Thermodynamics. 
                   </p>
                 </div>
               </div>
