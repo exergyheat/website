@@ -289,7 +289,7 @@ const Home = () => {
                   Does it Heat The Same?
                 </h3>
                 <p className="font-body text-surface-600 dark:text-surface-400 text-center">
-                  Yep. Hashrate heaters deliver low-grade heat that meet all comfort heating needs, witch extra benefits like smart control.
+                  Yes. Hashrate heaters can meet all comfort heating needs, with extra benefits like smart control.
                 </p>
               </div>
             </motion.div>
