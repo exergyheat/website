@@ -175,7 +175,7 @@ const Products = () => {
               Hashrate Heating Products
             </h1>
             <p className="text-xl text-white/90 max-w-2xl mx-auto">
-              We've got what you need, from plug-and-play to integrated systems
+              We know which solutions are best, regardless of application
             </p>
           </div>
         </div>
