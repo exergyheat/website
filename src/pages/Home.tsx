@@ -39,7 +39,7 @@ const Home = () => {
       <div 
         className="relative bg-cover bg-center h-[600px]" 
         style={{ 
-          backgroundImage: "url('/pexels-photo-358636.jpeg')",
+          backgroundImage: "url('/StockBackgroundHome_Tinted.png')",
           backgroundBlendMode: 'overlay',
           backgroundColor: 'rgba(47, 59, 105, 0.85)'
         }}
