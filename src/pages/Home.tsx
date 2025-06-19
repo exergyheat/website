@@ -79,7 +79,7 @@ const Home = () => {
             >
               <Link
                 to="/book-call"
-                className="inline-flex items-center px-6 py-3 border border-white text-base font-subheading rounded-md text-white hover:bg-white hover:text-primary-600 transition-colors"
+                className="inline-flex items-center px-6 py-3 border border-white text-base font-subheading rounded-md text-white hover:bg-white hover:text-primary-500 transition-colors"
               >
                 Book an Intro Call
                 <ArrowRight className="ml-2 h-5 w-5" />
@@ -167,14 +167,14 @@ const Home = () => {
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
               <Link
                 to="/learn"
-                className="inline-flex items-center px-6 py-3 bg-primary-600 text-white rounded-lg hover:bg-primary-700 transition-colors font-subheading"
+                className="inline-flex items-center px-6 py-3 bg-primary-500 text-white rounded-lg hover:bg-primary-600 transition-colors font-subheading"
               >
                 About Hashrate Heating
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Link>
               <Link
                 to="/calculators"
-                className="inline-flex items-center px-6 py-3 border border-primary-600 text-primary-600 dark:text-secondary-500 rounded-lg hover:bg-primary-50 dark:hover:bg-primary-900 transition-colors font-subheading"
+                className="inline-flex items-center px-6 py-3 border border-primary-500 text-primary-500 dark:text-secondary-500 rounded-lg hover:bg-primary-50 dark:hover:bg-primary-900 transition-colors font-subheading"
               >
                 <Calculator className="mr-2 h-5 w-5" />
                 Estimate Your Earnings
@@ -234,7 +234,7 @@ const Home = () => {
           <div className="mt-12 text-center">
             <Link
               to="/about"
-              className="inline-flex items-center px-6 py-3 bg-primary-600 text-white rounded-lg hover:bg-primary-700 transition-colors font-subheading"
+              className="inline-flex items-center px-6 py-3 bg-primary-500 text-white rounded-lg hover:bg-primary-600 transition-colors font-subheading"
             >
               More About Us
               <ArrowRight className="ml-2 h-5 w-5" />
@@ -315,7 +315,7 @@ const Home = () => {
           <div className="mt-12 text-center">
             <Link
               to="/faq"
-              className="inline-flex items-center px-6 py-3 bg-primary-600 text-white rounded-lg hover:bg-primary-700 transition-colors font-subheading"
+              className="inline-flex items-center px-6 py-3 bg-primary-500 text-white rounded-lg hover:bg-primary-600 transition-colors font-subheading"
             >
               See More FAQ
               <ArrowRight className="ml-2 h-5 w-5" />
@@ -348,7 +348,7 @@ const Home = () => {
             </Link>
             <Link
               to="/book-call"
-              className="inline-flex items-center px-6 py-3 border border-white text-base font-subheading rounded-md text-white hover:bg-white hover:text-primary-600 transition-colors"
+              className="inline-flex items-center px-6 py-3 border border-white text-base font-subheading rounded-md text-white hover:bg-white hover:text-primary-500 transition-colors"
             >
               Book an Intro Call
               <ArrowRight className="ml-2 h-5 w-5" />

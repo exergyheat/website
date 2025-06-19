@@ -14,11 +14,11 @@ export default {
           200: '#C3D3E3',
           300: '#A5BDD5',
           400: '#87A7C7',
-          500: '#4970A5', // BLUE 2 - Main brand blue
-          600: '#2F3B69', // BLUE 1 - Dark brand blue (primary)
-          700: '#252D51',
-          800: '#1B2039',
-          900: '#121522'
+          500: '#4970A5', // BLUE 2 - Main brand blue (updated from #2F3B69)
+          600: '#3D5A8A', // Darker shade of BLUE 2
+          700: '#2F4570',
+          800: '#213056',
+          900: '#131B3C'
         },
         secondary: {
           50: '#F5F8FB',
@@ -47,7 +47,7 @@ export default {
         accent: {
           light: '#9EA8BE', // BLUE 4 for light accents
           medium: '#718EBC', // BLUE 3 for medium accents
-          dark: '#2F3B69' // BLUE 1 for dark accents
+          dark: '#4970A5' // BLUE 2 for dark accents (updated)
         }
       },
       fontFamily: {

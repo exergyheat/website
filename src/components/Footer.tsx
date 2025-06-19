@@ -81,13 +81,13 @@ const Footer = () => {
             <h3 className="text-lg font-subheading mb-4">Connect With Us</h3>
             <div className="space-y-3 mb-6">
               <div className="flex items-center">
-                <Mail className="h-5 w-5 text-primary-400" />
+                <Mail className="h-5 w-5 text-primary-500" />
                 <a href="mailto:admin@exergyheat.com" className="ml-2 font-body text-surface-400 hover:text-surface-200 transition-colors">
                   admin@exergyheat.com
                 </a>
               </div>
               <div className="flex items-center">
-                <MapPin className="h-5 w-5 text-primary-400" />
+                <MapPin className="h-5 w-5 text-primary-500" />
                 <a 
                   href="https://maps.app.goo.gl/bp9d8a3GEpfzv3Kg7" 
                   target="_blank" 
