@@ -34,7 +34,10 @@ export default {
         }
       },
       fontFamily: {
-        mono: ['Roboto Mono', 'monospace'],
+        'heading': ['Valorant', 'Arial Black', 'sans-serif'],
+        'subheading': ['Futura Bk BT', 'Futura', 'Arial', 'sans-serif'],
+        'body': ['Futura LT', 'Futura', 'Arial', 'sans-serif'],
+        'mono': ['Roboto Mono', 'monospace'], // Keep for code/technical elements
       },
       animation: {
         'pulse': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',

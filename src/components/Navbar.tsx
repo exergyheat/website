@@ -13,17 +13,17 @@ const Navbar = () => {
           <div className="flex items-center">
             <Link to="/" className="flex items-center">
               <Laptop className="h-8 w-8 text-primary-600" />
-              <span className="ml-2 text-xl font-bold text-surface-900 dark:text-surface-100">EXERGY</span>
+              <span className="ml-2 text-xl font-heading text-surface-900 dark:text-surface-100">EXERGY</span>
             </Link>
           </div>
 
           {/* Desktop Menu */}
           <div className="hidden md:flex items-center space-x-8">
-            <Link to="/products" className="text-surface-600 dark:text-surface-300 hover:text-primary-600 dark:hover:text-primary-400 transition-colors">Products</Link>
-            <Link to="/services" className="text-surface-600 dark:text-surface-300 hover:text-primary-600 dark:hover:text-primary-400 transition-colors">Services</Link>
-            <Link to="/about" className="text-surface-600 dark:text-surface-300 hover:text-primary-600 dark:hover:text-primary-400 transition-colors">About</Link>
-            <Link to="/learn" className="text-surface-600 dark:text-surface-300 hover:text-primary-600 dark:hover:text-primary-400 transition-colors">Learn</Link>
-            <Link to="/contact" className="text-surface-600 dark:text-surface-300 hover:text-primary-600 dark:hover:text-primary-400 transition-colors">Contact</Link>
+            <Link to="/products" className="font-subheading text-surface-600 dark:text-surface-300 hover:text-primary-600 dark:hover:text-primary-400 transition-colors">Products</Link>
+            <Link to="/services" className="font-subheading text-surface-600 dark:text-surface-300 hover:text-primary-600 dark:hover:text-primary-400 transition-colors">Services</Link>
+            <Link to="/about" className="font-subheading text-surface-600 dark:text-surface-300 hover:text-primary-600 dark:hover:text-primary-400 transition-colors">About</Link>
+            <Link to="/learn" className="font-subheading text-surface-600 dark:text-surface-300 hover:text-primary-600 dark:hover:text-primary-400 transition-colors">Learn</Link>
+            <Link to="/contact" className="font-subheading text-surface-600 dark:text-surface-300 hover:text-primary-600 dark:hover:text-primary-400 transition-colors">Contact</Link>
             <ThemeToggle />
           </div>
 
@@ -45,35 +45,35 @@ const Navbar = () => {
             <div className="px-2 pt-2 pb-3 space-y-1">
               <Link
                 to="/products"
-                className="block px-3 py-2 text-surface-600 dark:text-surface-300 hover:text-primary-600 dark:hover:text-primary-400 transition-colors"
+                className="block px-3 py-2 font-subheading text-surface-600 dark:text-surface-300 hover:text-primary-600 dark:hover:text-primary-400 transition-colors"
                 onClick={() => setIsOpen(false)}
               >
                 Products
               </Link>
               <Link
                 to="/services"
-                className="block px-3 py-2 text-surface-600 dark:text-surface-300 hover:text-primary-600 dark:hover:text-primary-400 transition-colors"
+                className="block px-3 py-2 font-subheading text-surface-600 dark:text-surface-300 hover:text-primary-600 dark:hover:text-primary-400 transition-colors"
                 onClick={() => setIsOpen(false)}
               >
                 Services
               </Link>
               <Link
                 to="/about"
-                className="block px-3 py-2 text-surface-600 dark:text-surface-300 hover:text-primary-600 dark:hover:text-primary-400 transition-colors"
+                className="block px-3 py-2 font-subheading text-surface-600 dark:text-surface-300 hover:text-primary-600 dark:hover:text-primary-400 transition-colors"
                 onClick={() => setIsOpen(false)}
               >
                 About
               </Link>
               <Link
                 to="/learn"
-                className="block px-3 py-2 text-surface-600 dark:text-surface-300 hover:text-primary-600 dark:hover:text-primary-400 transition-colors"
+                className="block px-3 py-2 font-subheading text-surface-600 dark:text-surface-300 hover:text-primary-600 dark:hover:text-primary-400 transition-colors"
                 onClick={() => setIsOpen(false)}
               >
                 Learn
               </Link>
               <Link
                 to="/contact"
-                className="block px-3 py-2 text-surface-600 dark:text-surface-300 hover:text-primary-600 dark:hover:text-primary-400 transition-colors"
+                className="block px-3 py-2 font-subheading text-surface-600 dark:text-surface-300 hover:text-primary-600 dark:hover:text-primary-400 transition-colors"
                 onClick={() => setIsOpen(false)}
               >
                 Contact

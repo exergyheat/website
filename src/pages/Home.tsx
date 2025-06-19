@@ -46,12 +46,12 @@ const Home = () => {
       >
         <div className="absolute inset-0 flex items-center">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-white">
-            <h1 className="text-4xl md:text-6xl font-bold mb-6 font-mono">
+            <h1 className="text-4xl md:text-6xl font-heading mb-6">
               {headlineText}
               {!isTypewriterComplete && <span className="animate-pulse">|</span>}
             </h1>
             <motion.p 
-              className="text-xl md:text-2xl mb-8 max-w-2xl"
+              className="text-xl md:text-2xl mb-8 max-w-2xl font-body"
               initial={{ opacity: 0, y: 20 }}
               animate={{ 
                 opacity: isTypewriterComplete ? 1 : 0,
@@ -80,7 +80,7 @@ const Home = () => {
             >
               <Link
                 to="/book-call"
-                className="inline-flex items-center px-6 py-3 border border-white text-base font-medium rounded-md text-white hover:bg-white hover:text-primary-600 transition-colors"
+                className="inline-flex items-center px-6 py-3 border border-white text-base font-subheading rounded-md text-white hover:bg-white hover:text-primary-600 transition-colors"
               >
                 Book an Intro Call
                 <ArrowRight className="ml-2 h-5 w-5" />
@@ -94,8 +94,8 @@ const Home = () => {
       <div className="py-20 bg-white dark:bg-surface-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-3xl font-bold text-surface-900 dark:text-surface-100 mb-4">Too Good to Be True?</h2>
-            <p className="text-xl text-surface-600 dark:text-surface-400 max-w-2xl mx-auto">
+            <h2 className="text-3xl font-heading text-surface-900 dark:text-surface-100 mb-4">Too Good to Be True?</h2>
+            <p className="text-xl font-body text-surface-600 dark:text-surface-400 max-w-2xl mx-auto">
               Nope - Here's how it works
             </p>
           </div>
@@ -109,10 +109,10 @@ const Home = () => {
                   </div>
                 </div>
                 <div className="ml-4">
-                  <h3 className="text-lg font-medium text-surface-900 dark:text-surface-100">
+                  <h3 className="text-lg font-subheading text-surface-900 dark:text-surface-100">
                     Electronic Devices Convert Energy into Heat
                   </h3>
-                  <p className="mt-2 text-base text-surface-500 dark:text-surface-400">
+                  <p className="mt-2 text-base font-body text-surface-500 dark:text-surface-400">
                     Traditional electric heaters convert 100% of electricity into heat. It's non-negotiable. Thank the 1st Law of Thermodynamics.
                   </p>
                 </div>
@@ -125,10 +125,10 @@ const Home = () => {
                   </div>
                 </div>
                 <div className="ml-4">
-                  <h3 className="text-lg font-medium text-surface-900 dark:text-surface-100">
+                  <h3 className="text-lg font-subheading text-surface-900 dark:text-surface-100">
                     Bitcoin Miners Pay You for Hashing Bitcoin
                   </h3>
-                  <p className="mt-2 text-base text-surface-500 dark:text-surface-400">
+                  <p className="mt-2 text-base font-body text-surface-500 dark:text-surface-400">
                     Mining devices perform "hashing" operations that reward you for settling bitcoin transactions and issuing coins - And get HOT in the process.
                   </p>
                 </div>
@@ -141,10 +141,10 @@ const Home = () => {
                   </div>
                 </div>
                 <div className="ml-4">
-                  <h3 className="text-lg font-medium text-surface-900 dark:text-surface-100">
+                  <h3 className="text-lg font-subheading text-surface-900 dark:text-surface-100">
                     Heaters Powered By Bitcoin = Heat AND Money
                   </h3>
-                  <p className="mt-2 text-base text-surface-500 dark:text-surface-400">
+                  <p className="mt-2 text-base font-body text-surface-500 dark:text-surface-400">
                     Hashrate Heaters do two things at once: Deliver your heating needs while paying you a rebate. Which will it be - smart heat or dumb heat?
                   </p>
                 </div>
@@ -158,8 +158,8 @@ const Home = () => {
                 className="rounded-lg shadow-2xl"
               />
               <div className="absolute -bottom-6 -right-6 bg-white dark:bg-surface-800 p-6 rounded-lg shadow-xl">
-                <p className="text-2xl font-bold text-primary-600 dark:text-primary-400">100%</p>
-                <p className="text-surface-600 dark:text-surface-400">Energy Efficiency</p>
+                <p className="text-2xl font-heading text-primary-600 dark:text-primary-400">100%</p>
+                <p className="font-body text-surface-600 dark:text-surface-400">Energy Efficiency</p>
               </div>
             </div>
           </div>
@@ -168,14 +168,14 @@ const Home = () => {
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
               <Link
                 to="/learn"
-                className="inline-flex items-center px-6 py-3 bg-primary-600 text-white rounded-lg hover:bg-primary-700 transition-colors"
+                className="inline-flex items-center px-6 py-3 bg-primary-600 text-white rounded-lg hover:bg-primary-700 transition-colors font-subheading"
               >
                 About Hashrate Heating
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Link>
               <Link
                 to="/calculators"
-                className="inline-flex items-center px-6 py-3 border border-primary-600 text-primary-600 dark:text-primary-400 rounded-lg hover:bg-primary-50 dark:hover:bg-primary-900 transition-colors"
+                className="inline-flex items-center px-6 py-3 border border-primary-600 text-primary-600 dark:text-primary-400 rounded-lg hover:bg-primary-50 dark:hover:bg-primary-900 transition-colors font-subheading"
               >
                 <Calculator className="mr-2 h-5 w-5" />
                 Estimate Your Earnings
@@ -194,8 +194,8 @@ const Home = () => {
       <div className="py-20 bg-white dark:bg-surface-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
-            <h2 className="text-3xl font-bold text-surface-900 dark:text-surface-100 mb-4">Why Choose Exergy</h2>
-            <p className="text-xl text-surface-600 dark:text-surface-400 max-w-2xl mx-auto">
+            <h2 className="text-3xl font-heading text-surface-900 dark:text-surface-100 mb-4">Why Choose Exergy</h2>
+            <p className="text-xl font-body text-surface-600 dark:text-surface-400 max-w-2xl mx-auto">
               We're experts in an emerging industry - in fact, we wrote the book on it
             </p>
           </div>
@@ -205,8 +205,8 @@ const Home = () => {
               <div className="flex justify-center">
                 <Wrench className="h-12 w-12 text-primary-600 dark:text-primary-400" />
               </div>
-              <h3 className="mt-4 text-xl font-semibold text-surface-900 dark:text-surface-100">Best-in-Class Hardware</h3>
-              <p className="mt-2 text-surface-600 dark:text-surface-400">
+              <h3 className="mt-4 text-xl font-subheading text-surface-900 dark:text-surface-100">Best-in-Class Hardware</h3>
+              <p className="mt-2 font-body text-surface-600 dark:text-surface-400">
                 All miners generate heat, but few excel as heaters. We've perfected hardware selection for your needs.
               </p>
             </div>
@@ -215,8 +215,8 @@ const Home = () => {
               <div className="flex justify-center">
                 <Cpu className="h-12 w-12 text-primary-600 dark:text-primary-400" />
               </div>
-              <h3 className="mt-4 text-xl font-semibold text-surface-900 dark:text-surface-100">Custom Solutions</h3>
-              <p className="mt-2 text-surface-600 dark:text-surface-400">
+              <h3 className="mt-4 text-xl font-subheading text-surface-900 dark:text-surface-100">Custom Solutions</h3>
+              <p className="mt-2 font-body text-surface-600 dark:text-surface-400">
                 Whatever your heating needs, our custom designs and engineering expertise deliver the perfect fit.
               </p>
             </div>
@@ -225,8 +225,8 @@ const Home = () => {
               <div className="flex justify-center">
                 <Bitcoin className="h-12 w-12 text-primary-600 dark:text-primary-400" />
               </div>
-              <h3 className="mt-4 text-xl font-semibold text-surface-900 dark:text-surface-100">Maximum Earnings</h3>
-              <p className="mt-2 text-surface-600 dark:text-surface-400">
+              <h3 className="mt-4 text-xl font-subheading text-surface-900 dark:text-surface-100">Maximum Earnings</h3>
+              <p className="mt-2 font-body text-surface-600 dark:text-surface-400">
                 Our advanced analysis software aligns mining power with heat demand for maximum profitability.
               </p>
             </div>
@@ -235,7 +235,7 @@ const Home = () => {
           <div className="mt-12 text-center">
             <Link
               to="/about"
-              className="inline-flex items-center px-6 py-3 bg-primary-600 text-white rounded-lg hover:bg-primary-700 transition-colors"
+              className="inline-flex items-center px-6 py-3 bg-primary-600 text-white rounded-lg hover:bg-primary-700 transition-colors font-subheading"
             >
               More About Us
               <ArrowRight className="ml-2 h-5 w-5" />
@@ -248,8 +248,8 @@ const Home = () => {
       <div className="py-20 bg-surface-50 dark:bg-surface-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-3xl font-bold text-surface-900 dark:text-surface-100 mb-4">Have Questions? We Have Answers</h2>
-            <p className="text-xl text-surface-600 dark:text-surface-400 max-w-2xl mx-auto">
+            <h2 className="text-3xl font-heading text-surface-900 dark:text-surface-100 mb-4">Have Questions? We Have Answers</h2>
+            <p className="text-xl font-body text-surface-600 dark:text-surface-400 max-w-2xl mx-auto">
               Understand the basics of heat that pays
             </p>
           </div>
@@ -269,10 +269,10 @@ const Home = () => {
                     <Bitcoin className="h-12 w-12 text-primary-600 dark:text-primary-400" />
                   </div>
                 </div>
-                <h3 className="text-xl font-semibold text-surface-900 dark:text-surface-100 mb-4 text-center">
+                <h3 className="text-xl font-subheading text-surface-900 dark:text-surface-100 mb-4 text-center">
                   Why Bitcoin?
                 </h3>
-                <p className="text-surface-600 dark:text-surface-400 text-center">
+                <p className="font-body text-surface-600 dark:text-surface-400 text-center">
                   Bitcoin is digitally native money. It's a neutral protocol - free an open for anyone to use - with no controlling authority.
                 </p>
               </div>
@@ -286,10 +286,10 @@ const Home = () => {
                     <Flame className="h-12 w-12 text-primary-600 dark:text-primary-400" />
                   </div>
                 </div>
-                <h3 className="text-xl font-semibold text-surface-900 dark:text-surface-100 mb-4 text-center">
+                <h3 className="text-xl font-subheading text-surface-900 dark:text-surface-100 mb-4 text-center">
                   Does it Heat The Same?
                 </h3>
-                <p className="text-surface-600 dark:text-surface-400 text-center">
+                <p className="font-body text-surface-600 dark:text-surface-400 text-center">
                   Yes! Hashrate heaters deliver low-grade heat that meet all comfort heating needs. For industrial applications, it depends.
                 </p>
               </div>
@@ -303,10 +303,10 @@ const Home = () => {
                     <Cpu className="h-12 w-12 text-primary-600 dark:text-primary-400" />
                   </div>
                 </div>
-                <h3 className="text-xl font-semibold text-surface-900 dark:text-surface-100 mb-4 text-center">
+                <h3 className="text-xl font-subheading text-surface-900 dark:text-surface-100 mb-4 text-center">
                   Can I Control it Easily?
                 </h3>
-                <p className="text-surface-600 dark:text-surface-400 text-center">
+                <p className="font-body text-surface-600 dark:text-surface-400 text-center">
                   Even better. Because hashrate heaters are digital, they offer superior control than traditional heating fuel sources.
                 </p>
               </div>
@@ -316,7 +316,7 @@ const Home = () => {
           <div className="mt-12 text-center">
             <Link
               to="/faq"
-              className="inline-flex items-center px-6 py-3 bg-primary-600 text-white rounded-lg hover:bg-primary-700 transition-colors"
+              className="inline-flex items-center px-6 py-3 bg-primary-600 text-white rounded-lg hover:bg-primary-700 transition-colors font-subheading"
             >
               See More FAQ
               <ArrowRight className="ml-2 h-5 w-5" />
@@ -333,23 +333,23 @@ const Home = () => {
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_50%,#4c5c99,transparent_50%)] animate-pulse [animation-delay:2s]"></div>
         </div>
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl font-bold text-white mb-4">
+          <h2 className="text-3xl font-heading text-white mb-4">
             Ready to get paid for heat?
           </h2>
-          <p className="text-xl text-primary-100 mb-8">
+          <p className="text-xl font-body text-primary-100 mb-8">
             Get in touch so we can help you achieve your goals.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <Link
               to="/contact"
-              className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-primary-700 bg-white hover:bg-primary-50 transition-colors"
+              className="inline-flex items-center px-6 py-3 border border-transparent text-base font-subheading rounded-md text-primary-700 bg-white hover:bg-primary-50 transition-colors"
             >
               Contact Us
               <ArrowRight className="ml-2 h-5 w-5" />
             </Link>
             <Link
               to="/book-call"
-              className="inline-flex items-center px-6 py-3 border border-white text-base font-medium rounded-md text-white hover:bg-white hover:text-primary-600 transition-colors"
+              className="inline-flex items-center px-6 py-3 border border-white text-base font-subheading rounded-md text-white hover:bg-white hover:text-primary-600 transition-colors"
             >
               Book an Intro Call
               <ArrowRight className="ml-2 h-5 w-5" />

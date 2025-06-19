@@ -2,12 +2,81 @@
 @tailwind components;
 @tailwind utilities;
 
+@import url('https://fonts.googleapis.com/css2?family=Valorant:wght@400&display=swap');
+@import url('https://fonts.cdnfonts.com/css/futura-bk-bt');
+@import url('https://fonts.cdnfonts.com/css/futura-lt');
+
 @layer base {
-  h1, h2, h3, h4, h5, h6 {
-    font-family: 'Roboto Mono', monospace;
+  /* Main Headings - Valorant ALL CAPS */
+  h1 {
+    font-family: 'Valorant', 'Arial Black', sans-serif;
+    text-transform: uppercase;
+    font-weight: 400;
+    letter-spacing: 0.05em;
   }
   
-  .tech-text {
-    font-family: 'Roboto Mono', monospace;
+  /* Subheadings - Futura Bk BT Book ALL CAPS */
+  h2, h3, h4, h5, h6 {
+    font-family: 'Futura Bk BT', 'Futura', 'Arial', sans-serif;
+    text-transform: uppercase;
+    font-weight: 400;
+    letter-spacing: 0.025em;
+  }
+  
+  /* Body Copy - Futura LT Light Sentence Case */
+  body, p, span, div, a, button, input, textarea, li, td, th {
+    font-family: 'Futura LT', 'Futura', 'Arial', sans-serif;
+    font-weight: 300;
+  }
+  
+  /* Navigation and UI elements */
+  nav, .nav-item, .button-text {
+    font-family: 'Futura Bk BT', 'Futura', 'Arial', sans-serif;
+    text-transform: uppercase;
+    font-weight: 400;
+    letter-spacing: 0.025em;
+  }
+  
+  /* Form labels and small text */
+  label, .text-sm, .text-xs {
+    font-family: 'Futura Bk BT', 'Futura', 'Arial', sans-serif;
+    text-transform: uppercase;
+    font-weight: 400;
+    letter-spacing: 0.025em;
+  }
+  
+  /* Preserve sentence case for specific elements */
+  .sentence-case {
+    text-transform: none;
+  }
+  
+  /* Brand name styling */
+  .brand-name {
+    font-family: 'Valorant', 'Arial Black', sans-serif;
+    text-transform: uppercase;
+    font-weight: 400;
+    letter-spacing: 0.05em;
+  }
+}
+
+@layer utilities {
+  .font-heading {
+    font-family: 'Valorant', 'Arial Black', sans-serif;
+    text-transform: uppercase;
+    font-weight: 400;
+    letter-spacing: 0.05em;
+  }
+  
+  .font-subheading {
+    font-family: 'Futura Bk BT', 'Futura', 'Arial', sans-serif;
+    text-transform: uppercase;
+    font-weight: 400;
+    letter-spacing: 0.025em;
+  }
+  
+  .font-body {
+    font-family: 'Futura LT', 'Futura', 'Arial', sans-serif;
+    font-weight: 300;
+    text-transform: none;
   }
 }

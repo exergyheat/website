@@ -11,53 +11,53 @@ const Footer = () => {
           <div>
             <Link to="/" className="flex items-center hover:opacity-80 transition-opacity">
               <Laptop className="h-8 w-8 text-primary-400" />
-              <span className="ml-2 text-xl font-bold">EXERGY</span>
+              <span className="ml-2 text-xl font-heading text-surface-100">EXERGY</span>
             </Link>
-            <p className="mt-4 text-surface-400">
+            <p className="mt-4 font-body text-surface-400">
               Heat That Pays
             </p>
           </div>
 
           {/* Home Links */}
           <div>
-            <Link to="/" className="text-lg font-semibold mb-4 text-surface-100 hover:text-surface-200 transition-colors">Home</Link>
+            <Link to="/" className="text-lg font-subheading mb-4 text-surface-100 hover:text-surface-200 transition-colors">Home</Link>
             <ul className="space-y-2 mt-4">
               <li>
-                <Link to="/products" className="text-surface-400 hover:text-surface-200 transition-colors">Products</Link>
+                <Link to="/products" className="font-body text-surface-400 hover:text-surface-200 transition-colors">Products</Link>
               </li>
               <li>
-                <Link to="/services" className="text-surface-400 hover:text-surface-200 transition-colors">Services</Link>
+                <Link to="/services" className="font-body text-surface-400 hover:text-surface-200 transition-colors">Services</Link>
               </li>
               <li>
-                <Link to="/about" className="text-surface-400 hover:text-surface-200 transition-colors">About</Link>
+                <Link to="/about" className="font-body text-surface-400 hover:text-surface-200 transition-colors">About</Link>
               </li>
               <li>
-                <Link to="/portfolio" className="text-surface-400 hover:text-surface-200 transition-colors">Portfolio</Link>
+                <Link to="/portfolio" className="font-body text-surface-400 hover:text-surface-200 transition-colors">Portfolio</Link>
               </li>
               <li>
-                <Link to="/privacy-policy" className="text-surface-400 hover:text-surface-200 transition-colors">Privacy Policy</Link>
+                <Link to="/privacy-policy" className="font-body text-surface-400 hover:text-surface-200 transition-colors">Privacy Policy</Link>
               </li>
             </ul>
           </div>
 
           {/* Learn Links */}
           <div>
-            <Link to="/learn" className="text-lg font-semibold mb-4 text-surface-100 hover:text-surface-200 transition-colors">Learn</Link>
+            <Link to="/learn" className="text-lg font-subheading mb-4 text-surface-100 hover:text-surface-200 transition-colors">Learn</Link>
             <ul className="space-y-2 mt-4">
               <li>
-                <Link to="/blog" className="text-surface-400 hover:text-surface-200 transition-colors">Blog</Link>
+                <Link to="/blog" className="font-body text-surface-400 hover:text-surface-200 transition-colors">Blog</Link>
               </li>
               <li>
-                <Link to="/education" className="text-surface-400 hover:text-surface-200 transition-colors">Education</Link>
+                <Link to="/education" className="font-body text-surface-400 hover:text-surface-200 transition-colors">Education</Link>
               </li>
               <li>
-                <Link to="/calculators" className="text-surface-400 hover:text-surface-200 transition-colors">Calculators</Link>
+                <Link to="/calculators" className="font-body text-surface-400 hover:text-surface-200 transition-colors">Calculators</Link>
               </li>
               <li>
-                <Link to="/docs" className="text-surface-400 hover:text-surface-200 transition-colors">Docs</Link>
+                <Link to="/docs" className="font-body text-surface-400 hover:text-surface-200 transition-colors">Docs</Link>
               </li>
               <li>
-                <Link to="/faq" className="text-surface-400 hover:text-surface-200 transition-colors">FAQ</Link>
+                <Link to="/faq" className="font-body text-surface-400 hover:text-surface-200 transition-colors">FAQ</Link>
               </li>
 
               <li>
@@ -65,7 +65,7 @@ const Footer = () => {
                   href="https://heatpunks.org" 
                   target="_blank" 
                   rel="noopener noreferrer" 
-                  className="text-surface-400 hover:text-surface-200 transition-colors"
+                  className="font-body text-surface-400 hover:text-surface-200 transition-colors"
                 >
                   Forum
                 </a>
@@ -75,11 +75,11 @@ const Footer = () => {
 
           {/* Connect With Us */}
           <div>
-            <h3 className="text-lg font-semibold mb-4">Connect With Us</h3>
+            <h3 className="text-lg font-subheading mb-4">Connect With Us</h3>
             <div className="space-y-3 mb-6">
               <div className="flex items-center">
                 <Mail className="h-5 w-5 text-primary-400" />
-                <a href="mailto:admin@exergyheat.com" className="ml-2 text-surface-400 hover:text-surface-200 transition-colors">
+                <a href="mailto:admin@exergyheat.com" className="ml-2 font-body text-surface-400 hover:text-surface-200 transition-colors">
                   admin@exergyheat.com
                 </a>
               </div>
@@ -89,7 +89,7 @@ const Footer = () => {
                   href="https://maps.app.goo.gl/bp9d8a3GEpfzv3Kg7" 
                   target="_blank" 
                   rel="noopener noreferrer" 
-                  className="ml-2 text-surface-400 hover:text-surface-200 transition-colors"
+                  className="ml-2 font-body text-surface-400 hover:text-surface-200 transition-colors"
                 >
                   3700 N Franklin St. Denver, CO 80205
                 </a>
@@ -109,7 +109,7 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className="mt-8 pt-8 border-t border-surface-800 text-center text-surface-400">
+        <div className="mt-8 pt-8 border-t border-surface-800 text-center font-body text-surface-400">
           <p>&copy; {new Date().getFullYear()} EXERGY. All rights reserved.</p>
         </div>
       </div>
