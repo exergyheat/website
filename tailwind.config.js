@@ -34,13 +34,13 @@ export default {
         }
       },
       fontFamily: {
-        'heading': ['Valorant', 'Impact', 'Arial Black', 'sans-serif'],
+        'heading': ['Futura PT', 'Futura', 'Avenir', 'Helvetica Neue', 'sans-serif'],
         'subheading': ['Futura PT', 'Futura', 'Avenir', 'Helvetica Neue', 'sans-serif'],
         'body': ['Futura PT', 'Futura', 'Avenir', 'Helvetica Neue', 'sans-serif'],
         'mono': ['Roboto Mono', 'monospace'], // Keep for code/technical elements
       },
       fontWeight: {
-        'heading': '700',
+        'heading': '600',
         'subheading': '500',
         'body': '300',
       },
