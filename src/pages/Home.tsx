@@ -169,7 +169,7 @@ const Home = () => {
                 to="/learn"
                 className="inline-flex items-center px-6 py-3 bg-primary-500 text-white rounded-lg hover:bg-primary-600 transition-colors font-subheading"
               >
-                About Hashrate Heating
+                Learn Hashrate Heating
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Link>
               <Link
