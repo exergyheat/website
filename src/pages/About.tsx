@@ -585,7 +585,7 @@ const About = () => {
                         whileHover={{ scale: 1.05 }}
                         whileTap={{ scale: 0.95 }}
                       >
-                        {expandedStep === step.id ? 'Close Preview' : 'See Example'}
+                        {expandedStep === step.id ? 'Close Preview' : 'Example'}
                       </motion.button>
                     </div>
 
