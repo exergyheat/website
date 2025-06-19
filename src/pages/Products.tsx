@@ -181,16 +181,6 @@ const Products = () => {
         </div>
       </div>
 
-      {/* Product Overview */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl font-bold text-surface-900 dark:text-surface-100 mb-6">Tailored Solutions</h2>
-          <p className="text-xl text-surface-600 dark:text-surface-400 max-w-3xl mx-auto">
-            Exergy partners with the best hashrate heating hardware manufacturers.
-          </p>
-        </div>
-      </div>
-
       {/* Category Navigation */}
       <div className="sticky top-0 bg-white dark:bg-surface-800 shadow-md z-10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
