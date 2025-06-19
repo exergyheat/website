@@ -34,10 +34,15 @@ export default {
         }
       },
       fontFamily: {
-        'heading': ['Valorant', 'Arial Black', 'sans-serif'],
-        'subheading': ['Futura Bk BT', 'Futura', 'Arial', 'sans-serif'],
-        'body': ['Futura LT', 'Futura', 'Arial', 'sans-serif'],
+        'heading': ['Orbitron', 'Impact', 'Arial Black', 'sans-serif'],
+        'subheading': ['Futura PT', 'Futura', 'Avenir', 'Helvetica Neue', 'sans-serif'],
+        'body': ['Futura PT', 'Futura', 'Avenir', 'Helvetica Neue', 'sans-serif'],
         'mono': ['Roboto Mono', 'monospace'], // Keep for code/technical elements
+      },
+      fontWeight: {
+        'heading': '700',
+        'subheading': '500',
+        'body': '300',
       },
       animation: {
         'pulse': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
