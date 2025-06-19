@@ -141,7 +141,7 @@ const Home = () => {
                 </div>
                 <div className="ml-4">
                   <h3 className="text-lg font-subheading text-surface-900 dark:text-surface-100">
-                    Heaters Powered By Bitcoin = Heat AND Money
+                    Heaters Powered By Hashrate = Heat with a Rebate
                   </h3>
                   <p className="mt-2 text-base font-body text-surface-500 dark:text-surface-400">
                     Hashrate Heaters do two things at once: Deliver your heating needs while paying you a rebate. Which will it be - smart heat or dumb heat?
