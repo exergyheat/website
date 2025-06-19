@@ -291,7 +291,7 @@ const Products = () => {
             Not Sure What to Get?
           </h2>
           <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
-            Get a Heat Audit to find the right system and optimize savings - or book an intro call for a quick opinion.
+            Order a Heat Audit to size the right solution and optimize savings.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <Link
