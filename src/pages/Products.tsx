@@ -288,7 +288,7 @@ const Products = () => {
       <div className="bg-gradient-to-r from-[#4970A5] to-[#718EBC] py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl font-bold text-white mb-6">
-            Not Sure About your Heating Needs?
+            Not Sure What to Get?
           </h2>
           <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
             Get a Heat Audit to find the right system and optimize savings - or book an intro call for a quick opinion.
