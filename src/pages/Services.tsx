@@ -358,7 +358,7 @@ const Services = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              Expert Hashrate Heating Services
+              Exergy Services
             </h1>
             <p className="text-xl text-white/90 max-w-2xl mx-auto">
               From concept to implementation, we'll help you harness hashrate heating
