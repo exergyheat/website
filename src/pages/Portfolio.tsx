@@ -14,7 +14,7 @@ const projects = [
       size: '7,000 sq ft',
       savings: '65%',
       payback: '18 months',
-      hashrate: '2 PH/s'
+      hashrate: '250 TH/s'
     },
     details: [
       'Integrated with existing HVAC',
