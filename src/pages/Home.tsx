@@ -6,8 +6,8 @@ import ProjectCarousel from '../components/ProjectCarousel'
 import { motion } from 'framer-motion'
 
 const Home = () => {
-  const headlineText = useTypewriter("You pay for heat every month.", 75)
-  const isTypewriterComplete = headlineText === "You pay for heat every month."
+  const headlineText = useTypewriter("You pay for heat every month", 75)
+  const isTypewriterComplete = headlineText === "You pay for heat every month"
 
   const containerVariants = {
     hidden: {},
@@ -62,7 +62,7 @@ const Home = () => {
                 delay: isTypewriterComplete ? 0.5 : 0
               }}
             >
-              Upgrade to heat that pays you instead.
+              Upgrade to heat that pays you instead
             </motion.p>
             <motion.div 
               className="flex flex-wrap gap-4"
