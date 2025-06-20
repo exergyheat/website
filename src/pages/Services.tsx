@@ -75,9 +75,9 @@ const Services = () => {
       ],
       deliverables: [
         "Comprehensive analysis report",
-        "Heat loss calculations",
-        "Cost savings projections",
-        "ROI analysis",
+        "Optimal heating system sizing",
+        "Estimated earnings and cost savings projections",
+        "Hardware options and personalized recommendations",
         type === 'residential' ? "Implementation recommendations" : "Integration specifications",
         "1-hour consultation call"
       ]
