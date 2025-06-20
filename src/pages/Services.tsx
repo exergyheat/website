@@ -78,8 +78,8 @@ const Services = () => {
         "Optimal heating system sizing",
         "Estimated earnings and cost savings projections",
         "Hardware options and personalized recommendations",
-        type === 'residential' ? "Implementation recommendations" : "Integration specifications",
-        "1-hour consultation call"
+        "Heating hardware costs, ROI and total cost of ownership",
+        "1-hour consultation call and implementation recommendations"
       ]
     },
     buttonText: `Purchase ${type === 'residential' ? 'Residential' : 'Commercial'} Heat Audit - ${type === 'residential' ? '$500' : '$2500'}`,
