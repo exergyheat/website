@@ -80,7 +80,7 @@ const Learn = () => {
         "Maximum efficiency. No waste - plus revenue",
         "Digital heat control optimizes performance",
         "Win-Win. Heat + revenue at no extra operating cost",
-        "Consistent passive revenue"
+        "Consistent passive revenue every time you turn on the heat"
       ]
     }
   ]
