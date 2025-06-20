@@ -257,7 +257,7 @@ const Services = () => {
     getUpgradeService(upgradeType),
     {
       id: 'monitoring',
-      name: "Automated Health Monitoring",
+      name: "Remote Health Monitoring",
       description: "24/7 monitoring and maintenance of your hashrate heating system to ensure optimal performance.",
       price: "Contact for pricing",
       features: [
