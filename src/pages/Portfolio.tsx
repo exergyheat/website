@@ -8,7 +8,7 @@ const projects = [
     title: 'Exergy Office Building',
     description: 'Complete heating solution for a 50,000 sq ft office building in downtown Denver.',
     image: 'https://images.pexels.com/photos/323705/pexels-photo-323705.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-    category: 'ess',
+    category: 'Small Business',
     icon: Building,
     stats: {
       size: '7,000 sq ft',
@@ -17,10 +17,10 @@ const projects = [
       hashrate: '250 TH/s'
     },
     details: [
-      'Integrated with existing HVAC',
-      'Custom control system',
-      'Remote monitoring',
-      'Redundant backup'
+      'Radiant & forced air combination',
+      'Custom control system & remote monitoring',
+      'Integrated solar array',
+      'Redundant natural gas backup'
     ]
   },
   {
