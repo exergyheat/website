@@ -63,8 +63,8 @@ const About = () => {
     visible: {
       opacity: 1,
       transition: {
-        staggerChildren: 0.3,
-        delayChildren: 0.2
+        staggerChildren: 0.4,
+        delayChildren: 0.3
       }
     }
   }
@@ -72,15 +72,15 @@ const About = () => {
   const logoVariants = {
     hidden: { 
       opacity: 0,
-      y: -50,
-      scale: 0.8
+      y: -60,
+      scale: 0.7
     },
     visible: {
       opacity: 1,
       y: 0,
       scale: 1,
       transition: {
-        duration: 0.8,
+        duration: 1,
         ease: "easeOut"
       }
     }
@@ -358,7 +358,7 @@ const About = () => {
             What We're About
           </h1>
           <p className="text-xl text-white/90 max-w-2xl mx-auto">
-            High performance heating, monetized energy, bitcoin adoption
+            Revolutionizing heating, supporting bitcoin, saving you money
           </p>
         </div>
       </div>
@@ -421,13 +421,13 @@ const About = () => {
               variants={itemVariants}
             >
               <motion.div
-                className="space-y-8"
+                className="space-y-12"
                 variants={logoContainerVariants}
                 initial="hidden"
                 whileInView="visible"
                 viewport={{ once: true }}
               >
-                {/* Black Logo */}
+                {/* First Black Logo */}
                 <motion.div
                   variants={logoVariants}
                   className="flex justify-center"
@@ -435,12 +435,11 @@ const About = () => {
                   <img
                     src="/Logo1_black_horizontal.png"
                     alt="EXERGY"
-                    className="h-16 w-auto"
-                    style={{ filter: 'brightness(0)' }}
+                    className="h-24 w-auto"
                   />
                 </motion.div>
 
-                {/* Dark Blue Logo */}
+                {/* Second Black Logo */}
                 <motion.div
                   variants={logoVariants}
                   className="flex justify-center"
@@ -448,14 +447,11 @@ const About = () => {
                   <img
                     src="/Logo1_black_horizontal.png"
                     alt="EXERGY"
-                    className="h-16 w-auto"
-                    style={{ 
-                      filter: 'brightness(0) saturate(100%) invert(20%) sepia(25%) saturate(1500%) hue-rotate(200deg) brightness(90%) contrast(90%)'
-                    }}
+                    className="h-24 w-auto"
                   />
                 </motion.div>
 
-                {/* Light Blue Logo */}
+                {/* Third Black Logo */}
                 <motion.div
                   variants={logoVariants}
                   className="flex justify-center"
@@ -463,36 +459,10 @@ const About = () => {
                   <img
                     src="/Logo1_black_horizontal.png"
                     alt="EXERGY"
-                    className="h-16 w-auto"
-                    style={{ 
-                      filter: 'brightness(0) saturate(100%) invert(45%) sepia(25%) saturate(1200%) hue-rotate(200deg) brightness(110%) contrast(90%)'
-                    }}
+                    className="h-24 w-auto"
                   />
                 </motion.div>
               </motion.div>
-
-              {/* Floating accent elements */}
-              <motion.div 
-                className="absolute -top-4 -right-4 w-8 h-8 rounded-full bg-primary-500 opacity-20"
-                initial={{ scale: 0, rotate: 0 }}
-                whileInView={{ scale: 1, rotate: 360 }}
-                viewport={{ once: true }}
-                transition={{ duration: 1, delay: 1.5 }}
-              />
-              <motion.div 
-                className="absolute -bottom-4 -left-4 w-6 h-6 rounded-full bg-secondary-500 opacity-30"
-                initial={{ scale: 0, rotate: 0 }}
-                whileInView={{ scale: 1, rotate: -360 }}
-                viewport={{ once: true }}
-                transition={{ duration: 1, delay: 2 }}
-              />
-              <motion.div 
-                className="absolute top-1/2 -right-8 w-4 h-4 rounded-full bg-primary-600 opacity-25"
-                initial={{ scale: 0 }}
-                whileInView={{ scale: 1 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: 2.5 }}
-              />
             </motion.div>
           </motion.div>
         </div>
