@@ -65,13 +65,13 @@ const Services = () => {
         "Local electricity rates",
         "Insulation specifications",
         "Location and weather data",
-        "Key variables like solar or unique heating paterns."
+        "Key variables like solar or unique heating paterns"
       ] : [
-        "Building plans and specifications",
-        "Expected occupancy patterns",
-        "Desired temperature zones",
-        "Local energy rates",
-        "Construction timeline"
+        "Building heating bills, plans and specifications",
+        "Local energy rates, TOU or demand charges",
+        "Expected occupancy patterns or supplimental heat sources",
+        "Desired temperatures zones",
+        "Location and wweather data, or driving heat factors"
       ],
       deliverables: [
         "Comprehensive analysis report",
