@@ -65,8 +65,8 @@ const Learn = () => {
       description: "Bitcoin mining is an open source protocol (like the world wide web) that rewards participants for contributing energy to process bitcoin transactions. The more energy you contribute, the more you earn, and the more heat you generate.",
       image: "https://images.pexels.com/photos/844124/pexels-photo-844124.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
       details: [
-        "Anyone can participate",
-        "Earnings proportional to work contribution",
+        "Anyone can participate - like anyone can use the internet",
+        "Earnings are proportional to the work you contribute",
         "Automated payouts in a nativie digital asset - bitcoin",
         "Converts all power into heat"
       ]
