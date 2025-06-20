@@ -83,11 +83,11 @@ const BookCall = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {team.map((member) => (
             <div key={member.name} className="bg-white dark:bg-surface-800 rounded-lg shadow-xl overflow-hidden">
-              <div className="aspect-w-3 aspect-h-2">
+              <div className="aspect-square">
                 <img
                   src={member.image}
                   alt={member.name}
-                  className="w-full h-48 object-cover"
+                  className="w-full h-full object-cover"
                 />
               </div>
               <div className="p-6">
