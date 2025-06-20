@@ -248,17 +248,19 @@ const Learn = () => {
                 } gap-12 items-center`}
               >
                 <motion.div 
-                  className="w-full md:w-1/2"
+                  className="w-full md:w-1/2 flex justify-center"
                   initial={{ scale: 0.8 }}
                   whileInView={{ scale: 1 }}
                   viewport={{ once: true, margin: "-100px" }}
                   transition={{ duration: 0.6, ease: "easeOut", delay: 0.2 }}
                 >
-                  <img
-                    src={concept.image}
-                    alt={concept.title}
-                    className="rounded-lg shadow-2xl w-full h-[400px] object-cover"
-                  />
+                  <div className="w-full max-w-lg">
+                    <img
+                      src={concept.image}
+                      alt={concept.title}
+                      className="rounded-lg shadow-2xl w-full h-auto object-contain"
+                    />
+                  </div>
                 </motion.div>
                 <div className="w-full md:w-1/2 space-y-6">
                   <motion.div 
