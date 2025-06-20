@@ -5,6 +5,7 @@ import { ArrowRight, FileText, Wrench, Activity, HeartPulse, ChevronDown, Chevro
 const Services = () => {
   const [expandedService, setExpandedService] = useState<string | null>(null)
   const [buildType, setBuildType] = useState<'residential' | 'commercial'>('residential')
+  const [upgradeType, setUpgradeType] = useState<'residential' | 'commercial'>('residential')
   const [demoService, setDemoService] = useState<string | null>(null)
   const [flippedCard, setFlippedCard] = useState<string | null>(null)
 
@@ -144,98 +145,116 @@ const Services = () => {
     }
   })
 
-  const services = [
-    getAuditService(buildType),
-    {
-      id: 'upgrade',
-      name: "Hashrate Heating System Upgrades",
-      description: "Get a complete heating system design tailored to your specific needs and requirements.",
-      price: "$1,000 deposit",
-      features: [
-        "Custom system design",
-        "Detailed cost analysis",
-        "Installation planning",
-        "Performance projections"
+  const getUpgradeService = (type: 'residential' | 'commercial') => ({
+    id: 'upgrade',
+    name: "Hashrate Heating System Upgrades",
+    description: "Get a complete heating system design tailored to your specific needs and requirements.",
+    price: type === 'residential' ? "$1,000 deposit" : "$3,000 deposit",
+    features: [
+      "Custom system design",
+      "Detailed cost analysis",
+      "Installation planning",
+      "Performance projections"
+    ],
+    icon: Wrench,
+    image: "https://images.pexels.com/photos/8293778/pexels-photo-8293778.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+    details: {
+      process: type === 'residential' ? [
+        "Initial consultation",
+        "Home assessment",
+        "System design",
+        "Cost analysis",
+        "Implementation plan"
+      ] : [
+        "Initial consultation",
+        "Commercial site assessment",
+        "Enterprise system design",
+        "Comprehensive cost analysis",
+        "Project implementation plan"
       ],
-      icon: Wrench,
-      image: "https://images.pexels.com/photos/8293778/pexels-photo-8293778.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-      details: {
-        process: [
-          "Initial consultation",
-          "Site assessment",
-          "System design",
-          "Cost analysis",
-          "Implementation plan"
-        ],
-        includes: [
-          "Detailed system specifications",
-          "Installation guidelines",
-          "Performance estimates",
-          "Cost breakdown",
-          "Timeline projection"
-        ]
-      },
-      buttonText: "Place $1,000 Deposit",
-      buttonLink: "/contact?service=upgrade",
-      demo: {
-        title: "Sample System Design",
-        content: (
-          <div className="space-y-6">
-            <div className="border-b border-surface-200 dark:border-surface-700 pb-4">
-              <h3 className="text-xl font-bold text-surface-900 dark:text-surface-100">System Specifications</h3>
-              <div className="mt-4 grid grid-cols-2 gap-4">
-                <div>
-                  <p className="text-sm text-surface-600 dark:text-surface-400">Total Capacity</p>
-                  <p className="font-medium text-surface-900 dark:text-surface-100">500 kW</p>
-                </div>
-                <div>
-                  <p className="text-sm text-surface-600 dark:text-surface-400">Mining Hashrate</p>
-                  <p className="font-medium text-surface-900 dark:text-surface-100">15 PH/s</p>
-                </div>
+      includes: type === 'residential' ? [
+        "Detailed system specifications",
+        "Installation guidelines",
+        "Performance estimates",
+        "Cost breakdown",
+        "Timeline projection"
+      ] : [
+        "Enterprise system specifications",
+        "Commercial installation plan",
+        "ROI and performance projections",
+        "Detailed cost breakdown",
+        "Project timeline and milestones"
+      ]
+    },
+    buttonText: `Place ${type === 'residential' ? '$1,000' : '$3,000'} Deposit`,
+    buttonLink: `/contact?service=upgrade&type=${type}`,
+    demo: {
+      title: "Sample System Design",
+      content: (
+        <div className="space-y-6">
+          <div className="border-b border-surface-200 dark:border-surface-700 pb-4">
+            <h3 className="text-xl font-bold text-surface-900 dark:text-surface-100">System Specifications</h3>
+            <div className="mt-4 grid grid-cols-2 gap-4">
+              <div>
+                <p className="text-sm text-surface-600 dark:text-surface-400">Total Capacity</p>
+                <p className="font-medium text-surface-900 dark:text-surface-100">{type === 'residential' ? '50 kW' : '500 kW'}</p>
               </div>
-            </div>
-
-            <div className="space-y-4">
-              <h3 className="text-xl font-bold text-surface-900 dark:text-surface-100">Integration Plan</h3>
-              <div className="bg-surface-50 dark:bg-surface-700 p-4 rounded-lg">
-                <ul className="space-y-2">
-                  <li className="flex items-center text-surface-600 dark:text-surface-400">
-                    <ArrowRight className="h-4 w-4 text-primary-600 mr-2" />
-                    Primary heating loop integration
-                  </li>
-                  <li className="flex items-center text-surface-600 dark:text-surface-400">
-                    <ArrowRight className="h-4 w-4 text-primary-600 mr-2" />
-                    Backup system configuration
-                  </li>
-                  <li className="flex items-center text-surface-600 dark:text-surface-400">
-                    <ArrowRight className="h-4 w-4 text-primary-600 mr-2" />
-                    Control system architecture
-                  </li>
-                </ul>
-              </div>
-            </div>
-
-            <div className="space-y-4">
-              <h3 className="text-xl font-bold text-surface-900 dark:text-surface-100">Timeline</h3>
-              <div className="space-y-2">
-                <div className="flex items-center justify-between py-2 border-b border-surface-200 dark:border-surface-700">
-                  <span className="text-surface-600 dark:text-surface-400">Planning Phase</span>
-                  <span className="text-surface-900 dark:text-surface-100">2 weeks</span>
-                </div>
-                <div className="flex items-center justify-between py-2 border-b border-surface-200 dark:border-surface-700">
-                  <span className="text-surface-600 dark:text-surface-400">Installation</span>
-                  <span className="text-surface-900 dark:text-surface-100">3 weeks</span>
-                </div>
-                <div className="flex items-center justify-between py-2">
-                  <span className="text-surface-600 dark:text-surface-400">Testing & Commissioning</span>
-                  <span className="text-surface-900 dark:text-surface-100">1 week</span>
-                </div>
+              <div>
+                <p className="text-sm text-surface-600 dark:text-surface-400">Mining Hashrate</p>
+                <p className="font-medium text-surface-900 dark:text-surface-100">{type === 'residential' ? '1.5 PH/s' : '15 PH/s'}</p>
               </div>
             </div>
           </div>
-        )
-      }
-    },
+
+          <div className="space-y-4">
+            <h3 className="text-xl font-bold text-surface-900 dark:text-surface-100">Integration Plan</h3>
+            <div className="bg-surface-50 dark:bg-surface-700 p-4 rounded-lg">
+              <ul className="space-y-2">
+                {type === 'residential' ? [
+                  'Primary heating loop integration',
+                  'Smart thermostat connectivity',
+                  'Zone control system',
+                  'Mobile app monitoring'
+                ] : [
+                  'Primary heating loop integration',
+                  'Backup system configuration',
+                  'Control system architecture',
+                  'Enterprise monitoring dashboard'
+                ].map((item, index) => (
+                  <li key={index} className="flex items-center text-surface-600 dark:text-surface-400">
+                    <ArrowRight className="h-4 w-4 text-primary-600 mr-2" />
+                    {item}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+
+          <div className="space-y-4">
+            <h3 className="text-xl font-bold text-surface-900 dark:text-surface-100">Timeline</h3>
+            <div className="space-y-2">
+              <div className="flex items-center justify-between py-2 border-b border-surface-200 dark:border-surface-700">
+                <span className="text-surface-600 dark:text-surface-400">Planning Phase</span>
+                <span className="text-surface-900 dark:text-surface-100">{type === 'residential' ? '1 week' : '2 weeks'}</span>
+              </div>
+              <div className="flex items-center justify-between py-2 border-b border-surface-200 dark:border-surface-700">
+                <span className="text-surface-600 dark:text-surface-400">Installation</span>
+                <span className="text-surface-900 dark:text-surface-100">{type === 'residential' ? '1-2 weeks' : '3 weeks'}</span>
+              </div>
+              <div className="flex items-center justify-between py-2">
+                <span className="text-surface-600 dark:text-surface-400">Testing & Commissioning</span>
+                <span className="text-surface-900 dark:text-surface-100">1 week</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      )
+    }
+  })
+
+  const services = [
+    getAuditService(buildType),
+    getUpgradeService(upgradeType),
     {
       id: 'monitoring',
       name: "Hashrate Heater Health Monitoring",
@@ -452,7 +471,7 @@ const Services = () => {
             </p>
             <Link
               to="/book-call"
-              className="inline-flex items-center px-6 py-3 bg-primary-600 text-white rounded-lg hover:bg-primary-700 transition-colors"
+              className="inline-flex items-center px-6 py-3 bg-primary-600 text-white rounded-lg hover:bg-primary-700 transition-colors text-base font-subheading"
             >
               Book an Intro Call
               <ArrowRight className="ml-2 h-5 w-5" />
@@ -496,6 +515,32 @@ const Services = () => {
                       onClick={() => setBuildType('commercial')}
                       className={`px-4 py-2 rounded-lg transition-colors ${
                         buildType === 'commercial'
+                          ? 'bg-primary-600 text-white'
+                          : 'bg-surface-200 dark:bg-surface-700 text-surface-700 dark:text-surface-300'
+                      }`}
+                    >
+                      Commercial
+                    </button>
+                  </div>
+                )}
+
+                {/* Build Type Toggle for Upgrade Service */}
+                {service.id === 'upgrade' && (
+                  <div className="flex items-center space-x-4 p-4 bg-surface-100 dark:bg-surface-800 rounded-lg">
+                    <button
+                      onClick={() => setUpgradeType('residential')}
+                      className={`px-4 py-2 rounded-lg transition-colors ${
+                        upgradeType === 'residential'
+                          ? 'bg-primary-600 text-white'
+                          : 'bg-surface-200 dark:bg-surface-700 text-surface-700 dark:text-surface-300'
+                      }`}
+                    >
+                      Residential
+                    </button>
+                    <button
+                      onClick={() => setUpgradeType('commercial')}
+                      className={`px-4 py-2 rounded-lg transition-colors ${
+                        upgradeType === 'commercial'
                           ? 'bg-primary-600 text-white'
                           : 'bg-surface-200 dark:bg-surface-700 text-surface-700 dark:text-surface-300'
                       }`}
