@@ -390,7 +390,7 @@ const About = () => {
               variants={itemVariants}
             >
               <motion.img
-                src="https://images.pexels.com/photos/7567560/pexels-photo-7567560.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+                src="UndermineOpeningRemarks.png"
                 alt="Mission"
                 className="rounded-lg shadow-2xl h-64 w-full object-cover"
                 initial={{ scale: 0.8, opacity: 0 }}
