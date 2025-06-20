@@ -23,6 +23,26 @@ const projects = [
       'Redundant natural gas backup'
     ]
   },
+    {
+    id: 'residential',
+    title: 'Luxury Home',
+    description: 'Whole-home heating solution including pool and spa heating.',
+    image: 'https://images.pexels.com/photos/1115804/pexels-photo-1115804.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+    category: 'Residential',
+    icon: Home,
+    stats: {
+      size: '8,500 sq ft',
+      savings: '58%',
+      payback: '24 months',
+      hashrate: '500 TH/s'
+    },
+    details: [
+      'Hydronic heating',
+      'Pool integration',
+      'Smart controls',
+      'Mobile monitoring'
+    ]
+  },
   {
     id: 'manufacturing',
     title: 'Manufacturing Facility',
@@ -41,26 +61,6 @@ const projects = [
       'Heat recovery system',
       'Advanced monitoring',
       'Scalable design'
-    ]
-  },
-  {
-    id: 'residential',
-    title: 'Luxury Home',
-    description: 'Whole-home heating solution including pool and spa heating.',
-    image: 'https://images.pexels.com/photos/1115804/pexels-photo-1115804.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-    category: 'Residential',
-    icon: Home,
-    stats: {
-      size: '8,500 sq ft',
-      savings: '58%',
-      payback: '24 months',
-      hashrate: '500 TH/s'
-    },
-    details: [
-      'Hydronic heating',
-      'Pool integration',
-      'Smart controls',
-      'Mobile monitoring'
     ]
   },
   {
