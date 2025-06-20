@@ -61,11 +61,11 @@ const Services = () => {
     image: "https://images.pexels.com/photos/159888/pexels-photo-159888.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
     details: {
       inputs: type === 'residential' ? [
-        "Current heating bills",
-        "Electricity costs and usage",
-        "Building dimensions and layout",
+        "Current heating bills or home dimensions",
+        "Local electricity rates",
         "Insulation specifications",
-        "Location and weather data"
+        "Location and weather data",
+        "Key variables like solar or unique heating paterns."
       ] : [
         "Building plans and specifications",
         "Expected occupancy patterns",
