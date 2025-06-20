@@ -11,7 +11,7 @@ const projects = [
     category: 'Commercial',
     icon: Building,
     stats: {
-      size: '50,000 sq ft',
+      size: '7,000 sq ft',
       savings: '65%',
       payback: '18 months',
       hashrate: '2 PH/s'
