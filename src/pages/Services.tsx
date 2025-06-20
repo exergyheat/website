@@ -37,7 +37,7 @@ const Services = () => {
     },
     {
       id: 'monitoring',
-      title: 'Enhance with Remote Monitoring',
+      title: 'Monitor Health Remotely',
       description: 'Opt in for monitoring with a small hashrate split. Get most rewards, reports, alerts, and upgrade discounts.',
       icon: Monitor,
       flipText: 'Start with Remote Monitoring if you already have a hashrate heating system, and want to get the most out of your heat that pays.',
