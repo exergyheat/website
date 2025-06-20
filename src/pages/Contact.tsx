@@ -33,7 +33,7 @@ const Contact = () => {
             Contact Us
           </h1>
           <p className="text-xl text-white/90 max-w-2xl mx-auto">
-            It's time to get paid for heating
+            It's time monetize your heat
           </p>
         </div>
       </div>
