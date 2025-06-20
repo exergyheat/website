@@ -55,6 +55,7 @@ export default {
         'subheading': ['Futura PT', 'Futura', 'Avenir', 'Helvetica Neue', 'sans-serif'],
         'body': ['Futura PT', 'Futura', 'Avenir', 'Helvetica Neue', 'sans-serif'],
         'mono': ['Roboto Mono', 'monospace'],
+        'valorant': ['Valorant', 'Futura PT', 'Futura', 'Avenir', 'Helvetica Neue', 'sans-serif'],
       },
       fontWeight: {
         'heading': '600',

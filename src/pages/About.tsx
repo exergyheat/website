@@ -431,37 +431,37 @@ const About = () => {
                   {/* Each letter of EXERGY cascades in from left to right */}
                   <motion.span
                     variants={letterVariants}
-                    className="text-6xl font-bold text-white font-heading"
+                    className="text-6xl font-bold text-white font-valorant"
                   >
                     E
                   </motion.span>
                   <motion.span
                     variants={letterVariants}
-                    className="text-6xl font-bold text-white font-heading"
+                    className="text-6xl font-bold text-white font-valorant"
                   >
                     X
                   </motion.span>
                   <motion.span
                     variants={letterVariants}
-                    className="text-6xl font-bold text-white font-heading"
+                    className="text-6xl font-bold text-white font-valorant"
                   >
                     E
                   </motion.span>
                   <motion.span
                     variants={letterVariants}
-                    className="text-6xl font-bold text-white font-heading"
+                    className="text-6xl font-bold text-white font-valorant"
                   >
                     R
                   </motion.span>
                   <motion.span
                     variants={letterVariants}
-                    className="text-6xl font-bold text-white font-heading"
+                    className="text-6xl font-bold text-white font-valorant"
                   >
                     G
                   </motion.span>
                   <motion.span
                     variants={letterVariants}
-                    className="text-6xl font-bold text-white font-heading"
+                    className="text-6xl font-bold text-white font-valorant"
                   >
                     Y
                   </motion.span>
