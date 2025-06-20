@@ -63,7 +63,7 @@ const Learn = () => {
       title: "Open Monetary Protocol",
       icon: Bitcoin,
       description: "Bitcoin mining is an open source protocol (like the world wide web) that rewards participants for contributing energy to process bitcoin transactions. The more energy you contribute, the more you earn, and the more heat you generate.",
-      image: "https://images.pexels.com/photos/844124/pexels-photo-844124.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+      image: "bitcoin_miners.png",
       details: [
         "Anyone can participate - like anyone can use the internet",
         "Earnings are proportional to the work you contribute",
@@ -75,7 +75,7 @@ const Learn = () => {
       title: "Combining the Two: Smart Heat",
       icon: Cpu,
       description: "Bitoin miners are purposefully power hungry to maximize earnings. This inherently makes them great for heating. Hashrate Heating does the obvious - put bitcoin miners into heating systems. The result is heat that pays.",
-      image: "https://images.pexels.com/photos/1036936/pexels-photo-1036936.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+      image: "bitcoin_home_heat.png",
       details: [
         "Maximum efficiency. No waste - plus revenue",
         "Digital heat control optimizes performance",
