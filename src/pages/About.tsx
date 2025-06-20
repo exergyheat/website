@@ -57,30 +57,30 @@ const About = () => {
     }
   }
 
-  // Cascading logo animation variants
-  const logoContainerVariants = {
+  // Letter cascade animation variants
+  const letterContainerVariants = {
     hidden: { opacity: 0 },
     visible: {
       opacity: 1,
       transition: {
-        staggerChildren: 0.4,
-        delayChildren: 0.3
+        staggerChildren: 0.15,
+        delayChildren: 0.5
       }
     }
   }
 
-  const logoVariants = {
+  const letterVariants = {
     hidden: { 
       opacity: 0,
-      y: -60,
-      scale: 0.7
+      x: -30,
+      scale: 0.8
     },
     visible: {
       opacity: 1,
-      y: 0,
+      x: 0,
       scale: 1,
       transition: {
-        duration: 1,
+        duration: 0.8,
         ease: "easeOut"
       }
     }
@@ -415,54 +415,58 @@ const About = () => {
               </motion.div>
             </motion.div>
             
-            {/* Cascading Logo Animation */}
+            {/* Single Logo with Letter Cascade on Blue Gradient Background */}
             <motion.div 
-              className="relative flex flex-col items-center justify-center h-96"
+              className="relative flex items-center justify-center"
               variants={itemVariants}
             >
-              <motion.div
-                className="space-y-12"
-                variants={logoContainerVariants}
-                initial="hidden"
-                whileInView="visible"
-                viewport={{ once: true }}
-              >
-                {/* First Black Logo */}
+              <div className="w-80 h-80 bg-gradient-to-r from-[#4970A5] to-[#718EBC] rounded-2xl flex items-center justify-center shadow-2xl">
                 <motion.div
-                  variants={logoVariants}
-                  className="flex justify-center"
+                  className="flex items-center justify-center"
+                  variants={letterContainerVariants}
+                  initial="hidden"
+                  whileInView="visible"
+                  viewport={{ once: true }}
                 >
-                  <img
-                    src="/Logo1_black_horizontal.png"
-                    alt="EXERGY"
-                    className="h-24 w-auto"
-                  />
+                  {/* Each letter of EXERGY cascades in from left to right */}
+                  <motion.span
+                    variants={letterVariants}
+                    className="text-6xl font-bold text-white font-heading"
+                  >
+                    E
+                  </motion.span>
+                  <motion.span
+                    variants={letterVariants}
+                    className="text-6xl font-bold text-white font-heading"
+                  >
+                    X
+                  </motion.span>
+                  <motion.span
+                    variants={letterVariants}
+                    className="text-6xl font-bold text-white font-heading"
+                  >
+                    E
+                  </motion.span>
+                  <motion.span
+                    variants={letterVariants}
+                    className="text-6xl font-bold text-white font-heading"
+                  >
+                    R
+                  </motion.span>
+                  <motion.span
+                    variants={letterVariants}
+                    className="text-6xl font-bold text-white font-heading"
+                  >
+                    G
+                  </motion.span>
+                  <motion.span
+                    variants={letterVariants}
+                    className="text-6xl font-bold text-white font-heading"
+                  >
+                    Y
+                  </motion.span>
                 </motion.div>
-
-                {/* Second Black Logo */}
-                <motion.div
-                  variants={logoVariants}
-                  className="flex justify-center"
-                >
-                  <img
-                    src="/Logo1_black_horizontal.png"
-                    alt="EXERGY"
-                    className="h-24 w-auto"
-                  />
-                </motion.div>
-
-                {/* Third Black Logo */}
-                <motion.div
-                  variants={logoVariants}
-                  className="flex justify-center"
-                >
-                  <img
-                    src="/Logo1_black_horizontal.png"
-                    alt="EXERGY"
-                    className="h-24 w-auto"
-                  />
-                </motion.div>
-              </motion.div>
+              </div>
             </motion.div>
           </motion.div>
         </div>
