@@ -21,7 +21,7 @@ const Services = () => {
   const journeySteps = [
     {
       id: 'audit',
-      title: 'Estimate Savings: Heat Audit',
+      title: 'Sizing and Savings',
       description: 'Curious? Get annual savings %, bitcoin earnings, hardware options, costs, ROI, and our recommendation. Ideal for detail-seekers or option-weighers.',
       icon: Search,
       flipText: 'Start at the Heat Audit if you\'re curious, seeking details, or weighing options.',
