@@ -83,7 +83,7 @@ const Footer = () => {
               <div className="flex items-center">
                 <Mail className="h-5 w-5 text-primary-500" />
                 <a href="mailto:contact@exergyheat.com" className="ml-2 font-body text-surface-400 hover:text-surface-200 transition-colors">
-                  admin@exergyheat.com
+                  contact@exergyheat.com
                 </a>
               </div>
               <div className="flex items-center">
