@@ -78,8 +78,8 @@ const Learn = () => {
       image: "https://images.pexels.com/photos/1036936/pexels-photo-1036936.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
       details: [
         "Maximum efficiency. No waste - plus revenue",
-        "Digital control for maximum performance",
-        "Win-Win. Heat + money at no extra cost",
+        "Digital heat control optimizes performance",
+        "Win-Win. Heat + revenue at no extra operating cost",
         "Consistent passive revenue"
       ]
     }
