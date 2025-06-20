@@ -29,7 +29,7 @@ const Services = () => {
     },
     {
       id: 'design',
-      title: 'System Design & Quote',
+      title: 'Design & Project Plan',
       description: 'Ready? We design your integrated solution, size components, and provide a complete project plan and quote. We handle hardware, trades, timeline, and install.',
       icon: Cog,
       flipText: 'Start with System Design if you\'re ready to heat with hashrate, and need a tailored solution designed - or already have a solution that you need implemented.',
