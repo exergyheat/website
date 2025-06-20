@@ -57,6 +57,35 @@ const About = () => {
     }
   }
 
+  // Cascading logo animation variants
+  const logoContainerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.3,
+        delayChildren: 0.2
+      }
+    }
+  }
+
+  const logoVariants = {
+    hidden: { 
+      opacity: 0,
+      y: -50,
+      scale: 0.8
+    },
+    visible: {
+      opacity: 1,
+      y: 0,
+      scale: 1,
+      transition: {
+        duration: 0.8,
+        ease: "easeOut"
+      }
+    }
+  }
+
   const team = [
     {
       name: 'Tyler Stevens',
@@ -385,29 +414,85 @@ const About = () => {
                 ))}
               </motion.div>
             </motion.div>
+            
+            {/* Cascading Logo Animation */}
             <motion.div 
-              className="relative"
+              className="relative flex flex-col items-center justify-center h-96"
               variants={itemVariants}
             >
-              <motion.img
-                src="UndermineOpeningRemarks.png"
-                alt="Mission"
-                className="rounded-lg shadow-2xl h-64 w-full object-cover"
-                initial={{ scale: 0.8, opacity: 0 }}
-                whileInView={{ scale: 1, opacity: 1 }}
+              <motion.div
+                className="space-y-8"
+                variants={logoContainerVariants}
+                initial="hidden"
+                whileInView="visible"
                 viewport={{ once: true }}
-                transition={{ duration: 0.6 }}
+              >
+                {/* Black Logo */}
+                <motion.div
+                  variants={logoVariants}
+                  className="flex justify-center"
+                >
+                  <img
+                    src="/Logo1_black_horizontal.png"
+                    alt="EXERGY"
+                    className="h-16 w-auto"
+                    style={{ filter: 'brightness(0)' }}
+                  />
+                </motion.div>
+
+                {/* Dark Blue Logo */}
+                <motion.div
+                  variants={logoVariants}
+                  className="flex justify-center"
+                >
+                  <img
+                    src="/Logo1_black_horizontal.png"
+                    alt="EXERGY"
+                    className="h-16 w-auto"
+                    style={{ 
+                      filter: 'brightness(0) saturate(100%) invert(20%) sepia(25%) saturate(1500%) hue-rotate(200deg) brightness(90%) contrast(90%)'
+                    }}
+                  />
+                </motion.div>
+
+                {/* Light Blue Logo */}
+                <motion.div
+                  variants={logoVariants}
+                  className="flex justify-center"
+                >
+                  <img
+                    src="/Logo1_black_horizontal.png"
+                    alt="EXERGY"
+                    className="h-16 w-auto"
+                    style={{ 
+                      filter: 'brightness(0) saturate(100%) invert(45%) sepia(25%) saturate(1200%) hue-rotate(200deg) brightness(110%) contrast(90%)'
+                    }}
+                  />
+                </motion.div>
+              </motion.div>
+
+              {/* Floating accent elements */}
+              <motion.div 
+                className="absolute -top-4 -right-4 w-8 h-8 rounded-full bg-primary-500 opacity-20"
+                initial={{ scale: 0, rotate: 0 }}
+                whileInView={{ scale: 1, rotate: 360 }}
+                viewport={{ once: true }}
+                transition={{ duration: 1, delay: 1.5 }}
               />
               <motion.div 
-                className="absolute -bottom-4 -right-4 bg-white dark:bg-surface-700 p-4 rounded-lg shadow-xl"
-                initial={{ x: 100, opacity: 0 }}
-                whileInView={{ x: 0, opacity: 1 }}
+                className="absolute -bottom-4 -left-4 w-6 h-6 rounded-full bg-secondary-500 opacity-30"
+                initial={{ scale: 0, rotate: 0 }}
+                whileInView={{ scale: 1, rotate: -360 }}
                 viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: 0.3 }}
-              >
-                <p className="text-2xl font-bold text-primary-600 dark:text-primary-400">100%</p>
-                <p className="text-surface-600 dark:text-surface-400">Energy Efficiency</p>
-              </motion.div>
+                transition={{ duration: 1, delay: 2 }}
+              />
+              <motion.div 
+                className="absolute top-1/2 -right-8 w-4 h-4 rounded-full bg-primary-600 opacity-25"
+                initial={{ scale: 0 }}
+                whileInView={{ scale: 1 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: 2.5 }}
+              />
             </motion.div>
           </motion.div>
         </div>
