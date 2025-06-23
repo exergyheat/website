@@ -33,7 +33,7 @@ const Services = () => {
       title: 'Design & Project Plan',
       description: 'Ready? Get your integrated solution design, components, complete project plan and quote.',
       icon: Cog,
-      flipText: 'Start with a Heating System Upgrade if you\'re ready to heat with hashrate, We\'ll handle hardware, trades, timeline and install.',
+      flipText: 'Start with a System Upgrade if you\'re ready to heat with hashrate, We\'ll handle hardware, trades, timeline and install.',
       targetSection: 'upgrade-service'
     },
     {
