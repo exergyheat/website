@@ -41,7 +41,7 @@ const Services = () => {
       title: 'Automate Health Monitoring',
       description: 'Opted in? Remote monitoring tells us when it\'s time for maintenence, so you don\'t have to think about it.',
       icon: Monitor,
-      flipText: 'Start with Remote Monitoring if you already have hashrate heating, and want to get the most out of your heat that pays.',
+      flipText: 'Start with Remote Monitoring if you already have hashrate heating, and want to get the most out of your system.',
       targetSection: 'monitoring-service'
     }
   ]
