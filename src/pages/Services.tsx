@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
-import { ArrowRight, FileText, Wrench, Activity, HeartPulse, ChevronDown, ChevronUp, X, Search, Cog, Monitor, ZoomIn, ZoomOut, RotateCcw } from 'lucide-react'
+import { ArrowRight, FileText, Wrench, Activity, HeartPulse, ChevronDown, ChevronUp, X, Search, Cog, Monitor } from 'lucide-react'
 
 const Services = () => {
   const [expandedService, setExpandedService] = useState<string | null>(null)
@@ -8,10 +8,6 @@ const Services = () => {
   const [upgradeType, setUpgradeType] = useState<'residential' | 'commercial'>('residential')
   const [imageViewer, setImageViewer] = useState<{src: string, title: string} | null>(null)
   const [flippedCard, setFlippedCard] = useState<string | null>(null)
-  const [zoomLevel, setZoomLevel] = useState(1)
-  const [imagePosition, setImagePosition] = useState({ x: 0, y: 0 })
-  const [isDragging, setIsDragging] = useState(false)
-  const [dragStart, setDragStart] = useState({ x: 0, y: 0 })
 
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId)
@@ -209,50 +205,10 @@ const Services = () => {
 
   const openImageViewer = (imagePath: string, title: string) => {
     setImageViewer({ src: imagePath, title })
-    setZoomLevel(1)
-    setImagePosition({ x: 0, y: 0 })
   }
 
   const closeImageViewer = () => {
     setImageViewer(null)
-    setZoomLevel(1)
-    setImagePosition({ x: 0, y: 0 })
-  }
-
-  const handleZoomIn = () => {
-    setZoomLevel(prev => Math.min(prev + 0.25, 3))
-  }
-
-  const handleZoomOut = () => {
-    setZoomLevel(prev => Math.max(prev - 0.25, 0.5))
-  }
-
-  const handleResetZoom = () => {
-    setZoomLevel(1)
-    setImagePosition({ x: 0, y: 0 })
-  }
-
-  const handleMouseDown = (e: React.MouseEvent) => {
-    if (zoomLevel > 1) {
-      setIsDragging(true)
-      setDragStart({
-        x: e.clientX - imagePosition.x,
-        y: e.clientY - imagePosition.y
-      })
-    }
-  }
-
-  const handleMouseMove = (e: React.MouseEvent) => {
-    if (isDragging && zoomLevel > 1) {
-      setImagePosition({
-        x: e.clientX - dragStart.x,
-        y: e.clientY - dragStart.y
-      })
-    }
-  }
-
-  const handleMouseUp = () => {
-    setIsDragging(false)
   }
 
   return (
@@ -509,7 +465,7 @@ const Services = () => {
         </div>
       </div>
 
-      {/* Image Viewer Modal with Zoom */}
+      {/* Simple Image Viewer Modal */}
       {imageViewer && (
         <div className="fixed inset-0 z-50 overflow-hidden">
           <div className="flex items-center justify-center min-h-screen px-4 pt-4 pb-20 text-center sm:block sm:p-0">
@@ -521,75 +477,34 @@ const Services = () => {
               <div className="absolute inset-0 bg-surface-900 opacity-95"></div>
             </div>
 
-            <div className="inline-block align-bottom bg-white dark:bg-surface-900 rounded-lg text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle sm:max-w-7xl sm:w-full max-h-[95vh]">
+            <div className="inline-block align-bottom bg-white dark:bg-surface-900 rounded-lg text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle sm:max-w-7xl sm:w-full">
               <div className="bg-white dark:bg-surface-900 px-4 pt-5 pb-4 sm:p-6">
-                {/* Header with controls */}
+                {/* Header */}
                 <div className="flex justify-between items-center mb-4">
                   <h3 className="text-2xl font-bold text-surface-900 dark:text-surface-100">
                     {imageViewer.title}
                   </h3>
-                  <div className="flex items-center space-x-2">
-                    {/* Zoom Controls */}
-                    <div className="flex items-center space-x-2 bg-surface-100 dark:bg-surface-800 rounded-lg p-2">
-                      <button
-                        onClick={handleZoomOut}
-                        className="p-2 text-surface-600 dark:text-surface-400 hover:text-surface-900 dark:hover:text-surface-100 transition-colors"
-                        disabled={zoomLevel <= 0.5}
-                      >
-                        <ZoomOut className="h-5 w-5" />
-                      </button>
-                      <span className="text-sm font-medium text-surface-700 dark:text-surface-300 min-w-[3rem] text-center">
-                        {Math.round(zoomLevel * 100)}%
-                      </span>
-                      <button
-                        onClick={handleZoomIn}
-                        className="p-2 text-surface-600 dark:text-surface-400 hover:text-surface-900 dark:hover:text-surface-100 transition-colors"
-                        disabled={zoomLevel >= 3}
-                      >
-                        <ZoomIn className="h-5 w-5" />
-                      </button>
-                      <button
-                        onClick={handleResetZoom}
-                        className="p-2 text-surface-600 dark:text-surface-400 hover:text-surface-900 dark:hover:text-surface-100 transition-colors"
-                      >
-                        <RotateCcw className="h-5 w-5" />
-                      </button>
-                    </div>
-                    <button
-                      onClick={closeImageViewer}
-                      className="text-surface-500 hover:text-surface-700 dark:text-surface-400 dark:hover:text-surface-200 p-2 rounded-lg hover:bg-surface-100 dark:hover:bg-surface-800 transition-colors"
-                    >
-                      <X className="h-6 w-6" />
-                    </button>
-                  </div>
+                  <button
+                    onClick={closeImageViewer}
+                    className="text-surface-500 hover:text-surface-700 dark:text-surface-400 dark:hover:text-surface-200 p-2 rounded-lg hover:bg-surface-100 dark:hover:bg-surface-800 transition-colors"
+                  >
+                    <X className="h-6 w-6" />
+                  </button>
                 </div>
                 
-                {/* Image Container with zoom and pan */}
-                <div className="flex justify-center bg-surface-50 dark:bg-surface-800 rounded-lg overflow-hidden" style={{ height: '70vh' }}>
-                  <div 
-                    className="relative w-full h-full overflow-hidden cursor-move"
-                    onMouseDown={handleMouseDown}
-                    onMouseMove={handleMouseMove}
-                    onMouseUp={handleMouseUp}
-                    onMouseLeave={handleMouseUp}
-                  >
-                    <img
-                      src={imageViewer.src}
-                      alt={imageViewer.title}
-                      className="absolute top-1/2 left-1/2 max-w-none transition-transform duration-200 ease-out select-none"
-                      style={{
-                        transform: `translate(-50%, -50%) translate(${imagePosition.x}px, ${imagePosition.y}px) scale(${zoomLevel})`,
-                        cursor: zoomLevel > 1 ? (isDragging ? 'grabbing' : 'grab') : 'default'
-                      }}
-                      draggable={false}
-                    />
-                  </div>
+                {/* Image Container - ensures full image is visible */}
+                <div className="flex justify-center bg-surface-50 dark:bg-surface-800 rounded-lg p-4">
+                  <img
+                    src={imageViewer.src}
+                    alt={imageViewer.title}
+                    className="max-w-full max-h-[80vh] object-contain rounded-lg shadow-lg"
+                  />
                 </div>
                 
                 {/* Instructions */}
                 <div className="text-center mt-4">
                   <p className="text-sm text-surface-500 dark:text-surface-400">
-                    Use zoom controls to zoom in/out • {zoomLevel > 1 ? 'Click and drag to pan around the image • ' : ''}Click outside or press X to close
+                    Click outside or press X to close
                   </p>
                 </div>
               </div>
