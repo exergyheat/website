@@ -59,7 +59,7 @@ const Services = () => {
       "1-hour report walkthrough call"
     ],
     icon: FileText,
-    image: "https://images.pexels.com/photos/159888/pexels-photo-159888.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+    image: "heating_subsidy.png",
     details: {
       inputs: type === 'residential' ? [
         "Current heating bills or home dimensions",
