@@ -6,7 +6,7 @@ const Services = () => {
   const [expandedService, setExpandedService] = useState<string | null>(null)
   const [buildType, setBuildType] = useState<'residential' | 'commercial'>('residential')
   const [upgradeType, setUpgradeType] = useState<'residential' | 'commercial'>('residential')
-  const [pdfViewer, setPdfViewer] = useState<string | null>(null)
+  const [imageViewer, setImageViewer] = useState<string | null>(null)
   const [flippedCard, setFlippedCard] = useState<string | null>(null)
 
   const scrollToSection = (sectionId: string) => {
@@ -60,6 +60,8 @@ const Services = () => {
     ],
     icon: FileText,
     image: "heating_subsidy.png",
+    exampleImage: "heating_subsidy.png",
+    exampleTitle: "Heat Audit Analysis Example",
     details: {
       inputs: type === 'residential' ? [
         "Current heating bills or home dimensions",
@@ -84,8 +86,7 @@ const Services = () => {
       ]
     },
     buttonText: `Purchase ${type === 'residential' ? 'Residential' : 'Commercial'} Heat Audit`,
-    buttonLink: `/contact?service=audit&type=${type}`,
-    pdfPath: `/pdfs/heat-audit-example-${type}.pdf`
+    buttonLink: `/contact?service=audit&type=${type}`
   })
 
   const getUpgradeService = (type: 'residential' | 'commercial') => ({
@@ -101,6 +102,8 @@ const Services = () => {
     ],
     icon: Wrench,
     image: "LiquidHashHeat_ex.png",
+    exampleImage: "LiquidHashHeat_ex.png",
+    exampleTitle: "System Design Example",
     details: {
       process: type === 'residential' ? [
         "Initial consultation",
@@ -130,8 +133,7 @@ const Services = () => {
       ]
     },
     buttonText: `Place ${type === 'residential' ? '$1,000' : '$3,000'} Deposit`,
-    buttonLink: `/contact?service=upgrade&type=${type}`,
-    pdfPath: `/pdfs/system-upgrade-example-${type}.pdf`
+    buttonLink: `/contact?service=upgrade&type=${type}`
   })
 
   const services = [
@@ -150,6 +152,8 @@ const Services = () => {
       ],
       icon: Activity,
       image: "remote_monitoring.png",
+      exampleImage: "remote_monitoring.png",
+      exampleTitle: "Remote Monitoring Dashboard Example",
       details: {
         monitoring: [
           "Real-time performance tracking",
@@ -165,8 +169,7 @@ const Services = () => {
         ]
       },
       buttonText: "Contact Us",
-      buttonLink: "/contact?service=monitoring",
-      pdfPath: "/pdfs/remote-monitoring-example.pdf"
+      buttonLink: "/contact?service=monitoring"
     },
     {
       id: 'consulting',
@@ -197,16 +200,15 @@ const Services = () => {
       },
       buttonText: "Contact Us",
       buttonLink: "/contact?service=consulting"
-      // No pdfPath for consulting service
     }
   ]
 
-  const openPdfViewer = (pdfPath: string) => {
-    setPdfViewer(pdfPath)
+  const openImageViewer = (imagePath: string, title: string) => {
+    setImageViewer(imagePath)
   }
 
-  const closePdfViewer = () => {
-    setPdfViewer(null)
+  const closeImageViewer = () => {
+    setImageViewer(null)
   }
 
   return (
@@ -439,17 +441,17 @@ const Services = () => {
                     )}
                   </div>
 
-                  <div className={`${service.pdfPath ? 'flex gap-4' : ''} pt-6 border-t border-surface-200 dark:border-surface-700`}>
+                  <div className={`${service.exampleImage ? 'flex gap-4' : ''} pt-6 border-t border-surface-200 dark:border-surface-700`}>
                     <Link
                       to={service.buttonLink}
-                      className={`${service.pdfPath ? 'flex-1' : 'w-full'} inline-flex items-center justify-center px-6 py-3 bg-primary-600 text-white rounded-lg hover:bg-primary-700 transition-colors text-base font-subheading`}
+                      className={`${service.exampleImage ? 'flex-1' : 'w-full'} inline-flex items-center justify-center px-6 py-3 bg-primary-600 text-white rounded-lg hover:bg-primary-700 transition-colors text-base font-subheading`}
                     >
                       {service.buttonText}
                       <ArrowRight className="ml-2 h-5 w-5" />
                     </Link>
-                    {service.pdfPath && (
+                    {service.exampleImage && (
                       <button
-                        onClick={() => openPdfViewer(service.pdfPath)}
+                        onClick={() => openImageViewer(service.exampleImage, service.exampleTitle)}
                         className="px-6 py-3 bg-surface-100 dark:bg-surface-700 text-surface-900 dark:text-surface-100 rounded-lg hover:bg-surface-200 dark:hover:bg-surface-600 transition-colors text-base font-subheading"
                       >
                         Example
@@ -463,35 +465,46 @@ const Services = () => {
         </div>
       </div>
 
-      {/* PDF Viewer Modal */}
-      {pdfViewer && (
+      {/* Image Viewer Modal */}
+      {imageViewer && (
         <div className="fixed inset-0 z-50 overflow-hidden">
           <div className="flex items-center justify-center min-h-screen px-4 pt-4 pb-20 text-center sm:block sm:p-0">
-            <div className="fixed inset-0 transition-opacity" aria-hidden="true">
-              <div className="absolute inset-0 bg-surface-900 opacity-75"></div>
+            <div 
+              className="fixed inset-0 transition-opacity cursor-pointer" 
+              aria-hidden="true"
+              onClick={closeImageViewer}
+            >
+              <div className="absolute inset-0 bg-surface-900 opacity-90"></div>
             </div>
 
-            <div className="inline-block align-bottom bg-white dark:bg-surface-900 rounded-lg text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle sm:max-w-6xl sm:w-full h-[90vh]">
-              <div className="bg-white dark:bg-surface-900 px-4 pt-5 pb-4 sm:p-6 h-full flex flex-col">
+            <div className="inline-block align-bottom bg-white dark:bg-surface-900 rounded-lg text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle sm:max-w-5xl sm:w-full max-h-[90vh]">
+              <div className="bg-white dark:bg-surface-900 px-4 pt-5 pb-4 sm:p-6">
                 <div className="flex justify-between items-center mb-4">
                   <h3 className="text-2xl font-bold text-surface-900 dark:text-surface-100">
-                    Example Deliverable
+                    Service Example
                   </h3>
                   <button
-                    onClick={closePdfViewer}
-                    className="text-surface-500 hover:text-surface-700 dark:text-surface-400 dark:hover:text-surface-200"
+                    onClick={closeImageViewer}
+                    className="text-surface-500 hover:text-surface-700 dark:text-surface-400 dark:hover:text-surface-200 p-2 rounded-lg hover:bg-surface-100 dark:hover:bg-surface-800 transition-colors"
                   >
                     <X className="h-6 w-6" />
                   </button>
                 </div>
                 
-                {/* PDF Embed */}
-                <div className="flex-1 bg-surface-100 dark:bg-surface-800 rounded-lg overflow-hidden">
-                  <iframe
-                    src={pdfViewer}
-                    className="w-full h-full border-0"
-                    title="PDF Example"
+                {/* Image Container */}
+                <div className="flex justify-center bg-surface-50 dark:bg-surface-800 rounded-lg p-4">
+                  <img
+                    src={imageViewer}
+                    alt="Service Example"
+                    className="max-w-full max-h-[70vh] object-contain rounded-lg shadow-lg"
                   />
+                </div>
+                
+                {/* Close instruction */}
+                <div className="text-center mt-4">
+                  <p className="text-sm text-surface-500 dark:text-surface-400">
+                    Click anywhere outside the image or the X button to close
+                  </p>
                 </div>
               </div>
             </div>
