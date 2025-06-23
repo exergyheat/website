@@ -152,7 +152,7 @@ const Home = () => {
 
             <div className="relative">
               <img
-                src="heating_subsidy.png"
+                src="homeheat_withbill.png"
                 alt="Hashrate heating technology"
                 className="rounded-lg shadow-2xl"
               />
