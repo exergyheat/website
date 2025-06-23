@@ -72,7 +72,7 @@ const Services = () => {
         "Local energy rates, TOU or demand charges",
         "Expected occupancy patterns or supplimental heat sources",
         "Desired temperatures zones",
-        "Location and wweather data, or driving heat factors"
+        "Location and weather data, or driving heat factors"
       ],
       deliverables: [
         "Comprehensive analysis report",
