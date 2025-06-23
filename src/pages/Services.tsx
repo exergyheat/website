@@ -92,7 +92,7 @@ const Services = () => {
   const getUpgradeService = (type: 'residential' | 'commercial') => ({
     id: 'upgrade',
     name: "Heating System Upgrades",
-    description: "Get a complete heating system design tailored to your specific needs and requirements.",
+    description: "Get a complete heating solution tailored to your specific needs and requirements.",
     price: type === 'residential' ? "$1,000 deposit" : "$3,000 deposit",
     features: [
       "Custom system design",
