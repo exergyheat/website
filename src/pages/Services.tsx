@@ -485,12 +485,14 @@ const Services = () => {
         <div className="grid grid-cols-1 gap-16">
           {services.map((service, index) => (
             <div key={service.id} id={`${service.id}-service`} className={`flex flex-col md:flex-row gap-8 items-start ${index % 2 === 1 ? 'md:flex-row-reverse' : ''}`}>
-              <div className="w-full md:w-1/2">
-                <img
-                  src={service.image}
-                  alt={service.name}
-                  className="rounded-lg shadow-2xl w-full h-[400px] object-cover"
-                />
+              <div className="w-full md:w-1/2 flex justify-center">
+                <div className="w-full max-w-lg">
+                  <img
+                    src={service.image}
+                    alt={service.name}
+                    className="rounded-lg shadow-2xl w-full h-auto object-contain"
+                  />
+                </div>
               </div>
               <div className="w-full md:w-1/2 space-y-6">
                 <div className="inline-block p-3 bg-primary-100 dark:bg-primary-900 rounded-lg">
