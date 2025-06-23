@@ -13,14 +13,14 @@ const BookCall = () => {
     {
       name: 'Dylan',
       role: 'COO & CFO',
-      image: 'https://images.pexels.com/photos/2381069/pexels-photo-2381069.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+      image: '/IMG_5108.JPG',
       description: 'Schedule time with Dylan to discuss new projects or operations and the numbers.',
       calLink: 'dylan-exergy/meeting'
     },
     {
       name: 'Mike',
       role: 'CRO',
-      image: 'https://images.pexels.com/photos/2379005/pexels-photo-2379005.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+      image: '/IMG_5108.JPG',
       description: 'Connect with Mike to discuss new projects or explore partnership opportunities.',
       calLink: 'exergy-mike'
     }
