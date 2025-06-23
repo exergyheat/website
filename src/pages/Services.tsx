@@ -350,7 +350,7 @@ const Services = () => {
         "Implementation support"
       ],
       icon: HeartPulse,
-      image: "https://images.pexels.com/photos/7567620/pexels-photo-7567620.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+      image: "hashheat_consulting.png",
       details: {
         expertise: [
           "System architecture",
