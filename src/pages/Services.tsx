@@ -157,7 +157,7 @@ const Services = () => {
       "Performance projections"
     ],
     icon: Wrench,
-    image: "https://images.pexels.com/photos/8293778/pexels-photo-8293778.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+    image: "LiquidHashHeat_ex.png",
     details: {
       process: type === 'residential' ? [
         "Initial consultation",
