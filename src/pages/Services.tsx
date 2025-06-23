@@ -267,7 +267,7 @@ const Services = () => {
         "24/7 support"
       ],
       icon: Activity,
-      image: "https://images.pexels.com/photos/7567473/pexels-photo-7567473.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+      image: "remote_monitoring.png",
       details: {
         monitoring: [
           "Real-time performance tracking",
