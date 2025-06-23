@@ -39,7 +39,7 @@ const Services = () => {
     {
       id: 'monitoring',
       title: 'Automate Health Monitoring',
-      description: 'Opted in? Remote monitoring tells you when it\'s time for maintenence with reports, alerts, and upgrade discounts.',
+      description: 'Opted in? Remote monitoring tells you when it\'s time for maintenence, so you don\'t have to think about it.',
       icon: Monitor,
       flipText: 'Start with Remote Monitoring if you already have hashrate heating, and want to get the most out of your heat that pays.',
       targetSection: 'monitoring-service'
