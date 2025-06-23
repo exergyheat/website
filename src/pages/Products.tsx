@@ -56,27 +56,6 @@ const Products = () => {
       ]
     },
     {
-      id: 'sh-2000',
-      category: 'space-heating',
-      name: 'EXERGY SpaceHeat 2000',
-      image: 'https://images.pexels.com/photos/4792733/pexels-photo-4792733.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-      specs: {
-        power: '2000W',
-        hashrate: '200 TH/s',
-        heating: '6,824 BTU/hr',
-        noise: '50 dB',
-        dimensions: '24" x 12" x 12"'
-      },
-      price: '$5,499',
-      description: 'High-capacity heater designed for large rooms and open spaces.',
-      features: [
-        'Dual heating zones',
-        'Advanced temperature control',
-        'Remote monitoring',
-        'Enhanced security features'
-      ]
-    },
-    {
       id: 'fa-5000',
       category: 'forced-air',
       name: 'EXERGY AirHeat 5000',
