@@ -11,14 +11,14 @@ const BookCall = () => {
       calLink: 'tylerkstevens/meeting'
     },
     {
-      name: 'Dylan',
+      name: 'Dylan S',
       role: 'COO & CFO',
       image: '/IMG_5108.JPG',
       description: 'Schedule time with Dylan to discuss new projects or operations and the numbers.',
       calLink: 'dylan-exergy/meeting'
     },
     {
-      name: 'Mike',
+      name: 'Mike C',
       role: 'CRO',
       image: '/IMG_5108.JPG',
       description: 'Connect with Mike to discuss new projects or explore partnership opportunities.',
