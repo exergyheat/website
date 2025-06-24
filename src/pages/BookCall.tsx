@@ -13,7 +13,7 @@ const BookCall = () => {
     {
       name: 'Dylan S',
       role: 'COO & CFO',
-      image: '/IMG_5108.JPG',
+      image: '/DylanS_headshot.png',
       description: 'Schedule time with Dylan to discuss new projects or operations and the numbers.',
       calLink: 'dylan-exergy/meeting'
     },
