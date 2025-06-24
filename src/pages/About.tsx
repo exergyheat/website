@@ -90,13 +90,13 @@ const About = () => {
     {
       name: 'Tyler Stevens',
       role: 'CEO & Chief Engineer',
-      image: '/IMG_5108.JPG',
+      image: '/TylerS_headshot.png',
       description: 'Author of "Bitcoin Mining Heat Reuse" and instigator of the Heatpunk movement.'
     },
     {
       name: 'Dylan',
       role: 'COO & CFO',
-      image: 'https://images.pexels.com/photos/2381069/pexels-photo-2381069.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+      image: '/DylanS_headshot.jpeg',
       description: 'Operations and bitcoin financial strategy expert.'
     },
     {
