@@ -1,54 +1,28 @@
-import React, { useEffect } from 'react'
+import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
-import { Mail, MapPin, Calendar } from 'lucide-react'
-
-// Declare HubSpot types
-declare global {
-  interface Window {
-    hbspt: {
-      forms: {
-        create: (config: {
-          portalId: string;
-          formId: string;
-          region: string;
-          target?: string;
-        }) => void;
-      };
-    };
-  }
-}
+import { Mail, MapPin, Send, Calendar } from 'lucide-react'
 
 const Contact = () => {
-  useEffect(() => {
-    // Load HubSpot forms script
-    const script = document.createElement('script')
-    script.src = '//js.hsforms.net/forms/embed/v2.js'
-    script.charset = 'utf-8'
-    script.type = 'text/javascript'
-    script.async = true
-    
-    script.onload = () => {
-      // Create the form once the script is loaded
-      if (window.hbspt) {
-        window.hbspt.forms.create({
-          portalId: "3834775",
-          formId: "8ff88733-6d79-4010-9359-e8cd934a874e",
-          region: "na1",
-          target: "#hubspot-form-container"
-        })
-      }
-    }
-    
-    document.head.appendChild(script)
-    
-    // Cleanup function to remove script when component unmounts
-    return () => {
-      const existingScript = document.querySelector('script[src="//js.hsforms.net/forms/embed/v2.js"]')
-      if (existingScript) {
-        document.head.removeChild(existingScript)
-      }
-    }
-  }, [])
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    subject: '',
+    message: ''
+  })
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault()
+    // Handle form submission logic here
+    console.log('Form submitted:', formData)
+  }
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    const { name, value } = e.target
+    setFormData(prev => ({
+      ...prev,
+      [name]: value
+    }))
+  }
 
   return (
     <div className="bg-surface-50 dark:bg-surface-900">
@@ -59,7 +33,7 @@ const Contact = () => {
             Contact Us
           </h1>
           <p className="text-xl text-white/90 max-w-2xl mx-auto">
-            It's time to monetize your heat
+            It's time monetize your heat
           </p>
         </div>
       </div>
@@ -108,98 +82,81 @@ const Contact = () => {
             </div>
           </div>
 
-          {/* HubSpot Form Container */}
+          {/* Contact Form */}
           <div className="bg-white dark:bg-surface-800 rounded-lg shadow-lg p-8">
             <h2 className="text-2xl font-bold text-surface-900 dark:text-surface-100 mb-6">Send us a Message</h2>
-            
-            {/* HubSpot Form will be injected here */}
-            <div id="hubspot-form-container" className="hubspot-form-wrapper">
-              {/* Loading state while form loads */}
-              <div className="flex items-center justify-center py-12">
-                <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-primary-600"></div>
-                <span className="ml-3 text-surface-600 dark:text-surface-400">Loading form...</span>
+            <form onSubmit={handleSubmit} className="space-y-6">
+              <div>
+                <label htmlFor="name" className="block text-sm font-medium text-surface-700 dark:text-surface-300">
+                  Name
+                </label>
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  value={formData.name}
+                  onChange={handleChange}
+                  className="mt-1 block w-full rounded-md border-surface-300 dark:border-surface-600 shadow-sm focus:border-primary-500 focus:ring-primary-500 dark:bg-surface-700 dark:text-surface-100"
+                  required
+                />
               </div>
-            </div>
+
+              <div>
+                <label htmlFor="email" className="block text-sm font-medium text-surface-700 dark:text-surface-300">
+                  Email
+                </label>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  value={formData.email}
+                  onChange={handleChange}
+                  className="mt-1 block w-full rounded-md border-surface-300 dark:border-surface-600 shadow-sm focus:border-primary-500 focus:ring-primary-500 dark:bg-surface-700 dark:text-surface-100"
+                  required
+                />
+              </div>
+
+              <div>
+                <label htmlFor="subject" className="block text-sm font-medium text-surface-700 dark:text-surface-300">
+                  Subject
+                </label>
+                <input
+                  type="text"
+                  id="subject"
+                  name="subject"
+                  value={formData.subject}
+                  onChange={handleChange}
+                  className="mt-1 block w-full rounded-md border-surface-300 dark:border-surface-600 shadow-sm focus:border-primary-500 focus:ring-primary-500 dark:bg-surface-700 dark:text-surface-100"
+                  required
+                />
+              </div>
+
+              <div>
+                <label htmlFor="message" className="block text-sm font-medium text-surface-700 dark:text-surface-300">
+                  Message
+                </label>
+                <textarea
+                  id="message"
+                  name="message"
+                  value={formData.message}
+                  onChange={handleChange}
+                  rows={4}
+                  className="mt-1 block w-full rounded-md border-surface-300 dark:border-surface-600 shadow-sm focus:border-primary-500 focus:ring-primary-500 dark:bg-surface-700 dark:text-surface-100"
+                  required
+                />
+              </div>
+
+              <button
+                type="submit"
+                className="w-full flex justify-center items-center px-4 py-2 border border-transparent rounded-md shadow-sm text-white bg-primary-600 hover:bg-primary-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-500 dark:focus:ring-offset-surface-800 text-base font-subheading"
+              >
+                Send Message
+                <Send className="ml-2 h-4 w-4" />
+              </button>
+            </form>
           </div>
         </div>
       </div>
-
-      {/* Custom styles for HubSpot form */}
-      <style jsx>{`
-        .hubspot-form-wrapper .hs-form {
-          font-family: 'Futura PT', 'Futura', 'Avenir', 'Helvetica Neue', sans-serif !important;
-        }
-        
-        .hubspot-form-wrapper .hs-form-field > label {
-          color: var(--text-color) !important;
-          font-weight: 500 !important;
-          margin-bottom: 0.5rem !important;
-          text-transform: uppercase !important;
-          letter-spacing: 0.025em !important;
-        }
-        
-        .hubspot-form-wrapper .hs-input {
-          width: 100% !important;
-          padding: 0.75rem !important;
-          border: 1px solid #d1d5db !important;
-          border-radius: 0.375rem !important;
-          font-size: 1rem !important;
-          line-height: 1.5 !important;
-          background-color: white !important;
-          transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out !important;
-        }
-        
-        .hubspot-form-wrapper .hs-input:focus {
-          outline: none !important;
-          border-color: #4970A5 !important;
-          box-shadow: 0 0 0 3px rgba(73, 112, 165, 0.1) !important;
-        }
-        
-        .hubspot-form-wrapper .hs-button {
-          background-color: #4970A5 !important;
-          color: white !important;
-          padding: 0.75rem 1.5rem !important;
-          border: none !important;
-          border-radius: 0.375rem !important;
-          font-weight: 600 !important;
-          text-transform: uppercase !important;
-          letter-spacing: 0.025em !important;
-          cursor: pointer !important;
-          transition: background-color 0.15s ease-in-out !important;
-          width: 100% !important;
-          font-family: 'Futura PT', 'Futura', 'Avenir', 'Helvetica Neue', sans-serif !important;
-        }
-        
-        .hubspot-form-wrapper .hs-button:hover {
-          background-color: #3D5A8A !important;
-        }
-        
-        .hubspot-form-wrapper .hs-error-msgs {
-          color: #dc2626 !important;
-          font-size: 0.875rem !important;
-          margin-top: 0.25rem !important;
-        }
-        
-        .hubspot-form-wrapper .hs-form-field {
-          margin-bottom: 1.5rem !important;
-        }
-        
-        /* Dark mode styles */
-        .dark .hubspot-form-wrapper .hs-form-field > label {
-          color: #f3f4f6 !important;
-        }
-        
-        .dark .hubspot-form-wrapper .hs-input {
-          background-color: #374151 !important;
-          border-color: #4b5563 !important;
-          color: #f3f4f6 !important;
-        }
-        
-        .dark .hubspot-form-wrapper .hs-input:focus {
-          border-color: #4970A5 !important;
-          box-shadow: 0 0 0 3px rgba(73, 112, 165, 0.2) !important;
-        }
-      `}</style>
     </div>
   )
 }
