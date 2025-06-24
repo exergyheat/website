@@ -7,7 +7,7 @@ const projects = [
     id: 'commercial-office',
     title: 'Commercial Office Building',
     description: 'Complete heating solution for a 50,000 sq ft office building in downtown Denver.',
-    image: 'https://images.pexels.com/photos/323705/pexels-photo-323705.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&dpr=1',
+    image: 'https://images.pexels.com/photos/323705/pexels-photo-323705.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
     stats: {
       savings: '65%',
       payback: '18 months'
@@ -17,7 +17,7 @@ const projects = [
     id: 'manufacturing',
     title: 'Manufacturing Facility',
     description: 'Industrial-scale heating for a manufacturing plant with high thermal demands.',
-    image: 'https://images.pexels.com/photos/2760243/pexels-photo-2760243.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&dpr=1',
+    image: 'https://images.pexels.com/photos/2760243/pexels-photo-2760243.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
     stats: {
       savings: '72%',
       payback: '14 months'
@@ -27,10 +27,30 @@ const projects = [
     id: 'residential',
     title: 'Luxury Home',
     description: 'Whole-home heating solution including pool and spa heating.',
-    image: 'https://images.pexels.com/photos/1115804/pexels-photo-1115804.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&dpr=1',
+    image: 'https://images.pexels.com/photos/1115804/pexels-photo-1115804.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
     stats: {
       savings: '58%',
       payback: '24 months'
+    }
+  },
+  {
+    id: 'greenhouse',
+    title: 'Commercial Greenhouse',
+    description: 'Year-round heating for a large commercial greenhouse operation.',
+    image: 'https://images.pexels.com/photos/2132250/pexels-photo-2132250.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+    stats: {
+      savings: '70%',
+      payback: '16 months'
+    }
+  },
+  {
+    id: 'data-center',
+    title: 'Data Center Heat Recovery',
+    description: 'Heat recovery system for a major data center, providing district heating.',
+    image: 'https://images.pexels.com/photos/325229/pexels-photo-325229.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+    stats: {
+      savings: '80%',
+      payback: '12 months'
     }
   }
 ]
@@ -79,8 +99,8 @@ const ProjectCarousel = () => {
                           src={project.image}
                           alt={project.title}
                           className="w-full h-full object-cover"
-                          loading="lazy"
                         />
+                        {/* Blue filter overlay matching the header */}
                         <div 
                           className="absolute inset-0"
                           style={{
@@ -111,21 +131,21 @@ const ProjectCarousel = () => {
             </div>
           </div>
 
+          {/* Navigation Buttons */}
           <button
             onClick={prevSlide}
             className="absolute left-0 top-1/2 transform -translate-y-1/2 -translate-x-4 bg-white dark:bg-surface-800 p-2 rounded-full shadow-lg hover:bg-surface-100 dark:hover:bg-surface-700 transition-colors"
-            aria-label="Previous project"
           >
             <ArrowLeft className="h-6 w-6 text-surface-900 dark:text-surface-100" />
           </button>
           <button
             onClick={nextSlide}
             className="absolute right-0 top-1/2 transform -translate-y-1/2 translate-x-4 bg-white dark:bg-surface-800 p-2 rounded-full shadow-lg hover:bg-surface-100 dark:hover:bg-surface-700 transition-colors"
-            aria-label="Next project"
           >
             <ArrowRight className="h-6 w-6 text-surface-900 dark:text-surface-100" />
           </button>
 
+          {/* View All Projects Button */}
           <div className="text-center mt-8">
             <Link
               to="/portfolio"
