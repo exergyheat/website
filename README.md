@@ -2,8 +2,6 @@
 
 A modern web application for EXERGY, a revolutionary hashrate heating company that transforms traditional heating infrastructure into revenue-generating assets.
 
-![EXERGY Website](https://images.pexels.com/photos/3182812/pexels-photo-3182812.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2)
-
 ## Features
 
 - 🌙 Dark/Light mode support
