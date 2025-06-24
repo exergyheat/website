@@ -78,47 +78,6 @@ const Products = () => {
 
       ]
     },
-    {
-      id: 'cs-hub',
-      category: 'control',
-      name: 'EXERGY Control Hub',
-      image: 'https://images.pexels.com/photos/325229/pexels-photo-325229.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-      specs: {
-        processor: 'Quad-core ARM',
-        memory: '8GB RAM',
-        storage: '256GB SSD',
-        connectivity: 'WiFi/Ethernet'
-      },
-      price: '$799',
-      description: 'Central control system for managing multiple hashrate heating devices.',
-      features: [
-        'Real-time monitoring',
-        'Remote management',
-        'Data logging',
-        'API integration'
-      ]
-    },
-    {
-      id: 'cs-sensor',
-      category: 'control',
-      name: 'EXERGY Smart Sensor Pack',
-      image: 'https://images.pexels.com/photos/2582937/pexels-photo-2582937.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-      specs: {
-        sensors: 'Temp/Humidity/Flow',
-        range: '100ft wireless',
-        battery: '2-year life',
-        quantity: '4 sensors/pack'
-      },
-      price: '$299',
-      description: 'Comprehensive sensor package for monitoring your heating system.',
-      features: [
-        'Wireless connectivity',
-        'Long battery life',
-        'Easy installation',
-        'Environmental monitoring'
-      ]
-    }
-  ]
 
   const filteredProducts = activeCategory
     ? products.filter(product => product.category === activeCategory)
