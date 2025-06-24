@@ -11,7 +11,7 @@ const Products = () => {
       id: 'space-heating',
       name: 'Space Heating',
       icon: Radiator,
-      description: 'Standalone heating solutions for rooms, garages, and homes. Our space heaters combine efficient heat distribution with cryptocurrency mining capabilities.'
+      description: 'Standalone heating solutions for rooms, garages, and homes. Space heaters are the simplest way to monetize your heat.'
     },
     {
       id: 'forced-air',
