@@ -1,7 +1,10 @@
-import React, { useEffect } from 'react'
-import { Calendar, ArrowRight } from 'lucide-react'
+import React, { useEffect, useState } from 'react'
+import { Calendar, ArrowRight, X } from 'lucide-react'
+import { getCalApi } from "@calcom/embed-react"
 
 const BookCall = () => {
+  const [selectedMember, setSelectedMember] = useState<string | null>(null)
+
   const team = [
     {
       name: 'Tyler Stevens',
@@ -27,44 +30,26 @@ const BookCall = () => {
   ]
 
   useEffect(() => {
-    // Check if Cal.com embed script is already loaded
-    const existingScript = document.querySelector('script[src="https://app.cal.com/embed/embed.js"]')
-    
-    if (!existingScript) {
-      // Load Cal.com embed script only if it doesn't exist
-      const script = document.createElement('script')
-      script.src = 'https://app.cal.com/embed/embed.js'
-      script.async = true
-      script.id = 'cal-embed-script'
-      document.head.appendChild(script)
-
-      script.onload = () => {
-        // Initialize Cal.com
-        if (window.Cal) {
-          window.Cal('init', 'meeting', { origin: 'https://cal.com' })
-          window.Cal.ns.meeting('ui', {
-            cssVarsPerTheme: {
-              light: { 'cal-brand': '#2F3B69' },
-              dark: { 'cal-brand': '#314596' }
-            },
-            hideEventTypeDetails: false,
-            layout: 'month_view'
-          })
-        }
-      }
-    } else if (window.Cal) {
-      // If script already exists and Cal is available, just initialize
-      window.Cal('init', 'meeting', { origin: 'https://cal.com' })
-      window.Cal.ns.meeting('ui', {
-        cssVarsPerTheme: {
-          light: { 'cal-brand': '#2F3B69' },
-          dark: { 'cal-brand': '#314596' }
+    (async function () {
+      const cal = await getCalApi({"namespace":"meeting"});
+      cal("ui", {
+        "cssVarsPerTheme": {
+          "light": {"cal-brand": "#4970a5"},
+          "dark": {"cal-brand": "#2f3b69"}
         },
-        hideEventTypeDetails: false,
-        layout: 'month_view'
-      })
-    }
+        "hideEventTypeDetails": false,
+        "layout": "month_view"
+      });
+    })();
   }, [])
+
+  const openCalModal = (calLink: string) => {
+    setSelectedMember(calLink)
+  }
+
+  const closeModal = () => {
+    setSelectedMember(null)
+  }
 
   return (
     <div className="bg-surface-50 dark:bg-surface-900 min-h-screen">
@@ -99,10 +84,8 @@ const BookCall = () => {
                   {member.description}
                 </p>
                 <button 
+                  onClick={() => openCalModal(member.calLink)}
                   className="w-full bg-primary-600 text-white py-3 px-4 rounded-lg hover:bg-primary-700 transition-colors flex items-center justify-center text-base font-subheading"
-                  data-cal-link={member.calLink}
-                  data-cal-namespace="meeting"
-                  data-cal-config='{"layout":"month_view","theme":"auto"}'
                 >
                   <Calendar className="h-5 w-5 mr-2" />
                   Schedule Call
@@ -113,6 +96,66 @@ const BookCall = () => {
           ))}
         </div>
       </div>
+
+      {/* Cal.com Modal */}
+      {selectedMember && (
+        <div className="fixed inset-0 z-50 overflow-y-auto">
+          <div className="flex items-center justify-center min-h-screen px-4 pt-4 pb-20 text-center sm:block sm:p-0">
+            <div 
+              className="fixed inset-0 transition-opacity cursor-pointer" 
+              aria-hidden="true"
+              onClick={closeModal}
+            >
+              <div className="absolute inset-0 bg-surface-900 opacity-75"></div>
+            </div>
+
+            <div className="inline-block align-bottom bg-white dark:bg-surface-900 rounded-lg text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle sm:max-w-4xl sm:w-full">
+              <div className="bg-white dark:bg-surface-900 px-4 pt-5 pb-4 sm:p-6">
+                {/* Header */}
+                <div className="flex justify-between items-center mb-4">
+                  <h3 className="text-2xl font-bold text-surface-900 dark:text-surface-100">
+                    Schedule a Call
+                  </h3>
+                  <button
+                    onClick={closeModal}
+                    className="text-surface-500 hover:text-surface-700 dark:text-surface-400 dark:hover:text-surface-200 p-2 rounded-lg hover:bg-surface-100 dark:hover:bg-surface-800 transition-colors"
+                  >
+                    <X className="h-6 w-6" />
+                  </button>
+                </div>
+                
+                {/* Cal.com Embed */}
+                <div className="w-full h-[600px]">
+                  <button
+                    data-cal-namespace="meeting"
+                    data-cal-link={selectedMember}
+                    data-cal-config='{"layout":"month_view"}'
+                    className="hidden"
+                    id="cal-booking-button"
+                  >
+                    Book Call
+                  </button>
+                  
+                  {/* Cal.com will inject the booking interface here */}
+                  <div 
+                    data-cal-namespace="meeting"
+                    data-cal-link={selectedMember}
+                    data-cal-config='{"layout":"month_view"}'
+                    style={{ width: "100%", height: "100%", overflow: "scroll" }}
+                  ></div>
+                </div>
+                
+                {/* Instructions */}
+                <div className="text-center mt-4">
+                  <p className="text-sm text-surface-500 dark:text-surface-400">
+                    Click outside or press X to close
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   )
 }
