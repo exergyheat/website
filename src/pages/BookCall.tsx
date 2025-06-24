@@ -20,7 +20,7 @@ const BookCall = () => {
     {
       name: 'Mike C',
       role: 'CRO',
-      image: '/IMG_5108.JPG',
+      image: '/MikeC_headshot.png',
       description: 'Connect with Mike to discuss new projects or explore partnership opportunities.',
       calLink: 'exergy-mike'
     }
