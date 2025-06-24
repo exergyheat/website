@@ -6,7 +6,7 @@ const BookCall = () => {
     {
       name: 'Tyler Stevens',
       role: 'CEO & Chief Engineer',
-      image: '/IMG_5108.JPG',
+      image: '/TylerS_headshot.png',
       description: 'Chat with Tyler to discuss new projects or technical aspects of hashrate heating.',
       calLink: 'tylerkstevens/meeting'
     },
