@@ -43,7 +43,7 @@ const Products = () => {
         power: '800W',
         hashrate: '37.5 TH/s',
         heating: '2,730 BTU/hr',
-        heating space: '400 sqft',
+        capacity: '400 sqft',
         noise: '45 dB',
         dimensions: '30" x 4.1" x 8.5"'
       },
