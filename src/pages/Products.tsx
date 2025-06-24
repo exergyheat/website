@@ -193,7 +193,7 @@ const Products = () => {
                     to="/contact"
                     className="inline-flex items-center justify-center w-full px-6 py-3 bg-primary-600 text-white rounded-lg hover:bg-primary-700 transition-colors"
                   >
-                    Buy Now
+                    Coming Soon
                     <ArrowRight className="ml-2 h-5 w-5" />
                   </Link>
                 </div>
