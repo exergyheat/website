@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import { Github, X, Linkedin, Mail, MapPin } from 'lucide-react'
+import { Github, Linkedin, Mail, MapPin } from 'lucide-react'
 
 const Footer = () => {
   return (
@@ -99,10 +99,24 @@ const Footer = () => {
               </div>
             </div>
             <div className="flex space-x-4">
-              <a href="https://x.com/exergy_llc" className="text-surface-400 hover:text-surface-200 transition-colors">
-                <X className="h-6 w-6" />
+              <a 
+                href="https://x.com/exergy_llc" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-surface-400 hover:text-surface-200 transition-colors"
+              >
+                <img 
+                  src="/logo-white.png" 
+                  alt="X (Twitter)" 
+                  className="h-6 w-6"
+                />
               </a>
-              <a href="https://github.com/exergyheat" className="text-surface-400 hover:text-surface-200 transition-colors">
+              <a 
+                href="https://github.com/exergyheat" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-surface-400 hover:text-surface-200 transition-colors"
+              >
                 <Github className="h-6 w-6" />
               </a>
             </div>
