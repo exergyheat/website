@@ -1,35 +1,5 @@
-import React, { useEffect } from 'react';
-import { Calendar, ArrowRight } from 'lucide-react';
-import { getCalApi } from "@calcom/embed-react";
-
-const MyApp = ({ calLink }) => {
-  useEffect(() => {
-    (async function () {
-      const cal = await getCalApi({ namespace: "meeting" });
-      cal("ui", {
-        cssVarsPerTheme: {
-          light: { "cal-brand": "#4970a5" },
-          dark: { "cal-brand": "#2f3b69" },
-        },
-        hideEventTypeDetails: false,
-        layout: "month_view",
-      });
-    })();
-  }, [calLink]);
-
-  return (
-    <button
-      data-cal-namespace="meeting"
-      data-cal-link={calLink}
-      data-cal-config='{"layout":"month_view"}'
-      className="w-full bg-primary-600 text-white py-3 px-4 rounded-lg hover:bg-primary-700 transition-colors flex items-center justify-center text-base font-subheading"
-    >
-      <Calendar className="h-5 w-5 mr-2" />
-      Schedule Call
-      <ArrowRight className="h-5 w-5 ml-2" />
-    </button>
-  );
-};
+import React, { useEffect } from 'react'
+import { Calendar, ArrowRight } from 'lucide-react'
 
 const BookCall = () => {
   const team = [
@@ -38,23 +8,63 @@ const BookCall = () => {
       role: 'CEO & Chief Engineer',
       image: '/TylerS_headshot.png',
       description: 'Chat with Tyler to discuss new projects or technical aspects of hashrate heating.',
-      calLink: 'tylerkstevens/meeting',
+      calLink: 'tylerkstevens/meeting'
     },
     {
       name: 'Dylan S',
       role: 'COO & CFO',
       image: '/DylanS_headshot.jpeg',
       description: 'Schedule time with Dylan to discuss new projects or operations and the numbers.',
-      calLink: 'dylan-exergy/meeting',
+      calLink: 'dylan-exergy/meeting'
     },
     {
       name: 'Mike C',
       role: 'CRO',
       image: '/MikeC_headshot.png',
       description: 'Connect with Mike to discuss new projects or explore partnership opportunities.',
-      calLink: 'exergy-mike',
-    },
-  ];
+      calLink: 'exergy-mike'
+    }
+  ]
+
+  useEffect(() => {
+    // Check if Cal.com embed script is already loaded
+    const existingScript = document.querySelector('script[src="https://app.cal.com/embed/embed.js"]')
+    
+    if (!existingScript) {
+      // Load Cal.com embed script only if it doesn't exist
+      const script = document.createElement('script')
+      script.src = 'https://app.cal.com/embed/embed.js'
+      script.async = true
+      script.id = 'cal-embed-script'
+      document.head.appendChild(script)
+
+      script.onload = () => {
+        // Initialize Cal.com
+        if (window.Cal) {
+          window.Cal('init', 'meeting', { origin: 'https://cal.com' })
+          window.Cal.ns.meeting('ui', {
+            cssVarsPerTheme: {
+              light: { 'cal-brand': '#2F3B69' },
+              dark: { 'cal-brand': '#314596' }
+            },
+            hideEventTypeDetails: false,
+            layout: 'month_view'
+          })
+        }
+      }
+    } else if (window.Cal) {
+      // If script already exists and Cal is available, just initialize
+      window.Cal('init', 'meeting', { origin: 'https://cal.com' })
+      window.Cal.ns.meeting('ui', {
+        cssVarsPerTheme: {
+          light: { 'cal-brand': '#2F3B69' },
+          dark: { 'cal-brand': '#314596' }
+        },
+        hideEventTypeDetails: false,
+        layout: 'month_view'
+      })
+    }
+  }, [])
 
   return (
     <div className="bg-surface-50 dark:bg-surface-900 min-h-screen">
@@ -88,14 +98,23 @@ const BookCall = () => {
                 <p className="text-surface-600 dark:text-surface-400 mb-6">
                   {member.description}
                 </p>
-                <MyApp calLink={member.calLink} />
+                <button 
+                  className="w-full bg-primary-600 text-white py-3 px-4 rounded-lg hover:bg-primary-700 transition-colors flex items-center justify-center text-base font-subheading"
+                  data-cal-link={member.calLink}
+                  data-cal-namespace="meeting"
+                  data-cal-config='{"layout":"month_view","theme":"auto"}'
+                >
+                  <Calendar className="h-5 w-5 mr-2" />
+                  Schedule Call
+                  <ArrowRight className="h-5 w-5 ml-2" />
+                </button>
               </div>
             </div>
           ))}
         </div>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default BookCall;
+export default BookCall
