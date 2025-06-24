@@ -134,4 +134,4 @@ For inquiries, contact us at admin@exergyheat.com
 
 ---
 
-Made by EXERGY
+Made by EXERGY LLC
