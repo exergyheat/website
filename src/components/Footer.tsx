@@ -99,7 +99,7 @@ const Footer = () => {
               </div>
             </div>
             <div className="flex space-x-4">
-              <a href="https://github.com" className="text-surface-400 hover:text-surface-200 transition-colors">
+              <a href="https://github.com/exergyheat" className="text-surface-400 hover:text-surface-200 transition-colors">
                 <Github className="h-6 w-6" />
               </a>
               <a href="https://x.com" className="text-surface-400 hover:text-surface-200 transition-colors">
