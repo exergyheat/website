@@ -40,7 +40,7 @@ const Products = () => {
       name: 'Canaan Avalon Mini 3',
       image: 'https://www.canaan.io/static/themes/default/images/official/official_mini3_index4.png',
       specs: {
-        power: '800 W: 120 V',
+        power: '800 W: 110-240V AC 50/60Hz',
         hashrate: '37.5 TH/s',
         heating: '2,730 BTU/hr',
         capacity: '400 sqft',
