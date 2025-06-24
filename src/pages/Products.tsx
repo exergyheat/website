@@ -190,7 +190,7 @@ const Products = () => {
                   </div>
 
                   <Link
-                    to="/contact"
+                    to="/products"
                     className="inline-flex items-center justify-center w-full px-6 py-3 bg-primary-600 text-white rounded-lg hover:bg-primary-700 transition-colors"
                   >
                     Coming Soon
