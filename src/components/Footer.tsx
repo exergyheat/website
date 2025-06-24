@@ -105,7 +105,6 @@ const Footer = () => {
               <a href="https://github.com/exergyheat" className="text-surface-400 hover:text-surface-200 transition-colors">
                 <Github className="h-6 w-6" />
               </a>
-              </a>
             </div>
           </div>
         </div>
