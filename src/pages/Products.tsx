@@ -17,13 +17,13 @@ const Products = () => {
       id: 'forced-air',
       name: 'Forced Air',
       icon: Fan,
-      description: 'Integrated heating solutions that work with your existing HVAC system or replace traditional furnaces. Perfect for whole-home heating applications.'
+      description: 'Integrated heating solutions that work with your existing HVAC system or replace traditional furnaces. Perfect for whole-home hashrate heating.'
     },
     {
       id: 'hydronic',
       name: 'Hydronic & Water',
       icon: Droplets,
-      description: 'Water-based heating solutions for radiant heat, hot water, pools, and more. Seamlessly integrates with existing hydronic systems.'
+      description: 'Water-based heating solutions for radiant heat, hot water tanks, pools, and more. Seamlessly integrates with existing hydronic systems.'
     },
     {
       id: 'control',
