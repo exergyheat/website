@@ -29,7 +29,7 @@ const Products = () => {
       id: 'control',
       name: 'Control Systems',
       icon: Cpu,
-      description: 'Smart control systems and hardware for managing your hashrate heating infrastructure. From sensors to servers, we provide complete control solutions.'
+      description: 'Smart control systems and hardware for managing your hashrate heating devices. From sensors to servers, we provide complete control solutions.'
     }
   ]
 
