@@ -102,7 +102,7 @@ const About = () => {
     {
       name: 'Mike',
       role: 'CRO',
-      image: 'https://images.pexels.com/photos/2379005/pexels-photo-2379005.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+      image: '/MikeC_headshot.png,
       description: 'Revenue and growth specialist.'
     }
   ]
