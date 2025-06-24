@@ -1,6 +1,6 @@
 # EXERGY - Heat That Pays
 
-A modern web application for EXERGY, a revolutionary hashrate heating company that transforms traditional heating infrastructure into revenue-generating assets.
+A simple website for Exergy LLC, the leader in Hashrate Heating system feasibility modeling, design and integration.
 
 ## Features
 
