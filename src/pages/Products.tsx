@@ -78,6 +78,7 @@ const Products = () => {
 
       ]
     },
+  ]
 
   const filteredProducts = activeCategory
     ? products.filter(product => product.category === activeCategory)
