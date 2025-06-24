@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
-import { ArrowRight, FileText, Wrench, Activity, HeartPulse, ChevronDown, ChevronUp, X, Search, Cog, Monitor } from 'lucide-react'
+import { ArrowRight, FileText, Wrench, Activity, Users, ChevronDown, ChevronUp, X, Search, Cog, Monitor } from 'lucide-react'
 
 const Services = () => {
   const [expandedService, setExpandedService] = useState<string | null>(null)
@@ -182,7 +182,7 @@ const Services = () => {
         "Technical consulting",
         "Implementation support"
       ],
-      icon: HeartPulse,
+      icon: Users,
       image: "hashheat_consulting.png",
       details: {
         expertise: [
