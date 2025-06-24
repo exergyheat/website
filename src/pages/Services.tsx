@@ -86,7 +86,9 @@ const Services = () => {
       ]
     },
     buttonText: `Purchase ${type === 'residential' ? 'Residential' : 'Commercial'} Heat Audit`,
-    buttonLink: `/contact?service=audit&type=${type}`
+    buttonLink: type === 'residential' 
+      ? 'https://pay.zaprite.com/pl_MRzvvmSAkL'
+      : 'https://pay.zaprite.com/pl_GhSjRJ6mTI'
   })
 
   const getUpgradeService = (type: 'residential' | 'commercial') => ({
@@ -133,7 +135,9 @@ const Services = () => {
       ]
     },
     buttonText: `Place ${type === 'residential' ? '$1,000' : '$3,000'} Deposit`,
-    buttonLink: `/contact?service=upgrade&type=${type}`
+    buttonLink: type === 'residential'
+      ? 'https://pay.zaprite.com/pl_gVTeQn7Xjm'
+      : 'https://pay.zaprite.com/pl_mRJ6ONhX5q'
   })
 
   const services = [
@@ -442,13 +446,25 @@ const Services = () => {
                   </div>
 
                   <div className={`${service.exampleImage ? 'flex gap-4' : ''} pt-6 border-t border-surface-200 dark:border-surface-700`}>
-                    <Link
-                      to={service.buttonLink}
-                      className={`${service.exampleImage ? 'flex-1' : 'w-full'} inline-flex items-center justify-center px-6 py-3 bg-primary-600 text-white rounded-lg hover:bg-primary-700 transition-colors text-base font-subheading`}
-                    >
-                      {service.buttonText}
-                      <ArrowRight className="ml-2 h-5 w-5" />
-                    </Link>
+                    {service.buttonLink.startsWith('http') ? (
+                      <a
+                        href={service.buttonLink}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className={`${service.exampleImage ? 'flex-1' : 'w-full'} inline-flex items-center justify-center px-6 py-3 bg-primary-600 text-white rounded-lg hover:bg-primary-700 transition-colors text-base font-subheading`}
+                      >
+                        {service.buttonText}
+                        <ArrowRight className="ml-2 h-5 w-5" />
+                      </a>
+                    ) : (
+                      <Link
+                        to={service.buttonLink}
+                        className={`${service.exampleImage ? 'flex-1' : 'w-full'} inline-flex items-center justify-center px-6 py-3 bg-primary-600 text-white rounded-lg hover:bg-primary-700 transition-colors text-base font-subheading`}
+                      >
+                        {service.buttonText}
+                        <ArrowRight className="ml-2 h-5 w-5" />
+                      </Link>
+                    )}
                     {service.exampleImage && (
                       <button
                         onClick={() => openImageViewer(service.exampleImage, service.exampleTitle)}
