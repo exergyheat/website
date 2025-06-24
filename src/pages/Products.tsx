@@ -57,27 +57,6 @@ const Products = () => {
       ]
     },
     {
-      id: 'fa-5000',
-      category: 'forced-air',
-      name: 'EXERGY AirHeat 5000',
-      image: 'https://images.pexels.com/photos/8293778/pexels-photo-8293778.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-      specs: {
-        power: '5000W',
-        hashrate: '500 TH/s',
-        heating: '17,060 BTU/hr',
-        airflow: '2000 CFM',
-        dimensions: '36" x 24" x 24"'
-      },
-      price: '$12,999',
-      description: 'Complete furnace replacement solution with integrated mining capabilities.',
-      features: [
-        'HVAC integration',
-        'Smart thermostat compatible',
-        'Zoned heating control',
-        'High-efficiency air handling'
-      ]
-    },
-    {
       id: 'hyd-5000',
       category: 'hydronic',
       name: 'RY3T Mini',
