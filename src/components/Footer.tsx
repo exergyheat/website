@@ -99,11 +99,11 @@ const Footer = () => {
               </div>
             </div>
             <div className="flex space-x-4">
-              <a href="https://github.com/exergyheat" className="text-surface-400 hover:text-surface-200 transition-colors">
-                <Github className="h-6 w-6" />
-              </a>
               <a href="https://x.com/exergy_llc" className="text-surface-400 hover:text-surface-200 transition-colors">
                 <X className="h-6 w-6" />
+              </a>
+              <a href="https://github.com/exergyheat" className="text-surface-400 hover:text-surface-200 transition-colors">
+                <Github className="h-6 w-6" />
               </a>
               <a href="https://linkedin.com" className="text-surface-400 hover:text-surface-200 transition-colors">
                 <Linkedin className="h-6 w-6" />
