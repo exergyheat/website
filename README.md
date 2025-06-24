@@ -20,6 +20,7 @@ A simple website for Exergy LLC, the leader in Hashrate Heating system feasibili
 - **Routing:** React Router v6
 - **Styling:** Tailwind CSS
 - **Icons:** Lucide React
+- **Animations:** Framer Motion
 - **Build Tool:** Vite
 - **Type Checking:** TypeScript
 - **Linting:** ESLint
@@ -29,9 +30,31 @@ A simple website for Exergy LLC, the leader in Hashrate Heating system feasibili
 ```
 src/
 ├── components/         # Reusable UI components
+│   ├── Footer.tsx     # Site footer with links and contact info
+│   ├── Navbar.tsx     # Main navigation with responsive mobile menu
+│   ├── ProjectCarousel.tsx  # Interactive project showcase
+│   └── ThemeToggle.tsx      # Dark/light mode switcher
 ├── contexts/          # React context providers
+│   └── ThemeContext.tsx     # Theme management context
 ├── hooks/            # Custom React hooks
+│   └── useTypewriter.ts     # Typewriter animation hook
 ├── pages/            # Page components
+│   ├── About.tsx     # Company information and team
+│   ├── Blog.tsx      # Company blog and insights
+│   ├── BookCall.tsx  # Schedule consultations
+│   ├── Calculators.tsx  # ROI and savings calculators
+│   ├── Contact.tsx   # Contact information and form
+│   ├── Docs.tsx      # Documentation and legal pages
+│   ├── Education.tsx # Educational resources
+│   ├── FAQ.tsx       # Frequently asked questions
+│   ├── Home.tsx      # Landing page
+│   ├── Learn.tsx     # Technology learning hub
+│   ├── Portfolio.tsx # Project showcase
+│   ├── PrivacyPolicy.tsx  # Privacy policy
+│   ├── Products.tsx  # Product catalog
+│   └── Services.tsx  # Service offerings
+├── App.tsx           # Main app component with routing
+├── index.css         # Global styles and Tailwind imports
 └── main.tsx          # Application entry point
 ```
 
@@ -82,8 +105,9 @@ The built files will be in the `dist` directory.
 - **Portfolio** - Showcase of successful implementations
 - **Calculators** - ROI and savings calculators
 - **Education** - In-depth learning resources
-- **Forum** - Community discussion platform
+- **Blog** - Company insights and industry updates
 - **FAQ** - Frequently asked questions
+- **Docs** - Documentation and legal information
 - **Privacy Policy** - Legal information
 
 ## Components
@@ -94,7 +118,6 @@ The built files will be in the `dist` directory.
 - `Footer` - Site footer with links and contact information
 - `ProjectCarousel` - Interactive project showcase
 - `ThemeToggle` - Dark/light mode switcher
-- `Calculator` - Interactive savings calculator
 
 ## Development
 
@@ -115,6 +138,14 @@ The built files will be in the `dist` directory.
 - Maintain consistent naming conventions
 - Document complex logic
 - Write reusable components
+
+## Performance Optimizations
+
+- Optimized font loading with system fallbacks
+- Lazy loading for non-critical images
+- Code splitting with Vite
+- Minified production builds
+- Efficient bundle chunking
 
 ## Contributing
 
