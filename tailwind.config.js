@@ -14,8 +14,8 @@ export default {
           200: '#C3D3E3',
           300: '#A5BDD5',
           400: '#87A7C7',
-          500: '#4970A5', // BLUE 2 - Main brand blue (updated from #2F3B69)
-          600: '#3D5A8A', // Darker shade of BLUE 2
+          500: '#4970A5',
+          600: '#3D5A8A',
           700: '#2F4570',
           800: '#213056',
           900: '#131B3C'
@@ -26,8 +26,8 @@ export default {
           200: '#D7E3EF',
           300: '#C3D5E7',
           400: '#AFC7DF',
-          500: '#9EA8BE', // BLUE 4 - Light accent
-          600: '#718EBC', // BLUE 3 - Medium accent
+          500: '#9EA8BE',
+          600: '#718EBC',
           700: '#5A7199',
           800: '#435477',
           900: '#2C3755'
@@ -43,28 +43,18 @@ export default {
           700: '#3F3F46',
           800: '#27272A',
           900: '#18181B'
-        },
-        accent: {
-          light: '#9EA8BE', // BLUE 4 for light accents
-          medium: '#718EBC', // BLUE 3 for medium accents
-          dark: '#4970A5' // BLUE 2 for dark accents (updated)
         }
       },
       fontFamily: {
-        'heading': ['Futura PT', 'Futura', 'Avenir', 'Helvetica Neue', 'sans-serif'],
-        'subheading': ['Futura PT', 'Futura', 'Avenir', 'Helvetica Neue', 'sans-serif'],
-        'body': ['Futura PT', 'Futura', 'Avenir', 'Helvetica Neue', 'sans-serif'],
-        'mono': ['Roboto Mono', 'monospace'],
-        'valorant': ['Valorant', 'Futura PT', 'Futura', 'Avenir', 'Helvetica Neue', 'sans-serif'],
+        'heading': ['Futura PT', 'system-ui', '-apple-system', 'sans-serif'],
+        'subheading': ['Futura PT', 'system-ui', '-apple-system', 'sans-serif'],
+        'body': ['Futura PT', 'system-ui', '-apple-system', 'sans-serif'],
       },
       fontWeight: {
         'heading': '600',
         'subheading': '500',
         'body': '300',
-      },
-      animation: {
-        'pulse': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
-      },
+      }
     },
   },
   plugins: [],
