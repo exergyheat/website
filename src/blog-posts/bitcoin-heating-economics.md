@@ -4,7 +4,7 @@ title: 'The Economics of Bitcoin Heating: A Deep Dive'
 excerpt: 'Understanding the financial mechanics behind hashrate heating and how it creates value for property owners.'
 author: 'Dylan'
 date: '2024-12-08'
-category: ['bitcoin', 'payments', 'heating']
+category: ['bitcoin', 'payments', 'heating', 'lightning']
 image: 'https://images.pexels.com/photos/7567473/pexels-photo-7567473.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'
 readTime: '7 min read'
 ---
