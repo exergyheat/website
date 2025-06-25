@@ -19,8 +19,6 @@ Traditional heaters burn energy to keep you warm. Hashrate heaters do the same, 
 
 Heating costs hit everyone, but hashrate heaters turn that expense into revenue. These electric heaters mine Bitcoin while warming your home or business. The more heat you use, the more Bitcoin you earn, potentially offsetting costs or generating profit. Your heater becomes a financial asset.
 
-## Return on Investment
+### 2. Global Heat Demand
 
-The payback period for the additional equipment cost is typically 18-24 months, after which the system continues to generate net positive cash flow for its entire operational life.
-
-This represents a paradigm shift in how we think about heating infrastructure - from a necessary expense to a revenue-generating asset.
+Heating eats up half of global energy—42,500 TWh annually for space and water heating, dwarfing Bitcoin’s 175 TWh. If just 1% of comfort heating came from hashrate heaters, it could add 1800 EH/s to the Bitcoin network, nearly tripling its hashrate with no extra energy. The market is enormous.
