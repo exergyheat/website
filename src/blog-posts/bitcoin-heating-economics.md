@@ -4,7 +4,7 @@ title: 'Why Hashrate Heaters Make Sense: Nine Reasons to Capture Bitcoin from El
 excerpt: 'At Exergy, we’re not just heating homes and businesses — we’re building an industry that captures Bitcoin from electric heaters. '
 author: 'Tyler'
 date: '2025-06-24'
-category: ['bitcoin', 'payments']
+category: ['bitcoin', 'heating']
 image: 'https://images.pexels.com/photos/7567473/pexels-photo-7567473.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'
 readTime: '7 min read'
 ---
