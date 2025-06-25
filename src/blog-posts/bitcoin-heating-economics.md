@@ -5,7 +5,7 @@ excerpt: 'At Exergy, we’re not just heating homes and businesses — we’re b
 author: 'Tyler'
 date: '2025-06-24'
 category: ['bitcoin', 'heating']
-image: 'https://www.pexels.com/photo/contemporary-kitchen-interior-with-furniture-in-house-6436752/'
+image: 'https://images.pexels.com/photos/6436752/pexels-photo-6436752.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'
 readTime: '5 min read'
 ---
 
