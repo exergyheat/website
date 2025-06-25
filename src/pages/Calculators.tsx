@@ -55,7 +55,7 @@ const Calculators = () => {
             </div>
             <div className="bg-surface-50 dark:bg-surface-700 rounded-lg p-6">
               <h3 className="text-lg font-semibold text-surface-900 dark:text-surface-100 mb-2">
-                Mining Profitability
+                Mining Revenue
               </h3>
               <p className="text-surface-600 dark:text-surface-400 text-sm">
                 Calculate potential Bitcoin earnings from your hashrate heating system
