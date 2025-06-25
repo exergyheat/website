@@ -22,3 +22,11 @@ Heating costs hit everyone, but hashrate heaters turn that expense into revenue.
 ### 2. Global Heat Demand
 
 Heating eats up half of global energy—42,500 TWh annually for space and water heating, dwarfing Bitcoin’s 175 TWh. If just 1% of comfort heating came from hashrate heaters, it could add 1800 EH/s to the Bitcoin network, nearly tripling its hashrate with no extra energy. The market is enormous.
+
+### 3. Utility Value of Mining
+
+Bitcoin’s energy use gets flak, but as heaters, these devices are indispensable. Every home and business needs heat, and hashrate heaters deliver it while mining Bitcoin. This clear utility—keeping you warm—makes Bitcoin mining a practical necessity, shutting down critics.
+
+### 4. Strengthened Network
+
+More hashrate heaters mean more computing power securing Bitcoin. Higher total hashrate makes the network tougher to attack, ensuring Bitcoin’s longevity. By heating with these devices, you’re bolstering Bitcoin’s security.
