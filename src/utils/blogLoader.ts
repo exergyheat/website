@@ -14,7 +14,8 @@ export interface BlogPost {
 
 // Use Vite's import.meta.glob to load all markdown files
 const blogModules = import.meta.glob('../blog-posts/*.md', { 
-  as: 'raw',
+  query: '?raw',
+  import: 'default',
   eager: true 
 })
 

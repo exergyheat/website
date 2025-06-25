@@ -11,18 +11,24 @@ const Blog = () => {
   const [blogPosts, setBlogPosts] = useState<BlogPost[]>([])
   const [categories, setCategories] = useState<string[]>([])
   const [loading, setLoading] = useState(true)
+  const [error, setError] = useState<string | null>(null)
 
   useEffect(() => {
     const loadContent = async () => {
       try {
         setLoading(true)
+        setError(null)
         const posts = await loadBlogPosts()
         const allCategories = getAllCategories(posts)
         
         setBlogPosts(posts)
         setCategories(allCategories)
+        
+        console.log('Loaded blog posts:', posts.length)
+        console.log('Categories:', allCategories)
       } catch (error) {
         console.error('Error loading blog content:', error)
+        setError('Failed to load blog posts')
       } finally {
         setLoading(false)
       }
@@ -82,6 +88,40 @@ const Blog = () => {
                 </div>
               ))}
             </div>
+          </div>
+        </div>
+      </div>
+    )
+  }
+
+  if (error) {
+    return (
+      <div className="bg-surface-50 dark:bg-surface-900 min-h-screen">
+        {/* Hero Section with Custom Gradient */}
+        <div className="bg-gradient-to-r from-[#4970A5] to-[#718EBC] py-20">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <PenTool className="h-16 w-16 text-white mx-auto mb-6" />
+            <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
+              EXERGY Blog
+            </h1>
+            <p className="text-xl text-white/90 max-w-2xl mx-auto">
+              Insights, updates, and deep dives into hashrate heating technology
+            </p>
+          </div>
+        </div>
+
+        {/* Error State */}
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+          <div className="text-center">
+            <p className="text-xl text-surface-600 dark:text-surface-400 mb-4">
+              {error}
+            </p>
+            <button 
+              onClick={() => window.location.reload()}
+              className="px-6 py-3 bg-primary-600 text-white rounded-lg hover:bg-primary-700 transition-colors"
+            >
+              Try Again
+            </button>
           </div>
         </div>
       </div>
@@ -152,70 +192,78 @@ const Blog = () => {
 
       {/* Blog Posts Grid */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {filteredPosts.map((post) => (
-            <article
-              key={post.id}
-              className="bg-white dark:bg-surface-800 rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow"
-            >
-              <Link to={`/blog/${post.id}`}>
-                <div className="relative h-48">
-                  <img
-                    src={post.image}
-                    alt={post.title}
-                    className="w-full h-full object-cover"
-                  />
-                  <div className="absolute top-4 right-4 flex flex-wrap gap-2">
-                    {post.category.slice(0, 2).map((cat) => (
-                      <span
-                        key={cat}
-                        className="bg-primary-500 text-white px-3 py-1 rounded-full text-sm capitalize"
-                      >
-                        {cat}
-                      </span>
-                    ))}
-                  </div>
-                </div>
-              </Link>
-              <div className="p-6">
+        {blogPosts.length === 0 ? (
+          <div className="text-center py-12">
+            <p className="text-xl text-surface-600 dark:text-surface-400">
+              No blog posts found. Check back soon for updates!
+            </p>
+          </div>
+        ) : (
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {filteredPosts.map((post) => (
+              <article
+                key={post.id}
+                className="bg-white dark:bg-surface-800 rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow"
+              >
                 <Link to={`/blog/${post.id}`}>
-                  <h2 className="text-xl font-bold text-surface-900 dark:text-surface-100 mb-3 hover:text-primary-500 dark:hover:text-primary-400 transition-colors">
-                    {post.title}
-                  </h2>
-                </Link>
-                <p className="text-surface-600 dark:text-surface-400 mb-4 line-clamp-3">
-                  {post.excerpt}
-                </p>
-                <div className="flex items-center justify-between text-sm text-surface-500 dark:text-surface-400">
-                  <div className="flex items-center space-x-4">
-                    <div className="flex items-center">
-                      <User className="h-4 w-4 mr-1" />
-                      <span>{post.author}</span>
-                    </div>
-                    <div className="flex items-center">
-                      <Calendar className="h-4 w-4 mr-1" />
-                      <span>{new Date(post.date).toLocaleDateString('en-US', { 
-                        year: 'numeric', 
-                        month: 'short', 
-                        day: 'numeric' 
-                      })}</span>
+                  <div className="relative h-48">
+                    <img
+                      src={post.image}
+                      alt={post.title}
+                      className="w-full h-full object-cover"
+                    />
+                    <div className="absolute top-4 right-4 flex flex-wrap gap-2">
+                      {post.category.slice(0, 2).map((cat) => (
+                        <span
+                          key={cat}
+                          className="bg-primary-500 text-white px-3 py-1 rounded-full text-sm capitalize"
+                        >
+                          {cat}
+                        </span>
+                      ))}
                     </div>
                   </div>
-                  <span>{post.readTime}</span>
-                </div>
-                <Link 
-                  to={`/blog/${post.id}`}
-                  className="mt-4 flex items-center text-primary-500 dark:text-primary-400 hover:text-primary-600 dark:hover:text-primary-300 transition-colors"
-                >
-                  <span className="mr-2">Read More</span>
-                  <ArrowRight className="h-4 w-4" />
                 </Link>
-              </div>
-            </article>
-          ))}
-        </div>
+                <div className="p-6">
+                  <Link to={`/blog/${post.id}`}>
+                    <h2 className="text-xl font-bold text-surface-900 dark:text-surface-100 mb-3 hover:text-primary-500 dark:hover:text-primary-400 transition-colors">
+                      {post.title}
+                    </h2>
+                  </Link>
+                  <p className="text-surface-600 dark:text-surface-400 mb-4 line-clamp-3">
+                    {post.excerpt}
+                  </p>
+                  <div className="flex items-center justify-between text-sm text-surface-500 dark:text-surface-400">
+                    <div className="flex items-center space-x-4">
+                      <div className="flex items-center">
+                        <User className="h-4 w-4 mr-1" />
+                        <span>{post.author}</span>
+                      </div>
+                      <div className="flex items-center">
+                        <Calendar className="h-4 w-4 mr-1" />
+                        <span>{new Date(post.date).toLocaleDateString('en-US', { 
+                          year: 'numeric', 
+                          month: 'short', 
+                          day: 'numeric' 
+                        })}</span>
+                      </div>
+                    </div>
+                    <span>{post.readTime}</span>
+                  </div>
+                  <Link 
+                    to={`/blog/${post.id}`}
+                    className="mt-4 flex items-center text-primary-500 dark:text-primary-400 hover:text-primary-600 dark:hover:text-primary-300 transition-colors"
+                  >
+                    <span className="mr-2">Read More</span>
+                    <ArrowRight className="h-4 w-4" />
+                  </Link>
+                </div>
+              </article>
+            ))}
+          </div>
+        )}
 
-        {filteredPosts.length === 0 && (
+        {filteredPosts.length === 0 && blogPosts.length > 0 && (
           <div className="text-center py-12">
             <p className="text-xl text-surface-600 dark:text-surface-400">
               No articles found matching your criteria.
