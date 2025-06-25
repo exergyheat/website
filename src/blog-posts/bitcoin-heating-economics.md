@@ -9,19 +9,15 @@ image: 'https://images.pexels.com/photos/6436752/pexels-photo-6436752.jpeg?auto=
 readTime: '5 min read'
 ---
 
-The crazy economics of Bitcoin heating represent a fundamental shift in how we think about energy consumption and value creation. Traditional heating systems are pure cost centers - they consume energy and provide heat, but generate no additional value.
+At Exergy, we’re not just heating homes and businesses—we’re building an industry that captures Bitcoin from electric heaters. In Chapter 1 of my book, Bitcoin Mining Heat Reuse, titled “Heat is a Product, Not a Problem,” I lay out nine reasons why hashrate heaters—electric heating systems that mine Bitcoin—are a no-brainer. These devices aren’t Bitcoin miners wasting heat; they’re heaters earning Bitcoin rewards. Here’s why this approach is inevitable for homeowners, businesses, and Bitcoin miners, aligning economic, practical, and ideological incentives.
 
-## Dual Value Proposition
+## Hashrate Heaters: Heaters That Mine Bitcoin
 
-Bitcoin heating systems, by contrast, create a dual value proposition. They provide the same heating output as traditional systems while simultaneously generating revenue through cryptocurrency mining rewards.
+Traditional heaters burn energy to keep you warm. Hashrate heaters do the same, but they also mine Bitcoin, turning every watt of heat into a chance to earn rewards. Every ASIC-powered heater converts electricity into heat while securing the Bitcoin network, delivering warmth and sats in one package (Bitcoin Mining Heat Reuse, Chapter 1). Here are the nine reasons to embrace this industry:
 
-The key to understanding the economics lies in recognizing that all electrical energy consumed by mining equipment is converted to heat. This isn't waste heat - it's the primary product. The Bitcoin rewards are essentially a rebate on your heating costs.
+### 1. Savings on Heat
 
-## Real-World Example
-
-Consider a typical scenario: A traditional electric heater consuming 5kW costs approximately $3,600 per year to operate (assuming $0.10/kWh). A Bitcoin heating system consuming the same 5kW provides identical heat output but generates approximately $2,400 in annual Bitcoin rewards, reducing the net heating cost to just $1,200.
-
-This **67% reduction** in heating costs is achieved without any compromise in comfort or reliability. In fact, many Bitcoin heating systems offer superior temperature control and monitoring capabilities compared to traditional heating systems.
+Heating costs hit everyone, but hashrate heaters turn that expense into revenue. These electric heaters mine Bitcoin while warming your home or business. The more heat you use, the more Bitcoin you earn, potentially offsetting costs or generating profit. Your heater becomes a financial asset.
 
 ## Return on Investment
 
