@@ -26,6 +26,16 @@ export async function loadBlogPosts(): Promise<BlogPost[]> {
       // Parse the markdown file with front matter
       const { data, content: markdownContent } = matter(content as string)
       
+      // Safely process the category field
+      let categories: string[] = []
+      if (Array.isArray(data.category)) {
+        // Filter out any non-string elements and ensure we have valid strings
+        categories = data.category.filter(cat => typeof cat === 'string' && cat.trim() !== '')
+      } else if (typeof data.category === 'string' && data.category.trim() !== '') {
+        categories = [data.category.trim()]
+      }
+      // If data.category is undefined, null, or empty, categories remains an empty array
+      
       // Create the blog post object
       const post: BlogPost = {
         id: data.id,
@@ -34,7 +44,7 @@ export async function loadBlogPosts(): Promise<BlogPost[]> {
         content: markdownContent,
         author: data.author,
         date: data.date,
-        category: Array.isArray(data.category) ? data.category : [data.category],
+        category: categories,
         image: data.image,
         readTime: data.readTime
       }
