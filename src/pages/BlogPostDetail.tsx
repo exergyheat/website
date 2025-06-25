@@ -16,7 +16,7 @@ const BlogPostDetail = () => {
         setLoading(true)
         
         if (id) {
-          const foundPost = getBlogPostById(id)
+          const foundPost = await getBlogPostById(id)
           
           if (foundPost) {
             setPost(foundPost)
