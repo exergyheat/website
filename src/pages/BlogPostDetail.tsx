@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react'
 import { useParams, Link } from 'react-router-dom'
 import { Calendar, User, ArrowLeft } from 'lucide-react'
 import { marked } from 'marked'
-import { loadBlogPosts, BlogPost } from '../utils/blogLoader'
+import { getBlogPostById, BlogPost } from '../utils/blogLoader'
 
 const BlogPostDetail = () => {
   const { id } = useParams<{ id: string }>()
@@ -14,13 +14,17 @@ const BlogPostDetail = () => {
     const loadPost = async () => {
       try {
         setLoading(true)
-        const posts = await loadBlogPosts()
-        const foundPost = posts.find(p => p.id === id)
         
-        if (foundPost) {
-          setPost(foundPost)
+        if (id) {
+          const foundPost = getBlogPostById(id)
+          
+          if (foundPost) {
+            setPost(foundPost)
+          } else {
+            setError('Blog post not found')
+          }
         } else {
-          setError('Blog post not found')
+          setError('No blog post ID provided')
         }
       } catch (err) {
         setError('Failed to load blog post')
@@ -30,9 +34,7 @@ const BlogPostDetail = () => {
       }
     }
 
-    if (id) {
-      loadPost()
-    }
+    loadPost()
   }, [id])
 
   if (loading) {
