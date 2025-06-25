@@ -9,7 +9,7 @@ image: 'https://images.pexels.com/photos/7567473/pexels-photo-7567473.jpeg?auto=
 readTime: '7 min read'
 ---
 
-The economics of Bitcoin heating represent a fundamental shift in how we think about energy consumption and value creation. Traditional heating systems are pure cost centers - they consume energy and provide heat, but generate no additional value.
+The crazy economics of Bitcoin heating represent a fundamental shift in how we think about energy consumption and value creation. Traditional heating systems are pure cost centers - they consume energy and provide heat, but generate no additional value.
 
 ## Dual Value Proposition
 
