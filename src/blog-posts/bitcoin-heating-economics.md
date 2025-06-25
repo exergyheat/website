@@ -30,3 +30,31 @@ Bitcoin’s energy use gets flak, but as heaters, these devices are indispensabl
 ### 4. Strengthened Network
 
 More hashrate heaters mean more computing power securing Bitcoin. Higher total hashrate makes the network tougher to attack, ensuring Bitcoin’s longevity. By heating with these devices, you’re bolstering Bitcoin’s security.
+
+### 5. Hashrate Decentralization
+
+Big mining operations chase cheap power in remote areas, centralizing hashrate. Hashrate heaters spread Bitcoin mining to homes and businesses, even in high-cost energy zones, because heat utility offsets electricity prices. This hyper-decentralization makes Bitcoin more resilient and reduces mining pool control.
+
+### 6. Non-KYC Sats
+
+Privacy is king for Bitcoiners. Hashrate heaters deliver fresh, non-KYC Bitcoin straight to your wallet, untouched by exchange surveillance. It’s a quiet way to stack sats while paying your heating bill.
+
+### 7. Reduced Local Emissions
+
+Hashrate heaters are electric resistive heaters with zero local emissions—no combustion, no pollutants. Unlike gas heaters, they’re clean, appealing to anyone prioritizing pure air or ESG goals, all while earning Bitcoin.
+
+### 8. Increased System Efficiency
+
+Every watt in a hashrate heater pulls double duty: heating your space and mining Bitcoin. This dual-purpose efficiency maximizes energy use. For traditional miners, using heat adds value to what’s otherwise wasted, boosting sustainability.
+
+### 9. Stability to Traditional Mining Economics
+
+Large miners lose megawatts of heat. By using or selling it for industrial or local heating, they gain steady income. Unlike volatile Bitcoin rewards, heat revenue is consistent, giving miners an edge as subsidies shrink.
+
+## The Future is Hashrate Heat
+
+Hashrate heaters align incentives: save on heat, tap a huge market, add utility, strengthen Bitcoin, decentralize hashrate, secure private sats, cut emissions, boost efficiency, and stabilize mining economics. Thermodynamically, it’s undeniable—every watt of heat is a watt of Bitcoin mining potential.
+
+## Exergy's Vision
+
+At Exergy, we engineer hashrate heaters to deliver warmth and Bitcoin rewards. From homes to industrial sites, our systems maximize efficiency and value. Ready to capture Bitcoin from your heater? Contact Exergy to join the hashrate heating revolution.
