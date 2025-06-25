@@ -26,27 +26,45 @@ export async function loadBlogPosts(): Promise<BlogPost[]> {
       // Parse the markdown file with front matter
       const { data, content: markdownContent } = matter(content as string)
       
-      // Safely process the category field
+      // Safely process the category field with more robust error handling
       let categories: string[] = []
-      if (Array.isArray(data.category)) {
-        // Filter out any non-string elements and ensure we have valid strings
-        categories = data.category.filter(cat => typeof cat === 'string' && cat.trim() !== '')
-      } else if (typeof data.category === 'string' && data.category.trim() !== '') {
-        categories = [data.category.trim()]
+      
+      try {
+        const rawCategory = data.category
+        
+        if (Array.isArray(rawCategory)) {
+          // If it's already an array, filter out any non-string elements
+          categories = rawCategory
+            .filter(cat => cat != null && typeof cat === 'string')
+            .map(cat => cat.trim())
+            .filter(cat => cat !== '')
+        } else if (typeof rawCategory === 'string' && rawCategory.trim() !== '') {
+          // If it's a string, convert to array
+          categories = [rawCategory.trim()]
+        } else if (rawCategory != null) {
+          // If it's some other type, try to convert to string
+          const categoryStr = String(rawCategory).trim()
+          if (categoryStr !== '' && categoryStr !== 'null' && categoryStr !== 'undefined') {
+            categories = [categoryStr]
+          }
+        }
+        // If rawCategory is null, undefined, or empty, categories remains an empty array
+      } catch (categoryError) {
+        console.warn(`Error processing category for ${path}:`, categoryError)
+        categories = [] // Fallback to empty array
       }
-      // If data.category is undefined, null, or empty, categories remains an empty array
       
       // Create the blog post object
       const post: BlogPost = {
-        id: data.id,
-        title: data.title,
-        excerpt: data.excerpt,
+        id: data.id || '',
+        title: data.title || 'Untitled',
+        excerpt: data.excerpt || '',
         content: markdownContent,
-        author: data.author,
-        date: data.date,
+        author: data.author || 'Unknown',
+        date: data.date || new Date().toISOString(),
         category: categories,
-        image: data.image,
-        readTime: data.readTime
+        image: data.image || '',
+        readTime: data.readTime || '5 min read'
       }
 
       posts.push(post)
@@ -63,7 +81,13 @@ export function getAllCategories(posts: BlogPost[]): string[] {
   const categories = new Set<string>()
   
   posts.forEach(post => {
-    post.category.forEach(cat => categories.add(cat))
+    if (Array.isArray(post.category)) {
+      post.category.forEach(cat => {
+        if (typeof cat === 'string' && cat.trim() !== '') {
+          categories.add(cat.trim())
+        }
+      })
+    }
   })
   
   return Array.from(categories).sort()
