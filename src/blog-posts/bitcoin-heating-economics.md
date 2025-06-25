@@ -6,7 +6,7 @@ author: 'Tyler'
 date: '2025-06-24'
 category: ['bitcoin', 'heating']
 image: 'https://images.pexels.com/photos/7567473/pexels-photo-7567473.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'
-readTime: '7 min read'
+readTime: '5 min read'
 ---
 
 The crazy economics of Bitcoin heating represent a fundamental shift in how we think about energy consumption and value creation. Traditional heating systems are pure cost centers - they consume energy and provide heat, but generate no additional value.
