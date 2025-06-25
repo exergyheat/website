@@ -17,6 +17,7 @@ import BookCall from './pages/BookCall'
 import Portfolio from './pages/Portfolio'
 import Docs from './pages/Docs'
 import Blog from './pages/Blog'
+import BlogPostDetail from './pages/BlogPostDetail'
 
 function App() {
   return (
@@ -40,6 +41,7 @@ function App() {
               <Route path="/portfolio" element={<Portfolio />} />
               <Route path="/docs" element={<Docs />} />
               <Route path="/blog" element={<Blog />} />
+              <Route path="/blog/:id" element={<BlogPostDetail />} />
             </Routes>
           </main>
           <Footer />

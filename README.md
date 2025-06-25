@@ -13,22 +13,27 @@ A simple website for Exergy LLC, the leader in Hashrate Heating system feasibili
 - 📊 Interactive calculators
 - 📝 Contact forms
 - 📅 Booking system
+- 📰 Markdown-based blog system
 
 ## Tech Stack
 
 - **Framework:** React 18 with TypeScript
 - **Routing:** React Router v6
-- **Styling:** Tailwind CSS
+- **Styling:** Tailwind CSS with Typography plugin
 - **Icons:** Lucide React
 - **Animations:** Framer Motion
 - **Build Tool:** Vite
 - **Type Checking:** TypeScript
 - **Linting:** ESLint
+- **Content Management:** Markdown with Gray Matter
+- **Markdown Parsing:** Marked
 
 ## Project Structure
 
 ```
 src/
+├── blog-posts/         # Markdown blog posts
+│   ├── *.md           # Individual blog post files
 ├── components/         # Reusable UI components
 │   ├── Footer.tsx     # Site footer with links and contact info
 │   ├── Navbar.tsx     # Main navigation with responsive mobile menu
@@ -40,7 +45,8 @@ src/
 │   └── useTypewriter.ts     # Typewriter animation hook
 ├── pages/            # Page components
 │   ├── About.tsx     # Company information and team
-│   ├── Blog.tsx      # Company blog and insights
+│   ├── Blog.tsx      # Blog listing page
+│   ├── BlogPostDetail.tsx  # Individual blog post view
 │   ├── BookCall.tsx  # Schedule consultations
 │   ├── Calculators.tsx  # ROI and savings calculators
 │   ├── Contact.tsx   # Contact information and form
@@ -53,6 +59,10 @@ src/
 │   ├── PrivacyPolicy.tsx  # Privacy policy
 │   ├── Products.tsx  # Product catalog
 │   └── Services.tsx  # Service offerings
+├── types/            # TypeScript type definitions
+│   └── cal.d.ts      # Cal.com integration types
+├── utils/            # Utility functions
+│   └── blogLoader.ts # Blog post loading and parsing
 ├── App.tsx           # Main app component with routing
 ├── index.css         # Global styles and Tailwind imports
 └── main.tsx          # Application entry point
@@ -93,6 +103,47 @@ npm run build
 
 The built files will be in the `dist` directory.
 
+## Blog System
+
+The blog system uses Markdown files for content management, making it easy to create and manage blog posts.
+
+### Adding a New Blog Post
+
+1. Create a new `.md` file in `src/blog-posts/`
+2. Add front matter at the top of the file:
+
+```markdown
+---
+id: 'unique-post-id'
+title: 'Your Blog Post Title'
+excerpt: 'A short description of your blog post.'
+author: 'Author Name'
+date: 'YYYY-MM-DD'
+category: ['category1', 'category2']
+image: 'https://images.pexels.com/photos/...'
+readTime: 'X min read'
+---
+
+Your blog content goes here in Markdown format.
+
+## Subheading
+
+You can use **bold text**, *italic text*, [links](https://example.com), and images:
+
+![Alt text](https://images.pexels.com/photos/...)
+
+- List item 1
+- List item 2
+```
+
+### Blog Features
+
+- **Automatic category detection**: New categories are automatically added to the filter options
+- **Search functionality**: Search through titles, excerpts, and authors
+- **Responsive design**: Optimized for all device sizes
+- **SEO-friendly URLs**: Clean URLs for each blog post
+- **Markdown support**: Full Markdown syntax including images, links, and formatting
+
 ## Pages
 
 - **Home** - Landing page with key features and benefits
@@ -118,6 +169,8 @@ The built files will be in the `dist` directory.
 - `Footer` - Site footer with links and contact information
 - `ProjectCarousel` - Interactive project showcase
 - `ThemeToggle` - Dark/light mode switcher
+- `Blog` - Blog listing with search and filtering
+- `BlogPostDetail` - Individual blog post viewer
 
 ## Development
 
@@ -146,6 +199,7 @@ The built files will be in the `dist` directory.
 - Code splitting with Vite
 - Minified production builds
 - Efficient bundle chunking
+- Optimized Markdown parsing
 
 ## Contributing
 
