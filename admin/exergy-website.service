@@ -4,8 +4,8 @@ After=syslog.target network-online.target
 
 [Service]
 WorkingDirectory=/home/space/exergy/website
-ExecStart=serve -l 7744 dist
-ExecStop=pkill -f serve
+ExecStart=npx serve dist -l 7744
+ExecStop=pkill -f 7744
 Restart=always
 RestartSec=1
 StandardOutput=journal

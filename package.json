@@ -5,10 +5,10 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
+    "build": "vite build && cp serve.json dist/",
     "lint": "eslint .",
     "preview": "vite preview",
-    "serve": "serve dist -l 3000"
+    "serve": "serve dist -l 3000 -c serve.json"
   },
   "dependencies": {
     "buffer": "^6.0.3",
