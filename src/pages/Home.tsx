@@ -109,7 +109,7 @@ const Home = () => {
               Hashrate heaters generate heat and money, at the same time - at no extra cost
             </p>
             <p className="text-lg md:text-xl font-body text-surface-600 dark:text-surface-400 max-w-5xl mx-auto leading-relaxed">
-              Hashrate heating offsets heating utility costs with daily revenue. Upgrade to offset your heating costs with a hashrate heating rebate, or pocket the revenue for long term savings.
+              Heat your home or business as usual while offsetying utility costs with daily revenue. Or pocket the revenue for long term savings.
             </p>
           </motion.div>
         </div>
