@@ -56,7 +56,7 @@ const Services = () => {
       "Hashrate Heat utility bill savings and revenue projections",
       "Upgrade Total Cost of Ownership and ROI estimates",
       "Personalized Recommendations and Next Steps",
-      "1-hour report walkthrough call"
+      "1-hour Report Walkthrough Call"
     ],
     icon: FileText,
     image: "heating_subsidy.png",
