@@ -143,6 +143,28 @@ const About = () => {
                   </div>
                 </div>
               </div>
+               <div className="space-y-6">
+              <div>
+                <h4 className="font-semibold text-surface-900 dark:text-surface-100 mb-2">Building Specifications</h4>
+                <div className="grid grid-cols-2 gap-4 text-sm">
+                  <div>
+                    <p className="text-surface-600 dark:text-surface-400">Total Area</p>
+                    <p className="font-medium text-surface-900 dark:text-surface-100">5,850 sq ft</p>
+                  </div>
+                  <div>
+                    <p className="text-surface-600 dark:text-surface-400">Design Condition Heating Load</p>
+                    <p className="font-medium text-surface-900 dark:text-surface-100">10 kW (34,121 BTU/hr)</p>
+                  </div>
+                  <div>
+                    <p className="text-surface-600 dark:text-surface-400">Design Month Avg HDD (Heating Degree Day)</p>
+                    <p className="font-medium text-surface-900 dark:text-surface-100">957 °F-day</p>
+                  </div>
+                  <div>
+                    <p className="text-surface-600 dark:text-surface-400">Heating System Specifications</p>
+                    <p className="font-medium text-surface-900 dark:text-surface-100">Radiant Floor + Forced Air</p>
+                  </div>
+                </div>
+              </div>
               <div>
                 <h4 className="font-semibold text-surface-900 dark:text-surface-100 mb-2">Annual Cost Analysis</h4>
                 <div className="bg-surface-50 dark:bg-surface-700 p-4 rounded-lg">
