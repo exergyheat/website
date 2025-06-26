@@ -310,8 +310,8 @@ const About = () => {
                       <span className="text-primary-600">45,000 BTU/hr</span>
                     </div>
                     <div className="flex justify-between text-sm">
-                      <span className="text-surface-600 dark:text-surface-400">Mining Efficiency</span>
-                      <span className="text-primary-600">98.5%</span>
+                      <span className="text-surface-600 dark:text-surface-400">Hashrate & Temperatures</span>
+                      <span className="text-primary-600">Nominal</span>
                     </div>
                   </div>
                 </div>
