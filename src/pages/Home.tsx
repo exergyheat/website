@@ -101,7 +101,7 @@ const Home = () => {
             {/* Title in Blue Box */}
             <div className="inline-block bg-gradient-to-r from-[#4970A5] to-[#718EBC] px-8 py-4 rounded-2xl mb-8 shadow-lg">
               <h2 className="text-4xl md:text-5xl font-heading text-white">
-                Hashrate Heating
+                Hashrate Heating Experts
               </h2>
             </div>
             
