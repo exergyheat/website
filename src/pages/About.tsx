@@ -97,13 +97,13 @@ const About = () => {
       name: 'Dylan',
       role: 'COO & CFO',
       image: '/DylanS_headshot.jpeg',
-      description: 'Operations and bitcoin financial strategy expert with a professional engineering license'
+      description: 'Operations and bitcoin financial strategy expert with an engineering license.'
     },
     {
       name: 'Mike',
       role: 'CRO',
       image: '/MikeC_headshot.png',
-      description: 'Revenue and growth specialist.'
+      description: 'Revenue and growth specialist. Bitcoin mining fanatic.'
     }
   ]
 
