@@ -101,7 +101,7 @@ const Learn = () => {
     {
       id: 'forced-air',
       title: 'Forced Air Furnaces',
-      description: 'Replace or supplement your traditional furnace with hashrate heating. Perfect for whole-home heating with existing ductwork.',
+      description: 'Replace or supplement your traditional furnace with hashrate heating. Perfect for whole-building heating with existing ductwork.',
       image: 'https://images.pexels.com/photos/8293778/pexels-photo-8293778.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
       features: [
         'Integrates with existing HVAC',
@@ -125,7 +125,7 @@ const Learn = () => {
     {
       id: 'pools-spas',
       title: 'Pools & Hot Tubs',
-      description: 'Keep your pool and spa at the perfect temperature year-round while generating revenue from the heating process.',
+      description: 'Keep your pool or spa at the perfect temperature year-round while generating revenue from the heating process.',
       image: 'https://images.pexels.com/photos/2132250/pexels-photo-2132250.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
       features: [
         'Year-round swimming',
@@ -141,7 +141,7 @@ const Learn = () => {
       image: 'https://images.pexels.com/photos/8293769/pexels-photo-8293769.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
       features: [
         'Breweries & distilleries',
-        'Commercial boilers',
+        'Greenhouses',
         'Apartments and large warehouses',
         'District heating'
       ]
