@@ -138,7 +138,7 @@ const Learn = () => {
       id: 'Industrial',
       title: 'C&I Systems',
       description: 'Commercial and industrial heating systems for businesses with low-grade heating applications.',
-      image: 'https://images.pexels.com/photos/8293769/pexels-photo-8293769.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+      image: 'https://images.pexels.com/photos/2886937/pexels-photo-2886937.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
       features: [
         'Breweries & distilleries',
         'Greenhouses',
