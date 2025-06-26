@@ -78,7 +78,7 @@ const Learn = () => {
       image: "bitcoin_home_heat.png",
       details: [
         "Maximum efficiency. No waste - plus revenue",
-        "Digital heat control optimizes performance",
+        "Digital heat = better control and optimal performance",
         "Win-Win. Heat + revenue at no extra operating cost",
         "Consistent passive revenue every time you turn on the heat"
       ]
