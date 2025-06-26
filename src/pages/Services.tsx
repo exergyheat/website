@@ -98,10 +98,9 @@ const Services = () => {
     price: type === 'residential' ? "$1,000 deposit" : "$3,000 deposit",
     features: [
       "Includes Heat Audit analysis",
-      "Custom system design",
-      "Detailed cost breakdown",
-      "Installation planning",
-      "Performance projections"
+      "Custom heating system integration design",
+      "Detailed cost breakdown and performance projections",
+      "Installation project plan and implementation"
     ],
     icon: Wrench,
     image: "LiquidHashHeat_ex.png",
