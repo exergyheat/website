@@ -52,11 +52,11 @@ const Services = () => {
     description: "Get a comprehensive analysis of your heating needs. The Heat Audit tells you everything you need to know about your hashrate heating potential.",
     price: type === 'residential' ? "$500" : "$2500",
     features: [
-      "Optimized Heating System Sizing",
+      "Optimized heating system sizing",
       "Hashrate Heat utility bill savings and revenue projections",
-      "Upgrade Total Cost of Ownership and ROI estimates",
-      "Personalized Recommendations and Next Steps",
-      "1-hour Report Walkthrough Call"
+      "Upgrade total cost of ownership and ROI estimates",
+      "Personalized recommendations and next steps",
+      "1-hour report walkthrough call"
     ],
     icon: FileText,
     image: "heating_subsidy.png",
