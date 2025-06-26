@@ -144,7 +144,7 @@ const Home = () => {
                     Heaters Powered By Hashrate = Warmth + Revenue
                   </h3>
                   <p className="mt-2 text-base font-body text-surface-500 dark:text-surface-400">
-                    Hashrate Heaters do two things at once: Deliver your heat by consuming electricity, while mining bitcoin as the power is turned into warmth. No extra cost.
+                    Hashrate Heaters do two things at once: Generate heat by consuming electricity, and generate bitcoin as the electricity is turned to heat. No extra cost.
                   </p>
                 </div>
               </div>
