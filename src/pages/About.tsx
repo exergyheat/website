@@ -250,7 +250,7 @@ const About = () => {
                   { phase: 'Phase 2: Site Preparation', duration: '1 week' },
                   { phase: 'Phase 3: Hardware Installation', duration: '1 weeks' },
                   { phase: 'Phase 4: System Integration', duration: '1 week' },
-                  { phase: 'Phase 5: Setup & Commissioning', duration: '1 week' }
+                  { phase: 'Phase 5: Setup & Commissioning' }
                 ].map((phase, index) => (
                   <div key={index} className="bg-surface-50 dark:bg-surface-700 p-4 rounded-lg">
                     <div className="flex justify-between items-center">
