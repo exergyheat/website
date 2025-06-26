@@ -148,6 +148,10 @@ const About = () => {
                 <div className="bg-surface-50 dark:bg-surface-700 p-4 rounded-lg">
                   <div className="grid grid-cols-2 gap-4 text-sm">
                     <div>
+                      <p className="text-surface-600 dark:text-surface-400">Original Heating Cost (Natural Gas)</p>
+                      <p className="font-medium text-surface-900 dark:text-surface-100">$9,000/year</p>
+                    </div>
+                    <div>
                       <p className="text-surface-600 dark:text-surface-400">Current Heating Cost</p>
                       <p className="font-medium text-surface-900 dark:text-surface-100">$48,000/year</p>
                     </div>
