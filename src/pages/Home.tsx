@@ -158,7 +158,7 @@ const Home = () => {
               />
               <div className="absolute -bottom-6 -right-6 bg-white dark:bg-surface-800 p-6 rounded-lg shadow-xl">
                 <p className="text-2xl font-heading text-primary-500 dark:text-secondary-500">100%</p>
-                <p className="font-body text-surface-600 dark:text-surface-400">Energy Efficiency</p>
+                <p className="font-body text-surface-600 dark:text-surface-400">Heating Efficiency</p>
               </div>
             </div>
           </div>
