@@ -180,10 +180,10 @@ const Services = () => {
       id: 'consulting',
       name: "Hashrate Heat Consulting",
       description: "Expert consultation for businesses looking to implement or optimize hashrate heating solutions.",
-      price: "Contact for pricing",
+      price: "Contact for details",
       features: [
-        "Expert guidance",
-        "Strategy development",
+        "Industry expertise",
+        "Hashrate heating modeling tools",
         "Technical consulting",
         "Implementation support"
       ],
@@ -191,10 +191,11 @@ const Services = () => {
       image: "hashheat_consulting.png",
       details: {
         expertise: [
-          "System architecture",
-          "Performance optimization",
+          "System sizing",
+          "Design and control",
           "Integration strategies",
-          "Cost optimization"
+          "Target markets",
+          "Heating and Mining expertise"
         ],
         services: [
           "Technical consultation",
