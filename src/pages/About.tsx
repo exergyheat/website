@@ -322,7 +322,7 @@ const About = () => {
                   <li>• 24/7 system monitoring</li>
                   <li>• Automated alerts and notifications</li>
                   <li>• Performance optimization</li>
-                  <li>• Remote diagnostics and support</li>
+                  <li>• Diagnostics and support</li>
                 </ul>
               </div>
             </div>
