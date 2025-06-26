@@ -219,6 +219,8 @@ const About = () => {
                     <li>• Max temp: 150°F</li>
                     <li>• Pressure: 30 PSI</li>
                     <li>• Power: 40,000 W</li>
+                    <li>• Voltage: 380~415 (3 Phase) </li>
+                    <li>• Current: 80 A </li>
                   </ul>
                 </div>
               </div>
