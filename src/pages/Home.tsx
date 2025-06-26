@@ -226,7 +226,7 @@ const Home = () => {
               </div>
               <h3 className="mt-4 text-xl font-subheading text-surface-900 dark:text-surface-100">Maximum Revenue</h3>
               <p className="mt-2 font-body text-surface-600 dark:text-surface-400">
-                Our advanced analysis software matches mining power with heat demand for maximum profitability.
+                Our advanced analysis software matches bitcoin mining power with your custom heat demand for maximum profitability.
               </p>
             </div>
           </div>
