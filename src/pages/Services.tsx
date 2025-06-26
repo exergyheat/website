@@ -164,7 +164,7 @@ const Services = () => {
           "Real-time performance tracking",
           "System health checks",
           "Alert notifications",
-          "Monthly reports"
+          "Status reports"
         ],
         maintenance: [
           "Regular system updates",
