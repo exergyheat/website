@@ -53,7 +53,7 @@ const Services = () => {
     price: type === 'residential' ? "$500" : "$2500",
     features: [
       "Optimized Heating System Sizing",
-      "Hashrate Heat bill savings and revenue projections",
+      "Hashrate Heat utility bill savings and revenue projections",
       "Upgrade Total Cost of Ownership and ROI",
       "Personalized Recommendations and Next Steps",
       "1-hour report walkthrough call"
