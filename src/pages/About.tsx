@@ -153,7 +153,7 @@ const About = () => {
                     </div>
                     <div>
                       <p className="text-surface-600 dark:text-surface-400">Hashrate Heating Cost (Electric Heat + Solar)</p>
-                      <p className="font-medium text-surface-900 dark:text-surface-100">$48,000/year</p>
+                      <p className="font-medium text-surface-900 dark:text-surface-100">$42,000/year</p>
                     </div>
                     <div>
                       <p className="text-surface-600 dark:text-surface-400">Projected Savings</p>
