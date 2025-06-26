@@ -203,19 +203,22 @@ const About = () => {
                 <div>
                   <h4 className="font-semibold text-surface-900 dark:text-surface-100 mb-2">Components</h4>
                   <ul className="space-y-2 text-sm text-surface-600 dark:text-surface-400">
+                    <li>• Hashrate Heaters (Bitcoin Miners)</li>
+                    <li>• Digital Boiler (Rack system for miners)</li>
                     <li>• Heat exchangers</li>
                     <li>• Circulation pumps</li>
                     <li>• Control valves</li>
                     <li>• Temperature sensors</li>
+                    <li>• PLC, control hub and interface devices</li>
                   </ul>
                 </div>
                 <div>
                   <h4 className="font-semibold text-surface-900 dark:text-surface-100 mb-2">Specifications</h4>
                   <ul className="space-y-2 text-sm text-surface-600 dark:text-surface-400">
                     <li>• Flow rate: 20 GPM</li>
-                    <li>• Max temp: 180°F</li>
+                    <li>• Max temp: 150°F</li>
                     <li>• Pressure: 30 PSI</li>
-                    <li>• Power: 5000W</li>
+                    <li>• Power: 40,000 W</li>
                   </ul>
                 </div>
               </div>
