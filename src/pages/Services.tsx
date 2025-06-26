@@ -112,7 +112,7 @@ const Services = () => {
         "Initial consultation",
         "Home assessment",
         "Heat Audit and System design",
-        "Cost analysis",
+        "Project plan and quote",
         "Implementation plan"
       ] : [
         "Initial consultation",
