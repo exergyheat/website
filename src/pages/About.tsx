@@ -160,7 +160,7 @@ const About = () => {
                       <p className="font-medium text-primary-600">$17,000/year</p>
                     </div>
                     <div>
-                      <p className="text-surface-600 dark:text-surface-400">Projected Bitcoin Revenue (Fixed Hashprice)</p>
+                      <p className="text-surface-600 dark:text-surface-400">Projected Bitcoin Earnings Value (3 Year)</p>
                       <p className="font-medium text-primary-600">$17,000/year</p>
                     </div>
                   </div>
