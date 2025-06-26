@@ -74,7 +74,7 @@ const Learn = () => {
     {
       title: "Combining the Two: Smart Heat",
       icon: Cpu,
-      description: "Bitoin miners are purposefully power hungry to maximize earnings. This inherently makes them great for heating. Hashrate Heating does the obvious - put bitcoin miners into heating systems. The result is heat that pays.",
+      description: "Regular bitoin miners are purposefully power hungry to maximize earnings. This inherently makes them great for heating. Hashrate Heating does the obvious - put bitcoin miners into heating systems. The result? Heat that pays.",
       image: "bitcoin_home_heat.png",
       details: [
         "Maximum efficiency. No waste - plus revenue",
