@@ -125,7 +125,7 @@ const Home = () => {
                 </div>
                 <div className="ml-4">
                   <h3 className="text-lg font-subheading text-surface-900 dark:text-surface-100">
-                    Bitcoin Miners Pay You for Participating
+                    Bitcoin Miners Pay You for Contributing
                   </h3>
                   <p className="mt-2 text-base font-body text-surface-500 dark:text-surface-400">
                     Mininers perform "hashing" operations to settle bitcoin transactions and issue coins. Earnings are automated, and the energy used to run them is all turned into heat.
