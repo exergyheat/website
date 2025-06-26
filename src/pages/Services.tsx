@@ -536,7 +536,7 @@ const Services = () => {
       <div className="bg-gradient-to-r from-[#4970A5] to-[#718EBC] py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl font-bold text-white mb-6">
-            Maximize your Heating Revenue
+            Maximize your Heating Potential
           </h2>
           <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
             Check out our favorite products - or book a call to find the right service.
