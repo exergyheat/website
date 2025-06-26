@@ -129,7 +129,7 @@ const Services = () => {
         "Timeline projection"
       ] : [
         "Enterprise system specifications",
-        "Commercial installation plan",
+        "Commercial installation plan and partner coordination",
         "ROI and performance projections",
         "Detailed cost breakdown",
         "Project timeline and milestones"
