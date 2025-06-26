@@ -224,7 +224,7 @@ const Home = () => {
               <div className="flex justify-center">
                 <Bitcoin className="h-12 w-12 text-primary-500 dark:text-secondary-500" />
               </div>
-              <h3 className="mt-4 text-xl font-subheading text-surface-900 dark:text-surface-100">Maximum Earnings</h3>
+              <h3 className="mt-4 text-xl font-subheading text-surface-900 dark:text-surface-100">Maximum Revenue</h3>
               <p className="mt-2 font-body text-surface-600 dark:text-surface-400">
                 Our advanced analysis software matches mining power with heat demand for maximum profitability.
               </p>
