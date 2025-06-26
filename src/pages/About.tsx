@@ -221,6 +221,7 @@ const About = () => {
                     <li>• Power: 40,000 W</li>
                     <li>• Voltage: 380~415 (3 Phase) </li>
                     <li>• Current: 80 A </li>
+                    <li>• Frequency: 50~60 Hz </li>
                   </ul>
                 </div>
               </div>
