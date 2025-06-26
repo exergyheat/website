@@ -97,6 +97,7 @@ const Services = () => {
     description: "Get a complete hashrate heating solution tailored to your specific needs and requirements.",
     price: type === 'residential' ? "$1,000 deposit" : "$3,000 deposit",
     features: [
+      "Includes Heat Audit analysis",
       "Custom system design",
       "Detailed cost breakdown",
       "Installation planning",
