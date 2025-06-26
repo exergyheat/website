@@ -298,7 +298,7 @@ const About = () => {
                     </div>
                     <div className="flex justify-between text-sm">
                       <span className="text-surface-600 dark:text-surface-400">Uptime</span>
-                      <span className="text-primary-600">99.9%</span>
+                      <span className="text-primary-600">Matches expected heat load.</span>
                     </div>
                   </div>
                 </div>
