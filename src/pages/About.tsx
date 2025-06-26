@@ -206,8 +206,8 @@ const About = () => {
                     <li>• Hashrate Heaters (Bitcoin Miners)</li>
                     <li>• Digital Boiler (Rack system for miners)</li>
                     <li>• Heat exchangers</li>
-                    <li>• Circulation pumps</li>
-                    <li>• Control valves</li>
+                    <li>• Circulation pumps and valves</li>
+                    <li>• Manifolds and hydronic loop design</li>
                     <li>• Temperature sensors</li>
                     <li>• PLC, control hub and interface devices</li>
                   </ul>
