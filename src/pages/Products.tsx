@@ -69,7 +69,7 @@ const Products = () => {
         dimensions: '23.6" x 15.8" x 24.4"'
       },
       price: '$10,000',
-      description: 'Versatile electric boiler for hydronic hashrate heating applications. With a high water output temperature and smart control, this water boiler is great for a variety of applications.',
+      description: 'Versatile electric boiler for hydronic hashrate heating applications. With a high water output temperature and smart control, this water boiler is great for a variety of use cases.',
       features: [
         'Radiant and hydronic loop applications',
         'Hot water tank integration',
