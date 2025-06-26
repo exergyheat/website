@@ -102,7 +102,7 @@ const Learn = () => {
       id: 'forced-air',
       title: 'Forced Air Furnaces',
       description: 'Replace or supplement your traditional furnace with hashrate heating. Perfect for whole-building heating with existing ductwork.',
-      image: 'https://cdn11.bigcommerce.com/s-8s3kdqoux2/product_images/uploaded_images/expert-thumb-pros-and-cons-of-in-floor-radiant-heating-.jpg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+      image: 'https://images.pexels.com/photos/5505931/pexels-photo-5505931.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
       features: [
         'Integrates with existing HVAC',
         'Optimized temperature control',
@@ -114,7 +114,7 @@ const Learn = () => {
       id: 'radiant-systems',
       title: 'Radiant Floor Heating',
       description: 'Underfloor heating systems that provide comfortable, even heat distribution throughout your space from the ground up.',
-      image: 'https://images.pexels.com/photos/1115804/pexels-photo-1115804.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+      image: 'https://cdn11.bigcommerce.com/s-8s3kdqoux2/product_images/uploaded_images/expert-thumb-pros-and-cons-of-in-floor-radiant-heating-.jpg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
       features: [
         'Even heat distribution',
         'Increased efficiency',
