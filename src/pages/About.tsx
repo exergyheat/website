@@ -160,21 +160,6 @@ const About = () => {
               </div>
               <div>
               <div>
-                <h4 className="font-semibold text-surface-900 dark:text-surface-100 mb-2">Annual Cost Analysis</h4>
-                <div className="bg-surface-50 dark:bg-surface-700 p-4 rounded-lg">
-                  <div className="grid grid-cols-2 gap-4 text-sm">
-                    <div>
-                      <p className="text-surface-600 dark:text-surface-400">Current Heating Cost</p>
-                      <p className="font-medium text-surface-900 dark:text-surface-100">$48,000/year</p>
-                    </div>
-                    <div>
-                      <p className="text-surface-600 dark:text-surface-400">Projected Savings</p>
-                      <p className="font-medium text-primary-600">$31,200/year</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div>
                 <h4 className="font-semibold text-surface-900 dark:text-surface-100 mb-2">Recommendations</h4>
                 <ul className="space-y-2 text-sm text-surface-600 dark:text-surface-400">
                   <li>• Install 4x EXERGY SpaceHeat 2000 units</li>
