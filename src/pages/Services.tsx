@@ -148,12 +148,12 @@ const Services = () => {
       id: 'monitoring',
       name: "Remote Health Monitoring",
       description: "24/7 monitoring and maintenance of your hashrate heating system to ensure optimal performance.",
-      price: "Contact for pricing",
+      price: "Contact for details",
       features: [
-        "Real-time monitoring",
-        "Preventive maintenance",
+        "Exergy real-time monitoring",
+        "Preventive maintenance alerts",
         "Performance optimization",
-        "24/7 support"
+        "Upgrades and recommendations"
       ],
       icon: Activity,
       image: "remote_monitoring.png",
