@@ -98,7 +98,7 @@ const Services = () => {
     price: type === 'residential' ? "$1,000 deposit" : "$3,000 deposit",
     features: [
       "Custom system design",
-      "Detailed cost analysis",
+      "Detailed cost breakdown",
       "Installation planning",
       "Performance projections"
     ],
