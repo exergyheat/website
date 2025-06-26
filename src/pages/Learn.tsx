@@ -66,7 +66,7 @@ const Learn = () => {
       image: "bitcoin_miners.png",
       details: [
         "Anyone can participate - like anyone can use the internet",
-        "Earnings are proportional to the work you contribute",
+        "Earnings are proportional to the work you contribute ~ heat demand",
         "Automated reward payouts in a nativie digital asset",
         "All the energy to mine is converted to heat anyways"
       ]
