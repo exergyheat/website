@@ -149,7 +149,7 @@ const About = () => {
                   <div className="grid grid-cols-2 gap-4 text-sm">
                     <div>
                       <p className="text-surface-600 dark:text-surface-400">Original Heating Billed Cost (Propane)</p>
-                      <p className="font-medium text-surface-900 dark:text-surface-100">$22,000/year</p>
+                      <p className="font-medium text-surface-900 dark:text-surface-100">$21,000/year</p>
                     </div>
                     <div>
                       <p className="text-surface-600 dark:text-surface-400">Hashrate Heating Billed Cost (Electric Heat)</p>
