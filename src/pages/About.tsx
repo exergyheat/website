@@ -130,8 +130,8 @@ const About = () => {
                     <p className="font-medium text-surface-900 dark:text-surface-100">5,850 sq ft</p>
                   </div>
                   <div>
-                    <p className="text-surface-600 dark:text-surface-400">Current Heating Load</p>
-                    <p className="font-medium text-surface-900 dark:text-surface-100">1.2M BTU/hr</p>
+                    <p className="text-surface-600 dark:text-surface-400">Design Condition Heating Load</p>
+                    <p className="font-medium text-surface-900 dark:text-surface-100">10 kW (34,121 BTU/hr)</p>
                   </div>
                 </div>
               </div>
