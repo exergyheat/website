@@ -119,7 +119,7 @@ const About = () => {
           <div className="bg-white dark:bg-surface-800 p-6 rounded-lg shadow-lg">
             <div className="border-b border-surface-200 dark:border-surface-700 pb-4 mb-4">
               <h3 className="text-2xl font-bold text-surface-900 dark:text-surface-100">Heat Audit Report Example Data</h3>
-              <p className="text-surface-600 dark:text-surface-400">Commercial Pool Resort</p>
+              <p className="text-surface-600 dark:text-surface-400">Outdoor Commercial Pool Resort - High Altitude Rocky Mountain Region</p>
             </div>
             <div className="space-y-6">
               <div>
