@@ -303,10 +303,10 @@ const Home = () => {
                   </div>
                 </div>
                 <h3 className="text-xl font-subheading text-surface-900 dark:text-surface-100 mb-4 text-center">
-                  Can I Control it Easily?
+                  How much can I earn?
                 </h3>
                 <p className="font-body text-surface-600 dark:text-surface-400 text-center">
-                  Even better. Because they're digital, hashrate heaters offer superior control than traditional heating systems.
+                  Hashrate heating can sigificantly offset heating costs with daily revenue, sometimes even making a profit.
                 </p>
               </div>
             </motion.div>
