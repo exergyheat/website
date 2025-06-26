@@ -89,6 +89,33 @@ const Home = () => {
         </div>
       </div>
 
+      {/* Hashrate Heating Summary Section */}
+      <div className="relative py-16 overflow-hidden bg-gradient-to-r from-[#4970A5] to-[#718EBC]">
+        <div className="absolute inset-0">
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_-20%,rgba(255,255,255,0.1),transparent_75%)] animate-pulse"></div>
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_80%,rgba(47,59,105,0.3),transparent_50%)] animate-pulse [animation-delay:1s]"></div>
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_50%,rgba(255,255,255,0.1),transparent_50%)] animate-pulse [animation-delay:2s]"></div>
+        </div>
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8, ease: "easeOut" }}
+          >
+            <h2 className="text-4xl md:text-5xl font-heading text-white mb-6">
+              Hashrate Heating
+            </h2>
+            <p className="text-xl md:text-2xl font-body text-white/95 mb-6 max-w-4xl mx-auto">
+              Electric heating devices and systems that generate heat and money, at no extra cost
+            </p>
+            <p className="text-lg md:text-xl font-body text-white/90 max-w-5xl mx-auto leading-relaxed">
+              Hashrate heating offsets heating utility costs with daily revenue. Upgrade to offset your heating costs with a hashrate heating rebate, or pocket the revenue for long term savings.
+            </p>
+          </motion.div>
+        </div>
+      </div>
+
       {/* Too Good to Be True Section */}
       <div className="py-20 bg-white dark:bg-surface-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
