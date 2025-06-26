@@ -50,7 +50,7 @@ const Learn = () => {
     {
       title: "Electricity In - Heat Out",
       icon: Zap,
-      description: "Electric heaters convert power into heat with no waste. Typically, electric heat is more expensive than gas heat. Hashrate Heating changes the norm.",
+      description: "Electric heaters convert power into heat with no waste. Typically, electric heat is more expensive than gas heat, and thus less popular. Hashrate Heating changes the norm.",
       image: "electric_heat_conversion.png",
       details: [
         "100% energy conversion efficiency",
