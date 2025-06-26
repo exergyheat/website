@@ -118,8 +118,8 @@ const Services = () => {
         "Initial consultation",
         "Commercial site assessment",
         "Commercial Heat Audit and enterprise system design",
-        "Comprehensive cost analysis",
-        "Project implementation plan"
+        "Comprehensive project plan and quote",
+        "Implementation"
       ],
       includes: type === 'residential' ? [
         "Detailed system specifications",
