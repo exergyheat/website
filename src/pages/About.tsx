@@ -127,7 +127,7 @@ const About = () => {
                 <div className="grid grid-cols-2 gap-4 text-sm">
                   <div>
                     <p className="text-surface-600 dark:text-surface-400">Total Area</p>
-                    <p className="font-medium text-surface-900 dark:text-surface-100">50,000 sq ft</p>
+                    <p className="font-medium text-surface-900 dark:text-surface-100">5,850 sq ft</p>
                   </div>
                   <div>
                     <p className="text-surface-600 dark:text-surface-400">Current Heating Load</p>
