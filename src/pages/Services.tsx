@@ -123,7 +123,7 @@ const Services = () => {
       ],
       includes: type === 'residential' ? [
         "Detailed system specifications",
-        "Installation guidelines",
+        "Installation guidelines or partner coordination",
         "Performance estimates",
         "Cost breakdown",
         "Timeline projection"
