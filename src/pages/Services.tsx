@@ -5,7 +5,7 @@ import { ArrowRight, FileText, Wrench, Activity, Users, ChevronDown, ChevronUp, 
 const Services = () => {
   const [expandedService, setExpandedService] = useState<string | null>(null)
   const [buildType, setBuildType] = useState<'residential' | 'commercial'>('residential')
-  const [upgradeType, setUpgradeType] = useState<'residential' | 'commercial'>('residential')
+  const [designType, setDesignType] = useState<'residential' | 'commercial'>('residential')
   const [imageViewer, setImageViewer] = useState<{src: string, title: string} | null>(null)
   const [flippedCard, setFlippedCard] = useState<string | null>(null)
 
@@ -33,8 +33,8 @@ const Services = () => {
       title: 'Design & Project Plan',
       description: 'Ready? Get your integrated solution design, components, complete project plan and quote.',
       icon: Cog,
-      flipText: 'Start with a System Upgrade if you\'re ready to heat with hashrate, We\'ll handle the rest.',
-      targetSection: 'upgrade-service'
+      flipText: 'Start with a System Design if you\'re ready to heat with hashrate, We\'ll handle the rest.',
+      targetSection: 'design-service'
     },
     {
       id: 'monitoring',
@@ -91,9 +91,9 @@ const Services = () => {
       : 'https://pay.zaprite.com/pl_GhSjRJ6mTI'
   })
 
-  const getUpgradeService = (type: 'residential' | 'commercial') => ({
-    id: 'upgrade',
-    name: "Heating System Upgrades",
+  const getDesignService = (type: 'residential' | 'commercial') => ({
+    id: 'design',
+    name: "Heating System Design",
     description: "Get a complete hashrate heating solution tailored to your specific needs and requirements.",
     price: type === 'residential' ? "$1,000 deposit" : "$3,000 deposit",
     features: [
@@ -143,7 +143,7 @@ const Services = () => {
 
   const services = [
     getAuditService(buildType),
-    getUpgradeService(upgradeType),
+    getDesignService(designType),
     {
       id: 'monitoring',
       name: "Remote Health Monitoring",
@@ -374,12 +374,12 @@ const Services = () => {
                 )}
 
                 {/* Build Type Toggle for Upgrade Service */}
-                {service.id === 'upgrade' && (
+                {service.id === 'design' && (
                   <div className="flex items-center space-x-4 p-4 bg-surface-100 dark:bg-surface-800 rounded-lg">
                     <button
-                      onClick={() => setUpgradeType('residential')}
+                      onClick={() => setDesignType('residential')}
                       className={`px-4 py-2 rounded-lg transition-colors ${
-                        upgradeType === 'residential'
+                        designType === 'residential'
                           ? 'bg-primary-600 text-white'
                           : 'bg-surface-200 dark:bg-surface-700 text-surface-700 dark:text-surface-300'
                       }`}
@@ -387,9 +387,9 @@ const Services = () => {
                       Residential
                     </button>
                     <button
-                      onClick={() => setUpgradeType('commercial')}
+                      onClick={() => setDesignType('commercial')}
                       className={`px-4 py-2 rounded-lg transition-colors ${
-                        upgradeType === 'commercial'
+                        designType === 'commercial'
                           ? 'bg-primary-600 text-white'
                           : 'bg-surface-200 dark:bg-surface-700 text-surface-700 dark:text-surface-300'
                       }`}
