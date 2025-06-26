@@ -322,11 +322,11 @@ const About = () => {
     },
     {
       quarter: 'Q3 2025',
-      title: 'Feedback & Optimization',
+      title: 'Data Collection & Optimization',
       events: [
         'Project data collection',
         'Monitoring software development',
-        'Establish partner network'
+        'Build trades partner network'
       ]
     },
     {
