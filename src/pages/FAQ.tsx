@@ -156,7 +156,7 @@ const FAQ = () => {
             Still Have Questions?
           </h2>
           <p className="text-xl text-surface-600 dark:text-surface-400 mb-8">
-            Our team is here to help you with any questions you might have about our technology
+            Our team is here to help you with any questions you might have about our technology.
           </p>
           <a
             href="mailto:support@exergyheat.com"
