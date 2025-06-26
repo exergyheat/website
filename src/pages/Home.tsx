@@ -106,7 +106,7 @@ const Home = () => {
             </div>
             
             <p className="text-xl md:text-2xl font-body text-surface-900 dark:text-surface-100 mb-6 max-w-4xl mx-auto">
-              Electric heating devices and systems that generate heat and money, at no extra cost
+              Hashrate heaters are electric devices and infrastructure that generate heat and money, at the same time - at no extra cost
             </p>
             <p className="text-lg md:text-xl font-body text-surface-600 dark:text-surface-400 max-w-5xl mx-auto leading-relaxed">
               Hashrate heating offsets heating utility costs with daily revenue. Upgrade to offset your heating costs with a hashrate heating rebate, or pocket the revenue for long term savings.
