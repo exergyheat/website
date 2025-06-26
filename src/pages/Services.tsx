@@ -100,7 +100,8 @@ const Services = () => {
       "Includes Heat Audit analysis",
       "Custom heating system integration design",
       "Detailed cost breakdown and performance projections",
-      "Installation project plan and implementation"
+      "Installation project plan",
+      "Project implementation with preferred partner installers",      
     ],
     icon: Wrench,
     image: "LiquidHashHeat_ex.png",
