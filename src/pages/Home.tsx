@@ -306,7 +306,7 @@ const Home = () => {
                   How much can I earn?
                 </h3>
                 <p className="font-body text-surface-600 dark:text-surface-400 text-center">
-                  Hashrate heating can sigificantly offset heating costs with daily revenue, sometimes even earning a profit.
+                  Hashrate heating can sigificantly offset heating costs with daily revenue, sometimes exceeding 100% savings.
                 </p>
               </div>
             </motion.div>
