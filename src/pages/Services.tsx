@@ -111,7 +111,7 @@ const Services = () => {
       process: type === 'residential' ? [
         "Initial consultation",
         "Home assessment",
-        "System design",
+        "Heat Audit and System design",
         "Cost analysis",
         "Implementation plan"
       ] : [
