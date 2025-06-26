@@ -168,16 +168,6 @@ const About = () => {
                 </ul>
               </div>
             </div>
-            <div>
-                <h4 className="font-semibold text-surface-900 dark:text-surface-100 mb-2">Recommendations</h4>
-                <ul className="space-y-2 text-sm text-surface-600 dark:text-surface-400">
-                  <li>• Install 4x EXERGY SpaceHeat 2000 units</li>
-                  <li>• Integrate with existing HVAC system</li>
-                  <li>• Add smart controls for zone management</li>
-                  <li>• Implement heat recovery system</li>
-                </ul>
-              </div>
-            </div>
           </div>
         )
       }
