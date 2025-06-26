@@ -126,7 +126,7 @@ const Learn = () => {
       id: 'pools-spas',
       title: 'Pools & Hot Tubs',
       description: 'Keep your pool or spa at the perfect temperature year-round while generating revenue from the heating process.',
-      image: 'https://images.pexels.com/photos/2132250/pexels-photo-2132250.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+      image: 'https://images.pexels.com/photos/6667425/pexels-photo-6667425.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
       features: [
         'Year-round swimming',
         'Precise temperature control',
