@@ -201,6 +201,7 @@ const Services = () => {
           "Technical consultation",
           "Strategy development",
           "Implementation guidance",
+          "Content and marketing",
           "Ongoing support"
         ]
       },
