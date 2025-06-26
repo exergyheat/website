@@ -54,7 +54,7 @@ const Services = () => {
     features: [
       "Optimized Heating System Sizing",
       "Hashrate Heat utility bill savings and revenue projections",
-      "Upgrade Total Cost of Ownership and ROI",
+      "Upgrade Total Cost of Ownership and ROI estimates",
       "Personalized Recommendations and Next Steps",
       "1-hour report walkthrough call"
     ],
