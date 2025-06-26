@@ -272,7 +272,7 @@ const Home = () => {
                   Why Bitcoin?
                 </h3>
                 <p className="font-body text-surface-600 dark:text-surface-400 text-center">
-                  Bitcoin is a digital commodity. A neutral protocol - free an open for anyone to use - with no controlling authority.
+                  Bitcoin is a digital commodity. A neutral protocol, free an open for anyone to use, with no controlling authority.
                 </p>
               </div>
             </motion.div>
