@@ -137,6 +137,10 @@ const About = () => {
                     <p className="text-surface-600 dark:text-surface-400">Design Month Avg HDD (Heating Degree Day)</p>
                     <p className="font-medium text-surface-900 dark:text-surface-100">957 °F-day</p>
                   </div>
+                  <div>
+                    <p className="text-surface-600 dark:text-surface-400">Heating System Specifications</p>
+                    <p className="font-medium text-surface-900 dark:text-surface-100">Radiant Floor + Forced Air</p>
+                  </div>
                 </div>
               </div>
               <div>
