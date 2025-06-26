@@ -131,7 +131,7 @@ const Services = () => {
         "Enterprise system specifications",
         "Commercial installation plan and partner coordination",
         "ROI and performance projections",
-        "Detailed cost breakdown",
+        "Commercial cost breakdown",
         "Project timeline and milestones"
       ]
     },
