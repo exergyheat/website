@@ -119,27 +119,27 @@ const About = () => {
           <div className="bg-white dark:bg-surface-800 p-6 rounded-lg shadow-lg">
             <div className="border-b border-surface-200 dark:border-surface-700 pb-4 mb-4">
               <h3 className="text-2xl font-bold text-surface-900 dark:text-surface-100">Heat Audit Report Example Data</h3>
-              <p className="text-surface-600 dark:text-surface-400">Exergy Office Building - 3700 N Franklin St. Denver, CO 80205</p>
+              <p className="text-surface-600 dark:text-surface-400">Commercial Pool Resort</p>
             </div>
             <div className="space-y-6">
               <div>
-                <h4 className="font-semibold text-surface-900 dark:text-surface-100 mb-2">Building Specifications</h4>
+                <h4 className="font-semibold text-surface-900 dark:text-surface-100 mb-2">Project Specifications</h4>
                 <div className="grid grid-cols-2 gap-4 text-sm">
                   <div>
-                    <p className="text-surface-600 dark:text-surface-400">Total Area</p>
-                    <p className="font-medium text-surface-900 dark:text-surface-100">5,850 sq ft</p>
+                    <p className="text-surface-600 dark:text-surface-400">Total Volume</p>
+                    <p className="font-medium text-surface-900 dark:text-surface-100">40,000 gallons</p>
                   </div>
                   <div>
                     <p className="text-surface-600 dark:text-surface-400">Design Condition Heating Load</p>
-                    <p className="font-medium text-surface-900 dark:text-surface-100">10 kW (34,121 BTU/hr)</p>
+                    <p className="font-medium text-surface-900 dark:text-surface-100">40 kW (136,484 BTU/hr)</p>
                   </div>
                   <div>
                     <p className="text-surface-600 dark:text-surface-400">Design Month Avg HDD (Heating Degree Day)</p>
-                    <p className="font-medium text-surface-900 dark:text-surface-100">957 °F-day</p>
+                    <p className="font-medium text-surface-900 dark:text-surface-100">1935 °F-day</p>
                   </div>
                   <div>
                     <p className="text-surface-600 dark:text-surface-400">Heating System Specifications</p>
-                    <p className="font-medium text-surface-900 dark:text-surface-100">Radiant Floor + Forced Air</p>
+                    <p className="font-medium text-surface-900 dark:text-surface-100">Hydronic Boiler</p>
                   </div>
                 </div>
               </div>
@@ -148,11 +148,11 @@ const About = () => {
                 <div className="bg-surface-50 dark:bg-surface-700 p-4 rounded-lg">
                   <div className="grid grid-cols-2 gap-4 text-sm">
                     <div>
-                      <p className="text-surface-600 dark:text-surface-400">Original Heating Billed Cost (Natural Gas)</p>
-                      <p className="font-medium text-surface-900 dark:text-surface-100">$9,000/year</p>
+                      <p className="text-surface-600 dark:text-surface-400">Original Heating Billed Cost (Propane)</p>
+                      <p className="font-medium text-surface-900 dark:text-surface-100">$22,000/year</p>
                     </div>
                     <div>
-                      <p className="text-surface-600 dark:text-surface-400">Hashrate Heating Billed Cost (Electric Heat + Solar)</p>
+                      <p className="text-surface-600 dark:text-surface-400">Hashrate Heating Billed Cost (Electric Heat)</p>
                       <p className="font-medium text-surface-900 dark:text-surface-100">$42,000/year</p>
                     </div>
                     <div>
