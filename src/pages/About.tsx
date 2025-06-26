@@ -280,7 +280,7 @@ const About = () => {
       description: 'Optional remote monitoring ensures your system is always healthy and earning what it should. Because our heaters are digital, we can sense when it is time for a tune up - before you do.',
       icon: Monitor,
       preview: {
-        title: 'Monitoring Dashboard',
+        title: 'Monitored Data',
         content: (
           <div className="bg-white dark:bg-surface-800 p-6 rounded-lg shadow-lg">
             <div className="border-b border-surface-200 dark:border-surface-700 pb-4 mb-4">
