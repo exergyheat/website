@@ -117,7 +117,7 @@ const Services = () => {
       ] : [
         "Initial consultation",
         "Commercial site assessment",
-        "Enterprise system design",
+        "Commercial Heat Audit and enterprise system design",
         "Comprehensive cost analysis",
         "Project implementation plan"
       ],
