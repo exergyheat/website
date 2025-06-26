@@ -266,7 +266,7 @@ const About = () => {
                   <li>• Hardware sourcing and delivery</li>
                   <li>• Professional installation</li>
                   <li>• System integration and testing</li>
-                  <li>• Staff training and handover</li>
+                  <li>• Operation training and handover</li>
                 </ul>
               </div>
             </div>
