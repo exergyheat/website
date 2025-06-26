@@ -246,11 +246,11 @@ const About = () => {
             <div className="space-y-6">
               <div className="space-y-4">
                 {[
-                  { phase: 'Phase 1: Equipment Procurement', duration: '1-2 weeks' },
-                  { phase: 'Phase 2: Site Preparation', duration: '1 week' },
-                  { phase: 'Phase 3: Hardware Installation', duration: '1 weeks' },
-                  { phase: 'Phase 4: System Integration', duration: '1 week' },
-                  { phase: 'Phase 5: Setup & Commissioning' }
+                  { phase: 'Phase 1: Equipment Procurement'},
+                  { phase: 'Phase 2: Site Preparation'},
+                  { phase: 'Phase 3: Hardware Installation'},
+                  { phase: 'Phase 4: System Integration'},
+                  { phase: 'Phase 5: Setup & Commissioning'}
                 ].map((phase, index) => (
                   <div key={index} className="bg-surface-50 dark:bg-surface-700 p-4 rounded-lg">
                     <div className="flex justify-between items-center">
