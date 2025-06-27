@@ -31,7 +31,7 @@ const projects = [
     category: 'Residential',
     icon: Home,
     stats: {
-      size: '8,500 sq ft',
+      size: '2,700 sq ft',
       savings: '58%',
       payback: '24 months',
       hashrate: '500 TH/s'
