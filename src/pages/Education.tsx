@@ -71,7 +71,7 @@ const Education = () => {
       type: 'video',
       author: "The Mining Conference",
       link: "https://x.com/BitcoinNewsCom/status/1864467495572148504",
-      image: "/CompassHeatReusePod.jpeg",
+      image: "/heatpunks_manifesto_presentation.png",
       date: "September 29, 2024"
     }
   ]
