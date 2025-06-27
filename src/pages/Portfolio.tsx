@@ -25,7 +25,7 @@ const projects = [
   },
     {
     id: 'residential',
-    title: 'Rocky Mountain Home',
+    title: 'Rural Rocky Mountain Home',
     description: 'Whole-home heating solution including pool and spa heating.',
     image: 'https://images.pexels.com/photos/1115804/pexels-photo-1115804.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
     category: 'Residential',
