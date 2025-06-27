@@ -82,7 +82,7 @@ const Portfolio = () => {
             Ready to Start Your Project?
           </h2>
           <p className="text-xl text-surface-600 dark:text-surface-400 mb-8 max-w-2xl mx-auto">
-            Let's discuss how we can help you implement hashrate heating in your facility
+            Let's discuss how we can help you implement hashrate heating
           </p>
           <Link
             to="/contact"
