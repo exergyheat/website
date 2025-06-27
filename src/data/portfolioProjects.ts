@@ -66,7 +66,7 @@ export const projects: Project[] = [
     icon: Factory,
     stats: {
       size: '40,000 gallons',
-      savings: '72%',
+      savings: '124%',
       payback: '14 months',
       hashrate: '2.28 PH/s'
     },
