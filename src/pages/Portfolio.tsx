@@ -37,8 +37,8 @@ const projects = [
       hashrate: '200 TH/s'
     },
     details: [
-      'Hydronic heating',
-      'Pool integration',
+      'Hydronic boiler system',
+      'Radiant floor heat',
       'Smart controls',
       'Mobile monitoring'
     ]
