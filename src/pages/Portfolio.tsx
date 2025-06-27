@@ -34,7 +34,7 @@ const projects = [
       size: '2,700 sq ft',
       savings: '58%',
       payback: '24 months',
-      hashrate: '500 TH/s'
+      hashrate: '200 TH/s'
     },
     details: [
       'Hydronic heating',
