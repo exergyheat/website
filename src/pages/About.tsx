@@ -114,7 +114,7 @@ const About = () => {
       description: 'We start with thermo-economic modeling to understand your exact heating needs and maximize earnings. This tells us if the uprgade is a good idea, which hashrate heater is best for you, and proivde recommendations for next steps.',
       icon: FileText,
       preview: {
-        title: 'Sample Heat Audit Report',
+        title: 'Sample Data',
         content: (
           <div className="bg-white dark:bg-surface-800 p-6 rounded-lg shadow-lg">
             <div className="border-b border-surface-200 dark:border-surface-700 pb-4 mb-4">
