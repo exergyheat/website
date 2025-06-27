@@ -72,7 +72,7 @@ const Education = () => {
       author: "The Mining Conference",
       link: "https://x.com/BitcoinNewsCom/status/1864467495572148504",
       image: "/CompassHeatReusePod.jpeg",
-      date: "January 21, 2025"
+      date: "September 29, 2024"
     }
   ]
 
