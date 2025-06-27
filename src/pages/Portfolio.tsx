@@ -14,10 +14,10 @@ const projects = [
       size: '5,850 sq ft',
       savings: '65%',
       payback: '18 months',
-      hashrate: '250 TH/s'
+      hashrate: '257 TH/s'
     },
     details: [
-      'Radiant & forced air heating',
+      'Radiant & forced air combination',
       'Custom control system & remote monitoring',
       'Integrated solar array',
       'Redundant natural gas backup'
