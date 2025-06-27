@@ -236,7 +236,7 @@ const About = () => {
       description: 'When ready, we source the best hashrate heating and auxiliary hardware, then coordinate install with partners for smooth integration to bring your system online.',
       icon: Package,
       preview: {
-        title: 'Installation Process',
+        title: 'Sample Install Process',
         content: (
           <div className="bg-white dark:bg-surface-800 p-6 rounded-lg shadow-lg">
             <div className="border-b border-surface-200 dark:border-surface-700 pb-4 mb-4">
