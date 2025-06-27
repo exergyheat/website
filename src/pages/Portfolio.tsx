@@ -46,7 +46,7 @@ const projects = [
   {
     id: 'commercial',
     title: 'Mountain Hot Spring Resort',
-    description: 'Industrial-scale heating for a manufacturing plant with high thermal demands.',
+    description: 'Commercial-scale digital boiler solution for a high altitude hot spring resort with supplemental spa heat.',
     image: 'https://images.pexels.com/photos/2760243/pexels-photo-2760243.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
     category: 'commercial',
     icon: Factory,
