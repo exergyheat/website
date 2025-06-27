@@ -68,7 +68,7 @@ export const projects: Project[] = [
       size: '40,000 gallons',
       savings: '72%',
       payback: '14 months',
-      hashrate: '5 PH/s'
+      hashrate: '2.28 PH/s'
     },
     details: [
       'Multi-pool heating',
