@@ -51,7 +51,7 @@ const projects = [
     category: 'commercial',
     icon: Factory,
     stats: {
-      size: '100,000 sq ft',
+      size: '40,000 gallons',
       savings: '72%',
       payback: '14 months',
       hashrate: '5 PH/s'
