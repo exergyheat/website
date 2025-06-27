@@ -47,7 +47,7 @@ const projects = [
     id: 'commercial',
     title: 'Mountain Hot Spring Resort',
     description: 'Commercial-scale digital boiler solution for a high altitude hot spring resort with supplemental spa heat.',
-    image: 'https://images.pexels.com/photos/2760243/pexels-photo-2760243.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+    image: 'https://images.squarespace-cdn.com/content/v1/6228169f168e51239c996b76/87583b0a-810c-4a9e-998d-bade1da615e0/0L9A4133.jpg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
     category: 'commercial',
     icon: Factory,
     stats: {
