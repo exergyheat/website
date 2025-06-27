@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom'
 const projects = [
   {
     id: 'small-business',
-    title: 'Exergy Office Building',
+    title: 'Exergy\'s Office Building - The Space',
     description: 'Fully integrated hashrate heating for our 7,000 sq ft office building in downtown Denver.',
     image: 'https://images.pexels.com/photos/323705/pexels-photo-323705.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
     category: 'Small Business',
