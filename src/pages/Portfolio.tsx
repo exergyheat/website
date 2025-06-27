@@ -26,7 +26,7 @@ const projects = [
     {
     id: 'residential',
     title: 'Rural Rocky Mountain Home',
-    description: 'Whole-home heating solution including pool and spa heating.',
+    description: 'Hashrate heating electric boiler for mountain home radiant floor heat.',
     image: 'https://images.pexels.com/photos/1115804/pexels-photo-1115804.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
     category: 'Residential',
     icon: Home,
