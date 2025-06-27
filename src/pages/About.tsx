@@ -186,7 +186,7 @@ const About = () => {
       description: 'Engineering, custom design and a full project quote follows the Heat Audit. Once we know how much heat you need, and which hashrate heater is best - we design a system to integrate with your setup.',
       icon: Wrench,
       preview: {
-        title: 'System Design Schematic',
+        title: 'Sample Design Details',
         content: (
           <div className="bg-white dark:bg-surface-800 p-6 rounded-lg shadow-lg">
             <div className="border-b border-surface-200 dark:border-surface-700 pb-4 mb-4">
