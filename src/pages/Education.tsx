@@ -64,6 +64,15 @@ const Education = () => {
       link: "https://www.youtube.com/watch?v=UTJ_NHqI9rI",
       image: "/CompassHeatReusePod.jpeg",
       date: "January 21, 2025"
+    },
+    {
+      title: "A Heatpunk's Manifesto",
+      description: "Heat will bring hashrate back home. I was fortunate to speak at my first bitcoin conference in September where I put my Heatpunk Manifesto into presentation form.",
+      type: 'podcast',
+      author: "Compass Mining Podcast",
+      link: "https://www.youtube.com/watch?v=UTJ_NHqI9rI",
+      image: "/CompassHeatReusePod.jpeg",
+      date: "January 21, 2025"
     }
   ]
 
