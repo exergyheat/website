@@ -61,9 +61,9 @@ const Education = () => {
       description: "Jarrett and I chat the Monday right after Undermine to walk through key takeaways from the summit. What challenges do we face moving forward? What were the biggest accomplishments? What were the biggest surprises?",
       type: 'podcast',
       author: "Compass Mining Podcast",
-      link: "https://x.com/compass_mining/status/1894359866216477045",
+      link: "https://www.youtube.com/watch?v=UTJ_NHqI9rI",
       image: "/CompassHeatReusePod.jpeg",
-      date: "April 1, 2025"
+      date: "January 21, 2025"
     }
   ]
 
