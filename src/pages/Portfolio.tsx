@@ -44,11 +44,11 @@ const projects = [
     ]
   },
   {
-    id: 'manufacturing',
-    title: 'Manufacturing Facility',
+    id: 'commercial',
+    title: 'Mountain Hot Spring Resort',
     description: 'Industrial-scale heating for a manufacturing plant with high thermal demands.',
     image: 'https://images.pexels.com/photos/2760243/pexels-photo-2760243.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-    category: 'Industrial',
+    category: 'commercial',
     icon: Factory,
     stats: {
       size: '100,000 sq ft',
