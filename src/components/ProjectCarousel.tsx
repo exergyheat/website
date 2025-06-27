@@ -154,13 +154,9 @@ const ProjectCarousel = () => {
                           alt={project.title}
                           className="w-full h-full object-cover"
                         />
-                        {/* Blue filter overlay matching the header */}
+                        {/* Light blue tint overlay using website's primary blue color */}
                         <div 
-                          className="absolute inset-0"
-                          style={{
-                            backgroundColor: 'rgba(47, 59, 105, 0.4)',
-                            mixBlendMode: 'overlay'
-                          }}
+                          className="absolute inset-0 bg-primary-500 opacity-40"
                         />
                         <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
                         <div className="absolute bottom-0 left-0 right-0 p-6 text-white">
