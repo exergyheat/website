@@ -57,10 +57,10 @@ const projects = [
       hashrate: '5 PH/s'
     },
     details: [
-      'Process heat integration',
-      'Heat recovery system',
-      'Advanced monitoring',
-      'Scalable design'
+      'Multi-pool heating',
+      'Scalable boiler design',
+      'Remote monitoring',
+      'Smart controls'
     ]
   },
   {
