@@ -53,7 +53,7 @@ const Education = () => {
       type: 'video',
       author: "Build a Mine Podcast with Trevor Bello",
       link: "https://www.youtube.com/watch?v=c-NrYzmPRv8",
-      image: "/undermine_recap.webp",
+      image: "/AlphaYouMissed.webp",
       date: "April 1, 2025"
     }
   ]
