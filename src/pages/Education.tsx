@@ -36,16 +36,16 @@ const Education = () => {
       author: "Home Mining Podcast by Solo Satoshi",
       link: "https://www.youtube.com/watch?v=H4faYFvQYOQ",
       image: "/image.png",
-      date: "March 20, 2024"
+      date: "May 3, 2025"
     },
     {
       title: "Decentralized Heat: Bitcoin Mining's Game-Changing Energy Solution W/ Tyler Stevens",
-      description: "In this episode of the Home Mining Podcast, host TwoSats and thermal engineer Tyler Stevens explore the innovative concept of heat reuse in Bitcoin mining. They discuss how Bitcoin miners can serve dual purposes by providing heat for homes and businesses while securing the network. The conversation delves into the technical aspects of heat transfer, real-world applications, and the economic benefits of integrating heat reuse into mining operations. Tyler shares insights on the evolution of ASIC design and the potential for future innovations that prioritize heat reuse, ultimately envisioning a future where Bitcoin mining contributes to self-reliant communities and sustainable energy practices. In this conversation, Tyler Stevens discusses the innovative concept of hash rate heating, which utilizes the heat generated from Bitcoin mining for practical applications such as heating water and spaces. He explains the process of binning in chip manufacturing, the potential of the comfort heating market, and how this could revolutionize energy systems. The discussion also touches on the challenges of chip manufacturing, the importance of aligning incentives for success, and the future landscape of Bitcoin mining as it becomes more decentralized and integrated into home energy systems.",
-      type: 'podcast',
-      author: "Home Mining Podcast by Solo Satoshi",
-      link: "https://www.youtube.com/watch?v=H4faYFvQYOQ",
+      description: "The Under|Mine HeatPunks Summit is over but the movement continues. This event was one for the history books, the amount of signal that came out of this event was palpable. If you missed the event you’re sure to get a good amount of FOMO from this video which highlights the projects and conversations that are coming out of the heat reuse space. Not only is Hashrate Heating decentralizing Bitcoins Hashrate its also helping to secure the network all while providing much needed heat to homes, businesses and some industrial applications. There is a ton of work to be done if we are going to replace dumb electric heating infrastructure with Bitcoin miners, but luckily we have the HeatPunks dedicated to this mission.",
+      type: 'video',
+      author: "Unermine - 2025 Heatpunk Summit Recap Video",
+      link: "https://www.youtube.com/watch?v=c-NrYzmPRv8",
       image: "/image.png",
-      date: "March 20, 2024"
+      date: "April 1, 2025"
     }
   ]
 
