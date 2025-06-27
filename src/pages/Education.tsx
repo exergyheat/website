@@ -55,7 +55,7 @@ const Education = () => {
       link: "https://x.com/compass_mining/status/1894359866216477045",
       image: "/AlphaYouMissed.webp",
       date: "April 1, 2025"
-    }
+    },
     {
       title: "Exploring Bitcoin Mining Heat Reuse",
       description: "Jarrett and I chat the Monday right after Undermine to walk through key takeaways from the summit. What challenges do we face moving forward? What were the biggest accomplishments? What were the biggest surprises?",
