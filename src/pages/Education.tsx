@@ -58,9 +58,7 @@ const Education = () => {
     },
     {
       title: "Exploring Bitcoin Mining Heat Reuse",
-      description: "I had a conversation with Jarrett from Compass Mining exploring the potential for Bitcoin miners to evolve into heating appliances and devices that pay you for using them. The incentives are aligned. The potential is there. We just need to make a few changes for this emerging sub-industry to manifest. Give it a listen to hear about the shockingly large target market, the challenges hashrate heaters face, and a teaser about my upcoming book that dives deep into the subject!
-
-",
+      description: "I had a conversation with Jarrett from Compass Mining exploring the potential for Bitcoin miners to evolve into heating appliances and devices that pay you for using them. The incentives are aligned. The potential is there. We just need to make a few changes for this emerging sub-industry to manifest. Give it a listen to hear about the shockingly large target market, the challenges hashrate heaters face, and a teaser about my upcoming book that dives deep into the subject!",
       type: 'podcast',
       author: "Compass Mining Podcast",
       link: "https://www.youtube.com/watch?v=UTJ_NHqI9rI",
