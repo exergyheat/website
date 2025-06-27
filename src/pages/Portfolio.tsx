@@ -62,46 +62,6 @@ const projects = [
       'Remote monitoring',
       'Smart controls'
     ]
-  },
-  {
-    id: 'greenhouse',
-    title: 'Commercial Greenhouse',
-    description: 'Year-round heating for a large commercial greenhouse operation.',
-    image: 'https://images.pexels.com/photos/2132250/pexels-photo-2132250.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-    category: 'Agricultural',
-    icon: Thermometer,
-    stats: {
-      size: '75,000 sq ft',
-      savings: '70%',
-      payback: '16 months',
-      hashrate: '3 PH/s'
-    },
-    details: [
-      'Climate control',
-      'Humidity management',
-      'Zone control',
-      'Weather integration'
-    ]
-  },
-  {
-    id: 'data-center',
-    title: 'Data Center Heat Recovery',
-    description: 'Heat recovery system for a major data center, providing district heating.',
-    image: 'https://images.pexels.com/photos/325229/pexels-photo-325229.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-    category: 'Industrial',
-    icon: Factory,
-    stats: {
-      size: '200,000 sq ft',
-      savings: '80%',
-      payback: '12 months',
-      hashrate: '10 PH/s'
-    },
-    details: [
-      'District heating',
-      'Heat exchange network',
-      'Automated controls',
-      'Real-time optimization'
-    ]
   }
 ]
 
