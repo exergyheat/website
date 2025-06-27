@@ -1,77 +1,131 @@
 import React, { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
-import { ArrowRight, ArrowLeft } from 'lucide-react'
+import { ArrowRight, ArrowLeft, Building, Factory, Home, Thermometer } from 'lucide-react'
 
+// Import the projects data from Portfolio page
 const projects = [
   {
-    id: 'commercial-office',
-    title: 'Commercial Office Building',
-    description: 'Complete heating solution for a 50,000 sq ft office building in downtown Denver.',
-    image: 'https://images.pexels.com/photos/323705/pexels-photo-323705.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+    id: 'small-business',
+    title: 'Exergy\'s Office Building - The Space',
+    description: 'Fully integrated hashrate heating for The Space, Denver\'s 5,850 sqft bitcoin hub and home of Exergy\'s office.',
+    image: 'https://denver.space/assets/venue/3700Franklin_Back.webp?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+    category: 'Small Business',
+    icon: Building,
     stats: {
+      size: '5,850 sq ft',
       savings: '65%',
-      payback: '18 months'
-    }
+      payback: '18 months',
+      hashrate: '257 TH/s'
+    },
+    details: [
+      'Radiant & forced air combination',
+      'Custom control system & remote monitoring',
+      'Integrated solar array',
+      'Redundant natural gas backup'
+    ]
+  },
+  {
+    id: 'residential',
+    title: 'High Desert Home',
+    description: 'Whole-home heating solution including pool and spa heating.',
+    image: 'https://images.pexels.com/photos/1115804/pexels-photo-1115804.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+    category: 'Residential',
+    icon: Home,
+    stats: {
+      size: '8,500 sq ft',
+      savings: '58%',
+      payback: '24 months',
+      hashrate: '500 TH/s'
+    },
+    details: [
+      'Hydronic heating',
+      'Pool integration',
+      'Smart controls',
+      'Mobile monitoring'
+    ]
   },
   {
     id: 'manufacturing',
     title: 'Manufacturing Facility',
     description: 'Industrial-scale heating for a manufacturing plant with high thermal demands.',
     image: 'https://images.pexels.com/photos/2760243/pexels-photo-2760243.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+    category: 'Industrial',
+    icon: Factory,
     stats: {
+      size: '100,000 sq ft',
       savings: '72%',
-      payback: '14 months'
-    }
-  },
-  {
-    id: 'residential',
-    title: 'Luxury Home',
-    description: 'Whole-home heating solution including pool and spa heating.',
-    image: 'https://images.pexels.com/photos/1115804/pexels-photo-1115804.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-    stats: {
-      savings: '58%',
-      payback: '24 months'
-    }
+      payback: '14 months',
+      hashrate: '5 PH/s'
+    },
+    details: [
+      'Process heat integration',
+      'Heat recovery system',
+      'Advanced monitoring',
+      'Scalable design'
+    ]
   },
   {
     id: 'greenhouse',
     title: 'Commercial Greenhouse',
     description: 'Year-round heating for a large commercial greenhouse operation.',
     image: 'https://images.pexels.com/photos/2132250/pexels-photo-2132250.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+    category: 'Agricultural',
+    icon: Thermometer,
     stats: {
+      size: '75,000 sq ft',
       savings: '70%',
-      payback: '16 months'
-    }
+      payback: '16 months',
+      hashrate: '3 PH/s'
+    },
+    details: [
+      'Climate control',
+      'Humidity management',
+      'Zone control',
+      'Weather integration'
+    ]
   },
   {
     id: 'data-center',
     title: 'Data Center Heat Recovery',
     description: 'Heat recovery system for a major data center, providing district heating.',
     image: 'https://images.pexels.com/photos/325229/pexels-photo-325229.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+    category: 'Industrial',
+    icon: Factory,
     stats: {
+      size: '200,000 sq ft',
       savings: '80%',
-      payback: '12 months'
-    }
+      payback: '12 months',
+      hashrate: '10 PH/s'
+    },
+    details: [
+      'District heating',
+      'Heat exchange network',
+      'Automated controls',
+      'Real-time optimization'
+    ]
   }
 ]
+
+// Take only the first 5 projects for the carousel
+const carouselProjects = projects.slice(0, 5)
 
 const ProjectCarousel = () => {
   const [currentIndex, setCurrentIndex] = useState(0)
 
   useEffect(() => {
     const timer = setInterval(() => {
-      setCurrentIndex((prevIndex) => (prevIndex + 1) % projects.length)
+      setCurrentIndex((prevIndex) => (prevIndex + 1) % carouselProjects.length)
     }, 5000)
 
     return () => clearInterval(timer)
   }, [])
 
   const nextSlide = () => {
-    setCurrentIndex((prevIndex) => (prevIndex + 1) % projects.length)
+    setCurrentIndex((prevIndex) => (prevIndex + 1) % carouselProjects.length)
   }
 
   const prevSlide = () => {
-    setCurrentIndex((prevIndex) => (prevIndex - 1 + projects.length) % projects.length)
+    setCurrentIndex((prevIndex) => (prevIndex - 1 + carouselProjects.length) % carouselProjects.length)
   }
 
   return (
@@ -90,7 +144,7 @@ const ProjectCarousel = () => {
               className="flex transition-transform duration-500 ease-in-out"
               style={{ transform: `translateX(-${currentIndex * 100}%)` }}
             >
-              {projects.map((project) => (
+              {carouselProjects.map((project) => (
                 <div key={project.id} className="w-full flex-shrink-0">
                   <div className="mx-4">
                     <div className="bg-surface-50 dark:bg-surface-700 rounded-lg overflow-hidden shadow-xl">
@@ -110,9 +164,18 @@ const ProjectCarousel = () => {
                         />
                         <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
                         <div className="absolute bottom-0 left-0 right-0 p-6 text-white">
+                          <div className="mb-2">
+                            <span className="bg-primary-600 text-white px-3 py-1 rounded-full text-sm">
+                              {project.category}
+                            </span>
+                          </div>
                           <h3 className="text-2xl font-bold mb-2">{project.title}</h3>
                           <p className="text-lg text-surface-100 mb-4">{project.description}</p>
                           <div className="flex space-x-4">
+                            <div>
+                              <span className="text-surface-200">Size:</span>
+                              <span className="ml-2 font-bold text-secondary-400">{project.stats.size}</span>
+                            </div>
                             <div>
                               <span className="text-surface-200">Savings:</span>
                               <span className="ml-2 font-bold text-secondary-400">{project.stats.savings}</span>
