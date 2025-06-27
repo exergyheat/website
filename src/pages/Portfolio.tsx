@@ -11,7 +11,7 @@ const projects = [
     category: 'Small Business',
     icon: Building,
     stats: {
-      size: '7,000 sq ft',
+      size: '5,850 sq ft',
       savings: '65%',
       payback: '18 months',
       hashrate: '250 TH/s'
