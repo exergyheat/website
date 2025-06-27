@@ -17,7 +17,7 @@ const projects = [
       hashrate: '250 TH/s'
     },
     details: [
-      'Radiant & forced air combination',
+      'Radiant & forced air heating',
       'Custom control system & remote monitoring',
       'Integrated solar array',
       'Redundant natural gas backup'
