@@ -52,7 +52,7 @@ const Education = () => {
       description: "The Under|Mine HeatPunks Summit is over but the movement continues. This event was one for the history books, the amount of signal that came out of this event was palpable. If you missed the event you’re sure to get a good amount of FOMO from this video which highlights the projects and conversations that are coming out of the heat reuse space. Not only is Hashrate Heating decentralizing Bitcoins Hashrate its also helping to secure the network all while providing much needed heat to homes, businesses and some industrial applications. There is a ton of work to be done if we are going to replace dumb electric heating infrastructure with Bitcoin miners, but luckily we have the HeatPunks dedicated to this mission.",
       type: 'video',
       author: "Build a Mine Podcast with Trevor Bello",
-      link: "https://www.youtube.com/watch?v=c-NrYzmPRv8",
+      link: "https://x.com/compass_mining/status/1894359866216477045",
       image: "/AlphaYouMissed.webp",
       date: "April 1, 2025"
     }
