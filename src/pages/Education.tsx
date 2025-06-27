@@ -37,42 +37,6 @@ const Education = () => {
       link: "https://www.youtube.com/watch?v=H4faYFvQYOQ",
       image: "/image.png",
       date: "March 20, 2024"
-    },
-    {
-      title: "Introduction to Hashrate Heating",
-      description: "A comprehensive video overview of hashrate heating technology and its applications. Learn about the fundamental principles behind combining Bitcoin mining with heating systems, and discover how this innovative approach is transforming traditional heating infrastructure into revenue-generating assets.",
-      type: 'video',
-      author: "Bitcoin Magazine",
-      link: "https://www.youtube.com/watch?v=example1",
-      image: "https://images.pexels.com/photos/8293778/pexels-photo-8293778.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-      date: "March 15, 2024"
-    },
-    {
-      title: "The Future of Sustainable Bitcoin Mining",
-      description: "In-depth discussion about heat recycling in Bitcoin mining operations. Explore how the integration of mining and heating systems is creating new opportunities for sustainable energy usage while maximizing the efficiency of Bitcoin mining operations.",
-      type: 'podcast',
-      author: "What Bitcoin Did",
-      link: "https://www.whatbitcoindid.com/podcast/example",
-      image: "https://images.pexels.com/photos/7567473/pexels-photo-7567473.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-      date: "March 10, 2024"
-    },
-    {
-      title: "Implementing Hashrate Heating Systems",
-      description: "Technical guide for implementing hashrate heating in commercial buildings. This comprehensive guide covers everything from initial planning to final implementation, including system design, integration strategies, and optimization techniques.",
-      type: 'blog',
-      author: "Braiins Insights",
-      link: "https://braiins.com/blog/example",
-      image: "https://images.pexels.com/photos/7567620/pexels-photo-7567620.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-      date: "March 5, 2024"
-    },
-    {
-      title: "Heat Recycling in Data Centers",
-      description: "Case study on implementing heat recycling in large-scale data centers. Learn from real-world examples of successful implementations, including challenges faced, solutions developed, and lessons learned throughout the process.",
-      type: 'website',
-      author: "Data Center Dynamics",
-      link: "https://www.datacenterdynamics.com/example",
-      image: "https://images.pexels.com/photos/325229/pexels-photo-325229.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-      date: "March 1, 2024"
     }
   ]
 
