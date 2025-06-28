@@ -1,28 +1,28 @@
-import React, { useState } from 'react'
+import React, { useEffect } from 'react'
 import { Link } from 'react-router-dom'
-import { Mail, MapPin, Send, Calendar } from 'lucide-react'
+import { Mail, MapPin, Calendar } from 'lucide-react'
 
 const Contact = () => {
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    subject: '',
-    message: ''
-  })
+  useEffect(() => {
+    // Check if HubSpot script is already loaded
+    const existingScript = document.querySelector('script[src="https://js-na2.hsforms.net/forms/embed/243159145.js"]')
+    
+    if (!existingScript) {
+      // Create and load the HubSpot script
+      const script = document.createElement('script')
+      script.src = 'https://js-na2.hsforms.net/forms/embed/243159145.js'
+      script.defer = true
+      document.body.appendChild(script)
+    }
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault()
-    // Handle form submission logic here
-    console.log('Form submitted:', formData)
-  }
-
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    const { name, value } = e.target
-    setFormData(prev => ({
-      ...prev,
-      [name]: value
-    }))
-  }
+    // Cleanup function to remove script when component unmounts
+    return () => {
+      const scriptToRemove = document.querySelector('script[src="https://js-na2.hsforms.net/forms/embed/243159145.js"]')
+      if (scriptToRemove) {
+        document.body.removeChild(scriptToRemove)
+      }
+    }
+  }, [])
 
   return (
     <div className="bg-surface-50 dark:bg-surface-900">
@@ -82,78 +82,17 @@ const Contact = () => {
             </div>
           </div>
 
-          {/* Contact Form */}
+          {/* HubSpot Contact Form */}
           <div className="bg-white dark:bg-surface-800 rounded-lg shadow-lg p-8">
             <h2 className="text-2xl font-bold text-surface-900 dark:text-surface-100 mb-6">Send us a Message</h2>
-            <form onSubmit={handleSubmit} className="space-y-6">
-              <div>
-                <label htmlFor="name" className="block text-sm font-medium text-surface-700 dark:text-surface-300">
-                  Name
-                </label>
-                <input
-                  type="text"
-                  id="name"
-                  name="name"
-                  value={formData.name}
-                  onChange={handleChange}
-                  className="mt-1 block w-full rounded-md border-surface-300 dark:border-surface-600 shadow-sm focus:border-primary-500 focus:ring-primary-500 dark:bg-surface-700 dark:text-surface-100"
-                  required
-                />
-              </div>
-
-              <div>
-                <label htmlFor="email" className="block text-sm font-medium text-surface-700 dark:text-surface-300">
-                  Email
-                </label>
-                <input
-                  type="email"
-                  id="email"
-                  name="email"
-                  value={formData.email}
-                  onChange={handleChange}
-                  className="mt-1 block w-full rounded-md border-surface-300 dark:border-surface-600 shadow-sm focus:border-primary-500 focus:ring-primary-500 dark:bg-surface-700 dark:text-surface-100"
-                  required
-                />
-              </div>
-
-              <div>
-                <label htmlFor="subject" className="block text-sm font-medium text-surface-700 dark:text-surface-300">
-                  Subject
-                </label>
-                <input
-                  type="text"
-                  id="subject"
-                  name="subject"
-                  value={formData.subject}
-                  onChange={handleChange}
-                  className="mt-1 block w-full rounded-md border-surface-300 dark:border-surface-600 shadow-sm focus:border-primary-500 focus:ring-primary-500 dark:bg-surface-700 dark:text-surface-100"
-                  required
-                />
-              </div>
-
-              <div>
-                <label htmlFor="message" className="block text-sm font-medium text-surface-700 dark:text-surface-300">
-                  Message
-                </label>
-                <textarea
-                  id="message"
-                  name="message"
-                  value={formData.message}
-                  onChange={handleChange}
-                  rows={4}
-                  className="mt-1 block w-full rounded-md border-surface-300 dark:border-surface-600 shadow-sm focus:border-primary-500 focus:ring-primary-500 dark:bg-surface-700 dark:text-surface-100"
-                  required
-                />
-              </div>
-
-              <button
-                type="submit"
-                className="w-full flex justify-center items-center px-4 py-2 border border-transparent rounded-md shadow-sm text-white bg-primary-600 hover:bg-primary-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-500 dark:focus:ring-offset-surface-800 text-base font-subheading"
-              >
-                Send Message
-                <Send className="ml-2 h-4 w-4" />
-              </button>
-            </form>
+            
+            {/* HubSpot Form Container */}
+            <div 
+              className="hs-form-frame" 
+              data-region="na2" 
+              data-form-id="106749ae-0515-4d1a-925d-edf71b3bfcae" 
+              data-portal-id="243159145"
+            ></div>
           </div>
         </div>
       </div>
