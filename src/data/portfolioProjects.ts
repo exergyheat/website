@@ -46,7 +46,7 @@ export const projects: Project[] = [
     icon: Home,
     stats: {
       size: '2,700 sq ft',
-      savings: '58%',
+      savings: '112%',
       payback: '24 months',
       hashrate: '200 TH/s'
     },
