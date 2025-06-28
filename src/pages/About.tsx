@@ -1,18 +1,10 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import { Book, Users, Award, Cpu, Flame, Bitcoin, ArrowRight, Target, Lightbulb, FileText, BarChart as ChartBar, Wrench, CheckCircle2, Mail, X, Zap, Network, Package, Monitor, BookOpen, Megaphone, Hammer, Calendar } from 'lucide-react'
 import { Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
 
 const About = () => {
   const [expandedStep, setExpandedStep] = useState<string | null>(null)
-  const [email, setEmail] = useState('')
-  const [submitted, setSubmitted] = useState(false)
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault()
-    setSubmitted(true)
-    setEmail('')
-  }
 
   const missionPoints = [
     {
@@ -370,6 +362,39 @@ const About = () => {
       ]
     }
   ]
+
+  // HubSpot form loading effect
+  useEffect(() => {
+    // Check if HubSpot script is already loaded
+    const existingScript = document.querySelector('script[src="//js-na2.hsforms.net/forms/embed/v2.js"]')
+    
+    if (!existingScript) {
+      // Create and load the HubSpot script
+      const script = document.createElement('script')
+      script.charset = 'utf-8'
+      script.type = 'text/javascript'
+      script.src = '//js-na2.hsforms.net/forms/embed/v2.js'
+      document.head.appendChild(script)
+
+      // Initialize the form once the script loads
+      script.onload = () => {
+        if (window.hbspt) {
+          window.hbspt.forms.create({
+            portalId: "243159145",
+            formId: "59b79a45-8fe7-43f2-8b1c-75961746a63e",
+            region: "na2"
+          })
+        }
+      }
+    } else if (window.hbspt) {
+      // If script already exists and hbspt is available, just create the form
+      window.hbspt.forms.create({
+        portalId: "243159145",
+        formId: "59b79a45-8fe7-43f2-8b1c-75961746a63e",
+        region: "na2"
+      })
+    }
+  }, [])
 
   return (
     <div className="bg-surface-50 dark:bg-surface-900">
@@ -766,38 +791,34 @@ const About = () => {
             Be part of the revolution in heating technology. Stay informed about our latest developments, products, and opportunities.
           </p>
           
-          {submitted ? (
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 text-white">
-              <h3 className="text-xl font-semibold mb-2">Welcome to the Movement!</h3>
-              <p>We'll keep you updated on important announcements and developments.</p>
-            </div>
-          ) : (
-            <form onSubmit={handleSubmit} className="max-w-md mx-auto">
-              <div className="flex gap-4">
-                <input
-                  type="email"
-                  value={email}
-                  onChange={(e) => setEmail(e.target.value)}
-                  placeholder="Enter your email"
-                  className="flex-1 px-4 py-3 rounded-lg bg-white/10 backdrop-blur-sm border border-white/20 text-white placeholder-white/60 focus:outline-none focus:ring-2 focus:ring-white/40"
-                  required
-                />
-                <button
-                  type="submit"
-                  className="px-6 py-3 bg-white text-primary-600 rounded-lg font-semibold hover:bg-white/90 transition-colors text-base font-subheading"
-                >
-                  Join Us
-                </button>
-              </div>
-              <p className="mt-4 text-sm text-white/90">
-                We respect your privacy. No spam, just important updates.
-              </p>
-            </form>
-          )}
+          {/* HubSpot Form Container */}
+          <div id="hubspot-form-container" className="max-w-md mx-auto">
+            {/* The HubSpot form will be injected here */}
+          </div>
+          
+          <p className="mt-4 text-sm text-white/90">
+            We respect your privacy. No spam, just important updates.
+          </p>
         </div>
       </div>
     </div>
   )
+}
+
+// Add HubSpot types to window object
+declare global {
+  interface Window {
+    hbspt: {
+      forms: {
+        create: (config: {
+          portalId: string
+          formId: string
+          region: string
+          target?: string
+        }) => void
+      }
+    }
+  }
 }
 
 export default About
