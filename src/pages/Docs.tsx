@@ -21,7 +21,6 @@ const Docs = () => {
       children: [
         { id: 'terms-of-service', title: 'Terms of Service' },
         { id: 'service-agreement', title: 'Service Agreement' },
-        { id: 'privacy-policy', title: 'Privacy Policy' }
       ]
     },
     {
