@@ -64,7 +64,7 @@ const ProjectCarousel = () => {
                           </div>
                           <h3 className="text-2xl font-bold mb-2">{project.title}</h3>
                           <p className="text-lg text-surface-100 mb-4">{project.description}</p>
-                          <div className="flex space-x-4">
+                          <div className="flex flex-col sm:flex-row sm:space-x-4 space-y-2 sm:space-y-0">
                             <div>
                               <span className="text-surface-200">Size:</span>
                               <span className="ml-2 font-bold text-secondary-400">{project.stats.size}</span>
