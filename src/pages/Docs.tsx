@@ -77,7 +77,7 @@ const Docs = () => {
       content: (
         <div className="space-y-8">
           <div>
-            <h3 className="text-xl font-semibold text-surface-900 dark:text-surface-100 mb-4">1. Acceptance of Terms</h3>
+            <h3 className="text-xl font-semibold text-surface-900 dark:text-surface-100 mb-4">TOS Coming Soon.</h3>
             <p className="text-surface-600 dark:text-surface-400 mb-4">
               By accessing and using EXERGY's services, you accept and agree to be bound by the terms and provision of this agreement. 
               If you do not agree to abide by the above, please do not use this service.
