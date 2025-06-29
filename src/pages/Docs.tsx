@@ -121,7 +121,7 @@ const Docs = () => {
           <div>
             <h3 className="text-xl font-semibold text-surface-900 dark:text-surface-100 mb-4">Revenue Sharing Model</h3>
             <p className="text-surface-600 dark:text-surface-400 mb-4">
-              EXERGY's hashrate revenue sharing is designed to maximize customer returns while ensuring sustainable operations.
+              Coming Soon.
             </p>
           </div>
 
