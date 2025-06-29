@@ -83,18 +83,6 @@ const Docs = () => {
               hashrate heating solutions and related services.
             </p>
           </div>
-
-
-     
-
-          <div>
-            <h3 className="text-xl font-semibold text-surface-900 dark:text-surface-100 mb-4">5. Limitation of Liability</h3>
-            <p className="text-surface-600 dark:text-surface-400">
-              EXERGY's liability is limited to the amount paid for services. We are not liable for indirect, incidental, 
-              or consequential damages including but not limited to lost profits, business interruption, or cryptocurrency 
-              market fluctuations.
-            </p>
-          </div>
         </div>
       )
     },
