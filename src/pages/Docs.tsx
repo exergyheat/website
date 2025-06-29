@@ -110,22 +110,7 @@ const Docs = () => {
               Coming Soon.
             </p>
           </div>
-
-          <div>
-            <h3 className="text-xl font-semibold text-surface-900 dark:text-surface-100 mb-4">Scope of Work</h3>
-            <div className="bg-surface-50 dark:bg-surface-700 p-6 rounded-lg">
-              <h4 className="font-semibold text-surface-900 dark:text-surface-100 mb-4">Deliverables Include:</h4>
-              <ul className="list-disc pl-6 text-surface-600 dark:text-surface-400 space-y-2">
-                <li>Comprehensive heating load analysis</li>
-                <li>Energy consumption assessment</li>
-                <li>Cost-benefit analysis</li>
-                <li>System design recommendations</li>
-                <li>ROI projections and payback calculations</li>
-                <li>Implementation timeline</li>
-                <li>One-hour consultation call</li>
-              </ul>
-            </div>
-          </div>
+        </div>
 
           <div>
             <h3 className="text-xl font-semibold text-surface-900 dark:text-surface-100 mb-4">Pricing Structure</h3>
