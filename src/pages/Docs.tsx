@@ -84,43 +84,7 @@ const Docs = () => {
             </p>
           </div>
 
-          <div>
-            <h3 className="text-xl font-semibold text-surface-900 dark:text-surface-100 mb-4">2. Service Description</h3>
-            <p className="text-surface-600 dark:text-surface-400 mb-4">
-              EXERGY provides hashrate heating solutions that combine cryptocurrency mining with heating systems. Our services include:
-            </p>
-            <ul className="list-disc pl-6 text-surface-600 dark:text-surface-400 space-y-2">
-              <li>Heat audit analysis and system design</li>
-              <li>Hardware procurement and installation</li>
-              <li>System monitoring and maintenance</li>
-              <li>Technical consulting and support</li>
-            </ul>
-          </div>
 
-          <div>
-            <h3 className="text-xl font-semibold text-surface-900 dark:text-surface-100 mb-4">3. User Responsibilities</h3>
-            <p className="text-surface-600 dark:text-surface-400 mb-4">
-              As a user of our services, you agree to:
-            </p>
-            <ul className="list-disc pl-6 text-surface-600 dark:text-surface-400 space-y-2">
-              <li>Provide accurate and complete information during the consultation process</li>
-              <li>Maintain adequate electrical infrastructure for system operation</li>
-              <li>Allow reasonable access for installation and maintenance</li>
-              <li>Comply with all local regulations regarding cryptocurrency mining</li>
-            </ul>
-          </div>
-
-          <div>
-            <h3 className="text-xl font-semibold text-surface-900 dark:text-surface-100 mb-4">4. Payment Terms</h3>
-            <p className="text-surface-600 dark:text-surface-400 mb-4">
-              Payment terms vary by service type. Generally:
-            </p>
-            <ul className="list-disc pl-6 text-surface-600 dark:text-surface-400 space-y-2">
-              <li>Heat audits require full payment upon completion</li>
-              <li>System upgrades require a deposit with balance due upon completion</li>
-              <li>Monitoring services are billed monthly in advance</li>
-              <li>All payments are due within 30 days of invoice date</li>
-            </ul>
           </div>
 
           <div>
