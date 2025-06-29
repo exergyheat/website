@@ -167,8 +167,6 @@ const Services = () => {
       ],
       icon: Activity,
       image: "remote_monitoring.png",
-      exampleImage: "remote_monitoring.png",
-      exampleTitle: "Remote Monitoring Dashboard Example",
       details: {
         monitoring: [
           "Real-time performance tracking",
