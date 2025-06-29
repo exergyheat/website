@@ -392,7 +392,7 @@ const Learn = () => {
             See it in Action
           </h2>
           <p className="text-xl text-white/90 mb-8">
-            Explore real-world implementations of hashrate heating technology across various applications.
+            Explore real-world implementations of hashrate heating technology.
           </p>
           
           <Link
