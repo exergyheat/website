@@ -91,27 +91,50 @@ const Home = () => {
 
       {/* Hashrate Heating Summary Section */}
       <div className="py-20 bg-white dark:bg-surface-800">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8, ease: "easeOut" }}
-          >
-            {/* Title in Blue Box */}
-            <div className="inline-block bg-gradient-to-r from-[#4970A5] to-[#718EBC] px-8 py-4 rounded-2xl mb-8 shadow-lg">
-              <h2 className="text-4xl md:text-5xl font-heading text-white">
-                Hashrate Heating Experts
-              </h2>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex flex-col md:flex-row items-center justify-between gap-8">
+            {/* Content Section */}
+            <div className="flex-1 text-center md:text-left">
+              <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.8, ease: "easeOut" }}
+              >
+                {/* Title in Blue Box */}
+                <div className="inline-block bg-gradient-to-r from-[#4970A5] to-[#718EBC] px-8 py-4 rounded-2xl mb-8 shadow-lg">
+                  <h2 className="text-4xl md:text-5xl font-heading text-white">
+                    Hashrate Heating Experts
+                  </h2>
+                </div>
+                
+                <p className="text-xl md:text-2xl font-body text-surface-900 dark:text-surface-100 mb-6 max-w-4xl">
+                  Hashrate heaters generate heat and money, at the same time - at no extra cost
+                </p>
+                <p className="text-lg md:text-xl font-body text-surface-600 dark:text-surface-400 max-w-5xl leading-relaxed">
+                  Heat your home or business as usual while offsetting utility costs with daily earnings. Or pocket the revenue for long term savings.
+                </p>
+              </motion.div>
             </div>
-            
-            <p className="text-xl md:text-2xl font-body text-surface-900 dark:text-surface-100 mb-6 max-w-4xl mx-auto">
-              Hashrate heaters generate heat and money, at the same time - at no extra cost
-            </p>
-            <p className="text-lg md:text-xl font-body text-surface-600 dark:text-surface-400 max-w-5xl mx-auto leading-relaxed">
-              Heat your home or business as usual while offsetting utility costs with daily earnings. Or pocket the revenue for long term savings.
-            </p>
-          </motion.div>
+
+            {/* Buttons Section */}
+            <div className="flex flex-col gap-4 min-w-fit">
+              <Link
+                to="/products"
+                className="inline-flex items-center px-6 py-3 bg-primary-500 text-white rounded-lg hover:bg-primary-600 transition-colors text-base font-subheading"
+              >
+                Our Products
+                <ArrowRight className="ml-2 h-5 w-5" />
+              </Link>
+              <Link
+                to="/services"
+                className="inline-flex items-center px-6 py-3 bg-primary-500 text-white rounded-lg hover:bg-primary-600 transition-colors text-base font-subheading"
+              >
+                Our Services
+                <ArrowRight className="ml-2 h-5 w-5" />
+              </Link>
+            </div>
+          </div>
         </div>
       </div>
 
