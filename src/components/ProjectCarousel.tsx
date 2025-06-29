@@ -45,7 +45,7 @@ const ProjectCarousel = () => {
                 <div key={project.id} className="w-full flex-shrink-0">
                   <div className="mx-4">
                     <div className="bg-surface-50 dark:bg-surface-700 rounded-lg overflow-hidden shadow-xl">
-                      <div className="relative h-96">
+                      <div className="relative h-[450px] md:h-96">
                         <img
                           src={project.image}
                           alt={project.title}
