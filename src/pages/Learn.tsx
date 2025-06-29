@@ -397,7 +397,7 @@ const Learn = () => {
           
           <Link
             to="/portfolio"
-            className="inline-flex items-center px-8 py-4 bg-white text-primary-600 rounded-lg font-semibold hover:bg-white/90 transition-colors"
+            className="inline-flex items-center px-8 py-4 bg-white text-primary-600 rounded-lg hover:bg-white/90 transition-colors text-base font-subheading"
           >
             View Project Portfolio
             <Eye className="ml-2 h-5 w-5" />
