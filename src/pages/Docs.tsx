@@ -111,30 +111,6 @@ const Docs = () => {
             </p>
           </div>
         </div>
-
-          <div>
-            <h3 className="text-xl font-semibold text-surface-900 dark:text-surface-100 mb-4">Pricing Structure</h3>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <div className="bg-surface-50 dark:bg-surface-700 p-6 rounded-lg">
-                <h4 className="font-semibold text-surface-900 dark:text-surface-100 mb-2">Existing Buildings</h4>
-                <p className="text-2xl font-bold text-primary-500 dark:text-primary-400 mb-2">$400</p>
-                <p className="text-surface-600 dark:text-surface-400">For buildings with existing heating systems</p>
-              </div>
-              <div className="bg-surface-50 dark:bg-surface-700 p-6 rounded-lg">
-                <h4 className="font-semibold text-surface-900 dark:text-surface-100 mb-2">New Construction</h4>
-                <p className="text-2xl font-bold text-primary-500 dark:text-primary-400 mb-2">$600</p>
-                <p className="text-surface-600 dark:text-surface-400">For new builds and major renovations</p>
-              </div>
-            </div>
-          </div>
-
-          <div>
-            <h3 className="text-xl font-semibold text-surface-900 dark:text-surface-100 mb-4">Timeline</h3>
-            <p className="text-surface-600 dark:text-surface-400 mb-4">
-              Heat audit reports are typically delivered within 5-7 business days of receiving all required information.
-            </p>
-          </div>
-        </div>
       )
     },
     'hashrate-splits': {
