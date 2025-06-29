@@ -77,7 +77,7 @@ const Docs = () => {
       content: (
         <div className="space-y-8">
           <div>
-            <h3 className="text-xl font-semibold text-surface-900 dark:text-surface-100 mb-4">TOS Coming Soon.</h3>
+            <h3 className="text-xl font-semibold text-surface-900 dark:text-surface-100 mb-4">TOS Coming Soon</h3>
             <p className="text-surface-600 dark:text-surface-400">
               These Terms of Service constitute a legally binding agreement between you and EXERGY regarding your use of our 
               hashrate heating solutions and related services.
@@ -92,34 +92,10 @@ const Docs = () => {
       content: (
         <div className="space-y-8">
           <div>
-            <h3 className="text-xl font-semibold text-surface-900 dark:text-surface-100 mb-4">Service Level Agreement</h3>
+            <h3 className="text-xl font-semibold text-surface-900 dark:text-surface-100 mb-4">Service Level Agreement Coming Soon</h3>
             <p className="text-surface-600 dark:text-surface-400 mb-4">
               This Service Agreement outlines the specific terms and conditions for EXERGY's hashrate heating services.
             </p>
-          </div>
-
-          <div>
-            <h3 className="text-xl font-semibold text-surface-900 dark:text-surface-100 mb-4">Performance Standards</h3>
-            <div className="bg-surface-50 dark:bg-surface-700 p-6 rounded-lg">
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <div>
-                  <h4 className="font-semibold text-surface-900 dark:text-surface-100 mb-2">System Uptime</h4>
-                  <p className="text-surface-600 dark:text-surface-400">99.5% monthly uptime guarantee</p>
-                </div>
-                <div>
-                  <h4 className="font-semibold text-surface-900 dark:text-surface-100 mb-2">Response Time</h4>
-                  <p className="text-surface-600 dark:text-surface-400">4-hour response for critical issues</p>
-                </div>
-                <div>
-                  <h4 className="font-semibold text-surface-900 dark:text-surface-100 mb-2">Heat Delivery</h4>
-                  <p className="text-surface-600 dark:text-surface-400">Guaranteed heat output as specified</p>
-                </div>
-                <div>
-                  <h4 className="font-semibold text-surface-900 dark:text-surface-100 mb-2">Mining Performance</h4>
-                  <p className="text-surface-600 dark:text-surface-400">95% of rated hashrate minimum</p>
-                </div>
-              </div>
-            </div>
           </div>
 
           <div>
