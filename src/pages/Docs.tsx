@@ -97,19 +97,6 @@ const Docs = () => {
               This Service Agreement outlines the specific terms and conditions for EXERGY's hashrate heating services.
             </p>
           </div>
-
-          <div>
-            <h3 className="text-xl font-semibold text-surface-900 dark:text-surface-100 mb-4">Service Scope</h3>
-            <p className="text-surface-600 dark:text-surface-400 mb-4">Our comprehensive service includes:</p>
-            <ul className="list-disc pl-6 text-surface-600 dark:text-surface-400 space-y-2">
-              <li>Initial system design and engineering</li>
-              <li>Hardware procurement and installation</li>
-              <li>System commissioning and testing</li>
-              <li>Ongoing monitoring and maintenance</li>
-              <li>Performance optimization</li>
-              <li>Technical support and troubleshooting</li>
-            </ul>
-          </div>
         </div>
       )
     },
