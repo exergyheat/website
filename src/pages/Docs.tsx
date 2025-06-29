@@ -85,7 +85,7 @@ const Docs = () => {
           </div>
 
 
-          </div>
+     
 
           <div>
             <h3 className="text-xl font-semibold text-surface-900 dark:text-surface-100 mb-4">5. Limitation of Liability</h3>
