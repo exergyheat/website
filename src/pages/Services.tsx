@@ -1,12 +1,12 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
-import { ArrowRight, FileText, Wrench, Activity, Users, ChevronDown, ChevronUp, X, Search, Cog, Monitor } from 'lucide-react'
+import { ArrowRight, FileText, Wrench, Activity, Users, ChevronDown, ChevronUp, X, Search, Cog, Monitor, ChevronLeft, ChevronRight } from 'lucide-react'
 
 const Services = () => {
   const [expandedService, setExpandedService] = useState<string | null>(null)
   const [buildType, setBuildType] = useState<'residential' | 'commercial'>('residential')
   const [designType, setDesignType] = useState<'residential' | 'commercial'>('residential')
-  const [imageViewer, setImageViewer] = useState<{src: string, title: string} | null>(null)
+  const [imageViewer, setImageViewer] = useState<{images: string[], titles: string[], currentIndex: number} | null>(null)
   const [flippedCard, setFlippedCard] = useState<string | null>(null)
 
   const scrollToSection = (sectionId: string) => {
@@ -60,8 +60,16 @@ const Services = () => {
     ],
     icon: FileText,
     image: "heating_subsidy.png",
-    exampleImage: "heating_subsidy.png",
-    exampleTitle: "Heat Audit Analysis Example",
+    exampleImages: [
+      "TheSpace_ExergyHeatAudit_pg1.png",
+      "TheSpace_ExergyHeatAudit_pg2.png", 
+      "TheSpace_ExergyHeatAudit_pg3.png"
+    ],
+    exampleTitles: [
+      "Heat Audit Report - Page 1",
+      "Heat Audit Report - Page 2", 
+      "Heat Audit Report - Page 3"
+    ],
     details: {
       inputs: type === 'residential' ? [
         "Current heating bills or home dimensions",
@@ -210,12 +218,47 @@ const Services = () => {
     }
   ]
 
-  const openImageViewer = (imagePath: string, title: string) => {
-    setImageViewer({ src: imagePath, title })
+  const openImageViewer = (images: string | string[], titles: string | string[]) => {
+    if (Array.isArray(images) && Array.isArray(titles)) {
+      setImageViewer({ images, titles, currentIndex: 0 })
+    } else {
+      setImageViewer({ 
+        images: [images as string], 
+        titles: [titles as string], 
+        currentIndex: 0 
+      })
+    }
   }
 
   const closeImageViewer = () => {
     setImageViewer(null)
+  }
+
+  const nextImage = () => {
+    if (imageViewer && imageViewer.currentIndex < imageViewer.images.length - 1) {
+      setImageViewer({
+        ...imageViewer,
+        currentIndex: imageViewer.currentIndex + 1
+      })
+    }
+  }
+
+  const prevImage = () => {
+    if (imageViewer && imageViewer.currentIndex > 0) {
+      setImageViewer({
+        ...imageViewer,
+        currentIndex: imageViewer.currentIndex - 1
+      })
+    }
+  }
+
+  const goToImage = (index: number) => {
+    if (imageViewer) {
+      setImageViewer({
+        ...imageViewer,
+        currentIndex: index
+      })
+    }
   }
 
   return (
@@ -448,13 +491,13 @@ const Services = () => {
                     )}
                   </div>
 
-                  <div className={`${service.exampleImage ? 'flex gap-4' : ''} pt-6 border-t border-surface-200 dark:border-surface-700`}>
+                  <div className={`${(service.exampleImage || service.exampleImages) ? 'flex gap-4' : ''} pt-6 border-t border-surface-200 dark:border-surface-700`}>
                     {service.buttonLink.startsWith('http') ? (
                       <a
                         href={service.buttonLink}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className={`${service.exampleImage ? 'flex-1' : 'w-full'} inline-flex items-center justify-center px-6 py-3 bg-primary-600 text-white rounded-lg hover:bg-primary-700 transition-colors text-base font-subheading`}
+                        className={`${(service.exampleImage || service.exampleImages) ? 'flex-1' : 'w-full'} inline-flex items-center justify-center px-6 py-3 bg-primary-600 text-white rounded-lg hover:bg-primary-700 transition-colors text-base font-subheading`}
                       >
                         {service.buttonText}
                         <ArrowRight className="ml-2 h-5 w-5" />
@@ -462,15 +505,21 @@ const Services = () => {
                     ) : (
                       <Link
                         to={service.buttonLink}
-                        className={`${service.exampleImage ? 'flex-1' : 'w-full'} inline-flex items-center justify-center px-6 py-3 bg-primary-600 text-white rounded-lg hover:bg-primary-700 transition-colors text-base font-subheading`}
+                        className={`${(service.exampleImage || service.exampleImages) ? 'flex-1' : 'w-full'} inline-flex items-center justify-center px-6 py-3 bg-primary-600 text-white rounded-lg hover:bg-primary-700 transition-colors text-base font-subheading`}
                       >
                         {service.buttonText}
                         <ArrowRight className="ml-2 h-5 w-5" />
                       </Link>
                     )}
-                    {service.exampleImage && (
+                    {(service.exampleImage || service.exampleImages) && (
                       <button
-                        onClick={() => openImageViewer(service.exampleImage, service.exampleTitle)}
+                        onClick={() => {
+                          if (service.exampleImages && service.exampleTitles) {
+                            openImageViewer(service.exampleImages, service.exampleTitles)
+                          } else if (service.exampleImage && service.exampleTitle) {
+                            openImageViewer(service.exampleImage, service.exampleTitle)
+                          }
+                        }}
                         className="px-6 py-3 bg-surface-100 dark:bg-surface-700 text-surface-900 dark:text-surface-100 rounded-lg hover:bg-surface-200 dark:hover:bg-surface-600 transition-colors text-base font-subheading"
                       >
                         Example
@@ -484,7 +533,7 @@ const Services = () => {
         </div>
       </div>
 
-      {/* Simple Image Viewer Modal */}
+      {/* Enhanced Image Viewer Modal with Carousel */}
       {imageViewer && (
         <div className="fixed inset-0 z-50 overflow-hidden">
           <div className="flex items-center justify-center min-h-screen px-4 pt-4 pb-20 text-center sm:block sm:p-0">
@@ -500,9 +549,16 @@ const Services = () => {
               <div className="bg-white dark:bg-surface-900 px-4 pt-5 pb-4 sm:p-6">
                 {/* Header */}
                 <div className="flex justify-between items-center mb-4">
-                  <h3 className="text-2xl font-bold text-surface-900 dark:text-surface-100">
-                    {imageViewer.title}
-                  </h3>
+                  <div>
+                    <h3 className="text-2xl font-bold text-surface-900 dark:text-surface-100">
+                      {imageViewer.titles[imageViewer.currentIndex]}
+                    </h3>
+                    {imageViewer.images.length > 1 && (
+                      <p className="text-sm text-surface-500 dark:text-surface-400 mt-1">
+                        {imageViewer.currentIndex + 1} of {imageViewer.images.length}
+                      </p>
+                    )}
+                  </div>
                   <button
                     onClick={closeImageViewer}
                     className="text-surface-500 hover:text-surface-700 dark:text-surface-400 dark:hover:text-surface-200 p-2 rounded-lg hover:bg-surface-100 dark:hover:bg-surface-800 transition-colors"
@@ -511,19 +567,60 @@ const Services = () => {
                   </button>
                 </div>
                 
-                {/* Image Container - ensures full image is visible */}
-                <div className="flex justify-center bg-surface-50 dark:bg-surface-800 rounded-lg p-4">
+                {/* Image Container with Navigation */}
+                <div className="relative flex justify-center bg-surface-50 dark:bg-surface-800 rounded-lg p-4">
+                  {/* Previous Button */}
+                  {imageViewer.images.length > 1 && imageViewer.currentIndex > 0 && (
+                    <button
+                      onClick={prevImage}
+                      className="absolute left-4 top-1/2 transform -translate-y-1/2 z-10 bg-white dark:bg-surface-700 p-2 rounded-full shadow-lg hover:bg-surface-100 dark:hover:bg-surface-600 transition-colors"
+                    >
+                      <ChevronLeft className="h-6 w-6 text-surface-900 dark:text-surface-100" />
+                    </button>
+                  )}
+
+                  {/* Image */}
                   <img
-                    src={imageViewer.src}
-                    alt={imageViewer.title}
+                    src={imageViewer.images[imageViewer.currentIndex]}
+                    alt={imageViewer.titles[imageViewer.currentIndex]}
                     className="max-w-full max-h-[80vh] object-contain rounded-lg shadow-lg"
                   />
+
+                  {/* Next Button */}
+                  {imageViewer.images.length > 1 && imageViewer.currentIndex < imageViewer.images.length - 1 && (
+                    <button
+                      onClick={nextImage}
+                      className="absolute right-4 top-1/2 transform -translate-y-1/2 z-10 bg-white dark:bg-surface-700 p-2 rounded-full shadow-lg hover:bg-surface-100 dark:hover:bg-surface-600 transition-colors"
+                    >
+                      <ChevronRight className="h-6 w-6 text-surface-900 dark:text-surface-100" />
+                    </button>
+                  )}
                 </div>
+
+                {/* Image Dots Navigation */}
+                {imageViewer.images.length > 1 && (
+                  <div className="flex justify-center mt-4 space-x-2">
+                    {imageViewer.images.map((_, index) => (
+                      <button
+                        key={index}
+                        onClick={() => goToImage(index)}
+                        className={`w-3 h-3 rounded-full transition-colors ${
+                          index === imageViewer.currentIndex
+                            ? 'bg-primary-600'
+                            : 'bg-surface-300 dark:bg-surface-600 hover:bg-surface-400 dark:hover:bg-surface-500'
+                        }`}
+                      />
+                    ))}
+                  </div>
+                )}
                 
                 {/* Instructions */}
                 <div className="text-center mt-4">
                   <p className="text-sm text-surface-500 dark:text-surface-400">
-                    Click outside or press X to close
+                    {imageViewer.images.length > 1 
+                      ? 'Use arrow buttons or dots to navigate • Click outside or press X to close'
+                      : 'Click outside or press X to close'
+                    }
                   </p>
                 </div>
               </div>
