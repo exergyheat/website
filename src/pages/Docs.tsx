@@ -124,51 +124,6 @@ const Docs = () => {
               Coming Soon.
             </p>
           </div>
-
-          <div>
-            <h3 className="text-xl font-semibold text-surface-900 dark:text-surface-100 mb-4">Standard Revenue Split</h3>
-            <div className="bg-surface-50 dark:bg-surface-700 p-6 rounded-lg">
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
-                <div>
-                  <p className="text-3xl font-bold text-primary-500 dark:text-primary-400 mb-2">85%</p>
-                  <p className="text-surface-900 dark:text-surface-100 font-semibold">Customer Share</p>
-                  <p className="text-surface-600 dark:text-surface-400">Mining rewards to customer</p>
-                </div>
-                <div>
-                  <p className="text-3xl font-bold text-surface-600 dark:text-surface-400 mb-2">10%</p>
-                  <p className="text-surface-900 dark:text-surface-100 font-semibold">EXERGY Fee</p>
-                  <p className="text-surface-600 dark:text-surface-400">Service and maintenance</p>
-                </div>
-                <div>
-                  <p className="text-3xl font-bold text-surface-600 dark:text-surface-400 mb-2">5%</p>
-                  <p className="text-surface-900 dark:text-surface-100 font-semibold">Pool Fees</p>
-                  <p className="text-surface-600 dark:text-surface-400">Mining pool charges</p>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div>
-            <h3 className="text-xl font-semibold text-surface-900 dark:text-surface-100 mb-4">Payout Schedule</h3>
-            <ul className="list-disc pl-6 text-surface-600 dark:text-surface-400 space-y-2">
-              <li>Monthly payouts for amounts over $100</li>
-              <li>Quarterly payouts for amounts under $100</li>
-              <li>Payouts made in Bitcoin or USD (customer choice)</li>
-              <li>Detailed mining reports provided monthly</li>
-            </ul>
-          </div>
-
-          <div>
-            <h3 className="text-xl font-semibold text-surface-900 dark:text-surface-100 mb-4">Performance Guarantees</h3>
-            <p className="text-surface-600 dark:text-surface-400 mb-4">
-              We guarantee minimum performance levels:
-            </p>
-            <ul className="list-disc pl-6 text-surface-600 dark:text-surface-400 space-y-2">
-              <li>95% of rated hashrate performance</li>
-              <li>99% system uptime (excluding scheduled maintenance)</li>
-              <li>Compensation for underperformance</li>
-            </ul>
-          </div>
         </div>
       )
     }
