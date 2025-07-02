@@ -40,7 +40,8 @@ const Home = () => {
       <div 
         className="relative bg-cover bg-center h-[600px]" 
         style={{ 
-          backgroundImage: "url('/StockBackgroundHome_Tinted.png')"
+          backgroundImage: "url('/StockBackgroundHome_Tinted.png')",
+          backgroundBlendMode: 'overlay',
         }}
       >
         <div className="absolute inset-0 flex items-center">
