@@ -177,7 +177,7 @@ const Home = () => {
                     Bitcoin Miners Pay You for Contributing
                   </h3>
                   <p className="mt-2 text-base font-body text-surface-500 dark:text-surface-400">
-                    Mininers perform "hashing" (math) operations to settle bitcoin transactions and issue coins. Earnings are automated, and the energy used to run is all turned into heat.
+                    Miners perform "hashing" (math) operations to settle bitcoin transactions and issue coins. Earnings are automated, and the energy used to run is all turned into heat.
                   </p>
                 </div>
               </div>
