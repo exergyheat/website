@@ -3,6 +3,7 @@ import { ArrowRight, Wrench, Cpu, Bitcoin, Flame, DollarSign, Zap, Calculator } 
 import { Link } from 'react-router-dom'
 import { useTypewriter } from '../hooks/useTypewriter'
 import ProjectCarousel from '../components/ProjectCarousel'
+import MediaHighlights from '../components/MediaHighlights'
 import { motion } from 'framer-motion'
 
 const Home = () => {
@@ -137,6 +138,9 @@ const Home = () => {
           </div>
         </div>
       </div>
+
+      {/* Media Highlights Section */}
+      <MediaHighlights />
 
       {/* Too Good to Be True Section */}
       <div className="py-20 bg-surface-50 dark:bg-surface-900">

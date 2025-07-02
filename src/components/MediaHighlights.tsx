@@ -1,0 +1,50 @@
+import React from 'react'
+import { mediaHighlights } from '../data/mediaHighlights'
+
+const MediaHighlights = () => {
+  // Duplicate the array to create seamless infinite scroll
+  const duplicatedHighlights = [...mediaHighlights, ...mediaHighlights]
+
+  return (
+    <div className="py-16 bg-surface-50 dark:bg-surface-900">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="text-center mb-12">
+          <h2 className="text-3xl font-heading text-surface-900 dark:text-surface-100 mb-4">
+            Featured In
+          </h2>
+          <p className="text-xl font-body text-surface-600 dark:text-surface-400 max-w-2xl mx-auto">
+            Our expertise in hashrate heating has been recognized by leading media outlets
+          </p>
+        </div>
+
+        {/* Scrolling Media Logos */}
+        <div className="relative overflow-hidden">
+          <div className="flex animate-scroll-infinite">
+            {duplicatedHighlights.map((highlight, index) => (
+              <a
+                key={`${highlight.id}-${index}`}
+                href={highlight.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex-shrink-0 mx-8 transition-all duration-300 hover:scale-110 group"
+                title={highlight.description}
+              >
+                <img
+                  src={highlight.logo}
+                  alt={highlight.name}
+                  className="h-16 w-auto object-contain filter grayscale group-hover:grayscale-0 transition-all duration-300 opacity-70 group-hover:opacity-100"
+                />
+              </a>
+            ))}
+          </div>
+        </div>
+
+        {/* Gradient overlays for smooth edges */}
+        <div className="absolute left-0 top-0 bottom-0 w-20 bg-gradient-to-r from-surface-50 dark:from-surface-900 to-transparent pointer-events-none"></div>
+        <div className="absolute right-0 top-0 bottom-0 w-20 bg-gradient-to-l from-surface-50 dark:from-surface-900 to-transparent pointer-events-none"></div>
+      </div>
+    </div>
+  )
+}
+
+export default MediaHighlights
