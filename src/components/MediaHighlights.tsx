@@ -19,6 +19,10 @@ const MediaHighlights = () => {
 
         {/* Scrolling Media Logos */}
         <div className="relative overflow-hidden">
+          {/* Gradient overlays for smooth edges */}
+          <div className="absolute left-0 top-0 bottom-0 w-20 bg-gradient-to-r from-surface-50 dark:from-surface-900 to-transparent pointer-events-none z-10"></div>
+          <div className="absolute right-0 top-0 bottom-0 w-20 bg-gradient-to-l from-surface-50 dark:from-surface-900 to-transparent pointer-events-none z-10"></div>
+          
           <div className="flex animate-scroll-infinite">
             {duplicatedHighlights.map((highlight, index) => (
               <a
@@ -38,10 +42,6 @@ const MediaHighlights = () => {
             ))}
           </div>
         </div>
-
-        {/* Gradient overlays for smooth edges */}
-        <div className="absolute left-0 top-0 bottom-0 w-20 bg-gradient-to-r from-surface-50 dark:from-surface-900 to-transparent pointer-events-none"></div>
-        <div className="absolute right-0 top-0 bottom-0 w-20 bg-gradient-to-l from-surface-50 dark:from-surface-900 to-transparent pointer-events-none"></div>
       </div>
     </div>
   )
