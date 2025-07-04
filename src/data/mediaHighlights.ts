@@ -10,22 +10,22 @@ export const mediaHighlights: MediaHighlight[] = [
   {
     id: 'forbes',
     name: 'Forbes',
-    logo: 'https://logos-world.net/wp-content/uploads/2020/10/Forbes-Logo.png',
-    link: '#', // Placeholder - you can update this later
+    logo: '/Forbes_logo.png',
+    link: 'https://www.forbes.com/sites/beccabratcher/2025/03/25/bitcoin-miners-hit-breaking-point-one-year-after-halving/',
     description: 'Featured in Forbes for bitcoin mining innovation'
   },
   {
     id: 'ny-post',
     name: 'New York Post',
-    logo: 'https://logos-world.net/wp-content/uploads/2020/11/New-York-Post-Logo.png',
-    link: '#', // Placeholder - you can update this later
-    description: 'Quoted in New York Post about hashrate heating'
+    logo: '/NYP_logo.png',
+    link: 'https://tylerstevens.me/blog/as-quoted-in-new-york-post-what-is-crypto-mining-and-how-does-it-work/',
+    description: 'Quoted in New York Post about crypto mining'
   },
   {
     id: 'bitcoin-conference',
-    name: 'The Bitcoin Conference',
-    logo: 'https://b.tc/wp-content/uploads/2023/01/bitcoin-2023-logo-black.png',
-    link: '#', // Placeholder - you can update this later
-    description: 'Speaker at The Bitcoin Conference'
+    name: 'Bitcoin 2025',
+    logo: '/bitcoin2025_logo.png',
+    link: 'https://x.com/tylerkstevens/status/1937600453379756259',
+    description: 'Speaker at Bitcoin 2025 Conference'
   }
 ]
