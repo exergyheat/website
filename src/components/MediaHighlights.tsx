@@ -1,9 +1,55 @@
-import React from 'react'
+import React, { useRef, useEffect, useState } from 'react'
 import { mediaHighlights } from '../data/mediaHighlights'
 
 const MediaHighlights = () => {
+  const scrollContainerRef = useRef<HTMLDivElement>(null)
+  const [isUserInteracting, setIsUserInteracting] = useState(false)
+  const [scrollPosition, setScrollPosition] = useState(0)
+  
   // Duplicate the array to create seamless infinite scroll
   const duplicatedHighlights = [...mediaHighlights, ...mediaHighlights]
+
+  useEffect(() => {
+    const container = scrollContainerRef.current
+    if (!container || isUserInteracting) return
+
+    const scrollSpeed = 1 // pixels per frame (increased from previous speed)
+    const maxScroll = container.scrollWidth / 2 // Half way point for seamless loop
+
+    const autoScroll = () => {
+      if (!isUserInteracting && container) {
+        const newPosition = scrollPosition + scrollSpeed
+        
+        if (newPosition >= maxScroll) {
+          // Reset to beginning for seamless loop
+          container.scrollLeft = 0
+          setScrollPosition(0)
+        } else {
+          container.scrollLeft = newPosition
+          setScrollPosition(newPosition)
+        }
+      }
+    }
+
+    const intervalId = setInterval(autoScroll, 16) // ~60fps
+
+    return () => clearInterval(intervalId)
+  }, [scrollPosition, isUserInteracting])
+
+  const handleUserInteractionStart = () => {
+    setIsUserInteracting(true)
+  }
+
+  const handleUserInteractionEnd = () => {
+    // Resume auto-scroll after a short delay
+    setTimeout(() => {
+      setIsUserInteracting(false)
+      // Update scroll position to current position when resuming
+      if (scrollContainerRef.current) {
+        setScrollPosition(scrollContainerRef.current.scrollLeft)
+      }
+    }, 2000) // 2 second delay before resuming auto-scroll
+  }
 
   return (
     <div className="py-16 bg-surface-50 dark:bg-surface-900">
@@ -18,19 +64,32 @@ const MediaHighlights = () => {
         </div>
 
         {/* Scrolling Media Logos */}
-        <div className="relative overflow-hidden">
+        <div className="relative">
           {/* Gradient overlays for smooth edges */}
           <div className="absolute left-0 top-0 bottom-0 w-20 bg-gradient-to-r from-surface-50 dark:from-surface-900 to-transparent pointer-events-none z-10"></div>
           <div className="absolute right-0 top-0 bottom-0 w-20 bg-gradient-to-l from-surface-50 dark:from-surface-900 to-transparent pointer-events-none z-10"></div>
           
-          <div className="flex animate-scroll-infinite">
+          <div 
+            ref={scrollContainerRef}
+            className="flex overflow-x-auto scrollbar-hide"
+            style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
+            onMouseEnter={handleUserInteractionStart}
+            onMouseLeave={handleUserInteractionEnd}
+            onTouchStart={handleUserInteractionStart}
+            onTouchEnd={handleUserInteractionEnd}
+            onScroll={() => {
+              if (isUserInteracting && scrollContainerRef.current) {
+                setScrollPosition(scrollContainerRef.current.scrollLeft)
+              }
+            }}
+          >
             {duplicatedHighlights.map((highlight, index) => (
               <a
                 key={`${highlight.id}-${index}`}
                 href={highlight.link}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex-shrink-0 mx-8 transition-all duration-300 hover:scale-110 group"
+                className="flex-shrink-0 mx-8 transition-all duration-300 hover:scale-110 group whitespace-nowrap"
                 title={highlight.description}
               >
                 <img
@@ -43,6 +102,13 @@ const MediaHighlights = () => {
           </div>
         </div>
       </div>
+      
+      {/* Hide scrollbar with CSS */}
+      <style jsx>{`
+        .scrollbar-hide::-webkit-scrollbar {
+          display: none;
+        }
+      `}</style>
     </div>
   )
 }
