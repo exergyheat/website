@@ -25,7 +25,7 @@ export const mediaHighlights: MediaHighlight[] = [
     id: 'bitcoin-conference',
     name: 'Bitcoin 2025',
     logo: '/bitcoin2025_logo.png',
-    link: 'https://x.com/tylerkstevens/status/1937600453379756259',
+    link: 'https://www.youtube.com/watch?v=jtdJQ7uXcBk',
     description: 'Speaker at Bitcoin 2025 Conference'
   }
 ]
