@@ -36,7 +36,7 @@ const MediaHighlights = () => {
                 <img
                   src={highlight.logo}
                   alt={highlight.name}
-                  className="h-16 w-auto object-contain filter grayscale group-hover:grayscale-0 transition-all duration-300 opacity-70 group-hover:opacity-100"
+                  className="h-10 w-auto object-contain filter grayscale group-hover:grayscale-0 transition-all duration-300 opacity-70 group-hover:opacity-100"
                 />
               </a>
             ))}
