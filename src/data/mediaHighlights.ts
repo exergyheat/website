@@ -18,7 +18,7 @@ export const mediaHighlights: MediaHighlight[] = [
     id: 'ny-post',
     name: 'New York Post',
     logo: '/NYP_logo.png',
-    link: 'https://tylerstevens.me/blog/as-quoted-in-new-york-post-what-is-crypto-mining-and-how-does-it-work/',
+    link: 'https://nypost.com/business/what-is-crypto-mining/',
     description: 'Quoted in New York Post about crypto mining'
   },
   {
