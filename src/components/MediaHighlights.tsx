@@ -13,7 +13,7 @@ const MediaHighlights = () => {
     const container = scrollContainerRef.current
     if (!container || isUserInteracting) return
 
-    const scrollSpeed = 1 // pixels per frame (increased from previous speed)
+    const scrollSpeed = 0.8 // pixels per frame (20% slower than 1px/frame)
     const maxScroll = container.scrollWidth / 2 // Half way point for seamless loop
 
     const autoScroll = () => {
