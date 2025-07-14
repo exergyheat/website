@@ -22,7 +22,7 @@ const Services = () => {
     {
       id: 'audit',
       title: 'Sizing, Savings & Design',
-      description: 'Curious? Get system sizing, estimated earnings, hardware options, costs, ROI and our recommendation.',
+      description: 'Curious? Get system sizing, estimated earnings, total cost, ROI and our hardware recommendations.',
       icon: Search,
       flipText: 'Start at the Heat Audit if you\'re curious, seeking details, or weighing options.',
       targetSection: 'audit-service'
