@@ -30,7 +30,7 @@ const Services = () => {
     {
       id: 'design',
       title: 'Project Plan & Installation',
-      description: 'Ready? Get your integrated solution project plan, components, complete project plan and quote.',
+      description: 'Ready? Get your integrated solution project plan with professional installers that fit your timeline.',
       icon: Cog,
       flipText: 'Start with a System Design if you\'re ready to heat with hashrate, We\'ll handle the rest.',
       targetSection: 'design-service'
