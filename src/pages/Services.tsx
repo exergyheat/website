@@ -5,7 +5,6 @@ import { ArrowRight, FileText, Wrench, Activity, Users, ChevronDown, ChevronUp, 
 const Services = () => {
   const [expandedService, setExpandedService] = useState<string | null>(null)
   const [buildType, setBuildType] = useState<'residential' | 'commercial'>('residential')
-  const [designType, setDesignType] = useState<'residential' | 'commercial'>('residential')
   const [imageViewer, setImageViewer] = useState<{images: string[], titles: string[], currentIndex: number} | null>(null)
   const [flippedCard, setFlippedCard] = useState<string | null>(null)
 
@@ -101,11 +100,11 @@ const Services = () => {
       : 'https://pay.zaprite.com/pl_GhSjRJ6mTI'
   })
 
-  const getDesignService = (type: 'residential' | 'commercial') => ({
+  const getDesignService = () => ({
     id: 'design',
     name: "Hashrate Heating Installation",
     description: "Get a complete hashrate heating solution tailored to your specific needs and requirements.",
-    price: type === 'residential' ? "$1,000 deposit" : "$3,000 deposit",
+    price: "50% Deposit",
     features: [
       "Includes Heat Audit analysis",
       "Custom heating system integration design",
@@ -118,42 +117,28 @@ const Services = () => {
     exampleImage: "SystemDesigns.png",
     exampleTitle: "System Design Examples",
     details: {
-      process: type === 'residential' ? [
+      process: [
         "Initial consultation",
         "Home assessment",
         "Heat Audit and System design",
         "Project plan and quote",
         "Implementation"
-      ] : [
-        "Initial consultation",
-        "Commercial site assessment",
-        "Commercial Heat Audit and enterprise system design",
-        "Comprehensive project plan and quote",
-        "Implementation"
       ],
-      includes: type === 'residential' ? [
+      includes: [
         "Detailed system specifications",
         "Installation guidelines or partner coordination",
         "Performance estimates",
         "Cost breakdown",
         "Timeline projection"
-      ] : [
-        "Enterprise system specifications",
-        "Commercial installation plan and partner coordination",
-        "ROI and performance projections",
-        "Commercial cost breakdown",
-        "Project timeline and milestones"
       ]
     },
-    buttonText: `Place ${type === 'residential' ? '$1,000' : '$3,000'} Deposit`,
-    buttonLink: type === 'residential'
-      ? 'https://pay.zaprite.com/pl_gVTeQn7Xjm'
-      : 'https://pay.zaprite.com/pl_mRJ6ONhX5q'
+    buttonText: "Contact Us",
+    buttonLink: "/contact"
   })
 
   const services = [
     getAuditService(buildType),
-    getDesignService(designType),
+    getDesignService(),
     {
       id: 'monitoring',
       name: "Remote Health Monitoring",
@@ -417,30 +402,6 @@ const Services = () => {
                 )}
 
                 {/* Build Type Toggle for Upgrade Service */}
-                {service.id === 'design' && (
-                  <div className="flex items-center space-x-4 p-4 bg-surface-100 dark:bg-surface-800 rounded-lg">
-                    <button
-                      onClick={() => setDesignType('residential')}
-                      className={`px-4 py-2 rounded-lg transition-colors ${
-                        designType === 'residential'
-                          ? 'bg-primary-600 text-white'
-                          : 'bg-surface-200 dark:bg-surface-700 text-surface-700 dark:text-surface-300'
-                      }`}
-                    >
-                      Residential
-                    </button>
-                    <button
-                      onClick={() => setDesignType('commercial')}
-                      className={`px-4 py-2 rounded-lg transition-colors ${
-                        designType === 'commercial'
-                          ? 'bg-primary-600 text-white'
-                          : 'bg-surface-200 dark:bg-surface-700 text-surface-700 dark:text-surface-300'
-                      }`}
-                    >
-                      Commercial
-                    </button>
-                  </div>
-                )}
 
                 <p className="text-lg text-surface-600 dark:text-surface-400">{service.description}</p>
                 
