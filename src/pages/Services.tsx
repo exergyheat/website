@@ -101,7 +101,7 @@ const Services = () => {
   })
 
   const getDesignService = () => ({
-    id: 'design',
+    id: 'installation',
     name: "Hashrate Heating Installation",
     description: "Get a complete hashrate heating solution tailored to your specific needs and requirements.",
     price: "50% Deposit",
@@ -359,7 +359,7 @@ const Services = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
         <div className="grid grid-cols-1 gap-16">
           {services.map((service, index) => (
-            <div key={service.id} id={`${service.id === 'design' ? 'installation' : service.id}-service`} className={`flex flex-col md:flex-row gap-8 items-start ${index % 2 === 1 ? 'md:flex-row-reverse' : ''}`}>
+            <div key={service.id} id={`${service.id}-service`} className={`flex flex-col md:flex-row gap-8 items-start ${index % 2 === 1 ? 'md:flex-row-reverse' : ''}`}>
               <div className="w-full md:w-1/2 flex justify-center">
                 <div className="w-full max-w-lg">
                   <img
