@@ -103,7 +103,7 @@ const Services = () => {
   const getDesignService = () => ({
     id: 'installation',
     name: "Hashrate Heating Installation",
-    description: "Get a complete hashrate heating solution tailored to your specific needs and requirements.",
+    description: "Get a complete hashrate heating installation plan tailored to your specific needs and requirements.",
     price: "50% Deposit",
     features: [
       "Includes Heat Audit analysis",
