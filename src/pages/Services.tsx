@@ -53,8 +53,8 @@ const Services = () => {
     price: type === 'residential' ? "$500" : "$2500",
     features: [
       "Optimized heating system sizing",
-      "Hashrate Heat utility bill savings and revenue projections",
-      "Upgrade total cost of ownership and ROI estimates",
+      "Utility bill savings and revenue projections",
+      "Upgrade project cost, total cost of ownership, and ROI estimates",
       "Personalized recommendations and next steps",
       "1-hour report walkthrough call"
     ],
@@ -89,9 +89,9 @@ const Services = () => {
       deliverables: [
         "Comprehensive analysis report",
         "Optimal heating system sizing",
-        "Estimated revenue and cost utility savings projections",
-        "Hardware options and personalized recommendations",
-        "Heating hardware costs, ROI and total cost of ownership estimates",
+        "Estimated revenue and utility cost savings projections",
+        "Heating hardware options and personalized recommendations",
+        "Project quote cost, ROI, and total cost of ownership estimates",
         "1-hour consultation call and next step walkthrough"
       ]
     },
