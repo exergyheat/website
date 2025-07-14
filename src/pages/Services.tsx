@@ -122,14 +122,14 @@ const Services = () => {
         "Home assessment",
         "Heat Audit and System design",
         "Project plan and quote",
-        "Implementation"
+        "Installation & Comissioning"
       ],
       includes: [
         "Detailed system specifications",
-        "Installation guidelines or partner coordination",
-        "Performance estimates",
-        "Cost breakdown",
-        "Timeline projection"
+        "Cost performance estimates",
+        "Timeline projection",
+        "Installation partner coordination",
+        "Customer training tutorial"
       ]
     },
     buttonText: "Contact Us",
