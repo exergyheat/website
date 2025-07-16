@@ -397,11 +397,11 @@ const About = () => {
       description: 'We partner with only the best hashrate heating system manufacturers to source high-quality hardware tailored to your specific heating needs, ensuring optimal performance, efficiency and reliability.',
       icon: Package,
       preview: {
-        title: 'Sample Design Details',
+        title: 'Sample Hardware Procurement Details',
         content: (
           <div className="bg-white dark:bg-surface-800 p-6 rounded-lg shadow-lg">
             <div className="border-b border-surface-200 dark:border-surface-700 pb-4 mb-4">
-              <h3 className="text-2xl font-bold text-surface-900 dark:text-surface-100">System Design</h3>
+              <h3 className="text-2xl font-bold text-surface-900 dark:text-surface-100">Hardware Procurement</h3>
               <p className="text-surface-600 dark:text-surface-400">Hashrate Heating Hydronic Boiler Integration</p>
             </div>
             <div className="space-y-6">
