@@ -228,7 +228,7 @@ const About = () => {
       id: 'installation',
       title: 'Procurement & Installation',
       subtitle: 'Coordinate Installation & Bring The System Online',
-      description: 'We partner with only the best hashrate heating system manufacturers to source high-quality hardware tailored to your specific heating needs, ensuring optimal performance and efficiency.',
+      description: 'We partner with only the best hashrate heating system manufacturers to source high-quality hardware tailored to your specific heating needs, ensuring optimal performance, efficiency and reliability.',
       icon: Package,
       preview: {
         title: 'Sample Install Process',
