@@ -232,7 +232,7 @@ const About = () => {
 
                 {/* Total Cost of Ownership Comparison */}
                 <div className="bg-white dark:bg-surface-800 rounded-lg p-4">
-                  <h5 className="text-lg font-semibold text-surface-900 dark:text-surface-100 mb-3">10-Year Total Cost of Ownership</h5>
+                  <h5 className="text-lg font-semibold text-surface-900 dark:text-surface-100 mb-3">3-Year Total Cost of Ownership</h5>
                   <div className="flex items-end space-x-4 h-32">
                     <div className="flex-1 flex flex-col items-center">
                       <div className="w-full bg-red-500 rounded-t" style={{height: '80%'}}></div>
@@ -242,7 +242,7 @@ const About = () => {
                     <div className="flex-1 flex flex-col items-center">
                       <div className="w-full bg-green-500 rounded-t" style={{height: '20%'}}></div>
                       <p className="text-sm font-medium text-surface-900 dark:text-surface-100 mt-2">Hashrate System</p>
-                      <p className="text-lg font-bold text-green-600">-$190,000</p>
+                      <p className="text-lg font-bold text-green-600">-$30,000</p>
                       <p className="text-xs text-surface-600 dark:text-surface-400">(net profit)</p>
                     </div>
                   </div>
