@@ -103,7 +103,7 @@ const About = () => {
     {
       id: 'audit',
       title: 'Heat Audit Analysis & Design',
-      description: 'We start with thermo-economic modeling to size for your exact heating needs while maximizing earnings. This tells us if the uprgade is a good idea, which hashrate heater is best for you, and proivde recommendations for next steps.',
+      description: 'We start with thermo-economic modeling to size a system for your specific heating needs while maximizing earnings. Our analysis delivers a tailored heating solution, including projected savings, payback period, and total project costs. You’ll receive a detailed report, personal recommendations, a full project quote, and clear next steps.',
       icon: FileText,
       preview: {
         title: 'Sample Data',
