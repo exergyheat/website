@@ -257,9 +257,9 @@ const About = () => {
                 
                 <div className="bg-white dark:bg-surface-800 rounded-lg p-4 mb-6">
                   <p className="text-surface-700 dark:text-surface-300 leading-relaxed">
-                    Based on your high-altitude location and year-round heating demands, we recommend a hydronic hashrate heating system. 
-                    The consistent heat load makes this an ideal application for maximizing Bitcoin earnings while maintaining optimal pool temperatures. 
-                    The elevation and cold winters actually work in your favor for mining efficiency.
+                    Based on the high-altitude location and year-round heating demands, we recommend a hydronic hashrate heating system. 
+                    The consistent heat load and expensive propane costs make this an ideal application for maximizing earnings while maintaining optimal pool temperatures. 
+                    The elevation and cold winters actually work in your favor for mining efficiency. Our recommendations outline several hashrate heating boiler options that will fit the project's heating needs.
                   </p>
                 </div>
 
