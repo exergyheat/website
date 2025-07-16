@@ -221,7 +221,7 @@ const About = () => {
                   <div className="bg-white dark:bg-surface-800 rounded-lg p-4 text-center">
                     <p className="text-sm font-medium text-surface-500 dark:text-surface-400 mb-1">Bitcoin Earnings (2yr)</p>
                     <p className="text-2xl font-bold text-orange-600">0.88 BTC</p>
-                    <p className="text-xs text-surface-600 dark:text-surface-400">projected earnings</p>
+                    <p className="text-xs text-surface-600 dark:text-surface-400">historical earnings est.</p>
                   </div>
                   <div className="bg-white dark:bg-surface-800 rounded-lg p-4 text-center">
                     <p className="text-sm font-medium text-surface-500 dark:text-surface-400 mb-1">Net Annual Benefit</p>
