@@ -540,7 +540,7 @@ const About = () => {
             </div>
             <h3 className="mt-4 text-xl font-semibold text-surface-900 dark:text-surface-100">Community Builders</h3>
             <p className="mt-2 text-surface-600 dark:text-surface-400">
-              Our Founders host Undermine, the annual Heatpunk Summit - A first of its kind conference dedicated entierly to hashrate heating, covering technical developments to tradesmen education. 
+              Our Founders host the annual Heatpunk Summit - A first of its kind conference dedicated entierly to hashrate heating, covering technical developments to tradesmen education. 
             </p>
           </div>
           <div className="bg-white dark:bg-surface-800 rounded-lg shadow-xl p-8 transform hover:scale-105 transition-transform">
@@ -593,12 +593,12 @@ const About = () => {
           </div>
         </div>
 
-        {/* Undermine Summit Section */}
+        {/* Heatpunk Summit Section */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
           <div className="relative lg:order-2">
             <div className="bg-surface-900 rounded-lg p-6 lg:p-8 w-full max-w-sm mx-auto lg:mx-0">
               <Calendar className="h-12 w-12 text-primary-400 mb-4" />
-              <h3 className="text-2xl font-bold text-white mb-4">Undermine</h3>
+              <h3 className="text-2xl font-bold text-white mb-4">Heatpunk Summit</h3>
               <p className="text-surface-300 mb-6">
                 The annual Heatpunk Summit is a conference dedicated to hashrate heating, hosted by our founder Tyler Stevens.
               </p>
