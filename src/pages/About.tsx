@@ -514,7 +514,7 @@ const About = () => {
       description: 'We leverage private and secure remote monitoring to ensure your heating system is always healthy and maximizing earnings. Because hashrate heaters are digital, we can sense when it is time for a tune up - before you do.',
       icon: Monitor,
       preview: {
-        title: 'Sample Monitored Data',
+        title: 'Sample Monitoring Report',
         content: (
           <div className="bg-white dark:bg-surface-800 p-6 rounded-lg shadow-lg">
             <div className="border-b border-surface-200 dark:border-surface-700 pb-4 mb-4">
