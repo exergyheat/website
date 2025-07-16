@@ -357,20 +357,20 @@ const About = () => {
                     <h5 className="text-lg font-semibold text-surface-900 dark:text-surface-100 mb-3">Full Project Cost (Better Option)</h5>
                     <div className="space-y-3">
                       <div className="flex justify-between items-center">
-                        <span className="text-surface-600 dark:text-surface-400">Hardware & Equipment</span>
-                        <span className="font-medium text-surface-900 dark:text-surface-100">$35,000</span>
+                        <span className="text-surface-600 dark:text-surface-400">Heating Hardware & Equipment</span>
+                        <span className="font-medium text-surface-900 dark:text-surface-100">$50,000</span>
                       </div>
                       <div className="flex justify-between items-center">
-                        <span className="text-surface-600 dark:text-surface-400">Installation & Labor</span>
-                        <span className="font-medium text-surface-900 dark:text-surface-100">$12,000</span>
+                        <span className="text-surface-600 dark:text-surface-400">Control Hardware & Design</span>
+                        <span className="font-medium text-surface-900 dark:text-surface-100">$5,000</span>
                       </div>
                       <div className="flex justify-between items-center">
-                        <span className="text-surface-600 dark:text-surface-400">Permits & Inspections</span>
-                        <span className="font-medium text-surface-900 dark:text-surface-100">$2,500</span>
+                        <span className="text-surface-600 dark:text-surface-400">Installaion & Labor</span>
+                        <span className="font-medium text-surface-900 dark:text-surface-100">$10,000</span>
                       </div>
                       <div className="flex justify-between items-center">
                         <span className="text-surface-600 dark:text-surface-400">Project Management</span>
-                        <span className="font-medium text-surface-900 dark:text-surface-100">$2,500</span>
+                        <span className="font-medium text-surface-900 dark:text-surface-100">5,000</span>
                       </div>
                       <div className="border-t border-surface-200 dark:border-surface-600 pt-2 flex justify-between items-center">
                         <span className="font-semibold text-surface-900 dark:text-surface-100">Total Project Cost</span>
