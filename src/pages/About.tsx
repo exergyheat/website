@@ -478,11 +478,11 @@ const About = () => {
             <div className="space-y-6">
               <div className="space-y-4">
                 {[
-                  { phase: 'Phase 1: Equipment Procurement'},
-                  { phase: 'Phase 2: Site Preparation'},
+                  { phase: 'Phase 1: Site Preparation'},
+                  { phase: 'Phase 2: Coordinate Trades Professionals'},
                   { phase: 'Phase 3: Hardware Installation'},
                   { phase: 'Phase 4: System Integration'},
-                  { phase: 'Phase 5: Setup & Commissioning'}
+                  { phase: 'Phase 5: Exergy Setup & Commissioning'}
                 ].map((phase, index) => (
                   <div key={index} className="bg-surface-50 dark:bg-surface-700 p-4 rounded-lg">
                     <div className="flex justify-between items-center">
@@ -495,10 +495,10 @@ const About = () => {
               <div>
                 <h4 className="font-semibold text-surface-900 dark:text-surface-100 mb-2">Key Deliverables</h4>
                 <ul className="space-y-2 text-sm text-surface-600 dark:text-surface-400">
-                  <li>• Hardware sourcing and delivery</li>
+                  <li>• Hardware delivery</li>
                   <li>• Professional installation</li>
-                  <li>• System integration and testing</li>
-                  <li>• Operation training and handover</li>
+                  <li>• System integration and power up</li>
+                  <li>• Operation tutorial and handover</li>
                 </ul>
               </div>
             </div>
