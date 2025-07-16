@@ -468,7 +468,7 @@ const About = () => {
       description: 'We collaborate with certified trade partners to professionally install your hashrate heating system, ensuring seamless integration and optimal performance from day one.',
       icon: Wrench,
       preview: {
-        title: 'Sample Install Process',
+        title: 'Sample Installation Process',
         content: (
           <div className="bg-white dark:bg-surface-800 p-6 rounded-lg shadow-lg">
             <div className="border-b border-surface-200 dark:border-surface-700 pb-4 mb-4">
