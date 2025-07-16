@@ -1,609 +1,232 @@
-import React, { useState, useEffect } from 'react'
-import { Book, Users, Award, Cpu, Flame, Bitcoin, ArrowRight, Target, Lightbulb, FileText, BarChart as ChartBar, Wrench, CheckCircle2, Mail, X, Zap, Network, Package, Monitor, BookOpen, Megaphone, Hammer, Calendar } from 'lucide-react'
+import React, { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
-import { motion } from 'framer-motion'
+import { ArrowRight, Users, Target, Lightbulb, X, Search, Wrench, Activity, Headphones } from 'lucide-react'
 
 const About = () => {
-  const [expandedStep, setExpandedStep] = useState<string | null>(null)
-
-  const missionPoints = [
-    {
-      icon: Zap,
-      title: "A New Standard For Electric Heat",
-      description: "We envision a future where heaters double as revenue generators, keeping you warm while earning money with zero waste."
-    },
-    {
-      icon: Bitcoin,
-      title: "Driving Bitcoin Adoption",
-      description: "We're advancing bitcoin adoption with heating solutions that reward homes and businesses for supporting the network."
-    },
-    {
-      icon: Network,
-      title: "Maximum Miner Decentralizaton",
-      description: "We see a world where bitcoin mining is fully decentralized across millions of homes and businesses, with heating systems distributing hashrate and pool choice worldwide."
-    }
-  ]
-
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.2
-      }
-    }
-  }
-
-  const itemVariants = {
-    hidden: { 
-      opacity: 0,
-      y: 20
-    },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: {
-        duration: 0.6,
-        ease: "easeOut"
-      }
-    }
-  }
-
-  // Letter cascade animation variants
-  const letterContainerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.15,
-        delayChildren: 0.5
-      }
-    }
-  }
-
-  const letterVariants = {
-    hidden: { 
-      opacity: 0,
-      x: -30,
-      scale: 0.8
-    },
-    visible: {
-      opacity: 1,
-      x: 0,
-      scale: 1,
-      transition: {
-        duration: 0.8,
-        ease: "easeOut"
-      }
-    }
-  }
+  const [selectedModal, setSelectedModal] = useState<string | null>(null)
 
   const team = [
     {
       name: 'Tyler Stevens',
       role: 'CEO & Chief Engineer',
       image: '/TylerS_headshot.png',
-      description: 'Author of "Bitcoin Mining Heat Reuse" and instigator of the Heatpunk movement.'
+      bio: 'Thermal engineer and Bitcoin advocate leading the hashrate heating revolution.'
     },
     {
-      name: 'Dylan',
+      name: 'Dylan S',
       role: 'COO & CFO',
       image: '/DylanS_headshot.jpeg',
-      description: 'Operations and bitcoin financial strategy expert with an engineering license.'
+      bio: 'Operations and finance expert ensuring sustainable growth and customer success.'
     },
     {
-      name: 'Mike',
+      name: 'Mike C',
       role: 'CRO',
       image: '/MikeC_headshot.png',
-      description: 'Revenue and growth specialist. Bitcoin mining fanatic.'
+      bio: 'Revenue and partnerships leader expanding hashrate heating adoption.'
     }
   ]
 
   const processSteps = [
     {
       id: 'audit',
-      title: 'Heat Audit Analysis & Design',
-      subtitle: 'Calculate Sizings, Savings, Design Plan & Quote',
-      description: 'We start with thermo-economic modeling to size a system for your specific heating needs while maximizing earnings. Our analysis delivers a tailored heating solution, including projected savings, payback period, and total project costs. You’ll receive a detailed report, personal recommendations, a full project quote, and clear next steps.',
-      icon: FileText,
-      preview: {
-        title: 'Sample Data',
-        content: (
-          <div className="bg-white dark:bg-surface-800 rounded-lg shadow-lg max-h-[80vh] overflow-y-auto">
-            {/* Header */}
-            <div className="sticky top-0 bg-white dark:bg-surface-800 border-b border-surface-200 dark:border-surface-700 p-6 z-10">
-              <h3 className="text-2xl font-bold text-surface-900 dark:text-surface-100">Heat Audit Report</h3>
-              <p className="text-surface-600 dark:text-surface-400">Outdoor Commercial Pool Resort - High Altitude Rocky Mountain Region</p>
+      title: 'Heat Audit & Feasibility',
+      description: 'We analyze your heating needs and calculate potential savings and ROI.',
+      icon: Search,
+      modalContent: `
+        <div class="space-y-6">
+          <div>
+            <h3 class="text-xl font-semibold text-surface-900 dark:text-surface-100 mb-4">Heat Audit Process</h3>
+            <p class="text-surface-600 dark:text-surface-400 mb-4">Our comprehensive heat audit analyzes your current heating system and calculates the potential for hashrate heating integration.</p>
+          </div>
+          
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div>
+              <h4 class="text-lg font-semibold text-surface-900 dark:text-surface-100 mb-3">Analysis Includes</h4>
+              <ul class="space-y-2 text-surface-600 dark:text-surface-400">
+                <li>• Current heating costs and usage patterns</li>
+                <li>• Building specifications and heat load calculations</li>
+                <li>• Local energy rates and utility structures</li>
+                <li>• Bitcoin mining profitability projections</li>
+                <li>• System integration requirements</li>
+              </ul>
             </div>
-
-            <div className="p-6 space-y-8">
-              {/* Project Details Section */}
-              <div className="bg-surface-50 dark:bg-surface-700 rounded-lg p-6">
-                <div className="flex items-center mb-4">
-                  <div className="w-8 h-8 bg-primary-500 rounded-full flex items-center justify-center text-white font-bold text-sm mr-3">1</div>
-                  <h4 className="text-xl font-bold text-surface-900 dark:text-surface-100">Project Details</h4>
-                </div>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                  <div className="space-y-3">
-                    <div>
-                      <p className="text-sm font-medium text-surface-500 dark:text-surface-400">Location</p>
-                      <p className="text-base text-surface-900 dark:text-surface-100">High Altitude Rocky Mountains, CO</p>
-                    </div>
-                    <div>
-                      <p className="text-sm font-medium text-surface-500 dark:text-surface-400">Heating Application</p>
-                      <p className="text-base text-surface-900 dark:text-surface-100">Outdoor Pool & Hot Tub Complex</p>
-                    </div>
-                    <div>
-                      <p className="text-sm font-medium text-surface-500 dark:text-surface-400">Total Volume</p>
-                      <p className="text-base text-surface-900 dark:text-surface-100">40,000 gallons</p>
-                    </div>
-                  </div>
-                  <div className="space-y-3">
-                    <div>
-                      <p className="text-sm font-medium text-surface-500 dark:text-surface-400">Average Winter Temperature</p>
-                      <p className="text-base text-surface-900 dark:text-surface-100">28°F (-2°C)</p>
-                    </div>
-                    <div>
-                      <p className="text-sm font-medium text-surface-500 dark:text-surface-400">Peak Design Temperature</p>
-                      <p className="text-base text-surface-900 dark:text-surface-100">-5°F (-21°C)</p>
-                    </div>
-                    <div>
-                      <p className="text-sm font-medium text-surface-500 dark:text-surface-400">Current System</p>
-                      <p className="text-base text-surface-900 dark:text-surface-100">Propane Boiler (85% efficiency)</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              {/* Sizings Section */}
-              <div className="bg-surface-50 dark:bg-surface-700 rounded-lg p-6">
-                <div className="flex items-center mb-4">
-                  <div className="w-8 h-8 bg-primary-500 rounded-full flex items-center justify-center text-white font-bold text-sm mr-3">2</div>
-                  <h4 className="text-xl font-bold text-surface-900 dark:text-surface-100">System Sizing</h4>
-                </div>
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                  <div className="bg-white dark:bg-surface-800 rounded-lg p-4">
-                    <p className="text-sm font-medium text-surface-500 dark:text-surface-400 mb-2">Heating Systems Needed</p>
-                    <p className="text-2xl font-bold text-primary-600">4 Units</p>
-                    <p className="text-sm text-surface-600 dark:text-surface-400">Auradine AH3880 Hydro Miners</p>
-                  </div>
-                  <div className="bg-white dark:bg-surface-800 rounded-lg p-4">
-                    <p className="text-sm font-medium text-surface-500 dark:text-surface-400 mb-2">Total System Rating</p>
-                    <p className="text-2xl font-bold text-primary-600">40 kW</p>
-                    <p className="text-sm text-surface-600 dark:text-surface-400">136,484 BTU/hr</p>
-                  </div>
-                  <div className="bg-white dark:bg-surface-800 rounded-lg p-4">
-                    <p className="text-sm font-medium text-surface-500 dark:text-surface-400 mb-2">Design Month Duty Cycle</p>
-                    <p className="text-2xl font-bold text-primary-600">95%</p>
-                    <p className="text-sm text-surface-600 dark:text-surface-400">Peak winter operation</p>
-                  </div>
-                </div>
-              </div>
-
-              {/* Savings Section */}
-              <div className="bg-surface-50 dark:bg-surface-700 rounded-lg p-6">
-                <div className="flex items-center mb-4">
-                  <div className="w-8 h-8 bg-primary-500 rounded-full flex items-center justify-center text-white font-bold text-sm mr-3">3</div>
-                  <h4 className="text-xl font-bold text-surface-900 dark:text-surface-100">Financial Analysis</h4>
-                </div>
-                
-                {/* Annual Heating Costs */}
-                <div className="mb-6">
-                  <h5 className="text-lg font-semibold text-surface-900 dark:text-surface-100 mb-3">Annual Heating Costs</h5>
-                  <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-                    <div className="bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-800 rounded-lg p-4">
-                      <p className="text-sm font-medium text-red-700 dark:text-red-300 mb-1">Original Cost (Propane)</p>
-                      <p className="text-xl font-bold text-red-800 dark:text-red-200">$21,000/year</p>
-                    </div>
-                    <div className="bg-yellow-50 dark:bg-yellow-900/20 border border-yellow-200 dark:border-yellow-800 rounded-lg p-4">
-                      <p className="text-sm font-medium text-yellow-700 dark:text-yellow-300 mb-1">New Cost (Electric)</p>
-                      <p className="text-xl font-bold text-yellow-800 dark:text-yellow-200">$21,500/year</p>
-                    </div>
-                    <div className="bg-green-50 dark:bg-green-900/20 border border-green-200 dark:border-green-800 rounded-lg p-4">
-                      <p className="text-sm font-medium text-green-700 dark:text-green-300 mb-1">Bitcoin Revenue</p>
-                      <p className="text-xl font-bold text-green-800 dark:text-green-200">$21,000/year</p>
-                    </div>
-                  </div>
-                </div>
-
-                {/* Key Performance Indicators */}
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mb-6">
-                  <div className="bg-white dark:bg-surface-800 rounded-lg p-4 text-center">
-                    <p className="text-sm font-medium text-surface-500 dark:text-surface-400 mb-1">Annual Savings</p>
-                    <p className="text-2xl font-bold text-green-600">99%</p>
-                    <p className="text-xs text-surface-600 dark:text-surface-400">vs. original system</p>
-                  </div>
-                  <div className="bg-white dark:bg-surface-800 rounded-lg p-4 text-center">
-                    <p className="text-sm font-medium text-surface-500 dark:text-surface-400 mb-1">ROI Period</p>
-                    <p className="text-2xl font-bold text-primary-600">3 years</p>
-                    <p className="text-xs text-surface-600 dark:text-surface-400">payback period</p>
-                  </div>
-                  <div className="bg-white dark:bg-surface-800 rounded-lg p-4 text-center">
-                    <p className="text-sm font-medium text-surface-500 dark:text-surface-400 mb-1">Bitcoin Earnings (2yr)</p>
-                    <p className="text-2xl font-bold text-orange-600">0.88 BTC</p>
-                    <p className="text-xs text-surface-600 dark:text-surface-400">historical earnings est.</p>
-                  </div>
-                  <div className="bg-white dark:bg-surface-800 rounded-lg p-4 text-center">
-                    <p className="text-sm font-medium text-surface-500 dark:text-surface-400 mb-1">Net Annual Benefit</p>
-                    <p className="text-2xl font-bold text-green-600">$20,000</p>
-                    <p className="text-xs text-surface-600 dark:text-surface-400">after all costs</p>
-                  </div>
-                </div>
-
-                {/* Total Cost of Ownership Comparison */}
-                <div className="bg-white dark:bg-surface-800 rounded-lg p-4">
-                  <h5 className="text-lg font-semibold text-surface-900 dark:text-surface-100 mb-3">3-Year Total Cost of Ownership</h5>
-                  <div className="flex items-end space-x-4 h-32">
-                    <div className="flex-1 flex flex-col items-center">
-                      <div className="w-full bg-red-500 rounded-t" style={{height: '80%'}}></div>
-                      <p className="text-sm font-medium text-surface-900 dark:text-surface-100 mt-2">Propane System</p>
-                      <p className="text-lg font-bold text-red-600">-$60,000</p>
-                    </div>
-                    <div className="flex-1 flex flex-col items-center">
-                      <div className="w-full bg-green-500 rounded-t" style={{height: '20%'}}></div>
-                      <p className="text-sm font-medium text-surface-900 dark:text-surface-100 mt-2">Hashrate System</p>
-                      <p className="text-lg font-bold text-green-600">-$40,000</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              {/* Recommendations Section */}
-              <div className="bg-surface-50 dark:bg-surface-700 rounded-lg p-6">
-                <div className="flex items-center mb-4">
-                  <div className="w-8 h-8 bg-primary-500 rounded-full flex items-center justify-center text-white font-bold text-sm mr-3">4</div>
-                  <h4 className="text-xl font-bold text-surface-900 dark:text-surface-100">Exergy Team Recommendations</h4>
-                </div>
-                
-                <div className="bg-white dark:bg-surface-800 rounded-lg p-4 mb-6">
-                  <p className="text-surface-700 dark:text-surface-300 leading-relaxed">
-                    Based on the high-altitude location and year-round heating demands, we recommend a hydronic hashrate heating system. 
-                    The consistent heat load and expensive propane costs make this an ideal application for maximizing earnings while maintaining optimal pool temperatures. 
-                    The elevation and cold winters actually work in your favor for mining efficiency. Our recommendations outline several hashrate heating boiler options that will fit the project's heating needs.
-                  </p>
-                </div>
-
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-                  {/* Good Option */}
-                  <div className="bg-white dark:bg-surface-800 border border-surface-200 dark:border-surface-600 rounded-lg p-4">
-                    <div className="flex items-center mb-3">
-                      <div className="w-6 h-6 bg-blue-500 rounded-full flex items-center justify-center text-white text-xs font-bold mr-2">G</div>
-                      <h6 className="font-semibold text-surface-900 dark:text-surface-100">Good</h6>
-                    </div>
-                    <ul className="space-y-2 text-sm text-surface-600 dark:text-surface-400">
-                      <li>• 10x Whatsminer M64 Hydro Miners (24 J/TH)</li>
-                      <li>• Hydro Miner Rack, Heat Exchanger & CDU</li>
-                      <li>• Automated Temperature Control</li>
-                      <li>• $57,000 total investment</li>
-                    </ul>
-                  </div>
-
-                  {/* Better Option */}
-                  <div className="bg-white dark:bg-surface-800 border-2 border-primary-500 rounded-lg p-4 relative">
-                    <div className="absolute -top-2 left-4 bg-primary-500 text-white px-2 py-1 rounded text-xs font-bold">RECOMMENDED</div>
-                    <div className="flex items-center mb-3 mt-2">
-                      <div className="w-6 h-6 bg-green-500 rounded-full flex items-center justify-center text-white text-xs font-bold mr-2">B</div>
-                      <h6 className="font-semibold text-surface-900 dark:text-surface-100">Better</h6>
-                    </div>
-                    <ul className="space-y-2 text-sm text-surface-600 dark:text-surface-400">
-                      <li>• 4x Auradine AH3880 Hydro Miners (18 J/TH)</li>
-                      <li>• Hydro Miner Rack, Heat Exchanger & CDU</li>
-                      <li>• Automated Temperature Control</li>
-                      <li>• $70,000 total investment</li>
-                    </ul>
-                  </div>
-
-                  {/* Best Option */}
-                  <div className="bg-white dark:bg-surface-800 border border-surface-200 dark:border-surface-600 rounded-lg p-4">
-                    <div className="flex items-center mb-3">
-                      <div className="w-6 h-6 bg-purple-500 rounded-full flex items-center justify-center text-white text-xs font-bold mr-2">B</div>
-                      <h6 className="font-semibold text-surface-900 dark:text-surface-100">Best</h6>
-                    </div>
-                    <ul className="space-y-2 text-sm text-surface-600 dark:text-surface-400">
-                      <li>• 8x Bitmain S21 XP Hydro Miners (12 J/TH)</li>
-                      <li>• Hydro Miner Rack, Heat Exchanger & CDU</li>
-                      <li>• Automated Temperature Control</li>
-                      <li>• $81,000 total investment</li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-
-              {/* Project Plan & Quote Section */}
-              <div className="bg-surface-50 dark:bg-surface-700 rounded-lg p-6">
-                <div className="flex items-center mb-4">
-                  <div className="w-8 h-8 bg-primary-500 rounded-full flex items-center justify-center text-white font-bold text-sm mr-3">5</div>
-                  <h4 className="text-xl font-bold text-surface-900 dark:text-surface-100">Project Plan & Quote</h4>
-                </div>
-                
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                  {/* Next Steps */}
-                  <div className="bg-white dark:bg-surface-800 rounded-lg p-4">
-                    <h5 className="text-lg font-semibold text-surface-900 dark:text-surface-100 mb-3">Next Steps</h5>
-                    <div className="space-y-3">
-                      <div className="flex items-start">
-                        <div className="w-6 h-6 bg-primary-500 rounded-full flex items-center justify-center text-white text-xs font-bold mr-3 mt-0.5">1</div>
-                        <div>
-                          <p className="font-medium text-surface-900 dark:text-surface-100">Site Assessment</p>
-                          <p className="text-sm text-surface-600 dark:text-surface-400">On-site evaluation and measurements</p>
-                        </div>
-                      </div>
-                      <div className="flex items-start">
-                        <div className="w-6 h-6 bg-primary-500 rounded-full flex items-center justify-center text-white text-xs font-bold mr-3 mt-0.5">2</div>
-                        <div>
-                          <p className="font-medium text-surface-900 dark:text-surface-100">Hardware Procurement</p>
-                          <p className="text-sm text-surface-600 dark:text-surface-400">Order associated hardware from Exergy partners</p>
-                        </div>
-                      </div>
-                      <div className="flex items-start">
-                        <div className="w-6 h-6 bg-primary-500 rounded-full flex items-center justify-center text-white text-xs font-bold mr-3 mt-0.5">3</div>
-                        <div>
-                          <p className="font-medium text-surface-900 dark:text-surface-100">Installation</p>
-                          <p className="text-sm text-surface-600 dark:text-surface-400">Professional installation and commissioning</p>
-                        </div>
-                      </div>
-                      <div className="flex items-start">
-                        <div className="w-6 h-6 bg-primary-500 rounded-full flex items-center justify-center text-white text-xs font-bold mr-3 mt-0.5">4</div>
-                        <div>
-                          <p className="font-medium text-surface-900 dark:text-surface-100">Remote Monitoring</p>
-                          <p className="text-sm text-surface-600 dark:text-surface-400">System data collection and monitoring activation</p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-
-                  {/* Project Cost Breakdown */}
-                  <div className="bg-white dark:bg-surface-800 rounded-lg p-4">
-                    <h5 className="text-lg font-semibold text-surface-900 dark:text-surface-100 mb-3">Full Project Cost (Better Option)</h5>
-                    <div className="space-y-3">
-                      <div className="flex justify-between items-center">
-                        <span className="text-surface-600 dark:text-surface-400">Heating Hardware & Equipment</span>
-                        <span className="font-medium text-surface-900 dark:text-surface-100">$50,000</span>
-                      </div>
-                      <div className="flex justify-between items-center">
-                        <span className="text-surface-600 dark:text-surface-400">Control Hardware & Design</span>
-                        <span className="font-medium text-surface-900 dark:text-surface-100">$5,000</span>
-                      </div>
-                      <div className="flex justify-between items-center">
-                        <span className="text-surface-600 dark:text-surface-400">Installaion & Labor</span>
-                        <span className="font-medium text-surface-900 dark:text-surface-100">$10,000</span>
-                      </div>
-                      <div className="flex justify-between items-center">
-                        <span className="text-surface-600 dark:text-surface-400">Project Management</span>
-                        <span className="font-medium text-surface-900 dark:text-surface-100">5,000</span>
-                      </div>
-                      <div className="border-t border-surface-200 dark:border-surface-600 pt-2 flex justify-between items-center">
-                        <span className="font-semibold text-surface-900 dark:text-surface-100">Total Project Cost</span>
-                        <span className="text-xl font-bold text-primary-600">$70,000</span>
-                      </div>
-                      <div className="bg-green-50 dark:bg-green-900/20 rounded-lg p-3 mt-4">
-                        <p className="text-sm text-green-800 dark:text-green-200 font-medium">
-                          Project pays for itself in 3 years, then generates $20,000+ annually
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
+            
+            <div>
+              <h4 class="text-lg font-semibold text-surface-900 dark:text-surface-100 mb-3">Deliverables</h4>
+              <ul class="space-y-2 text-surface-600 dark:text-surface-400">
+                <li>• Detailed feasibility report</li>
+                <li>• ROI calculations and payback period</li>
+                <li>• System sizing recommendations</li>
+                <li>• Implementation roadmap</li>
+                <li>• Cost-benefit analysis</li>
+              </ul>
             </div>
           </div>
-        )
-      }
+        </div>
+      `
     },
     {
-      id: 'hardware-procurement',
+      id: 'procurement',
       title: 'Hardware Procurement',
-      subtitle: 'Get The Right System For The Job',
-      description: 'We partner with only the best hashrate heating system manufacturers to source high-quality hardware tailored to your specific heating needs, ensuring optimal performance, efficiency and reliability.',
-      icon: Package,
-      preview: {
-        title: 'Sample Hardware Procurement Details',
-        content: (
-          <div className="bg-white dark:bg-surface-800 p-6 rounded-lg shadow-lg">
-            <div className="border-b border-surface-200 dark:border-surface-700 pb-4 mb-4">
-              <h3 className="text-2xl font-bold text-surface-900 dark:text-surface-100">Hardware Procurement</h3>
-              <p className="text-surface-600 dark:text-surface-400">Hashrate Heating Hydronic Boiler Integration</p>
-            </div>
-            <div className="space-y-6">
-              <img
-                src="https://images.pexels.com/photos/834892/pexels-photo-834892.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
-                alt="System Design"
-                className="w-full h-64 object-cover rounded-lg mb-4"
-              />
-              <div className="grid grid-cols-2 gap-4">
+      description: 'We source and procure the optimal hashrate heating hardware for your specific application.',
+      icon: Wrench,
+      modalContent: `
+        <div class="space-y-6">
+          <div>
+            <h3 class="text-xl font-semibold text-surface-900 dark:text-surface-100 mb-4">Hardware Solutions</h3>
+            <p class="text-surface-600 dark:text-surface-400 mb-6">Exergy offers hardware solutions for a variety of heating systems and applications.</p>
+          </div>
+          
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div>
+              <h4 class="text-lg font-semibold text-primary-600 dark:text-primary-400 mb-4">Currently Offering</h4>
+              <div class="space-y-4">
                 <div>
-                  <h4 className="font-semibold text-surface-900 dark:text-surface-100 mb-2">Components</h4>
-                  <ul className="space-y-2 text-sm text-surface-600 dark:text-surface-400">
-                    <li>• Hashrate Heaters (Bitcoin Miners)</li>
-                    <li>• Digital Boiler (Rack system for miners)</li>
-                    <li>• Heat exchangers</li>
-                    <li>• Circulation pumps and valves</li>
-                    <li>• Manifolds and hydronic loop design</li>
-                    <li>• Temperature sensors</li>
-                    <li>• PLC, control hub and interface devices</li>
-                  </ul>
+                  <h5 class="font-semibold text-surface-900 dark:text-surface-100">Space Heaters</h5>
+                  <p class="text-sm text-surface-600 dark:text-surface-400">Room Heating</p>
                 </div>
                 <div>
-                  <h4 className="font-semibold text-surface-900 dark:text-surface-100 mb-2">Specifications</h4>
-                  <ul className="space-y-2 text-sm text-surface-600 dark:text-surface-400">
-                    <li>• Flow rate: 20 GPM</li>
-                    <li>• Max temp: 150°F</li>
-                    <li>• Pressure: 30 PSI</li>
-                    <li>• Power: 40,000 W</li>
-                    <li>• Voltage: 380~415 (3 Phase) </li>
-                    <li>• Current: 80 A </li>
-                    <li>• Frequency: 50~60 Hz </li>
-                  </ul>
+                  <h5 class="font-semibold text-surface-900 dark:text-surface-100">Hydronic Boilers</h5>
+                  <p class="text-sm text-surface-600 dark:text-surface-400">Radiant Baseboards and Floor Heating</p>
+                </div>
+                <div>
+                  <h5 class="font-semibold text-surface-900 dark:text-surface-100">Commercial & Industrial Boilers</h5>
+                  <p class="text-sm text-surface-600 dark:text-surface-400">Radiant Heating for Large Applications</p>
+                </div>
+              </div>
+            </div>
+            
+            <div>
+              <h4 class="text-lg font-semibold text-secondary-600 dark:text-secondary-400 mb-4">Coming Soon</h4>
+              <div class="space-y-4">
+                <div>
+                  <h5 class="font-semibold text-surface-900 dark:text-surface-100">Forced Air Furnaces</h5>
+                  <p class="text-sm text-surface-600 dark:text-surface-400">HVAC Duct Heating</p>
+                </div>
+                <div>
+                  <h5 class="font-semibold text-surface-900 dark:text-surface-100">Hot Water Heaters</h5>
+                  <p class="text-sm text-surface-600 dark:text-surface-400">Domestic Water Tank Heating</p>
                 </div>
               </div>
             </div>
           </div>
-        )
-      }
+        </div>
+      `
     },
     {
-      id: 'installation-commissioning',
-      title: 'Installation & Commissioning',
-      subtitle: 'Coordinate Installation & Bring The System Online',
-      description: 'We collaborate with certified trade partners to professionally install your hashrate heating system, ensuring seamless integration and optimal performance from day one.',
-      icon: Wrench,
-      preview: {
-        title: 'Sample Install Process',
-        content: (
-          <div className="bg-white dark:bg-surface-800 p-6 rounded-lg shadow-lg">
-            <div className="border-b border-surface-200 dark:border-surface-700 pb-4 mb-4">
-              <h3 className="text-2xl font-bold text-surface-900 dark:text-surface-100">Installation Timeline</h3>
-              <p className="text-surface-600 dark:text-surface-400">Project Execution Plan</p>
+      id: 'installation',
+      title: 'Installation & Integration',
+      description: 'Professional installation and seamless integration with your existing heating infrastructure.',
+      icon: Activity,
+      modalContent: `
+        <div class="space-y-6">
+          <div>
+            <h3 class="text-xl font-semibold text-surface-900 dark:text-surface-100 mb-4">Installation Process</h3>
+            <p class="text-surface-600 dark:text-surface-400 mb-4">Our certified technicians ensure seamless integration of your hashrate heating system.</p>
+          </div>
+          
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div>
+              <h4 class="text-lg font-semibold text-surface-900 dark:text-surface-100 mb-3">Installation Steps</h4>
+              <ul class="space-y-2 text-surface-600 dark:text-surface-400">
+                <li>• Site preparation and safety assessment</li>
+                <li>• Hardware installation and positioning</li>
+                <li>• Electrical and network connections</li>
+                <li>• System integration and testing</li>
+                <li>• Performance optimization</li>
+              </ul>
             </div>
-            <div className="space-y-6">
-              <div className="space-y-4">
-                {[
-                  { phase: 'Phase 1: Equipment Procurement'},
-                  { phase: 'Phase 2: Site Preparation'},
-                  { phase: 'Phase 3: Hardware Installation'},
-                  { phase: 'Phase 4: System Integration'},
-                  { phase: 'Phase 5: Setup & Commissioning'}
-                ].map((phase, index) => (
-                  <div key={index} className="bg-surface-50 dark:bg-surface-700 p-4 rounded-lg">
-                    <div className="flex justify-between items-center">
-                      <h4 className="font-semibold text-surface-900 dark:text-surface-100">{phase.phase}</h4>
-                      <span className="text-sm text-primary-600">{phase.duration}</span>
-                    </div>
-                  </div>
-                ))}
-              </div>
-              <div>
-                <h4 className="font-semibold text-surface-900 dark:text-surface-100 mb-2">Key Deliverables</h4>
-                <ul className="space-y-2 text-sm text-surface-600 dark:text-surface-400">
-                  <li>• Hardware sourcing and delivery</li>
-                  <li>• Professional installation</li>
-                  <li>• System integration and testing</li>
-                  <li>• Operation training and handover</li>
-                </ul>
-              </div>
+            
+            <div>
+              <h4 class="text-lg font-semibold text-surface-900 dark:text-surface-100 mb-3">Quality Assurance</h4>
+              <ul class="space-y-2 text-surface-600 dark:text-surface-400">
+                <li>• Comprehensive system testing</li>
+                <li>• Performance verification</li>
+                <li>• Safety compliance checks</li>
+                <li>• Customer training and handover</li>
+                <li>• Warranty activation</li>
+              </ul>
             </div>
           </div>
-        )
-      }
+        </div>
+      `
     },
     {
       id: 'monitoring',
-      title: 'Remote Monitoring',
-      subtitle: 'Ensure Your Heater Is Always Healthy',
-      description: 'We leverage private and secure remote monitoring to ensure your heating system is always healthy and maximizing earnings. Because hashrate heaters are digital, we can sense when it is time for a tune up - before you do.',
-      icon: Monitor,
-      preview: {
-        title: 'Sample Monitored Data',
-        content: (
-          <div className="bg-white dark:bg-surface-800 p-6 rounded-lg shadow-lg">
-            <div className="border-b border-surface-200 dark:border-surface-700 pb-4 mb-4">
-              <h3 className="text-2xl font-bold text-surface-900 dark:text-surface-100">System Monitoring</h3>
-              <p className="text-surface-600 dark:text-surface-400">Real-time Performance Dashboard</p>
+      title: 'Monitoring & Support',
+      description: 'Ongoing monitoring, maintenance, and support to ensure optimal performance and maximum earnings.',
+      icon: Headphones,
+      modalContent: `
+        <div class="space-y-6">
+          <div>
+            <h3 class="text-xl font-semibold text-surface-900 dark:text-surface-100 mb-4">Ongoing Support</h3>
+            <p class="text-surface-600 dark:text-surface-400 mb-4">Our comprehensive monitoring and support services ensure your system operates at peak performance.</p>
+          </div>
+          
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div>
+              <h4 class="text-lg font-semibold text-surface-900 dark:text-surface-100 mb-3">24/7 Monitoring</h4>
+              <ul class="space-y-2 text-surface-600 dark:text-surface-400">
+                <li>• Real-time performance tracking</li>
+                <li>• Automated alert systems</li>
+                <li>• Predictive maintenance scheduling</li>
+                <li>• Remote diagnostics and troubleshooting</li>
+                <li>• Performance optimization recommendations</li>
+              </ul>
             </div>
-            <div className="space-y-6">
-              <div className="grid grid-cols-2 gap-4">
-                <div className="bg-surface-50 dark:bg-surface-700 p-4 rounded-lg">
-                  <h4 className="font-semibold text-surface-900 dark:text-surface-100 mb-2">System Health</h4>
-                  <div className="space-y-2">
-                    <div className="flex justify-between text-sm">
-                      <span className="text-surface-600 dark:text-surface-400">Overall Status</span>
-                      <span className="text-green-600">Optimal</span>
-                    </div>
-                    <div className="flex justify-between text-sm">
-                      <span className="text-surface-600 dark:text-surface-400">Uptime</span>
-                      <span className="text-primary-600">Matches expected heat load.</span>
-                    </div>
-                  </div>
-                </div>
-                <div className="bg-surface-50 dark:bg-surface-700 p-4 rounded-lg">
-                  <h4 className="font-semibold text-surface-900 dark:text-surface-100 mb-2">Performance</h4>
-                  <div className="space-y-2">
-                    <div className="flex justify-between text-sm">
-                      <span className="text-surface-600 dark:text-surface-400">Heat Output</span>
-                      <span className="text-primary-600">45,000 BTU/hr</span>
-                    </div>
-                    <div className="flex justify-between text-sm">
-                      <span className="text-surface-600 dark:text-surface-400">Hashrate & Temperatures</span>
-                      <span className="text-primary-600">Nominal</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div>
-                <h4 className="font-semibold text-surface-900 dark:text-surface-100 mb-2">Monitoring Features</h4>
-                <ul className="space-y-2 text-sm text-surface-600 dark:text-surface-400">
-                  <li>• 24/7 system monitoring</li>
-                  <li>• Automated alerts and notifications</li>
-                  <li>• Performance optimization</li>
-                  <li>• Diagnostics and support</li>
-                </ul>
-              </div>
+            
+            <div>
+              <h4 class="text-lg font-semibold text-surface-900 dark:text-surface-100 mb-3">Support Services</h4>
+              <ul class="space-y-2 text-surface-600 dark:text-surface-400">
+                <li>• Technical support hotline</li>
+                <li>• Regular maintenance visits</li>
+                <li>• Software updates and upgrades</li>
+                <li>• Performance reporting</li>
+                <li>• Emergency response service</li>
+              </ul>
             </div>
           </div>
-        )
-      }
+        </div>
+      `
     }
   ]
 
-  const roadmap = [
+  const values = [
     {
-      quarter: 'Q2 2025',
-      title: 'Launch & Growth',
-      events: [
-        'Official company launch',
-        'Heat Audit & design services',
-        'Office demo site install'
-      ]
-    },
-    {
-      quarter: 'Q3 2025',
-      title: 'Data Collection & Optimization',
-      events: [
-        'Project data collection',
-        'Monitoring software development',
-        'Build trades partner network'
-      ]
-    },
-    {
-      quarter: 'Q4 2025',
+      icon: Target,
       title: 'Innovation',
-      events: [
-        'New product development',
-        'Monitoring software improvements',
-        'Hardware product partnerships'
-      ]
+      description: 'Pioneering the future of heating technology through Bitcoin integration'
     },
     {
-      quarter: 'Q1 2026',
-      title: 'Scale',
-      events: [
-        'New market expansion',
-        'New product categories',
-        'Expand service offerings'
-      ]
+      icon: Users,
+      title: 'Customer Success',
+      description: 'Dedicated to maximizing your savings and system performance'
+    },
+    {
+      icon: Lightbulb,
+      title: 'Sustainability',
+      description: 'Creating efficient, profitable, and environmentally conscious heating solutions'
     }
   ]
 
-  // HubSpot form loading effect
   useEffect(() => {
     // Check if HubSpot script is already loaded
-    const existingScript = document.querySelector('script[src="//js-na2.hsforms.net/forms/embed/v2.js"]')
+    const existingScript = document.querySelector('script[src*="hsforms.net"]')
     
     if (!existingScript) {
       // Create and load the HubSpot script
       const script = document.createElement('script')
-      script.charset = 'utf-8'
-      script.type = 'text/javascript'
-      script.src = '//js-na2.hsforms.net/forms/embed/v2.js'
-      document.head.appendChild(script)
+      script.src = 'https://js-na2.hsforms.net/forms/embed/243159145.js'
+      script.defer = true
+      document.body.appendChild(script)
 
-      // Initialize the form once the script loads
+      // Initialize the form after script loads
       script.onload = () => {
         if (window.hbspt) {
           window.hbspt.forms.create({
-            portalId: "243159145",
-            formId: "59b79a45-8fe7-43f2-8b1c-75961746a63e",
             region: "na2",
+            portalId: "243159145",
+            formId: "106749ae-0515-4d1a-925d-edf71b3bfcae",
             target: "#hubspot-form-container"
           })
         }
@@ -611,437 +234,256 @@ const About = () => {
     } else if (window.hbspt) {
       // If script already exists and hbspt is available, just create the form
       window.hbspt.forms.create({
-        portalId: "243159145",
-        formId: "59b79a45-8fe7-43f2-8b1c-75961746a63e",
         region: "na2",
+        portalId: "243159145",
+        formId: "106749ae-0515-4d1a-925d-edf71b3bfcae",
         target: "#hubspot-form-container"
       })
     }
+
+    // Cleanup function to remove script when component unmounts
+    return () => {
+      const scriptToRemove = document.querySelector('script[src*="hsforms.net"]')
+      if (scriptToRemove) {
+        document.body.removeChild(scriptToRemove)
+      }
+    }
   }, [])
+
+  const openModal = (stepId: string) => {
+    setSelectedModal(stepId)
+  }
+
+  const closeModal = () => {
+    setSelectedModal(null)
+  }
+
+  const selectedStep = processSteps.find(step => step.id === selectedModal)
 
   return (
     <div className="bg-surface-50 dark:bg-surface-900">
       {/* Hero Section with Custom Gradient */}
       <div className="bg-gradient-to-r from-[#4970A5] to-[#718EBC] py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
-            What We're About
-          </h1>
-          <p className="text-xl text-white/90 max-w-2xl mx-auto">
-            Revolutionizing heating, supporting bitcoin, saving you money
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center">
+            <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
+              About EXERGY
+            </h1>
+            <p className="text-xl text-white/90 max-w-2xl mx-auto">
+              We're building the future of heating - where every watt pays
+            </p>
+          </div>
+        </div>
+      </div>
+
+      {/* Mission Statement */}
+      <div className="py-20 bg-white dark:bg-surface-800">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 className="text-3xl font-bold text-surface-900 dark:text-surface-100 mb-8">
+            Our Mission
+          </h2>
+          <p className="text-xl text-surface-600 dark:text-surface-400 leading-relaxed">
+            To revolutionize heating by making it profitable. We believe every home and business should benefit 
+            from the heat they generate, turning a necessary expense into a revenue stream through Bitcoin mining integration.
           </p>
         </div>
       </div>
 
-      {/* Mission Section */}
-      <div className="bg-white dark:bg-surface-800 py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div 
-            className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center"
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true }}
-            variants={containerVariants}
-          >
-            <motion.div variants={itemVariants}>
-              <motion.div 
-                className="inline-flex items-center mb-6"
-                initial={{ scale: 0 }}
-                whileInView={{ scale: 1 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.4 }}
-              >
-                <div className="p-2 bg-primary-100 dark:bg-primary-900 rounded-lg mr-3">
-                  <Target className="h-6 w-6 text-primary-600 dark:text-primary-400" />
-                </div>
-                <h2 className="text-2xl font-bold text-surface-900 dark:text-surface-100">Our Mission</h2>
-              </motion.div>
-              <motion.p 
-                className="text-lg text-surface-600 dark:text-surface-400 mb-8"
-                variants={itemVariants}
-              >
-                Our mission is to revolutionize the heating industry with electric devices powered by hashrate, delivering heat that pays. We're ethically and securely turning energy costs into revenue for homes and businesses.
-              </motion.p>
-              
-              <motion.div 
-                className="space-y-6"
-                variants={containerVariants}
-              >
-                {missionPoints.map((point, index) => (
-                  <motion.div
-                    key={index}
-                    className="flex items-start"
-                    variants={itemVariants}
-                  >
-                    <div className="p-2 bg-primary-100 dark:bg-primary-900 rounded-lg mr-4">
-                      <point.icon className="h-6 w-6 text-primary-600 dark:text-primary-400" />
-                    </div>
-                    <div>
-                      <h4 className="text-xl font-semibold text-surface-900 dark:text-surface-100">{point.title}</h4>
-                      <p className="text-surface-600 dark:text-surface-400">{point.description}</p>
-                    </div>
-                  </motion.div>
-                ))}
-              </motion.div>
-            </motion.div>
-            
-            {/* Single Logo with Letter Cascade on Blue Gradient Background */}
-            <motion.div 
-              className="relative flex items-center justify-center"
-              variants={itemVariants}
-            >
-              <div className="w-80 h-80 bg-gradient-to-r from-[#4970A5] to-[#718EBC] rounded-2xl flex items-center justify-center shadow-2xl">
-                <motion.div
-                  className="flex items-center justify-center"
-                  variants={letterContainerVariants}
-                  initial="hidden"
-                  whileInView="visible"
-                  viewport={{ once: true }}
-                >
-                  {/* Each letter of EXERGY cascades in from left to right */}
-                  <motion.span
-                    variants={letterVariants}
-                    className="text-6xl font-bold text-white font-valorant"
-                  >
-                    E
-                  </motion.span>
-                  <motion.span
-                    variants={letterVariants}
-                    className="text-6xl font-bold text-white font-valorant"
-                  >
-                    X
-                  </motion.span>
-                  <motion.span
-                    variants={letterVariants}
-                    className="text-6xl font-bold text-white font-valorant"
-                  >
-                    E
-                  </motion.span>
-                  <motion.span
-                    variants={letterVariants}
-                    className="text-6xl font-bold text-white font-valorant"
-                  >
-                    R
-                  </motion.span>
-                  <motion.span
-                    variants={letterVariants}
-                    className="text-6xl font-bold text-white font-valorant"
-                  >
-                    G
-                  </motion.span>
-                  <motion.span
-                    variants={letterVariants}
-                    className="text-6xl font-bold text-white font-valorant"
-                  >
-                    Y
-                  </motion.span>
-                </motion.div>
-              </div>
-            </motion.div>
-          </motion.div>
-        </div>
-      </div>
-
-      {/* Our Expertise Section */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
-        <h2 className="text-3xl font-bold text-surface-900 dark:text-surface-100 text-center mb-12">Our Expertise</h2>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          <div className="bg-white dark:bg-surface-800 rounded-lg shadow-xl p-8 transform hover:scale-105 transition-transform">
-            <div className="flex justify-center">
-              <BookOpen className="h-12 w-12 text-primary-600 dark:text-primary-400" />
-            </div>
-            <h3 className="mt-4 text-xl font-semibold text-surface-900 dark:text-surface-100">Industry Leaders</h3>
-            <p className="mt-2 text-surface-600 dark:text-surface-400">
-              Our CEO wrote the first comprehensive book on hashrate heating - Examaning why this technology matters, who can benefit, how to implement it, and how much you can save.
-            </p>
-          </div>
-          <div className="bg-white dark:bg-surface-800 rounded-lg shadow-xl p-8 transform hover:scale-105 transition-transform">
-            <div className="flex justify-center">
-              <Megaphone className="h-12 w-12 text-primary-600 dark:text-primary-400" />
-            </div>
-            <h3 className="mt-4 text-xl font-semibold text-surface-900 dark:text-surface-100">Community Builders</h3>
-            <p className="mt-2 text-surface-600 dark:text-surface-400">
-              Our Founders host the annual Heatpunk Summit - A first of its kind conference dedicated entierly to hashrate heating, covering technical developments to tradesmen education. 
-            </p>
-          </div>
-          <div className="bg-white dark:bg-surface-800 rounded-lg shadow-xl p-8 transform hover:scale-105 transition-transform">
-            <div className="flex justify-center">
-              <Hammer className="h-12 w-12 text-primary-600 dark:text-primary-400" />
-            </div>
-            <h3 className="mt-4 text-xl font-semibold text-surface-900 dark:text-surface-100">Engineers at Heart</h3>
-            <p className="mt-2 text-surface-600 dark:text-surface-400">
-              Our experience encompasses thermal engineering, structural engineering, licensed professional certifications and skilled startup building with a bitcoiner focus.
-            </p>
-          </div>
-        </div>
-      </div>
-      
-      {/* Book & Leadership Section */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center mb-16">
-          <div className="relative">
-            <div className="bg-surface-900 rounded-lg p-8">
-              <div className="max-w-sm">
-                <Book className="h-12 w-12 text-primary-400 mb-4" />
-                <h3 className="text-2xl font-bold text-white mb-4">Bitcoin Mining Heat Reuse</h3>
-                <p className="text-surface-300 mb-6">
-                  The definitive guide to hashrate heating technology, written by our founder Tyler Stevens.
-                </p>
-                <div className="mb-24 sm:mb-0">
-                  <a
-                    href="https://braiins.com/books/bitcoin-mining-heat-reuse"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center justify-center px-6 py-3 bg-primary-600 text-white rounded-lg hover:bg-primary-700 transition-colors text-base font-subheading"
-                  >
-                    Get the Book
-                    <ArrowRight className="ml-2 h-5 w-5" />
-                  </a>
-                </div>
-              </div>
-            </div>
-            <div className="absolute bottom-4 sm:-bottom-6 right-4 sm:-right-6 bg-white dark:bg-surface-700 p-6 rounded-lg shadow-xl">
-              <p className="text-xl font-bold text-primary-600 dark:text-primary-400">#1</p>
-              <p className="text-surface-600 dark:text-surface-400">Industry Resource</p>
-            </div>
-          </div>
-          <div className="relative flex justify-center">
-            <img
-              src="/BookCoverImage.png"
-              alt="Bitcoin Mining Heat Reuse Book Cover"
-              className="w-80 h-auto rounded-lg shadow-2xl transform rotate-6 hover:rotate-0 transition-transform duration-300"
-            />
-          </div>
-        </div>
-
-        {/* Heatpunk Summit Section */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
-          <div className="relative lg:order-2">
-            <div className="bg-surface-900 rounded-lg p-6 lg:p-8 w-full max-w-sm mx-auto lg:mx-0">
-              <Calendar className="h-12 w-12 text-primary-400 mb-4" />
-              <h3 className="text-2xl font-bold text-white mb-4">Heatpunk Summit</h3>
-              <p className="text-surface-300 mb-6">
-                The annual Heatpunk Summit is a conference dedicated to hashrate heating, hosted by our founder Tyler Stevens.
-              </p>
-              <a
-                href="https://denver.space/heatpunk_summit"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center justify-center px-6 py-3 bg-primary-600 text-white rounded-lg hover:bg-primary-700 transition-colors text-base font-subheading"
-              >
-                Visit Conference Site
-                <ArrowRight className="ml-2 h-5 w-5" />
-              </a>
-            </div>
-          </div>
-          <div className="relative lg:order-1">
-            <div className="relative w-full">
-              <img
-                src="/IMG_3841.PNG"
-                alt="Conference and Summit"
-                className="w-full h-64 sm:h-72 md:h-80 lg:h-96 xl:h-[400px] object-contain object-center rounded-lg shadow-2xl bg-white"
-              />
-              <div className="absolute -bottom-4 -right-4 bg-white dark:bg-surface-700 p-4 lg:p-6 rounded-lg shadow-xl">
-                <p className="text-xl font-bold text-primary-600 dark:text-primary-400">2026</p>
-                <p className="text-surface-600 dark:text-surface-400">Next Summit</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      {/* Our Process Section */}
-      <div className="bg-white dark:bg-surface-800 py-20">
+      {/* Our Process */}
+      <div className="py-20 bg-surface-50 dark:bg-surface-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6 }}
-            >
-              <h2 className="text-3xl font-bold text-surface-900 dark:text-surface-100 mb-6">Our Process</h2>
-              <p className="text-xl text-surface-600 dark:text-surface-400 max-w-2xl mx-auto">
-                We've developed a four-step approach to implementing the right hashrate heating solutions, backed by math and industry expertise.
-              </p>
-            </motion.div>
+            <h2 className="text-3xl font-bold text-surface-900 dark:text-surface-100 mb-4">
+              Our Process
+            </h2>
+            <p className="text-xl text-surface-600 dark:text-surface-400">
+              From analysis to implementation, we handle every step
+            </p>
           </div>
 
-          <div className="space-y-12">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {processSteps.map((step, index) => (
-              <motion.div
-                key={step.id}
-                className="relative"
-                initial={{ opacity: 0, y: 50 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, margin: "-100px" }}
-                transition={{ duration: 0.8, delay: index * 0.2 }}
-              >
-                {index !== processSteps.length - 1 && (
-                  <motion.div
-                    className="absolute left-8 top-20 h-full w-0.5 bg-primary-200 dark:bg-primary-800"
-                    initial={{ scaleY: 0 }}
-                    whileInView={{ scaleY: 1 }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 1, delay: 0.5 }}
-                  />
-                )}
-                <div className="relative flex items-start">
-                  <motion.div
-                    className="flex h-16 w-16 items-center justify-center rounded-full bg-primary-100 dark:bg-primary-900"
-                    initial={{ scale: 0 }}
-                    whileInView={{ scale: 1 }}
-                    viewport={{ once: true }}
-                    transition={{ type: "spring", stiffness: 200, delay: index * 0.2 }}
-                  >
-                    <step.icon className="h-8 w-8 text-primary-600 dark:text-primary-400" />
-                  </motion.div>
-                  <motion.div
-                    className="ml-6 flex-1"
-                    initial={{ opacity: 0, x: 20 }}
-                    whileInView={{ opacity: 1, x: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 0.6, delay: (index * 0.2) + 0.3 }}
-                  >
-                    <div className="flex items-center justify-between">
-                      <div>
-                        <h3 className="text-xl font-bold text-surface-900 dark:text-surface-100">{step.title}</h3>
-                        <h4 className="text-lg font-medium text-primary-600 dark:text-primary-400 mt-1 mb-2">{step.subtitle}</h4>
-                        <p className="mt-2 text-surface-600 dark:text-surface-400">{step.description}</p>
-                      </div>
-                      <motion.button
-                        onClick={() => setExpandedStep(expandedStep === step.id ? null : step.id)}
-                        className="ml-4 px-4 py-2 bg-primary-600 text-white rounded-lg hover:bg-primary-700 transition-colors text-base font-subheading"
-                        whileHover={{ scale: 1.05 }}
-                        whileTap={{ scale: 0.95 }}
-                      >
-                        {expandedStep === step.id ? 'Close Preview' : 'Example'}
-                      </motion.button>
-                    </div>
-
-                    {expandedStep === step.id && (
-                      <div className="fixed inset-0 z-50 overflow-y-auto">
-                        <div className="flex items-center justify-center min-h-screen px-4 pt-4 pb-20 text-center sm:block sm:p-0">
-                          <div className="fixed inset-0 transition-opacity" aria-hidden="true">
-                            <div className="absolute inset-0 bg-surface-900 opacity-75"></div>
-                          </div>
-
-                          <div className="inline-block align-bottom bg-surface-50 dark:bg-surface-900 rounded-lg text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle sm:max-w-4xl sm:w-full">
-                            <div className="bg-surface-50 dark:bg-surface-900 px-4 pt-5 pb-4 sm:p-6">
-                              <div className="flex justify-between items-center mb-4">
-                                <h3 className="text-2xl font-bold text-surface-900 dark:text-surface-100">
-                                  {step.preview.title}
-                                </h3>
-                                <button
-                                  onClick={() => setExpandedStep(null)}
-                                  className="text-surface-500 hover:text-surface-700 dark:text-surface-400 dark:hover:text-surface-200"
-                                >
-                                  <X className="h-6 w-6" />
-                                </button>
-                              </div>
-                              {step.preview.content}
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    )}
-                  </motion.div>
+              <div key={step.id} className="bg-white dark:bg-surface-800 rounded-lg shadow-lg p-6 relative">
+                <div className="flex items-center justify-center w-12 h-12 bg-primary-100 dark:bg-primary-900 rounded-lg mb-4">
+                  <step.icon className="h-6 w-6 text-primary-600 dark:text-primary-400" />
                 </div>
-              </motion.div>
+                <h3 className="text-lg font-semibold text-surface-900 dark:text-surface-100 mb-2">
+                  {step.title}
+                </h3>
+                <p className="text-surface-600 dark:text-surface-400 mb-4">
+                  {step.description}
+                </p>
+                <button
+                  onClick={() => openModal(step.id)}
+                  className="inline-flex items-center text-primary-600 dark:text-primary-400 hover:text-primary-700 dark:hover:text-primary-300 transition-colors"
+                >
+                  <span className="mr-2">Example</span>
+                  <ArrowRight className="h-4 w-4" />
+                </button>
+                {index < processSteps.length - 1 && (
+                  <div className="hidden lg:block absolute top-1/2 -right-4 transform -translate-y-1/2">
+                    <ArrowRight className="h-6 w-6 text-surface-300 dark:text-surface-600" />
+                  </div>
+                )}
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+
+      {/* Modal */}
+      {selectedModal && selectedStep && (
+        <div className="fixed inset-0 z-50 overflow-y-auto">
+          <div className="flex items-center justify-center min-h-screen px-4 pt-4 pb-20 text-center sm:block sm:p-0">
+            <div className="fixed inset-0 transition-opacity" aria-hidden="true">
+              <div className="absolute inset-0 bg-surface-900 opacity-75"></div>
+            </div>
+
+            <div className="inline-block align-bottom bg-white dark:bg-surface-800 rounded-lg text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle sm:max-w-4xl sm:w-full">
+              <div className="bg-white dark:bg-surface-800 px-4 pt-5 pb-4 sm:p-6 sm:pb-4">
+                <div className="flex justify-between items-center mb-6">
+                  <h3 className="text-2xl font-bold text-surface-900 dark:text-surface-100">
+                    {selectedStep.title}
+                  </h3>
+                  <button
+                    onClick={closeModal}
+                    className="text-surface-500 hover:text-surface-700 dark:text-surface-400 dark:hover:text-surface-200"
+                  >
+                    <X className="h-6 w-6" />
+                  </button>
+                </div>
+                <div 
+                  className="text-surface-600 dark:text-surface-400"
+                  dangerouslySetInnerHTML={{ __html: selectedStep.modalContent }}
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
+
+      {/* Our Values */}
+      <div className="py-20 bg-white dark:bg-surface-800">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl font-bold text-surface-900 dark:text-surface-100 mb-4">
+              Our Values
+            </h2>
+            <p className="text-xl text-surface-600 dark:text-surface-400">
+              The principles that guide everything we do
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {values.map((value, index) => (
+              <div key={index} className="text-center">
+                <div className="flex items-center justify-center w-16 h-16 bg-primary-100 dark:bg-primary-900 rounded-full mx-auto mb-4">
+                  <value.icon className="h-8 w-8 text-primary-600 dark:text-primary-400" />
+                </div>
+                <h3 className="text-xl font-semibold text-surface-900 dark:text-surface-100 mb-2">
+                  {value.title}
+                </h3>
+                <p className="text-surface-600 dark:text-surface-400">
+                  {value.description}
+                </p>
+              </div>
             ))}
           </div>
         </div>
       </div>
 
       {/* Team Section */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
-        <h2 className="text-3xl font-bold text-surface-900 dark:text-surface-100 text-center mb-12">Our Team</h2>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {team.map((member, index) => (
-            <div key={index} className="bg-white dark:bg-surface-800 rounded-lg shadow-xl p-6">
-              <div className="relative w-48 h-48 mx-auto mb-6">
-                <img
-                  src={member.image}
-                  alt={member.name}
-                  className="rounded-full object-cover w-full h-full"
-                />
-              </div>
-              <h3 className="text-xl font-semibold text-surface-900 dark:text-surface-100 text-center">{member.name}</h3>
-              <p className="text-primary-600 dark:text-primary-400 text-center mb-4">{member.role}</p>
-              <p className="text-surface-600 dark:text-surface-400 text-center">{member.description}</p>
-            </div>
-          ))}
-        </div>
-      </div>
-
-      {/* Roadmap Section */}
-      <div className="bg-white dark:bg-surface-800 py-20">
+      <div className="py-20 bg-surface-50 dark:bg-surface-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold text-surface-900 dark:text-surface-100 text-center mb-12">Our Roadmap</h2>
-          <div className="relative">
-            <div className="absolute left-11 md:left-1/2 transform md:-translate-x-1/2 h-full w-1 bg-primary-200 dark:bg-primary-800"></div>
-            <div className="space-y-12">
-              {roadmap.map((milestone, index) => (
-                <div key={index} className="relative">
-                  <div className="flex items-center">
-                    <div className="absolute left-8 md:left-1/2 transform md:-translate-x-1/2 w-8 h-8 bg-primary-600 dark:bg-primary-500 rounded-full text-white flex items-center justify-center">
-                      {index + 1}
-                    </div>
-                    <div className={`w-full md:w-1/2 pl-20 md:pl-0 ${index === 0 || index === 2 ? 'md:pr-12 md:text-right' : 'md:pl-12 md:ml-auto'}`}>
-                      <h3 className="text-xl font-semibold text-surface-900 dark:text-surface-100 mb-2">{milestone.quarter}</h3>
-                      <h4 className="text-lg font-medium text-primary-600 dark:text-primary-400 mb-2">{milestone.title}</h4>
-                      <ul className="space-y-2">
-                        {milestone.events.map((event, eventIndex) => (
-                          <li key={eventIndex} className="text-surface-600 dark:text-surface-400">{event}</li>
-                        ))}
-                      </ul>
-                    </div>
-                  </div>
+          <div className="text-center mb-16">
+            <h2 className="text-3xl font-bold text-surface-900 dark:text-surface-100 mb-4">
+              Meet Our Team
+            </h2>
+            <p className="text-xl text-surface-600 dark:text-surface-400">
+              The experts behind the hashrate heating revolution
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {team.map((member, index) => (
+              <div key={index} className="bg-white dark:bg-surface-800 rounded-lg shadow-lg overflow-hidden">
+                <div className="aspect-square">
+                  <img
+                    src={member.image}
+                    alt={member.name}
+                    className="w-full h-full object-cover"
+                  />
                 </div>
-              ))}
-            </div>
+                <div className="p-6">
+                  <h3 className="text-xl font-semibold text-surface-900 dark:text-surface-100 mb-2">
+                    {member.name}
+                  </h3>
+                  <p className="text-primary-600 dark:text-primary-400 mb-4">{member.role}</p>
+                  <p className="text-surface-600 dark:text-surface-400">
+                    {member.bio}
+                  </p>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       </div>
 
       {/* Join the Movement Section with Custom Gradient */}
-      <div className="bg-gradient-to-r from-[#4970A5] to-[#718EBC] py-20">
-        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <Mail className="h-16 w-16 text-white mx-auto mb-6" />
-          <h2 className="text-3xl font-bold text-white mb-6">
+      <div className="relative py-16 overflow-hidden bg-gradient-to-r from-[#4970A5] to-[#718EBC]">
+        <div className="absolute inset-0">
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_-20%,rgba(255,255,255,0.1),transparent_75%)] animate-pulse"></div>
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_80%,rgba(47,59,105,0.3),transparent_50%)] animate-pulse [animation-delay:1s]"></div>
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_50%,rgba(255,255,255,0.1),transparent_50%)] animate-pulse [animation-delay:2s]"></div>
+        </div>
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 className="text-3xl font-heading text-white mb-4">
             Join the Movement
           </h2>
-          <p className="text-xl text-white/90 mb-8">
-            Be part of the revolution in heating technology. Stay informed about our latest developments, products, and opportunities.
+          <p className="text-xl font-body text-white/90 mb-8">
+            Be part of the hashrate heating revolution. Get updates on new products and industry insights.
           </p>
           
           {/* HubSpot Form Container */}
-          <div id="hubspot-form-container" className="max-w-md mx-auto">
-            {/* The HubSpot form will be injected here */}
-          </div>
-          
-          <p className="mt-4 text-sm text-white/90">
-            We respect your privacy. No spam, just important updates.
+          <div id="hubspot-form-container"></div>
+        </div>
+      </div>
+
+      {/* CTA Section */}
+      <div className="py-20 bg-white dark:bg-surface-800">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 className="text-3xl font-bold text-surface-900 dark:text-surface-100 mb-6">
+            Ready to Get Started?
+          </h2>
+          <p className="text-xl text-surface-600 dark:text-surface-400 mb-8">
+            Let's discuss how hashrate heating can transform your energy costs
           </p>
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+            <Link
+              to="/contact"
+              className="inline-flex items-center px-8 py-4 bg-primary-600 text-white rounded-lg hover:bg-primary-700 transition-colors text-base font-subheading"
+            >
+              Contact Us
+              <ArrowRight className="ml-2 h-5 w-5" />
+            </Link>
+            <Link
+              to="/book-call"
+              className="inline-flex items-center px-8 py-4 border border-primary-600 text-primary-600 dark:text-primary-400 rounded-lg hover:bg-primary-50 dark:hover:bg-primary-900 transition-colors text-base font-subheading"
+            >
+              Book a Call
+              <ArrowRight className="ml-2 h-5 w-5" />
+            </Link>
+          </div>
         </div>
       </div>
     </div>
   )
 }
 
-// Add HubSpot types to window object
+// Extend the Window interface to include hbspt
 declare global {
   interface Window {
-    hbspt: {
-      forms: {
-        create: (config: {
-          portalId: string
-          formId: string
-          region: string
-          target?: string
-        }) => void
-      }
-    }
+    hbspt: any;
   }
 }
 
