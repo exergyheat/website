@@ -378,7 +378,7 @@ const About = () => {
                       </div>
                       <div className="bg-green-50 dark:bg-green-900/20 rounded-lg p-3 mt-4">
                         <p className="text-sm text-green-800 dark:text-green-200 font-medium">
-                          Project pays for itself in 2.8 years, then generates $26,000+ annually
+                          Project pays for itself in 3 years, then generates $20,000+ annually
                         </p>
                       </div>
                     </div>
