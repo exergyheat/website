@@ -236,13 +236,13 @@ const About = () => {
                   <div className="flex items-end space-x-4 h-32">
                     <div className="flex-1 flex flex-col items-center">
                       <div className="w-full bg-red-500 rounded-t" style={{height: '80%'}}></div>
-                      <p className="text-sm font-medium text-surface-900 dark:text-surface-100 mt-2">Current System</p>
-                      <p className="text-lg font-bold text-red-600">$210,000</p>
+                      <p className="text-sm font-medium text-surface-900 dark:text-surface-100 mt-2">Propane System</p>
+                      <p className="text-lg font-bold text-red-600">-$60,000</p>
                     </div>
                     <div className="flex-1 flex flex-col items-center">
                       <div className="w-full bg-green-500 rounded-t" style={{height: '20%'}}></div>
                       <p className="text-sm font-medium text-surface-900 dark:text-surface-100 mt-2">Hashrate System</p>
-                      <p className="text-lg font-bold text-green-600">-$30,000</p>
+                      <p className="text-lg font-bold text-green-600">-$40,000</p>
                       <p className="text-xs text-surface-600 dark:text-surface-400">(net profit)</p>
                     </div>
                   </div>
