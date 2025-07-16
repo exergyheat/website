@@ -401,40 +401,24 @@ const About = () => {
         content: (
           <div className="bg-white dark:bg-surface-800 p-6 rounded-lg shadow-lg">
             <div className="border-b border-surface-200 dark:border-surface-700 pb-4 mb-4">
-              <h3 className="text-2xl font-bold text-surface-900 dark:text-surface-100">Hardware Procurement</h3>
-              <p className="text-surface-600 dark:text-surface-400">Hashrate Heating Hydronic Boiler Integration</p>
+              <h3 className="text-2xl font-bold text-surface-900 dark:text-surface-100">Hardware Solutions</h3>
+              <p className="text-surface-600 dark:text-surface-400">Exergy offers hardware solutions for a variety of heating systems and applications.</p>
             </div>
             <div className="space-y-6">
-              <img
-                src="https://images.pexels.com/photos/834892/pexels-photo-834892.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
-                alt="System Design"
-                className="w-full h-64 object-cover rounded-lg mb-4"
-              />
-              <div className="grid grid-cols-2 gap-4">
-                <div>
-                  <h4 className="font-semibold text-surface-900 dark:text-surface-100 mb-2">Components</h4>
-                  <ul className="space-y-2 text-sm text-surface-600 dark:text-surface-400">
-                    <li>• Hashrate Heaters (Bitcoin Miners)</li>
-                    <li>• Digital Boiler (Rack system for miners)</li>
-                    <li>• Heat exchangers</li>
-                    <li>• Circulation pumps and valves</li>
-                    <li>• Manifolds and hydronic loop design</li>
-                    <li>• Temperature sensors</li>
-                    <li>• PLC, control hub and interface devices</li>
-                  </ul>
-                </div>
-                <div>
-                  <h4 className="font-semibold text-surface-900 dark:text-surface-100 mb-2">Specifications</h4>
-                  <ul className="space-y-2 text-sm text-surface-600 dark:text-surface-400">
-                    <li>• Flow rate: 20 GPM</li>
-                    <li>• Max temp: 150°F</li>
-                    <li>• Pressure: 30 PSI</li>
-                    <li>• Power: 40,000 W</li>
-                    <li>• Voltage: 380~415 (3 Phase) </li>
-                    <li>• Current: 80 A </li>
-                    <li>• Frequency: 50~60 Hz </li>
-                  </ul>
-                </div>
+              <div>
+                <h4 className="font-semibold text-surface-900 dark:text-surface-100 mb-2">Currently Offering</h4>
+                <ul className="list-disc pl-6 text-sm text-surface-600 dark:text-surface-400 space-y-1">
+                  <li>Space Heaters (Room Heating)</li>
+                  <li>Hydronic Boilers (Radiant Baseboards and Floor Heating)</li>
+                  <li>Commercial & Industrial Boilers (Radiant Heating for Large Applications)</li>
+                </ul>
+              </div>
+              <div>
+                <h4 className="font-semibold text-surface-900 dark:text-surface-100 mb-2">Coming Soon</h4>
+                <ul className="list-disc pl-6 text-sm text-surface-600 dark:text-surface-400 space-y-1">
+                  <li>Forced Air Furnaces (HVAC Duct Heating)</li>
+                  <li>Hot Water Heaters (Domestic Water Tank Heating)</li>
+                </ul>
               </div>
             </div>
           </div>
