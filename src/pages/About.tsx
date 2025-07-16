@@ -174,7 +174,7 @@ const About = () => {
                   </div>
                   <div className="bg-white dark:bg-surface-800 rounded-lg p-4">
                     <p className="text-sm font-medium text-surface-500 dark:text-surface-400 mb-2">Design Month Duty Cycle</p>
-                    <p className="text-2xl font-bold text-primary-600">85%</p>
+                    <p className="text-2xl font-bold text-primary-600">95%</p>
                     <p className="text-sm text-surface-600 dark:text-surface-400">Peak winter operation</p>
                   </div>
                 </div>
