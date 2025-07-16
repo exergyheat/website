@@ -331,8 +331,8 @@ const About = () => {
                       <div className="flex items-start">
                         <div className="w-6 h-6 bg-primary-500 rounded-full flex items-center justify-center text-white text-xs font-bold mr-3 mt-0.5">2</div>
                         <div>
-                          <p className="font-medium text-surface-900 dark:text-surface-100">System Design</p>
-                          <p className="text-sm text-surface-600 dark:text-surface-400">Detailed engineering and specifications</p>
+                          <p className="font-medium text-surface-900 dark:text-surface-100">Hardware Procurement</p>
+                          <p className="text-sm text-surface-600 dark:text-surface-400">Order associated hardware from Exergy partners</p>
                         </div>
                       </div>
                       <div className="flex items-start">
@@ -345,8 +345,8 @@ const About = () => {
                       <div className="flex items-start">
                         <div className="w-6 h-6 bg-primary-500 rounded-full flex items-center justify-center text-white text-xs font-bold mr-3 mt-0.5">4</div>
                         <div>
-                          <p className="font-medium text-surface-900 dark:text-surface-100">Go Live</p>
-                          <p className="text-sm text-surface-600 dark:text-surface-400">System activation and monitoring setup</p>
+                          <p className="font-medium text-surface-900 dark:text-surface-100">Remote Monitoring</p>
+                          <p className="text-sm text-surface-600 dark:text-surface-400">System data collection and monitoring activation</p>
                         </div>
                       </div>
                     </div>
