@@ -1,7 +1,6 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 import { ArrowRight, Radiation as Radiator, Fan, Droplets, Cpu, ChevronDown, ChevronUp } from 'lucide-react'
-import { products } from '../data/products'
 
 const Products = () => {
   const [activeCategory, setActiveCategory] = useState<string | null>(null)
@@ -32,6 +31,53 @@ const Products = () => {
       icon: Cpu,
       description: 'Smart control systems and hardware for managing your hashrate heating devices. From sensors to servers, we provide complete control solutions.'
     }
+  ]
+
+  const products = [
+    {
+      id: 'sh-800',
+      category: 'space-heating',
+      name: 'Canaan Avalon Mini 3',
+      image: 'https://www.canaan.io/static/themes/default/images/official/official_mini3_index4.png',
+      specs: {
+        power: '800 W: 110-240V AC 50/60Hz',
+        hashrate: '37.5 TH/s',
+        heating: '2,730 BTU/hr',
+        capacity: '400 sqft',
+        noise: '45 dB',
+        dimensions: '30" x 4.1" x 8.5"'
+      },
+      price: '$999',
+      description: 'Perfect for heating small to medium-sized rooms while generating passive revenue. The Avalon Mini 3 is easy to setup, can be operated remotely, and has a whisper quiet fan. You won\'t even know it\'s there.',
+      features: [
+        'Plug-and-play setup',
+        'WiFi connectivity',
+        'Mobile app control',
+        'Quiet operation'
+      ]
+    },
+    {
+      id: 'hyd-5000',
+      category: 'hydronic',
+      name: 'RY3T Mini',
+      image: 'https://ry3t.com/wp-content/uploads/2025/03/2-1024x1024.png',
+      specs: {
+        power: '5000W',
+        hashrate: '206 TH/s',
+        heating: '17,060 BTU/hr',
+        waterTemp: '149°F max',
+        dimensions: '23.6" x 15.8" x 24.4"'
+      },
+      price: '$10,000',
+      description: 'Versatile electric boiler for hydronic hashrate heating applications. With a high water output temperature and smart control, this water boiler is great for a variety of use cases.',
+      features: [
+        'Radiant / hydronic loop applications',
+        'Hot water tank integration',
+        'Integrated heating loop pump',
+        'Integrated PLC control'
+
+      ]
+    },
   ]
 
   const filteredProducts = activeCategory
@@ -103,7 +149,7 @@ const Products = () => {
                   </div>
                 </div>
                 <div className="p-8">
-                  <h3 className="text-2xl font-bold text-surface-900 dark:text-surface-100 mb-4">{product.title}</h3>
+                  <h3 className="text-2xl font-bold text-surface-900 dark:text-surface-100 mb-4">{product.name}</h3>
                   <p className="text-xl font-semibold text-primary-600 dark:text-primary-400 mb-4">{product.price}</p>
                   <p className="text-surface-600 dark:text-surface-400 mb-6">{product.description}</p>
 
