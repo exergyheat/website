@@ -519,7 +519,7 @@ const About = () => {
           <div className="bg-white dark:bg-surface-800 p-8 rounded-lg shadow-lg max-w-4xl mx-auto">
             {/* Header */}
             <div className="border-b border-surface-200 dark:border-surface-700 pb-6 mb-8">
-              <h3 className="text-3xl font-bold text-surface-900 dark:text-surface-100 mb-2">System Monitoring Dashboard</h3>
+              <h3 className="text-3xl font-bold text-surface-900 dark:text-surface-100 mb-2">System Monitoring Dashboard - Coming Soon</h3>
               <p className="text-surface-600 dark:text-surface-400 text-lg">Real-time performance and economic tracking</p>
             </div>
 
