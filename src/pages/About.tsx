@@ -168,6 +168,15 @@ const About = () => {
                   <li>• Monitor hashrate as a heat proxy to observe system health</li>
                 </ul>
               </div>
+              <div>
+                <h4 className="font-semibold text-surface-900 dark:text-surface-100 mb-2">Recommendations</h4>
+                <ul className="space-y-2 text-sm text-surface-600 dark:text-surface-400">
+                  <li>• Install 4x Auradine AH3880 Hydro Miners</li>
+                  <li>• Integrate with Hydro rack "digital boiler" that adds pumps, heat exchangers and power management</li>
+                  <li>• Add smart controls for zone management and remote operation</li>
+                  <li>• Monitor hashrate as a heat proxy to observe system health</li>
+                </ul>
+              </div>
             </div>
           </div>
         )
