@@ -137,7 +137,7 @@ const About = () => {
                 </div>
               </div>
               <div>
-                <h4 className="font-semibold text-surface-900 dark:text-surface-100 mb-2">Annual Cost Analysis</h4>
+                <h4 className="font-semibold text-surface-900 dark:text-surface-100 mb-2">Savings</h4>
                 <div className="bg-surface-50 dark:bg-surface-700 p-4 rounded-lg">
                   <div className="grid grid-cols-2 gap-4 text-sm">
                     <div>
