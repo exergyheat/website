@@ -374,7 +374,7 @@ const About = () => {
                       </div>
                       <div className="border-t border-surface-200 dark:border-surface-600 pt-2 flex justify-between items-center">
                         <span className="font-semibold text-surface-900 dark:text-surface-100">Total Project Cost</span>
-                        <span className="text-xl font-bold text-primary-600">$52,000</span>
+                        <span className="text-xl font-bold text-primary-600">$70,000</span>
                       </div>
                       <div className="bg-green-50 dark:bg-green-900/20 rounded-lg p-3 mt-4">
                         <p className="text-sm text-green-800 dark:text-green-200 font-medium">
