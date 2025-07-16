@@ -210,17 +210,17 @@ const About = () => {
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mb-6">
                   <div className="bg-white dark:bg-surface-800 rounded-lg p-4 text-center">
                     <p className="text-sm font-medium text-surface-500 dark:text-surface-400 mb-1">Annual Savings</p>
-                    <p className="text-2xl font-bold text-green-600">124%</p>
+                    <p className="text-2xl font-bold text-green-600">99%</p>
                     <p className="text-xs text-surface-600 dark:text-surface-400">vs. original system</p>
                   </div>
                   <div className="bg-white dark:bg-surface-800 rounded-lg p-4 text-center">
                     <p className="text-sm font-medium text-surface-500 dark:text-surface-400 mb-1">ROI Period</p>
-                    <p className="text-2xl font-bold text-primary-600">2.8 years</p>
+                    <p className="text-2xl font-bold text-primary-600">3 years</p>
                     <p className="text-xs text-surface-600 dark:text-surface-400">payback period</p>
                   </div>
                   <div className="bg-white dark:bg-surface-800 rounded-lg p-4 text-center">
                     <p className="text-sm font-medium text-surface-500 dark:text-surface-400 mb-1">Bitcoin Earnings (2yr)</p>
-                    <p className="text-2xl font-bold text-orange-600">1.12 BTC</p>
+                    <p className="text-2xl font-bold text-orange-600">0.88 BTC</p>
                     <p className="text-xs text-surface-600 dark:text-surface-400">projected earnings</p>
                   </div>
                   <div className="bg-white dark:bg-surface-800 rounded-lg p-4 text-center">
