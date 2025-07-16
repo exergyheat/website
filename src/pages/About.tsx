@@ -197,11 +197,11 @@ const About = () => {
                     </div>
                     <div className="bg-yellow-50 dark:bg-yellow-900/20 border border-yellow-200 dark:border-yellow-800 rounded-lg p-4">
                       <p className="text-sm font-medium text-yellow-700 dark:text-yellow-300 mb-1">New Cost (Electric)</p>
-                      <p className="text-xl font-bold text-yellow-800 dark:text-yellow-200">$22,000/year</p>
+                      <p className="text-xl font-bold text-yellow-800 dark:text-yellow-200">$21,500/year</p>
                     </div>
                     <div className="bg-green-50 dark:bg-green-900/20 border border-green-200 dark:border-green-800 rounded-lg p-4">
                       <p className="text-sm font-medium text-green-700 dark:text-green-300 mb-1">Bitcoin Revenue</p>
-                      <p className="text-xl font-bold text-green-800 dark:text-green-200">$27,000/year</p>
+                      <p className="text-xl font-bold text-green-800 dark:text-green-200">$21,000/year</p>
                     </div>
                   </div>
                 </div>
@@ -225,7 +225,7 @@ const About = () => {
                   </div>
                   <div className="bg-white dark:bg-surface-800 rounded-lg p-4 text-center">
                     <p className="text-sm font-medium text-surface-500 dark:text-surface-400 mb-1">Net Annual Benefit</p>
-                    <p className="text-2xl font-bold text-green-600">$26,000</p>
+                    <p className="text-2xl font-bold text-green-600">$20,000</p>
                     <p className="text-xs text-surface-600 dark:text-surface-400">after all costs</p>
                   </div>
                 </div>
