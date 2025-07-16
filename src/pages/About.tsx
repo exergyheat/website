@@ -174,7 +174,7 @@ const About = () => {
     },
     {
       id: 'design',
-      title: 'System Design',
+      title: 'Hardware Procurement',
       description: 'Engineering, custom design and a full project quote follows the Heat Audit. Once we know how much heat you need, and which hashrate heater is best - we design a system to integrate with your setup.',
       icon: Wrench,
       preview: {
