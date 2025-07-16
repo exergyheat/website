@@ -226,7 +226,7 @@ const About = () => {
     },
     {
       id: 'installation',
-      title: 'Procurement & Installation',
+      title: 'Installation & Comissioning',
       subtitle: 'Coordinate Installation & Bring The System Online',
       description: 'We collaborate with certified trade partners to professionally install your hashrate heating system, ensuring seamless integration and optimal performance from day one.',
       icon: Package,
