@@ -271,10 +271,10 @@ const About = () => {
                       <h6 className="font-semibold text-surface-900 dark:text-surface-100">Good</h6>
                     </div>
                     <ul className="space-y-2 text-sm text-surface-600 dark:text-surface-400">
-                      <li>• 4x Standard Hydro Miners</li>
-                      <li>• Basic heat exchanger setup</li>
-                      <li>• Manual temperature control</li>
-                      <li>• $45,000 total investment</li>
+                      <li>• 10x Whatsminer M64 Hydro Miners (24 J/TH)</li>
+                      <li>• Hydro Miner Rack, Heat Exchanger & CDU</li>
+                      <li>• Automated Temperature Control</li>
+                      <li>• $57,000 total investment</li>
                     </ul>
                   </div>
 
@@ -286,11 +286,10 @@ const About = () => {
                       <h6 className="font-semibold text-surface-900 dark:text-surface-100">Better</h6>
                     </div>
                     <ul className="space-y-2 text-sm text-surface-600 dark:text-surface-400">
-                      <li>• 4x Auradine AH3880 Hydro Miners</li>
-                      <li>• Integrated digital boiler system</li>
-                      <li>• Smart temperature controls</li>
-                      <li>• Remote monitoring included</li>
-                      <li>• $52,000 total investment</li>
+                      <li>• 4x Auradine AH3880 Hydro Miners (18 J/TH)</li>
+                      <li>• Hydro Miner Rack, Heat Exchanger & CDU</li>
+                      <li>• Automated Temperature Control</li>
+                      <li>• $70,000 total investment</li>
                     </ul>
                   </div>
 
@@ -301,12 +300,10 @@ const About = () => {
                       <h6 className="font-semibold text-surface-900 dark:text-surface-100">Best</h6>
                     </div>
                     <ul className="space-y-2 text-sm text-surface-600 dark:text-surface-400">
-                      <li>• 4x Premium Hydro Miners</li>
-                      <li>• Advanced heat recovery system</li>
-                      <li>• AI-powered optimization</li>
-                      <li>• Full automation & monitoring</li>
-                      <li>• 5-year warranty</li>
-                      <li>• $65,000 total investment</li>
+                      <li>• 8x Bitmain S21 XP Hydro Miners (12 J/TH)</li>
+                      <li>• Hydro Miner Rack, Heat Exchanger & CDU</li>
+                      <li>• Automated Temperature Control</li>
+                      <li>• $81,000 total investment</li>
                     </ul>
                   </div>
                 </div>
