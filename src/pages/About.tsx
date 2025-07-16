@@ -399,25 +399,61 @@ const About = () => {
       preview: {
         title: 'Sample Hardware Procurement Details',
         content: (
-          <div className="bg-white dark:bg-surface-800 p-6 rounded-lg shadow-lg">
-            <div className="border-b border-surface-200 dark:border-surface-700 pb-4 mb-4">
+          <div className="bg-white dark:bg-surface-800 p-8 rounded-lg shadow-lg">
+            <div className="border-b border-surface-200 dark:border-surface-700 pb-6 mb-8">
               <h3 className="text-2xl font-bold text-surface-900 dark:text-surface-100">Hardware Solutions</h3>
-              <p className="text-surface-600 dark:text-surface-400">Exergy offers hardware solutions for a variety of heating systems and applications.</p>
+              <p className="text-surface-600 dark:text-surface-400 mt-2">Exergy offers hardware solutions for a variety of heating systems and applications.</p>
             </div>
-            <div className="space-y-6">
-              <div>
-                <h4 className="font-semibold text-surface-900 dark:text-surface-100 mb-2">Currently Offering</h4>
-                <ul className="list-disc pl-6 text-sm text-surface-600 dark:text-surface-400 space-y-1">
-                  <li>Space Heaters (Room Heating)</li>
-                  <li>Hydronic Boilers (Radiant Baseboards and Floor Heating)</li>
-                  <li>Commercial & Industrial Boilers (Radiant Heating for Large Applications)</li>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+              <div className="bg-gradient-to-br from-primary-50 to-primary-100 dark:from-primary-900/20 dark:to-primary-800/20 p-6 rounded-lg border border-primary-200 dark:border-primary-700">
+                <div className="flex items-center mb-4">
+                  <div className="w-3 h-3 bg-green-500 rounded-full mr-3"></div>
+                  <h4 className="text-lg font-semibold text-surface-900 dark:text-surface-100">Currently Offering</h4>
+                </div>
+                <ul className="space-y-3">
+                  <li className="flex items-start">
+                    <div className="w-2 h-2 bg-primary-500 rounded-full mt-2 mr-3 flex-shrink-0"></div>
+                    <div>
+                      <span className="font-medium text-surface-900 dark:text-surface-100">Space Heaters</span>
+                      <p className="text-sm text-surface-600 dark:text-surface-400">(Room Heating)</p>
+                    </div>
+                  </li>
+                  <li className="flex items-start">
+                    <div className="w-2 h-2 bg-primary-500 rounded-full mt-2 mr-3 flex-shrink-0"></div>
+                    <div>
+                      <span className="font-medium text-surface-900 dark:text-surface-100">Hydronic Boilers</span>
+                      <p className="text-sm text-surface-600 dark:text-surface-400">(Radiant Baseboards and Floor Heating)</p>
+                    </div>
+                  </li>
+                  <li className="flex items-start">
+                    <div className="w-2 h-2 bg-primary-500 rounded-full mt-2 mr-3 flex-shrink-0"></div>
+                    <div>
+                      <span className="font-medium text-surface-900 dark:text-surface-100">Commercial & Industrial Boilers</span>
+                      <p className="text-sm text-surface-600 dark:text-surface-400">(Radiant Heating for Large Applications)</p>
+                    </div>
+                  </li>
                 </ul>
               </div>
-              <div>
-                <h4 className="font-semibold text-surface-900 dark:text-surface-100 mb-2">Coming Soon</h4>
-                <ul className="list-disc pl-6 text-sm text-surface-600 dark:text-surface-400 space-y-1">
-                  <li>Forced Air Furnaces (HVAC Duct Heating)</li>
-                  <li>Hot Water Heaters (Domestic Water Tank Heating)</li>
+              <div className="bg-gradient-to-br from-secondary-50 to-secondary-100 dark:from-secondary-900/20 dark:to-secondary-800/20 p-6 rounded-lg border border-secondary-200 dark:border-secondary-700">
+                <div className="flex items-center mb-4">
+                  <div className="w-3 h-3 bg-yellow-500 rounded-full mr-3"></div>
+                  <h4 className="text-lg font-semibold text-surface-900 dark:text-surface-100">Coming Soon</h4>
+                </div>
+                <ul className="space-y-3">
+                  <li className="flex items-start">
+                    <div className="w-2 h-2 bg-secondary-500 rounded-full mt-2 mr-3 flex-shrink-0"></div>
+                    <div>
+                      <span className="font-medium text-surface-900 dark:text-surface-100">Forced Air Furnaces</span>
+                      <p className="text-sm text-surface-600 dark:text-surface-400">(HVAC Duct Heating)</p>
+                    </div>
+                  </li>
+                  <li className="flex items-start">
+                    <div className="w-2 h-2 bg-secondary-500 rounded-full mt-2 mr-3 flex-shrink-0"></div>
+                    <div>
+                      <span className="font-medium text-surface-900 dark:text-surface-100">Hot Water Heaters</span>
+                      <p className="text-sm text-surface-600 dark:text-surface-400">(Domestic Water Tank Heating)</p>
+                    </div>
+                  </li>
                 </ul>
               </div>
             </div>
