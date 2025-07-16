@@ -1,12 +1,14 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
-import { ArrowRight, FileText, Wrench, Activity, Users, ChevronDown, ChevronUp, X, Search, Cog, Monitor, ChevronLeft, ChevronRight } from 'lucide-react'
+import { ArrowRight, FileText, Wrench, Activity, Users, ChevronDown, ChevronUp, X, Search, Cog, Monitor, ChevronLeft, ChevronRight, ExternalLink, Thermometer, Home } from 'lucide-react'
+import { products } from '../data/products'
 
 const Services = () => {
   const [expandedService, setExpandedService] = useState<string | null>(null)
   const [buildType, setBuildType] = useState<'residential' | 'commercial'>('residential')
   const [imageViewer, setImageViewer] = useState<{images: string[], titles: string[], currentIndex: number} | null>(null)
   const [flippedCard, setFlippedCard] = useState<string | null>(null)
+  const [showHardwarePartnersModal, setShowHardwarePartnersModal] = useState(false)
 
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId)
@@ -42,6 +44,94 @@ const Services = () => {
       icon: Monitor,
       flipText: 'Start with Remote Health Monitoring if you already have hashrate heat.',
       targetSection: 'monitoring-service'
+    }
+  ]
+
+  // Hardware Partners Data
+  const hardwarePartnersData = [
+    {
+      category: 'Space Heating',
+      status: 'coming-soon',
+      description: 'Standalone heating units for rooms, garages, and small spaces.',
+      partners: []
+    },
+    {
+      category: 'Forced Air Furnaces',
+      status: 'coming-soon',
+      description: 'Integrated heating solutions for existing HVAC systems.',
+      partners: []
+    },
+    {
+      category: 'Hot Water Heaters',
+      status: 'coming-soon',
+      description: 'Water heating solutions for domestic hot water applications.',
+      partners: []
+    },
+    {
+      category: 'Radiant Hydronic Boilers',
+      status: 'available',
+      description: 'Water-based heating solutions for radiant floor systems and hydronic loops.',
+      partners: [
+        {
+          name: 'RY3T Mini',
+          company: 'RY3T',
+          image: 'https://ry3t.com/wp-content/uploads/2025/03/2-1024x1024.png',
+          description: 'Versatile electric boiler for hydronic hashrate heating applications.',
+          highlights: [
+            '5000W heating capacity',
+            '206 TH/s hashrate',
+            '17,060 BTU/hr output',
+            '149°F max water temperature',
+            'Integrated PLC control'
+          ],
+          link: '/products',
+          linkType: 'internal'
+        }
+      ]
+    },
+    {
+      category: 'Pools & Spas',
+      status: 'available',
+      description: 'Heating solutions for pools, hot tubs, and spa applications.',
+      partners: [
+        {
+          name: 'RY3T Systems',
+          company: 'RY3T',
+          image: 'https://ry3t.com/wp-content/uploads/2025/03/2-1024x1024.png',
+          description: 'Scalable heating solutions for pool and spa applications.',
+          highlights: [
+            'Multiple capacity options',
+            'High-temperature water output',
+            'Pool-specific controls',
+            'Weather-resistant design',
+            'Remote monitoring capability'
+          ],
+          link: '/products',
+          linkType: 'internal'
+        }
+      ]
+    },
+    {
+      category: 'Commercial & Industrial',
+      status: 'available',
+      description: 'Large-scale heating solutions for commercial and industrial applications.',
+      partners: [
+        {
+          name: 'Fog Hashing',
+          company: 'Fog Hashing',
+          image: 'https://images.pexels.com/photos/2886937/pexels-photo-2886937.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+          description: 'Industrial-scale hashrate heating solutions for large commercial applications.',
+          highlights: [
+            'Scalable industrial systems',
+            'Custom integration design',
+            'Enterprise-grade monitoring',
+            'High-efficiency heat recovery',
+            'Professional installation support'
+          ],
+          link: 'https://foghashing.io',
+          linkType: 'external'
+        }
+      ]
     }
   ]
 
@@ -114,8 +204,7 @@ const Services = () => {
     ],
     icon: Wrench,
     image: "LiquidHashHeat_ex.png",
-    exampleImage: "SystemDesigns.png",
-    exampleTitle: "System Design Examples",
+    showHardwarePartners: true,
     details: {
       process: [
         "Initial consultation",
@@ -452,13 +541,13 @@ const Services = () => {
                     )}
                   </div>
 
-                  <div className={`${(service.exampleImage || service.exampleImages) ? 'flex gap-4' : ''} pt-6 border-t border-surface-200 dark:border-surface-700`}>
+                  <div className={`${(service.exampleImage || service.exampleImages || service.showHardwarePartners) ? 'flex gap-4' : ''} pt-6 border-t border-surface-200 dark:border-surface-700`}>
                     {service.buttonLink.startsWith('http') ? (
                       <a
                         href={service.buttonLink}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className={`${(service.exampleImage || service.exampleImages) ? 'flex-1' : 'w-full'} inline-flex items-center justify-center px-6 py-3 bg-primary-600 text-white rounded-lg hover:bg-primary-700 transition-colors text-base font-subheading`}
+                        className={`${(service.exampleImage || service.exampleImages || service.showHardwarePartners) ? 'flex-1' : 'w-full'} inline-flex items-center justify-center px-6 py-3 bg-primary-600 text-white rounded-lg hover:bg-primary-700 transition-colors text-base font-subheading`}
                       >
                         {service.buttonText}
                         <ArrowRight className="ml-2 h-5 w-5" />
@@ -466,7 +555,7 @@ const Services = () => {
                     ) : (
                       <Link
                         to={service.buttonLink}
-                        className={`${(service.exampleImage || service.exampleImages) ? 'flex-1' : 'w-full'} inline-flex items-center justify-center px-6 py-3 bg-primary-600 text-white rounded-lg hover:bg-primary-700 transition-colors text-base font-subheading`}
+                        className={`${(service.exampleImage || service.exampleImages || service.showHardwarePartners) ? 'flex-1' : 'w-full'} inline-flex items-center justify-center px-6 py-3 bg-primary-600 text-white rounded-lg hover:bg-primary-700 transition-colors text-base font-subheading`}
                       >
                         {service.buttonText}
                         <ArrowRight className="ml-2 h-5 w-5" />
@@ -484,6 +573,14 @@ const Services = () => {
                         className="px-6 py-3 bg-surface-100 dark:bg-surface-700 text-surface-900 dark:text-surface-100 rounded-lg hover:bg-surface-200 dark:hover:bg-surface-600 transition-colors text-base font-subheading"
                       >
                         Example
+                      </button>
+                    )}
+                    {service.showHardwarePartners && (
+                      <button
+                        onClick={() => setShowHardwarePartnersModal(true)}
+                        className="px-6 py-3 bg-surface-100 dark:bg-surface-700 text-surface-900 dark:text-surface-100 rounded-lg hover:bg-surface-200 dark:hover:bg-surface-600 transition-colors text-base font-subheading"
+                      >
+                        Hardware Partners
                       </button>
                     )}
                   </div>
@@ -583,6 +680,185 @@ const Services = () => {
                       : 'Click outside or press X to close'
                     }
                   </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
+
+      {/* Hardware Partners Modal */}
+      {showHardwarePartnersModal && (
+        <div className="fixed inset-0 z-50 overflow-hidden">
+          <div className="flex items-center justify-center min-h-screen px-4 pt-4 pb-20 text-center sm:block sm:p-0">
+            <div 
+              className="fixed inset-0 transition-opacity cursor-pointer" 
+              aria-hidden="true"
+              onClick={() => setShowHardwarePartnersModal(false)}
+            >
+              <div className="absolute inset-0 bg-surface-900 opacity-95"></div>
+            </div>
+
+            <div className="inline-block align-bottom bg-white dark:bg-surface-900 rounded-lg text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle sm:max-w-6xl sm:w-full">
+              <div className="bg-white dark:bg-surface-900">
+                {/* Sticky Header */}
+                <div className="sticky top-0 bg-white dark:bg-surface-900 border-b border-surface-200 dark:border-surface-700 px-6 py-4 z-10">
+                  <div className="flex justify-between items-center">
+                    <div>
+                      <h3 className="text-2xl font-bold text-surface-900 dark:text-surface-100">
+                        Hardware Partners
+                      </h3>
+                      <p className="text-sm text-surface-500 dark:text-surface-400 mt-1">
+                        Our trusted partners for hashrate heating hardware solutions
+                      </p>
+                    </div>
+                    <button
+                      onClick={() => setShowHardwarePartnersModal(false)}
+                      className="text-surface-500 hover:text-surface-700 dark:text-surface-400 dark:hover:text-surface-200 p-2 rounded-lg hover:bg-surface-100 dark:hover:bg-surface-800 transition-colors"
+                    >
+                      <X className="h-6 w-6" />
+                    </button>
+                  </div>
+                </div>
+                
+                {/* Scrollable Content */}
+                <div className="px-6 py-6 max-h-[70vh] overflow-y-auto">
+                  <div className="space-y-8">
+                    {hardwarePartnersData.map((category, index) => (
+                      <div key={index} className="border border-surface-200 dark:border-surface-700 rounded-lg overflow-hidden">
+                        {/* Category Header */}
+                        <div className="bg-surface-50 dark:bg-surface-800 px-6 py-4 border-b border-surface-200 dark:border-surface-700">
+                          <div className="flex items-center justify-between">
+                            <div>
+                              <h4 className="text-xl font-bold text-surface-900 dark:text-surface-100">
+                                {category.category}
+                              </h4>
+                              <p className="text-surface-600 dark:text-surface-400 mt-1">
+                                {category.description}
+                              </p>
+                            </div>
+                            {category.status === 'coming-soon' && (
+                              <span className="bg-yellow-100 dark:bg-yellow-900 text-yellow-800 dark:text-yellow-200 px-3 py-1 rounded-full text-sm font-medium">
+                                Coming Soon
+                              </span>
+                            )}
+                            {category.status === 'available' && (
+                              <span className="bg-green-100 dark:bg-green-900 text-green-800 dark:text-green-200 px-3 py-1 rounded-full text-sm font-medium">
+                                Available
+                              </span>
+                            )}
+                          </div>
+                        </div>
+                        
+                        {/* Partners Content */}
+                        <div className="p-6">
+                          {category.status === 'coming-soon' ? (
+                            <div className="text-center py-8">
+                              <div className="inline-flex items-center justify-center w-16 h-16 bg-yellow-100 dark:bg-yellow-900 rounded-full mb-4">
+                                <Cog className="h-8 w-8 text-yellow-600 dark:text-yellow-400" />
+                              </div>
+                              <p className="text-surface-600 dark:text-surface-400 text-lg">
+                                Hardware partners for this category are being finalized.
+                              </p>
+                              <p className="text-surface-500 dark:text-surface-500 text-sm mt-2">
+                                Contact us for current availability and recommendations.
+                              </p>
+                            </div>
+                          ) : (
+                            <div className="grid grid-cols-1 gap-6">
+                              {category.partners.map((partner, partnerIndex) => (
+                                <div key={partnerIndex} className="bg-surface-50 dark:bg-surface-800 rounded-lg p-6">
+                                  <div className="flex flex-col md:flex-row gap-6">
+                                    {/* Partner Image */}
+                                    <div className="w-full md:w-1/3">
+                                      <img
+                                        src={partner.image}
+                                        alt={partner.name}
+                                        className="w-full h-48 object-cover rounded-lg"
+                                      />
+                                    </div>
+                                    
+                                    {/* Partner Details */}
+                                    <div className="w-full md:w-2/3 space-y-4">
+                                      <div>
+                                        <h5 className="text-xl font-bold text-surface-900 dark:text-surface-100">
+                                          {partner.name}
+                                        </h5>
+                                        <p className="text-primary-600 dark:text-primary-400 font-medium">
+                                          by {partner.company}
+                                        </p>
+                                      </div>
+                                      
+                                      <p className="text-surface-600 dark:text-surface-400">
+                                        {partner.description}
+                                      </p>
+                                      
+                                      {/* Key Highlights */}
+                                      <div>
+                                        <h6 className="text-sm font-semibold text-surface-900 dark:text-surface-100 mb-2 uppercase tracking-wide">
+                                          Key Highlights
+                                        </h6>
+                                        <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
+                                          {partner.highlights.map((highlight, highlightIndex) => (
+                                            <div key={highlightIndex} className="flex items-center text-surface-700 dark:text-surface-300">
+                                              <ArrowRight className="h-4 w-4 text-primary-600 dark:text-primary-400 mr-2 flex-shrink-0" />
+                                              <span className="text-sm">{highlight}</span>
+                                            </div>
+                                          ))}
+                                        </div>
+                                      </div>
+                                      
+                                      {/* Partner Link */}
+                                      <div className="pt-4">
+                                        {partner.linkType === 'internal' ? (
+                                          <Link
+                                            to={partner.link}
+                                            onClick={() => setShowHardwarePartnersModal(false)}
+                                            className="inline-flex items-center px-4 py-2 bg-primary-600 text-white rounded-lg hover:bg-primary-700 transition-colors text-sm font-medium"
+                                          >
+                                            View on Products Page
+                                            <ArrowRight className="ml-2 h-4 w-4" />
+                                          </Link>
+                                        ) : (
+                                          <a
+                                            href={partner.link}
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            className="inline-flex items-center px-4 py-2 bg-primary-600 text-white rounded-lg hover:bg-primary-700 transition-colors text-sm font-medium"
+                                          >
+                                            Visit Partner Website
+                                            <ExternalLink className="ml-2 h-4 w-4" />
+                                          </a>
+                                        )}
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              ))}
+                            </div>
+                          )}
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                  
+                  {/* Contact Section */}
+                  <div className="mt-8 bg-gradient-to-r from-primary-50 to-secondary-50 dark:from-primary-900 dark:to-secondary-900 rounded-lg p-6 text-center">
+                    <h4 className="text-lg font-bold text-surface-900 dark:text-surface-100 mb-2">
+                      Need Custom Hardware Solutions?
+                    </h4>
+                    <p className="text-surface-600 dark:text-surface-400 mb-4">
+                      Our team can help you find the right hardware partner for your specific heating needs.
+                    </p>
+                    <Link
+                      to="/contact"
+                      onClick={() => setShowHardwarePartnersModal(false)}
+                      className="inline-flex items-center px-6 py-3 bg-primary-600 text-white rounded-lg hover:bg-primary-700 transition-colors font-medium"
+                    >
+                      Contact Our Team
+                      <ArrowRight className="ml-2 h-5 w-5" />
+                    </Link>
+                  </div>
                 </div>
               </div>
             </div>
