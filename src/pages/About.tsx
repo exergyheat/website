@@ -273,7 +273,7 @@ const About = () => {
       id: 'monitoring',
       title: 'Remote Monitoring',
       subtitle: 'Ensure Your Heater Is Always Healthy',
-      description: 'Optional remote monitoring ensures your system is always healthy and earning what it should. Because our heaters are digital, we can sense when it is time for a tune up - before you do.',
+      description: 'We leverage private and secure remote monitoring to ensure your heating system is always healthy and maximizing earnings. Because hashrate heaters are digital, we can sense when it is time for a tune up - before you do.',
       icon: Monitor,
       preview: {
         title: 'Sample Monitored Data',
