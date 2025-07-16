@@ -102,7 +102,7 @@ const About = () => {
   const processSteps = [
     {
       id: 'audit',
-      title: 'Heat Audit Analysis',
+      title: 'Heat Audit Analysis & Design',
       description: 'We start with thermo-economic modeling to understand your exact heating needs and maximize earnings. This tells us if the uprgade is a good idea, which hashrate heater is best for you, and proivde recommendations for next steps.',
       icon: FileText,
       preview: {
