@@ -127,7 +127,7 @@ const About = () => {
                   <div className="space-y-3">
                     <div>
                       <p className="text-sm font-medium text-surface-500 dark:text-surface-400">Location</p>
-                      <p className="text-base text-surface-900 dark:text-surface-100">Glenwood Springs, CO (7,200 ft elevation)</p>
+                      <p className="text-base text-surface-900 dark:text-surface-100">High Altitude Rocky Mountains, CO</p>
                     </div>
                     <div>
                       <p className="text-sm font-medium text-surface-500 dark:text-surface-400">Heating Application</p>
@@ -149,7 +149,7 @@ const About = () => {
                     </div>
                     <div>
                       <p className="text-sm font-medium text-surface-500 dark:text-surface-400">Current System</p>
-                      <p className="text-base text-surface-900 dark:text-surface-100">Propane Boiler (80% efficiency)</p>
+                      <p className="text-base text-surface-900 dark:text-surface-100">Propane Boiler (85% efficiency)</p>
                     </div>
                   </div>
                 </div>
