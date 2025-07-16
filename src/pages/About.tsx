@@ -103,6 +103,7 @@ const About = () => {
     {
       id: 'audit',
       title: 'Heat Audit Analysis & Design',
+      subtitle: 'Calculate Sizings, Savings, Design Plan & Quote',
       description: 'We start with thermo-economic modeling to size a system for your specific heating needs while maximizing earnings. Our analysis delivers a tailored heating solution, including projected savings, payback period, and total project costs. You’ll receive a detailed report, personal recommendations, a full project quote, and clear next steps.',
       icon: FileText,
       preview: {
@@ -175,6 +176,7 @@ const About = () => {
     {
       id: 'design',
       title: 'Hardware Procurement',
+      subtitle: 'Get The Right System For The Job',
       description: 'Engineering, custom design and a full project quote follows the Heat Audit. Once we know how much heat you need, and which hashrate heater is best - we design a system to integrate with your setup.',
       icon: Wrench,
       preview: {
@@ -225,6 +227,7 @@ const About = () => {
     {
       id: 'installation',
       title: 'Procurement & Installation',
+      subtitle: 'Coordinate Installation & Bring The System Online',
       description: 'When ready, we source the best hashrate heating and auxiliary hardware, then coordinate install with partners for smooth integration to bring your system online.',
       icon: Package,
       preview: {
@@ -269,6 +272,7 @@ const About = () => {
     {
       id: 'monitoring',
       title: 'Remote Monitoring',
+      subtitle: 'Ensure Your Heater Is Always Healthy',
       description: 'Optional remote monitoring ensures your system is always healthy and earning what it should. Because our heaters are digital, we can sense when it is time for a tune up - before you do.',
       icon: Monitor,
       preview: {
@@ -685,6 +689,7 @@ const About = () => {
                     <div className="flex items-center justify-between">
                       <div>
                         <h3 className="text-xl font-bold text-surface-900 dark:text-surface-100">{step.title}</h3>
+                        <h4 className="text-lg font-medium text-primary-600 dark:text-primary-400 mt-1 mb-2">{step.subtitle}</h4>
                         <p className="mt-2 text-surface-600 dark:text-surface-400">{step.description}</p>
                       </div>
                       <motion.button
