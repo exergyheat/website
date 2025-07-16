@@ -109,73 +109,285 @@ const About = () => {
       preview: {
         title: 'Sample Data',
         content: (
-          <div className="bg-white dark:bg-surface-800 p-6 rounded-lg shadow-lg">
-            <div className="border-b border-surface-200 dark:border-surface-700 pb-4 mb-4">
+          <div className="bg-white dark:bg-surface-800 rounded-lg shadow-lg max-h-[80vh] overflow-y-auto">
+            {/* Header */}
+            <div className="sticky top-0 bg-white dark:bg-surface-800 border-b border-surface-200 dark:border-surface-700 p-6 z-10">
               <h3 className="text-2xl font-bold text-surface-900 dark:text-surface-100">Heat Audit Report</h3>
               <p className="text-surface-600 dark:text-surface-400">Outdoor Commercial Pool Resort - High Altitude Rocky Mountain Region</p>
             </div>
-            <div className="space-y-6">
-              <div>
-                <h4 className="font-semibold text-surface-900 dark:text-surface-100 mb-2">Project Specifications</h4>
-                <div className="grid grid-cols-2 gap-4 text-sm">
-                  <div>
-                    <p className="text-surface-600 dark:text-surface-400">Total Volume</p>
-                    <p className="font-medium text-surface-900 dark:text-surface-100">40,000 gallons</p>
-                  </div>
-                  <div>
-                    <p className="text-surface-600 dark:text-surface-400">Design Condition Heating Load</p>
-                    <p className="font-medium text-surface-900 dark:text-surface-100">40 kW (136,484 BTU/hr)</p>
-                  </div>
-                  <div>
-                    <p className="text-surface-600 dark:text-surface-400">Design Month Avg HDD (Heating Degree Day)</p>
-                    <p className="font-medium text-surface-900 dark:text-surface-100">1935 °F-day</p>
-                  </div>
-                  <div>
-                    <p className="text-surface-600 dark:text-surface-400">Heating System Specifications</p>
-                    <p className="font-medium text-surface-900 dark:text-surface-100">Hydronic Boiler</p>
-                  </div>
+
+            <div className="p-6 space-y-8">
+              {/* Project Details Section */}
+              <div className="bg-surface-50 dark:bg-surface-700 rounded-lg p-6">
+                <div className="flex items-center mb-4">
+                  <div className="w-8 h-8 bg-primary-500 rounded-full flex items-center justify-center text-white font-bold text-sm mr-3">1</div>
+                  <h4 className="text-xl font-bold text-surface-900 dark:text-surface-100">Project Details</h4>
                 </div>
-              </div>
-              <div>
-                <h4 className="font-semibold text-surface-900 dark:text-surface-100 mb-2">Savings</h4>
-                <div className="bg-surface-50 dark:bg-surface-700 p-4 rounded-lg">
-                  <div className="grid grid-cols-2 gap-4 text-sm">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  <div className="space-y-3">
                     <div>
-                      <p className="text-surface-600 dark:text-surface-400">Original Heating Billed Cost (Propane)</p>
-                      <p className="font-medium text-surface-900 dark:text-surface-100">$21,000/year</p>
+                      <p className="text-sm font-medium text-surface-500 dark:text-surface-400">Location</p>
+                      <p className="text-base text-surface-900 dark:text-surface-100">Glenwood Springs, CO (7,200 ft elevation)</p>
                     </div>
                     <div>
-                      <p className="text-surface-600 dark:text-surface-400">Hashrate Heating Billed Cost (Electric Heat)</p>
-                      <p className="font-medium text-surface-900 dark:text-surface-100">$22,000/year</p>
+                      <p className="text-sm font-medium text-surface-500 dark:text-surface-400">Heating Application</p>
+                      <p className="text-base text-surface-900 dark:text-surface-100">Outdoor Pool & Hot Tub Complex</p>
                     </div>
                     <div>
-                      <p className="text-surface-600 dark:text-surface-400">Projected Bitcoin Revenue Value (Fixed Hashprice)</p>
-                      <p className="font-medium text-primary-600">$17,000/year</p>
+                      <p className="text-sm font-medium text-surface-500 dark:text-surface-400">Total Volume</p>
+                      <p className="text-base text-surface-900 dark:text-surface-100">40,000 gallons</p>
+                    </div>
+                  </div>
+                  <div className="space-y-3">
+                    <div>
+                      <p className="text-sm font-medium text-surface-500 dark:text-surface-400">Average Winter Temperature</p>
+                      <p className="text-base text-surface-900 dark:text-surface-100">28°F (-2°C)</p>
                     </div>
                     <div>
-                      <p className="text-surface-600 dark:text-surface-400">Projected Bitcoin Earnings (2 Year)</p>
-                      <p className="font-medium text-primary-600">0.88 BTC</p>
+                      <p className="text-sm font-medium text-surface-500 dark:text-surface-400">Peak Design Temperature</p>
+                      <p className="text-base text-surface-900 dark:text-surface-100">-5°F (-21°C)</p>
+                    </div>
+                    <div>
+                      <p className="text-sm font-medium text-surface-500 dark:text-surface-400">Current System</p>
+                      <p className="text-base text-surface-900 dark:text-surface-100">Propane Boiler (80% efficiency)</p>
                     </div>
                   </div>
                 </div>
               </div>
-              <div>
-                <h4 className="font-semibold text-surface-900 dark:text-surface-100 mb-2">Recommendations</h4>
-                <ul className="space-y-2 text-sm text-surface-600 dark:text-surface-400">
-                  <li>• Install 4x Auradine AH3880 Hydro Miners</li>
-                  <li>• Integrate with Hydro rack "digital boiler" that adds pumps, heat exchangers and power management</li>
-                  <li>• Add smart controls for zone management and remote operation</li>
-                  <li>• Monitor hashrate as a heat proxy to observe system health</li>
-                </ul>
+
+              {/* Sizings Section */}
+              <div className="bg-surface-50 dark:bg-surface-700 rounded-lg p-6">
+                <div className="flex items-center mb-4">
+                  <div className="w-8 h-8 bg-primary-500 rounded-full flex items-center justify-center text-white font-bold text-sm mr-3">2</div>
+                  <h4 className="text-xl font-bold text-surface-900 dark:text-surface-100">System Sizing</h4>
+                </div>
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                  <div className="bg-white dark:bg-surface-800 rounded-lg p-4">
+                    <p className="text-sm font-medium text-surface-500 dark:text-surface-400 mb-2">Heating Systems Needed</p>
+                    <p className="text-2xl font-bold text-primary-600">4 Units</p>
+                    <p className="text-sm text-surface-600 dark:text-surface-400">Auradine AH3880 Hydro Miners</p>
+                  </div>
+                  <div className="bg-white dark:bg-surface-800 rounded-lg p-4">
+                    <p className="text-sm font-medium text-surface-500 dark:text-surface-400 mb-2">Total System Rating</p>
+                    <p className="text-2xl font-bold text-primary-600">40 kW</p>
+                    <p className="text-sm text-surface-600 dark:text-surface-400">136,484 BTU/hr</p>
+                  </div>
+                  <div className="bg-white dark:bg-surface-800 rounded-lg p-4">
+                    <p className="text-sm font-medium text-surface-500 dark:text-surface-400 mb-2">Design Month Duty Cycle</p>
+                    <p className="text-2xl font-bold text-primary-600">85%</p>
+                    <p className="text-sm text-surface-600 dark:text-surface-400">Peak winter operation</p>
+                  </div>
+                </div>
               </div>
-              <div>
-                <h4 className="font-semibold text-surface-900 dark:text-surface-100 mb-2">Recommendations</h4>
-                <ul className="space-y-2 text-sm text-surface-600 dark:text-surface-400">
-                  <li>• Install 4x Auradine AH3880 Hydro Miners</li>
-                  <li>• Integrate with Hydro rack "digital boiler" that adds pumps, heat exchangers and power management</li>
-                  <li>• Add smart controls for zone management and remote operation</li>
-                  <li>• Monitor hashrate as a heat proxy to observe system health</li>
-                </ul>
+
+              {/* Savings Section */}
+              <div className="bg-surface-50 dark:bg-surface-700 rounded-lg p-6">
+                <div className="flex items-center mb-4">
+                  <div className="w-8 h-8 bg-primary-500 rounded-full flex items-center justify-center text-white font-bold text-sm mr-3">3</div>
+                  <h4 className="text-xl font-bold text-surface-900 dark:text-surface-100">Financial Analysis</h4>
+                </div>
+                
+                {/* Annual Heating Costs */}
+                <div className="mb-6">
+                  <h5 className="text-lg font-semibold text-surface-900 dark:text-surface-100 mb-3">Annual Heating Costs</h5>
+                  <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+                    <div className="bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-800 rounded-lg p-4">
+                      <p className="text-sm font-medium text-red-700 dark:text-red-300 mb-1">Original Cost (Propane)</p>
+                      <p className="text-xl font-bold text-red-800 dark:text-red-200">$21,000/year</p>
+                    </div>
+                    <div className="bg-yellow-50 dark:bg-yellow-900/20 border border-yellow-200 dark:border-yellow-800 rounded-lg p-4">
+                      <p className="text-sm font-medium text-yellow-700 dark:text-yellow-300 mb-1">New Cost (Electric)</p>
+                      <p className="text-xl font-bold text-yellow-800 dark:text-yellow-200">$22,000/year</p>
+                    </div>
+                    <div className="bg-green-50 dark:bg-green-900/20 border border-green-200 dark:border-green-800 rounded-lg p-4">
+                      <p className="text-sm font-medium text-green-700 dark:text-green-300 mb-1">Bitcoin Revenue</p>
+                      <p className="text-xl font-bold text-green-800 dark:text-green-200">$27,000/year</p>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Key Performance Indicators */}
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mb-6">
+                  <div className="bg-white dark:bg-surface-800 rounded-lg p-4 text-center">
+                    <p className="text-sm font-medium text-surface-500 dark:text-surface-400 mb-1">Annual Savings</p>
+                    <p className="text-2xl font-bold text-green-600">124%</p>
+                    <p className="text-xs text-surface-600 dark:text-surface-400">vs. original system</p>
+                  </div>
+                  <div className="bg-white dark:bg-surface-800 rounded-lg p-4 text-center">
+                    <p className="text-sm font-medium text-surface-500 dark:text-surface-400 mb-1">ROI Period</p>
+                    <p className="text-2xl font-bold text-primary-600">2.8 years</p>
+                    <p className="text-xs text-surface-600 dark:text-surface-400">payback period</p>
+                  </div>
+                  <div className="bg-white dark:bg-surface-800 rounded-lg p-4 text-center">
+                    <p className="text-sm font-medium text-surface-500 dark:text-surface-400 mb-1">Bitcoin Earnings (2yr)</p>
+                    <p className="text-2xl font-bold text-orange-600">1.12 BTC</p>
+                    <p className="text-xs text-surface-600 dark:text-surface-400">projected earnings</p>
+                  </div>
+                  <div className="bg-white dark:bg-surface-800 rounded-lg p-4 text-center">
+                    <p className="text-sm font-medium text-surface-500 dark:text-surface-400 mb-1">Net Annual Benefit</p>
+                    <p className="text-2xl font-bold text-green-600">$26,000</p>
+                    <p className="text-xs text-surface-600 dark:text-surface-400">after all costs</p>
+                  </div>
+                </div>
+
+                {/* Total Cost of Ownership Comparison */}
+                <div className="bg-white dark:bg-surface-800 rounded-lg p-4">
+                  <h5 className="text-lg font-semibold text-surface-900 dark:text-surface-100 mb-3">10-Year Total Cost of Ownership</h5>
+                  <div className="flex items-end space-x-4 h-32">
+                    <div className="flex-1 flex flex-col items-center">
+                      <div className="w-full bg-red-500 rounded-t" style={{height: '80%'}}></div>
+                      <p className="text-sm font-medium text-surface-900 dark:text-surface-100 mt-2">Current System</p>
+                      <p className="text-lg font-bold text-red-600">$210,000</p>
+                    </div>
+                    <div className="flex-1 flex flex-col items-center">
+                      <div className="w-full bg-green-500 rounded-t" style={{height: '20%'}}></div>
+                      <p className="text-sm font-medium text-surface-900 dark:text-surface-100 mt-2">Hashrate System</p>
+                      <p className="text-lg font-bold text-green-600">-$190,000</p>
+                      <p className="text-xs text-surface-600 dark:text-surface-400">(net profit)</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Recommendations Section */}
+              <div className="bg-surface-50 dark:bg-surface-700 rounded-lg p-6">
+                <div className="flex items-center mb-4">
+                  <div className="w-8 h-8 bg-primary-500 rounded-full flex items-center justify-center text-white font-bold text-sm mr-3">4</div>
+                  <h4 className="text-xl font-bold text-surface-900 dark:text-surface-100">Exergy Team Recommendations</h4>
+                </div>
+                
+                <div className="bg-white dark:bg-surface-800 rounded-lg p-4 mb-6">
+                  <p className="text-surface-700 dark:text-surface-300 leading-relaxed">
+                    Based on your high-altitude location and year-round heating demands, we recommend a hydronic hashrate heating system. 
+                    The consistent heat load makes this an ideal application for maximizing Bitcoin earnings while maintaining optimal pool temperatures. 
+                    The elevation and cold winters actually work in your favor for mining efficiency.
+                  </p>
+                </div>
+
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+                  {/* Good Option */}
+                  <div className="bg-white dark:bg-surface-800 border border-surface-200 dark:border-surface-600 rounded-lg p-4">
+                    <div className="flex items-center mb-3">
+                      <div className="w-6 h-6 bg-blue-500 rounded-full flex items-center justify-center text-white text-xs font-bold mr-2">G</div>
+                      <h6 className="font-semibold text-surface-900 dark:text-surface-100">Good</h6>
+                    </div>
+                    <ul className="space-y-2 text-sm text-surface-600 dark:text-surface-400">
+                      <li>• 4x Standard Hydro Miners</li>
+                      <li>• Basic heat exchanger setup</li>
+                      <li>• Manual temperature control</li>
+                      <li>• $45,000 total investment</li>
+                    </ul>
+                  </div>
+
+                  {/* Better Option */}
+                  <div className="bg-white dark:bg-surface-800 border-2 border-primary-500 rounded-lg p-4 relative">
+                    <div className="absolute -top-2 left-4 bg-primary-500 text-white px-2 py-1 rounded text-xs font-bold">RECOMMENDED</div>
+                    <div className="flex items-center mb-3 mt-2">
+                      <div className="w-6 h-6 bg-green-500 rounded-full flex items-center justify-center text-white text-xs font-bold mr-2">B</div>
+                      <h6 className="font-semibold text-surface-900 dark:text-surface-100">Better</h6>
+                    </div>
+                    <ul className="space-y-2 text-sm text-surface-600 dark:text-surface-400">
+                      <li>• 4x Auradine AH3880 Hydro Miners</li>
+                      <li>• Integrated digital boiler system</li>
+                      <li>• Smart temperature controls</li>
+                      <li>• Remote monitoring included</li>
+                      <li>• $52,000 total investment</li>
+                    </ul>
+                  </div>
+
+                  {/* Best Option */}
+                  <div className="bg-white dark:bg-surface-800 border border-surface-200 dark:border-surface-600 rounded-lg p-4">
+                    <div className="flex items-center mb-3">
+                      <div className="w-6 h-6 bg-purple-500 rounded-full flex items-center justify-center text-white text-xs font-bold mr-2">B</div>
+                      <h6 className="font-semibold text-surface-900 dark:text-surface-100">Best</h6>
+                    </div>
+                    <ul className="space-y-2 text-sm text-surface-600 dark:text-surface-400">
+                      <li>• 4x Premium Hydro Miners</li>
+                      <li>• Advanced heat recovery system</li>
+                      <li>• AI-powered optimization</li>
+                      <li>• Full automation & monitoring</li>
+                      <li>• 5-year warranty</li>
+                      <li>• $65,000 total investment</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              {/* Project Plan & Quote Section */}
+              <div className="bg-surface-50 dark:bg-surface-700 rounded-lg p-6">
+                <div className="flex items-center mb-4">
+                  <div className="w-8 h-8 bg-primary-500 rounded-full flex items-center justify-center text-white font-bold text-sm mr-3">5</div>
+                  <h4 className="text-xl font-bold text-surface-900 dark:text-surface-100">Project Plan & Quote</h4>
+                </div>
+                
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  {/* Next Steps */}
+                  <div className="bg-white dark:bg-surface-800 rounded-lg p-4">
+                    <h5 className="text-lg font-semibold text-surface-900 dark:text-surface-100 mb-3">Next Steps</h5>
+                    <div className="space-y-3">
+                      <div className="flex items-start">
+                        <div className="w-6 h-6 bg-primary-500 rounded-full flex items-center justify-center text-white text-xs font-bold mr-3 mt-0.5">1</div>
+                        <div>
+                          <p className="font-medium text-surface-900 dark:text-surface-100">Site Assessment</p>
+                          <p className="text-sm text-surface-600 dark:text-surface-400">On-site evaluation and measurements</p>
+                        </div>
+                      </div>
+                      <div className="flex items-start">
+                        <div className="w-6 h-6 bg-primary-500 rounded-full flex items-center justify-center text-white text-xs font-bold mr-3 mt-0.5">2</div>
+                        <div>
+                          <p className="font-medium text-surface-900 dark:text-surface-100">System Design</p>
+                          <p className="text-sm text-surface-600 dark:text-surface-400">Detailed engineering and specifications</p>
+                        </div>
+                      </div>
+                      <div className="flex items-start">
+                        <div className="w-6 h-6 bg-primary-500 rounded-full flex items-center justify-center text-white text-xs font-bold mr-3 mt-0.5">3</div>
+                        <div>
+                          <p className="font-medium text-surface-900 dark:text-surface-100">Installation</p>
+                          <p className="text-sm text-surface-600 dark:text-surface-400">Professional installation and commissioning</p>
+                        </div>
+                      </div>
+                      <div className="flex items-start">
+                        <div className="w-6 h-6 bg-primary-500 rounded-full flex items-center justify-center text-white text-xs font-bold mr-3 mt-0.5">4</div>
+                        <div>
+                          <p className="font-medium text-surface-900 dark:text-surface-100">Go Live</p>
+                          <p className="text-sm text-surface-600 dark:text-surface-400">System activation and monitoring setup</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Project Cost Breakdown */}
+                  <div className="bg-white dark:bg-surface-800 rounded-lg p-4">
+                    <h5 className="text-lg font-semibold text-surface-900 dark:text-surface-100 mb-3">Full Project Cost (Better Option)</h5>
+                    <div className="space-y-3">
+                      <div className="flex justify-between items-center">
+                        <span className="text-surface-600 dark:text-surface-400">Hardware & Equipment</span>
+                        <span className="font-medium text-surface-900 dark:text-surface-100">$35,000</span>
+                      </div>
+                      <div className="flex justify-between items-center">
+                        <span className="text-surface-600 dark:text-surface-400">Installation & Labor</span>
+                        <span className="font-medium text-surface-900 dark:text-surface-100">$12,000</span>
+                      </div>
+                      <div className="flex justify-between items-center">
+                        <span className="text-surface-600 dark:text-surface-400">Permits & Inspections</span>
+                        <span className="font-medium text-surface-900 dark:text-surface-100">$2,500</span>
+                      </div>
+                      <div className="flex justify-between items-center">
+                        <span className="text-surface-600 dark:text-surface-400">Project Management</span>
+                        <span className="font-medium text-surface-900 dark:text-surface-100">$2,500</span>
+                      </div>
+                      <div className="border-t border-surface-200 dark:border-surface-600 pt-2 flex justify-between items-center">
+                        <span className="font-semibold text-surface-900 dark:text-surface-100">Total Project Cost</span>
+                        <span className="text-xl font-bold text-primary-600">$52,000</span>
+                      </div>
+                      <div className="bg-green-50 dark:bg-green-900/20 rounded-lg p-3 mt-4">
+                        <p className="text-sm text-green-800 dark:text-green-200 font-medium">
+                          Project pays for itself in 2.8 years, then generates $26,000+ annually
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
