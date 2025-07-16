@@ -177,7 +177,7 @@ const About = () => {
       id: 'design',
       title: 'Hardware Procurement',
       subtitle: 'Get The Right System For The Job',
-      description: 'Engineering, custom design and a full project quote follows the Heat Audit. Once we know how much heat you need, and which hashrate heater is best - we design a system to integrate with your setup.',
+      description: 'We partner with only the best hashrate heating system manufacturers to source high-quality hardware tailored to your specific heating needs, ensuring optimal performance, efficiency and reliability.',
       icon: Wrench,
       preview: {
         title: 'Sample Design Details',
