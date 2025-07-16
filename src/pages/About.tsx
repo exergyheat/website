@@ -243,7 +243,6 @@ const About = () => {
                       <div className="w-full bg-green-500 rounded-t" style={{height: '20%'}}></div>
                       <p className="text-sm font-medium text-surface-900 dark:text-surface-100 mt-2">Hashrate System</p>
                       <p className="text-lg font-bold text-green-600">-$40,000</p>
-                      <p className="text-xs text-surface-600 dark:text-surface-400">(net profit)</p>
                     </div>
                   </div>
                 </div>
