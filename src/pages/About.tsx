@@ -174,11 +174,11 @@ const About = () => {
       }
     },
     {
-      id: 'design',
+      id: 'hardware-procurement',
       title: 'Hardware Procurement',
       subtitle: 'Get The Right System For The Job',
       description: 'We partner with only the best hashrate heating system manufacturers to source high-quality hardware tailored to your specific heating needs, ensuring optimal performance, efficiency and reliability.',
-      icon: Wrench,
+      icon: Package,
       preview: {
         title: 'Sample Design Details',
         content: (
@@ -225,11 +225,11 @@ const About = () => {
       }
     },
     {
-      id: 'installation',
+      id: 'installation-commissioning',
       title: 'Installation & Commissioning',
       subtitle: 'Coordinate Installation & Bring The System Online',
       description: 'We collaborate with certified trade partners to professionally install your hashrate heating system, ensuring seamless integration and optimal performance from day one.',
-      icon: Package,
+      icon: Wrench,
       preview: {
         title: 'Sample Install Process',
         content: (
