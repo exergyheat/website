@@ -34,7 +34,7 @@ const BookCall = () => {
             Chat with an Expert at Exergy
           </h2>
           <p className="text-lg text-surface-600 dark:text-surface-400 max-w-2xl mx-auto">
-            Book a call with our team to discuss your hashrate heating needs. Our round-robin system will connect you with the best available team member.
+            Book a call with our team to discuss your hashrate heating needs.
           </p>
         </div>
         
