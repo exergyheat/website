@@ -275,33 +275,3 @@ const Blog = () => {
 }
 
 export default Blog
-                      </div>
-                    </div>
-                    <span>{post.readTime}</span>
-                  </div>
-                  <Link 
-                    to={`/blog/${post.id}`}
-                    className="mt-4 flex items-center text-primary-500 dark:text-primary-400 hover:text-primary-600 dark:hover:text-primary-300 transition-colors"
-                  >
-                    <span className="mr-2">Read More</span>
-                    <ArrowRight className="h-4 w-4" />
-                  </Link>
-                </div>
-              </article>
-            ))}
-          </div>
-        )}
-
-        {filteredPosts.length === 0 && blogPosts.length > 0 && (
-          <div className="text-center py-12">
-            <p className="text-xl text-surface-600 dark:text-surface-400">
-              No articles found matching your criteria.
-            </p>
-          </div>
-        )}
-      </div>
-    </div>
-  )
-}
-
-export default Blog
