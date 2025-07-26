@@ -8,7 +8,8 @@
     "build": "vite build && cp serve.json dist/",
     "lint": "eslint .",
     "preview": "vite preview",
-    "serve": "serve dist -l 3000 -c serve.json"
+    "serve": "serve dist -l 3000 -c serve.json",
+    "generate-sitemap": "node scripts/generate-sitemap.js"
   },
   "dependencies": {
     "buffer": "^6.0.3",
