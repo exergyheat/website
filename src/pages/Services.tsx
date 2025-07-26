@@ -62,8 +62,8 @@ const Services = () => {
     image: "heating_subsidy.png",
     exampleImages: [
       "Exergy Heat Audit Report Template V1_pg1.png",
-      "TheSpace_ExergyHeatAudit_pg1.png",
-      "TheSpace_ExergyHeatAudit_pg2.png"
+      "Exergy Heat Audit Report Template V1_pg2.png",
+      "Exergy Heat Audit Report Template V1_pg3.png"
     ],
     exampleTitles: [
       "Heat Audit Report - Page 1",
