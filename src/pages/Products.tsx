@@ -53,7 +53,7 @@ const Products = () => {
       features: [
         'Plug-and-play setup',
         'WiFi connectivity',
-        'Mobile app control',
+        'Touch panel & mobile app control',
         'Quiet operation'
       ]
     },
