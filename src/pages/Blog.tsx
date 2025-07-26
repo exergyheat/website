@@ -208,11 +208,8 @@ const Blog = () => {
         ) : (
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {filteredPosts.map((post) => (
-              <article
-                key={post.id}
-                className="bg-white dark:bg-surface-800 rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow"
-              >
-                <Link to={`/blog/${post.id}`}>
+              <Link key={post.id} to={`/blog/${post.id}`}>
+                <article className="bg-white dark:bg-surface-800 rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
                   <div className="relative h-48">
                     <img
                       src={post.image}
@@ -230,29 +227,54 @@ const Blog = () => {
                       ))}
                     </div>
                   </div>
-                </Link>
-                <div className="p-6">
-                  <Link to={`/blog/${post.id}`}>
+                  <div className="p-6">
                     <h2 className="text-xl font-bold text-surface-900 dark:text-surface-100 mb-3 hover:text-primary-500 dark:hover:text-primary-400 transition-colors">
                       {post.title}
                     </h2>
-                  </Link>
-                  <p className="text-surface-600 dark:text-surface-400 mb-4 line-clamp-3">
-                    {post.excerpt}
-                  </p>
-                  <div className="flex items-center justify-between text-sm text-surface-500 dark:text-surface-400">
-                    <div className="flex items-center space-x-4">
-                      <div className="flex items-center">
-                        <User className="h-4 w-4 mr-1" />
-                        <span>{post.author}</span>
+                    <p className="text-surface-600 dark:text-surface-400 mb-4 line-clamp-3">
+                      {post.excerpt}
+                    </p>
+                    <div className="flex items-center justify-between text-sm text-surface-500 dark:text-surface-400">
+                      <div className="flex items-center space-x-4">
+                        <div className="flex items-center">
+                          <User className="h-4 w-4 mr-1" />
+                          <span>{post.author}</span>
+                        </div>
+                        <div className="flex items-center">
+                          <Calendar className="h-4 w-4 mr-1" />
+                          <span>{new Date(post.date).toLocaleDateString('en-US', { 
+                            year: 'numeric', 
+                            month: 'short', 
+                            day: 'numeric' 
+                          })}</span>
+                        </div>
                       </div>
-                      <div className="flex items-center">
-                        <Calendar className="h-4 w-4 mr-1" />
-                        <span>{new Date(post.date).toLocaleDateString('en-US', { 
-                          year: 'numeric', 
-                          month: 'short', 
-                          day: 'numeric' 
-                        })}</span>
+                      <span>{post.readTime}</span>
+                    </div>
+                    <div className="mt-4 flex items-center text-primary-500 dark:text-primary-400 hover:text-primary-600 dark:hover:text-primary-300 transition-colors">
+                      <span className="mr-2">Read More</span>
+                      <ArrowRight className="h-4 w-4" />
+                    </div>
+                  </div>
+                </article>
+              </Link>
+            ))}
+          </div>
+        )}
+
+        {filteredPosts.length === 0 && blogPosts.length > 0 && (
+          <div className="text-center py-12">
+            <p className="text-xl text-surface-600 dark:text-surface-400">
+              No articles found matching your criteria.
+            </p>
+          </div>
+        )}
+      </div>
+    </div>
+  )
+}
+
+export default Blog
                       </div>
                     </div>
                     <span>{post.readTime}</span>
