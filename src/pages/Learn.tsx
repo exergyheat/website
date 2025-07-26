@@ -1,4 +1,5 @@
 import React from 'react'
+import { Helmet } from 'react-helmet-async'
 import { Link } from 'react-router-dom'
 import { BookOpen, Calculator, Users, Zap, Bitcoin, Cpu, HelpCircle, Eye, FileText, PenTool, ArrowLeft, ArrowRight, ExternalLink } from 'lucide-react'
 import { motion } from 'framer-motion'
@@ -166,6 +167,12 @@ const Learn = () => {
 
   return (
     <div className="bg-surface-50 dark:bg-surface-900 min-h-screen">
+      <Helmet>
+        <title>Learn Hashrate Heating Technology | EXERGY Education Center</title>
+        <meta name="description" content="Learn about hashrate heating technology - the revolutionary heating system that generates Bitcoin while warming your space. Educational resources, guides, and expert insights." />
+        <meta name="keywords" content="hashrate heating education, bitcoin mining heat technology, learn cryptocurrency heating, heating technology guides" />
+      </Helmet>
+      
       {/* Hero Section with Custom Gradient */}
       <div className="bg-gradient-to-r from-[#4970A5] to-[#718EBC] py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -257,7 +264,7 @@ const Learn = () => {
                   <div className="w-full max-w-lg">
                     <img
                       src={concept.image}
-                      alt={concept.title}
+                      alt={`${concept.title} - ${concept.description}`}
                       className="rounded-lg shadow-2xl w-full h-auto object-contain"
                     />
                   </div>
@@ -324,7 +331,7 @@ const Learn = () => {
                         <div className="relative h-96">
                           <img
                             src={application.image}
-                            alt={application.title}
+                            alt={`${application.title} hashrate heating application showing ${application.description}`}
                             className="w-full h-full object-cover"
                           />
                           {/* Light blue tint overlay using website's primary blue color */}
@@ -399,7 +406,7 @@ const Learn = () => {
             to="/portfolio"
             className="inline-flex items-center px-8 py-4 bg-white text-primary-600 rounded-lg hover:bg-white/90 transition-colors text-base font-subheading"
           >
-            View Project Portfolio
+            Explore Real Hashrate Heating Projects
             <Eye className="ml-2 h-5 w-5" />
           </Link>
         </div>

@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react'
+import { Helmet } from 'react-helmet-async'
 import { Link } from 'react-router-dom'
 import { Mail, MapPin, Calendar } from 'lucide-react'
 
@@ -26,6 +27,12 @@ const Contact = () => {
 
   return (
     <div className="bg-surface-50 dark:bg-surface-900">
+      <Helmet>
+        <title>Contact EXERGY | Get Started with Hashrate Heating</title>
+        <meta name="description" content="Contact EXERGY for hashrate heating solutions. Located in Denver, CO. Email us at contact@exergyheat.com or schedule a consultation to get started with heat that pays." />
+        <meta name="keywords" content="contact EXERGY, hashrate heating consultation, Denver heating company, bitcoin mining heat contact" />
+      </Helmet>
+      
       {/* Hero Section with Custom Gradient */}
       <div className="bg-gradient-to-r from-[#4970A5] to-[#718EBC] py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -56,7 +63,7 @@ const Contact = () => {
               <div className="flex items-center">
                 <Calendar className="h-6 w-6 text-primary-600" />
                 <Link to="/book-call" className="ml-4 text-primary-600 dark:text-primary-400 hover:text-primary-400 dark:hover:text-primary-600 transition-colors">
-                  Book a Call with Our Team
+                  Schedule a Consultation with Our Hashrate Heating Experts
                 </Link>
               </div>
               <div className="flex items-center">

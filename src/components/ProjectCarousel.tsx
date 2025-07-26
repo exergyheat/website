@@ -31,7 +31,7 @@ const ProjectCarousel = () => {
         <div className="text-center mb-12">
           <h2 className="text-3xl font-bold text-surface-900 dark:text-surface-100 mb-4">See it in Action</h2>
           <p className="text-xl text-surface-600 dark:text-surface-400">
-            Explore some of our most recent hashrate heating projecs
+            Explore some of our most recent hashrate heating projects
           </p>
         </div>
 
@@ -48,7 +48,7 @@ const ProjectCarousel = () => {
                       <div className="relative h-[450px] md:h-96">
                         <img
                           src={project.image}
-                          alt={project.title}
+                          alt={`${project.title} - ${project.description}`}
                           className="w-full h-full object-cover"
                         />
                         {/* Light blue tint overlay using website's primary blue color */}
@@ -107,7 +107,7 @@ const ProjectCarousel = () => {
               to="/portfolio"
               className="inline-flex items-center px-6 py-3 bg-primary-500 text-white rounded-lg hover:bg-primary-600 transition-colors text-base font-subheading"
             >
-              View Project Portfolio
+              View All Hashrate Heating Projects
               <ArrowRight className="ml-2 h-5 w-5" />
             </Link>
           </div>

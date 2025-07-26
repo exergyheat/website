@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react'
+import { Helmet } from 'react-helmet-async'
 import { PenTool, Calendar, User, ArrowRight, Search, Filter } from 'lucide-react'
 import { Link } from 'react-router-dom'
 import { loadBlogPosts, getAllCategories, BlogPost } from '../utils/blogLoader'
@@ -130,6 +131,12 @@ const Blog = () => {
 
   return (
     <div className="bg-surface-50 dark:bg-surface-900 min-h-screen">
+      <Helmet>
+        <title>EXERGY Blog | Hashrate Heating Insights & Updates</title>
+        <meta name="description" content="Stay updated with the latest insights on hashrate heating technology, Bitcoin mining heat reuse, and industry developments from EXERGY's expert team." />
+        <meta name="keywords" content="hashrate heating blog, bitcoin mining heat news, cryptocurrency heating insights, EXERGY updates" />
+      </Helmet>
+      
       {/* Hero Section with Custom Gradient */}
       <div className="bg-gradient-to-r from-[#4970A5] to-[#718EBC] py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -209,7 +216,7 @@ const Blog = () => {
                   <div className="relative h-48">
                     <img
                       src={post.image}
-                      alt={post.title}
+                      alt={`Blog post: ${post.title}`}
                       className="w-full h-full object-cover"
                     />
                     <div className="absolute top-4 right-4 flex flex-wrap gap-2">
@@ -221,7 +228,7 @@ const Blog = () => {
                           {cat}
                         </span>
                       ))}
-                    </div>
+                  <span className="mr-2">Read Full Article</span>
                   </div>
                 </Link>
                 <div className="p-6">

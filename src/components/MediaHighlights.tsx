@@ -94,7 +94,7 @@ const MediaHighlights = () => {
               >
                 <img
                   src={highlight.logo}
-                  alt={highlight.name}
+                  alt={`${highlight.name} logo - EXERGY featured in ${highlight.name}`}
                   className="h-8 w-auto object-contain filter grayscale brightness-50 opacity-60 group-hover:grayscale-0 group-hover:brightness-100 group-hover:opacity-100 dark:brightness-100 dark:opacity-70 dark:group-hover:opacity-100 transition-all duration-300"
                 />
               </a>

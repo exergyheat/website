@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react'
+import { Helmet } from 'react-helmet-async'
 import { useParams, Link } from 'react-router-dom'
 import { Calendar, User, ArrowLeft } from 'lucide-react'
 import { marked } from 'marked'
@@ -90,6 +91,18 @@ const BlogPostDetail = () => {
 
   return (
     <div className="bg-surface-50 dark:bg-surface-900 min-h-screen">
+      {post && (
+        <Helmet>
+          <title>{post.title} | EXERGY Blog</title>
+          <meta name="description" content={post.excerpt} />
+          <meta name="keywords" content={`${post.category.join(', ')}, hashrate heating, EXERGY blog`} />
+          <meta name="author" content={post.author} />
+          <meta property="article:published_time" content={post.date} />
+          <meta property="article:author" content={post.author} />
+          <meta property="og:image" content={post.image} />
+        </Helmet>
+      )}
+      
       {/* Article Header */}
       <div className="bg-white dark:bg-surface-800 py-12">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -98,7 +111,7 @@ const BlogPostDetail = () => {
             className="inline-flex items-center text-primary-500 dark:text-primary-400 hover:text-primary-600 dark:hover:text-primary-300 mb-6"
           >
             <ArrowLeft className="h-4 w-4 mr-2" />
-            Back to Blog
+            Back to All Blog Posts
           </Link>
           <h1 className="text-4xl font-bold text-surface-900 dark:text-surface-100 mb-4">
             {post.title}
@@ -144,7 +157,7 @@ const BlogPostDetail = () => {
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 pb-20">
         <div className="bg-white dark:bg-surface-800 rounded-lg shadow-lg p-8">
           <div 
-            className="prose prose-lg dark:prose-invert max-w-none"
+            alt={`Featured image for blog post: ${post.title}`}
             dangerouslySetInnerHTML={{ __html: htmlContent }}
           />
         </div>
