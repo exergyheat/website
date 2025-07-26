@@ -45,7 +45,7 @@ const Products = () => {
         hashrate: '13-39 TH/s',
         heating: '1,364-4,092 BTU/hr',
         capacity: '400 sqft',
-        noise: '48 dB',
+        noise: '40-56 dB',
         dimensions: '9.5" x 9.5" x 32"'
       },
       price: '$799-$1399',
