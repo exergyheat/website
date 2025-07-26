@@ -36,9 +36,9 @@ const Products = () => {
 
   const products = [
     {
-      id: 'sh-800',
+      id: 'sh-heatbit',
       category: 'space-heating',
-      name: 'Canaan Avalon Mini 3',
+      name: 'Heatbit Trio & Maxi',
       image: 'https://www.canaan.io/static/themes/default/images/official/official_mini3_index4.png',
       specs: {
         power: '800 W: 110-240V AC 50/60Hz',
