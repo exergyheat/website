@@ -58,6 +58,28 @@ const Products = () => {
       ]
     },
     {
+      id: 'sh-800',
+      category: 'space-heating',
+      name: 'Canaan Avalon Mini 3',
+      image: 'https://www.canaan.io/static/themes/default/images/official/official_mini3_index4.png',
+      specs: {
+        power: '800 W: 110-240V AC 50/60Hz',
+        hashrate: '37.5 TH/s',
+        heating: '2,730 BTU/hr',
+        capacity: '400 sqft',
+        noise: '45 dB',
+        dimensions: '30" x 4.1" x 8.5"'
+      },
+      price: '$999',
+      description: 'Perfect for heating small to medium-sized rooms while generating passive revenue. The Avalon Mini 3 is easy to setup, can be operated remotely, and has a whisper quiet fan. You won\'t even know it\'s there.',
+      features: [
+        'Plug-and-play setup',
+        'WiFi connectivity',
+        'Mobile app control',
+        'Quiet operation'
+      ]
+    },
+    {
       id: 'hyd-5000',
       category: 'hydronic',
       name: 'RY3T Mini',
