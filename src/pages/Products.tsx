@@ -48,7 +48,7 @@ const Products = () => {
         noise: '45 dB',
         dimensions: '30" x 4.1" x 8.5"'
       },
-      price: '$999',
+      price: '$799-$1399',
       description: 'Perfect for heating small to medium-sized rooms while generating passive revenue. The Avalon Mini 3 is easy to setup, can be operated remotely, and has a whisper quiet fan. You won\'t even know it\'s there.',
       features: [
         'Plug-and-play setup',
