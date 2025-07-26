@@ -76,7 +76,7 @@ const Products = () => {
         'Simple to follow setup',
         'WiFi connectivity',
         'Mobile app control',
-        'Quiet operation'
+        'Silent operation'
       ]
     },
     {
