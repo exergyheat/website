@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { Helmet } from 'react-helmet-async'
 import { Link } from 'react-router-dom'
 import { ArrowRight, Radiation as Radiator, Fan, Droplets, Cpu, ChevronDown, ChevronUp } from 'lucide-react'
 
@@ -86,6 +87,12 @@ const Products = () => {
 
   return (
     <div className="bg-surface-50 dark:bg-surface-900">
+      <Helmet>
+        <title>Hashrate Heating Products | EXERGY Bitcoin Mining Heaters</title>
+        <meta name="description" content="Explore EXERGY's hashrate heating products including space heaters, forced air systems, hydronic boilers, and control systems. Bitcoin mining heaters that pay you while keeping you warm." />
+        <meta name="keywords" content="hashrate heaters, bitcoin mining heaters, space heating, forced air heating, hydronic heating, mining heat reuse products" />
+      </Helmet>
+      
       {/* Hero Section with Custom Gradient */}
       <div className="bg-gradient-to-r from-[#4970A5] to-[#718EBC] py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -142,6 +149,7 @@ const Products = () => {
                   <img
                     src={product.image}
                     alt={product.name}
+                    alt={`${product.name} - ${product.description}`}
                     className="absolute inset-0 w-full h-full object-cover"
                   />
                   <div className="absolute top-4 right-4 bg-primary-600 text-white px-4 py-1 rounded-full text-sm">
@@ -193,7 +201,7 @@ const Products = () => {
                     to="/products"
                     className="inline-flex items-center justify-center w-full px-6 py-3 bg-primary-600 text-white rounded-lg hover:bg-primary-700 transition-colors text-base font-subheading"
                   >
-                    Coming Soon
+                    Learn More About This Product
                     <ArrowRight className="ml-2 h-5 w-5" />
                   </Link>
                 </div>
@@ -217,14 +225,14 @@ const Products = () => {
               to="/services"
               className="inline-flex items-center px-8 py-4 bg-white text-primary-600 rounded-lg hover:bg-white/90 transition-colors text-base font-subheading"
             >
-              Our Services
+              Explore Our Heat Audit Services
               <ArrowRight className="ml-2 h-5 w-5" />
             </Link>
             <Link
               to="/book-call"
               className="inline-flex items-center px-6 py-3 border border-white text-base font-subheading rounded-md text-white hover:bg-white hover:text-primary-500 transition-colors"
             >
-              Book an Intro Call
+              Schedule Product Consultation
               <ArrowRight className="ml-2 h-5 w-5" />
             </Link>
           </div>

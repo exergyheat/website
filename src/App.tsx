@@ -1,5 +1,6 @@
 import React from 'react'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+import { Helmet } from 'react-helmet-async'
 import { ThemeProvider } from './contexts/ThemeContext'
 import Navbar from './components/Navbar'
 import Footer from './components/Footer'
@@ -23,6 +24,10 @@ import BlogPostDetail from './pages/BlogPostDetail'
 function App() {
   return (
     <ThemeProvider>
+      <Helmet>
+        <title>EXERGY - Heat That Pays | Hashrate Heating Solutions</title>
+        <meta name="description" content="EXERGY provides hashrate heating solutions that generate heat and Bitcoin rewards simultaneously. Transform your heating system into a revenue-generating asset with our expert design and installation services." />
+      </Helmet>
       <Router>
         <ScrollToTop />
         <div className="flex flex-col min-h-screen bg-surface-50 dark:bg-surface-900 text-surface-900 dark:text-surface-100">

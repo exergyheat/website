@@ -1,4 +1,5 @@
 import React from 'react'
+import { Helmet } from 'react-helmet-async'
 import { ArrowRight, Wrench, Cpu, Bitcoin, Flame, DollarSign, Zap, Calculator } from 'lucide-react'
 import { Link } from 'react-router-dom'
 import { useTypewriter } from '../hooks/useTypewriter'
@@ -36,6 +37,12 @@ const Home = () => {
 
   return (
     <div className="bg-surface-50 dark:bg-surface-900">
+      <Helmet>
+        <title>EXERGY - Heat That Pays | Hashrate Heating Solutions</title>
+        <meta name="description" content="Upgrade to heat that pays you instead. EXERGY's hashrate heating systems generate warmth and Bitcoin rewards simultaneously at no extra cost. Expert design and installation services." />
+        <meta name="keywords" content="hashrate heating, bitcoin mining heat, heat that pays, cryptocurrency heating, energy efficient heating, bitcoin heaters" />
+      </Helmet>
+      
       {/* Hero Section */}
       <div 
         className="relative bg-cover bg-center h-[600px]" 
@@ -206,7 +213,7 @@ const Home = () => {
             <div className="relative">
               <img
                 src="homeheat_withbill.png"
-                alt="Hashrate heating technology"
+                alt="Hashrate heating system showing home heating with Bitcoin mining integration and utility bill savings"
                 className="rounded-lg shadow-2xl"
               />
               <div className="absolute -bottom-6 -right-6 bg-white dark:bg-surface-800 p-6 rounded-lg shadow-xl">
@@ -289,7 +296,7 @@ const Home = () => {
               to="/about"
               className="inline-flex items-center px-6 py-3 bg-primary-500 text-white rounded-lg hover:bg-primary-600 transition-colors text-base font-subheading"
             >
-              More About Us
+              Learn More About Our Team
               <ArrowRight className="ml-2 h-5 w-5" />
             </Link>
           </div>
@@ -370,7 +377,7 @@ const Home = () => {
               to="/faq"
               className="inline-flex items-center px-6 py-3 bg-primary-500 text-white rounded-lg hover:bg-primary-600 transition-colors text-base font-subheading"
             >
-              See More FAQ
+              View All Frequently Asked Questions
               <ArrowRight className="ml-2 h-5 w-5" />
             </Link>
           </div>
@@ -396,14 +403,14 @@ const Home = () => {
               to="/contact"
               className="inline-flex items-center px-6 py-3 border border-transparent text-base font-subheading rounded-md text-primary-700 bg-white hover:bg-white/90 transition-colors"
             >
-              Contact Us
+              Get Started Today
               <ArrowRight className="ml-2 h-5 w-5" />
             </Link>
             <Link
               to="/book-call"
               className="inline-flex items-center px-6 py-3 border border-white text-base font-subheading rounded-md text-white hover:bg-white hover:text-primary-500 transition-colors"
             >
-              Book an Intro Call
+              Schedule Free Consultation
               <ArrowRight className="ml-2 h-5 w-5" />
             </Link>
           </div>

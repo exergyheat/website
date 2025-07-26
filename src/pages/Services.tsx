@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { Helmet } from 'react-helmet-async'
 import { Link } from 'react-router-dom'
 import { ArrowRight, FileText, Wrench, Activity, Users, ChevronDown, ChevronUp, X, Search, Cog, Monitor, ChevronLeft, ChevronRight } from 'lucide-react'
 
@@ -248,6 +249,12 @@ const Services = () => {
 
   return (
     <div className="bg-surface-50 dark:bg-surface-900">
+      <Helmet>
+        <title>Hashrate Heating Services | Heat Audits & Installation | EXERGY</title>
+        <meta name="description" content="Professional hashrate heating services from EXERGY. Heat audits, system design, installation, and monitoring. Transform your heating system into a Bitcoin-earning asset." />
+        <meta name="keywords" content="heat audit, hashrate heating installation, bitcoin mining heat services, heating system design, remote monitoring" />
+      </Helmet>
+      
       {/* Hero Section with Custom Gradient */}
       <div className="bg-gradient-to-r from-[#4970A5] to-[#718EBC] py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -364,7 +371,7 @@ const Services = () => {
                 <div className="w-full max-w-lg">
                   <img
                     src={service.image}
-                    alt={service.name}
+                    alt={`${service.name} - ${service.description}`}
                     className="rounded-lg shadow-2xl w-full h-auto object-contain"
                   />
                 </div>
@@ -604,14 +611,14 @@ const Services = () => {
               to="/products"
               className="inline-flex items-center px-8 py-4 bg-white text-primary-600 rounded-lg hover:bg-white/90 transition-colors text-base font-subheading"
             >
-              Our Hardware Recommendations
+              View Our Recommended Products
               <ArrowRight className="ml-2 h-5 w-5" />
             </Link>
             <Link
               to="/book-call"
               className="inline-flex items-center px-8 py-4 border border-white text-white rounded-lg hover:bg-white/10 transition-colors text-base font-subheading"
             >
-              Book an Intro Call
+              Schedule Service Consultation
               <ArrowRight className="ml-2 h-5 w-5" />
             </Link>
           </div>
