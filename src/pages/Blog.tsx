@@ -228,7 +228,7 @@ const Blog = () => {
                           {cat}
                         </span>
                       ))}
-                  <span className="mr-2">Read Full Article</span>
+                    </div>
                   </div>
                 </Link>
                 <div className="p-6">
