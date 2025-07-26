@@ -41,15 +41,15 @@ const Products = () => {
       name: 'Heatbit Trio & Maxi',
       image: 'https://heatbit.com/cdn/shop/files/6magnifics_upscale-AKYuF81EntKoAHcGWffL-untitled_3_2048x2048.jpg?v=1748042332',
       specs: {
-        power: '800 W: 110-240V AC 50/60Hz',
-        hashrate: '37.5 TH/s',
-        heating: '2,730 BTU/hr',
+        power: '400-1200 W: 110-240V AC 50/60Hz',
+        hashrate: '13-39 TH/s',
+        heating: '1,364-4,092 BTU/hr',
         capacity: '400 sqft',
         noise: '45 dB',
         dimensions: '30" x 4.1" x 8.5"'
       },
       price: '$799-$1399',
-      description: 'Perfect for heating small to medium-sized rooms while generating passive revenue. The Avalon Mini 3 is easy to setup, can be operated remotely, and has a whisper quiet fan. You won\'t even know it\'s there.',
+      description: 'Premium space heater & air purifier combo devices that harness hashrate heat to offset costs. The Heatbit Trio and Maxi are the most user friendly bitcoin mining heaters. Plug and play ready with an easy to use control panel and mobile application.',
       features: [
         'Plug-and-play setup',
         'WiFi connectivity',
@@ -73,7 +73,7 @@ const Products = () => {
       price: '$999',
       description: 'Perfect for heating small to medium-sized rooms while generating passive revenue. The Avalon Mini 3 is easy to setup, can be operated remotely, and has a whisper quiet fan. You won\'t even know it\'s there.',
       features: [
-        'Plug-and-play setup',
+        'Simple to follow setup',
         'WiFi connectivity',
         'Mobile app control',
         'Quiet operation'
