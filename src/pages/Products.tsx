@@ -39,7 +39,7 @@ const Products = () => {
       id: 'sh-heatbit',
       category: 'space-heating',
       name: 'Heatbit Trio & Maxi',
-      image: 'https://www.canaan.io/static/themes/default/images/official/official_mini3_index4.png',
+      image: 'https://heatbit.com/cdn/shop/files/6magnifics_upscale-AKYuF81EntKoAHcGWffL-untitled_3_2048x2048.jpg?v=1748042332',
       specs: {
         power: '800 W: 110-240V AC 50/60Hz',
         hashrate: '37.5 TH/s',
