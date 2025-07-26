@@ -39,7 +39,7 @@ const Products = () => {
       id: 'sh-heatbit',
       category: 'space-heating',
       name: 'Heatbit Trio & Maxi',
-      image: /heatbits.webp,
+      image: "/Heatbits.webp",
       specs: {
         power: '400-1200 W: 110-240V AC 50/60Hz',
         hashrate: '13-39 TH/s',
