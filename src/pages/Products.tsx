@@ -54,7 +54,8 @@ const Products = () => {
         'Plug-and-play setup',
         'WiFi connectivity',
         'Touch panel & mobile app control',
-        'Quiet operation'
+        'Quiet operation',
+        'Air purification'
       ]
     },
     {
