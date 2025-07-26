@@ -1,12 +1,22 @@
 import React, { useState } from 'react'
 import { Helmet } from 'react-helmet-async'
 import { Link } from 'react-router-dom'
-import { ArrowRight, Radiation as Radiator, Fan, Droplets, Cpu, ChevronDown, ChevronUp } from 'lucide-react'
+import { ArrowRight, Radiation as Radiator, Fan, Droplets, Cpu, ChevronDown, ChevronUp, Copy, Check } from 'lucide-react'
 
 const Products = () => {
   const [activeCategory, setActiveCategory] = useState<string | null>(null)
   const [expandedProduct, setExpandedProduct] = useState<string | null>(null)
+  const [copiedCoupon, setCopiedCoupon] = useState<string | null>(null)
 
+  const handleCopyCoupon = async (couponCode: string) => {
+    try {
+      await navigator.clipboard.writeText(couponCode)
+      setCopiedCoupon(couponCode)
+      setTimeout(() => setCopiedCoupon(null), 2000)
+    } catch (err) {
+      console.error('Failed to copy coupon code:', err)
+    }
+  }
   const categories = [
     {
       id: 'space-heating',
@@ -49,6 +59,9 @@ const Products = () => {
         dimensions: '9.5" x 9.5" x 32"'
       },
       price: '$799-$1399',
+      couponCode: 'EXERGYHEAT',
+      buttonText: 'Buy Now at Heatbit.com',
+      buttonLink: 'https://heatbit.com/?ref=Exergyheat',
       description: 'Premium space heater & air purifier combo devices that harness hashrate heat to offset costs. The Heatbit Trio and Maxi are the most user friendly bitcoin mining heaters. Plug and play ready with an easy to use control panel and mobile application.',
       features: [
         'Plug-and-play setup',
@@ -72,6 +85,8 @@ const Products = () => {
         dimensions: '30" x 4.1" x 8.5"'
       },
       price: '$999',
+      buttonText: 'Coming Soon',
+      buttonLink: '/products',
       description: 'Perfect for heating small to medium-sized rooms while generating passive revenue. The Avalon Mini 3 is easy to setup, can be operated remotely, and has a whisper quiet fan. You won\'t even know it\'s there.',
       features: [
         'Simple to follow setup',
@@ -93,6 +108,8 @@ const Products = () => {
         dimensions: '23.6" x 15.8" x 24.4"'
       },
       price: '$10,000',
+      buttonText: 'Coming Soon',
+      buttonLink: '/products',
       description: 'Versatile electric boiler for hydronic hashrate heating applications. With a high water output temperature and smart control, this water boiler is great for a variety of use cases.',
       features: [
         'Radiant / hydronic loop applications',
@@ -181,7 +198,27 @@ const Products = () => {
                 </div>
                 <div className="p-8">
                   <h3 className="text-2xl font-bold text-surface-900 dark:text-surface-100 mb-4">{product.name}</h3>
-                  <p className="text-xl font-semibold text-primary-600 dark:text-primary-400 mb-4">{product.price}</p>
+                  <div className="flex items-center gap-4 mb-4">
+                    <p className="text-xl font-semibold text-primary-600 dark:text-primary-400">{product.price}</p>
+                    {product.couponCode && (
+                      <button
+                        onClick={() => handleCopyCoupon(product.couponCode)}
+                        className="flex items-center gap-2 bg-green-100 dark:bg-green-900 text-green-800 dark:text-green-200 px-3 py-1 rounded-full text-sm font-medium hover:bg-green-200 dark:hover:bg-green-800 transition-colors"
+                      >
+                        {copiedCoupon === product.couponCode ? (
+                          <>
+                            <Check className="h-4 w-4" />
+                            Copied!
+                          </>
+                        ) : (
+                          <>
+                            <Copy className="h-4 w-4" />
+                            Coupon: {product.couponCode}
+                          </>
+                        )}
+                      </button>
+                    )}
+                  </div>
                   <p className="text-surface-600 dark:text-surface-400 mb-6">{product.description}</p>
 
                   <button
@@ -220,13 +257,25 @@ const Products = () => {
                     ))}
                   </div>
 
-                  <Link
-                    to="/products"
-                    className="inline-flex items-center justify-center w-full px-6 py-3 bg-primary-600 text-white rounded-lg hover:bg-primary-700 transition-colors text-base font-subheading"
-                  >
-                    Coming Soon
-                    <ArrowRight className="ml-2 h-5 w-5" />
-                  </Link>
+                  {product.buttonLink.startsWith('http') ? (
+                    <a
+                      href={product.buttonLink}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center justify-center w-full px-6 py-3 bg-primary-600 text-white rounded-lg hover:bg-primary-700 transition-colors text-base font-subheading"
+                    >
+                      {product.buttonText}
+                      <ArrowRight className="ml-2 h-5 w-5" />
+                    </a>
+                  ) : (
+                    <Link
+                      to={product.buttonLink}
+                      className="inline-flex items-center justify-center w-full px-6 py-3 bg-primary-600 text-white rounded-lg hover:bg-primary-700 transition-colors text-base font-subheading"
+                    >
+                      {product.buttonText}
+                      <ArrowRight className="ml-2 h-5 w-5" />
+                    </Link>
+                  )}
                 </div>
               </div>
             </div>
