@@ -46,7 +46,7 @@ const Products = () => {
         heating: '1,364-4,092 BTU/hr',
         capacity: '400 sqft',
         noise: '45 dB',
-        dimensions: '30" x 4.1" x 8.5"'
+        dimensions: '9.5" x 9.5" x 32"'
       },
       price: '$799-$1399',
       description: 'Premium space heater & air purifier combo devices that harness hashrate heat to offset costs. The Heatbit Trio and Maxi are the most user friendly bitcoin mining heaters. Plug and play ready with an easy to use control panel and mobile application.',
