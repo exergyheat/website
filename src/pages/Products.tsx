@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { Helmet } from 'react-helmet-async'
 import { Link } from 'react-router-dom'
-import { ArrowRight, Radiation as Radiator, Fan, Droplets, Cpu, ChevronDown, ChevronUp, Copy, Check } from 'lucide-react'
+import { ArrowRight, Radiation as Radiator, Fan, Droplets, Cpu, Factory, ChevronDown, ChevronUp, Copy, Check } from 'lucide-react'
 
 const Products = () => {
   const [activeCategory, setActiveCategory] = useState<string | null>(null)
@@ -41,6 +41,12 @@ const Products = () => {
       name: 'Control Systems',
       icon: Cpu,
       description: 'Smart control systems and hardware for managing your hashrate heating devices. From sensors to servers, we provide complete control solutions.'
+    },
+    {
+      id: 'commercial-industrial',
+      name: 'Commercial & Industrial',
+      icon: Factory,
+      description: 'Large-scale hashrate heating solutions for commercial and industrial applications. High-capacity systems for warehouses, manufacturing, and district heating.'
     }
   ]
 
