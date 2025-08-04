@@ -187,106 +187,148 @@ const Products = () => {
 
       {/* Products Grid */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
-        <div className="grid grid-cols-1 gap-16">
-          {filteredProducts.map((product) => (
-            <div key={product.id} className="bg-white dark:bg-surface-800 rounded-lg shadow-xl overflow-hidden">
-              <div className="grid grid-cols-1 lg:grid-cols-2">
-                <div className="relative h-[400px]">
-                  <img
-                    src={product.image}
-                    alt={product.name}
-                    alt={`${product.name} - ${product.description}`}
-                    className="absolute inset-0 w-full h-full object-cover"
-                  />
-                  <div className="absolute top-4 right-4 bg-primary-600 text-white px-4 py-1 rounded-full text-sm">
-                    {categories.find(cat => cat.id === product.category)?.name}
-                  </div>
-                </div>
-                <div className="p-8">
-                  <h3 className="text-2xl font-bold text-surface-900 dark:text-surface-100 mb-4">{product.name}</h3>
-                  <div className="flex items-center gap-4 mb-4">
-                    <p className="text-xl font-semibold text-primary-600 dark:text-primary-400">{product.price}</p>
-                    {product.couponCode && (
-                      <button
-                        onClick={() => handleCopyCoupon(product.couponCode)}
-                        className="flex items-center gap-2 bg-green-100 dark:bg-green-900 text-green-800 dark:text-green-200 px-3 py-1 rounded-full text-sm font-medium hover:bg-green-200 dark:hover:bg-green-800 transition-colors"
-                      >
-                        {copiedCoupon === product.couponCode ? (
-                          <>
-                            <Check className="h-4 w-4" />
-                            Copied!
-                          </>
-                        ) : (
-                          <>
-                            <Copy className="h-4 w-4" />
-                            Coupon: {product.couponCode}
-                          </>
-                        )}
-                      </button>
-                    )}
-                  </div>
-                  <p className="text-surface-600 dark:text-surface-400 mb-6">{product.description}</p>
-
-                  <button
-                    onClick={() => setExpandedProduct(expandedProduct === product.id ? null : product.id)}
-                    className="flex items-center justify-between w-full text-left mb-4"
-                  >
-                    <span className="text-lg font-semibold text-surface-900 dark:text-surface-100">Technical Specifications</span>
-                    {expandedProduct === product.id ? (
-                      <ChevronUp className="h-5 w-5 text-surface-600 dark:text-surface-400" />
-                    ) : (
-                      <ChevronDown className="h-5 w-5 text-surface-600 dark:text-surface-400" />
-                    )}
-                  </button>
-
-                  {expandedProduct === product.id && (
-                    <div className="bg-surface-50 dark:bg-surface-700 rounded-lg p-4 mb-6">
-                      <div className="grid grid-cols-2 gap-4">
-                        {Object.entries(product.specs).map(([key, value]) => (
-                          <div key={key}>
-                            <dt className="text-sm font-medium text-surface-500 dark:text-surface-400 capitalize">
-                              {key.replace(/([A-Z])/g, ' $1').trim()}
-                            </dt>
-                            <dd className="text-lg font-semibold text-surface-900 dark:text-surface-100">{value}</dd>
-                          </div>
-                        ))}
-                      </div>
-                    </div>
-                  )}
-
-                  <div className="space-y-2 mb-8">
-                    {product.features.map((feature, index) => (
-                      <div key={index} className="flex items-center text-surface-700 dark:text-surface-300">
-                        <ArrowRight className="h-5 w-5 text-primary-600 dark:text-primary-400 mr-2" />
-                        {feature}
-                      </div>
-                    ))}
-                  </div>
-
-                  {product.buttonLink.startsWith('http') ? (
-                    <a
-                      href={product.buttonLink}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="inline-flex items-center justify-center w-full px-6 py-3 bg-primary-600 text-white rounded-lg hover:bg-primary-700 transition-colors text-base font-subheading"
-                    >
-                      {product.buttonText}
-                      <ArrowRight className="ml-2 h-5 w-5" />
-                    </a>
-                  ) : (
-                    <Link
-                      to={product.buttonLink}
-                      className="inline-flex items-center justify-center w-full px-6 py-3 bg-primary-600 text-white rounded-lg hover:bg-primary-700 transition-colors text-base font-subheading"
-                    >
-                      {product.buttonText}
-                      <ArrowRight className="ml-2 h-5 w-5" />
-                    </Link>
+        {filteredProducts.length === 0 ? (
+          <div className="text-center py-20">
+            <div className="bg-white dark:bg-surface-800 rounded-lg shadow-xl p-12 max-w-2xl mx-auto">
+              <div className="mb-6">
+                <div className="inline-flex items-center justify-center w-20 h-20 bg-primary-100 dark:bg-primary-900 rounded-full mb-4">
+                  {activeCategory && (
+                    <categories.find(cat => cat.id === activeCategory)?.icon className="h-10 w-10 text-primary-600 dark:text-primary-400" />
                   )}
                 </div>
+                <h2 className="text-3xl font-bold text-surface-900 dark:text-surface-100 mb-4">
+                  Coming Soon
+                </h2>
+                <p className="text-xl text-surface-600 dark:text-surface-400 mb-6">
+                  {activeCategory 
+                    ? `We're currently developing ${categories.find(cat => cat.id === activeCategory)?.name.toLowerCase()} products and will have them available soon.`
+                    : 'We\'re expanding our product lineup and will have new options available soon.'
+                  }
+                </p>
+                <p className="text-surface-500 dark:text-surface-400">
+                  In the meantime, check out our services or contact us to discuss custom solutions for your needs.
+                </p>
+              </div>
+              <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+                <Link
+                  to="/services"
+                  className="inline-flex items-center px-6 py-3 bg-primary-600 text-white rounded-lg hover:bg-primary-700 transition-colors text-base font-subheading"
+                >
+                  Explore Our Services
+                  <ArrowRight className="ml-2 h-5 w-5" />
+                </Link>
+                <Link
+                  to="/contact"
+                  className="inline-flex items-center px-6 py-3 border border-primary-600 text-primary-600 dark:text-primary-400 rounded-lg hover:bg-primary-50 dark:hover:bg-primary-900 transition-colors text-base font-subheading"
+                >
+                  Contact Us
+                  <ArrowRight className="ml-2 h-5 w-5" />
+                </Link>
               </div>
             </div>
-          ))}
-        </div>
+          </div>
+        ) : (
+          <div className="grid grid-cols-1 gap-16">
+            {filteredProducts.map((product) => (
+              <div key={product.id} className="bg-white dark:bg-surface-800 rounded-lg shadow-xl overflow-hidden">
+                <div className="grid grid-cols-1 lg:grid-cols-2">
+                  <div className="relative h-[400px]">
+                    <img
+                      src={product.image}
+                      alt={product.name}
+                      alt={`${product.name} - ${product.description}`}
+                      className="absolute inset-0 w-full h-full object-cover"
+                    />
+                    <div className="absolute top-4 right-4 bg-primary-600 text-white px-4 py-1 rounded-full text-sm">
+                      {categories.find(cat => cat.id === product.category)?.name}
+                    </div>
+                  </div>
+                  <div className="p-8">
+                    <h3 className="text-2xl font-bold text-surface-900 dark:text-surface-100 mb-4">{product.name}</h3>
+                    <div className="flex items-center gap-4 mb-4">
+                      <p className="text-xl font-semibold text-primary-600 dark:text-primary-400">{product.price}</p>
+                      {product.couponCode && (
+                        <button
+                          onClick={() => handleCopyCoupon(product.couponCode)}
+                          className="flex items-center gap-2 bg-green-100 dark:bg-green-900 text-green-800 dark:text-green-200 px-3 py-1 rounded-full text-sm font-medium hover:bg-green-200 dark:hover:bg-green-800 transition-colors"
+                        >
+                          {copiedCoupon === product.couponCode ? (
+                            <>
+                              <Check className="h-4 w-4" />
+                              Copied!
+                            </>
+                          ) : (
+                            <>
+                              <Copy className="h-4 w-4" />
+                              Coupon: {product.couponCode}
+                            </>
+                          )}
+                        </button>
+                      )}
+                    </div>
+                    <p className="text-surface-600 dark:text-surface-400 mb-6">{product.description}</p>
+
+                    <button
+                      onClick={() => setExpandedProduct(expandedProduct === product.id ? null : product.id)}
+                      className="flex items-center justify-between w-full text-left mb-4"
+                    >
+                      <span className="text-lg font-semibold text-surface-900 dark:text-surface-100">Technical Specifications</span>
+                      {expandedProduct === product.id ? (
+                        <ChevronUp className="h-5 w-5 text-surface-600 dark:text-surface-400" />
+                      ) : (
+                        <ChevronDown className="h-5 w-5 text-surface-600 dark:text-surface-400" />
+                      )}
+                    </button>
+
+                    {expandedProduct === product.id && (
+                      <div className="bg-surface-50 dark:bg-surface-700 rounded-lg p-4 mb-6">
+                        <div className="grid grid-cols-2 gap-4">
+                          {Object.entries(product.specs).map(([key, value]) => (
+                            <div key={key}>
+                              <dt className="text-sm font-medium text-surface-500 dark:text-surface-400 capitalize">
+                                {key.replace(/([A-Z])/g, ' $1').trim()}
+                              </dt>
+                              <dd className="text-lg font-semibold text-surface-900 dark:text-surface-100">{value}</dd>
+                            </div>
+                          ))}
+                        </div>
+                      </div>
+                    )}
+
+                    <div className="space-y-2 mb-8">
+                      {product.features.map((feature, index) => (
+                        <div key={index} className="flex items-center text-surface-700 dark:text-surface-300">
+                          <ArrowRight className="h-5 w-5 text-primary-600 dark:text-primary-400 mr-2" />
+                          {feature}
+                        </div>
+                      ))}
+                    </div>
+
+                    {product.buttonLink.startsWith('http') ? (
+                      <a
+                        href={product.buttonLink}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center justify-center w-full px-6 py-3 bg-primary-600 text-white rounded-lg hover:bg-primary-700 transition-colors text-base font-subheading"
+                      >
+                        {product.buttonText}
+                        <ArrowRight className="ml-2 h-5 w-5" />
+                      </a>
+                    ) : (
+                      <Link
+                        to={product.buttonLink}
+                        className="inline-flex items-center justify-center w-full px-6 py-3 bg-primary-600 text-white rounded-lg hover:bg-primary-700 transition-colors text-base font-subheading"
+                      >
+                        {product.buttonText}
+                        <ArrowRight className="ml-2 h-5 w-5" />
+                      </Link>
+                    )}
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        )}
       </div>
 
       {/* CTA Section with Custom Gradient */}
