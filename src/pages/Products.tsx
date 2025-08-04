@@ -207,7 +207,7 @@ const Products = () => {
                   {activeCategory 
                     ? (() => {
                         const category = categories.find(cat => cat.id === activeCategory);
-                        return `We're currently developing ${category ? category.name.toLowerCase() : 'these'} products and will have them available soon.`;
+                        return `We're currently working on ${category ? category.name.toLowerCase() : 'these'} products and will have them available soon.`;
                       })()
                     : 'We\'re expanding our product lineup and will have new options available soon.'
                   }
