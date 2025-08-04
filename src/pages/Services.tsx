@@ -315,7 +315,6 @@ const Services = () => {
 
                       {/* Hover indicator */}
                       <div className="text-center mt-4">
-                        <p className="text-xs text-surface-500 dark:text-surface-400">Flip</p>
                       </div>
                     </div>
                   </div>
