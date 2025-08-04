@@ -1,70 +1,83 @@
 # EXERGY - Heat That Pays
 
-A simple website for Exergy LLC, the leader in Hashrate Heating system feasibility modeling, design and integration.
+A comprehensive website for Exergy LLC, the leader in Hashrate Heating system feasibility modeling, design and integration. This modern React application showcases our products, services, and expertise in Bitcoin mining heat reuse technology.
 
 ## Features
 
-- 🌙 Dark/Light mode support
-- 📱 Fully responsive design
-- 🎨 Modern UI with dynamic animations
-- 🧭 Intuitive navigation
-- 💻 Interactive components
-- 🔍 Search functionality in FAQ
-- 📊 Interactive calculators
-- 📝 Contact forms
-- 📅 Booking system
-- 📰 Markdown-based blog system
+- 🌙 **Dark/Light Mode Support** - Automatic system detection with manual override
+- 📱 **Fully Responsive Design** - Optimized for all device sizes
+- 🎨 **Modern UI with Dynamic Animations** - Framer Motion powered interactions
+- 🧭 **Intuitive Navigation** - Clean, accessible navigation structure
+- 💻 **Interactive Components** - Engaging user interface elements
+- 🔍 **Search Functionality** - Searchable FAQ and blog content
+- 📊 **Interactive Calculators** - Coming soon: ROI and savings calculators
+- 📝 **Contact Forms** - HubSpot integrated contact and booking forms
+- 📅 **Booking System** - Integrated HubSpot meetings for consultations
+- 📰 **Markdown-based Blog System** - Dynamic blog with category filtering
+- 🏭 **Product Catalog** - Comprehensive hashrate heating product showcase
+- 🎯 **SEO Optimized** - Complete meta tags, structured data, and sitemap
+- 📈 **Media Integration** - Featured press coverage carousel
+- 🔧 **Service Showcase** - Detailed service offerings with interactive elements
 
 ## Tech Stack
 
 - **Framework:** React 18 with TypeScript
-- **Routing:** React Router v6
+- **Routing:** React Router v6 with scroll restoration
 - **Styling:** Tailwind CSS with Typography plugin
 - **Icons:** Lucide React
 - **Animations:** Framer Motion
-- **Build Tool:** Vite
-- **Type Checking:** TypeScript
-- **Linting:** ESLint
+- **Build Tool:** Vite with optimized chunking
+- **Type Checking:** TypeScript with strict mode
+- **Linting:** ESLint with React hooks plugin
 - **Content Management:** Markdown with Gray Matter
 - **Markdown Parsing:** Marked
+- **SEO:** React Helmet Async
+- **Forms:** HubSpot integration
+- **Fonts:** Futura PT with system fallbacks
 
 ## Project Structure
 
 ```
 src/
 ├── blog-posts/         # Markdown blog posts
-│   ├── *.md           # Individual blog post files
+│   ├── book-ch1.md    # Chapter 1: Why Hashrate Heaters Make Sense
+│   └── book-ch2.md    # Chapter 2: Hashrate Heating for Homes and Businesses
 ├── components/         # Reusable UI components
-│   ├── Footer.tsx     # Site footer with links and contact info
+│   ├── Footer.tsx     # Site footer with comprehensive links
+│   ├── MediaHighlights.tsx  # Auto-scrolling media coverage carousel
 │   ├── Navbar.tsx     # Main navigation with responsive mobile menu
 │   ├── ProjectCarousel.tsx  # Interactive project showcase
-│   └── ThemeToggle.tsx      # Dark/light mode switcher
+│   ├── ScrollToTop.tsx      # Route change scroll restoration
+│   └── ThemeToggle.tsx      # Dark/light/system mode switcher
 ├── contexts/          # React context providers
-│   └── ThemeContext.tsx     # Theme management context
+│   └── ThemeContext.tsx     # Theme management with system detection
+├── data/              # Static data and configurations
+│   ├── mediaHighlights.ts   # Press coverage data
+│   └── portfolioProjects.ts # Project showcase data
 ├── hooks/            # Custom React hooks
-│   └── useTypewriter.ts     # Typewriter animation hook
+│   └── useTypewriter.ts     # Typewriter animation effect
 ├── pages/            # Page components
 │   ├── About.tsx     # Company information and team
-│   ├── Blog.tsx      # Blog listing page
-│   ├── BlogPostDetail.tsx  # Individual blog post view
-│   ├── BookCall.tsx  # Schedule consultations
-│   ├── Calculators.tsx  # ROI and savings calculators
-│   ├── Contact.tsx   # Contact information and form
+│   ├── Blog.tsx      # Blog listing with search and filtering
+│   ├── BlogPostDetail.tsx  # Individual blog post viewer
+│   ├── BookCall.tsx  # HubSpot meetings integration
+│   ├── Calculators.tsx  # Coming soon calculators page
+│   ├── Contact.tsx   # Contact form and information
 │   ├── Docs.tsx      # Documentation and legal pages
-│   ├── Education.tsx # Educational resources
-│   ├── FAQ.tsx       # Frequently asked questions
-│   ├── Home.tsx      # Landing page
+│   ├── Education.tsx # Educational resources and content
+│   ├── FAQ.tsx       # Searchable frequently asked questions
+│   ├── Home.tsx      # Landing page with hero and features
 │   ├── Learn.tsx     # Technology learning hub
-│   ├── Portfolio.tsx # Project showcase
-│   ├── PrivacyPolicy.tsx  # Privacy policy
-│   ├── Products.tsx  # Product catalog
-│   └── Services.tsx  # Service offerings
+│   ├── Portfolio.tsx # Project showcase and case studies
+│   ├── PrivacyPolicy.tsx  # Privacy policy and data protection
+│   ├── Products.tsx  # Product catalog with filtering
+│   └── Services.tsx  # Service offerings with interactive elements
 ├── types/            # TypeScript type definitions
 │   └── cal.d.ts      # Cal.com integration types
 ├── utils/            # Utility functions
-│   └── blogLoader.ts # Blog post loading and parsing
+│   └── blogLoader.ts # Blog post loading and parsing utilities
 ├── App.tsx           # Main app component with routing
-├── index.css         # Global styles and Tailwind imports
+├── index.css         # Global styles and Tailwind configuration
 └── main.tsx          # Application entry point
 ```
 
@@ -88,7 +101,12 @@ cd exergy-website
 npm install
 ```
 
-3. Start the development server
+3. Install terser for production builds (required for Vite 3+)
+```bash
+npm install terser --save-dev
+```
+
+4. Start the development server
 ```bash
 npm run dev
 ```
@@ -101,22 +119,30 @@ The application will be available at `http://localhost:5173`
 npm run build
 ```
 
-The built files will be in the `dist` directory.
+The built files will be in the `dist` directory with `serve.json` automatically copied for SPA routing.
+
+### Serving Production Build
+
+```bash
+npm run serve
+```
+
+This serves the production build locally on port 3000 with proper SPA routing.
 
 ## Blog System
 
-The blog system uses Markdown files for content management, making it easy to create and manage blog posts.
+The blog system uses Markdown files with front matter for easy content management.
 
 ### Adding a New Blog Post
 
 1. Create a new `.md` file in `src/blog-posts/`
-2. Add front matter at the top of the file:
+2. Add front matter at the top:
 
 ```markdown
 ---
 id: 'unique-post-id'
 title: 'Your Blog Post Title'
-excerpt: 'A short description of your blog post.'
+excerpt: 'A compelling description of your blog post content.'
 author: 'Author Name'
 date: 'YYYY-MM-DD'
 category: ['category1', 'category2']
@@ -128,9 +154,7 @@ Your blog content goes here in Markdown format.
 
 ## Subheading
 
-You can use **bold text**, *italic text*, [links](https://example.com), and images:
-
-![Alt text](https://images.pexels.com/photos/...)
+You can use **bold text**, *italic text*, [links](https://example.com), and images.
 
 - List item 1
 - List item 2
@@ -138,75 +162,96 @@ You can use **bold text**, *italic text*, [links](https://example.com), and imag
 
 ### Blog Features
 
-- **Automatic category detection**: New categories are automatically added to the filter options
+- **Automatic category detection**: New categories are automatically added to filter options
 - **Search functionality**: Search through titles, excerpts, and authors
 - **Responsive design**: Optimized for all device sizes
-- **SEO-friendly URLs**: Clean URLs for each blog post
-- **Markdown support**: Full Markdown syntax including images, links, and formatting
+- **SEO-friendly URLs**: Clean URLs for each blog post with proper meta tags
+- **Full Markdown support**: Including images, links, and formatting
+- **Dynamic loading**: Vite's import.meta.glob for efficient loading
 
-## Pages
+## Product Catalog
 
-- **Home** - Landing page with key features and benefits
-- **Products** - Comprehensive product catalog
-- **Services** - Available services and consulting options
-- **About** - Company information and team
-- **Learn** - Educational resources and documentation
-- **Contact** - Contact information and form
-- **Book Call** - Schedule consultations with team members
-- **Portfolio** - Showcase of successful implementations
-- **Calculators** - ROI and savings calculators
-- **Education** - In-depth learning resources
-- **Blog** - Company insights and industry updates
-- **FAQ** - Frequently asked questions
-- **Docs** - Documentation and legal information
-- **Privacy Policy** - Legal information
+The product catalog supports multiple categories with filtering:
 
-## Components
+- **Space Heating**: Standalone heating solutions
+- **Forced Air**: HVAC integrated systems
+- **Hydronic & Water**: Water-based heating solutions
+- **Control Systems**: Smart control hardware
+- **Commercial & Industrial**: Large-scale solutions
 
-### Key Components
+### Adding Products
 
-- `Navbar` - Main navigation with responsive mobile menu
-- `Footer` - Site footer with links and contact information
-- `ProjectCarousel` - Interactive project showcase
-- `ThemeToggle` - Dark/light mode switcher
-- `Blog` - Blog listing with search and filtering
-- `BlogPostDetail` - Individual blog post viewer
+Products are defined in `src/pages/Products.tsx` with comprehensive specifications, pricing, and feature details.
+
+## SEO Optimization
+
+The website includes comprehensive SEO features:
+
+- **Meta Tags**: Title, description, keywords for all pages
+- **Open Graph**: Social media optimization with dynamic images
+- **Structured Data**: Organization schema in index.html
+- **Sitemap**: Auto-generated XML sitemap
+- **Canonical URLs**: Proper canonical link tags
+- **Performance**: Optimized images and code splitting
+
+## Deployment
+
+### Static Hosting (Recommended)
+
+The project includes `serve.json` for proper SPA routing on static hosts like Netlify or Vercel.
+
+### Server Deployment
+
+For server deployment, use the included Express server:
+
+```bash
+node server.js
+```
+
+Or use the systemd service file in `admin/exergy-website.service` for production servers.
 
 ## Development
 
 ### Code Style
 
-- Follow React best practices
-- Use TypeScript for type safety
-- Implement responsive design
-- Maintain accessibility standards
-- Write semantic HTML
-- Use Tailwind CSS for styling
+- **React Best Practices**: Functional components with hooks
+- **TypeScript**: Strict type checking enabled
+- **Responsive Design**: Mobile-first approach
+- **Accessibility**: ARIA labels and semantic HTML
+- **Performance**: Lazy loading and code splitting
 
-### Best Practices
+### Key Components
 
-- Keep components small and focused
-- Use TypeScript interfaces for props
-- Implement proper error handling
-- Maintain consistent naming conventions
-- Document complex logic
-- Write reusable components
+- `Navbar` - Responsive navigation with mobile menu
+- `Footer` - Comprehensive site footer with links
+- `ProjectCarousel` - Auto-advancing project showcase
+- `MediaHighlights` - Auto-scrolling press coverage
+- `ThemeToggle` - System-aware theme switching
+- `Blog` - Dynamic blog with search and filtering
+- `BlogPostDetail` - Individual post viewer with SEO
 
 ## Performance Optimizations
 
-- Optimized font loading with system fallbacks
-- Lazy loading for non-critical images
-- Code splitting with Vite
-- Minified production builds
-- Efficient bundle chunking
-- Optimized Markdown parsing
+- **Font Loading**: Optimized with system fallbacks
+- **Image Optimization**: Lazy loading for non-critical images
+- **Code Splitting**: Vite-powered bundle optimization
+- **Minification**: Terser for production builds
+- **Caching**: Proper cache headers for static assets
+- **Bundle Analysis**: Optimized chunk splitting
+
+## Integrations
+
+- **HubSpot Forms**: Contact and newsletter signup
+- **HubSpot Meetings**: Consultation booking system
+- **External Links**: Press coverage and partner sites
+- **Social Media**: X (Twitter) and GitHub links
 
 ## Contributing
 
 1. Fork the repository
-2. Create a feature branch
-3. Commit your changes
-4. Push to the branch
+2. Create a feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit your changes (`git commit -m 'Add amazing feature'`)
+4. Push to the branch (`git push origin feature/amazing-feature`)
 5. Open a pull request
 
 ## License
@@ -215,8 +260,12 @@ This project is proprietary software. All rights reserved.
 
 ## Contact
 
-For inquiries, contact us at admin@exergyheat.com
+For inquiries about the website or hashrate heating solutions:
+
+- **Email**: contact@exergyheat.com
+- **Website**: https://exergyheat.com
+- **Address**: 3700 N Franklin St, Denver, CO 80205
 
 ---
 
-Made by EXERGY LLC
+**Built with ⚡ by EXERGY LLC - Heat That Pays**
