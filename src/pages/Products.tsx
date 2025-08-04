@@ -193,7 +193,11 @@ const Products = () => {
               <div className="mb-6">
                 <div className="inline-flex items-center justify-center w-20 h-20 bg-primary-100 dark:bg-primary-900 rounded-full mb-4">
                   {activeCategory && (
-                    <categories.find(cat => cat.id === activeCategory)?.icon className="h-10 w-10 text-primary-600 dark:text-primary-400" />
+                    (() => {
+                      const category = categories.find(cat => cat.id === activeCategory);
+                      const IconComponent = category?.icon;
+                      return IconComponent ? <IconComponent className="h-10 w-10 text-primary-600 dark:text-primary-400" /> : null;
+                    })()
                   )}
                 </div>
                 <h2 className="text-3xl font-bold text-surface-900 dark:text-surface-100 mb-4">
@@ -201,7 +205,10 @@ const Products = () => {
                 </h2>
                 <p className="text-xl text-surface-600 dark:text-surface-400 mb-6">
                   {activeCategory 
-                    ? `We're currently developing ${categories.find(cat => cat.id === activeCategory)?.name.toLowerCase()} products and will have them available soon.`
+                    ? (() => {
+                        const category = categories.find(cat => cat.id === activeCategory);
+                        return `We're currently developing ${category ? category.name.toLowerCase() : 'these'} products and will have them available soon.`;
+                      })()
                     : 'We\'re expanding our product lineup and will have new options available soon.'
                   }
                 </p>
