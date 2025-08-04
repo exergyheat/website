@@ -203,15 +203,6 @@ const Products = () => {
                 <h2 className="text-3xl font-bold text-surface-900 dark:text-surface-100 mb-4">
                   Coming Soon
                 </h2>
-                <p className="text-xl text-surface-600 dark:text-surface-400 mb-6">
-                  {activeCategory 
-                    ? (() => {
-                        const category = categories.find(cat => cat.id === activeCategory);
-                        return `We're currently working on ${category ? category.name.toLowerCase() : 'these'} products and will have them available soon.`;
-                      })()
-                    : 'We\'re expanding our product lineup and will have new options available soon.'
-                  }
-                </p>
                 <p className="text-surface-500 dark:text-surface-400">
                   In the meantime, check out our services or contact us to discuss custom solutions for your needs.
                 </p>
