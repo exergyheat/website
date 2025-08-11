@@ -1,12 +1,13 @@
 import React, { useState } from 'react'
 import { Helmet } from 'react-helmet-async'
 import { Link } from 'react-router-dom'
-import { ArrowRight, Radiation as Radiator, Fan, Droplets, Cpu, Factory, ChevronDown, ChevronUp, Copy, Check } from 'lucide-react'
+import { ArrowRight, Radiation as Radiator, Fan, Droplets, Cpu, Factory, ChevronDown, ChevronUp, Copy, Check, ChevronLeft, ChevronRight } from 'lucide-react'
 
 const Products = () => {
   const [activeCategory, setActiveCategory] = useState<string | null>(null)
   const [expandedProduct, setExpandedProduct] = useState<string | null>(null)
   const [copiedCoupon, setCopiedCoupon] = useState<string | null>(null)
+  const [currentImageIndex, setCurrentImageIndex] = useState<{ [key: string]: number }>({})
 
   const handleCopyCoupon = async (couponCode: string) => {
     try {
@@ -17,6 +18,21 @@ const Products = () => {
       console.error('Failed to copy coupon code:', err)
     }
   }
+
+  const nextImage = (productId: string, totalImages: number) => {
+    setCurrentImageIndex(prev => ({
+      ...prev,
+      [productId]: ((prev[productId] || 0) + 1) % totalImages
+    }))
+  }
+
+  const prevImage = (productId: string, totalImages: number) => {
+    setCurrentImageIndex(prev => ({
+      ...prev,
+      [productId]: ((prev[productId] || 0) - 1 + totalImages) % totalImages
+    }))
+  }
+
   const categories = [
     {
       id: 'space-heating',
@@ -55,7 +71,13 @@ const Products = () => {
       id: 'sh-heatbit',
       category: 'space-heating',
       name: 'Heatbit Trio & Maxi',
-      image: "/Heatbits.webp",
+      images: [
+        "https://heatbit.com/wp-content/uploads/2024/11/heatbit-trio-front-view-1024x1024.webp",
+        "https://heatbit.com/wp-content/uploads/2024/11/heatbit-trio-side-view-1024x1024.webp",
+        "https://heatbit.com/wp-content/uploads/2024/11/heatbit-trio-back-view-1024x1024.webp",
+        "https://heatbit.com/wp-content/uploads/2024/11/heatbit-maxi-front-view-1024x1024.webp",
+        "https://heatbit.com/wp-content/uploads/2024/11/heatbit-maxi-side-view-1024x1024.webp"
+      ],
       specs: {
         power: '400-1200 W: 110-240V AC 50/60Hz',
         hashrate: '13-39 TH/s',
@@ -81,7 +103,7 @@ const Products = () => {
       id: 'sh-800',
       category: 'space-heating',
       name: 'Canaan Avalon Mini 3',
-      image: 'https://www.canaan.io/static/themes/default/images/official/official_mini3_index4.png',
+      images: ['https://www.canaan.io/static/themes/default/images/official/official_mini3_index4.png'],
       specs: {
         power: '800 W: 110-240V AC 50/60Hz',
         hashrate: '37.5 TH/s',
@@ -105,7 +127,7 @@ const Products = () => {
       id: 'hyd-5000',
       category: 'hydronic',
       name: 'RY3T Mini',
-      image: 'https://ry3t.com/wp-content/uploads/2025/03/2-1024x1024.png',
+      images: ['https://ry3t.com/wp-content/uploads/2025/03/2-1024x1024.png'],
       specs: {
         power: '5000W',
         hashrate: '206 TH/s',
@@ -230,13 +252,47 @@ const Products = () => {
             {filteredProducts.map((product) => (
               <div key={product.id} className="bg-white dark:bg-surface-800 rounded-lg shadow-xl overflow-hidden">
                 <div className="grid grid-cols-1 lg:grid-cols-2">
-                  <div className="relative h-[400px]">
+                  <div className="relative h-[400px] group">
+                    {/* Main Image */}
                     <img
-                      src={product.image}
+                      src={product.images[currentImageIndex[product.id] || 0]}
                       alt={product.name}
-                      alt={`${product.name} - ${product.description}`}
                       className="absolute inset-0 w-full h-full object-cover"
                     />
+                    
+                    {/* Image Navigation - only show if multiple images */}
+                    {product.images.length > 1 && (
+                      <>
+                        <button
+                          onClick={() => prevImage(product.id, product.images.length)}
+                          className="absolute left-2 top-1/2 transform -translate-y-1/2 bg-black/50 hover:bg-black/70 text-white p-2 rounded-full opacity-0 group-hover:opacity-100 transition-opacity"
+                        >
+                          <ChevronLeft className="h-4 w-4" />
+                        </button>
+                        <button
+                          onClick={() => nextImage(product.id, product.images.length)}
+                          className="absolute right-2 top-1/2 transform -translate-y-1/2 bg-black/50 hover:bg-black/70 text-white p-2 rounded-full opacity-0 group-hover:opacity-100 transition-opacity"
+                        >
+                          <ChevronRight className="h-4 w-4" />
+                        </button>
+                        
+                        {/* Image Indicators */}
+                        <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2">
+                          {product.images.map((_, index) => (
+                            <button
+                              key={index}
+                              onClick={() => setCurrentImageIndex(prev => ({ ...prev, [product.id]: index }))}
+                              className={`w-2 h-2 rounded-full transition-colors ${
+                                index === (currentImageIndex[product.id] || 0)
+                                  ? 'bg-white'
+                                  : 'bg-white/50 hover:bg-white/75'
+                              }`}
+                            />
+                          ))}
+                        </div>
+                      </>
+                    )}
+                    
                     <div className="absolute top-4 right-4 bg-primary-600 text-white px-4 py-1 rounded-full text-sm">
                       {categories.find(cat => cat.id === product.category)?.name}
                     </div>
