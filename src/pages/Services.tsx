@@ -93,7 +93,7 @@ const Services = () => {
         "1-hour consultation call and next step walkthrough"
       ]
     },
-    buttonText: `Purchase ${type === 'residential' ? 'Residential' : 'Commercial'} Heat Audit`,
+    buttonText: `Request ${type === 'residential' ? 'Residential' : 'Commercial'} Heat Audit`,
     buttonLink: type === 'residential' 
       ? 'https://pay.zaprite.com/pl_MRzvvmSAkL'
       : 'https://pay.zaprite.com/pl_GhSjRJ6mTI'
