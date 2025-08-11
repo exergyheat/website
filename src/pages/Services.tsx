@@ -22,24 +22,24 @@ const Services = () => {
   const journeySteps = [
     {
       id: 'audit',
-      title: 'Sizing, Savings & Design',
-      description: 'Curious? Get system sizing, estimated earnings, ROI, hardware recommendations, design & quote.',
+      title: 'Sizing, Savings & Quote',
+      description: 'Curious? Get system sizing, savings, our recommendations & quote.',
       icon: Search,
       flipText: 'Start at the Heat Audit if you\'re curious, seeking details, or weighing options.',
       targetSection: 'audit-service'
     },
     {
       id: 'installation',
-      title: 'Project Plan & Installation',
-      description: 'Ready? Get your integrated solution project plan with professional installers that fit your timeline.',
+      title: 'Professional Install',
+      description: 'Ready? Get your custom project plan and installation scheduled.',
       icon: Cog,
       flipText: 'Start with Plan & Installation if you\'re ready to heat with hashrate, We\'ll handle the rest.',
       targetSection: 'installation-service'
     },
     {
       id: 'monitoring',
-      title: 'Automate Health Monitoring',
-      description: 'Opted in? Remote monitoring tells us when it\'s time for maintenence, so you don\'t have to think about it.',
+      title: 'Automatic Monitoring',
+      description: 'Opted in? Automatically tell us when maintenence is due.',
       icon: Monitor,
       flipText: 'Start with Remote Health Monitoring if you already have hashrate heat.',
       targetSection: 'monitoring-service'
@@ -48,8 +48,8 @@ const Services = () => {
 
   const getAuditService = (type: 'residential' | 'commercial') => ({
     id: 'audit',
-    name: "Heat Audit Analysis & Design",
-    description: "Get a comprehensive analysis of your heating needs. The Heat Audit optimizes earnings and ROI for your heat demand with a tailored solution.",
+    name: "Heat Audit Analysis",
+    description: "Get a comprehensive understanding of your heating needs and potential. The Heat Audit estimates sizing savings, along with a personalized recommendation and project quote.",
     price: type === 'residential' ? "$500" : "$2500",
     features: [
       "Optimized heating system sizing",
@@ -101,8 +101,8 @@ const Services = () => {
 
   const getDesignService = () => ({
     id: 'installation',
-    name: "Hashrate Heating Installation",
-    description: "Get a complete hashrate heating installation plan tailored to your specific needs and requirements.",
+    name: "Hardware Installation",
+    description: "Professional heater installation - tailored to your specific needs and requirements.",
     price: "50% Deposit",
     features: [
       "Includes Heat Audit analysis",
@@ -140,8 +140,8 @@ const Services = () => {
     getDesignService(),
     {
       id: 'monitoring',
-      name: "Remote Health Monitoring",
-      description: "24/7 monitoring and maintenance of your hashrate heating system to ensure optimal performance.",
+      name: "Heartbeat Monitoring",
+      description: "24/7 remote monitoring predicts maintenance and prevents interuption of your hashrate heating system - ensuring maximum performance and savings.",
       price: "Contact for details",
       features: [
         "Exergy real-time monitoring",
@@ -295,27 +295,22 @@ const Services = () => {
                   
                   {/* Front of Card */}
                   <div className="absolute inset-0 w-full h-full backface-hidden">
-                    <div className="bg-white dark:bg-surface-700 rounded-lg shadow-lg p-6 border-2 border-surface-200 dark:border-surface-600 h-full flex flex-col justify-between cursor-pointer hover:shadow-xl transition-shadow">
+                    <div className="bg-white dark:bg-surface-700 rounded-lg shadow-lg p-8 border-2 border-surface-200 dark:border-surface-600 h-full flex flex-col justify-center cursor-pointer hover:shadow-xl transition-shadow">
                       {/* Step Number and Icon */}
-                      <div className="flex items-center justify-center mb-4">
+                      <div className="flex items-center justify-center mb-6">
                         <div className="w-16 h-16 rounded-full bg-primary-600 flex items-center justify-center text-white">
                           <step.icon className="h-8 w-8" />
                         </div>
                       </div>
 
                       {/* Step Content */}
-                      <div className="flex-grow">
-                        <h3 className="text-xl font-bold text-surface-900 dark:text-surface-100 mb-3 text-center">
+                      <div className="text-center">
+                        <h3 className="text-xl font-bold text-surface-900 dark:text-surface-100 mb-4 text-center">
                           {step.title}
                         </h3>
-                        <p className="text-surface-600 dark:text-surface-400 text-center text-sm">
+                        <p className="text-surface-600 dark:text-surface-400 text-center text-base leading-relaxed">
                           {step.description}
                         </p>
-                      </div>
-
-                      {/* Hover indicator */}
-                      <div className="text-center mt-4">
-                        <p className="text-xs text-surface-500 dark:text-surface-400">Flip</p>
                       </div>
                     </div>
                   </div>
