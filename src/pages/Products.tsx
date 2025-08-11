@@ -72,11 +72,11 @@ const Products = () => {
       category: 'space-heating',
       name: 'Heatbit Trio & Maxi',
       images: [
-        "https://heatbit.com/wp-content/uploads/2024/11/heatbit-trio-front-view-1024x1024.webp",
-        "https://heatbit.com/wp-content/uploads/2024/11/heatbit-trio-side-view-1024x1024.webp",
-        "https://heatbit.com/wp-content/uploads/2024/11/heatbit-trio-back-view-1024x1024.webp",
-        "https://heatbit.com/wp-content/uploads/2024/11/heatbit-maxi-front-view-1024x1024.webp",
-        "https://heatbit.com/wp-content/uploads/2024/11/heatbit-maxi-side-view-1024x1024.webp"
+        "https://heatbit.com/cdn/shop/files/Trio_4_2048x2048.png?v=1747846876",       
+        "https://heatbit.com/cdn/shop/files/magnifics_upscale-SKTXegC0zB8rUDLjvZ8Z-u6653123959_Add_light_--ar_9151_--v_7_29ee4ec2-bd09-4e49-aea5-44135eed293b_2_2048x2048.png?v=1748405757",
+        "https://heatbit.com/cdn/shop/files/HB_54_2048x2048.png?v=1734991959",
+        "https://heatbit.com/cdn/shop/files/Mask_group1_2048x2048.jpg?v=1713215725",
+        "https://heatbit.com/cdn/shop/files/3Group_1410094715_1024x1024.png?v=1714173327"
       ],
       specs: {
         power: '400-1200 W: 110-240V AC 50/60Hz',
@@ -103,7 +103,11 @@ const Products = () => {
       id: 'sh-800',
       category: 'space-heating',
       name: 'Canaan Avalon Mini 3',
-      images: ['https://www.canaan.io/static/themes/default/images/official/official_mini3_index4.png'],
+      images: [
+        'https://coinminingcentral.com/cdn/shop/files/Canaan_Avalon_Mini_3_Heater___Bitcoin_Miner_1200x1200.png?v=1740763938',
+        'https://coinminingcentral.com/cdn/shop/files/Canaan_Avalon_Mini_3_Heater_2_1200x1200.png?v=1740763938',
+        'https://www.canaan.io/static/themes/default/images/official/official_mini3_download.png'
+              ],
       specs: {
         power: '800 W: 110-240V AC 50/60Hz',
         hashrate: '37.5 TH/s',
@@ -252,12 +256,12 @@ const Products = () => {
             {filteredProducts.map((product) => (
               <div key={product.id} className="bg-white dark:bg-surface-800 rounded-lg shadow-xl overflow-hidden">
                 <div className="grid grid-cols-1 lg:grid-cols-2">
-                  <div className="relative h-[400px] group">
+                  <div className="relative h-[400px] lg:h-auto group">
                     {/* Main Image */}
                     <img
                       src={product.images[currentImageIndex[product.id] || 0]}
                       alt={product.name}
-                      className="absolute inset-0 w-full h-full object-cover"
+                      className="absolute inset-0 w-full h-full object-cover object-center"
                     />
                     
                     {/* Image Navigation - only show if multiple images */}
