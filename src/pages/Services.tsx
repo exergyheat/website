@@ -95,8 +95,8 @@ const Services = () => {
     },
     buttonText: `Request ${type === 'residential' ? 'Residential' : 'Commercial'} Heat Audit`,
     buttonLink: type === 'residential' 
-      ? 'https://pay.zaprite.com/pl_MRzvvmSAkL'
-      : 'https://pay.zaprite.com/pl_GhSjRJ6mTI'
+      ? 'https://40rqsp.share-na2.hsforms.com/2hJgXKKL6RPWk-LYX5bo3jA'
+      : 'https://40rqsp.share-na2.hsforms.com/2hJgXKKL6RPWk-LYX5bo3jA'
   })
 
   const getDesignService = () => ({
