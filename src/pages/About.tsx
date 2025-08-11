@@ -644,38 +644,38 @@ const About = () => {
   const roadmap = [
     {
       quarter: 'Q2 2025',
-      title: 'Launch & Growth',
+      title: 'Soft Launch & Development',
       events: [
         'Official company launch',
-        'Heat Audit & design services',
-        'Office demo site install'
+        'Heat Audit & design services offerings',
+        'Office demo site and proof of concept installs'
       ]
     },
     {
       quarter: 'Q3 2025',
-      title: 'Data Collection & Optimization',
+      title: 'Data Collection & Refinement',
       events: [
-        'Project data collection',
+        'Preliminary project data collection',
         'Monitoring software development',
-        'Build trades partner network'
+        'Installer partner network build out'
       ]
     },
     {
       quarter: 'Q4 2025',
-      title: 'Innovation',
+      title: 'Implementation & Growth',
       events: [
-        'New product development',
-        'Monitoring software improvements',
-        'Hardware product partnerships'
+        'Formal company launch & marketing',
+        'Monitoring software data collection & refinement',
+        'New heating partners and growth'
       ]
     },
     {
       quarter: 'Q1 2026',
       title: 'Scale',
       events: [
-        'New market expansion',
-        'New product categories',
-        'Expand service offerings'
+        'New product development',
+        'Market expansion',
+        'Increaased product & service offerings'
       ]
     }
   ]
