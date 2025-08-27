@@ -104,7 +104,7 @@ const Services = () => {
     description: "Hashrte heater procurement and installation done right. We work with our partners and professional tradesmen to accommodate your specific needs.",
     price: "50% Deposit",
     features: [
-      "Includes Heat Audit analysis",
+      "Exergy hardware procurement",
       "Custom heating system integration design",
       "Detailed cost breakdown and performance projections",
       "Installation project plan",
