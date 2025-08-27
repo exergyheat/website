@@ -276,7 +276,7 @@ const Home = () => {
               </div>
               <h3 className="mt-4 text-xl font-subheading text-surface-900 dark:text-surface-100">Custom Solutions</h3>
               <p className="mt-2 font-body text-surface-600 dark:text-surface-400">
-                Whatever your heating needs, our custom sizing, engineering designs, and control solutions ensure seemless integration.
+                Whatever your heating needs, our custom sizing, designs, and control solutions ensure seemless integration.
               </p>
             </div>
 
