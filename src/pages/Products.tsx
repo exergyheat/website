@@ -156,7 +156,7 @@ const Products = () => {
         'Easy setup and control interface with simple buttons'
 
       ]
-    },
+    }
   ]
 
   const filteredProducts = activeCategory
@@ -347,6 +347,16 @@ const Products = () => {
                     {expandedProduct === product.id && (
                       <div className="bg-surface-50 dark:bg-surface-700 rounded-lg p-4 mb-6">
                         <div className="grid grid-cols-2 gap-4">
+                          {Object.entries(product.specs).map(([key, value]) => (
+                            <div key={key}>
+                              <dt className="text-sm font-medium text-surface-500 dark:text-surface-400 capitalize">
+                                {key.replace(/([A-Z])/g, ' $1').trim()}
+                              </dt>
+                              <dd className="text-sm text-surface-900 dark:text-surface-100">{value}</dd>
+                            </div>
+                          ))}
+                        </div>
+                      </div>
                     )}
 
                     <div className={`${product.pdfLink ? 'flex gap-4' : ''} pt-6 border-t border-surface-200 dark:border-surface-700`}>
