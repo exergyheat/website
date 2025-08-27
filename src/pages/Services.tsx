@@ -169,7 +169,7 @@ const Services = () => {
       price: "Contact for details",
       features: [
         "Industry expertise",
-        "Hashrate heating modeling tools",
+        "Exergy modeling tools",
         "Technical consulting",
         "Implementation support"
       ],
