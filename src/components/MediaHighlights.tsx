@@ -1,10 +1,12 @@
 import React, { useRef, useEffect, useState } from 'react'
 import { mediaHighlights } from '../data/mediaHighlights'
+import { useTheme } from '../contexts/ThemeContext'
 
 const MediaHighlights = () => {
   const scrollContainerRef = useRef<HTMLDivElement>(null)
   const [isUserInteracting, setIsUserInteracting] = useState(false)
   const [scrollPosition, setScrollPosition] = useState(0)
+  const { effectiveTheme } = useTheme()
   
   // Duplicate the array to create seamless infinite scroll
   const duplicatedHighlights = [...mediaHighlights, ...mediaHighlights]
@@ -95,7 +97,13 @@ const MediaHighlights = () => {
                 <img
                   src={highlight.logo}
                   alt={`${highlight.name} logo - EXERGY featured in ${highlight.name}`}
-                  className="h-8 w-auto object-contain filter grayscale brightness-50 opacity-60 group-hover:grayscale-0 group-hover:brightness-100 group-hover:opacity-100 dark:brightness-100 dark:opacity-70 dark:group-hover:opacity-100 transition-all duration-300"
+                  className={`h-8 w-auto object-contain transition-all duration-300 ${
+                    highlight.id === 'TFTC'
+                      ? effectiveTheme === 'dark'
+                        ? 'filter invert brightness-100 opacity-100 group-hover:invert group-hover:brightness-100 group-hover:opacity-100'
+                        : 'filter-none opacity-100 group-hover:filter-none group-hover:opacity-100'
+                      : 'filter grayscale brightness-50 opacity-60 group-hover:grayscale-0 group-hover:brightness-100 group-hover:opacity-100 dark:brightness-100 dark:opacity-70 dark:group-hover:opacity-100'
+                  }`}
                 />
               </a>
             ))}
