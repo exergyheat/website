@@ -393,10 +393,10 @@ const Products = () => {
       <div className="bg-gradient-to-r from-[#4970A5] to-[#718EBC] py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl font-bold text-white mb-6">
-            Not Sure What to Get?
+            Not Sure What You Need?
           </h2>
           <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
-            Order a Heat Audit to size the right solution and optimize savings.
+            Get a Heat Audit to size the right solution and optimize savings.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <Link
