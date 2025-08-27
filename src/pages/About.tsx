@@ -662,7 +662,7 @@ const About = () => {
     },
     {
       quarter: 'Q4 2025',
-      title: 'Implementation & Growth',
+      title: 'Growth',
       events: [
         'Formal company launch & marketing',
         'Monitoring software data collection & refinement',
