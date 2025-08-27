@@ -31,7 +31,7 @@ const BookCall = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
         <div className="text-center mb-8">
           <h2 className="text-2xl font-bold text-surface-900 dark:text-surface-100 mb-4">
-            Chat with an Expert at Exergy
+            Talk to an Expert at Exergy
           </h2>
           <p className="text-lg text-surface-600 dark:text-surface-400 max-w-2xl mx-auto">
             Book a call with our team to discuss how hashrate heating can benefit you.
