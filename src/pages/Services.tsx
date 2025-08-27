@@ -6,7 +6,7 @@ import { ArrowRight, FileText, Wrench, Activity, Users, ChevronDown, ChevronUp, 
 const Services = () => {
   const [expandedService, setExpandedService] = useState<string | null>(null)
   const [buildType, setBuildType] = useState<'residential' | 'commercial'>('residential')
-  const [imageViewer, setImageViewer] = useState<{images: string[], titles: string[], currentIndex: number, relatedServiceId?: string} | null>(null)
+  const [imageViewer, setImageViewer] = useState<{images: string[], titles: string[], currentIndex: number} | null>(null)
   const [flippedCard, setFlippedCard] = useState<string | null>(null)
 
   const scrollToSection = (sectionId: string) => {
@@ -195,15 +195,14 @@ const Services = () => {
     }
   ]
 
-  const openImageViewer = (images: string | string[], titles: string | string[], serviceId?: string) => {
+  const openImageViewer = (images: string | string[], titles: string | string[]) => {
     if (Array.isArray(images) && Array.isArray(titles)) {
-      setImageViewer({ images, titles, currentIndex: 0, relatedServiceId: serviceId })
+      setImageViewer({ images, titles, currentIndex: 0 })
     } else {
       setImageViewer({ 
         images: [images as string], 
         titles: [titles as string], 
-        currentIndex: 0,
-        relatedServiceId: serviceId
+        currentIndex: 0 
       })
     }
   }
@@ -470,9 +469,9 @@ const Services = () => {
                       <button
                         onClick={() => {
                           if (service.exampleImages && service.exampleTitles) {
-                            openImageViewer(service.exampleImages, service.exampleTitles, service.id)
+                            openImageViewer(service.exampleImages, service.exampleTitles)
                           } else if (service.exampleImage && service.exampleTitle) {
-                            openImageViewer(service.exampleImage, service.exampleTitle, service.id)
+                            openImageViewer(service.exampleImage, service.exampleTitle)
                           }
                         }}
                         className="px-6 py-3 bg-surface-100 dark:bg-surface-700 text-surface-900 dark:text-surface-100 rounded-lg hover:bg-surface-200 dark:hover:bg-surface-600 transition-colors text-base font-subheading"
@@ -547,18 +546,6 @@ const Services = () => {
                     </button>
                   )}
 
-                  {/* Add Order and Install Yourself button for Installation service */}
-                  {imageViewer.relatedServiceId === 'installation' && (
-                    <div className="pt-4">
-                      <Link
-                        to="/products"
-                        className="w-full inline-flex items-center justify-center px-6 py-3 border border-primary-600 text-primary-600 dark:text-primary-400 rounded-lg hover:bg-primary-50 dark:hover:bg-primary-900 transition-colors text-base font-subheading"
-                      >
-                        Order and Install Yourself
-                        <ArrowRight className="ml-2 h-5 w-5" />
-                      </Link>
-                    </div>
-                  )}
                   {/* Image */}
                   <img
                     src={imageViewer.images[imageViewer.currentIndex]}
