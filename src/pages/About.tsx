@@ -20,7 +20,7 @@ const About = () => {
     {
       icon: Network,
       title: "Maximum Miner Decentralizaton",
-      description: "We see a world where bitcoin mining is decentralized across millions of homes and businesses, with heating systems distributing hashrate and mining pool choice worldwide."
+      description: "We see a world where bitcoin mining is decentralized across millions of homes and businesses, with heating systems distributing hashrate and mining-pool choice worldwide."
     }
   ]
 
