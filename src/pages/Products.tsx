@@ -140,7 +140,7 @@ const Products = () => {
         waterTemp: '158°F max',
         dimensions: '23.6" x 15.8" x 24.4"'
       },
-      price: '$10,000',
+      price: 'Check Back Soon',
       buttonText: 'Coming Soon',
       buttonLink: '/products',
       description: 'Versatile electric boiler for hydronic hashrate heating applications. With a high water output temperature and smart control, this water boiler is great for a variety of use cases.',
