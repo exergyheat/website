@@ -93,7 +93,7 @@ const Products = () => {
       description: 'Premium space heater & air purifier combo devices that harness hashrate heat to offset costs. The Heatbit Trio and Maxi are the most user friendly bitcoin mining heaters. Plug and play ready with an easy to use control panel and mobile application.',
       features: [
         'Plug-and-play setup',
-        'WiFi connectivity',
+        'WiFi connectivity - no IP scanning',
         'Touch panel & mobile app control',
         'Quiet operation',
         'Air purification'
