@@ -332,6 +332,19 @@ const Products = () => {
                     </div>
                     <p className="text-surface-600 dark:text-surface-400 mb-6">{product.description}</p>
 
+                    {/* Product Features */}
+                    <div className="mb-6">
+                      <h4 className="text-lg font-semibold text-surface-900 dark:text-surface-100 mb-3">Key Features</h4>
+                      <ul className="space-y-2">
+                        {product.features.map((feature, index) => (
+                          <li key={index} className="flex items-start text-surface-600 dark:text-surface-400">
+                            <div className="h-2 w-2 bg-primary-600 dark:bg-primary-400 rounded-full mr-3 mt-2 flex-shrink-0" />
+                            {feature}
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+
                     <button
                       onClick={() => setExpandedProduct(expandedProduct === product.id ? null : product.id)}
                       className="flex items-center justify-between w-full text-left mb-4"
