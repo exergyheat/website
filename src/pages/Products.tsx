@@ -142,7 +142,7 @@ const Products = () => {
         heating: '17,060 BTU/hr',
         waterTemp: '158°F max',
         dimensions: '25.1" x 21.5" x 25.2"',
-        capacity: '900 sqft'
+        capacity: '~1000 sqft. Modular'
       },
       price: '$7299',
       buttonText: 'Contact for Deposit',
@@ -152,7 +152,7 @@ const Products = () => {
       features: [
         'Radiant & air heating applications',
         'Integrated dry cooler radiator with extension tubing',
-        'Integrated miner CDU for easy hot/cold hookups',
+        'Integrated miner CDU for easy boiler hookups',
         'Easy setup and control interface with simple buttons'
 
       ]
