@@ -77,10 +77,10 @@ const Services = () => {
         "Project location for weather data",
         "Key variables like solar or unique heating paterns"
       ] : [
-        "Project heating bills, plans and specifications",
-        "Local energy rates, TOU or demand charges",
+        "Project heating bills, building plans and specifications",
+        "Local utility rates, TOU or demand charges",
         "Expected occupancy patterns or supplimental heat sources",
-        "Desired temperatures zones and criterea",
+        "Desired temperatures, zones and other criterea",
         "Location and weather data, or driving heat factors"
       ],
       deliverables: [
