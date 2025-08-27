@@ -148,7 +148,7 @@ const Services = () => {
       details: {
         monitoring: [
           "Real-time performance tracking",
-          "System health checks",
+          "System health check reminders",
           "Alert notifications",
           "Status reports"
         ],
