@@ -40,7 +40,7 @@ const Contact = () => {
             Contact Us
           </h1>
           <p className="text-xl text-white/90 max-w-2xl mx-auto">
-            It's time monetize your heat
+            It's time to monetize your heat
           </p>
         </div>
       </div>
