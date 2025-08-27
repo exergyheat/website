@@ -141,7 +141,7 @@ const Services = () => {
         "Exergy real-time monitoring",
         "Preventive maintenance alerts",
         "Performance optimization",
-        "Upgrades and recommendations"
+        "Timely upgrade recommendations"
       ],
       icon: Activity,
       image: "remote_monitoring.png",
