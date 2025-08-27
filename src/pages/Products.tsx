@@ -112,7 +112,7 @@ const Products = () => {
         power: '800 W: 110-240V AC 50/60Hz',
         hashrate: '37.5 TH/s',
         heating: '2,730 BTU/hr',
-        capacity: '400 sqft',
+        capacity: '350 sqft',
         noise: '45 dB',
         dimensions: '30" x 4.1" x 8.5"'
       },
