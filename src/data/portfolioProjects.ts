@@ -28,7 +28,7 @@ export const projects: Project[] = [
       size: '5,850 sq ft',
       savings: '65%',
       payback: '18 months',
-      hashrate: '400 TH/s'
+      hashrate: '450 TH/s'
     },
     details: [
       'Radiant & forced air combination',
