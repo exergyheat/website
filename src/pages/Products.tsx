@@ -152,7 +152,7 @@ const Products = () => {
       features: [
         'Radiant & air heating applications',
         'Integrated dry cooler radiator with extension tubing',
-        'Integrated miner CDU for easy hot/cold hookups',
+        'Integrated miner CDU for easy boiler hookups',
         'Easy setup and control interface with simple buttons'
 
       ]
