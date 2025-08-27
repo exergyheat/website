@@ -644,10 +644,10 @@ const About = () => {
   const roadmap = [
     {
       quarter: 'Q2 2025',
-      title: 'Soft Launch & Proof of Concept Phase',
+      title: 'Proof of Concept Phase',
       events: [
-        'Official company launch',
-        'Heat Audit & design services development',
+        'Company "soft" launch',
+        'Heat Audit & services development',
         'Proof of concept sites and hardware testing'
       ]
     },
