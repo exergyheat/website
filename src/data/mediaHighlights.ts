@@ -26,7 +26,7 @@ export const mediaHighlights: MediaHighlight[] = [
     name: 'Bitcoin 2025',
     logo: '/bitcoin2025_logo.png',
     link: 'https://www.youtube.com/watch?v=jtdJQ7uXcBk',
-    description: 'Speaker at Bitcoin 2025 Conference'
+    description: 'Speaker at Bitcoin 2025'
   },
   {
     id: 'TFTC',
