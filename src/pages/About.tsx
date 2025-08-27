@@ -647,8 +647,8 @@ const About = () => {
       title: 'Soft Launch & Development',
       events: [
         'Official company launch',
-        'Heat Audit & design services offerings',
-        'Office demo site and proof of concept installs'
+        'Heat Audit & design services development',
+        'Hardware testing, service and system development'
       ]
     },
     {
