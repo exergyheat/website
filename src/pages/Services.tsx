@@ -56,7 +56,7 @@ const Services = () => {
       "Estimated utility bill changes and revenue",
       "Project cost, total cost of ownership, and ROI projections",
       "Personalized recommendations and next steps",
-      "1-hour report walkthrough call"
+      "Professional report walkthrough call"
     ],
     icon: FileText,
     image: "heating_subsidy.png",
