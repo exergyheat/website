@@ -171,7 +171,7 @@ const Products = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              Our Favorite Products
+              Our Products
             </h1>
             <p className="text-xl text-white/90 max-w-2xl mx-auto">
               We know which solutions are best - for every application
