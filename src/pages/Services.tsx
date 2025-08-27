@@ -445,7 +445,7 @@ const Services = () => {
                     )}
                   </div>
 
-                  <div className={`${(service.exampleImage || service.exampleImages) ? 'flex gap-4' : ''} pt-1 border-t border-surface-200 dark:border-surface-700`}>
+                  <div className={`${(service.exampleImage || service.exampleImages) ? 'flex gap-4' : ''} pt-5 border-t border-surface-200 dark:border-surface-700`}>
                     {service.buttonLink.startsWith('http') ? (
                       <a
                         href={service.buttonLink}
