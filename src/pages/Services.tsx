@@ -122,7 +122,7 @@ const Services = () => {
         "Detailed system specifications",
         "Install and setup guides",
         "Exergy support",
-        "Installation coordination (CO)",
+        "On-site installation coordination (CO)",
       ]
     },
     buttonText: "Contact Us",
