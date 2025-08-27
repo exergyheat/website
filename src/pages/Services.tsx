@@ -106,9 +106,7 @@ const Services = () => {
     features: [
       "Exergy hardware procurement",
       "Install coordination and setup (Colorado, USA only)",
-      "Install guides and support (Other markets),",
-      "Installation project plan",
-      "Project implementation with preferred partner installers",      
+      "Install guides and support (Other markets),"    
     ],
     icon: Wrench,
     image: "LiquidHashHeat_ex.png",
