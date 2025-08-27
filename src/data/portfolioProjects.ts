@@ -32,7 +32,7 @@ export const projects: Project[] = [
     },
     details: [
       'Radiant & forced air combination',
-      'Custom control system & remote monitoring',
+      'Smart control system & remote monitoring',
       'Integrated solar array',
       'Redundant natural gas backup'
     ]
