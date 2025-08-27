@@ -61,7 +61,7 @@ const MediaHighlights = () => {
             Featured In
           </h2>
           <p className="text-xl font-body text-surface-600 dark:text-surface-400 max-w-2xl mx-auto">
-            Hashrate heating expertise that's been recognized by leading media outlets
+            Expertise that's been recognized by leading media outlets
           </p>
         </div>
 
