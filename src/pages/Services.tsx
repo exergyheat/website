@@ -72,7 +72,7 @@ const Services = () => {
     ],
     details: {
       inputs: type === 'residential' ? [
-        "Current heating bills or home dimensions",
+        "Current heating bills or home layout",
         "Local electricity rates and terms",
         "Insulation specifications",
         "Project location for weather data",
