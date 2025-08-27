@@ -184,10 +184,9 @@ const Services = () => {
           "Hardwre and software expertise"
         ],
         services: [
-          "Technical consultation",
+          "Technical consultations",
           "Strategy development",
           "Implementation guidance",
-          "Content and marketing",
           "Ongoing support"
         ]
       },
