@@ -34,7 +34,8 @@ export const projects: Project[] = [
       'Radiant & forced air combination',
       'Smart control system & remote monitoring',
       '20 kW solar array',
-      'Redundant natural gas backup'
+      'Redundant natural gas backup',
+      'Heat dump to mine solar sats in the summer'
     ]
   },
   {
