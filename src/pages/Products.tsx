@@ -148,7 +148,7 @@ const Products = () => {
         'Radiant & water heating applications',
         'Integrated mixing valve for precise water temp control',
         'Integrated heating loop pump',
-        'Integrated PLC control'
+        'Integrated PLC for heating power control'
 
       ]
     },
