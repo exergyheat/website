@@ -31,7 +31,7 @@ export const mediaHighlights: MediaHighlight[] = [
   {
     id: 'TFTC',
     name: 'TFTC',
-    logo: '/bitcoin2025_logo.png',
+    logo: '/TFTC_logo.png',
     link: 'https://tftc.io',
     description: 'Podcast Rip with Marty Bent'
   }
