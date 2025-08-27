@@ -180,8 +180,8 @@ const Services = () => {
           "System sizing",
           "Design and control",
           "Integration strategies",
-          "Target markets",
-          "Heating and Mining expertise"
+          "Tradesmen training",
+          "Hardwre and software expertise"
         ],
         services: [
           "Technical consultation",
