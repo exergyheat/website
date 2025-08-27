@@ -724,7 +724,7 @@ const About = () => {
             What We're About
           </h1>
           <p className="text-xl text-white/90 max-w-2xl mx-auto">
-            Revolutionizing heating, supporting bitcoin, saving you money
+            Revolutionizing heating, decentralizing mining, saving you money
           </p>
         </div>
       </div>
