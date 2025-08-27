@@ -137,7 +137,7 @@ const Products = () => {
         power: '5000W',
         hashrate: '228 TH/s',
         heating: '17,060 BTU/hr',
-        waterTemp: '149°F max',
+        waterTemp: '158°F max',
         dimensions: '23.6" x 15.8" x 24.4"'
       },
       price: '$10,000',
