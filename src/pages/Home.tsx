@@ -410,7 +410,7 @@ const Home = () => {
               to="/book-call"
               className="inline-flex items-center px-6 py-3 border border-white text-base font-subheading rounded-md text-white hover:bg-white hover:text-primary-500 transition-colors"
             >
-              Schedule Free Consultation
+              Schedule Consultation
               <ArrowRight className="ml-2 h-5 w-5" />
             </Link>
           </div>
