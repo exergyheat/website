@@ -13,7 +13,7 @@ const Portfolio = () => {
             Our Projects
           </h1>
           <p className="text-xl text-white/90 max-w-2xl mx-auto">
-            Explore our successful implementations across various industries
+            Explore our successful implementations across different industries
           </p>
         </div>
       </div>
