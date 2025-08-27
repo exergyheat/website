@@ -396,7 +396,7 @@ const Products = () => {
             Not Sure What You Need?
           </h2>
           <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
-            Get a Heat Audit to size the right solution and optimize savings.
+            Get a Heat Audit to size the right solution and maximize savings.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <Link
