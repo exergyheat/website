@@ -30,7 +30,7 @@ const Services = () => {
     },
     {
       id: 'installation',
-      title: 'Professional Install',
+      title: 'Install Assistance',
       description: 'Ready? Get your custom project plan and installation scheduled.',
       icon: Cog,
       flipText: 'Start with Plan & Installation if you\'re ready to heat with hashrate, We\'ll handle the rest.',
