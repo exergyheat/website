@@ -63,7 +63,7 @@ const Contact = () => {
               <div className="flex items-center">
                 <Calendar className="h-6 w-6 text-primary-600" />
                 <Link to="/book-call" className="ml-4 text-primary-600 dark:text-primary-400 hover:text-primary-400 dark:hover:text-primary-600 transition-colors">
-                  Book a Call with an Exergy Team Member
+                  Book a Call with Exergy
                 </Link>
               </div>
               <div className="flex items-center">
