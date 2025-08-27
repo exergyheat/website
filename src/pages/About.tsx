@@ -756,7 +756,7 @@ const About = () => {
                 className="text-lg text-surface-600 dark:text-surface-400 mb-8"
                 variants={itemVariants}
               >
-                Our mission is to revolutionize the heating industry with electric devices powered by hashrate, delivering heat that pays. We're ethically and securely turning energy costs into revenue for homes and businesses.
+                Our mission is to revolutionize the heating industry with electric devices powered by hashrate, delivering heat that pays. We're turning sunk costs into revenue - while supporting bitcoin.
               </motion.p>
               
               <motion.div 
