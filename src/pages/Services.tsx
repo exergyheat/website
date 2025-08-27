@@ -597,7 +597,7 @@ const Services = () => {
               to="/products"
               className="inline-flex items-center px-8 py-4 bg-white text-primary-600 rounded-lg hover:bg-white/90 transition-colors text-base font-subheading"
             >
-              View Our Recommended Products
+              View Our Products
               <ArrowRight className="ml-2 h-5 w-5" />
             </Link>
             <Link
