@@ -120,7 +120,7 @@ const Home = () => {
                   Hashrate heaters generate heat and money, at the same time - at no extra cost
                 </p>
                 <p className="text-lg md:text-xl font-body text-surface-600 dark:text-surface-400 max-w-5xl leading-relaxed">
-                  Heat your home or business as usual while offsetting utility costs with daily earnings. Or pocket the revenue for long term savings.
+                  Warm your home or business as usual while offsetting utility costs with daily earnings. Or pocket the rebate for long term savings.
                 </p>
               </motion.div>
             </div>
