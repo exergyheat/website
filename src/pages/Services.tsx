@@ -120,8 +120,8 @@ const Services = () => {
       ],
       includes: [
         "Detailed system specifications",
-        "Cost performance estimates",
-        "Timeline projection",
+        "Install and setup guides",
+        "Exergy support",
         "Installation partner coordination",
         "Customer training tutorial"
       ]
