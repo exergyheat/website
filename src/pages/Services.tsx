@@ -135,7 +135,7 @@ const Services = () => {
     {
       id: 'monitoring',
       name: "Heartbeat Monitoring",
-      description: "24/7 remote monitoring monitors health and predicts maintenance for your hashrate heating system - ensuring maximum performance and savings.",
+      description: "24/7 remote monitoring oversees health and predicts maintenance for your hashrate heating system - ensuring maximum performance and savings.",
       price: "Contact for details",
       features: [
         "Exergy real-time monitoring",
