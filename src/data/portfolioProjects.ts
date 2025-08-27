@@ -54,7 +54,7 @@ export const projects: Project[] = [
     details: [
       'Hydronic boiler system',
       'Radiant floor heat',
-      'Smart controls',
+      'Analog controls',
       'Mobile monitoring'
     ]
   },
