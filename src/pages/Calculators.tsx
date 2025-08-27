@@ -73,7 +73,7 @@ const Calculators = () => {
                 to="/services"
                 className="inline-flex items-center px-8 py-4 bg-primary-600 text-white rounded-lg hover:bg-primary-700 transition-colors text-base font-subheading"
               >
-                Order Heat Audit
+                Our Services
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Link>
               <Link
