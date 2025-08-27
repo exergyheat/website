@@ -204,7 +204,7 @@ const Home = () => {
                     Heaters Powered By Hashrate = Warmth + Revenue
                   </h3>
                   <p className="mt-2 text-base font-body text-surface-500 dark:text-surface-400">
-                    Hashrate Heaters deliver two things at once: Heat generated from consuming electricity, and bitcoin rewards for how that electricity was turned into heat. No extra cost or waste.
+                    Hashrate heaters deliver two things at once: Heat generated from consuming electricity, and bitcoin rewards for how that electricity was turned into heat. No extra cost or waste.
                   </p>
                 </div>
               </div>
