@@ -94,7 +94,7 @@ const Products = () => {
       features: [
         'Plug-and-play setup',
         'WiFi connectivity - no IP scanning',
-        'Touch panel & mobile app control',
+        'Touch panel + mobile app control',
         'Quiet operation',
         'Air purification'
       ]
