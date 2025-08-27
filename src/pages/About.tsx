@@ -648,7 +648,7 @@ const About = () => {
       events: [
         'Official company launch',
         'Heat Audit & design services development',
-        'Hardware testing, service and system development'
+        'Proof of concept sites and hardware testing'
       ]
     },
     {
