@@ -363,7 +363,7 @@ const Home = () => {
                   </div>
                 </div>
                 <h3 className="text-xl font-subheading text-surface-900 dark:text-surface-100 mb-4 text-center">
-                  How much can I earn?
+                  How much can I save?
                 </h3>
                 <p className="font-body text-surface-600 dark:text-surface-400 text-center">
                   Hashrate heating can sigificantly offset heating costs with revenue, sometimes exceeding 100% savings.
