@@ -494,7 +494,7 @@ const Services = () => {
                     </div>
                   )}
                   {/* Add Calculate Your Own button for Heat Audit service */}
-                  {service.id === 'audit' && (
+                  {service.id === 'installation' && (
                     <div className="pt-4">
                       <Link
                         to="/calculators"
