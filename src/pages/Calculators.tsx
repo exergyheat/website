@@ -42,7 +42,7 @@ const Calculators = () => {
                 ROI Calculator
               </h3>
               <p className="text-surface-600 dark:text-surface-400 text-sm">
-                Calculate your return on investment with real-time Bitcoin pricing and energy costs
+                Calculate your return on investment with real-time bitcoin pricing and energy costs
               </p>
             </div>
             <div className="bg-surface-50 dark:bg-surface-700 rounded-lg p-6">
