@@ -146,7 +146,7 @@ const Products = () => {
       price: '$7299',
       buttonText: 'Contact for Deposit',
       buttonLink: '/products',
-      description: 'Smart, electric boiler for hydronic hashrate heating applications. With a high water output temperature and included radiator, this water boiler is versatile for liquid and air based heating applications.',
+      description: 'Smart, electric boiler for hashrate heating applications. With a high water output temperature and included radiator, this water boiler is versatile for liquid and air based heating applications.',
       features: [
         'Radiant & water heating applications',
         'Integrated mixing valve for precise water temp control',
