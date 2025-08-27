@@ -143,7 +143,7 @@ const Products = () => {
       price: 'Check Back Soon',
       buttonText: 'Coming Soon',
       buttonLink: '/products',
-      description: 'Versatile electric boiler for hydronic hashrate heating applications. With a high water output temperature and smart control, this water boiler is great for a variety of use cases.',
+      description: 'Smart, electric boiler for hydronic hashrate heating applications. With a high water output temperature and digital control, this water boiler is great for a variety radiant cases.',
       features: [
         'Radiant / hydronic loop applications',
         'Hot water tank integration',
