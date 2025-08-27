@@ -147,6 +147,7 @@ const Products = () => {
       price: '$7299',
       buttonText: 'Contact for Deposit',
       buttonLink: '/products',
+      pdfLink: '/HeatCore_HS05_specs.pdf',
       description: 'Smart, electric boiler for hashrate heating applications. With a high water output temperature and included radiator, this water boiler is versatile for liquid and air based heating applications.',
       features: [
         'Radiant & air heating applications',
@@ -351,20 +352,30 @@ const Products = () => {
                               <dt className="text-sm font-medium text-surface-500 dark:text-surface-400 capitalize">
                                 {key.replace(/([A-Z])/g, ' $1').trim()}
                               </dt>
-                              <dd className="text-lg font-semibold text-surface-900 dark:text-surface-100">{value}</dd>
+                          className={`${product.pdfLink ? 'flex-1' : 'w-full'} inline-flex items-center justify-center px-6 py-3 bg-primary-600 text-white rounded-lg hover:bg-primary-700 transition-colors text-base font-subheading`}
                             </div>
                           ))}
                         </div>
                       </div>
                     )}
 
-                    <div className="space-y-2 mb-8">
-                      {product.features.map((feature, index) => (
+                    <div className={`${product.pdfLink ? 'flex gap-4' : ''} pt-6 border-t border-surface-200 dark:border-surface-700`}>
+                          className={`${product.pdfLink ? 'flex-1' : 'w-full'} inline-flex items-center justify-center px-6 py-3 bg-primary-600 text-white rounded-lg hover:bg-primary-700 transition-colors text-base font-subheading`}
                         <div key={index} className="flex items-center text-surface-700 dark:text-surface-300">
                           <ArrowRight className="h-5 w-5 text-primary-600 dark:text-primary-400 mr-2" />
                           {feature}
                         </div>
                       ))}
+                      {product.pdfLink && (
+                        <a
+                          href={product.pdfLink}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="px-6 py-3 bg-surface-100 dark:bg-surface-700 text-surface-900 dark:text-surface-100 rounded-lg hover:bg-surface-200 dark:hover:bg-surface-600 transition-colors text-base font-subheading"
+                        >
+                          View Specs PDF
+                        </a>
+                      )}
                     </div>
 
                     {product.buttonLink.startsWith('http') ? (
