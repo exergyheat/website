@@ -140,7 +140,7 @@ const Products = () => {
         waterTemp: '158°F max',
         dimensions: '23.6" x 15.8" x 24.4"'
       },
-      price: 'Check Back Soon',
+      price: 'Contact Us',
       buttonText: 'Coming Soon',
       buttonLink: '/products',
       description: 'Smart, electric boiler for hydronic hashrate heating applications. With a high water output temperature and digital control, this water boiler is great for a variety radiant cases.',
