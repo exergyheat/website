@@ -100,8 +100,8 @@ const MediaHighlights = () => {
                   className={`h-8 w-auto object-contain transition-all duration-300 ${
                     highlight.id === 'TFTC'
                       ? effectiveTheme === 'dark'
-                        ? 'filter invert brightness-100 opacity-100 group-hover:invert group-hover:brightness-100 group-hover:opacity-100'
-                        : 'filter-none opacity-100 group-hover:filter-none group-hover:opacity-100'
+                        ? 'filter invert brightness-50 opacity-60 group-hover:invert group-hover:brightness-100 group-hover:opacity-100'
+                        : 'filter-none brightness-50 opacity-60 group-hover:filter-none group-hover:brightness-100 group-hover:opacity-100'
                       : 'filter grayscale brightness-50 opacity-60 group-hover:grayscale-0 group-hover:brightness-100 group-hover:opacity-100 dark:brightness-100 dark:opacity-70 dark:group-hover:opacity-100'
                   }`}
                 />
