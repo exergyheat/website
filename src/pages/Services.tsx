@@ -480,6 +480,19 @@ const Services = () => {
                       </button>
                     )}
                   </div>
+
+                  {/* Add Calculate Your Own button for Heat Audit service */}
+                  {service.id === 'audit' && (
+                    <div className="pt-4">
+                      <Link
+                        to="/calculators"
+                        className="w-full inline-flex items-center justify-center px-6 py-3 border border-primary-600 text-primary-600 dark:text-primary-400 rounded-lg hover:bg-primary-50 dark:hover:bg-primary-900 transition-colors text-base font-subheading"
+                      >
+                        Calculate Your Own
+                        <ArrowRight className="ml-2 h-5 w-5" />
+                      </Link>
+                    </div>
+                  )}
                 </div>
               </div>
             </div>
