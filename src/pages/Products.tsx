@@ -148,10 +148,10 @@ const Products = () => {
       buttonLink: '/products',
       description: 'Smart, electric boiler for hashrate heating applications. With a high water output temperature and included radiator, this water boiler is versatile for liquid and air based heating applications.',
       features: [
-        'Radiant & water heating applications',
-        'Integrated mixing valve for precise water temp control',
-        'Integrated heating loop pump',
-        'Integrated PLC for heating power control'
+        'Radiant & air heating applications',
+        'Integrated dry cooler radiator with extension tubing',
+        'Integrated miner CDU for easy hot/cold hookups',
+        'Easy setup and control interface with simple buttons'
 
       ]
     },
