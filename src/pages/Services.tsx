@@ -53,8 +53,8 @@ const Services = () => {
     price: type === 'residential' ? "$500" : "$2500",
     features: [
       "Optimal heating system sizing",
-      "Estimated utility bill changes and revenue projections",
-      "Upgrade project cost, total cost of ownership, and ROI estimates",
+      "Estimated utility bill changes and revenue",
+      "Project cost, total cost of ownership, and ROI projections",
       "Personalized recommendations and next steps",
       "1-hour report walkthrough call"
     ],
