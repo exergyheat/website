@@ -174,7 +174,7 @@ const Products = () => {
               Our Products
             </h1>
             <p className="text-xl text-white/90 max-w-2xl mx-auto">
-              We know which solutions are best - for every application
+              Tested and vetted solutions - for every application
             </p>
           </div>
         </div>
