@@ -31,7 +31,7 @@ const Calculators = () => {
             <p className="text-xl text-surface-600 dark:text-surface-400 mb-8 max-w-2xl mx-auto">
               We're building advanced calculators powered by our custom backend to give you the most accurate 
               projections for your hashrate heating investment. These tools will help you estimate everything from rough estimates 
-              earnings, .
+              to your own complete heat audit.
             </p>
           </div>
 
