@@ -12,7 +12,7 @@ export const mediaHighlights: MediaHighlight[] = [
     name: 'Forbes',
     logo: '/Forbes_logo.png',
     link: 'https://www.forbes.com/sites/beccabratcher/2025/03/25/bitcoin-miners-hit-breaking-point-one-year-after-halving/',
-    description: 'Featured in Forbes for bitcoin mining innovation'
+    description: 'Mentioned in Forbes for bitcoin mining innovation'
   },
   {
     id: 'ny-post',
