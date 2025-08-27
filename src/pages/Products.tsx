@@ -135,7 +135,7 @@ const Products = () => {
       images: ['https://ry3t.com/wp-content/uploads/2025/03/2-1024x1024.png'],
       specs: {
         power: '5000W',
-        hashrate: '206 TH/s',
+        hashrate: '228 TH/s',
         heating: '17,060 BTU/hr',
         waterTemp: '149°F max',
         dimensions: '23.6" x 15.8" x 24.4"'
