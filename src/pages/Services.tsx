@@ -52,8 +52,8 @@ const Services = () => {
     description: "Get a comprehensive understanding of your heating needs and potential. The Heat Audit determines sizing, savings, along with a personalized recommendation and project quote.",
     price: type === 'residential' ? "$500" : "$2500",
     features: [
-      "Optimized heating system sizing",
-      "Utility bill savings and revenue projections",
+      "Optimal heating system sizing",
+      "Estimated utility bill changes and revenue projections",
       "Upgrade project cost, total cost of ownership, and ROI estimates",
       "Personalized recommendations and next steps",
       "1-hour report walkthrough call"
