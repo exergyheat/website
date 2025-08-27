@@ -101,7 +101,7 @@ const Services = () => {
   const getDesignService = () => ({
     id: 'installation',
     name: "Hardware & Installation",
-    description: "Hashrte heater installation done right. We work with professional tradesmen and accommodate your specific needs and requirements.",
+    description: "Hashrte heater procurement and installation done right. We work with professional tradesmen and accommodate your specific needs.",
     price: "50% Deposit",
     features: [
       "Includes Heat Audit analysis",
