@@ -170,8 +170,8 @@ const Services = () => {
       features: [
         "Industry expertise",
         "Exergy modeling tools",
-        "Technical consulting",
-        "Implementation support"
+        "Implementation support",
+        "Coordination with MEP teams and other sub-contractors",
       ],
       icon: Users,
       image: "hashheat_consulting.png",
