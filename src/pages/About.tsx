@@ -665,7 +665,8 @@ const About = () => {
       title: 'Automation Phase',
       events: [
         'Monitoring software refinement',
-        'New hardware partners and offerings'
+        'New hardware partners and offerings',
+        'Build heating company partner network for sizing & install'
       ]
     },
     {
