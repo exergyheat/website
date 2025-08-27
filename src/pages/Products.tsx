@@ -381,7 +381,7 @@ const Products = () => {
                       )}
                       {product.pdfLink && (
                         <a
-                          href={product.pdfLink}
+                          href={HeatCore_HS05_specs.pdf}
                           target="_blank"
                           rel="noopener noreferrer"
                           className="px-6 py-3 bg-surface-100 dark:bg-surface-700 text-surface-900 dark:text-surface-100 rounded-lg hover:bg-surface-200 dark:hover:bg-surface-600 transition-colors text-base font-subheading"
