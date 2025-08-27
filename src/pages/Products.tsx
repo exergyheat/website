@@ -132,7 +132,8 @@ const Products = () => {
       id: 'hyd-heatcore',
       category: 'hydronic',
       name: 'Heat Core HS05',
-      images: ['https://48661310.fs1.hubspotusercontent-na2.net/hubfs/48661310/1-Jul-09-2025-09-41-39-7158-AM.png'],
+      images: ['https://48661310.fs1.hubspotusercontent-na2.net/hubfs/48661310/1-Jul-09-2025-09-41-39-7158-AM.png',
+              'https://48661310.fs1.hubspotusercontent-na2.net/hubfs/48661310/2-Jul-09-2025-09-44-53-3264-AM.png'],
       specs: {
         power: '5000W',
         hashrate: '228 TH/s',
