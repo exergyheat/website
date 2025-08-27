@@ -49,7 +49,7 @@ export const projects: Project[] = [
       size: '2,700 sq ft',
       savings: '112%',
       payback: '24 months',
-      hashrate: '200 TH/s'
+      hashrate: '228 TH/s'
     },
     details: [
       'Hydronic boiler system',
