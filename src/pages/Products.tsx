@@ -336,7 +336,7 @@ const Products = () => {
                       onClick={() => setExpandedProduct(expandedProduct === product.id ? null : product.id)}
                       className="flex items-center justify-between w-full text-left mb-4"
                     >
-                      <span className="text-lg font-semibold text-surface-900 dark:text-surface-100">Technical Specifications</span>
+                      <span className="text-lg font-semibold text-surface-900 dark:text-surface-100">Technical Highlights</span>
                       {expandedProduct === product.id ? (
                         <ChevronUp className="h-5 w-5 text-surface-600 dark:text-surface-400" />
                       ) : (
