@@ -463,7 +463,7 @@ const About = () => {
     },
     {
       id: 'installation-commissioning',
-      title: 'Installation & Commissioning',
+      title: 'Exergy Installation & Commissioning',
       subtitle: 'Coordinate Installation & Bring The System Online (CO, USA Only)',
       description: 'We collaborate with certified trade partners to professionally install your hashrate heating system, ensuring seamless integration and optimal performance from day one.',
       icon: Wrench,
