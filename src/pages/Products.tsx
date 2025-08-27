@@ -403,7 +403,7 @@ const Products = () => {
               to="/services"
               className="inline-flex items-center px-8 py-4 bg-white text-primary-600 rounded-lg hover:bg-white/90 transition-colors text-base font-subheading"
             >
-              Explore Our Heat Audit Services
+              Explore Our Services
               <ArrowRight className="ml-2 h-5 w-5" />
             </Link>
             <Link
