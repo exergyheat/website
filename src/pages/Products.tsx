@@ -125,6 +125,7 @@ const Products = () => {
         'WiFi connectivity',
         'Mobile app control',
         'Silent operation'
+        '+ Multi-system fleet control coming soon'
       ]
     },
     {
