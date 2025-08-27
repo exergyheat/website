@@ -44,43 +44,88 @@ const ProjectCarousel = () => {
               {carouselProjects.map((project) => (
                 <div key={project.id} className="w-full flex-shrink-0">
                   <div className="mx-4">
-                    <div className="bg-surface-50 dark:bg-surface-700 rounded-lg overflow-hidden shadow-xl">
-                      <div className="relative h-[450px] md:h-96">
-                        <img
-                          src={project.image}
-                          alt={`${project.title} - ${project.description}`}
-                          className="w-full h-full object-cover"
-                        />
-                        {/* Light blue tint overlay using website's primary blue color */}
-                        <div 
-                          className="absolute inset-0 bg-primary-500 opacity-40"
-                        />
-                        <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
-                        <div className="absolute bottom-0 left-0 right-0 p-6 text-white">
-                          <div className="mb-2">
-                            <span className="bg-primary-600 text-white px-3 py-1 rounded-full text-sm">
-                              {project.category}
-                            </span>
+                    {project.id === 'small-business' ? (
+                      <a
+                        href="https://x.com/tylerkstevens/status/1958609126881468896"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="block bg-surface-50 dark:bg-surface-700 rounded-lg overflow-hidden shadow-xl hover:shadow-2xl transition-shadow group"
+                      >
+                        <div className="relative h-[450px] md:h-96">
+                          <img
+                            src={project.image}
+                            alt={`${project.title} - ${project.description}`}
+                            className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                          />
+                          {/* Light blue tint overlay using website's primary blue color */}
+                          <div 
+                            className="absolute inset-0 bg-primary-500 opacity-40"
+                          />
+                          <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
+                          <div className="absolute bottom-0 left-0 right-0 p-6 text-white">
+                            <div className="mb-2">
+                              <span className="bg-primary-600 text-white px-3 py-1 rounded-full text-sm">
+                                {project.category}
+                              </span>
+                            </div>
+                            <h3 className="text-2xl font-bold mb-2">{project.title}</h3>
+                            <p className="text-lg text-surface-100 mb-4">{project.description}</p>
+                            <div className="flex flex-col sm:flex-row sm:space-x-4 space-y-2 sm:space-y-0">
+                              <div>
+                                <span className="text-surface-200">Size:</span>
+                                <span className="ml-2 font-bold text-secondary-400">{project.stats.size}</span>
+                              </div>
+                              <div>
+                                <span className="text-surface-200">Savings:</span>
+                                <span className="ml-2 font-bold text-secondary-400">{project.stats.savings}</span>
+                              </div>
+                              <div>
+                                <span className="text-surface-200">Payback:</span>
+                                <span className="ml-2 font-bold text-secondary-400">{project.stats.payback}</span>
+                              </div>
+                            </div>
                           </div>
-                          <h3 className="text-2xl font-bold mb-2">{project.title}</h3>
-                          <p className="text-lg text-surface-100 mb-4">{project.description}</p>
-                          <div className="flex flex-col sm:flex-row sm:space-x-4 space-y-2 sm:space-y-0">
-                            <div>
-                              <span className="text-surface-200">Size:</span>
-                              <span className="ml-2 font-bold text-secondary-400">{project.stats.size}</span>
+                        </div>
+                      </a>
+                    ) : (
+                      <div className="bg-surface-50 dark:bg-surface-700 rounded-lg overflow-hidden shadow-xl">
+                        <div className="relative h-[450px] md:h-96">
+                          <img
+                            src={project.image}
+                            alt={`${project.title} - ${project.description}`}
+                            className="w-full h-full object-cover"
+                          />
+                          {/* Light blue tint overlay using website's primary blue color */}
+                          <div 
+                            className="absolute inset-0 bg-primary-500 opacity-40"
+                          />
+                          <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
+                          <div className="absolute bottom-0 left-0 right-0 p-6 text-white">
+                            <div className="mb-2">
+                              <span className="bg-primary-600 text-white px-3 py-1 rounded-full text-sm">
+                                {project.category}
+                              </span>
                             </div>
-                            <div>
-                              <span className="text-surface-200">Savings:</span>
-                              <span className="ml-2 font-bold text-secondary-400">{project.stats.savings}</span>
-                            </div>
-                            <div>
-                              <span className="text-surface-200">Payback:</span>
-                              <span className="ml-2 font-bold text-secondary-400">{project.stats.payback}</span>
+                            <h3 className="text-2xl font-bold mb-2">{project.title}</h3>
+                            <p className="text-lg text-surface-100 mb-4">{project.description}</p>
+                            <div className="flex flex-col sm:flex-row sm:space-x-4 space-y-2 sm:space-y-0">
+                              <div>
+                                <span className="text-surface-200">Size:</span>
+                                <span className="ml-2 font-bold text-secondary-400">{project.stats.size}</span>
+                              </div>
+                              <div>
+                                <span className="text-surface-200">Savings:</span>
+                                <span className="ml-2 font-bold text-secondary-400">{project.stats.savings}</span>
+                              </div>
+                              <div>
+                                <span className="text-surface-200">Payback:</span>
+                                <span className="ml-2 font-bold text-secondary-400">{project.stats.payback}</span>
+                              </div>
                             </div>
                           </div>
                         </div>
                       </div>
-                    </div>
+                    )}
                   </div>
                 </div>
               ))}
