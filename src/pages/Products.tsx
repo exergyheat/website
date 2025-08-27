@@ -146,7 +146,7 @@ const Products = () => {
       description: 'Smart, electric boiler for hydronic hashrate heating applications. With a high water output temperature and digital control, this water boiler is great for a variety radiant cases.',
       features: [
         'Radiant & water heating applications',
-        'Hot water tank integration',
+        'Integrated mixing valve for precise water temp control',
         'Integrated heating loop pump',
         'Integrated PLC control'
 
