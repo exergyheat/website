@@ -1108,7 +1108,7 @@ const About = () => {
             Join the Movement
           </h2>
           <p className="text-xl text-white/90 mb-8">
-            Be part of the revolution in heating technology. Stay informed about our latest developments, products, and opportunities.
+            Be part of the revolution in heating & mining. Stay informed about our latest developments, products, and opportunities.
           </p>
           
           {/* HubSpot Form Container */}
