@@ -655,18 +655,17 @@ const About = () => {
       quarter: 'Q3 2025',
       title: 'Hand Holding Phase',
       events: [
-        'Preliminary project data collection',
+        'Sizing and install handholding',
         'Monitoring software development',
-        'Scale handholding for sizing and installation'
+        'Early projects data collection'
       ]
     },
     {
       quarter: 'Q4 2025',
-      title: 'Growth',
+      title: 'Automation Phase',
       events: [
-        'Formal company launch & marketing',
-        'Monitoring software data collection & refinement',
-        'New heating partners and growth'
+        'Monitoring software refinement',
+        'New hardware partners and offerings'
       ]
     },
     {
