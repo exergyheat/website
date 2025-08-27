@@ -671,7 +671,7 @@ const About = () => {
     },
     {
       quarter: 'Q1 2026',
-      title: 'Scale',
+      title: 'Growth Phase',
       events: [
         'Pre-seed investment',
         'New product development',
