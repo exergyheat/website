@@ -6,7 +6,7 @@ import { ArrowRight, FileText, Wrench, Activity, Users, ChevronDown, ChevronUp, 
 const Services = () => {
   const [expandedService, setExpandedService] = useState<string | null>(null)
   const [buildType, setBuildType] = useState<'residential' | 'commercial'>('residential')
-  const [imageViewer, setImageViewer] = useState<{images: string[], titles: string[], currentIndex: number} | null>(null)
+  const [imageViewer, setImageViewer] = useState<{images: string[], titles: string[], currentIndex: number, relatedServiceId?: string} | null>(null)
   const [flippedCard, setFlippedCard] = useState<string | null>(null)
 
   const scrollToSection = (sectionId: string) => {
@@ -195,14 +195,15 @@ const Services = () => {
     }
   ]
 
-  const openImageViewer = (images: string | string[], titles: string | string[]) => {
+  const openImageViewer = (images: string | string[], titles: string | string[], serviceId?: string) => {
     if (Array.isArray(images) && Array.isArray(titles)) {
-      setImageViewer({ images, titles, currentIndex: 0 })
+      setImageViewer({ images, titles, currentIndex: 0, relatedServiceId: serviceId })
     } else {
       setImageViewer({ 
         images: [images as string], 
         titles: [titles as string], 
-        currentIndex: 0 
+        currentIndex: 0,
+        relatedServiceId: serviceId
       })
     }
   }
@@ -469,9 +470,9 @@ const Services = () => {
                       <button
                         onClick={() => {
                           if (service.exampleImages && service.exampleTitles) {
-                            openImageViewer(service.exampleImages, service.exampleTitles)
+                            openImageViewer(service.exampleImages, service.exampleTitles, service.id)
                           } else if (service.exampleImage && service.exampleTitle) {
-                            openImageViewer(service.exampleImage, service.exampleTitle)
+                            openImageViewer(service.exampleImage, service.exampleTitle, service.id)
                           }
                         }}
                         className="px-6 py-3 bg-surface-100 dark:bg-surface-700 text-surface-900 dark:text-surface-100 rounded-lg hover:bg-surface-200 dark:hover:bg-surface-600 transition-colors text-base font-subheading"
@@ -547,7 +548,7 @@ const Services = () => {
                   )}
 
                   {/* Add Order and Install Yourself button for Installation service */}
-                  {service.id === 'installation' && (
+                  {imageViewer.relatedServiceId === 'installation' && (
                     <div className="pt-4">
                       <Link
                         to="/products"
