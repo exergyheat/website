@@ -10,10 +10,10 @@ const Calculators = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <Calculator className="h-16 w-16 text-white mx-auto mb-6" />
           <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
-            Financial Calculators
+            Exergy Calculators
           </h1>
           <p className="text-xl text-white/90 max-w-2xl mx-auto">
-            Advanced tools to estimate your hashrate heating savings and earnings
+            The best hashrate heating tools that let you see the upside for yourself
           </p>
         </div>
       </div>
