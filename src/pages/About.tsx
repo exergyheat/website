@@ -673,9 +673,9 @@ const About = () => {
       quarter: 'Q1 2026',
       title: 'Scale',
       events: [
+        'Pre-seed investment',
         'New product development',
-        'Market expansion',
-        'Increaased product & service offerings'
+        'Market expansion'
       ]
     }
   ]
