@@ -500,7 +500,7 @@ const Services = () => {
                         to="/calculators"
                         className="w-full inline-flex items-center justify-center px-6 py-3 border border-primary-600 text-primary-600 dark:text-primary-400 rounded-lg hover:bg-primary-50 dark:hover:bg-primary-900 transition-colors text-base font-subheading"
                       >
-                        Calculate Your Own
+                        Order and Manage Install Yourself
                         <ArrowRight className="ml-2 h-5 w-5" />
                       </Link>
                     </div>
