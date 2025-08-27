@@ -403,7 +403,7 @@ const Home = () => {
               to="/contact"
               className="inline-flex items-center px-6 py-3 border border-transparent text-base font-subheading rounded-md text-primary-700 bg-white hover:bg-white/90 transition-colors"
             >
-              Get Started Today
+              Contact Us
               <ArrowRight className="ml-2 h-5 w-5" />
             </Link>
             <Link
