@@ -359,13 +359,13 @@ const Products = () => {
                       </div>
                     )}
 
-                    <div className={`${product.pdfLink ? 'flex gap-4' : ''} pt-6 border-t border-surface-200 dark:border-surface-700`}>
+                    <div className={`${product.pdfLink ? 'flex flex-col sm:flex-row gap-4' : ''} pt-6 border-t border-surface-200 dark:border-surface-700`}>
                       {product.buttonLink.startsWith('http') ? (
                         <a
                           href={product.buttonLink}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className={`${product.pdfLink ? 'flex-1' : 'w-full'} inline-flex items-center justify-center px-6 py-3 bg-primary-600 text-white rounded-lg hover:bg-primary-700 transition-colors text-base font-subheading`}
+                          className={`${product.pdfLink ? 'w-full sm:flex-1' : 'w-full'} inline-flex items-center justify-center px-6 py-3 bg-primary-600 text-white rounded-lg hover:bg-primary-700 transition-colors text-base font-subheading`}
                         >
                           {product.buttonText}
                           <ArrowRight className="ml-2 h-5 w-5" />
@@ -373,7 +373,7 @@ const Products = () => {
                       ) : (
                         <Link
                           to={product.buttonLink}
-                          className={`${product.pdfLink ? 'flex-1' : 'w-full'} inline-flex items-center justify-center px-6 py-3 bg-primary-600 text-white rounded-lg hover:bg-primary-700 transition-colors text-base font-subheading`}
+                          className={`${product.pdfLink ? 'w-full sm:flex-1' : 'w-full'} inline-flex items-center justify-center px-6 py-3 bg-primary-600 text-white rounded-lg hover:bg-primary-700 transition-colors text-base font-subheading`}
                         >
                           {product.buttonText}
                           <ArrowRight className="ml-2 h-5 w-5" />
@@ -384,7 +384,7 @@ const Products = () => {
                           href={product.pdfLink}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="px-6 py-3 bg-surface-100 dark:bg-surface-700 text-surface-900 dark:text-surface-100 rounded-lg hover:bg-surface-200 dark:hover:bg-surface-600 transition-colors text-base font-subheading"
+                          className="w-full sm:w-auto px-6 py-3 bg-surface-100 dark:bg-surface-700 text-surface-900 dark:text-surface-100 rounded-lg hover:bg-surface-200 dark:hover:bg-surface-600 transition-colors text-base font-subheading"
                         >
                           View Specs
                         </a>
