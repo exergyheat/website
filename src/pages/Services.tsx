@@ -105,7 +105,7 @@ const Services = () => {
     price: "50% Deposit",
     features: [
       "Exergy hardware procurement",
-      "Install coordination and setup (Colorado, USA only)",
+      "Install coordination and setup (Colorado, USA)",
       "Install guides and support (Other markets),"    
     ],
     icon: Wrench,
