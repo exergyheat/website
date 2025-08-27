@@ -275,7 +275,7 @@ const Services = () => {
               Your Hashrate Heating Journey
             </h2>
             <p className="text-xl text-surface-600 dark:text-surface-400 max-w-3xl mx-auto">
-              Choose a starting point that suits you
+              Which starting point suits you?
             </p>
           </div>
 
