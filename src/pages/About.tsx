@@ -653,11 +653,11 @@ const About = () => {
     },
     {
       quarter: 'Q3 2025',
-      title: 'Data Collection & Refinement',
+      title: 'Data Collection & Hand Holding Phase',
       events: [
         'Preliminary project data collection',
         'Monitoring software development',
-        'Installer partner network build out'
+        'Scale handholding for sizing and installation'
       ]
     },
     {
