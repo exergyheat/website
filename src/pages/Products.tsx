@@ -100,7 +100,7 @@ const Products = () => {
       ]
     },
     {
-      id: 'sh-800',
+      id: 'sh-canaan',
       category: 'space-heating',
       name: 'Canaan Avalon Mini 3',
       images: [
@@ -129,10 +129,10 @@ const Products = () => {
       ]
     },
     {
-      id: 'hyd-5000',
+      id: 'hyd-heatcore',
       category: 'hydronic',
-      name: 'RY3T Mini',
-      images: ['https://ry3t.com/wp-content/uploads/2025/03/2-1024x1024.png'],
+      name: 'Heat Core HS05',
+      images: ['https://48661310.fs1.hubspotusercontent-na2.net/hubfs/48661310/1-Jul-09-2025-09-41-39-7158-AM.png'],
       specs: {
         power: '5000W',
         hashrate: '228 TH/s',
