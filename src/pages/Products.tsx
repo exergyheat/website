@@ -141,7 +141,8 @@ const Products = () => {
         hashrate: '228 TH/s',
         heating: '17,060 BTU/hr',
         waterTemp: '158°F max',
-        dimensions: '25.1" x 21.5" x 25.2"'
+        dimensions: '25.1" x 21.5" x 25.2"',
+        capacity: '25.1" x 21.5" x 25.2"'
       },
       price: '$7299',
       buttonText: 'Contact for Deposit',
