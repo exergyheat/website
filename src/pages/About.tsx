@@ -958,7 +958,7 @@ const About = () => {
             >
               <h2 className="text-3xl font-bold text-surface-900 dark:text-surface-100 mb-6">Our Process</h2>
               <p className="text-xl text-surface-600 dark:text-surface-400 max-w-2xl mx-auto">
-                We've developed a multi-step approach to implementing the right hashrate heating solutions, backed by math and industry expertise.
+                We've developed a multi-step approach to get your hashrate heating system online.
               </p>
             </motion.div>
           </div>
