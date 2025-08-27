@@ -115,9 +115,7 @@ const Services = () => {
     details: {
       process: [
         "Initial consultation",
-        "Home assessment",
-        "Heat Audit and System design",
-        "Project plan and quote",
+        "Hardware selection",
         "Installation & Comissioning"
       ],
       includes: [
