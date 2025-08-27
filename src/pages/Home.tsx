@@ -131,14 +131,14 @@ const Home = () => {
                 to="/products"
                 className="inline-flex items-center px-6 py-3 bg-primary-500 text-white rounded-lg hover:bg-primary-600 transition-colors text-base font-subheading"
               >
-                Our Products
+                Products
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Link>
               <Link
                 to="/services"
                 className="inline-flex items-center px-6 py-3 bg-primary-500 text-white rounded-lg hover:bg-primary-600 transition-colors text-base font-subheading"
               >
-                Our Services
+                Services
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Link>
             </div>
