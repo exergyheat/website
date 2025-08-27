@@ -590,7 +590,7 @@ const Services = () => {
             Maximize your Heating Potential
           </h2>
           <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
-            Check out our favorite products - or book a call to find the right service.
+            Check out our products - or book a call to find the right service.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <Link
