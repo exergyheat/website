@@ -19,7 +19,7 @@ export interface Project {
 export const projects: Project[] = [
   {
     id: 'small-business',
-    title: 'Exergy\'s Office Building - The Space',
+    title: 'Exergy\'s Office Building',
     description: 'Fully integrated hashrate heating for The Space, Denver\'s 5,850 sqft bitcoin hub and home of Exergy\'s office. Stop by to see our demo systems in action.',
     image: 'https://denver.space/assets/venue/3700Franklin_Back.webp?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
     category: 'Small Business',
