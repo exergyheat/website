@@ -19,7 +19,7 @@ export const mediaHighlights: MediaHighlight[] = [
     name: 'New York Post',
     logo: '/NYP_logo.png',
     link: 'https://nypost.com/business/what-is-crypto-mining/',
-    description: 'Quoted in New York Post about crypto mining'
+    description: 'Quoted in New York Post about bitcoin mining'
   },
   {
     id: 'bitcoin-conference',
@@ -29,10 +29,10 @@ export const mediaHighlights: MediaHighlight[] = [
     description: 'Speaker at Bitcoin 2025 Conference'
   },
   {
-    id: 'bitcoin-conference',
-    name: 'Bitcoin 2025',
+    id: 'TFTC',
+    name: 'TFTC',
     logo: '/bitcoin2025_logo.png',
-    link: 'https://www.youtube.com/watch?v=jtdJQ7uXcBk',
-    description: 'Speaker at Bitcoin 2025 Conference'
+    link: 'https://tftc.io',
+    description: 'Podcast Rip with Marty Bent'
   }
 ]
