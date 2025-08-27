@@ -23,24 +23,53 @@ const Portfolio = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {projects.map((project) => (
             <div key={project.id} className="bg-white dark:bg-surface-800 rounded-lg shadow-xl overflow-hidden">
-              <div className="relative h-64">
-                <img
-                  src={project.image}
-                  alt={project.title}
-                  className="w-full h-full object-cover"
-                />
-                <div className="absolute top-4 right-4 bg-primary-600 text-white px-4 py-1 rounded-full text-sm">
-                  {project.category}
+              {project.id === 'small-business' ? (
+                <a
+                  href="https://x.com/tylerkstevens/status/1958609126881468896"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block relative h-64 group"
+                >
+                  <img
+                    src={project.image}
+                    alt={project.title}
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                  />
+                  <div className="absolute top-4 right-4 bg-primary-600 text-white px-4 py-1 rounded-full text-sm">
+                    {project.category}
+                  </div>
+                </a>
+              ) : (
+                <div className="relative h-64">
+                  <img
+                    src={project.image}
+                    alt={project.title}
+                    className="w-full h-full object-cover"
+                  />
+                  <div className="absolute top-4 right-4 bg-primary-600 text-white px-4 py-1 rounded-full text-sm">
+                    {project.category}
+                  </div>
                 </div>
-              </div>
+              )}
               <div className="p-6">
                 <div className="flex items-center mb-4">
                   <div className="p-2 bg-primary-100 dark:bg-primary-900 rounded-lg">
                     <project.icon className="h-6 w-6 text-primary-600 dark:text-primary-400" />
                   </div>
-                  <h2 className="text-xl font-bold text-surface-900 dark:text-surface-100 ml-3">
-                    {project.title}
-                  </h2>
+                  {project.id === 'small-business' ? (
+                    <a
+                      href="https://x.com/tylerkstevens/status/1958609126881468896"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-xl font-bold text-surface-900 dark:text-surface-100 ml-3 hover:text-primary-600 dark:hover:text-primary-400 transition-colors"
+                    >
+                      {project.title}
+                    </a>
+                  ) : (
+                    <h2 className="text-xl font-bold text-surface-900 dark:text-surface-100 ml-3">
+                      {project.title}
+                    </h2>
+                  )}
                 </div>
                 <p className="text-surface-600 dark:text-surface-400 mb-6">
                   {project.description}
