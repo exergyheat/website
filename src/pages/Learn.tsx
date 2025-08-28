@@ -21,7 +21,7 @@ const Learn = () => {
       link: "/content"
     },
     {
-      title: "Calculaors",
+      title: "Calculators",
       description: "Estimate your own savings and earnings with our interactive tools",
       icon: Calculator,
       link: "/calculators"
