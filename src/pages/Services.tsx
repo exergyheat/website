@@ -22,7 +22,7 @@ const Services = () => {
   const journeySteps = [
     {
       id: 'audit',
-      title: 'Sizing, Savings & Quote',
+      title: 'Sizing, Savings & Recommendation',
       description: 'Curious? Get system sizing, savings, our recommendations & quote.',
       icon: Search,
       flipText: 'Start at the Heat Audit if you\'re curious, seeking details, or weighing options.',
