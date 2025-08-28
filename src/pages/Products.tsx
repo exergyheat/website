@@ -111,7 +111,7 @@ const Products = () => {
         hashrate: '37.5 TH/s',
         noise: '45 dB',
         dimensions: '30" x 4.1" x 8.5"',
-        capacity: '350 sqft'
+        capacity: '~350 sqft'
       },
       price: '$999',
       buttonText: 'Coming Soon',
