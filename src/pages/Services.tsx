@@ -396,34 +396,6 @@ const Services = () => {
                   </p>
                 )}
                 
-                {/* Build Type Toggle for Audit Service */}
-                {service.id === 'audit' && (
-                  <div className="flex items-center space-x-4 p-4 bg-surface-100 dark:bg-surface-800 rounded-lg">
-                    <button
-                      onClick={() => setBuildType('residential')}
-                      className={`px-4 py-2 rounded-lg transition-colors ${
-                        buildType === 'residential'
-                          ? 'bg-primary-600 text-white'
-                          : 'bg-surface-200 dark:bg-surface-700 text-surface-700 dark:text-surface-300'
-                      }`}
-                    >
-                      Residential
-                    </button>
-                    <button
-                      onClick={() => setBuildType('commercial')}
-                      className={`px-4 py-2 rounded-lg transition-colors ${
-                        buildType === 'commercial'
-                          ? 'bg-primary-600 text-white'
-                          : 'bg-surface-200 dark:bg-surface-700 text-surface-700 dark:text-surface-300'
-                      }`}
-                    >
-                      Commercial
-                    </button>
-                  </div>
-                )}
-
-                {/* Build Type Toggle for Upgrade Service */}
-
                 <p className="text-lg text-surface-600 dark:text-surface-400">{service.description}</p>
                 
                 <div className="bg-white dark:bg-surface-800 rounded-lg p-6 shadow-lg space-y-6">
@@ -472,6 +444,32 @@ const Services = () => {
                       </div>
                     )}
                   </div>
+
+                  {/* Build Type Toggle for Audit Service - moved to bottom */}
+                  {service.id === 'audit' && (
+                    <div className="flex items-center space-x-4 p-4 bg-surface-100 dark:bg-surface-800 rounded-lg">
+                      <button
+                        onClick={() => setBuildType('residential')}
+                        className={`px-4 py-2 rounded-lg transition-colors ${
+                          buildType === 'residential'
+                            ? 'bg-primary-600 text-white'
+                            : 'bg-surface-200 dark:bg-surface-700 text-surface-700 dark:text-surface-300'
+                        }`}
+                      >
+                        Residential
+                      </button>
+                      <button
+                        onClick={() => setBuildType('commercial')}
+                        className={`px-4 py-2 rounded-lg transition-colors ${
+                          buildType === 'commercial'
+                            ? 'bg-primary-600 text-white'
+                            : 'bg-surface-200 dark:bg-surface-700 text-surface-700 dark:text-surface-300'
+                        }`}
+                      >
+                        Commercial
+                      </button>
+                    </div>
+                  )}
 
                   <div className={`${(service.exampleImage || service.exampleImages) ? 'flex gap-4' : ''} pt-6 border-t border-surface-200 dark:border-surface-700`}>
                     {service.buttonLink.startsWith('http') ? (
