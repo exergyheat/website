@@ -117,7 +117,7 @@ const Home = () => {
                 </div>
                 
                 <p className="text-xl md:text-2xl font-body text-surface-900 dark:text-surface-100 mb-6 max-w-4xl">
-                  Smart, Electric Heat That Pays
+                  Smart, Electric Heating Systems that use Bitcoin Mining to provide Heat and Sats
                 </p>
                 <p className="text-lg md:text-xl font-body text-surface-600 dark:text-surface-400 max-w-5xl leading-relaxed">
                   Exergy offers heating products and services that deliver warmth while offsetting utility costs with bitcoin earnings.
