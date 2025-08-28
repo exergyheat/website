@@ -138,7 +138,7 @@ const Products = () => {
       ],
       specs: {
         applications: 'Room Heating',
-        heatingPower: '400-1200 W: 110-240V AC 50/60Hz',
+        heatingPower: '400-1200 W /',
         hashrate: '13-39 TH/s',
         capacity: '400 sqft',
         noise: '40-56 dB',
