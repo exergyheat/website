@@ -174,7 +174,7 @@ const Services = () => {
       id: 'consulting',
       name: "Hashrate Heat Consulting",
       description: "Project based consultation for businesses looking to implement or optimize hashrate heating solutions.",
-      price: "Contact for details",
+      price: "Contact For Details",
       features: [
         "Industry expertise",
         "Exergy modeling tools",
