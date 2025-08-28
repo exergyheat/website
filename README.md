@@ -1,5 +1,6 @@
 # EXERGY - Heat That Pays
 
+
 A comprehensive website for Exergy LLC, the leader in Hashrate Heating system feasibility modeling, design and integration. This modern React application showcases our products, services, and expertise in Bitcoin mining heat reuse technology.
 
 ## Features
