@@ -47,7 +47,7 @@ const Services = () => {
     {
       id: 'consulting',
       title: 'Consult My Team',
-      description: 'Opted in? Automatically tell us when maintenence is due.',
+      description: 'Want to master or harness Hashrate Heating for your team?',
       icon: Monitor,
       flipText: 'Start with Remote Health Monitoring if you already have hashrate heat.',
       targetSection: 'consulting-service'
