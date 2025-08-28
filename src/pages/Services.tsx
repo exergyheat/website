@@ -41,7 +41,7 @@ const Services = () => {
       title: 'Automatic Monitoring',
       description: 'Opted in? Automatically get notified when maintenence is due.',
       icon: Monitor,
-      flipText: 'Start with Remote Heartbeat Monitoring if you already have hashrate heat.',
+      flipText: 'Start with remote Heartbeat Monitoring if you already have hashrate heat.',
       targetSection: 'monitoring-service'
     },
     {
