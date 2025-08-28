@@ -281,7 +281,7 @@ const Services = () => {
           </div>
 
           {/* Journey Steps */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {journeySteps.map((step) => (
               <div
                 key={step.id}
@@ -296,7 +296,7 @@ const Services = () => {
                   
                   {/* Front of Card */}
                   <div className="absolute inset-0 w-full h-full backface-hidden">
-                    <div className="bg-white dark:bg-surface-700 rounded-lg shadow-lg p-8 border-2 border-surface-200 dark:border-surface-600 h-full flex flex-col justify-center cursor-pointer hover:shadow-xl transition-shadow">
+                    <div className="bg-white dark:bg-surface-700 rounded-lg shadow-lg p-6 border-2 border-surface-200 dark:border-surface-600 h-full flex flex-col justify-center cursor-pointer hover:shadow-xl transition-shadow">
                       {/* Step Number and Icon */}
                       <div className="flex items-center justify-center mb-6">
                         <div className="w-16 h-16 rounded-full bg-primary-600 flex items-center justify-center text-white">
@@ -318,7 +318,7 @@ const Services = () => {
 
                   {/* Back of Card */}
                   <div className="absolute inset-0 w-full h-full backface-hidden rotate-y-180">
-                    <div className="bg-primary-600 text-white rounded-lg shadow-lg p-6 h-full flex flex-col justify-center items-center text-center">
+                    <div className="bg-primary-600 text-white rounded-lg shadow-lg p-5 h-full flex flex-col justify-center items-center text-center">
                       <div className="mb-4">
                         <step.icon className="h-12 w-12 mx-auto mb-4 opacity-80" />
                       </div>
