@@ -81,7 +81,7 @@ const Products = () => {
         heating: '17,060 BTU/hr',
         waterTemp: '158°F max',
         dimensions: '25.1" x 21.5" x 25.2"',
-        capacity: '~1000 sqft'
+        capacity: '~1000 sqft Radiant'
       },
       price: '$7299',
       buttonText: 'Contact for Deposit',
