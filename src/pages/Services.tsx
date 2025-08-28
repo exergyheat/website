@@ -368,6 +368,13 @@ const Services = () => {
                 </div>
                 <h2 className="text-3xl font-bold text-surface-900 dark:text-surface-100">{service.name}</h2>
                 
+                {/* Add subtitle for Heat Audit service */}
+                {service.id === 'audit' && (
+                  <p className="text-lg text-surface-500 dark:text-surface-400 italic mt-2">
+                    Help me figure out what I need and what I can earn
+                  </p>
+                )}
+                
                 {/* Build Type Toggle for Audit Service */}
                 {service.id === 'audit' && (
                   <div className="flex items-center space-x-4 p-4 bg-surface-100 dark:bg-surface-800 rounded-lg">
