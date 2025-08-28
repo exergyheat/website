@@ -13,6 +13,7 @@ const Contact = () => {
       const script = document.createElement('script')
       script.src = 'https://js-na2.hsforms.net/forms/embed/243159145.js'
       script.defer = true
+      script.async = true
       document.body.appendChild(script)
     }
 

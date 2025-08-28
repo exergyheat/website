@@ -11,6 +11,7 @@ const BookCall = () => {
       const script = document.createElement('script')
       script.type = 'text/javascript'
       script.src = 'https://static.hsappstatic.net/MeetingsEmbed/ex/MeetingsEmbedCode.js'
+      script.defer = true
       document.head.appendChild(script)
     }
   }, [])
