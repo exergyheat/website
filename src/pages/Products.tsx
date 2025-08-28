@@ -141,8 +141,8 @@ const Products = () => {
         power: '1200 W / 4 MBH',
         hashrate: '13-39 TH/s',
         noise: '40-56 dB',
-        dimensions: '9.5" x 9.5" x 32"'
-        capacity: '~400 sqft',
+        dimensions: '9.5" x 9.5" x 32"',
+        capacity: '~400 sqft'
       },
       price: '$799-$1399',
       couponCode: 'EXERGYHEAT',
