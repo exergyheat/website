@@ -116,7 +116,7 @@ const Products = () => {
       price: '$999',
       buttonText: 'Coming Soon',
       buttonLink: '/products',
-      description: 'Perfect for heating small to medium-sized rooms while generating passive revenue. The Avalon Mini 3 is easy to setup, can be operated remotely, and has a whisper quiet fan. You won\'t even know it\'s there.',
+      description: 'Perfect for heating small to medium-sized rooms while generating passive revenue. The Avalon Mini 3 is easy to setup, can be operated remotely, and has a whisper quiet fan. You won\'t even know it\'s there. Fleet control is coming soon, allowing multiple Mini 3\'s ',
       features: [
         'Simple to follow setup',
         'WiFi connectivity',
