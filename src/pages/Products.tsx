@@ -109,9 +109,9 @@ const Products = () => {
         applications: '2,730 BTU/hr',
         heatingPower: '800 W / 2.7 MBH',
         hashrate: '37.5 TH/s',
-        capacity: '350 sqft',
         noise: '45 dB',
-        dimensions: '30" x 4.1" x 8.5"'
+        dimensions: '30" x 4.1" x 8.5"',
+        capacity: '350 sqft'
       },
       price: '$999',
       buttonText: 'Coming Soon',
