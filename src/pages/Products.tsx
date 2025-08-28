@@ -409,6 +409,23 @@ const Products = () => {
             ))}
           </div>
         )}
+
+        {/* Coming Soon Notice - Only show for "All Products" category */}
+        {activeCategory === null && filteredProducts.length > 0 && (
+          <div className="mt-16 text-center">
+            <div className="bg-white dark:bg-surface-800 rounded-lg shadow-lg p-8 max-w-2xl mx-auto">
+              <h3 className="text-2xl font-bold text-surface-900 dark:text-surface-100 mb-4">
+                More Systems Coming Soon
+              </h3>
+              <p className="text-surface-600 dark:text-surface-400 mb-4">
+                We're expanding our product lineup with additional residential and commercial hashrate heating systems.
+              </p>
+              <p className="text-surface-600 dark:text-surface-400">
+                Check back soon for more innovative heating solutions that pay you while keeping you warm.
+              </p>
+            </div>
+          </div>
+        )}
       </div>
 
       {/* CTA Section with Custom Gradient */}
