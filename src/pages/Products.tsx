@@ -106,9 +106,9 @@ const Products = () => {
         'https://www.canaan.io/static/themes/default/images/official/official_mini3_download.png'
               ],
       specs: {
-        power: '800 W: 110-240V AC 50/60Hz',
+        applications: '2,730 BTU/hr',
+        heatingPower: '800 W / 2.7 MBH',
         hashrate: '37.5 TH/s',
-        heating: '2,730 BTU/hr',
         capacity: '350 sqft',
         noise: '45 dB',
         dimensions: '30" x 4.1" x 8.5"'
