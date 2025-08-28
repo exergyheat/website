@@ -46,7 +46,7 @@ const Services = () => {
     },
     {
       id: 'consulting',
-      title: 'Automatic Monitoring',
+      title: 'Consult My Team',
       description: 'Opted in? Automatically tell us when maintenence is due.',
       icon: Monitor,
       flipText: 'Start with Remote Health Monitoring if you already have hashrate heat.',
