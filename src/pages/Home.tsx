@@ -120,7 +120,7 @@ const Home = () => {
                   Smart, electric heating systems that mine bitcoin to provide heat and sats - at no extra cost
                 </p>
                 <p className="text-lg md:text-xl font-body text-surface-600 dark:text-surface-400 max-w-5xl leading-relaxed">
-                  Exergy offers products and services that help you implement hashrate heating in your home or business.
+                  Exergy offers products and services that help implement hashrate heating into your home or business.
                 </p>
               </motion.div>
             </div>
