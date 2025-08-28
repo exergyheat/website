@@ -307,10 +307,20 @@ const Services = () => {
                       {/* Step Content */}
                       <div className="text-center">
                         <h3 className="text-xl font-bold text-surface-900 dark:text-surface-100 mb-4 text-center">
-                          {step.id === 'installation' ? (
+                          {step.id === 'audit' ? (
+                            <>
+                              Sizing, Savings &<br />
+                              Recommendation
+                            </>
+                          ) : step.id === 'installation' ? (
                             <>
                               Install<br />
                               Assistance
+                            </>
+                          ) : step.id === 'monitoring' ? (
+                            <>
+                              Automatic<br />
+                              Monitoring
                             </>
                           ) : step.id === 'consulting' ? (
                             <>
