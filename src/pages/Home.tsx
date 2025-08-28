@@ -266,7 +266,7 @@ const Home = () => {
               </div>
               <h3 className="mt-4 text-xl font-subheading text-surface-900 dark:text-surface-100">Best-in-Class Hardware</h3>
               <p className="mt-2 font-body text-surface-600 dark:text-surface-400">
-                All bitcoin miners generate heat, but few are designed for heating. We've perfected hardware selection for each use case.
+                Exergy only offers the best hashrate heating systems. Tested and vetted to deliver the warmth you need, while paying to do so.
               </p>
             </div>
 
