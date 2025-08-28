@@ -21,6 +21,12 @@ const Learn = () => {
       link: "/content"
     },
     {
+      title: "Calculaors",
+      description: "Estimate your own savings and earnings with our interactive tools",
+      icon: Calculator,
+      link: "/calculators"
+    },
+    {
       title: "Documentation",
       description: "Terms of service, contracts, payment processes, and more",
       icon: FileText,
