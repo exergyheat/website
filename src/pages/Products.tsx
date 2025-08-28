@@ -421,7 +421,7 @@ const Products = () => {
                 We're expanding our product lineup with additional residential and commercial hashrate heating systems.
               </p>
               <p className="text-surface-600 dark:text-surface-400">
-                Check back soon for more innovative heating appliances and devices that monetize heat.
+                Check back soon for more innovative appliances and devices that monetize heat.
               </p>
             </div>
           </div>
