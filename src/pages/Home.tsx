@@ -276,7 +276,7 @@ const Home = () => {
               </div>
               <h3 className="mt-4 text-xl font-subheading text-surface-900 dark:text-surface-100">Custom Integration</h3>
               <p className="mt-2 font-body text-surface-600 dark:text-surface-400">
-                Exergy delivers proper sizing, control and installation to ensure seemless integration, whatever your heating demands.
+                Exergy ensures proper sizing, control and installation to deliver seemless integration, whatever your heating demands.
               </p>
             </div>
 
