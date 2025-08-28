@@ -43,6 +43,14 @@ const Services = () => {
       icon: Monitor,
       flipText: 'Start with Remote Health Monitoring if you already have hashrate heat.',
       targetSection: 'monitoring-service'
+    },
+    {
+      id: 'monitoring',
+      title: 'Automatic Monitoring',
+      description: 'Opted in? Automatically tell us when maintenence is due.',
+      icon: Monitor,
+      flipText: 'Start with Remote Health Monitoring if you already have hashrate heat.',
+      targetSection: 'monitoring-service'
     }
   ]
 
