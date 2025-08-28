@@ -97,6 +97,35 @@ const Products = () => {
       ]
     },
     {
+      id: 'sh-canaan',
+      category: 'space-heating',
+      name: 'Canaan Avalon Mini 3',
+      images: [
+        'https://coinminingcentral.com/cdn/shop/files/Canaan_Avalon_Mini_3_Heater___Bitcoin_Miner_1200x1200.png?v=1740763938',
+        'https://coinminingcentral.com/cdn/shop/files/Canaan_Avalon_Mini_3_Heater_2_1200x1200.png?v=1740763938',
+        'https://www.canaan.io/static/themes/default/images/official/official_mini3_download.png'
+              ],
+      specs: {
+        power: '800 W: 110-240V AC 50/60Hz',
+        hashrate: '37.5 TH/s',
+        heating: '2,730 BTU/hr',
+        capacity: '350 sqft',
+        noise: '45 dB',
+        dimensions: '30" x 4.1" x 8.5"'
+      },
+      price: '$999',
+      buttonText: 'Coming Soon',
+      buttonLink: '/products',
+      description: 'Perfect for heating small to medium-sized rooms while generating passive revenue. The Avalon Mini 3 is easy to setup, can be operated remotely, and has a whisper quiet fan. You won\'t even know it\'s there.',
+      features: [
+        'Simple to follow setup',
+        'WiFi connectivity',
+        'Mobile app control',
+        'Silent operation',
+        '+ Multi-system fleet control coming soon'
+      ]
+    },
+    {
       id: 'sh-heatbit',
       category: 'space-heating',
       name: 'Heatbit Trio & Maxi',
@@ -126,35 +155,6 @@ const Products = () => {
         'Touch panel + mobile app control',
         'Quiet operation',
         'Air purification'
-      ]
-    },
-    {
-      id: 'sh-canaan',
-      category: 'space-heating',
-      name: 'Canaan Avalon Mini 3',
-      images: [
-        'https://coinminingcentral.com/cdn/shop/files/Canaan_Avalon_Mini_3_Heater___Bitcoin_Miner_1200x1200.png?v=1740763938',
-        'https://coinminingcentral.com/cdn/shop/files/Canaan_Avalon_Mini_3_Heater_2_1200x1200.png?v=1740763938',
-        'https://www.canaan.io/static/themes/default/images/official/official_mini3_download.png'
-              ],
-      specs: {
-        power: '800 W: 110-240V AC 50/60Hz',
-        hashrate: '37.5 TH/s',
-        heating: '2,730 BTU/hr',
-        capacity: '350 sqft',
-        noise: '45 dB',
-        dimensions: '30" x 4.1" x 8.5"'
-      },
-      price: '$999',
-      buttonText: 'Coming Soon',
-      buttonLink: '/products',
-      description: 'Perfect for heating small to medium-sized rooms while generating passive revenue. The Avalon Mini 3 is easy to setup, can be operated remotely, and has a whisper quiet fan. You won\'t even know it\'s there.',
-      features: [
-        'Simple to follow setup',
-        'WiFi connectivity',
-        'Mobile app control',
-        'Silent operation',
-        '+ Multi-system fleet control coming soon'
       ]
     }
   ]
