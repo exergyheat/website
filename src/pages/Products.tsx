@@ -76,7 +76,7 @@ const Products = () => {
               'https://48661310.fs1.hubspotusercontent-na2.net/hubfs/48661310/3-Jul-09-2025-09-45-39-1329-AM.png',
               'https://48661310.fs1.hubspotusercontent-na2.net/hubfs/48661310/4-Jul-09-2025-09-46-24-4952-AM.png'],
       specs: {
-        power: '5000W',
+        power: '3000W',
         power: '5000W',
         hashrate: '228 TH/s',
         heating: '17,060 BTU/hr',
