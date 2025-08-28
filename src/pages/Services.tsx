@@ -389,6 +389,13 @@ const Services = () => {
                   </p>
                 )}
                 
+                {/* Add subtitle for Consulting service */}
+                {service.id === 'consulting' && (
+                  <p className="text-lg text-surface-500 dark:text-surface-400 italic mt-2">
+                    Consult with my engineers, subs, modelers or tradesmen about hashrate heat
+                  </p>
+                )}
+                
                 {/* Build Type Toggle for Audit Service */}
                 {service.id === 'audit' && (
                   <div className="flex items-center space-x-4 p-4 bg-surface-100 dark:bg-surface-800 rounded-lg">
