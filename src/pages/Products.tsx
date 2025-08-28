@@ -76,9 +76,9 @@ const Products = () => {
               'https://48661310.fs1.hubspotusercontent-na2.net/hubfs/48661310/3-Jul-09-2025-09-45-39-1329-AM.png',
               'https://48661310.fs1.hubspotusercontent-na2.net/hubfs/48661310/4-Jul-09-2025-09-46-24-4952-AM.png'],
       specs: {
+        heating: '17,060 BTU/hr',
         heatingPower: '5 kW / 17 MBH',
         hashrate: '228 TH/s',
-        heating: '17,060 BTU/hr',
         waterTemp: '158°F max',
         dimensions: '25.1" x 21.5" x 25.2"',
         capacity: '~1000 sqft Radiant'
