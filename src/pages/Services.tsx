@@ -460,7 +460,7 @@ const Services = () => {
                       </button>
                       <button
                         onClick={() => setBuildType('commercial')}
-                        className={`px-4 py-2 rounded-lg transition-colors ${
+                        className={`px-4 py-4 rounded-lg transition-colors ${
                           buildType === 'commercial'
                             ? 'bg-primary-600 text-white'
                             : 'bg-surface-200 dark:bg-surface-700 text-surface-700 dark:text-surface-300'
