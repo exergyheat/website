@@ -137,7 +137,7 @@ const Products = () => {
         "https://heatbit.com/cdn/shop/files/3Group_1410094715_1024x1024.png?v=1714173327"
       ],
       specs: {
-        applications: '1,364-4,092 BTU/hr',
+        applications: 'Room Heating',
         power: '1200 W / 4 MBH',
         hashrate: '13-39 TH/s',
         capacity: '400 sqft',
