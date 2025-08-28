@@ -92,7 +92,7 @@ const Products = () => {
         'Radiant & air heating applications',
         'Integrated dry cooler radiator with extension tubing',
         'Integrated miner CDU with circulator pump',
-        'Easy setup and control interface with simple buttons'
+        'Easy control interface with simple buttons'
 
       ]
     },
