@@ -450,7 +450,7 @@ const Services = () => {
                     <div className="flex items-center space-x-4 p-2 bg-surface-100 dark:bg-surface-800 rounded-lg">
                       <button
                         onClick={() => setBuildType('residential')}
-                        className={`px-4 py-1.5 rounded-lg transition-colors ${
+                        className={`px-4 py-2 rounded-lg transition-colors ${
                           buildType === 'residential'
                             ? 'bg-primary-600 text-white'
                             : 'bg-surface-200 dark:bg-surface-700 text-surface-700 dark:text-surface-300'
@@ -460,7 +460,7 @@ const Services = () => {
                       </button>
                       <button
                         onClick={() => setBuildType('commercial')}
-                        className={`px-4 py-1.5 rounded-lg transition-colors ${
+                        className={`px-4 py-2 rounded-lg transition-colors ${
                           buildType === 'commercial'
                             ? 'bg-primary-600 text-white'
                             : 'bg-surface-200 dark:bg-surface-700 text-surface-700 dark:text-surface-300'
