@@ -120,7 +120,7 @@ const Home = () => {
                   Smart, Electric Heat That Pays
                 </p>
                 <p className="text-lg md:text-xl font-body text-surface-600 dark:text-surface-400 max-w-5xl leading-relaxed">
-                  Exergy offers heating products and services that deliver warmth while offsetting utility costs with daily earnings.
+                  Exergy offers heating products and services that deliver warmth while offsetting utility costs with bitcoin earnings.
                 </p>
               </motion.div>
             </div>
