@@ -45,7 +45,7 @@ const Services = () => {
       targetSection: 'monitoring-service'
     },
     {
-      id: 'monitoring',
+      id: 'consulting',
       title: 'Automatic Monitoring',
       description: 'Opted in? Automatically tell us when maintenence is due.',
       icon: Monitor,
