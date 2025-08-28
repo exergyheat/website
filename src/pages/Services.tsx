@@ -49,7 +49,7 @@ const Services = () => {
   const getAuditService = (type: 'residential' | 'commercial') => ({
     id: 'audit',
     name: "Heat Audit Analysis",
-    description: "Get a comprehensive understanding of your heating needs and potential. The Heat Audit determines sizing, savings, along with a personalized recommendation and project quote.",
+    description: "Get a comprehensive understanding of your heating needs and potential. The Heat Audit optimizes sizing and savings, along with a personalized recommendation and project quote.",
     price: type === 'residential' ? "$500" : "$2500",
     features: [
       "Optimal heating system sizing",
