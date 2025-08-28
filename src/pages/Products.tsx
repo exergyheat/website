@@ -137,9 +137,9 @@ const Products = () => {
         "https://heatbit.com/cdn/shop/files/3Group_1410094715_1024x1024.png?v=1714173327"
       ],
       specs: {
+        heating: '1,364-4,092 BTU/hr',
         power: '400-1200 W: 110-240V AC 50/60Hz',
         hashrate: '13-39 TH/s',
-        heating: '1,364-4,092 BTU/hr',
         capacity: '400 sqft',
         noise: '40-56 dB',
         dimensions: '9.5" x 9.5" x 32"'
