@@ -68,6 +68,35 @@ const Products = () => {
 
   const products = [
     {
+      id: 'hyd-heatcore',
+      category: 'hydronic',
+      name: 'Heat Core HS05',
+      images: ['https://48661310.fs1.hubspotusercontent-na2.net/hubfs/48661310/1-Jul-09-2025-09-41-39-7158-AM.png',
+              'https://48661310.fs1.hubspotusercontent-na2.net/hubfs/48661310/2-Jul-09-2025-09-44-53-3264-AM.png',
+              'https://48661310.fs1.hubspotusercontent-na2.net/hubfs/48661310/3-Jul-09-2025-09-45-39-1329-AM.png',
+              'https://48661310.fs1.hubspotusercontent-na2.net/hubfs/48661310/4-Jul-09-2025-09-46-24-4952-AM.png'],
+      specs: {
+        power: '5000W',
+        hashrate: '228 TH/s',
+        heating: '17,060 BTU/hr',
+        waterTemp: '158°F max',
+        dimensions: '25.1" x 21.5" x 25.2"',
+        capacity: '~1000 sqft. Modular'
+      },
+      price: '$7299',
+      buttonText: 'Contact for Deposit',
+      buttonLink: '/products',
+      pdfLink: '/HeatCore_HS05_specs.pdf',
+      description: 'Smart, electric boiler for hashrate heating applications. With a high water output temperature and included radiator, this water boiler is versatile for liquid and air based heating applications.',
+      features: [
+        'Radiant & air heating applications',
+        'Integrated dry cooler radiator with extension tubing',
+        'Integrated miner CDU for easy boiler hookups',
+        'Easy setup and control interface with simple buttons'
+
+      ]
+    },
+    {
       id: 'sh-heatbit',
       category: 'space-heating',
       name: 'Heatbit Trio & Maxi',
@@ -126,35 +155,6 @@ const Products = () => {
         'Mobile app control',
         'Silent operation',
         '+ Multi-system fleet control coming soon'
-      ]
-    },
-    {
-      id: 'hyd-heatcore',
-      category: 'hydronic',
-      name: 'Heat Core HS05',
-      images: ['https://48661310.fs1.hubspotusercontent-na2.net/hubfs/48661310/1-Jul-09-2025-09-41-39-7158-AM.png',
-              'https://48661310.fs1.hubspotusercontent-na2.net/hubfs/48661310/2-Jul-09-2025-09-44-53-3264-AM.png',
-              'https://48661310.fs1.hubspotusercontent-na2.net/hubfs/48661310/3-Jul-09-2025-09-45-39-1329-AM.png',
-              'https://48661310.fs1.hubspotusercontent-na2.net/hubfs/48661310/4-Jul-09-2025-09-46-24-4952-AM.png'],
-      specs: {
-        power: '5000W',
-        hashrate: '228 TH/s',
-        heating: '17,060 BTU/hr',
-        waterTemp: '158°F max',
-        dimensions: '25.1" x 21.5" x 25.2"',
-        capacity: '~1000 sqft. Modular'
-      },
-      price: '$7299',
-      buttonText: 'Contact for Deposit',
-      buttonLink: '/products',
-      pdfLink: '/HeatCore_HS05_specs.pdf',
-      description: 'Smart, electric boiler for hashrate heating applications. With a high water output temperature and included radiator, this water boiler is versatile for liquid and air based heating applications.',
-      features: [
-        'Radiant & air heating applications',
-        'Integrated dry cooler radiator with extension tubing',
-        'Integrated miner CDU for easy boiler hookups',
-        'Easy setup and control interface with simple buttons'
-
       ]
     }
   ]
