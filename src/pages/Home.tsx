@@ -120,7 +120,7 @@ const Home = () => {
                   Electric heating that generates heat and money, at the same time - at no extra cost
                 </p>
                 <p className="text-lg md:text-xl font-body text-surface-600 dark:text-surface-400 max-w-5xl leading-relaxed">
-                  Warm your home or business as usual while offsetting utility costs with daily earnings. Or pocket the rebate for long term savings.
+                  Exergy offers heating products and services that deliver warmth while offsetting utility costs with daily earnings.
                 </p>
               </motion.div>
             </div>
