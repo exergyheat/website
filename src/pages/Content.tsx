@@ -1,5 +1,4 @@
 import React, { useState } from 'react'
-import { useEffect } from 'react'
 import { BookOpen, Video, FileText, Podcast, Globe, ArrowRight, Book, X, ChevronDown, ChevronUp, ExternalLink } from 'lucide-react'
 import { Link } from 'react-router-dom'
 
@@ -19,16 +18,6 @@ const Education = () => {
   const [activeType, setActiveType] = useState<ContentType>('all')
   const [showBookModal, setShowBookModal] = useState(false)
   const [expandedDescription, setExpandedDescription] = useState<string | null>(null)
-
-  // Load Twitter widget after component mounts
-  useEffect(() => {
-    // Check if Twitter's widget script is loaded and available
-    if (window.twttr && typeof window.twttr.widgets.load === 'function') {
-      window.twttr.widgets.load(
-        document.getElementById('twitter-feed-container')
-      );
-    }
-  }, []);
 
   const contentTypes = [
     { id: 'all', name: 'All Content', icon: FileText },
@@ -111,28 +100,6 @@ const Education = () => {
           <p className="text-xl text-white/90 max-w-2xl mx-auto">
             Explore videos, podcasts, articles, and resources about hashrate heating technology
           </p>
-        </div>
-      </div>
-
-      {/* X (Twitter) Feed Section */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div className="text-center mb-8">
-          <h2 className="text-3xl font-bold text-surface-900 dark:text-surface-100 mb-4">
-            Latest from X
-          </h2>
-          <p className="text-lg text-surface-600 dark:text-surface-400">
-            Follow our latest updates and insights on hashrate heating
-          </p>
-        </div>
-        <div id="twitter-feed-container" className="bg-white dark:bg-surface-800 rounded-lg shadow-lg p-6 max-w-2xl mx-auto">
-          <a 
-            className="twitter-timeline" 
-            data-height="500"
-            data-theme="light"
-            href="https://twitter.com/Exergy_LLC?ref_src=twsrc%5Etfw"
-          >
-            Tweets by Exergy_LLC
-          </a>
         </div>
       </div>
 
