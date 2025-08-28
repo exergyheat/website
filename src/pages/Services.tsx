@@ -49,7 +49,7 @@ const Services = () => {
       title: 'Consult My Team',
       description: 'Want to master or harness Hashrate Heating for your business?',
       icon: Monitor,
-      flipText: 'Start with Remote Health Monitoring if you already have hashrate heat.',
+      flipText: 'Start at Consulting if you already size or coordinate install yourself.',
       targetSection: 'consulting-service'
     }
   ]
