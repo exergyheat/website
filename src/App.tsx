@@ -12,7 +12,7 @@ import Contact from './pages/Contact'
 import Learn from './pages/Learn'
 import PrivacyPolicy from './pages/PrivacyPolicy'
 import Calculators from './pages/Calculators'
-import Education from './pages/Education'
+import Content from './pages/Content'
 import FAQ from './pages/FAQ'
 import Products from './pages/Products'
 import BookCall from './pages/BookCall'
@@ -42,7 +42,7 @@ function App() {
               <Route path="/learn" element={<Learn />} />
               <Route path="/privacy-policy" element={<PrivacyPolicy />} />
               <Route path="/calculators" element={<Calculators />} />
-              <Route path="/education" element={<Education />} />
+              <Route path="/content" element={<Content />} />
               <Route path="/faq" element={<FAQ />} />
               <Route path="/book-call" element={<BookCall />} />
               <Route path="/portfolio" element={<Portfolio />} />

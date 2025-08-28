@@ -15,10 +15,10 @@ const Learn = () => {
       link: "/blog"
     },
     {
-      title: "Education",
-      description: "Educate yourself with hashrate heating content, videos, guides, tutorials and more",
+      title: "Content",
+      description: "Explore hashrate heating content, videos, guides, tutorials and more",
       icon: BookOpen,
-      link: "/education"
+      link: "/content"
     },
     {
       title: "Calculators",

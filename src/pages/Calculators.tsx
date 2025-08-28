@@ -119,7 +119,7 @@ const Calculators = () => {
             </Link>
 
             <Link
-              to="/education"
+              to="/content"
               className="bg-surface-50 dark:bg-surface-700 rounded-lg p-6 hover:shadow-lg transition-shadow group"
             >
               <div className="flex items-center mb-4">
@@ -127,11 +127,11 @@ const Calculators = () => {
                   <Calculator className="h-6 w-6 text-primary-600 dark:text-primary-400" />
                 </div>
                 <h3 className="text-xl font-semibold text-surface-900 dark:text-surface-100 ml-4 group-hover:text-primary-600 dark:group-hover:text-primary-400 transition-colors">
-                  Educational Resources
+                  Content Resources
                 </h3>
               </div>
               <p className="text-surface-600 dark:text-surface-400">
-                Learn more about hashrate heating technology and its benefits
+                Explore hashrate heating content, videos, guides, and resources
               </p>
             </Link>
 

@@ -86,8 +86,8 @@ const Education = () => {
       return words.slice(0, 30).join(' ') + '...'
     }
     return text
-  }
-
+        <title>Hashrate Heating Content | EXERGY Content Hub</title>
+        <meta name="description" content="Explore comprehensive hashrate heating content including videos, podcasts, articles, and resources" />
   return (
     <div className="bg-surface-50 dark:bg-surface-900 min-h-screen">
       {/* Hero Section with Custom Gradient */}
@@ -95,10 +95,10 @@ const Education = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <BookOpen className="h-16 w-16 text-white mx-auto mb-6" />
           <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
-            Hashrate Heating Resources
+            Hashrate Heating Content
           </h1>
           <p className="text-xl text-white/90 max-w-2xl mx-auto">
-            Your comprehensive guide to understanding and implementing hashrate heating technology
+            Explore videos, podcasts, articles, and resources about hashrate heating technology
           </p>
         </div>
       </div>
