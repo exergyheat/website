@@ -86,8 +86,8 @@ const Education = () => {
       return words.slice(0, 30).join(' ') + '...'
     }
     return text
-        <title>Hashrate Heating Content | EXERGY Content Hub</title>
-        <meta name="description" content="Explore comprehensive hashrate heating content including videos, podcasts, articles, and resources" />
+  }
+
   return (
     <div className="bg-surface-50 dark:bg-surface-900 min-h-screen">
       {/* Hero Section with Custom Gradient */}
