@@ -286,7 +286,7 @@ const Home = () => {
               </div>
               <h3 className="mt-4 text-xl font-subheading text-surface-900 dark:text-surface-100">Maximum Revenue</h3>
               <p className="mt-2 font-body text-surface-600 dark:text-surface-400">
-                Exergy's Heat Audit analysis optimizes bitcoin heating power to your exact heat demand for maximum earnings and the best recommendation.
+                Exergy's Heat Audit analysis optimizes bitcoin heating power to your exact demand for maximum earnings and the best recommendation.
               </p>
             </div>
           </div>
