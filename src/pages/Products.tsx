@@ -106,7 +106,7 @@ const Products = () => {
         'https://www.canaan.io/static/themes/default/images/official/official_mini3_download.png'
               ],
       specs: {
-        applications: '2,730 BTU/hr',
+        applications: 'Room Heating',
         heatingPower: '800 W / 2.7 MBH',
         hashrate: '37.5 TH/s',
         noise: '45 dB',
