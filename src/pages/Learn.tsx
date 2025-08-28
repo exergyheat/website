@@ -9,13 +9,7 @@ const Learn = () => {
 
   const resources = [
     {
-      title: "Calculators",
-      description: "Estimate your own savings and earnings with our interactive tools",
-      icon: Calculator,
-      link: "/calculators"
-    },
-    {
-      title: "Blog",
+      title: "Blodg",
       description: "Company updates and insights on the hashrate heating industry",
       icon: PenTool,
       link: "/blog"
