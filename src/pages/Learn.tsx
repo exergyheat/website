@@ -168,7 +168,7 @@ const Learn = () => {
   return (
     <div className="bg-surface-50 dark:bg-surface-900 min-h-screen">
       <Helmet>
-        <title>Learn Hashrate Heating</title>
+        <title>EXERGY | Learn Hashrate Heating</title>
         <meta name="description" content="Learn about hashrate heating technology - the revolutionary heating system that generates Bitcoin while warming your space. Educational resources, guides, and expert insights." />
         <meta name="keywords" content="hashrate heating education, bitcoin mining heat technology, learn cryptocurrency heating, heating technology guides" />
       </Helmet>
