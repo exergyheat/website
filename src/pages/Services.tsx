@@ -33,7 +33,7 @@ const Services = () => {
       title: 'Install Assistance',
       description: 'Ready? Get your hardware, project plan and installation scheduled.',
       icon: Cog,
-      flipText: 'Start with Hardware & Installation if you\'re ready to heat with hashrate, We\'ll handle the rest.',
+      flipText: 'Start with Hardware Installation if you\'re ready to heat with hashrate, We\'ll handle the rest.',
       targetSection: 'installation-service'
     },
     {
