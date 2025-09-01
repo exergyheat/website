@@ -40,7 +40,7 @@ const Home = () => {
       <Helmet>
         <title>EXERGY - Heat That Pays</title>
         <meta name="description" content="Upgrade to heat that pays you instead. EXERGY's hashrate heating systems generate warmth and bitcoin rewards simultaneously at no extra cost. Vetted hardware, expert design and installation services." />
-        <meta name="keywords" content="hashrate heating, bitcoin mining heat, heat that pays, cryptocurrency heating, energy efficient heating, bitcoin heaters" />
+        <meta name="keywords" content="hashrate heating, bitcoin mining heat, heat that pays, bitcoin heating, energy efficient heating, bitcoin heaters" />
       </Helmet>
       
       {/* Hero Section */}
