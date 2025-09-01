@@ -9,16 +9,6 @@ const Services = () => {
   const [imageViewer, setImageViewer] = useState<{images: string[], titles: string[], currentIndex: number} | null>(null)
   const [flippedCard, setFlippedCard] = useState<string | null>(null)
 
-  // Auto-scroll to section if hash is present in URL
-  React.useEffect(() => {
-    if (window.location.hash) {
-      const sectionId = window.location.hash.substring(1)
-      setTimeout(() => {
-        scrollToSection(sectionId)
-      }, 100) // Small delay to ensure page is fully loaded
-    }
-  }, [])
-
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId)
     if (element) {

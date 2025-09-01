@@ -104,10 +104,14 @@ const About = () => {
       id: 'audit',
       title: 'Heat Audit Analysis & Design',
       subtitle: 'Calculate Sizings, Savings, Design Plan & Quote',
-      description: 'We start with thermo-economic modeling to size a system for your specific heating needs while maximizing earnings. Our analysis delivers a tailored heating solution, including projected savings, payback period, and total project costs. You\'ll receive a detailed report, personal recommendations, a full project quote, and clear next steps.',
+      description: 'We start with thermo-economic modeling to size a system for your specific heating needs while maximizing earnings. Our analysis delivers a tailored heating solution, including projected savings, payback period, and total project costs. You’ll receive a detailed report, personal recommendations, a full project quote, and clear next steps.',
       icon: FileText,
-      buttonText: 'Get A Heat Audit',
-      buttonLink: '/services#audit-service'
+      preview: {
+        title: 'Sample Data',
+        content: (
+          <div className="bg-white dark:bg-surface-800 rounded-lg shadow-lg max-h-[80vh] overflow-y-auto">
+            {/* Header */}
+            <div className="sticky top-0 bg-white dark:bg-surface-800 border-b border-surface-200 dark:border-surface-700 p-6 z-10">
               <h3 className="text-2xl font-bold text-surface-900 dark:text-surface-100">Heat Audit Report</h3>
               <p className="text-surface-600 dark:text-surface-400">Outdoor Commercial Pool Resort - High Altitude Rocky Mountain Region</p>
             </div>
