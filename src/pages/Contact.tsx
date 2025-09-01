@@ -29,7 +29,7 @@ const Contact = () => {
   return (
     <div className="bg-surface-50 dark:bg-surface-900">
       <Helmet>
-        <title>Contact EXERGY | Get Started with Hashrate Heating</title>
+        <title>EXERGY | Contact Us</title>
         <meta name="description" content="Contact EXERGY for hashrate heating solutions. Located in Denver, CO. Email us at contact@exergyheat.com or schedule a consultation to get started with heat that pays." />
         <meta name="keywords" content="contact EXERGY, hashrate heating consultation, Denver heating company, bitcoin mining heat contact" />
       </Helmet>
