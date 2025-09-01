@@ -250,7 +250,7 @@ const Services = () => {
     <div className="bg-surface-50 dark:bg-surface-900">
       <Helmet>
         <title>Exergy | Hashrate Heating Services</title>
-        <meta name="description" content="Professional hashrate heating services from EXERGY. Heat audits, system design, installation, and monitoring. Transform your heating system into a Bitcoin-earning asset." />
+        <meta name="description" content="Professional hashrate heating services from Exergy. Heat audits, hardware installation, monitoring and consulting. Transform your heating system into a bitcoin-earning asset." />
         <meta name="keywords" content="heat audit, hashrate heating installation, bitcoin mining heat services, heating system design, remote monitoring" />
       </Helmet>
       
