@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { Plus, Minus, Search, MessageCircle } from 'lucide-react'
+import { Plus, Minus, Search, MessageCircle, ArrowRight } from 'lucide-react'
 
 const FAQ = () => {
   const [openSection, setOpenSection] = useState<string | null>(null)
