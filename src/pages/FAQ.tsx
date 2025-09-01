@@ -158,12 +158,20 @@ const FAQ = () => {
           <p className="text-xl text-surface-600 dark:text-surface-400 mb-8">
             Our team is here to help you with any questions you might have about our technology.
           </p>
-          <a
-            href="/contact"
-            className="inline-block bg-primary-500 text-white px-8 py-3 rounded-lg font-semibold hover:bg-primary-600 transition-colors text-base font-subheading"
-          >
-            Contact Us
-          </a>
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+            <a
+              href="/contact"
+              className="inline-block bg-primary-500 text-white px-8 py-3 rounded-lg font-semibold hover:bg-primary-600 transition-colors text-base font-subheading"
+            >
+              Contact Us
+            </a>
+            <a
+              href="/book-call"
+              className="inline-block bg-primary-500 text-white px-8 py-3 rounded-lg font-semibold hover:bg-primary-600 transition-colors text-base font-subheading"
+            >
+              Book an Intro Call
+            </a>
+          </div>
         </div>
       </div>
     </div>
