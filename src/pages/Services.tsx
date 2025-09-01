@@ -49,7 +49,7 @@ const Services = () => {
       title: 'Team Consulting',
       description: 'Want to offer or harness Hashrate Heating for your business?',
       icon: Users,
-      flipText: 'Start at Consulting if you already size or install heating systems.',
+      flipText: 'Start at Consulting if you already size, install or service heating systems.',
       targetSection: 'consulting-service'
     }
   ]
