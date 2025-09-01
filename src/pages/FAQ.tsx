@@ -159,7 +159,7 @@ const FAQ = () => {
             Our team is here to help you with any questions you might have about our technology.
           </p>
           <a
-            href="mailto:support@exergyheat.com"
+            href="/contact"
             className="inline-block bg-primary-500 text-white px-8 py-3 rounded-lg font-semibold hover:bg-primary-600 transition-colors text-base font-subheading"
           >
             Contact Support
