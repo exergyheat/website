@@ -189,7 +189,7 @@ const Services = () => {
           "Design and control",
           "Integration strategies",
           "Tradesmen training",
-          "Hardwre and software expertise"
+          "Hardware and software expertise"
         ],
         services: [
           "Technical consultations",
