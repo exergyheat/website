@@ -46,7 +46,7 @@ const Services = () => {
     },
     {
       id: 'consulting',
-      title: 'Consult My Team',
+      title: 'Team Consulting',
       description: 'Want to master or harness Hashrate Heating for your business?',
       icon: Users,
       flipText: 'Start at Consulting if you already size or coordinate install yourself.',
