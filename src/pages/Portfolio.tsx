@@ -113,13 +113,22 @@ const Portfolio = () => {
           <p className="text-xl text-surface-600 dark:text-surface-400 mb-8 max-w-2xl mx-auto">
             Let's discuss how we can help you implement hashrate heating
           </p>
-          <Link
-            to="/contact"
-            className="inline-flex items-center px-8 py-4 bg-primary-600 text-white rounded-lg hover:bg-primary-700 transition-colors text-base font-subheading"
-          >
-            Contact Us
-            <ArrowRight className="ml-2 h-5 w-5" />
-          </Link>
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+            <Link
+              to="/contact"
+              className="inline-flex items-center px-8 py-4 bg-primary-600 text-white rounded-lg hover:bg-primary-700 transition-colors text-base font-subheading"
+            >
+              Contact Us
+              <ArrowRight className="ml-2 h-5 w-5" />
+            </Link>
+            <Link
+              to="/book-call"
+              className="inline-flex items-center px-8 py-4 bg-primary-600 text-white rounded-lg hover:bg-primary-700 transition-colors text-base font-subheading"
+            >
+              Book an Intro Call
+              <ArrowRight className="ml-2 h-5 w-5" />
+            </Link>
+          </div>
         </div>
       </div>
     </div>
