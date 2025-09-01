@@ -38,7 +38,7 @@ const Home = () => {
   return (
     <div className="bg-surface-50 dark:bg-surface-900">
       <Helmet>
-        <title>EXERGY - Heat That Pays | Hashrate Heating Solutions</title>
+        <title>EXERGY - Heat That Pays</title>
         <meta name="description" content="Upgrade to heat that pays you instead. EXERGY's hashrate heating systems generate warmth and Bitcoin rewards simultaneously at no extra cost. Expert design and installation services." />
         <meta name="keywords" content="hashrate heating, bitcoin mining heat, heat that pays, cryptocurrency heating, energy efficient heating, bitcoin heaters" />
       </Helmet>
