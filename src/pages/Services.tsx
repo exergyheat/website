@@ -324,8 +324,8 @@ const Services = () => {
                             </>
                           ) : step.id === 'consulting' ? (
                             <>
-                              Consult<br />
-                              My Team
+                              Team<br />
+                              Consulting
                             </>
                           ) : (
                             step.title
