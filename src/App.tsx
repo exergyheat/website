@@ -25,7 +25,7 @@ function App() {
   return (
     <ThemeProvider>
       <Helmet>
-        <title>EXERGY - Heat That Pays | Hashrate Heating Solutions</title>
+        <title>EXERGY - Heat That Pays</title>
         <meta name="description" content="EXERGY provides hashrate heating solutions that generate heat and Bitcoin rewards simultaneously. Transform your heating system into a revenue-generating asset with our expert design and installation services." />
       </Helmet>
       <Router>
