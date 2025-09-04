@@ -15,16 +15,16 @@ const Learn = () => {
       link: "/calculators"
     },
     {
-      title: "FAQ",
-      description: "Find answers to common questions about hashrate heating technology",
-      icon: HelpCircle,
-      link: "/faq"
-    },
-    {
       title: "Documentation",
       description: "Service documents, contracts, payment information, technical guides and more",
       icon: FileText,
       link: "https://docs.exergyheat.com",
+    },
+    {
+      title: "FAQ",
+      description: "Find answers to common questions about hashrate heating technology",
+      icon: HelpCircle,
+      link: "/faq"
     },
     {
       title: "Content",
