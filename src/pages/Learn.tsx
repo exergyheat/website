@@ -21,16 +21,16 @@ const Learn = () => {
       link: "/faq"
     },
     {
-      title: "Blog",
-      description: "Company updates and insights on the hashrate heating industry",
-      icon: PenTool,
-      link: "/blog"
-    },
-    {
       title: "Content",
       description: "Explore hashrate heating content, videos, guides, tutorials and more",
       icon: BookOpen,
       link: "/content"
+    },
+    {
+      title: "Blog",
+      description: "Company updates and insights on the hashrate heating industry",
+      icon: PenTool,
+      link: "/blog"
     },
     {
       title: "Documentation",
