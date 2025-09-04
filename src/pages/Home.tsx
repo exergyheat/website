@@ -1,6 +1,6 @@
 import React from 'react'
 import { Helmet } from 'react-helmet-async'
-import { ArrowRight, Wrench, Cpu, Bitcoin, Flame, DollarSign, Zap, Calculator } from 'lucide-react'
+import { ArrowRight, Wrench, Cpu, Bitcoin, Flame, DollarSign, Zap, Calculator, Search, Cog, Monitor, Users } from 'lucide-react'
 import { Link } from 'react-router-dom'
 import { useTypewriter } from '../hooks/useTypewriter'
 import ProjectCarousel from '../components/ProjectCarousel'
@@ -118,49 +118,134 @@ const Home = () => {
       {/* Hashrate Heating Summary Section */}
       <div className="py-20 bg-white dark:bg-surface-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-col md:flex-row items-center justify-between gap-8">
-            {/* Content Section */}
-            <div className="flex-1 text-center md:text-left">
-              <motion.div
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.8, ease: "easeOut" }}
-              >
-                {/* Title in Blue Box */}
-                <div className="inline-block bg-gradient-to-r from-[#4970A5] to-[#718EBC] px-8 py-4 rounded-2xl mb-8 shadow-lg">
-                  <h2 className="text-4xl md:text-5xl font-heading text-white">
-                    Hashrate Heating Experts
-                  </h2>
-                </div>
-                
-                <p className="text-xl md:text-2xl font-body text-surface-900 dark:text-surface-100 mb-6 max-w-4xl">
-                  Smart, electric heating systems that mine bitcoin to provide heat and sats - at no extra cost
-                </p>
-                <p className="text-lg md:text-xl font-body text-surface-600 dark:text-surface-400 max-w-5xl leading-relaxed">
-                  Exergy offers products and services that help implement hashrate heating into your home or business.
-                </p>
-              </motion.div>
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8, ease: "easeOut" }}
+            className="text-center mb-16"
+          >
+            {/* Title in Blue Box */}
+            <div className="inline-block bg-gradient-to-r from-[#4970A5] to-[#718EBC] px-8 py-4 rounded-2xl mb-8 shadow-lg">
+              <h2 className="text-4xl md:text-5xl font-heading text-white">
+                Hashrate Heating Experts
+              </h2>
             </div>
+            
+            <p className="text-xl md:text-2xl font-body text-surface-900 dark:text-surface-100 mb-6 max-w-4xl mx-auto">
+              Smart, electric heating systems that mine bitcoin to provide heat and sats - at no extra cost
+            </p>
+            <p className="text-lg md:text-xl font-body text-surface-600 dark:text-surface-400 max-w-5xl mx-auto leading-relaxed">
+              Exergy offers products and services that help implement hashrate heating into your home or business.
+            </p>
+          </motion.div>
 
-            {/* Buttons Section */}
-            <div className="flex flex-col gap-4 min-w-fit">
+          {/* Services Grid */}
+          <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
+            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6"
+          >
+            {/* Heat Audit Service */}
+            <Link
+              to="/services#audit-service"
+              className="bg-surface-50 dark:bg-surface-700 rounded-lg p-6 hover:shadow-lg transition-all duration-300 hover:scale-105 group"
+            >
+              <div className="flex justify-center mb-4">
+                <div className="p-4 bg-primary-100 dark:bg-primary-900 rounded-full group-hover:bg-primary-200 dark:group-hover:bg-primary-800 transition-colors">
+                  <Search className="h-8 w-8 text-primary-600 dark:text-primary-400" />
+                </div>
+              </div>
+              <h3 className="text-lg font-subheading text-surface-900 dark:text-surface-100 mb-2 text-center">
+                Sizing, Savings &<br />Recommendation
+              </h3>
+              <p className="text-sm font-body text-surface-600 dark:text-surface-400 text-center">
+                Curious? Get system sizing, savings, our recommendations & quote.
+              </p>
+            </Link>
+
+            {/* Installation Service */}
+            <Link
+              to="/services#installation-service"
+              className="bg-surface-50 dark:bg-surface-700 rounded-lg p-6 hover:shadow-lg transition-all duration-300 hover:scale-105 group"
+            >
+              <div className="flex justify-center mb-4">
+                <div className="p-4 bg-primary-100 dark:bg-primary-900 rounded-full group-hover:bg-primary-200 dark:group-hover:bg-primary-800 transition-colors">
+                  <Cog className="h-8 w-8 text-primary-600 dark:text-primary-400" />
+                </div>
+              </div>
+              <h3 className="text-lg font-subheading text-surface-900 dark:text-surface-100 mb-2 text-center">
+                Install<br />Assistance
+              </h3>
+              <p className="text-sm font-body text-surface-600 dark:text-surface-400 text-center">
+                Ready? Get your hardware, project plan and installation scheduled.
+              </p>
+            </Link>
+
+            {/* Monitoring Service */}
+            <Link
+              to="/services#monitoring-service"
+              className="bg-surface-50 dark:bg-surface-700 rounded-lg p-6 hover:shadow-lg transition-all duration-300 hover:scale-105 group"
+            >
+              <div className="flex justify-center mb-4">
+                <div className="p-4 bg-primary-100 dark:bg-primary-900 rounded-full group-hover:bg-primary-200 dark:group-hover:bg-primary-800 transition-colors">
+                  <Monitor className="h-8 w-8 text-primary-600 dark:text-primary-400" />
+                </div>
+              </div>
+              <h3 className="text-lg font-subheading text-surface-900 dark:text-surface-100 mb-2 text-center">
+                Automatic<br />Monitoring
+              </h3>
+              <p className="text-sm font-body text-surface-600 dark:text-surface-400 text-center">
+                Opted in? Automatically get notified when maintenance is due.
+              </p>
+            </Link>
+
+            {/* Consulting Service */}
+            <Link
+              to="/services#consulting-service"
+              className="bg-surface-50 dark:bg-surface-700 rounded-lg p-6 hover:shadow-lg transition-all duration-300 hover:scale-105 group"
+            >
+              <div className="flex justify-center mb-4">
+                <div className="p-4 bg-primary-100 dark:bg-primary-900 rounded-full group-hover:bg-primary-200 dark:group-hover:bg-primary-800 transition-colors">
+                  <Users className="h-8 w-8 text-primary-600 dark:text-primary-400" />
+                </div>
+              </div>
+              <h3 className="text-lg font-subheading text-surface-900 dark:text-surface-100 mb-2 text-center">
+                Team<br />Consulting
+              </h3>
+              <p className="text-sm font-body text-surface-600 dark:text-surface-400 text-center">
+                Want to offer or harness Hashrate Heating for your business?
+              </p>
+            </Link>
+          </motion.div>
+
+          {/* Call to Action */}
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8, ease: "easeOut", delay: 0.4 }}
+            className="text-center mt-12"
+          >
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
               <Link
                 to="/products"
                 className="inline-flex items-center px-6 py-3 bg-primary-500 text-white rounded-lg hover:bg-primary-600 transition-colors text-base font-subheading"
               >
-                Our Products
+                View Our Products
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Link>
               <Link
-                to="/services"
-                className="inline-flex items-center px-6 py-3 bg-primary-500 text-white rounded-lg hover:bg-primary-600 transition-colors text-base font-subheading"
+                to="/book-call"
+                className="inline-flex items-center px-6 py-3 border border-primary-500 text-primary-500 dark:text-primary-400 rounded-lg hover:bg-primary-50 dark:hover:bg-primary-900 transition-colors text-base font-subheading"
               >
-                Our Services
+                Book an Intro Call
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Link>
             </div>
-          </div>
+          </motion.div>
         </div>
       </div>
 
