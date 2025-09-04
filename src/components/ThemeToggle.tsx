@@ -15,9 +15,46 @@ export default function ThemeToggle() {
     }
   }
 
+  // Combined sun/moon icon for system theme
+  const SystemIcon = () => (
+    <svg className="h-5 w-5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+      {/* Sun half (left side) */}
+      <path
+        d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"
+        stroke="currentColor"
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        opacity="0.7"
+      />
+      <circle
+        cx="12"
+        cy="12"
+        r="5"
+        fill="currentColor"
+        opacity="0.3"
+        clipPath="url(#leftHalf)"
+      />
+      {/* Moon half (right side) */}
+      <path
+        d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"
+        fill="currentColor"
+        opacity="0.7"
+        clipPath="url(#rightHalf)"
+      />
+      <defs>
+        <clipPath id="leftHalf">
+          <rect x="0" y="0" width="12" height="24" />
+        </clipPath>
+        <clipPath id="rightHalf">
+          <rect x="12" y="0" width="12" height="24" />
+        </clipPath>
+      </defs>
+    </svg>
+  )
   const getIcon = () => {
     if (theme === 'system') {
-      return <Monitor className="h-5 w-5" />
+      return <SystemIcon />
     } else if (effectiveTheme === 'dark') {
       return <Moon className="h-5 w-5" />
     } else {
