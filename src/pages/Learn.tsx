@@ -43,6 +43,7 @@ const Learn = () => {
       description: "See what the talk is all about on our X page",
       icon: Users,
       link: "https://x.com/exergy_llc",
+     external: true
     }
   ]
 
@@ -191,7 +192,7 @@ const Learn = () => {
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {resources.map((resource, index) => (
-            resource.external ? (
+            resource.link.startsWith('http') ? (
               <a
                 key={index}
                 href={resource.link}
