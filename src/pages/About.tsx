@@ -933,7 +933,7 @@ const About = () => {
           <div className="relative lg:order-1">
             <div className="relative w-full">
               <img
-                src="/IMG_3841.PNG"
+                src="/HRHP_logo_nobackground.png"
                 alt="Conference and Summit"
                 className="w-full h-64 sm:h-72 md:h-80 lg:h-96 xl:h-[400px] object-contain object-center rounded-lg shadow-2xl bg-white"
               />
