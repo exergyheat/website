@@ -32,7 +32,7 @@ export const mediaHighlights: MediaHighlight[] = [
     id: 'TFTC',
     name: 'TFTC',
     logo: '/TFTC_logo.png',
-    link: 'https://tftc.io',
+    link: 'https://www.tftc.io/tftc-bitcoin-heating-rebate-tyler-stevens-xrg/',
     description: 'Podcast Rip with Marty Bent'
   }
 ]
