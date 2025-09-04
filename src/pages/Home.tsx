@@ -115,30 +115,7 @@ const Home = () => {
         </div>
       </div>
 
-      {/* Hashrate Heating Summary Section */}
-      <div className="py-20 bg-white dark:bg-surface-800">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8, ease: "easeOut" }}
-            className="text-center mb-16"
-          >
-            {/* Title in Blue Box */}
-            <div className="inline-block bg-gradient-to-r from-[#4970A5] to-[#718EBC] px-8 py-4 rounded-2xl mb-8 shadow-lg">
-              <h2 className="text-4xl md:text-5xl font-heading text-white">
-                Hashrate Heating Experts
-              </h2>
-            </div>
-            
-            <p className="text-xl md:text-2xl font-body text-surface-900 dark:text-surface-100 mb-6 max-w-4xl mx-auto">
-              Smart, electric heating systems that mine bitcoin to provide heat and sats - at no extra cost
-            </p>
-            <p className="text-lg md:text-xl font-body text-surface-600 dark:text-surface-400 max-w-5xl mx-auto leading-relaxed">
-              Exergy offers products and services that help implement hashrate heating into your home or business.
-            </p>
-          </motion.div>
+     
 
           {/* Services Grid */}
           <motion.div
