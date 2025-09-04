@@ -60,15 +60,16 @@ const Footer = () => {
                   Docs
                 </a>
               </li>
+              </li>
+                <Link to="/faq" className="font-body text-surface-400 hover:text-surface-200 transition-colors">FAQ</Link>
+              </li>
               <li>
               <li>
                 <Link to="/blog" className="font-body text-surface-400 hover:text-surface-200 transition-colors">Blog</Link>
               </li>
               <li>
                 <Link to="/content" className="font-body text-surface-400 hover:text-surface-200 transition-colors">Content</Link>
-              </li>
-                <Link to="/faq" className="font-body text-surface-400 hover:text-surface-200 transition-colors">FAQ</Link>
-              </li>
+
  
               <li>
                 <a 
