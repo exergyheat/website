@@ -413,7 +413,7 @@ const About = () => {
     {
       id: 'monitoring',
       title: 'Heartbeat Remote Monitoring',
-      subtitle: 'Show us your heater\'s pulse',
+      subtitle: 'Show us your heater\'s pulse - We\'ll watch it for you',
       description: 'We leverage private and secure remote monitoring to ensure your heating system is always healthy and maximizing earnings. Because hashrate heaters are digital, we can sense when it is time for a tune up - before you do.',
       icon: Monitor,
       preview: {
