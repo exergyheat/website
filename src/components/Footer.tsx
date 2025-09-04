@@ -51,12 +51,6 @@ const Footer = () => {
                 <Link to="/calculators" className="font-body text-surface-400 hover:text-surface-200 transition-colors">Calculators</Link>
               </li>
               <li>
-                <Link to="/blog" className="font-body text-surface-400 hover:text-surface-200 transition-colors">Blog</Link>
-              </li>
-              <li>
-                <Link to="/content" className="font-body text-surface-400 hover:text-surface-200 transition-colors">Content</Link>
-              </li>
-              <li>
                 <a 
                   href="https://docs.exergyheat.com" 
                   target="_blank" 
@@ -67,6 +61,13 @@ const Footer = () => {
                 </a>
               </li>
               <li>
+              <li>
+                <Link to="/blog" className="font-body text-surface-400 hover:text-surface-200 transition-colors">Blog</Link>
+              </li>
+              <li>
+                <Link to="/content" className="font-body text-surface-400 hover:text-surface-200 transition-colors">Content</Link>
+              </li>
+
                 <Link to="/faq" className="font-body text-surface-400 hover:text-surface-200 transition-colors">FAQ</Link>
               </li>
 
