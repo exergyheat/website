@@ -42,7 +42,7 @@ const Learn = () => {
       title: "Social Media",
       description: "See what the talk is all about on our X page",
       icon: Users,
-      link: "https://heatpunks.org",
+      link: "https://x.com/exergy_llc",
     }
   ]
 
