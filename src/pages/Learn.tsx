@@ -22,7 +22,7 @@ const Learn = () => {
     },
     {
       title: "Documentation",
-      description: "Terms of service, contracts, payment processes, and more",
+      description: "Service documents, contracts, payment information, technical guides and more",
       icon: FileText,
       link: "https://docs.exergyheat.com",
     },
