@@ -394,7 +394,7 @@ const About = () => {
       id: 'installation-commissioning',
       title: 'Procurement, Installation & Commissioning',
       subtitle: 'Get all the parts, organize installation, bring the system online',
-      description: 'From parts lists and shipping, to scheduling professional installation or hand holding you or a tradesmen throughout the process, we\'ll get your hashrate heating system running.',
+      description: 'From organizing parts, to scheduling professional installation or hand holding you or a tradesmen throughout the process, we\'ll get your hashrate heating system up and running.',
       icon: Wrench,
       preview: {
         title: 'Sample Installation Process',
