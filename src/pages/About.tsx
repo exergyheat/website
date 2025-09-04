@@ -414,7 +414,7 @@ const About = () => {
       id: 'monitoring',
       title: 'Heartbeat Remote Monitoring',
       subtitle: 'Show us your heater\'s pulse - We\'ll watch it for you',
-      description: 'We leverage private and secure remote monitoring to ensure your heating system is always healthy and maximizing earnings. Because hashrate heaters are digital, we can sense when it is time for a tune up - before you do.',
+      description: 'Because hashrate heaters are connected to the internet, we can monitor their performance remotely. Opting in to remote monitoring ensures Exergy is keeping tabs on your heater. We\'ll tell you if it\'s time for maintenance or an upgrade.',
       icon: Monitor,
       preview: {
         title: 'Sample Monitoring Report',
