@@ -40,7 +40,7 @@ const Learn = () => {
       external: true
     },
     {
-      title: "Technical Forum",
+      title: "Community Forum",
       description: "Deep dive with industry experts on the Hashrate Heatpunk forum",
       icon: Users,
       link: "https://heatpunks.org",
