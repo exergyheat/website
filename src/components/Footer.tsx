@@ -56,10 +56,11 @@ const Footer = () => {
                   target="_blank" 
                   rel="noopener noreferrer" 
                   className="font-body text-surface-400 hover:text-surface-200 transition-colors"
-                >
+                > 
                   Docs
                 </a>
               </li>
+              <li>
               <li>
                 <Link to="/content" className="font-body text-surface-400 hover:text-surface-200 transition-colors">Content</Link>
               </li>
