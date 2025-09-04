@@ -9,6 +9,18 @@ const Learn = () => {
 
   const resources = [
     {
+      title: "Calculators",
+      description: "Estimate your own savings and earnings with our interactive tools",
+      icon: Calculator,
+      link: "/calculators"
+    },
+    {
+      title: "FAQ",
+      description: "Find answers to common questions about hashrate heating technology",
+      icon: HelpCircle,
+      link: "/faq"
+    },
+    {
       title: "Blog",
       description: "Company updates and insights on the hashrate heating industry",
       icon: PenTool,
@@ -21,23 +33,11 @@ const Learn = () => {
       link: "/content"
     },
     {
-      title: "Calculators",
-      description: "Estimate your own savings and earnings with our interactive tools",
-      icon: Calculator,
-      link: "/calculators"
-    },
-    {
       title: "Documentation",
       description: "Terms of service, contracts, payment processes, and more",
       icon: FileText,
       link: "https://docs.exergyheat.com",
       external: true
-    },
-    {
-      title: "FAQ",
-      description: "Find answers to common questions about hashrate heating technology",
-      icon: HelpCircle,
-      link: "/faq"
     },
     {
       title: "Technical Forum",
