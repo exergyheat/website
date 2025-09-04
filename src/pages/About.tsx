@@ -421,15 +421,6 @@ const About = () => {
                   </div>
                 ))}
               </div>
-              <div>
-                <h4 className="font-semibold text-surface-900 dark:text-surface-100 mb-2">Key Deliverables</h4>
-                <ul className="space-y-2 text-sm text-surface-600 dark:text-surface-400">
-                  <li>• Complete project plan and timeline</li>
-                  <li>• Hardware delivery</li>
-                  <li>• Professional installation</li>
-                  <li>• System integration and power up</li>
-                  <li>• Operation tutorial and handover</li>
-                </ul>
               </div>
             </div>
           </div>
