@@ -48,13 +48,13 @@ const Footer = () => {
             <Link to="/learn" className="text-lg font-subheading mb-4 text-surface-100 hover:text-surface-200 transition-colors">Learn</Link>
             <ul className="space-y-2 mt-4">
               <li>
+                <Link to="/calculators" className="font-body text-surface-400 hover:text-surface-200 transition-colors">Calculators</Link>
+              </li>
+              <li>
                 <Link to="/blog" className="font-body text-surface-400 hover:text-surface-200 transition-colors">Blog</Link>
               </li>
               <li>
                 <Link to="/content" className="font-body text-surface-400 hover:text-surface-200 transition-colors">Content</Link>
-              </li>
-              <li>
-                <Link to="/calculators" className="font-body text-surface-400 hover:text-surface-200 transition-colors">Calculators</Link>
               </li>
               <li>
                 <a 
