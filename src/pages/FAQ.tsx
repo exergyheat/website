@@ -158,6 +158,16 @@ const FAQ = () => {
           <p className="text-xl text-surface-600 dark:text-surface-400 mb-8">
             Our team is here to help you with any questions you might have about our technology.
           </p>
+          <div className="mb-6">
+            <a
+              href="https://docs.exergyheat.com/c/faq/5"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center px-6 py-3 bg-surface-100 dark:bg-surface-700 text-surface-900 dark:text-surface-100 rounded-lg hover:bg-surface-200 dark:hover:bg-surface-600 transition-colors text-base font-subheading"
+            >
+              See more FAQ on the Exergy Forum
+            </a>
+          </div>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <a
               href="/contact"
