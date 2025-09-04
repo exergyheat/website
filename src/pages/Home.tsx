@@ -92,6 +92,24 @@ const Home = () => {
                 Book an Intro Call
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Link>
+              <motion.a
+                href="https://40rqsp.share-na2.hsforms.com/2hJgXKKL6RPWk-LYX5bo3jA"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center px-4 py-2 bg-white/10 backdrop-blur-sm border border-white/30 text-sm font-subheading rounded-md text-white hover:bg-white/20 transition-colors"
+                initial={{ opacity: 0, y: 10 }}
+                animate={{ 
+                  opacity: isTypewriterComplete ? 1 : 0,
+                  y: isTypewriterComplete ? 0 : 10
+                }}
+                transition={{ 
+                  duration: 0.6,
+                  ease: "easeOut",
+                  delay: isTypewriterComplete ? 1.5 : 0
+                }}
+              >
+                Request Heat Audit
+              </motion.a>
             </motion.div>
           </div>
         </div>
