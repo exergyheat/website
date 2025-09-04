@@ -115,7 +115,19 @@ const Home = () => {
         </div>
       </div>
 
-     
+      {/* Hashrate Heating Summary Section */}
+      <div className="py-20 bg-white dark:bg-surface-800">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8, ease: "easeOut" }}
+            className="text-center mb-16"
+          >
+            {/* Title in Blue Box */}
+
+          </motion.div>
 
           {/* Services Grid */}
           <motion.div
