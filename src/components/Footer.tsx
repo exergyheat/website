@@ -67,7 +67,6 @@ const Footer = () => {
               <li>
                 <Link to="/content" className="font-body text-surface-400 hover:text-surface-200 transition-colors">Content</Link>
               </li>
-
                 <Link to="/faq" className="font-body text-surface-400 hover:text-surface-200 transition-colors">FAQ</Link>
               </li>
  
