@@ -405,22 +405,6 @@ const About = () => {
               <p className="text-surface-600 dark:text-surface-400">Project Execution Plan</p>
             </div>
             <div className="space-y-6">
-              <div className="space-y-4">
-                {[
-                  { phase: 'Phase 1: Site Preparation'},
-                  { phase: 'Phase 2: Coordinate Trades Professionals'},
-                  { phase: 'Phase 3: Hardware Installation'},
-                  { phase: 'Phase 4: System Integration'},
-                  { phase: 'Phase 5: Exergy Setup & Commissioning'}
-                ].map((phase, index) => (
-                  <div key={index} className="bg-surface-50 dark:bg-surface-700 p-4 rounded-lg">
-                    <div className="flex justify-between items-center">
-                      <h4 className="font-semibold text-surface-900 dark:text-surface-100">{phase.phase}</h4>
-                      <span className="text-sm text-primary-600">{phase.duration}</span>
-                    </div>
-                  </div>
-                ))}
-              </div>
             </div>
           </div>
         )
