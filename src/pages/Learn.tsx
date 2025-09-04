@@ -39,7 +39,7 @@ const Learn = () => {
       link: "/blog"
     },
     {
-      title: "Community Forum",
+      title: "Social Media",
       description: "Deep dive with industry experts on the Hashrate Heatpunk forum",
       icon: Users,
       link: "https://heatpunks.org",
