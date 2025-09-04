@@ -509,7 +509,7 @@ const About = () => {
     },
     {
       id: 'monitoring',
-      title: 'Remote Monitoring',
+      title: 'Heartbeat Remote Monitoring',
       subtitle: 'Ensure Your Heater Is Always Healthy',
       description: 'We leverage private and secure remote monitoring to ensure your heating system is always healthy and maximizing earnings. Because hashrate heaters are digital, we can sense when it is time for a tune up - before you do.',
       icon: Monitor,
