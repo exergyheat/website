@@ -57,7 +57,14 @@ const Footer = () => {
                 <Link to="/calculators" className="font-body text-surface-400 hover:text-surface-200 transition-colors">Calculators</Link>
               </li>
               <li>
-                <Link to="/docs" className="font-body text-surface-400 hover:text-surface-200 transition-colors">Docs</Link>
+                <a 
+                  href="https://docs.exergyheat.com" 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  className="font-body text-surface-400 hover:text-surface-200 transition-colors"
+                >
+                  Docs
+                </a>
               </li>
               <li>
                 <Link to="/faq" className="font-body text-surface-400 hover:text-surface-200 transition-colors">FAQ</Link>
