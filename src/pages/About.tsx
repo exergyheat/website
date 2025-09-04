@@ -104,7 +104,7 @@ const About = () => {
       id: 'audit',
       title: 'Heat Audit Analysis',
       subtitle: 'What we recommend, how much you can save, how much it will cost',
-      description: 'We start with thermo-economic modeling to size a system for your specific heating needs while maximizing earnings. Our analysis delivers a tailored heating solution, including projected savings, payback period, and total project costs. You’ll receive a detailed report, personal recommendations, a full project quote, and clear next steps.',
+      description: 'The Heat Audit translates your heating needs into bitcoin potential. Want to know if hashrate heating is right for you? Order a Heat Audit to learn sizing, savings, upfront costs and what we recommend. ',
       icon: FileText,
       preview: {
         title: 'Sample Data',
