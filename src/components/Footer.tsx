@@ -71,16 +71,7 @@ const Footer = () => {
                 <Link to="/faq" className="font-body text-surface-400 hover:text-surface-200 transition-colors">FAQ</Link>
               </li>
  
-              <li>
-                <a  
-                  href="https://heatpunks.org" 
-                  target="_blank" 
-                  rel="noopener noreferrer" 
-                  className="font-body text-surface-400 hover:text-surface-200 transition-colors"
-                >
-                  Forum
-                </a>
-              </li>
+          
             </ul>
           </div>
 
