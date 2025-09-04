@@ -21,6 +21,12 @@ const Learn = () => {
       link: "/faq"
     },
     {
+      title: "Documentation",
+      description: "Terms of service, contracts, payment processes, and more",
+      icon: FileText,
+      link: "https://docs.exergyheat.com",
+    },
+    {
       title: "Content",
       description: "Explore hashrate heating content, videos, guides, tutorials and more",
       icon: BookOpen,
@@ -31,12 +37,6 @@ const Learn = () => {
       description: "Company updates and insights on the hashrate heating industry",
       icon: PenTool,
       link: "/blog"
-    },
-    {
-      title: "Documentation",
-      description: "Terms of service, contracts, payment processes, and more",
-      icon: FileText,
-      link: "https://docs.exergyheat.com",
     },
     {
       title: "Community Forum",
