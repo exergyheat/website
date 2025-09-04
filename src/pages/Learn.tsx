@@ -37,14 +37,12 @@ const Learn = () => {
       description: "Terms of service, contracts, payment processes, and more",
       icon: FileText,
       link: "https://docs.exergyheat.com",
-      external: true
     },
     {
       title: "Community Forum",
       description: "Deep dive with industry experts on the Hashrate Heatpunk forum",
       icon: Users,
       link: "https://heatpunks.org",
-      external: true
     }
   ]
 
