@@ -959,11 +959,13 @@ const About = () => {
           {team.map((member, index) => (
             <div key={index} className="bg-white dark:bg-surface-800 rounded-lg shadow-xl p-6">
               <div className="relative w-48 h-48 mx-auto mb-6">
-                <img
-                  src={member.image}
-                  alt={member.name}
-                  className="w-full h-64 sm:h-72 md:h-80 lg:h-96 xl:h-[400px] object-contain object-center"
-                />
+                <div className="flex justify-center mb-6">
+                  <img
+                    src={member.image}
+                    alt={member.name}
+                    className="w-32 h-32 rounded-full object-cover shadow-lg"
+                  />
+                </div>
               </div>
               <h3 className="text-xl font-semibold text-surface-900 dark:text-surface-100 text-center">{member.name}</h3>
               <p className="text-primary-600 dark:text-primary-400 text-center mb-4">{member.role}</p>
