@@ -33,7 +33,8 @@ const About = () => {
       }
     }
   }
-
+mike
+  
   const itemVariants = {
     hidden: { 
       opacity: 0,
