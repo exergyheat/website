@@ -159,7 +159,7 @@ const Home = () => {
                 Sizing, Savings &<br />Recommendation
               </h3>
               <p className="text-sm font-body text-surface-600 dark:text-surface-400 text-center">
-                Curious? Get system sizing, savings, our recommendations & quote.
+                Figure out what you need, and how much you'll earn
               </p>
             </Link>
 
