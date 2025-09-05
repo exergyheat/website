@@ -125,8 +125,26 @@ const Home = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
-            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6"
+            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6"
           >
+            {/* Products Card */}
+            <Link
+              to="/products"
+              className="bg-surface-50 dark:bg-surface-700 rounded-lg p-6 hover:shadow-lg transition-all duration-300 hover:scale-105 group"
+            >
+              <div className="flex justify-center mb-4">
+                <div className="p-4 bg-primary-100 dark:bg-primary-900 rounded-full group-hover:bg-primary-200 dark:group-hover:bg-primary-800 transition-colors">
+                  <ArrowRight className="h-8 w-8 text-primary-600 dark:text-primary-400" />
+                </div>
+              </div>
+              <h3 className="text-lg font-subheading text-surface-900 dark:text-surface-100 mb-2 text-center">
+                View Our<br />Products
+              </h3>
+              <p className="text-sm font-body text-surface-600 dark:text-surface-400 text-center">
+                Browse our tested and vetted hashrate heating solutions.
+              </p>
+            </Link>
+
             {/* Heat Audit Service */}
             <Link
               to="/services#audit-service"
@@ -200,31 +218,6 @@ const Home = () => {
             </Link>
           </motion.div>
 
-          {/* Call to Action */}
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8, ease: "easeOut", delay: 0.4 }}
-            className="text-center mt-12"
-          >
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-              <Link
-                to="/products"
-                className="inline-flex items-center px-6 py-3 bg-primary-500 text-white rounded-lg hover:bg-primary-600 transition-colors text-base font-subheading"
-              >
-                View Our Products
-                <ArrowRight className="ml-2 h-5 w-5" />
-              </Link>
-              <Link
-                to="/book-call"
-                className="inline-flex items-center px-6 py-3 border border-primary-500 text-primary-500 dark:text-primary-400 rounded-lg hover:bg-primary-50 dark:hover:bg-primary-900 transition-colors text-base font-subheading"
-              >
-                Book an Intro Call
-                <ArrowRight className="ml-2 h-5 w-5" />
-              </Link>
-            </div>
-          </motion.div>
         </div>
       </div>
 
