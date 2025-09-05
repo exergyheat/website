@@ -183,4 +183,24 @@ const About = () => {
             />
           </div>
         </div>
-      </
+      </div>
+
+      {/* Contact CTA */}
+      <div className="bg-gradient-to-r from-[#4970A5] to-[#718EBC] py-16">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 className="text-3xl font-bold text-white mb-6">Ready to Get Started?</h2>
+          <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
+            Join the hashrate heating revolution and start earning Bitcoin while staying warm.
+          </p>
+          <Link
+            to="/contact"
+            className="inline-flex items-center px-8 py-3 bg-white text-[#4970A5] font-semibold rounded-lg hover:bg-gray-100 transition-colors duration-200"
+          >
+            Get In Touch
+            <ArrowRight className="ml-2 h-5 w-5" />
+          </Link>
+        </div>
+      </div>
+    </div>
+  )
+}
