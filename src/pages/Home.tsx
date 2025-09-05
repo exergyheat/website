@@ -213,7 +213,7 @@ const Home = () => {
                 Team<br />Consulting
               </h3>
               <p className="text-sm font-body text-surface-600 dark:text-surface-400 text-center">
-                Want to offer or harness Hashrate Heating for your business?
+                Size, install, or repair hashrate heat yourself
               </p>
             </Link>
           </motion.div>
