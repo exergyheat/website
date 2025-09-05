@@ -195,7 +195,7 @@ const Home = () => {
                 Automatic<br />Monitoring
               </h3>
               <p className="text-sm font-body text-surface-600 dark:text-surface-400 text-center">
-                Opted in? Automatically get notified when maintenance is due.
+                Receive notifications when it's time for service
               </p>
             </Link>
 
