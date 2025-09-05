@@ -141,7 +141,7 @@ const Home = () => {
                 View Our<br />Products
               </h3>
               <p className="text-sm font-body text-surface-600 dark:text-surface-400 text-center">
-                Tested and vetted hashrate heating solutions.
+                Tested and vetted hashrate heating solutions
               </p>
             </Link>
 
