@@ -130,7 +130,7 @@ const Home = () => {
             {/* Products Card */}
             <Link
               to="/products"
-              className="bg-surface-50 dark:bg-surface-700 rounded-lg p-6 hover:shadow-lg transition-all duration-300 hover:scale-105 group"
+              className="bg-surface-50 dark:bg-surface-700 rounded-lg p-6 hover:shadow-lg transition-all duration-300 hover:scale-105 group md:col-span-1 lg:col-span-1"
             >
               <div className="flex justify-center mb-4">
                 <div className="p-4 bg-primary-100 dark:bg-primary-900 rounded-full group-hover:bg-primary-200 dark:group-hover:bg-primary-800 transition-colors">
@@ -148,7 +148,7 @@ const Home = () => {
             {/* Heat Audit Service */}
             <Link
               to="/services#audit-service"
-              className="bg-surface-50 dark:bg-surface-700 rounded-lg p-6 hover:shadow-lg transition-all duration-300 hover:scale-105 group"
+              className="bg-surface-50 dark:bg-surface-700 rounded-lg p-6 hover:shadow-lg transition-all duration-300 hover:scale-105 group md:col-span-1 lg:col-span-1"
             >
               <div className="flex justify-center mb-4">
                 <div className="p-4 bg-primary-100 dark:bg-primary-900 rounded-full group-hover:bg-primary-200 dark:group-hover:bg-primary-800 transition-colors">
@@ -166,7 +166,7 @@ const Home = () => {
             {/* Installation Service */}
             <Link
               to="/services#installation-service"
-              className="bg-surface-50 dark:bg-surface-700 rounded-lg p-6 hover:shadow-lg transition-all duration-300 hover:scale-105 group"
+              className="bg-surface-50 dark:bg-surface-700 rounded-lg p-6 hover:shadow-lg transition-all duration-300 hover:scale-105 group md:col-span-1 lg:col-span-1"
             >
               <div className="flex justify-center mb-4">
                 <div className="p-4 bg-primary-100 dark:bg-primary-900 rounded-full group-hover:bg-primary-200 dark:group-hover:bg-primary-800 transition-colors">
@@ -184,7 +184,7 @@ const Home = () => {
             {/* Monitoring Service */}
             <Link
               to="/services#monitoring-service"
-              className="bg-surface-50 dark:bg-surface-700 rounded-lg p-6 hover:shadow-lg transition-all duration-300 hover:scale-105 group"
+              className="bg-surface-50 dark:bg-surface-700 rounded-lg p-6 hover:shadow-lg transition-all duration-300 hover:scale-105 group md:col-span-1 lg:col-span-1"
             >
               <div className="flex justify-center mb-4">
                 <div className="p-4 bg-primary-100 dark:bg-primary-900 rounded-full group-hover:bg-primary-200 dark:group-hover:bg-primary-800 transition-colors">
@@ -202,7 +202,7 @@ const Home = () => {
             {/* Consulting Service */}
             <Link
               to="/services#consulting-service"
-              className="bg-surface-50 dark:bg-surface-700 rounded-lg p-6 hover:shadow-lg transition-all duration-300 hover:scale-105 group"
+              className="bg-surface-50 dark:bg-surface-700 rounded-lg p-6 hover:shadow-lg transition-all duration-300 hover:scale-105 group md:col-span-2 lg:col-span-1"
             >
               <div className="flex justify-center mb-4">
                 <div className="p-4 bg-primary-100 dark:bg-primary-900 rounded-full group-hover:bg-primary-200 dark:group-hover:bg-primary-800 transition-colors">
