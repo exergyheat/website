@@ -962,7 +962,7 @@ const About = () => {
                 <img
                   src={member.image}
                   alt={member.name}
-                  className="w-full max-w-lg object-contain"
+                  className="w-full h-64 sm:h-72 md:h-80 lg:h-96 xl:h-[400px] object-contain object-center"
                 />
               </div>
               <h3 className="text-xl font-semibold text-surface-900 dark:text-surface-100 text-center">{member.name}</h3>
