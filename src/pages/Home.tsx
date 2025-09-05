@@ -177,7 +177,7 @@ const Home = () => {
                 Install<br />Assistance
               </h3>
               <p className="text-sm font-body text-surface-600 dark:text-surface-400 text-center">
-                Get your hardware installation plan
+                Get your hardware, install plan and system online
               </p>
             </Link>
 
