@@ -67,7 +67,7 @@ const Footer = () => {
                   rel="noopener noreferrer" 
                   className="font-body text-surface-400 hover:text-surface-200 transition-colors"
                 > 
-                  Docs
+                  Support
                 </a>
               </li>
               <li>
