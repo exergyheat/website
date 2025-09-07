@@ -114,7 +114,7 @@ const About = () => {
       description: 'From selecting and organizing parts, to scheduling professional installation or hand holding you or a tradesmen throughout the process, we\'ll get your hashrate heating system up and running - start to finish.',
       icon: Wrench,
       buttonText: 'Help Me Out',
-      buttonLink: '/services/installation'
+      buttonLink: '/services'
     },
     {
       id: 'monitoring',
