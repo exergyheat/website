@@ -61,6 +61,16 @@ const Footer = () => {
                 </a>
               </li>
               <li>
+                <a 
+                  href="https://docs.exergyheat.com/docs" 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  className="font-body text-surface-400 hover:text-surface-200 transition-colors"
+                > 
+                  Docs
+                </a>
+              </li>
+              <li>
                 <Link to="/faq" className="font-body text-surface-400 hover:text-surface-200 transition-colors">FAQ</Link>
               </li>
               <li>
