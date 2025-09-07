@@ -840,7 +840,6 @@ const About = () => {
                 alt="Conference and Summit"
                 className="w-full h-64 sm:h-72 md:h-80 lg:h-96 xl:h-[400px] object-contain object-center rounded-lg shadow-2xl"
               />
-
             </div>
           </div>
         </div>
