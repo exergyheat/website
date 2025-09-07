@@ -105,7 +105,7 @@ const About = () => {
       description: 'The Heat Audit translates your heating needs into bitcoin potential. Want to know if hashrate heating is right for you? Order a Heat Audit to learn sizing, savings, upfront costs and what we recommend. ',
       icon: FileText,
       buttonText: 'Get Yours',
-      buttonLink: '/services'
+      buttonLink: '/services/heat-audit'
     },
     {
       id: 'installation-commissioning',
@@ -114,7 +114,7 @@ const About = () => {
       description: 'From selecting and organizing parts, to scheduling professional installation or hand holding you or a tradesmen throughout the process, we\'ll get your hashrate heating system up and running - start to finish.',
       icon: Wrench,
       buttonText: 'Help Me Out',
-      buttonLink: '/services'
+      buttonLink: '/services/installation'
     },
     {
       id: 'monitoring',
@@ -123,7 +123,7 @@ const About = () => {
       description: 'Because hashrate heaters are connected to the internet, we can monitor their performance remotely. Opting in to remote monitoring ensures Exergy is keeping tabs on your heater. We\'ll tell you if it\'s time for maintenance or an upgrade.',
       icon: Monitor,
       buttonText: 'Learn More',
-      buttonLink: '/services'
+      buttonLink: '/services/monitoring'
     }
   ]
 
@@ -481,15 +481,15 @@ const About = () => {
                     viewport={{ once: true }}
                     transition={{ duration: 0.6, delay: (index * 0.2) + 0.3 }}
                   >
-                    <div className="flex items-center justify-between">
-                      <div>
+                    <div className="flex flex-col sm:flex-row items-start sm:justify-between">
+                      <div className="max-w-prose">
                         <h3 className="text-xl font-bold text-surface-900 dark:text-surface-100">{step.title}</h3>
                         <h4 className="text-lg font-medium text-primary-600 dark:text-primary-400 mt-1 mb-2">{step.subtitle}</h4>
                         <p className="mt-2 text-surface-600 dark:text-surface-400">{step.description}</p>
                       </div>
                       <Link
                         to={step.buttonLink}
-                        className="ml-4 px-4 py-2 bg-primary-600 text-white rounded-lg hover:bg-primary-700 transition-colors text-base font-subheading"
+                        className="mt-4 sm:mt-0 sm:ml-4 px-4 py-2 bg-primary-600 text-white rounded-lg hover:bg-primary-700 transition-colors text-base font-subheading whitespace-nowrap"
                       >
                         {step.buttonText}
                       </Link>
