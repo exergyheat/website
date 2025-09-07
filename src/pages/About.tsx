@@ -482,7 +482,7 @@ const About = () => {
                     transition={{ duration: 0.6, delay: (index * 0.2) + 0.3 }}
                   >
                     <div className="flex flex-col sm:flex-row items-start sm:justify-between">
-                      <div className="max-w-prose">
+                      <div className="max-w-7xl">
                         <h3 className="text-xl font-bold text-surface-900 dark:text-surface-100">{step.title}</h3>
                         <h4 className="text-lg font-medium text-primary-600 dark:text-primary-400 mt-1 mb-2">{step.subtitle}</h4>
                         <p className="mt-2 text-surface-600 dark:text-surface-400">{step.description}</p>
