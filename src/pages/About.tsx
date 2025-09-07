@@ -110,7 +110,6 @@ const About = () => {
         title: 'Sample Data',
         content: (
           <div className="bg-white dark:bg-surface-800 rounded-lg shadow-lg max-h-[80vh] overflow-y-auto">
-
           </div>
         )
       }
