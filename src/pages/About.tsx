@@ -832,10 +832,10 @@ const About = () => {
                 <ArrowRight className="ml-2 h-5 w-5" />
               </a>
             </div>
-          </div>
           <div className="absolute -bottom-4 -right-4 bg-white dark:bg-surface-700 p-4 lg:p-6 rounded-lg shadow-xl">
                 <p className="text-xl font-bold text-primary-600 dark:text-primary-400">2026</p>
                 <p className="text-surface-600 dark:text-surface-400">Next Summit</p>
+          </div>
           </div>
           <div className="relative lg:order-1">
             <div className="relative w-full">
