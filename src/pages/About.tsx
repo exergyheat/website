@@ -109,7 +109,7 @@ const About = () => {
       preview: {
         title: 'Sample Data',
         content: (
-          <div className="bg-white dark:bg-surface-800 rounded-lg shadow-lg max-h-[80vh] overflow-y-auto">
+          <div className="bg-white dark:bg-surface-800 p-6 rounded-lg shadow-lg">
           </div>
         )
       }
