@@ -265,11 +265,7 @@ const About = () => {
 
                   {/* Better Option */}
                   <div className="bg-white dark:bg-surface-800 border-2 border-primary-500 rounded-lg p-4 relative">
-                    <div className="absolute -top-2 left-4 bg-primary-500 text-white px-2 py-1 rounded text-xs font-bold">RECOMMENDED</div>
-                    <div className="flex items-center mb-3 mt-2">
-                      <div className="w-6 h-6 bg-green-500 rounded-full flex items-center justify-center text-white text-xs font-bold mr-2">B</div>
-                      <h6 className="font-semibold text-surface-900 dark:text-surface-100">Better</h6>
-                    </div>
+
                   </div>
 
                   {/* Best Option */}
