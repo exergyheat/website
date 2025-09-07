@@ -10,7 +10,7 @@ const Learn = () => {
   const resources = [
     {
       title: "Calculators",
-      description: "Estimate your own savings and earnings with our interactive tools",
+      description: "Estimate your own savings and earnings with our interactive tools.",
       icon: Calculator,
       link: "/calculators"
     },
@@ -29,13 +29,13 @@ const Learn = () => {
     },
     {
       title: "FAQ",
-      description: "Find answers to common questions about hashrate heating technology",
+      description: "Find answers to common questions about hashrate heating technology.",
       icon: HelpCircle,
       link: "/faq"
     },
     {
       title: "Content",
-      description: "Explore hashrate heating content, videos, guides, tutorials and more",
+      description: "Explore hashrate heating content, videos, guides, tutorials and more.",
       icon: BookOpen,
       link: "/content"
     },
