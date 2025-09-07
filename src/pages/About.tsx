@@ -310,10 +310,7 @@ const About = () => {
                       </div>
                       <div className="flex items-start">
                         <div className="w-6 h-6 bg-primary-500 rounded-full flex items-center justify-center text-white text-xs font-bold mr-3 mt-0.5">4</div>
-                        <div>
-                          <p className="font-medium text-surface-900 dark:text-surface-100">Remote Monitoring</p>
-                          <p className="text-sm text-surface-600 dark:text-surface-400">System data collection and monitoring activation</p>
-                        </div>
+
                       </div>
                     </div>
                   </div>
