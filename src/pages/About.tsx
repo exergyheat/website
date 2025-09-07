@@ -1,11 +1,9 @@
-import React, { useState, useEffect } from 'react'
+import React, { useEffect } from 'react'
 import { Book, Users, Award, Cpu, Flame, Bitcoin, ArrowRight, Target, Lightbulb, FileText, BarChart as ChartBar, Wrench, CheckCircle2, Mail, X, Zap, Network, Package, Monitor, BookOpen, Megaphone, Hammer, Calendar } from 'lucide-react'
 import { Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
 
 const About = () => {
-  const [expandedStep, setExpandedStep] = useState<string | null>(null)
-
   const missionPoints = [
     {
       icon: Zap,
@@ -483,42 +481,13 @@ const About = () => {
                         <h4 className="text-lg font-medium text-primary-600 dark:text-primary-400 mt-1 mb-2">{step.subtitle}</h4>
                         <p className="mt-2 text-surface-600 dark:text-surface-400">{step.description}</p>
                       </div>
-                      <motion.button
-                        onClick={() => setExpandedStep(expandedStep === step.id ? null : step.id)}
+                      <Link
+                        to="/services"
                         className="ml-4 px-4 py-2 bg-primary-600 text-white rounded-lg hover:bg-primary-700 transition-colors text-base font-subheading"
-                        whileHover={{ scale: 1.05 }}
-                        whileTap={{ scale: 0.95 }}
                       >
-                        {expandedStep === step.id ? 'Close Preview' : 'Example'}
-                      </motion.button>
+                        Example
+                      </Link>
                     </div>
-
-                    {expandedStep === step.id && (
-                      <div className="fixed inset-0 z-50 overflow-y-auto">
-                        <div className="flex items-center justify-center min-h-screen px-4 pt-4 pb-20 text-center sm:block sm:p-0">
-                          <div className="fixed inset-0 transition-opacity" aria-hidden="true">
-                            <div className="absolute inset-0 bg-surface-900 opacity-75"></div>
-                          </div>
-
-                          <div className="inline-block align-bottom bg-surface-50 dark:bg-surface-900 rounded-lg text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle sm:max-w-4xl sm:w-full">
-                            <div className="bg-surface-50 dark:bg-surface-900 px-4 pt-5 pb-4 sm:p-6">
-                              <div className="flex justify-between items-center mb-4">
-                                <h3 className="text-2xl font-bold text-surface-900 dark:text-surface-100">
-                                  {step.preview.title}
-                                </h3>
-                                <button
-                                  onClick={() => setExpandedStep(null)}
-                                  className="text-surface-500 hover:text-surface-700 dark:text-surface-400 dark:hover:text-surface-200"
-                                >
-                                  <X className="h-6 w-6" />
-                                </button>
-                              </div>
-                              {step.preview.content}
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    )}
                   </motion.div>
                 </div>
               </motion.div>
