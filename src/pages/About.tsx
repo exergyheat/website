@@ -107,7 +107,7 @@ const About = () => {
       description: 'The Heat Audit translates your heating needs into bitcoin potential. Want to know if hashrate heating is right for you? Order a Heat Audit to learn sizing, savings, upfront costs and what we recommend. ',
       icon: FileText,
       preview: {
-        title: 'Sample Data',
+        title: '',
         content: (
           <div className="bg-white dark:bg-surface-800 p-6 rounded-lg shadow-lg">
           </div>
