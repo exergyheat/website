@@ -420,7 +420,7 @@ const About = () => {
               <Calendar className="h-12 w-12 text-primary-400 mb-4" />
               <h3 className="text-2xl font-bold text-white mb-4">Heatpunk Summit</h3>
               <p className="text-surface-300 mb-6">
-                The annual Heatpunk Summit is a conference dedicated to hashrate heating, started by our founder Tyler Stevens.
+                The annual Heatpunk Summit is a conference dedicated to hashrate heating, started by our founder, Tyler Stevens.
               </p>
               <a
                 href="https://denver.space/heatpunk_summit"
