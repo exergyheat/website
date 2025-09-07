@@ -363,7 +363,6 @@ const About = () => {
         title: 'Sample Installation Process',
         content: (
           <div className="bg-white dark:bg-surface-800 p-6 rounded-lg shadow-lg">
-
           </div> 
         )
       }
@@ -378,10 +377,7 @@ const About = () => {
         title: 'Sample Monitoring Report',
         content: (
           <div className="bg-white dark:bg-surface-800 p-8 rounded-lg shadow-lg max-w-4xl mx-auto">
-            {/* Header */}
-            <div className="border-b border-surface-200 dark:border-surface-700 pb-6 mb-8">
-              <h3 className="text-3xl font-bold text-surface-900 dark:text-surface-100 mb-2">System Monitoring Dashboard - Coming Soon</h3>
-              <p className="text-surface-600 dark:text-surface-400 text-lg">Real-time performance and economic tracking</p>
+          
             </div>
 
             <div className="space-y-8">
