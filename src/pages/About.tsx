@@ -279,12 +279,6 @@ const About = () => {
                       <div className="w-6 h-6 bg-green-500 rounded-full flex items-center justify-center text-white text-xs font-bold mr-2">B</div>
                       <h6 className="font-semibold text-surface-900 dark:text-surface-100">Better</h6>
                     </div>
-                    <ul className="space-y-2 text-sm text-surface-600 dark:text-surface-400">
-                      <li>• 4x Auradine AH3880 Hydro Miners (18 J/TH)</li>
-                      <li>• Hydro Miner Rack, Heat Exchanger & CDU</li>
-                      <li>• Automated Temperature Control</li>
-                      <li>• $70,000 total investment</li>
-                    </ul>
                   </div>
 
                   {/* Best Option */}
@@ -293,12 +287,6 @@ const About = () => {
                       <div className="w-6 h-6 bg-purple-500 rounded-full flex items-center justify-center text-white text-xs font-bold mr-2">B</div>
                       <h6 className="font-semibold text-surface-900 dark:text-surface-100">Best</h6>
                     </div>
-                    <ul className="space-y-2 text-sm text-surface-600 dark:text-surface-400">
-                      <li>• 8x Bitmain S21 XP Hydro Miners (12 J/TH)</li>
-                      <li>• Hydro Miner Rack, Heat Exchanger & CDU</li>
-                      <li>• Automated Temperature Control</li>
-                      <li>• $81,000 total investment</li>
-                    </ul>
                   </div>
                 </div>
               </div>
