@@ -21,6 +21,13 @@ const Learn = () => {
       link: "https://docs.exergyheat.com/docs",
     },
     {
+      title: "Support",
+      description: "See what the talk is all about on our X page",
+      icon: Users,
+      link: "https://docs.exergyheat.com/",
+     external: true
+    },
+    {
       title: "FAQ",
       description: "Find answers to common questions about hashrate heating technology",
       icon: HelpCircle,
@@ -37,13 +44,6 @@ const Learn = () => {
       description: "Company updates and insights on the hashrate heating industry",
       icon: PenTool,
       link: "/blog"
-    },
-    {
-      title: "Community Support",
-      description: "See what the talk is all about on our X page",
-      icon: Users,
-      link: "https://docs.exergyheat.com/",
-     external: true
     }
   ]
 
