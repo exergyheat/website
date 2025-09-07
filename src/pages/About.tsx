@@ -248,20 +248,7 @@ const About = () => {
                 </div>
               </div>
 
-              {/* Recommendations Section */}
-              <div className="bg-surface-50 dark:bg-surface-700 rounded-lg p-6">
-                <div className="flex items-center mb-4">
-                  <div className="w-8 h-8 bg-primary-500 rounded-full flex items-center justify-center text-white font-bold text-sm mr-3">4</div>
-                  <h4 className="text-xl font-bold text-surface-900 dark:text-surface-100">Exergy Team Recommendations</h4>
-                </div>
-                
-                <div className="bg-white dark:bg-surface-800 rounded-lg p-4 mb-6">
-                  <p className="text-surface-700 dark:text-surface-300 leading-relaxed">
-                    Based on the high-altitude location and year-round heating demands, we recommend a hydronic hashrate heating system. 
-                    The consistent heat load and expensive propane costs make this an ideal application for maximizing earnings while maintaining optimal pool temperatures. 
-                    The elevation and cold winters actually work in your favor for mining efficiency. Our recommendations outline several hashrate heating boiler options that will fit the project's heating needs.
-                  </p>
-                </div>
+         
 
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                   {/* Good Option */}
