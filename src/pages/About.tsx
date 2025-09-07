@@ -137,7 +137,7 @@ const About = () => {
       preview: {
         title: 'Sample Monitoring Report',
         content: (
-          <div className="bg-white dark:bg-surface-800 p-8 rounded-lg shadow-lg max-w-4xl mx-auto">
+          <div className="bg-white dark:bg-surface-800 p-6 rounded-lg shadow-lg">
           </div>
         )
       }
