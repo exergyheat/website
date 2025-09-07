@@ -123,7 +123,7 @@ const About = () => {
       description: 'Because hashrate heaters are connected to the internet, we can monitor their performance remotely. Opting in to remote monitoring ensures Exergy is keeping tabs on your heater. We\'ll tell you if it\'s time for maintenance or an upgrade.',
       icon: Monitor,
       buttonText: 'Learn More',
-      buttonLink: '/services/monitoring'
+      buttonLink: '/services'
     }
   ]
 
