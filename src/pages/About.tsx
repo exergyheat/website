@@ -377,7 +377,6 @@ const About = () => {
         title: 'Sample Monitoring Report',
         content: (
           <div className="bg-white dark:bg-surface-800 p-8 rounded-lg shadow-lg max-w-4xl mx-auto">
-            {/* Header */}
  
 
             <div className="space-y-8">
