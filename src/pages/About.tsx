@@ -270,12 +270,6 @@ const About = () => {
                       <div className="w-6 h-6 bg-blue-500 rounded-full flex items-center justify-center text-white text-xs font-bold mr-2">G</div>
                       <h6 className="font-semibold text-surface-900 dark:text-surface-100">Good</h6>
                     </div>
-                    <ul className="space-y-2 text-sm text-surface-600 dark:text-surface-400">
-                      <li>• 10x Whatsminer M64 Hydro Miners (24 J/TH)</li>
-                      <li>• Hydro Miner Rack, Heat Exchanger & CDU</li>
-                      <li>• Automated Temperature Control</li>
-                      <li>• $57,000 total investment</li>
-                    </ul>
                   </div>
 
                   {/* Better Option */}
