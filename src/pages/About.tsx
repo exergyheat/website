@@ -270,10 +270,7 @@ const About = () => {
 
                   {/* Best Option */}
                   <div className="bg-white dark:bg-surface-800 border border-surface-200 dark:border-surface-600 rounded-lg p-4">
-                    <div className="flex items-center mb-3">
-                      <div className="w-6 h-6 bg-purple-500 rounded-full flex items-center justify-center text-white text-xs font-bold mr-2">B</div>
-                      <h6 className="font-semibold text-surface-900 dark:text-surface-100">Best</h6>
-                    </div>
+ 
                   </div>
                 </div>
               </div>
