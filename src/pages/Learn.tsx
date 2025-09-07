@@ -22,7 +22,7 @@ const Learn = () => {
     },
     {
       title: "Support",
-      description: "See what the talk is all about on our X page",
+      description: "Guides, hardware, software and service support, and general discussion.",
       icon: Users,
       link: "https://docs.exergyheat.com/",
      external: true
