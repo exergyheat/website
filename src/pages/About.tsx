@@ -105,7 +105,7 @@ const About = () => {
       description: 'The Heat Audit translates your heating needs into bitcoin potential. Want to know if hashrate heating is right for you? Order a Heat Audit to learn sizing, savings, upfront costs and what we recommend. ',
       icon: FileText,
       buttonText: 'Get Yours',
-      buttonLink: '/services/heat-audit'
+      buttonLink: '/services'
     },
     {
       id: 'installation-commissioning',
