@@ -255,6 +255,7 @@ const About = () => {
 
 
 
+                  </div>
 
                   {/* Better Option */}
                   <div className="bg-white dark:bg-surface-800 border-2 border-primary-500 rounded-lg p-4 relative">
