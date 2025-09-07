@@ -114,7 +114,7 @@ const About = () => {
       description: 'From selecting and organizing parts, to scheduling professional installation or hand holding you or a tradesmen throughout the process, we\'ll get your hashrate heating system up and running - start to finish.',
       icon: Wrench,
       buttonText: 'Help Me Out',
-      buttonLink: '/services'
+      buttonLink: '/services#installation-service'
     },
     {
       id: 'monitoring',
@@ -123,7 +123,7 @@ const About = () => {
       description: 'Because hashrate heaters are connected to the internet, we can monitor their performance remotely. Opting in to remote monitoring ensures Exergy is keeping tabs on your heater. We\'ll tell you if it\'s time for maintenance or an upgrade.',
       icon: Monitor,
       buttonText: 'Learn More',
-      buttonLink: '/services'
+      buttonLink: '/services#monitoring-service'
     }
   ]
 
