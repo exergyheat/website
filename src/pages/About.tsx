@@ -814,7 +814,7 @@ const About = () => {
         </div>
 
         {/* Heatpunk Summit Section */}
-        <div className="grid grid-cols-2 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center mb-16">
           <div className="relative lg:order-2">
             <div className="bg-surface-900 rounded-lg p-6 lg:p-8 w-full max-w-sm mx-auto lg:mx-0">
               <Calendar className="h-12 w-12 text-primary-400 mb-4" />
