@@ -362,7 +362,9 @@ const About = () => {
       preview: {
         title: 'Sample Installation Process',
         content: (
+          <div className="bg-white dark:bg-surface-800 p-6 rounded-lg shadow-lg">
 
+          </div> 
         )
       }
     },
