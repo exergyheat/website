@@ -104,6 +104,8 @@ const About = () => {
       subtitle: 'What we recommend, how much you can save, how much it will cost',
       description: 'The Heat Audit translates your heating needs into bitcoin potential. Want to know if hashrate heating is right for you? Order a Heat Audit to learn sizing, savings, upfront costs and what we recommend. ',
       icon: FileText,
+      buttonText: 'Get Yours',
+      buttonLink: '/services/heat-audit'
     },
     {
       id: 'installation-commissioning',
@@ -111,6 +113,8 @@ const About = () => {
       subtitle: 'Get all the parts, organize installation, bring the system online',
       description: 'From selecting and organizing parts, to scheduling professional installation or hand holding you or a tradesmen throughout the process, we\'ll get your hashrate heating system up and running - start to finish.',
       icon: Wrench,
+      buttonText: 'Help Me Out',
+      buttonLink: '/services/installation'
     },
     {
       id: 'monitoring',
@@ -118,6 +122,8 @@ const About = () => {
       subtitle: 'Show us your heater\'s pulse - We\'ll watch it for you',
       description: 'Because hashrate heaters are connected to the internet, we can monitor their performance remotely. Opting in to remote monitoring ensures Exergy is keeping tabs on your heater. We\'ll tell you if it\'s time for maintenance or an upgrade.',
       icon: Monitor,
+      buttonText: 'Learn More',
+      buttonLink: '/services/monitoring'
     }
   ]
 
@@ -482,10 +488,10 @@ const About = () => {
                         <p className="mt-2 text-surface-600 dark:text-surface-400">{step.description}</p>
                       </div>
                       <Link
-                        to="/services"
+                        to={step.buttonLink}
                         className="ml-4 px-4 py-2 bg-primary-600 text-white rounded-lg hover:bg-primary-700 transition-colors text-base font-subheading"
                       >
-                        Example
+                        {step.buttonText}
                       </Link>
                     </div>
                   </motion.div>
