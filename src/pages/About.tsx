@@ -254,7 +254,13 @@ const About = () => {
                 
 
 
-
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+                  {/* Good Option */}
+                  <div className="bg-white dark:bg-surface-800 border border-surface-200 dark:border-surface-600 rounded-lg p-4">
+                    <div className="flex items-center mb-3">
+                      <div className="w-6 h-6 bg-blue-500 rounded-full flex items-center justify-center text-white text-xs font-bold mr-2">G</div>
+                      <h6 className="font-semibold text-surface-900 dark:text-surface-100">Good</h6> 
+                    </div>
                   </div>
 
                   {/* Better Option */}
