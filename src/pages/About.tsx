@@ -278,7 +278,7 @@ const About = () => {
               {/* Project Plan & Quote Section */}
               <div className="bg-surface-50 dark:bg-surface-700 rounded-lg p-6">
                 <div className="flex items-center mb-4">
-                  <div className="w-8 h-8 bg-primary-500 rounded-full flex items-center justify-center text-white font-bold text-sm mr-3">5</div>
+
                   <h4 className="text-xl font-bold text-surface-900 dark:text-surface-100">Project Plan & Quote</h4>
                 </div>
                 
