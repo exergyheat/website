@@ -39,10 +39,10 @@ const Learn = () => {
       link: "/blog"
     },
     {
-      title: "Social Media",
+      title: "Community Support",
       description: "See what the talk is all about on our X page",
       icon: Users,
-      link: "https://x.com/exergy_llc",
+      link: "https://docs.exergyheat.com/",
      external: true
     }
   ]
