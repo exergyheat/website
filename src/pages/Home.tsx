@@ -108,7 +108,7 @@ const Home = () => {
                   delay: isTypewriterComplete ? 1.5 : 0
                 }}
               >
-                Request Heat Audit
+                Get Started
               </motion.a>
             </motion.div>
           </div>
