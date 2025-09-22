@@ -125,7 +125,7 @@ const Home = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
-            className="grid grid-cols-1 md:grid-cols-2 gap-6"
+            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6"
           >
             {/* Products Card */}
             <Link
@@ -202,7 +202,7 @@ const Home = () => {
             {/* Consulting Service */}
             <Link
               to="/services#consulting-service"
-              className="bg-surface-50 dark:bg-surface-700 rounded-lg p-6 hover:shadow-lg transition-all duration-300 hover:scale-105 group md:col-span-2"
+              className="bg-surface-50 dark:bg-surface-700 rounded-lg p-6 hover:shadow-lg transition-all duration-300 hover:scale-105 group lg:col-span-3 xl:col-span-1"
             >
               <div className="flex justify-center mb-4">
                 <div className="p-4 bg-primary-100 dark:bg-primary-900 rounded-full group-hover:bg-primary-200 dark:group-hover:bg-primary-800 transition-colors">
