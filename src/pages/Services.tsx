@@ -1,12 +1,12 @@
+```jsx
 import React, { useState } from 'react'
 import { Helmet } from 'react-helmet-async'
 import { Link } from 'react-router-dom'
-import { ArrowRight, FileText, Wrench, Activity, Users, ChevronDown, ChevronUp, X, Search, Cog, Monitor, ChevronLeft, ChevronRight } from 'lucide-react'
+import { ArrowRight, FileText, Wrench, Activity, Users, ChevronDown, ChevronUp, Search, Cog, Monitor, ChevronLeft, ChevronRight } from 'lucide-react'
 
 const Services = () => {
   const [expandedService, setExpandedService] = useState<string | null>(null)
   const [buildType, setBuildType] = useState<'residential' | 'commercial'>('residential')
-  const [imageViewer, setImageViewer] = useState<{images: string[], titles: string[], currentIndex: number} | null>(null)
   const [flippedCard, setFlippedCard] = useState<string | null>(null)
 
   const scrollToSection = (sectionId: string) => {
@@ -69,14 +69,10 @@ const Services = () => {
     icon: FileText,
     image: "heating_subsidy.png",
     exampleImages: [
-      "Exergy Heat Audit Report Template V1_pg1.png",
-      "Exergy Heat Audit Report Template V1_pg2.png",
-      "Exergy Heat Audit Report Template V1_pg3.png"
+      "https://243159145.fs1.hubspotusercontent-na2.net/hubfs/243159145/Heat%20Audit%20Report/ExergyHeatAudit_ReportTemplate_V1.pdf"
     ],
     exampleTitles: [
-      "Heat Audit Report - Page 1",
-      "Heat Audit Report - Page 2",
-      "Heat Audit Report - Page 3"
+      "Heat Audit Report"
     ],
     details: {
       inputs: type === 'residential' ? [
@@ -118,7 +114,7 @@ const Services = () => {
     ],
     icon: Wrench,
     image: "LiquidHashHeat_ex.png",
-    exampleImage: "SystemDesigns.png",
+    exampleImage: "https://x.com/Exergy_LLC/status/1960864287427321905",
     exampleTitle: "System Design Examples",
     details: {
       process: [
@@ -202,49 +198,6 @@ const Services = () => {
       buttonLink: "/contact?service=consulting"
     }
   ]
-
-  const openImageViewer = (images: string | string[], titles: string | string[]) => {
-    if (Array.isArray(images) && Array.isArray(titles)) {
-      setImageViewer({ images, titles, currentIndex: 0 })
-    } else {
-      setImageViewer({ 
-        images: [images as string], 
-        titles: [titles as string], 
-        currentIndex: 0 
-      })
-    }
-  }
-
-  const closeImageViewer = () => {
-    setImageViewer(null)
-  }
-
-  const nextImage = () => {
-    if (imageViewer && imageViewer.currentIndex < imageViewer.images.length - 1) {
-      setImageViewer({
-        ...imageViewer,
-        currentIndex: imageViewer.currentIndex + 1
-      })
-    }
-  }
-
-  const prevImage = () => {
-    if (imageViewer && imageViewer.currentIndex > 0) {
-      setImageViewer({
-        ...imageViewer,
-        currentIndex: imageViewer.currentIndex - 1
-      })
-    }
-  }
-
-  const goToImage = (index: number) => {
-    if (imageViewer) {
-      setImageViewer({
-        ...imageViewer,
-        currentIndex: index
-      })
-    }
-  }
 
   return (
     <div className="bg-surface-50 dark:bg-surface-900">
@@ -522,18 +475,14 @@ const Services = () => {
                       </Link>
                     )}
                     {(service.exampleImage || service.exampleImages) && (
-                      <button
-                        onClick={() => {
-                          if (service.exampleImages && service.exampleTitles) {
-                            openImageViewer(service.exampleImages, service.exampleTitles)
-                          } else if (service.exampleImage && service.exampleTitle) {
-                            openImageViewer(service.exampleImage, service.exampleTitle)
-                          }
-                        }}
+                      <a
+                        href={service.exampleImages ? service.exampleImages[0] : service.exampleImage}
+                        target="_blank"
+                        rel="noopener noreferrer"
                         className="px-6 py-3 bg-surface-100 dark:bg-surface-700 text-surface-900 dark:text-surface-100 rounded-lg hover:bg-surface-200 dark:hover:bg-surface-600 transition-colors text-base font-subheading"
                       >
                         Example
-                      </button>
+                      </a>
                     )}
                   </div>
 
@@ -567,102 +516,6 @@ const Services = () => {
           ))}
         </div>
       </div>
-
-      {/* Enhanced Image Viewer Modal with Carousel */}
-      {imageViewer && (
-        <div className="fixed inset-0 z-50 overflow-hidden">
-          <div className="flex items-center justify-center min-h-screen px-4 pt-4 pb-20 text-center sm:block sm:p-0">
-            <div 
-              className="fixed inset-0 transition-opacity cursor-pointer" 
-              aria-hidden="true"
-              onClick={closeImageViewer}
-            >
-              <div className="absolute inset-0 bg-surface-900 opacity-95"></div>
-            </div>
-
-            <div className="inline-block align-bottom bg-white dark:bg-surface-900 rounded-lg text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle sm:max-w-7xl sm:w-full">
-              <div className="bg-white dark:bg-surface-900 px-4 pt-5 pb-4 sm:p-6">
-                {/* Header */}
-                <div className="flex justify-between items-center mb-4">
-                  <div>
-                    <h3 className="text-2xl font-bold text-surface-900 dark:text-surface-100">
-                      {imageViewer.titles[imageViewer.currentIndex]}
-                    </h3>
-                    {imageViewer.images.length > 1 && (
-                      <p className="text-sm text-surface-500 dark:text-surface-400 mt-1">
-                        {imageViewer.currentIndex + 1} of {imageViewer.images.length}
-                      </p>
-                    )}
-                  </div>
-                  <button
-                    onClick={closeImageViewer}
-                    className="text-surface-500 hover:text-surface-700 dark:text-surface-400 dark:hover:text-surface-200 p-2 rounded-lg hover:bg-surface-100 dark:hover:bg-surface-800 transition-colors"
-                  >
-                    <X className="h-6 w-6" />
-                  </button>
-                </div>
-                
-                {/* Image Container with Navigation */}
-                <div className="relative flex justify-center bg-surface-50 dark:bg-surface-800 rounded-lg p-4">
-                  {/* Previous Button */}
-                  {imageViewer.images.length > 1 && imageViewer.currentIndex > 0 && (
-                    <button
-                      onClick={prevImage}
-                      className="absolute left-4 top-1/2 transform -translate-y-1/2 z-10 bg-white dark:bg-surface-700 p-2 rounded-full shadow-lg hover:bg-surface-100 dark:hover:bg-surface-600 transition-colors"
-                    >
-                      <ChevronLeft className="h-6 w-6 text-surface-900 dark:text-surface-100" />
-                    </button>
-                  )}
-
-                  {/* Image */}
-                  <img
-                    src={imageViewer.images[imageViewer.currentIndex]}
-                    alt={imageViewer.titles[imageViewer.currentIndex]}
-                    className="max-w-full max-h-[80vh] object-contain rounded-lg shadow-lg"
-                  />
-
-                  {/* Next Button */}
-                  {imageViewer.images.length > 1 && imageViewer.currentIndex < imageViewer.images.length - 1 && (
-                    <button
-                      onClick={nextImage}
-                      className="absolute right-4 top-1/2 transform -translate-y-1/2 z-10 bg-white dark:bg-surface-700 p-2 rounded-full shadow-lg hover:bg-surface-100 dark:hover:bg-surface-600 transition-colors"
-                    >
-                      <ChevronRight className="h-6 w-6 text-surface-900 dark:text-surface-100" />
-                    </button>
-                  )}
-                </div>
-
-                {/* Image Dots Navigation */}
-                {imageViewer.images.length > 1 && (
-                  <div className="flex justify-center mt-4 space-x-2">
-                    {imageViewer.images.map((_, index) => (
-                      <button
-                        key={index}
-                        onClick={() => goToImage(index)}
-                        className={`w-3 h-3 rounded-full transition-colors ${
-                          index === imageViewer.currentIndex
-                            ? 'bg-primary-600'
-                            : 'bg-surface-300 dark:bg-surface-600 hover:bg-surface-400 dark:hover:bg-surface-500'
-                        }`}
-                      />
-                    ))}
-                  </div>
-                )}
-                
-                {/* Instructions */}
-                <div className="text-center mt-4">
-                  <p className="text-sm text-surface-500 dark:text-surface-400">
-                    {imageViewer.images.length > 1 
-                      ? 'Use arrow buttons or dots to navigate • Click outside or press X to close'
-                      : 'Click outside or press X to close'
-                    }
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      )}
 
       {/* CTA Section with Custom Gradient */}
       <div className="bg-gradient-to-r from-[#4970A5] to-[#718EBC] py-20">
@@ -712,3 +565,4 @@ const Services = () => {
 }
 
 export default Services
+```
