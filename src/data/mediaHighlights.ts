@@ -34,5 +34,12 @@ export const mediaHighlights: MediaHighlight[] = [
     logo: '/TFTC_logo.png',
     link: 'https://www.tftc.io/tftc-bitcoin-heating-rebate-tyler-stevens-xrg/',
     description: 'Podcast Rip with Marty Bent'
+  },
+  {
+    id: 'imagine-if',
+    name: 'Imagine IF',
+    logo: '/Imagine_IF_logo.png',
+    link: 'https://x.com/tylerkstevens/status/1969528845066784884',
+    description: 'Featured on Imagine IF'
   }
 ]
