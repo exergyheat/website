@@ -156,7 +156,7 @@ const Home = () => {
                 </div>
               </div>
               <h3 className="text-lg font-subheading text-surface-900 dark:text-surface-100 mb-2 text-center">
-                Sizing<br />& Savings
+                Sizing &<br />Savings
               </h3>
               <p className="text-sm font-body text-surface-600 dark:text-surface-400 text-center">
                 Figure out what you need, and how much you'll earn
