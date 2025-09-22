@@ -168,58 +168,30 @@ const About = () => {
 
   // HubSpot form loading effect
   useEffect(() => {
-    // Create the form if HubSpot is available, otherwise retry
-    const createForm = () => {
-      if (window.hbspt) {
-        window.hbspt.forms.create({
-          portalId: "243159145",
-          formId: "59b79a45-8fe7-43f2-8b1c-75961746a63e",
-          region: "na2",
-          target: "#hubspot-form-container"
-        })
-      } else {
-        // Retry after a short delay if HubSpot isn't ready yet
-        setTimeout(createForm, 100)
-      }
-    }
+    // Check if HubSpot script is already loaded
+    const existingScript = document.querySelector('script[src="//js-na2.hsforms.net/forms/embed/v2.js"]')
     
-    createForm()
-  }, [])
+    if (!existingScript) {
+      // Create and load the HubSpot script
+      const script = document.createElement('script')
+      script.charset = 'utf-8'
+      script.type = 'text/javascript'
+      script.src = '//js-na2.hsforms.net/forms/embed/v2.js'
+      document.head.appendChild(script)
 
-  // Alternative approach: try creating the form immediately, then retry if needed
-  useEffect(() => {
-    const tryCreateForm = () => {
-      if (window.hbspt && window.hbspt.forms) {
-        window.hbspt.forms.create({
-          portalId: "243159145",
-          formId: "59b79a45-8fe7-43f2-8b1c-75961746a63e",
-          region: "na2",
-          target: "#hubspot-form-container"
-        })
-        return true
-      }
-      return false
-    }
-
-    // Try immediately
-    if (!tryCreateForm()) {
-      // If not available, set up a retry mechanism
-      const maxRetries = 50 // 5 seconds total
-      let retries = 0
-      
-      const retryInterval = setInterval(() => {
-        if (tryCreateForm() || retries >= maxRetries) {
-          clearInterval(retryInterval)
+      // Initialize the form once the script loads
+      script.onload = () => {
+        if (window.hbspt) {
+          window.hbspt.forms.create({
+            portalId: "243159145",
+            formId: "59b79a45-8fe7-43f2-8b1c-75961746a63e",
+            region: "na2",
+            target: "#hubspot-form-container"
+          })
         }
-        retries++
-      }, 100)
-      
-      return () => clearInterval(retryInterval)
-    }
-  }, [])
-
-  useEffect(() => {
-    if (window.hbspt) {
+      }
+    } else if (window.hbspt) {
+      // If script already exists and hbspt is available, just create the form
       window.hbspt.forms.create({
         portalId: "243159145",
         formId: "59b79a45-8fe7-43f2-8b1c-75961746a63e",
