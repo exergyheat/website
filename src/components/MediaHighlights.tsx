@@ -97,14 +97,13 @@ const MediaHighlights = () => {
                 <img
                   src={highlight.logo}
                   alt={`${highlight.name} logo - EXERGY featured in ${highlight.name}`}
-                  className={`h-8 w-auto object-contain transition-all duration-300 ${
+                  className={`${highlight.id === 'imagine-if' ? 'h-12' : 'h-8'} w-auto object-contain transition-all duration-300 ${
                     highlight.id === 'TFTC'
                       ? effectiveTheme === 'dark'
                         ? 'filter invert brightness-50 opacity-60 group-hover:invert group-hover:brightness-100 group-hover:opacity-100'
                         : 'filter-none brightness-50 opacity-60 group-hover:filter-none group-hover:brightness-100 group-hover:opacity-100'
                       : 'filter grayscale brightness-50 opacity-60 group-hover:grayscale-0 group-hover:brightness-100 group-hover:opacity-100 dark:brightness-100 dark:opacity-70 dark:group-hover:opacity-100'
                   }`}
-                    highlight.id === 'imagine-if' ? 'h-12' : ''
                 />
               </a>
             ))}
