@@ -5,24 +5,44 @@ import { Mail, MapPin, Calendar } from 'lucide-react'
 
 const Contact = () => {
   useEffect(() => {
-    // Check if HubSpot script is already loaded
-    const existingScript = document.querySelector('script[src="https://js-na2.hsforms.net/forms/embed/243159145.js"]')
-    
-    if (!existingScript) {
-      // Create and load the HubSpot script
-      const script = document.createElement('script')
-      script.src = 'https://js-na2.hsforms.net/forms/embed/243159145.js'
-      script.defer = true
-      script.async = true
-      document.body.appendChild(script)
+    // The HubSpot contact form script is now loaded globally
+    // The form should automatically populate the div with the correct data attributes
+    // No additional JavaScript is needed as the script handles this automatically
+  }, [])
+
+  // Fallback: ensure the form is created if the automatic method doesn't work
+  useEffect(() => {
+    const tryCreateForm = () => {
+      if (window.hbspt && window.hbspt.forms) {
+        // Check if form already exists to avoid duplicates
+        const existingForm = document.querySelector('#hubspot-contact-form .hs-form')
+        if (!existingForm) {
+          window.hbspt.forms.create({
+            portalId: "243159145",
+            formId: "106749ae-0515-4d1a-925d-edf71b3bfcae",
+            region: "na2",
+            target: ".hs-form-frame"
+          })
+        }
+        return true
+      }
+      return false
     }
 
-    // Cleanup function to remove script when component unmounts
-    return () => {
-      const scriptToRemove = document.querySelector('script[src="https://js-na2.hsforms.net/forms/embed/243159145.js"]')
-      if (scriptToRemove) {
-        document.body.removeChild(scriptToRemove)
-      }
+    // Try immediately
+    if (!tryCreateForm()) {
+      // If not available, set up a retry mechanism
+      const maxRetries = 50 // 5 seconds total
+      let retries = 0
+      
+      const retryInterval = setInterval(() => {
+        if (tryCreateForm() || retries >= maxRetries) {
+          clearInterval(retryInterval)
+        }
+        retries++
+      }, 100)
+      
+      return () => clearInterval(retryInterval)
     }
   }, [])
 
@@ -90,7 +110,7 @@ const Contact = () => {
           </div>
 
           {/* HubSpot Contact Form */}
-          <div className="bg-white dark:bg-surface-800 rounded-lg shadow-lg p-8">
+          <div className="bg-white dark:bg-surface-800 rounded-lg shadow-lg p-8" id="hubspot-contact-form">
             <h2 className="text-2xl font-bold text-surface-900 dark:text-surface-100 mb-6">Send us a Message</h2>
             
             {/* HubSpot Form Container */}

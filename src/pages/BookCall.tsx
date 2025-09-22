@@ -3,17 +3,9 @@ import { Calendar } from 'lucide-react'
 
 const BookCall = () => {
   useEffect(() => {
-    // Check if HubSpot meetings embed script is already loaded
-    const existingScript = document.querySelector('script[src="https://static.hsappstatic.net/MeetingsEmbed/ex/MeetingsEmbedCode.js"]')
-    
-    if (!existingScript) {
-      // Load HubSpot meetings embed script only if it doesn't exist
-      const script = document.createElement('script')
-      script.type = 'text/javascript'
-      script.src = 'https://static.hsappstatic.net/MeetingsEmbed/ex/MeetingsEmbedCode.js'
-      script.defer = true
-      document.head.appendChild(script)
-    }
+    // The HubSpot meetings embed script is now loaded globally
+    // It automatically finds and populates div elements with the 'meetings-iframe-container' class
+    // and 'data-src' attribute, so no additional JavaScript is needed here
   }, [])
 
   return (
