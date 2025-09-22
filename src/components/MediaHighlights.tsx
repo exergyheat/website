@@ -97,7 +97,7 @@ const MediaHighlights = () => {
                 <img
                   src={highlight.logo}
                   alt={`${highlight.name} logo - EXERGY featured in ${highlight.name}`}
-                  className={`${highlight.id === 'imagine-if' ? 'h-12' : 'h-8'} w-auto object-contain transition-all duration-300 ${
+                  className={`${highlight.id === 'imagine-if' ? 'h-8' : 'h-8'} w-auto object-contain transition-all duration-300 ${
                     highlight.id === 'TFTC'
                       ? effectiveTheme === 'dark'
                         ? 'filter invert brightness-50 opacity-60 group-hover:invert group-hover:brightness-100 group-hover:opacity-100'
