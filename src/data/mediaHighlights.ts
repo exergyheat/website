@@ -40,6 +40,6 @@ export const mediaHighlights: MediaHighlight[] = [
     name: 'Imagine IF',
     logo: '/Imagine_IF_logo.png',
     link: 'https://x.com/tylerkstevens/status/1969528845066784884',
-    description: 'Featured Imagine IF Keynote'
+    description: 'Featured on Imagine IF'
   }
 ]
