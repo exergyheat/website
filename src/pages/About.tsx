@@ -217,6 +217,9 @@ const About = () => {
       return () => clearInterval(retryInterval)
     }
   }, [])
+
+  useEffect(() => {
+    if (window.hbspt) {
       window.hbspt.forms.create({
         portalId: "243159145",
         formId: "59b79a45-8fe7-43f2-8b1c-75961746a63e",
