@@ -5,6 +5,7 @@ import { ThemeProvider } from './contexts/ThemeContext'
 import Navbar from './components/Navbar'
 import Footer from './components/Footer'
 import ScrollToTop from './components/ScrollToTop'
+import HubspotScriptLoader from './components/HubspotScriptLoader'
 import Home from './pages/Home'
 import Services from './pages/Services'
 import About from './pages/About'
@@ -29,6 +30,7 @@ function App() {
       </Helmet>
       <Router>
         <ScrollToTop />
+        <HubspotScriptLoader />
         <div className="flex flex-col min-h-screen bg-surface-50 dark:bg-surface-900 text-surface-900 dark:text-surface-100">
           <Navbar />
           <main className="flex-grow">
