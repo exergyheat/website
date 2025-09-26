@@ -87,7 +87,7 @@ const Products = () => {
       buttonText: 'Contact for Deposit',
       buttonLink: '/contact',
       pdfLink: 'https://243159145.fs1.hubspotusercontent-na2.net/hubfs/243159145/Heat%20Core%20HS05/HeatCore_HS05_specs.pdf',
-      description: 'Smart, electric boiler with included radiator for versatile hashrate heating applications. With a high water output temperature and detachable fan unit, this digital boiler can deliver warmth to either liquid loops, air ducts, or both.',
+      description: 'Smart, electric water boiler with included radiator for versatile hashrate heating applications. With a high water output temperature and detachable fan unit, this digital boiler can deliver warmth to either liquid loops, air ducts, or both.',
       features: [
         'Radiant & air heating applications',
         'Integrated dry cooler radiator with extension tubing',
