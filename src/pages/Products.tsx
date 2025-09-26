@@ -177,10 +177,9 @@ const Products = () => {
         dimensions: '46.7" x 20.9" x 29.9"',
         capacity: 'Med-Large Homes / Small Businesses'
       },
-      price: '$799-$1,399',
-      couponCode: 'EXERGYHEAT',
-      buttonText: 'Buy Now at Heatbit.com',
-      buttonLink: 'https://heatbit.com/?ref=Exergyheat',
+      price: '$7,000',
+      buttonText: 'Contact for Deposit',
+      buttonLink: '/contact',
       description: 'Premium space heater & air purifier combo devices that harness hashrate heat to offset costs. The Heatbit Trio and Maxi are the most user friendly bitcoin mining heaters. Plug and play ready with an easy to use control panel and mobile application.',
       features: [
         'Plug-and-play setup',
