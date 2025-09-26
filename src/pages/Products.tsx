@@ -177,7 +177,7 @@ const Products = () => {
         dimensions: '46.7" x 20.9" x 29.9"',
         capacity: 'Med-Large Homes / Small Businesses'
       },
-      price: '$7,000',
+      price: '$7,000 Without Miners',
       buttonText: 'Contact for Deposit',
       buttonLink: '/contact',
       description: 'Versatile immersion tank for liquid based hashrate heating applications. Capabale of fitting between 1-6 bitcoin miners of various makes and models. Also includes dry cooler radiator for air heating applications. Perfect for larger homes or small business heating applications.',
