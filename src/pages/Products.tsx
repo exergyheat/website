@@ -182,11 +182,10 @@ const Products = () => {
       buttonLink: '/contact',
       description: 'Versatile immersion tank for liquid based hashrate heating applications. Capabale of fitting between 1-6 bitcoin miners of various makes and models. Also includes dry cooler radiator for air heating applications. Perfect for larger homes or small business heating applications.',
       features: [
-        'Plug-and-play setup',
-        'WiFi connectivity - no IP scanning',
-        'Touch panel + mobile app control',
-        'Quiet operation',
-        'Air purification'
+        'Radiant & air heating applications',
+        'Inclded dry cooler radiator',
+        'Tank, pump, oil and PDU included',
+        'Acommodates various miners, ensuring upgrade potential'
       ]
     }
   ]
