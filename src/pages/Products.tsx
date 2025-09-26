@@ -115,7 +115,7 @@ const Products = () => {
       },
       price: '$1,149',
       couponCode: 'EXERGY',
-      buttonText: 'Coming Soon',
+      buttonText: 'Buy Now at AltairTech.io',
       buttonLink: '/products',
       description: 'Perfect for heating small to medium-sized rooms while generating passive revenue. The Avalon Mini 3 is easy to setup, can be operated remotely, and has a whisper quiet fan. You won\'t even know it\'s there. Fleet control is coming soon, allowing multiple Mini 3\'s to pair together for larger rooms or full building heating.',
       features: [
