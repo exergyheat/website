@@ -145,7 +145,7 @@ const Products = () => {
         dimensions: '9.5" x 9.5" x 32"',
         capacity: '~400 sqft'
       },
-      price: '$799-$1399',
+      price: '$799-$1,399',
       couponCode: 'EXERGYHEAT',
       buttonText: 'Buy Now at Heatbit.com',
       buttonLink: 'https://heatbit.com/?ref=Exergyheat',
