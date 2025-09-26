@@ -180,7 +180,7 @@ const Products = () => {
       price: '$7,000',
       buttonText: 'Contact for Deposit',
       buttonLink: '/contact',
-      description: 'Premium space heater & air purifier combo devices that harness hashrate heat to offset costs. The Heatbit Trio and Maxi are the most user friendly bitcoin mining heaters. Plug and play ready with an easy to use control panel and mobile application.',
+      description: 'Versatile immersion tank for liquid based hashrate heating applications. Capabale of fitting between 1-6 bitcoin miners of various makes and models. Also includes dry cooler radiator for air heating applications. Perfect for larger homes or small business heating applications.',
       features: [
         'Plug-and-play setup',
         'WiFi connectivity - no IP scanning',
