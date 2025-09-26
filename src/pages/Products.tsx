@@ -157,6 +157,38 @@ const Products = () => {
         'Quiet operation',
         'Air purification'
       ]
+    },
+    {
+      id: 'imm-foghashing-6',
+      category: 'hydronic',
+      name: 'Fog Hashing C6',
+      images: [
+        "https://shop.foghashing.io/cdn/shop/files/C6TANK.jpg?v=1722069840&width=800",       
+        "https://heatbit.com/cdn/shop/files/magnifics_upscale-SKTXegC0zB8rUDLjvZ8Z-u6653123959_Add_light_--ar_9151_--v_7_29ee4ec2-bd09-4e49-aea5-44135eed293b_2_2048x2048.png?v=1748405757",
+        "https://heatbit.com/cdn/shop/files/HB_54_2048x2048.png?v=1734991959",
+        "https://heatbit.com/cdn/shop/files/Mask_group1_2048x2048.jpg?v=1713215725",
+        "https://heatbit.com/cdn/shop/files/3Group_1410094715_1024x1024.png?v=1714173327"
+      ],
+      specs: {
+        applications: 'Room Heating',
+        power: '1200 W / 4 MBH',
+        hashrate: '13-39 TH/s',
+        noise: '40-56 dB',
+        dimensions: '9.5" x 9.5" x 32"',
+        capacity: '~400 sqft'
+      },
+      price: '$799-$1,399',
+      couponCode: 'EXERGYHEAT',
+      buttonText: 'Buy Now at Heatbit.com',
+      buttonLink: 'https://heatbit.com/?ref=Exergyheat',
+      description: 'Premium space heater & air purifier combo devices that harness hashrate heat to offset costs. The Heatbit Trio and Maxi are the most user friendly bitcoin mining heaters. Plug and play ready with an easy to use control panel and mobile application.',
+      features: [
+        'Plug-and-play setup',
+        'WiFi connectivity - no IP scanning',
+        'Touch panel + mobile app control',
+        'Quiet operation',
+        'Air purification'
+      ]
     }
   ]
 
