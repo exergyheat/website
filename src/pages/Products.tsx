@@ -164,18 +164,18 @@ const Products = () => {
       name: 'Fog Hashing C6',
       images: [
         "https://shop.foghashing.io/cdn/shop/files/C6TANK.jpg?v=1722069840&width=800",       
-        "https://heatbit.com/cdn/shop/files/magnifics_upscale-SKTXegC0zB8rUDLjvZ8Z-u6653123959_Add_light_--ar_9151_--v_7_29ee4ec2-bd09-4e49-aea5-44135eed293b_2_2048x2048.png?v=1748405757",
-        "https://heatbit.com/cdn/shop/files/HB_54_2048x2048.png?v=1734991959",
-        "https://heatbit.com/cdn/shop/files/Mask_group1_2048x2048.jpg?v=1713215725",
-        "https://heatbit.com/cdn/shop/files/3Group_1410094715_1024x1024.png?v=1714173327"
+        "https://shop.foghashing.io/cdn/shop/files/WDAD.jpg?v=1722070791&width=800",
+        "https://shop.foghashing.io/cdn/shop/files/C6DryCooler_3d6c7aa9-ef1b-46ca-8493-ef588b0c4aaa.png?v=1722070791&width=800",
+        "https://shop.foghashing.io/cdn/shop/files/ssd.jpg?v=1747733823&width=800",
+        "https://shop.foghashing.io/cdn/shop/files/C6_..jpg?v=1747733823&width=800"
       ],
       specs: {
-        applications: 'Room Heating',
-        power: '1200 W / 4 MBH',
-        hashrate: '13-39 TH/s',
-        noise: '40-56 dB',
-        dimensions: '9.5" x 9.5" x 32"',
-        capacity: '~400 sqft'
+        applications: 'Radiant, Pools, or Forced Air',
+        power: 'Up to 42 kW / 143 MBH',
+        hashrate: 'Up to 1200+ TH/s',
+        waterTemp: '128°F max',
+        dimensions: '46.7" x 20.9" x 29.9"',
+        capacity: 'Med-Large Homes / Small Businesses'
       },
       price: '$799-$1,399',
       couponCode: 'EXERGYHEAT',
