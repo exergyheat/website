@@ -426,10 +426,12 @@ const Products = () => {
                       )}
                       {product.pdfLink && (
                         <a
-                          href="/services"
-                          className="w-full sm:w-auto px-6 py-3 bg-surface-100 dark:bg-surface-700 text-surface-900 dark:text-surface-100 rounded-lg hover:bg-surface-200 dark:hover:bg-surface-600 transition-colors text-base font-subheading"
+                          href={product.id === 'imm-foghashing-6' ? '/services' : product.pdfLink}
+                          target={product.id === 'imm-foghashing-6' ? undefined : '_blank'}
+                          rel={product.id === 'imm-foghashing-6' ? undefined : 'noopener noreferrer'}
+                          className="w-full sm:w-auto px-6 py-3 bg-surface-100 dark:bg-surface-700 text-surface-900 dark:text-surface-100 rounded-lg hover:bg-surface-200 dark:hover:bg-surface-600 transition-colors text-base font-subheading flex items-center justify-center"
                         >
-                          Help Me Size
+                          {product.id === 'imm-foghashing-6' ? 'Help Me Size' : 'View Specs'}
                         </a>
                       )}
                     </div>
