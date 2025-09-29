@@ -69,7 +69,7 @@ const Products = () => {
   const products = [
     {
       id: 'hyd-heatcore',
-      category: 'hydronic',
+      category: ['hydronic', 'forced-air'],
       name: 'Heat Core HS05',
       images: ['https://48661310.fs1.hubspotusercontent-na2.net/hubfs/48661310/1-Jul-09-2025-09-41-39-7158-AM.png',
               'https://48661310.fs1.hubspotusercontent-na2.net/hubfs/48661310/2-Jul-09-2025-09-44-53-3264-AM.png',
@@ -192,7 +192,11 @@ const Products = () => {
   ]
 
   const filteredProducts = activeCategory
-    ? products.filter(product => product.category === activeCategory)
+    ? products.filter(product => 
+        Array.isArray(product.category) 
+          ? product.category.includes(activeCategory)
+          : product.category === activeCategory
+      )
     : products
 
   return (
