@@ -180,7 +180,7 @@ const Products = () => {
       price: '$6,999 Without Miners',
       buttonText: 'Contact for Deposit',
       buttonLink: '/contact',
-      pdfLink: '/services',
+      pdfLink: 'https://243159145.fs1.hubspotusercontent-na2.net/hubfs/243159145/Heat%20Core%20HS05/HeatCore_HS05_specs.pdf',
       description: 'Versatile immersion tank for liquid based hashrate heating applications. Capabale of fitting between 1-6 bitcoin miners of various makes and models. Also includes dry cooler radiator for air heating applications. Perfect for larger homes or small business heating applications.',
       features: [
         'Radiant & air heating applications',
