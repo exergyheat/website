@@ -68,7 +68,7 @@ const Services = () => {
     icon: FileText,
     image: "heating_subsidy.png",
     exampleImages: [
-      "https://243159145.fs1.hubspotusercontent-na2.net/hubfs/243159145/Heat%20Audit%20Report/ExergyHeatAudit_ReportTemplate_V1.pdf"
+      "https://243159145.fs1.hubspotusercontent-na2.net/hubfs/243159145/Heat%20Audit%20Report/Propane%20Eample-Heat%20Audit%20Report.pdf"
     ],
     exampleTitles: [
       "Heat Audit Report"
