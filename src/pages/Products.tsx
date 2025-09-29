@@ -177,7 +177,7 @@ const Products = () => {
         dimensions: '46.7" x 20.9" x 29.9"',
         capacity: 'Med-Large Homes / Small Businesses'
       },
-      price: '$6,999 Without Miners',
+      price: '$6,999 Without Mining Heaters',
       buttonText: 'Contact for Deposit',
       buttonLink: '/contact',
       pdfLink: 'https://243159145.fs1.hubspotusercontent-na2.net/hubfs/243159145/Heat%20Core%20HS05/HeatCore_HS05_specs.pdf',
