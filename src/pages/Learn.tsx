@@ -16,7 +16,7 @@ const Learn = () => {
     },
     {
       title: "Documentation",
-      description: "Official Exergy documentation. documents, policies and agreements.",
+      description: "Official Exergy documentation.",
       icon: FileText,
       link: "https://docs.exergyheat.com",
     },
