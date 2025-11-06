@@ -11,7 +11,7 @@ export const mediaHighlights: MediaHighlight[] = [
     id: 'forbes',
     name: 'Forbes',
     logo: '/Forbes_logo.png',
-    link: 'https://www.forbes.com/sites/beccabratcher/2025/03/25/bitcoin-miners-hit-breaking-point-one-year-after-halving/',
+    link: 'https://www.forbes.com/sites/digital-assets/2025/10/28/bitcoin-becomes-a-geopolitical-and-energy-advantage-with-the-heatpunks/',
     description: 'Quoted in Forbes for bitcoin mining innovation'
   },
   {
