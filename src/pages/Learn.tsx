@@ -16,15 +16,15 @@ const Learn = () => {
     },
     {
       title: "Documentation",
-      description: "Official Exergy documents, policies and agreements.",
+      description: "Official Exergy documentation. documents, policies and agreements.",
       icon: FileText,
-      link: "https://docs.exergyheat.com/docs",
+      link: "https://docs.exergyheat.com",
     },
     {
       title: "Support",
-      description: "Guides, hardware, software and service support, and general discussion.",
+      description: "General forum, policies, guides, hardware, software and service support.",
       icon: Users,
-      link: "https://docs.exergyheat.com/",
+      link: "https://support.exergyheat.com/",
      external: true
     },
     {
