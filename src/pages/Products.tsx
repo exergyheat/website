@@ -123,7 +123,7 @@ const Products = () => {
         'WiFi connectivity',
         'Mobile app control',
         'Silent operation',
-        '+ Multi-system fleet control coming soon'
+        'Multi-system fleet control'
       ]
     },
     {
@@ -155,7 +155,7 @@ const Products = () => {
         'Mobile app control',
         'Silent operation',
         'Furnace integration',
-        '+ Multi-system fleet control coming soon'
+        'Multi-system fleet control'
       ]
     }
   ]
