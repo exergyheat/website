@@ -155,69 +155,6 @@ const Products = () => {
         'Silent operation',
         '+ Multi-system fleet control coming soon'
       ]
-    },
-    {
-      id: 'sh-heatbit',
-      category: 'space-heating',
-      name: 'Heatbit Trio & Maxi',
-      images: [
-        "https://heatbit.com/cdn/shop/files/Trio_4_2048x2048.png?v=1747846876",       
-        "https://heatbit.com/cdn/shop/files/magnifics_upscale-SKTXegC0zB8rUDLjvZ8Z-u6653123959_Add_light_--ar_9151_--v_7_29ee4ec2-bd09-4e49-aea5-44135eed293b_2_2048x2048.png?v=1748405757",
-        "https://heatbit.com/cdn/shop/files/HB_54_2048x2048.png?v=1734991959",
-        "https://heatbit.com/cdn/shop/files/Mask_group1_2048x2048.jpg?v=1713215725",
-        "https://heatbit.com/cdn/shop/files/3Group_1410094715_1024x1024.png?v=1714173327"
-      ],
-      specs: {
-        applications: 'Room Heating',
-        power: '1200 W / 4 MBH',
-        hashrate: '13-39 TH/s',
-        noise: '40-56 dB',
-        dimensions: '9.5" x 9.5" x 32"',
-        capacity: '~400 sqft'
-      },
-      price: '$799-$1,399',
-      couponCode: 'EXERGYHEAT',
-      buttonText: 'Buy Now at Heatbit.com',
-      buttonLink: 'https://heatbit.com/?ref=Exergyheat',
-      description: 'Premium space heater & air purifier combo devices that harness hashrate heat to offset costs. The Heatbit Trio and Maxi are the most user friendly bitcoin mining heaters. Plug and play ready with an easy to use control panel and mobile application.',
-      features: [
-        'Plug-and-play setup',
-        'WiFi connectivity - no IP scanning',
-        'Touch panel + mobile app control',
-        'Quiet operation',
-        'Air purification'
-      ]
-    },
-    {
-      id: 'imm-foghashing-6',
-      category: 'hydronic',
-      name: 'Fog Hashing C6',
-      images: [
-        "https://shop.foghashing.io/cdn/shop/files/C6TANK.jpg?v=1722069840&width=800",       
-        "https://shop.foghashing.io/cdn/shop/files/WDAD.jpg?v=1722070791&width=800",
-        "https://shop.foghashing.io/cdn/shop/files/C6DryCooler_3d6c7aa9-ef1b-46ca-8493-ef588b0c4aaa.png?v=1722070791&width=800",
-        "https://shop.foghashing.io/cdn/shop/files/ssd.jpg?v=1747733823&width=800",
-        "https://shop.foghashing.io/cdn/shop/files/C6_..jpg?v=1747733823&width=800"
-      ],
-      specs: {
-        applications: 'Radiant, Pools, or Forced Air',
-        power: 'Up to 42 kW / 143 MBH',
-        hashrate: 'Up to 1200+ TH/s',
-        waterTemp: '128°F max',
-        dimensions: '46.7" x 20.9" x 29.9"',
-        capacity: 'Med-Large Homes / Small Businesses'
-      },
-      price: '$6,999 w/o Hashrate Heaters',
-      buttonText: 'Contact for Deposit',
-      buttonLink: '/contact',
-      pdfLink: 'https://243159145.fs1.hubspotusercontent-na2.net/hubfs/243159145/Heat%20Core%20HS05/HeatCore_HS05_specs.pdf',
-      description: 'Versatile immersion tank for liquid based hashrate heating applications. Capabale of fitting between 1-6 bitcoin hashrate heaters of various makes and models. Also includes dry cooler radiator for air heating applications. Perfect for larger homes or small business heating applications.',
-      features: [
-        'Radiant & air heating applications',
-        'Inclded dry cooler radiator',
-        'Tank, pump, oil and PDU included',
-        'Acommodates various miners, ensuring upgrade potential'
-      ]
     }
   ]
 
