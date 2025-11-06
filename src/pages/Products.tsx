@@ -241,7 +241,7 @@ const Products = () => {
                   Contact Us
                 </h2>
                 <p className="text-surface-500 dark:text-surface-400">
-                  In the meantime, check out our services or contact us to discuss custom solutions for your needs.
+                  We offer custom systems and control solutions for Exergy projects. See our services page for more details. More off the shelf products and systems coming soon.
                 </p>
               </div>
               <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
