@@ -131,7 +131,7 @@ const Products = () => {
       category: 'forced-air',
       name: 'Canaan Avalon Q',
       images: [
-        'https://coinminingcentral.com/cdn/shop/files/Canaan_Avalon_Mini_3_Heater___Bitcoin_Miner_1200x1200.png?v=1740763938',
+        'https://www.canaan.io/static/themes/default/images/official/official_minerq_index1.png',
         'https://coinminingcentral.com/cdn/shop/files/Canaan_Avalon_Mini_3_Heater_2_1200x1200.png?v=1740763938',
         'https://www.canaan.io/static/themes/default/images/official/official_mini3_download.png'
               ],
