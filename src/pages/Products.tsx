@@ -238,7 +238,7 @@ const Products = () => {
                   )}
                 </div>
                 <h2 className="text-3xl font-bold text-surface-900 dark:text-surface-100 mb-4">
-                  Coming Soon
+                  Contact Us
                 </h2>
                 <p className="text-surface-500 dark:text-surface-400">
                   In the meantime, check out our services or contact us to discuss custom solutions for your needs.
