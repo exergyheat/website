@@ -147,13 +147,14 @@ const Products = () => {
       price: '$1,799',
       couponCode: 'EXERGY',
       buttonText: 'Buy Now at AltairTech.io',
-      buttonLink: 'https://altairtech.io/product/canaan-avalon-mini-3/',
-      description: 'Perfect for heating small to medium-sized rooms while generating passive revenue. The Avalon Mini 3 is easy to setup, can be operated remotely, and has a whisper quiet fan. You won\'t even know it\'s there. Fleet control is coming soon, allowing multiple Mini 3\'s to pair together for larger rooms or full building heating.',
+      buttonLink: 'https://altairtech.io/product/avalon-q/',
+      description: 'The Avalon Q is great for forced air heating integration. These 120V miners are already quiet and efficient. Connect them to the supply side ductwork of your furnace to augment heat throughout your living space. Fleet control is coming soon, allowing multiple Q\'s to pair together with thermostats and furnace circulator fans for larger rooms or full building heating.',
       features: [
         'Simple to follow setup',
         'WiFi connectivity',
         'Mobile app control',
         'Silent operation',
+        'Furnace integration',
         '+ Multi-system fleet control coming soon'
       ]
     }
