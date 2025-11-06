@@ -132,6 +132,7 @@ const Products = () => {
       name: 'Canaan Avalon Q',
       images: [
         'https://www.canaan.io/static/themes/default/images/official/official_minerq_index1.png',
+        'https://www.canaan.io/static/themes/default/images/official/official_minerq_banner.png',
         'https://www.canaan.io/static/themes/default/images/official/official_minerq_functions.png',
         'https://www.canaan.io/static/themes/default/images/official/official_minerq_package.png',
         'https://www.canaan.io/static/themes/default/images/official/official_mini3_download.png'
