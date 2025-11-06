@@ -127,6 +127,36 @@ const Products = () => {
       ]
     },
     {
+      id: 'fa-canaan',
+      category: 'forced-air',
+      name: 'Canaan Avalon Q',
+      images: [
+        'https://coinminingcentral.com/cdn/shop/files/Canaan_Avalon_Mini_3_Heater___Bitcoin_Miner_1200x1200.png?v=1740763938',
+        'https://coinminingcentral.com/cdn/shop/files/Canaan_Avalon_Mini_3_Heater_2_1200x1200.png?v=1740763938',
+        'https://www.canaan.io/static/themes/default/images/official/official_mini3_download.png'
+              ],
+      specs: {
+        applications: 'Room Heating',
+        heatingPower: '800 W / 2.7 MBH',
+        hashrate: '37.5 TH/s',
+        noise: '45 dB',
+        dimensions: '30" x 4.1" x 8.5"',
+        capacity: '~350 sqft'
+      },
+      price: '$1,149',
+      couponCode: 'EXERGY',
+      buttonText: 'Buy Now at AltairTech.io',
+      buttonLink: 'https://altairtech.io/product/canaan-avalon-mini-3/',
+      description: 'Perfect for heating small to medium-sized rooms while generating passive revenue. The Avalon Mini 3 is easy to setup, can be operated remotely, and has a whisper quiet fan. You won\'t even know it\'s there. Fleet control is coming soon, allowing multiple Mini 3\'s to pair together for larger rooms or full building heating.',
+      features: [
+        'Simple to follow setup',
+        'WiFi connectivity',
+        'Mobile app control',
+        'Silent operation',
+        '+ Multi-system fleet control coming soon'
+      ]
+    },
+    {
       id: 'sh-heatbit',
       category: 'space-heating',
       name: 'Heatbit Trio & Maxi',
