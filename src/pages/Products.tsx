@@ -132,20 +132,19 @@ const Products = () => {
       name: 'Canaan Avalon Q',
       images: [
         'https://www.canaan.io/static/themes/default/images/official/official_minerq_index1.png',
-        'https://www.canaan.io/static/themes/default/images/official/official_minerq_banner.png',
         'https://www.canaan.io/static/themes/default/images/official/official_minerq_functions.png',
         'https://www.canaan.io/static/themes/default/images/official/official_minerq_package.png',
         'https://www.canaan.io/static/themes/default/images/official/official_mini3_download.png'
               ],
       specs: {
         applications: 'Air Heating',
-        heatingPower: '800 W / 2.7 MBH',
-        hashrate: '37.5 TH/s',
-        noise: '45 dB',
-        dimensions: '30" x 4.1" x 8.5"',
-        capacity: '~350 sqft'
+        heatingPower: '1674 W / 5.7 MBH',
+        hashrate: '90 TH/s',
+        noise: '45-65 dB',
+        dimensions: '18" x 5.2" x 17.4"',
+        capacity: '~750 sqft'
       },
-      price: '$1,149',
+      price: '$1,799',
       couponCode: 'EXERGY',
       buttonText: 'Buy Now at AltairTech.io',
       buttonLink: 'https://altairtech.io/product/canaan-avalon-mini-3/',
