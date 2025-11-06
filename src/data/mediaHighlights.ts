@@ -12,7 +12,7 @@ export const mediaHighlights: MediaHighlight[] = [
     name: 'Forbes',
     logo: '/Forbes_logo.png',
     link: 'https://www.forbes.com/sites/digital-assets/2025/10/28/bitcoin-becomes-a-geopolitical-and-energy-advantage-with-the-heatpunks/',
-    description: 'Quoted in Forbes for bitcoin mining innovation'
+    description: 'Interviewed by Forbes for bitcoin mining innovation'
   },
   {
     id: 'ny-post',
