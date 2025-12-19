@@ -12,7 +12,7 @@ const Learn = () => {
       title: "Calculators",
       description: "Estimate your own savings and earnings with our interactive tools.",
       icon: Calculator,
-      link: "/calculators"
+      link: "https://calc.exergyheat.com"
     },
     {
       title: "Documentation",

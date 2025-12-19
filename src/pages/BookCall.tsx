@@ -1,18 +1,28 @@
-import React, { useEffect } from 'react'
-import { Calendar } from 'lucide-react'
+import React, { useState, useEffect } from 'react'
+import { Calendar, Loader2 } from 'lucide-react'
 
 const BookCall = () => {
+  const [isCalendarLoaded, setIsCalendarLoaded] = useState(false)
+
   useEffect(() => {
-    // Check if HubSpot meetings embed script is already loaded
-    const existingScript = document.querySelector('script[src="https://static.hsappstatic.net/MeetingsEmbed/ex/MeetingsEmbedCode.js"]')
-    
-    if (!existingScript) {
-      // Load HubSpot meetings embed script only if it doesn't exist
-      const script = document.createElement('script')
-      script.type = 'text/javascript'
-      script.src = 'https://static.hsappstatic.net/MeetingsEmbed/ex/MeetingsEmbedCode.js'
-      script.defer = true
-      document.head.appendChild(script)
+    // Check if HubSpot meetings embed has loaded
+    const checkCalendarLoaded = setInterval(() => {
+      const calendarContainer = document.querySelector('.meetings-iframe-container iframe')
+      if (calendarContainer) {
+        setIsCalendarLoaded(true)
+        clearInterval(checkCalendarLoaded)
+      }
+    }, 200)
+
+    // Cleanup and timeout after 10 seconds
+    const timeout = setTimeout(() => {
+      clearInterval(checkCalendarLoaded)
+      setIsCalendarLoaded(true) // Show container anyway after timeout
+    }, 10000)
+
+    return () => {
+      clearInterval(checkCalendarLoaded)
+      clearTimeout(timeout)
     }
   }, [])
 
@@ -41,8 +51,16 @@ const BookCall = () => {
         
         {/* HubSpot Meetings Embed */}
         <div className="bg-white dark:bg-surface-800 rounded-lg shadow-xl p-8 max-w-4xl mx-auto">
-          <div 
-            className="meetings-iframe-container" 
+          {/* Loading State */}
+          {!isCalendarLoaded && (
+            <div className="flex flex-col items-center justify-center py-16">
+              <Loader2 className="h-10 w-10 text-primary-600 animate-spin mb-4" />
+              <p className="text-surface-600 dark:text-surface-400">Loading calendar...</p>
+            </div>
+          )}
+
+          <div
+            className={`meetings-iframe-container transition-opacity duration-300 ${isCalendarLoaded ? 'opacity-100' : 'opacity-0 h-0 overflow-hidden'}`}
             data-src="https://meetings-na2.hubspot.com/tyler2/round-robin-executive-link?embed=true"
           ></div>
         </div>

@@ -48,11 +48,11 @@ const Footer = () => {
             <Link to="/learn" className="text-lg font-subheading mb-4 text-surface-100 hover:text-surface-200 transition-colors">Learn</Link>
             <ul className="space-y-2 mt-4">
               <li>
-                <Link to="/calculators" className="font-body text-surface-400 hover:text-surface-200 transition-colors">Calculators</Link>
+                <a href="https://calc.exergyheat.com" target="_blank" rel="noopener noreferrer" className="font-body text-surface-400 hover:text-surface-200 transition-colors">Calculators</a>
               </li>
               <li>
                 <a 
-                  href="https://docs.exergyheat.com/docs" 
+                  href="https://docs.exergyheat.com" 
                   target="_blank" 
                   rel="noopener noreferrer" 
                   className="font-body text-surface-400 hover:text-surface-200 transition-colors"

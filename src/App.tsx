@@ -11,7 +11,6 @@ import About from './pages/About'
 import Contact from './pages/Contact'
 import Learn from './pages/Learn'
 import PrivacyPolicy from './pages/PrivacyPolicy'
-import Calculators from './pages/Calculators'
 import Content from './pages/Content'
 import FAQ from './pages/FAQ'
 import Products from './pages/Products'
@@ -19,8 +18,11 @@ import BookCall from './pages/BookCall'
 import Portfolio from './pages/Portfolio'
 import Blog from './pages/Blog'
 import BlogPostDetail from './pages/BlogPostDetail'
+import { useHubSpotPreload } from './hooks/useHubSpotPreload'
 
 function App() {
+  useHubSpotPreload()
+
   return (
     <ThemeProvider>
       <Helmet>
@@ -40,7 +42,6 @@ function App() {
               <Route path="/contact" element={<Contact />} />
               <Route path="/learn" element={<Learn />} />
               <Route path="/privacy-policy" element={<PrivacyPolicy />} />
-              <Route path="/calculators" element={<Calculators />} />
               <Route path="/content" element={<Content />} />
               <Route path="/faq" element={<FAQ />} />
               <Route path="/book-call" element={<BookCall />} />
