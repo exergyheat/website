@@ -1,28 +1,30 @@
-import React, { useEffect } from 'react'
+import React, { useState, useEffect } from 'react'
 import { Helmet } from 'react-helmet-async'
 import { Link } from 'react-router-dom'
-import { Mail, MapPin, Calendar } from 'lucide-react'
+import { Mail, MapPin, Calendar, Loader2 } from 'lucide-react'
 
 const Contact = () => {
-  useEffect(() => {
-    // Check if HubSpot script is already loaded
-    const existingScript = document.querySelector('script[src="https://js-na2.hsforms.net/forms/embed/243159145.js"]')
-    
-    if (!existingScript) {
-      // Create and load the HubSpot script
-      const script = document.createElement('script')
-      script.src = 'https://js-na2.hsforms.net/forms/embed/243159145.js'
-      script.defer = true
-      script.async = true
-      document.body.appendChild(script)
-    }
+  const [isFormLoaded, setIsFormLoaded] = useState(false)
 
-    // Cleanup function to remove script when component unmounts
-    return () => {
-      const scriptToRemove = document.querySelector('script[src="https://js-na2.hsforms.net/forms/embed/243159145.js"]')
-      if (scriptToRemove) {
-        document.body.removeChild(scriptToRemove)
+  useEffect(() => {
+    // Check if HubSpot form script has loaded
+    const checkFormLoaded = setInterval(() => {
+      const formContainer = document.querySelector('.hs-form-frame iframe, .hs-form-frame form')
+      if (formContainer) {
+        setIsFormLoaded(true)
+        clearInterval(checkFormLoaded)
       }
+    }, 200)
+
+    // Cleanup and timeout after 10 seconds
+    const timeout = setTimeout(() => {
+      clearInterval(checkFormLoaded)
+      setIsFormLoaded(true) // Show container anyway after timeout
+    }, 10000)
+
+    return () => {
+      clearInterval(checkFormLoaded)
+      clearTimeout(timeout)
     }
   }, [])
 
@@ -92,12 +94,20 @@ const Contact = () => {
           {/* HubSpot Contact Form */}
           <div className="bg-white dark:bg-surface-800 rounded-lg shadow-lg p-8">
             <h2 className="text-2xl font-bold text-surface-900 dark:text-surface-100 mb-6">Send us a Message</h2>
-            
+
+            {/* Loading State */}
+            {!isFormLoaded && (
+              <div className="flex flex-col items-center justify-center py-12">
+                <Loader2 className="h-8 w-8 text-primary-600 animate-spin mb-4" />
+                <p className="text-surface-600 dark:text-surface-400">Loading form...</p>
+              </div>
+            )}
+
             {/* HubSpot Form Container */}
-            <div 
-              className="hs-form-frame" 
-              data-region="na2" 
-              data-form-id="106749ae-0515-4d1a-925d-edf71b3bfcae" 
+            <div
+              className={`hs-form-frame transition-opacity duration-300 ${isFormLoaded ? 'opacity-100' : 'opacity-0 h-0 overflow-hidden'}`}
+              data-region="na2"
+              data-form-id="106749ae-0515-4d1a-925d-edf71b3bfcae"
               data-portal-id="243159145"
             ></div>
           </div>

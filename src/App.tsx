@@ -18,8 +18,11 @@ import BookCall from './pages/BookCall'
 import Portfolio from './pages/Portfolio'
 import Blog from './pages/Blog'
 import BlogPostDetail from './pages/BlogPostDetail'
+import { useHubSpotPreload } from './hooks/useHubSpotPreload'
 
 function App() {
+  useHubSpotPreload()
+
   return (
     <ThemeProvider>
       <Helmet>
