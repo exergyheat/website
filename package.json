@@ -5,11 +5,11 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build && cp serve.json dist/",
+    "build": "node scripts/generate-sitemap.cjs && vite build && cp serve.json dist/",
     "lint": "eslint .",
     "preview": "vite preview",
     "serve": "serve dist -l 3000 -c serve.json",
-    "generate-sitemap": "node scripts/generate-sitemap.js"
+    "generate-sitemap": "node scripts/generate-sitemap.cjs"
   },
   "dependencies": {
     "buffer": "^6.0.3",

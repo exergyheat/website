@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react'
+import { Helmet } from 'react-helmet-async'
 import { Calendar, Loader2 } from 'lucide-react'
 
 const BookCall = () => {
@@ -28,6 +29,12 @@ const BookCall = () => {
 
   return (
     <div className="bg-surface-50 dark:bg-surface-900 min-h-screen">
+      <Helmet>
+        <title>EXERGY | Book a Call - Schedule a Consultation</title>
+        <meta name="description" content="Schedule a consultation with EXERGY's hashrate heating experts. Discuss your heating needs, get personalized recommendations, and learn how bitcoin mining can heat your space." />
+        <meta name="keywords" content="book EXERGY consultation, hashrate heating call, schedule bitcoin heater demo, EXERGY appointment" />
+      </Helmet>
+
       {/* Hero Section with Custom Gradient */}
       <div className="bg-gradient-to-r from-[#4970A5] to-[#718EBC] py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">

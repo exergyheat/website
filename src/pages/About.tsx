@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react'
+import { Helmet } from 'react-helmet-async'
 import { Book, Users, Award, Cpu, Flame, Bitcoin, ArrowRight, Target, Lightbulb, FileText, BarChart as ChartBar, Wrench, CheckCircle2, Mail, X, Zap, Network, Package, Monitor, BookOpen, Megaphone, Hammer, Calendar } from 'lucide-react'
 import { Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
@@ -206,6 +207,12 @@ const About = () => {
 
   return (
     <div className="bg-surface-50 dark:bg-surface-900">
+      <Helmet>
+        <title>EXERGY | About Us - Hashrate Heating Pioneers</title>
+        <meta name="description" content="Learn about EXERGY's mission to revolutionize heating through bitcoin mining. Meet our team of hashrate heating experts dedicated to making heat that pays a reality." />
+        <meta name="keywords" content="EXERGY about, hashrate heating company, bitcoin mining heat team, Denver heating company, cryptocurrency heating experts" />
+      </Helmet>
+
       {/* Hero Section with Custom Gradient */}
       <div className="bg-gradient-to-r from-[#4970A5] to-[#718EBC] py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">

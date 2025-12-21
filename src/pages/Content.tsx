@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { Helmet } from 'react-helmet-async'
 import { BookOpen, Video, FileText, Podcast, Globe, ArrowRight, Book, X, ChevronDown, ChevronUp, ExternalLink } from 'lucide-react'
 import { Link } from 'react-router-dom'
 
@@ -90,6 +91,12 @@ const Education = () => {
 
   return (
     <div className="bg-surface-50 dark:bg-surface-900 min-h-screen">
+      <Helmet>
+        <title>EXERGY | Content - Hashrate Heating Resources</title>
+        <meta name="description" content="Explore videos, podcasts, articles, and educational resources about hashrate heating technology. Learn from industry experts about bitcoin mining heat reuse." />
+        <meta name="keywords" content="hashrate heating content, bitcoin mining videos, cryptocurrency heating podcasts, EXERGY resources, mining heat articles" />
+      </Helmet>
+
       {/* Hero Section with Custom Gradient */}
       <div className="bg-gradient-to-r from-[#4970A5] to-[#718EBC] py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">

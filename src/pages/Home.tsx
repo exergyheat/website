@@ -309,8 +309,6 @@ const Home = () => {
               </Link>
               <a
                 href="https://calc.exergyheat.com"
-                target="_blank"
-                rel="noopener noreferrer"
                 className="inline-flex items-center px-6 py-3 border border-primary-500 text-primary-500 dark:text-secondary-500 rounded-lg hover:bg-primary-50 dark:hover:bg-primary-900 transition-colors text-base font-subheading"
               >
                 <Calculator className="mr-2 h-5 w-5" />

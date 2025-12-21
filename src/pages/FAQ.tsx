@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { Helmet } from 'react-helmet-async'
 import { Plus, Minus, Search, MessageCircle, ArrowRight } from 'lucide-react'
 
 const FAQ = () => {
@@ -84,6 +85,28 @@ const FAQ = () => {
 
   return (
     <div className="bg-surface-50 dark:bg-surface-900 min-h-screen">
+      <Helmet>
+        <title>EXERGY | FAQ - Hashrate Heating Questions Answered</title>
+        <meta name="description" content="Get answers to frequently asked questions about hashrate heating, bitcoin mining heaters, installation, costs, and how EXERGY's technology works." />
+        <meta name="keywords" content="hashrate heating FAQ, bitcoin mining heater questions, EXERGY FAQ, cryptocurrency heating answers, mining heat technology" />
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": faqSections.flatMap(section =>
+              section.questions.map(item => ({
+                "@type": "Question",
+                "name": item.q,
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": item.a
+                }
+              }))
+            )
+          })}
+        </script>
+      </Helmet>
+
       {/* Hero Section with Custom Gradient */}
       <div className="bg-gradient-to-r from-[#4970A5] to-[#718EBC] py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
