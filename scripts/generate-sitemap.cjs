@@ -16,7 +16,6 @@ const routes = [
   { path: '/faq', priority: '0.6', changefreq: 'monthly' },
   { path: '/portfolio', priority: '0.7', changefreq: 'monthly' },
   { path: '/book-call', priority: '0.8', changefreq: 'monthly' },
-  { path: '/docs', priority: '0.5', changefreq: 'monthly' },
   { path: '/privacy-policy', priority: '0.3', changefreq: 'yearly' }
 ];
 

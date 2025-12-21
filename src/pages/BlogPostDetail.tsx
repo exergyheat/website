@@ -100,6 +100,7 @@ const BlogPostDetail = () => {
           <meta property="article:published_time" content={post.date} />
           <meta property="article:author" content={post.author} />
           <meta property="og:image" content={post.image} />
+          <link rel="canonical" href={`https://exergyheat.com/blog/${id}`} />
         </Helmet>
       )}
       

@@ -12,7 +12,8 @@ const Learn = () => {
       title: "Calculators",
       description: "Estimate your own savings and earnings with our interactive tools.",
       icon: Calculator,
-      link: "https://calc.exergyheat.com"
+      link: "https://calc.exergyheat.com",
+      sameTab: true
     },
     {
       title: "Documentation",
@@ -196,8 +197,7 @@ const Learn = () => {
               <a
                 key={index}
                 href={resource.link}
-                target="_blank"
-                rel="noopener noreferrer"
+                {...(!resource.sameTab && { target: "_blank", rel: "noopener noreferrer" })}
                 className="bg-white dark:bg-surface-800 rounded-lg shadow-lg p-8 hover:shadow-xl transition-shadow"
               >
                 <div className="flex items-center mb-4">

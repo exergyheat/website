@@ -1,4 +1,5 @@
 import React from 'react'
+import { Helmet } from 'react-helmet-async'
 import { ArrowRight } from 'lucide-react'
 import { Link } from 'react-router-dom'
 import { projects } from '../data/portfolioProjects'
@@ -6,6 +7,11 @@ import { projects } from '../data/portfolioProjects'
 const Portfolio = () => {
   return (
     <div className="bg-surface-50 dark:bg-surface-900 min-h-screen">
+      <Helmet>
+        <title>EXERGY | Portfolio - Hashrate Heating Projects</title>
+        <meta name="description" content="Explore EXERGY's successful hashrate heating implementations. See real-world examples of bitcoin mining heat reuse in homes, businesses, and commercial applications." />
+        <meta name="keywords" content="hashrate heating projects, bitcoin mining heat examples, EXERGY portfolio, heat reuse installations, mining heater case studies" />
+      </Helmet>
       {/* Hero Section */}
       <div className="bg-gradient-to-r from-[#4970A5] to-[#718EBC] py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
