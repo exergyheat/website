@@ -9,7 +9,7 @@ const About = () => {
     {
       icon: Zap,
       title: "Building-Integrated Mining",
-      description: "We design and install systems where Bitcoin miners are the heating infrastructure — not an add-on. The miner is sized to the building's heat load, integrated into existing HVAC, and controlled by the building's automation."
+      description: "We design and install systems where Bitcoin miners are the energy infrastructure — not an add-on. In winter, the miner is sized to the building's heat load and integrated into existing HVAC. In summer, it routes excess solar through hashing instead of selling it back to the grid for pennies."
     },
     {
       icon: Bitcoin,
@@ -216,7 +216,7 @@ const About = () => {
                 className="text-lg text-surface-600 dark:text-surface-400 mb-8"
                 variants={itemVariants}
               >
-                Exergy builds building-integrated mining systems — the hardware, software, and expertise to put Bitcoin miners where they belong: inside the buildings that need heat. Every joule of electricity becomes heat AND sats. No waste. No separate line item. The most useful thing a miner can do is heat the building it's in.
+                Exergy builds building-integrated mining systems — the hardware, software, and expertise to put Bitcoin miners where they belong: inside the buildings that are already spending energy or wasting it. Every joule becomes heat AND sats in winter. Every surplus solar watt becomes Bitcoin instead of a penny from the utility. No waste. No separate line item. The most useful thing a miner can do is work inside the building it's in.
               </motion.p>
 
               <motion.div
@@ -377,7 +377,7 @@ const About = () => {
               <Calendar className="h-12 w-12 text-primary-400 mb-4" />
               <h3 className="text-2xl font-bold text-white mb-4">Heatpunk Summit</h3>
               <p className="text-surface-300 mb-6">
-                The annual Heatpunk Summit is a conference dedicated to hashrate heating, started by our founder, Tyler Stevens.
+                The annual Heatpunk Summit is a conference dedicated to building-integrated mining and hashrate heating, started by our founder, Tyler Stevens.
               </p>
               <a
                 href="https://denver.space/heatpunk_summit"
@@ -414,7 +414,7 @@ const About = () => {
             >
               <h2 className="text-3xl font-bold text-surface-900 dark:text-surface-100 mb-6">Our Process</h2>
               <p className="text-xl text-surface-600 dark:text-surface-400 max-w-2xl mx-auto">
-                We've developed a multi-step approach to get your hashrate heating system online.
+                We've developed a multi-step approach to get your building-integrated mining system online.
               </p>
             </motion.div>
           </div>
@@ -518,7 +518,7 @@ const About = () => {
             Join the Movement
           </h2>
           <p className="text-xl text-white/90 mb-8">
-            Be part of the revolution in heating & mining. Stay informed about our latest developments, products, and opportunities.
+            Be part of the building-integrated mining revolution. Stay informed about our latest developments, products, and opportunities.
           </p>
 
           {/* HubSpot Form Container */}

@@ -211,7 +211,7 @@ const Services = () => {
                   <span className="flex-shrink-0 w-6 h-6 rounded-full bg-primary-100 dark:bg-primary-900 text-primary-600 dark:text-primary-400 flex items-center justify-center text-xs font-bold">3</span>
                   <div>
                     <p className="text-surface-800 dark:text-surface-200 text-sm font-medium">Delivery, installation, and full commissioning</p>
-                    <p className="text-surface-500 dark:text-surface-400 text-xs mt-0.5">We bring the system fully online — you flip a switch and it heats your building with Bitcoin mining</p>
+                    <p className="text-surface-500 dark:text-surface-400 text-xs mt-0.5">We bring the system fully online — you flip a switch and it starts mining, heating in winter and absorbing excess solar in summer</p>
                   </div>
                 </li>
               </ul>

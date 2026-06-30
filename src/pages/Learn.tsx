@@ -64,13 +64,13 @@ const Learn = () => {
     {
       title: "Building-Integrated Mining",
       icon: Cpu,
-      description: "Building-integrated mining puts the miner where the heat is already needed. The result: your heating system earns Bitcoin every time it runs. One device, two outputs, no extra cost.",
+      description: "Building-integrated mining puts the miner where the energy is already going. In winter, your heating system earns Bitcoin every time it runs. In summer, it becomes a solar arbitrage machine — routing surplus generation through hashing instead of selling it back to the utility for pennies. One device. Two modes. No extra operating cost.",
       image: "bitcoin_home_heat.png",
       details: [
-        "Maximum efficiency. No waste - plus revenue",
-        "Digital heat = better control and optimal performance",
-        "Win-Win. Heat + revenue at no extra operating cost",
-        "Consistent passive revenue every time you turn on the heat"
+        "Your heating season is your primary mining season",
+        "In summer, excess solar routes through the miner instead of the grid",
+        "3.3× more value per kWh than net metering at $0.01/kWh",
+        "One device, two outputs — heat and Bitcoin — at no extra cost"
       ]
     }
   ]
@@ -135,6 +135,18 @@ const Learn = () => {
         'MEP team integration',
         'Specialist consulting available'
       ]
+    },
+    {
+      id: 'excess-solar',
+      title: 'Excess Solar Monetization',
+      description: 'If you export solar to the grid for a few cents per kWh and buy it back at ten or twelve, the net metering math is broken. Route your excess generation through a miner instead — same electrons, 3× the value.',
+      image: 'https://images.pexels.com/photos/433308/pexels-photo-433308.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+      features: [
+        'Miner activates on excess solar generation',
+        '3.3× more value vs. grid export at $0.01/kWh',
+        'Garage or outbuilding placement for heat dump',
+        'Home Assistant solar arbitrage automation'
+      ]
     }
   ]
 
@@ -157,9 +169,9 @@ const Learn = () => {
   return (
     <div className="bg-surface-50 dark:bg-surface-900 min-h-screen">
       <Helmet>
-        <title>EXERGY | Learn Hashrate Heating</title>
-        <meta name="description" content="Learn about hashrate heating technology - the revolutionary heating system that generates Bitcoin while warming your space. Educational resources, guides, and expert insights." />
-        <meta name="keywords" content="hashrate heating education, bitcoin mining heat technology, learn cryptocurrency heating, heating technology guides" />
+        <title>EXERGY | Learn Building-Integrated Mining</title>
+        <meta name="description" content="Learn building-integrated mining — how Bitcoin miners displace heating costs in winter and monetize excess solar in summer. Educational resources, guides, and expert insights." />
+        <meta name="keywords" content="building-integrated mining, hashrate heating education, bitcoin mining heat technology, solar monetization bitcoin, heating technology guides" />
       </Helmet>
       
       {/* Hero Section with Custom Gradient */}
@@ -297,7 +309,7 @@ const Learn = () => {
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-surface-900 dark:text-surface-100 mb-4">Example Applications</h2>
             <p className="text-xl text-surface-600 dark:text-surface-400">
-              Discover the versatility of hashrate heating across different applications
+              Discover how building-integrated mining works across different building types
             </p>
           </div>
 
@@ -382,7 +394,7 @@ const Learn = () => {
             See it in Action
           </h2>
           <p className="text-xl text-white/90 mb-8">
-            Explore real-world implementations of hashrate heating technology.
+            Explore real-world implementations of building-integrated mining — heating loads displaced, solar monetized, Bitcoin earned.
           </p>
           
           <Link

@@ -1,15 +1,19 @@
 import React from 'react'
 import { Helmet } from 'react-helmet-async'
-import { ArrowRight, Wrench, Cpu, Bitcoin, Flame, DollarSign, Zap, Calculator, Users } from 'lucide-react'
+import { ArrowRight, Wrench, Cpu, Bitcoin, Sun, DollarSign, Zap, Calculator, Users } from 'lucide-react'
 import { Link } from 'react-router-dom'
-import { useTypewriter } from '../hooks/useTypewriter'
+import { useCyclingTypewriter } from '../hooks/useCyclingTypewriter'
 import ProjectCarousel from '../components/ProjectCarousel'
 import MediaHighlights from '../components/MediaHighlights'
 import { motion } from 'framer-motion'
 
+const HERO_PHRASES = [
+  "You pay for heat every month",
+  "You export solar for pennies every month",
+]
+
 const Home = () => {
-  const headlineText = useTypewriter("You pay for heat every month", 75)
-  const isTypewriterComplete = headlineText === "You pay for heat every month"
+  const { displayText: headlineText, initialized: isTypewriterComplete } = useCyclingTypewriter(HERO_PHRASES)
 
   const containerVariants = {
     hidden: {},
@@ -38,9 +42,9 @@ const Home = () => {
   return (
     <div className="bg-surface-50 dark:bg-surface-900">
       <Helmet>
-        <title>Exergy | Heat That Pays</title>
-        <meta name="description" content="Upgrade to heat that pays you instead. Exergy's hashrate heating systems generate warmth and bitcoin rewards simultaneously at no extra cost. Vetted hardware, expert design and installation services." />
-        <meta name="keywords" content="hashrate heating, bitcoin mining heat reuse, heat that pays, bitcoin heating, energy efficient heating, bitcoin heaters, electric heat, electric heating, hashrate powered heat, bitcoin mining heat, hash rate heat, hash rate heating, mine for heat, mining for heat, bitcoin mining, mining bitcoin at home, mine btc at home, bitcoin mining at home" />
+        <title>Exergy | Building-Integrated Bitcoin Mining</title>
+        <meta name="description" content="Exergy designs building-integrated Bitcoin mining systems that displace heating costs and monetize excess solar — simultaneously. Real installs. Real data. Free tools to run your own numbers." />
+        <meta name="keywords" content="building integrated mining, hashrate heating, bitcoin mining heat reuse, solar bitcoin mining, excess solar monetization, bitcoin heating, energy efficient heating, bitcoin heaters, hashrate powered heat, bitcoin mining heat, mine for heat, mining for heat, bitcoin mining at home, solar arbitrage bitcoin" />
       </Helmet>
       
       {/* Hero Section */}
@@ -55,22 +59,22 @@ const Home = () => {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-white">
             <h1 className="text-4xl md:text-6xl font-heading mb-6">
               {headlineText}
-              {!isTypewriterComplete && <span className="animate-pulse">|</span>}
+              <span className="animate-pulse">|</span>
             </h1>
-            <motion.p 
+            <motion.p
               className="text-xl md:text-2xl mb-8 max-w-2xl font-body"
               initial={{ opacity: 0, y: 20 }}
-              animate={{ 
+              animate={{
                 opacity: isTypewriterComplete ? 1 : 0,
                 y: isTypewriterComplete ? 0 : 20
               }}
-              transition={{ 
+              transition={{
                 duration: 0.8,
                 ease: "easeOut",
                 delay: isTypewriterComplete ? 0.5 : 0
               }}
             >
-              Upgrade to heat that pays you instead
+              Your building is already spending that energy. Make it earn Bitcoin too.
             </motion.p>
             <motion.div 
               className="flex flex-wrap gap-4"
@@ -208,10 +212,10 @@ const Home = () => {
                 </div>
                 <div className="ml-4">
                   <h3 className="text-lg font-subheading text-surface-900 dark:text-surface-100">
-                    Electronic Devices Convert Energy into Heat
+                    One watt in. One watt of heat out. Always.
                   </h3>
                   <p className="mt-2 text-base font-body text-surface-500 dark:text-surface-400">
-                    All electronics - from a television to a cellphone - convert electricity into heat from resistance in the circuit boards. It's non-negotiable. Thank the 1st Law of Thermodynamics. 
+                    Every watt a Bitcoin miner consumes becomes heat — 100% of it. Same conversion as your furnace, same thermodynamics as your laptop. The difference: a miner earns Bitcoin for every joule it runs. Every conventional heater does one job per watt. A miner does two. The second one doesn't cost extra.
                   </p>
                 </div>
               </div>
@@ -224,10 +228,10 @@ const Home = () => {
                 </div>
                 <div className="ml-4">
                   <h3 className="text-lg font-subheading text-surface-900 dark:text-surface-100">
-                    Bitcoin Miners Pay You for Contributing
+                    Your heating load is your mining season
                   </h3>
                   <p className="mt-2 text-base font-body text-surface-500 dark:text-surface-400">
-                    Miners perform hashing operations to settle bitcoin transactions and issue coins. Rewards are automated & proportional to energy used. All of that energy is turned into heat.
+                    A miner sized to your building's average heat load runs at high duty cycle all winter, displacing your existing fuel. Every hour the furnace stays off is an hour of Bitcoin accumulation on electricity you were already spending. In our installs, the backup furnace rarely fires.
                   </p>
                 </div>
               </div>
@@ -235,15 +239,15 @@ const Home = () => {
               <div className="flex items-start">
                 <div className="flex-shrink-0">
                   <div className="flex items-center justify-center h-12 w-12 rounded-md bg-primary-500 text-white">
-                    <DollarSign className="h-6 w-6" />
+                    <Sun className="h-6 w-6" />
                   </div>
                 </div>
                 <div className="ml-4">
                   <h3 className="text-lg font-subheading text-surface-900 dark:text-surface-100">
-                    Heaters Powered By Hashrate = Warmth + Revenue
+                    Your solar is worth more than your utility pays you
                   </h3>
                   <p className="mt-2 text-base font-body text-surface-500 dark:text-surface-400">
-                    Hashrate heaters deliver two things at once: Heat generated from consuming electricity, and bitcoin rewards for how that electricity was turned into heat. No extra cost or waste.
+                    When your panels overproduce, that surplus exports to the grid at $0.01–$0.08/kWh. Route it through a miner instead: same watts, Bitcoin at hashprice. In our Solar Home case study, the same kilowatt-hour earned 3.3× more as Bitcoin than as a net metering credit. In summer, your miner stops being a heater and starts being a solar arbitrage machine.
                   </p>
                 </div>
               </div>
@@ -268,7 +272,7 @@ const Home = () => {
                 to="/learn"
                 className="inline-flex items-center px-6 py-3 bg-primary-500 text-white rounded-lg hover:bg-primary-600 transition-colors text-base font-subheading"
               >
-                Learn Hashrate Heating
+                Learn How It Works
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Link>
               <a
@@ -348,7 +352,7 @@ const Home = () => {
           <div className="text-center mb-16">
             <h2 className="text-3xl font-heading text-surface-900 dark:text-surface-100 mb-4">Have Questions? We Have Answers</h2>
             <p className="text-xl font-body text-surface-600 dark:text-surface-400 max-w-2xl mx-auto">
-              Understand the basics of heat that pays
+              Understand the basics of building-integrated mining
             </p>
           </div>
 
@@ -359,19 +363,19 @@ const Home = () => {
             whileInView="visible"
             viewport={{ once: true, margin: "-100px" }}
           >
-            {/* Card 1: Does it heat as well as a furnace? */}
+            {/* Card 1: Does this work with solar? */}
             <motion.div className="group" variants={cardVariants}>
               <div className="bg-surface-50 dark:bg-surface-700 rounded-lg p-8 h-full transform transition-transform group-hover:scale-105 shadow-lg">
                 <div className="flex justify-center mb-6">
                   <div className="p-4 bg-secondary-100 dark:bg-secondary-900 rounded-full">
-                    <Flame className="h-12 w-12 text-primary-500 dark:text-secondary-500" />
+                    <Sun className="h-12 w-12 text-primary-500 dark:text-secondary-500" />
                   </div>
                 </div>
                 <h3 className="text-xl font-subheading text-surface-900 dark:text-surface-100 mb-4 text-center">
-                  Does it heat as well as a furnace?
+                  Does this work with solar panels?
                 </h3>
                 <p className="font-body text-surface-600 dark:text-surface-400 text-center">
-                  Yes. In our Colorado Mountain Home install, a single miner handled 98.6% of total heat demand over 43 days — gas ran for just 4.4 hours.
+                  Solar is one of the strongest use cases. When your array overproduces, excess typically exports at pennies per kWh. In our Solar Home case study, the same kWh earned 3.3× more routed through the miner than sent to the grid.
                 </p>
               </div>
             </motion.div>
