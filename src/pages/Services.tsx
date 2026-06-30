@@ -49,7 +49,9 @@ const Services = () => {
             </span>
             <span className="flex items-center gap-2">
               <span className="w-2 h-2 rounded-full bg-green-500 inline-block"></span>
-              Weekly public office hours
+              <a href="https://meet.jit.si/ExergyHomeAssistant" target="_blank" rel="noopener noreferrer" className="underline hover:text-primary-600">
+                Weekly office hours (Wed 10am MT)
+              </a>
             </span>
             <span className="flex items-center gap-2">
               <span className="w-2 h-2 rounded-full bg-green-500 inline-block"></span>
@@ -100,7 +102,7 @@ const Services = () => {
                   <span className="flex-shrink-0 w-6 h-6 rounded-full bg-primary-100 dark:bg-primary-900 text-primary-600 dark:text-primary-400 flex items-center justify-center text-xs font-bold">4</span>
                   <div>
                     <p className="text-surface-800 dark:text-surface-200 text-sm font-medium">Free help whenever you need it</p>
-                    <p className="text-surface-500 dark:text-surface-400 text-xs mt-0.5">Community forum, docs, and weekly public office hours</p>
+                    <p className="text-surface-500 dark:text-surface-400 text-xs mt-0.5">Community forum, docs, and <a href="https://meet.jit.si/ExergyHomeAssistant" target="_blank" rel="noopener noreferrer" className="underline">weekly office hours (Wed 10am MT)</a></p>
                   </div>
                 </li>
               </ul>

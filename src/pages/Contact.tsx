@@ -82,7 +82,7 @@ const Contact = () => {
               </div>
               <div className="flex items-center">
                 <Users className="h-6 w-6 text-primary-600" />
-                <span className="ml-4 text-surface-600 dark:text-surface-400">Weekly public office hours — free, open to everyone. See our community forum for times.</span>
+                <a href="https://meet.jit.si/ExergyHomeAssistant" target="_blank" rel="noopener noreferrer" className="ml-4 text-primary-600 dark:text-primary-400 hover:underline">Weekly office hours — Wednesdays at 10am MT, free and open to everyone</a>
               </div>
             </div>
 
@@ -91,6 +91,12 @@ const Contact = () => {
               <div className="space-y-2 text-surface-600 dark:text-surface-400">
                 <p>We respond to emails within 1 business day</p>
                 <p>Free 15-min intro calls available — book via calendar above</p>
+                <p>
+                  <a href="https://meet.jit.si/ExergyHomeAssistant" target="_blank" rel="noopener noreferrer" className="text-primary-600 dark:text-primary-400 hover:underline font-medium">
+                    Join weekly office hours →
+                  </a>{' '}
+                  Wednesdays at 10am Mountain Time
+                </p>
               </div>
             </div>
           </div>

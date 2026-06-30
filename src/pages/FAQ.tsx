@@ -135,7 +135,7 @@ const FAQ = () => {
         },
         {
           q: 'How do I get started?',
-          a: 'Three paths: 1) Run the calculator yourself at calc.exergyheat.com — it tells you if you\'re a fit and what the economics look like. 2) Book a free 15-minute intro call — we\'ll ask a few questions and tell you which tier makes sense. 3) Contact us directly with your situation and we\'ll route you to the right next step.'
+          a: 'Four paths: 1) Run the calculator yourself at calc.exergyheat.com — it tells you if you\'re a fit and what the economics look like. 2) Join our free weekly office hours — Wednesdays at 10am Mountain Time at meet.jit.si/ExergyHomeAssistant. Ask anything, no commitment. 3) Book a free 15-minute intro call — we\'ll ask a few questions and tell you which tier makes sense. 4) Contact us directly with your situation and we\'ll route you to the right next step.'
         }
       ]
     }
