@@ -26,6 +26,7 @@ const Navbar = () => {
             <Link to="/services" className="font-subheading text-surface-600 dark:text-surface-300 hover:text-primary-500 dark:hover:text-primary-400 transition-colors">Services</Link>
             <Link to="/about" className="font-subheading text-surface-600 dark:text-surface-300 hover:text-primary-500 dark:hover:text-primary-400 transition-colors">About</Link>
             <Link to="/learn" className="font-subheading text-surface-600 dark:text-surface-300 hover:text-primary-500 dark:hover:text-primary-400 transition-colors">Learn</Link>
+            <Link to="/newsroom" className="font-subheading text-surface-600 dark:text-surface-300 hover:text-primary-500 dark:hover:text-primary-400 transition-colors">Newsroom</Link>
             <Link to="/contact" className="font-subheading text-surface-600 dark:text-surface-300 hover:text-primary-500 dark:hover:text-primary-400 transition-colors">Contact</Link>
             <ThemeToggle />
           </div>
@@ -73,6 +74,13 @@ const Navbar = () => {
                 onClick={() => setIsOpen(false)}
               >
                 Learn
+              </Link>
+              <Link
+                to="/newsroom"
+                className="block px-3 py-2 font-subheading text-surface-600 dark:text-surface-300 hover:text-primary-500 dark:hover:text-primary-400 transition-colors"
+                onClick={() => setIsOpen(false)}
+              >
+                Newsroom
               </Link>
               <Link
                 to="/contact"

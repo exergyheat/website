@@ -22,29 +22,17 @@ const Learn = () => {
       link: "https://docs.exergyheat.com",
     },
     {
-      title: "Support",
-      description: "General forum, policies, guides, hardware, software and service support.",
+      title: "Support Forum",
+      description: "Community forum, policies, guides, hardware, software and service support.",
       icon: Users,
       link: "https://support.exergyheat.com/",
-     external: true
+      external: true
     },
     {
       title: "FAQ",
-      description: "Find answers to common questions about hashrate heating technology.",
+      description: "Real questions from real customers — answered honestly.",
       icon: HelpCircle,
       link: "/faq"
-    },
-    {
-      title: "Community",
-      description: "Join the Exergy community forum — ask questions, share installs, get help from other building-integrated mining operators.",
-      icon: BookOpen,
-      link: "https://support.exergyheat.com"
-    },
-    {
-      title: "Blog",
-      description: "Company updates and insights on the hashrate heating industry",
-      icon: PenTool,
-      link: "/blog"
     }
   ]
 

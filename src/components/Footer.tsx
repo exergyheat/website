@@ -74,10 +74,7 @@ const Footer = () => {
                 <Link to="/faq" className="font-body text-surface-400 hover:text-surface-200 transition-colors">FAQ</Link>
               </li>
               <li>
-                <Link to="/content" className="font-body text-surface-400 hover:text-surface-200 transition-colors">Content</Link>
-              </li>
-              <li>
-                <Link to="/blog" className="font-body text-surface-400 hover:text-surface-200 transition-colors">Blog</Link>
+                <Link to="/newsroom" className="font-body text-surface-400 hover:text-surface-200 transition-colors">Newsroom</Link>
               </li>
             </ul>
           </div>

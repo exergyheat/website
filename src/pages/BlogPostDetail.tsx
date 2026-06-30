@@ -62,11 +62,11 @@ const BlogPostDetail = () => {
       <div className="bg-surface-50 dark:bg-surface-900 min-h-screen">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
           <Link
-            to="/blog"
+            to="/newsroom"
             className="inline-flex items-center text-primary-500 dark:text-primary-400 hover:text-primary-600 dark:hover:text-primary-300 mb-6"
           >
             <ArrowLeft className="h-4 w-4 mr-2" />
-            Back to Blog
+            Back to Newsroom
           </Link>
           <div className="text-center">
             <h1 className="text-2xl font-bold text-surface-900 dark:text-surface-100 mb-4">
@@ -108,11 +108,11 @@ const BlogPostDetail = () => {
       <div className="bg-white dark:bg-surface-800 py-12">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <Link
-            to="/blog"
+            to="/newsroom"
             className="inline-flex items-center text-primary-500 dark:text-primary-400 hover:text-primary-600 dark:hover:text-primary-300 mb-6"
           >
             <ArrowLeft className="h-4 w-4 mr-2" />
-            Back to All Blog Posts
+            Back to Newsroom
           </Link>
           <h1 className="text-4xl font-bold text-surface-900 dark:text-surface-100 mb-4">
             {post.title}

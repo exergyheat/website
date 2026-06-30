@@ -11,13 +11,12 @@ import About from './pages/About'
 import Contact from './pages/Contact'
 import Learn from './pages/Learn'
 import PrivacyPolicy from './pages/PrivacyPolicy'
-import Content from './pages/Content'
 import FAQ from './pages/FAQ'
 import Products from './pages/Products'
 import BookCall from './pages/BookCall'
 import Portfolio from './pages/Portfolio'
-import Blog from './pages/Blog'
-import BlogPostDetail from './pages/BlogPostDetail'
+import Newsroom from './pages/Blog'
+import NewsroomPostDetail from './pages/BlogPostDetail'
 import { useHubSpotPreload } from './hooks/useHubSpotPreload'
 
 function App() {
@@ -42,12 +41,11 @@ function App() {
               <Route path="/contact" element={<Contact />} />
               <Route path="/learn" element={<Learn />} />
               <Route path="/privacy-policy" element={<PrivacyPolicy />} />
-              <Route path="/content" element={<Content />} />
               <Route path="/faq" element={<FAQ />} />
               <Route path="/book-call" element={<BookCall />} />
               <Route path="/portfolio" element={<Portfolio />} />
-              <Route path="/blog" element={<Blog />} />
-              <Route path="/blog/:id" element={<BlogPostDetail />} />
+              <Route path="/newsroom" element={<Newsroom />} />
+              <Route path="/newsroom/:id" element={<NewsroomPostDetail />} />
             </Routes>
           </main>
           <Footer />
