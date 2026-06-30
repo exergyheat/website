@@ -49,7 +49,7 @@ const Services = () => {
             </span>
             <span className="flex items-center gap-2">
               <span className="w-2 h-2 rounded-full bg-green-500 inline-block"></span>
-              <a href="https://github.com/exergyheat" target="_blank" rel="noopener noreferrer" className="underline hover:text-primary-600">Open-source HA integrations</a>
+              <a href="https://github.com/exergyheat" target="_blank" rel="noopener noreferrer" className="underline hover:text-primary-600">Open-source smart home integrations</a>
             </span>
             <span className="flex items-center gap-2">
               <span className="w-2 h-2 rounded-full bg-green-500 inline-block"></span>
@@ -100,14 +100,14 @@ const Services = () => {
                   <span className="flex-shrink-0 w-6 h-6 rounded-full bg-primary-100 dark:bg-primary-900 text-primary-600 dark:text-primary-400 flex items-center justify-center text-xs font-bold">2</span>
                   <div>
                     <p className="text-surface-800 dark:text-surface-200 text-sm font-medium">Understand what hardware and control you need</p>
-                    <p className="text-surface-500 dark:text-surface-400 text-xs mt-0.5">Read our open-source Home Assistant integrations at <a href="https://docs.exergyheat.com" target="_blank" rel="noopener noreferrer" className="underline hover:text-primary-600">docs.exergyheat.com</a></p>
+                    <p className="text-surface-500 dark:text-surface-400 text-xs mt-0.5">Read our open-source smart home integrations at <a href="https://docs.exergyheat.com" target="_blank" rel="noopener noreferrer" className="underline hover:text-primary-600">docs.exergyheat.com</a></p>
                   </div>
                 </li>
                 <li className="flex gap-3">
                   <span className="flex-shrink-0 w-6 h-6 rounded-full bg-primary-100 dark:bg-primary-900 text-primary-600 dark:text-primary-400 flex items-center justify-center text-xs font-bold">3</span>
                   <div>
                     <p className="text-surface-800 dark:text-surface-200 text-sm font-medium">Install and configure your own system</p>
-                    <p className="text-surface-500 dark:text-surface-400 text-xs mt-0.5">Our open-source HA integrations connect miners into your smart home or building automation</p>
+                    <p className="text-surface-500 dark:text-surface-400 text-xs mt-0.5">Our open-source smart home integrations connect miners into your smart home or building automation</p>
                   </div>
                 </li>
                 <li className="flex gap-3">
@@ -160,7 +160,7 @@ const Services = () => {
                   <span className="flex-shrink-0 w-6 h-6 rounded-full bg-primary-100 dark:bg-primary-900 text-primary-600 dark:text-primary-400 flex items-center justify-center text-xs font-bold">2</span>
                   <div>
                     <p className="text-surface-800 dark:text-surface-200 text-sm font-medium">Full integration design</p>
-                    <p className="text-surface-500 dark:text-surface-400 text-xs mt-0.5">System sizing, control solution, HA configuration, and the exact playbook for your install</p>
+                    <p className="text-surface-500 dark:text-surface-400 text-xs mt-0.5">System sizing, control solution, automation configuration, and the exact playbook for your install</p>
                   </div>
                 </li>
                 <li className="flex gap-3">
@@ -214,7 +214,7 @@ const Services = () => {
                   <span className="flex-shrink-0 w-6 h-6 rounded-full bg-primary-100 dark:bg-primary-900 text-primary-600 dark:text-primary-400 flex items-center justify-center text-xs font-bold">1</span>
                   <div>
                     <p className="text-surface-800 dark:text-surface-200 text-sm font-medium">Full audit and system design</p>
-                    <p className="text-surface-500 dark:text-surface-400 text-xs mt-0.5">Savings estimate, system sizing, hardware selection, and integration design — control solution, HA config, full install plan</p>
+                    <p className="text-surface-500 dark:text-surface-400 text-xs mt-0.5">Savings estimate, system sizing, hardware selection, and integration design — control solution, automation config, full install plan</p>
                   </div>
                 </li>
                 <li className="flex gap-3">

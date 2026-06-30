@@ -141,7 +141,7 @@ const Home = () => {
                 Self-Serve
               </h3>
               <p className="text-sm font-body text-surface-600 dark:text-surface-400 text-center">
-                Free calculators, open-source HA integrations, docs, and <a href="https://meet.jit.si/ExergyHomeAssistant" target="_blank" rel="noopener noreferrer" className="underline hover:text-primary-300" onClick={e => e.stopPropagation()}>weekly office hours (Wed 10am MT)</a>. Figure it out yourself — we've made that possible.
+                Free calculators, open-source smart home integrations, docs, and <a href="https://meet.jit.si/ExergyHomeAssistant" target="_blank" rel="noopener noreferrer" className="underline hover:text-primary-300" onClick={e => e.stopPropagation()}>weekly office hours (Wed 10am MT)</a>. Figure it out yourself — we've made that possible.
               </p>
             </a>
 

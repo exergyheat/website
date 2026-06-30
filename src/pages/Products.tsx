@@ -192,7 +192,7 @@ const Products = () => {
         <title>Products | Exergy Heat</title>
         <meta
           name="description"
-          content="Explore Exergy's building-integrated Bitcoin mining hardware — the CTRL1 Hub, open-source Home Assistant integrations, and Exergy-recommended third-party miners for every heating application."
+          content="Explore Exergy's building-integrated Bitcoin mining hardware — the CTRL1 Hub, open-source smart home integrations, and Exergy-recommended third-party miners for every heating application."
         />
         <meta
           name="keywords"
@@ -285,7 +285,7 @@ const Products = () => {
                 </div>
 
                 <p className="text-surface-600 dark:text-surface-400 text-sm leading-relaxed mb-6">
-                  The CTRL1 is the brain of every Exergy system. It connects your Bitcoin miner to your thermostat, solar inverter, and smart home — and comes pre-loaded with Exergy's open-source Home Assistant integrations right out of the box.
+                  The CTRL1 is the brain of every Exergy system. It connects your Bitcoin miner to your thermostat, solar inverter, and smart home — and comes pre-loaded with Exergy's open-source smart home integrations right out of the box.
                 </p>
 
                 {/* Specs grid */}
@@ -312,7 +312,7 @@ const Products = () => {
                     'Local control only — no cloud, no subscription',
                     'Your data stays on your network',
                     'Supports Zigbee, Z-Wave, and other IoT protocols',
-                    'Pre-loaded with Exergy open-source HA integrations',
+                    'Pre-loaded with Exergy open-source smart home integrations',
                     'Required for Tier 2 and Tier 3 Exergy installs',
                     'Also sold standalone for DIY setups',
                   ].map(feat => (
@@ -340,7 +340,7 @@ const Products = () => {
                 <div className="w-20 h-20 rounded-2xl bg-white/15 backdrop-blur-sm flex items-center justify-center mb-5 border border-white/20">
                   <Github className="h-10 w-10 text-white" />
                 </div>
-                <h3 className="text-2xl font-bold text-white mb-1">Home Assistant Integrations</h3>
+                <h3 className="text-2xl font-bold text-white mb-1">Smart Home Integrations</h3>
                 <p className="text-white/80 text-sm">Open-source smart home connectors for Bitcoin miners</p>
               </div>
 
