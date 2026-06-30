@@ -403,19 +403,19 @@ const Home = () => {
             whileInView="visible"
             viewport={{ once: true, margin: "-100px" }}
           >
-            {/* Card 1: Does this work with solar? */}
+            {/* Card 1: Does a Bitcoin miner heat as well as a furnace? */}
             <motion.div className="group" variants={cardVariants}>
               <div className="bg-surface-50 dark:bg-surface-700 rounded-lg p-8 h-full transform transition-transform group-hover:scale-105 shadow-lg">
                 <div className="flex justify-center mb-6">
                   <div className="p-4 bg-secondary-100 dark:bg-secondary-900 rounded-full">
-                    <Sun className="h-12 w-12 text-primary-500 dark:text-secondary-500" />
+                    <Zap className="h-12 w-12 text-primary-500 dark:text-secondary-500" />
                   </div>
                 </div>
                 <h3 className="text-xl font-subheading text-surface-900 dark:text-surface-100 mb-4 text-center">
-                  Does this work with solar panels?
+                  Does a Bitcoin miner actually heat my home?
                 </h3>
                 <p className="font-body text-surface-600 dark:text-surface-400 text-center">
-                  Solar is one of the strongest use cases. When your array overproduces, excess typically exports at pennies per kWh. In our Solar Home case study, the same kWh earned 3.3× more routed through the miner than sent to the grid.
+                  Yes. In our Colorado Mountain Home, a single 4,000W miner handled 98.6% of the home's heat demand over a full heating season. The gas furnace ran for 4.4 hours total — across 43 days. The miner was the furnace.
                 </p>
               </div>
             </motion.div>
@@ -425,31 +425,31 @@ const Home = () => {
               <div className="bg-surface-50 dark:bg-surface-700 rounded-lg p-8 h-full transform transition-transform group-hover:scale-105 shadow-lg">
                 <div className="flex justify-center mb-6">
                   <div className="p-4 bg-secondary-100 dark:bg-secondary-900 rounded-full">
-                    <Zap className="h-12 w-12 text-primary-500 dark:text-secondary-500" />
+                    <DollarSign className="h-12 w-12 text-primary-500 dark:text-secondary-500" />
                   </div>
                 </div>
                 <h3 className="text-xl font-subheading text-surface-900 dark:text-surface-100 mb-4 text-center">
                   Will my electric bill go up?
                 </h3>
                 <p className="font-body text-surface-600 dark:text-surface-400 text-center">
-                  Yes — and that's expected. Electric goes up, gas drops to near-zero, Bitcoin accumulates. Your Exergy Audit shows you the exact net position before you commit.
+                  Yes — and that's the point. Electric goes up, gas drops to near-zero, and you accumulate Bitcoin on every joule. For propane and heating oil customers, the net result is often strongly positive before counting the Bitcoin. Our Exergy Audit shows you exactly where you land.
                 </p>
               </div>
             </motion.div>
 
-            {/* Card 3: How much can I earn? */}
+            {/* Card 3: How do I know if my building is a good fit? */}
             <motion.div className="group" variants={cardVariants}>
               <div className="bg-surface-50 dark:bg-surface-700 rounded-lg p-8 h-full transform transition-transform group-hover:scale-105 shadow-lg">
                 <div className="flex justify-center mb-6">
                   <div className="p-4 bg-secondary-100 dark:bg-secondary-900 rounded-full">
-                    <Bitcoin className="h-12 w-12 text-primary-500 dark:text-secondary-500" />
+                    <Calculator className="h-12 w-12 text-primary-500 dark:text-secondary-500" />
                   </div>
                 </div>
                 <h3 className="text-xl font-subheading text-surface-900 dark:text-surface-100 mb-4 text-center">
-                  How much can I earn?
+                  Is my building a good fit?
                 </h3>
                 <p className="font-body text-surface-600 dark:text-surface-400 text-center">
-                  Depends on your electricity rate, current fuel, and system size. Our calculator runs the real math — or we do it for you with an Exergy Audit.
+                  Strong fits: propane, heating oil, or expensive electric resistance heat. Solar with low net-metering rates. Pools, hot tubs, radiant floors. Weaker fits: cheap natural gas, heat pumps in mild climates. Run our free calculator — it tells you in two minutes.
                 </p>
               </div>
             </motion.div>
