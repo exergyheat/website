@@ -75,7 +75,7 @@ const Services = () => {
 
       {/* Three Tiers */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 items-start">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 items-stretch">
 
           {/* Tier 1: Self-Serve */}
           <div className="bg-white dark:bg-surface-800 rounded-2xl shadow-md border border-surface-200 dark:border-surface-700 flex flex-col overflow-hidden">
@@ -115,13 +115,6 @@ const Services = () => {
                   </div>
                 </li>
               </ul>
-
-              {/* Relay callout */}
-              <div className="bg-primary-50 dark:bg-primary-900/30 border border-primary-200 dark:border-primary-700 rounded-xl px-5 py-4">
-                <p className="text-xs font-bold uppercase tracking-widest text-primary-600 dark:text-primary-400 mb-1">Optional Add-On</p>
-                <p className="text-sm font-semibold text-surface-900 dark:text-surface-100 mb-1">Exergy Relay</p>
-                <p className="text-xs text-surface-600 dark:text-surface-400">Enable remote monitoring for a small hashrate split. Get monthly reports, maintenance tips, and alerts — and join a network of Exergy customers contributing to decentralized home mining.</p>
-              </div>
 
               <div className="mt-auto pt-2">
                 <a
@@ -176,13 +169,6 @@ const Services = () => {
                 </li>
               </ul>
 
-              {/* Relay callout */}
-              <div className="bg-primary-50 dark:bg-primary-900/30 border border-primary-200 dark:border-primary-700 rounded-xl px-5 py-4">
-                <p className="text-xs font-bold uppercase tracking-widest text-primary-600 dark:text-primary-400 mb-1">Optional Add-On</p>
-                <p className="text-sm font-semibold text-surface-900 dark:text-surface-100 mb-1">Exergy Relay</p>
-                <p className="text-xs text-surface-600 dark:text-surface-400">Remote monitoring via a small hashrate split. Monthly economic reports, fault detection, maintenance reminders, and update alerts.</p>
-              </div>
-
               <div className="mt-auto pt-2">
                 <Link
                   to="/book-call"
@@ -230,13 +216,6 @@ const Services = () => {
                 </li>
               </ul>
 
-              {/* Relay callout */}
-              <div className="bg-primary-50 dark:bg-primary-900/30 border border-primary-200 dark:border-primary-700 rounded-xl px-5 py-4">
-                <p className="text-xs font-bold uppercase tracking-widest text-primary-600 dark:text-primary-400 mb-1">Optional Add-On</p>
-                <p className="text-sm font-semibold text-surface-900 dark:text-surface-100 mb-1">Exergy Relay</p>
-                <p className="text-xs text-surface-600 dark:text-surface-400">Remote monitoring via a small hashrate split. Monthly economic reports, fault detection, maintenance reminders, and update alerts.</p>
-              </div>
-
               <div className="mt-auto pt-2 space-y-3">
                 <Link
                   to="/book-call"
@@ -249,6 +228,16 @@ const Services = () => {
               </div>
             </div>
           </div>
+        </div>
+
+        {/* Exergy Relay strip */}
+        <div className="mt-8 flex items-center justify-center gap-3 text-sm text-surface-500 dark:text-surface-400">
+          <span className="h-px flex-1 bg-surface-200 dark:bg-surface-700" />
+          <span>
+            <span className="font-medium text-surface-700 dark:text-surface-300">Exergy Relay</span> — optional remote monitoring — is available as an add-on for any tier.{' '}
+            <a href="#relay" className="underline hover:text-primary-600">Learn more ↓</a>
+          </span>
+          <span className="h-px flex-1 bg-surface-200 dark:bg-surface-700" />
         </div>
 
         {/* Commercial callout */}
@@ -270,7 +259,7 @@ const Services = () => {
       </div>
 
       {/* Exergy Relay Section */}
-      <div className="bg-surface-900 dark:bg-surface-950 py-20">
+      <div id="relay" className="bg-surface-900 dark:bg-surface-950 py-20">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-10">
             <p className="text-xs font-bold uppercase tracking-widest text-primary-400 mb-3">Optional Add-On for All Tiers</p>
