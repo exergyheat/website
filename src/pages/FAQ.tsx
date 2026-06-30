@@ -83,7 +83,7 @@ const FAQ = () => {
         },
         {
           q: 'What does Exergy Relay cost?',
-          a: 'Exergy Relay is priced as a small hashrate split — a percentage of your mining output goes to Exergy instead of a monthly subscription or credit card charge. No invoices. No billing. The system pays for its own monitoring. The exact split depends on system size — we\'ll tell you the number before you opt in. You can disable it at any time; the system continues heating and mining normally without it.'
+          a: 'Exergy Relay costs a 5% hashrate split — five cents of every dollar your system earns goes to Exergy, and the other 95% goes directly to your wallet. No subscription, no invoice, no credit card. The system pays for its own monitoring. If your miner earns $200/month, Relay costs you $10 — and in exchange you get remote monitoring, automated alerts, a monthly performance report, and priority support. You can disable it at any time; your system continues heating and mining normally without it.'
         }
       ]
     },

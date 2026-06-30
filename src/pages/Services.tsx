@@ -272,10 +272,13 @@ const Services = () => {
               <h3 className="text-white font-semibold text-lg">What You Get</h3>
               <ul className="space-y-3">
                 {[
-                  'Monthly economic report — electric cost, gas cost, BTC earned, net heating cost',
-                  'Proactive fault detection and alerts',
-                  'Maintenance reminders',
-                  'System update alerts'
+                  'Customer portal at exergy.me — links to your Home Assistant instance, support forum, and documentation in one place',
+                  'Secure remote access to your Home Assistant dashboard via a custom exergy.me subdomain',
+                  'Real-time monitoring of your system\'s performance through Home Assistant',
+                  'Automated alerts for hashrate drops, temperature anomalies, or connectivity issues — problems caught before you notice them',
+                  'Monthly mining performance report — output, value earned, and net heating cost for the month',
+                  'Priority support and remote hands-on intervention when needed',
+                  '95% of your mining rewards paid directly to your wallet'
                 ].map((item, i) => (
                   <li key={i} className="flex items-start gap-3 text-surface-300 text-sm">
                     <ArrowRight className="h-4 w-4 text-primary-400 flex-shrink-0 mt-0.5" />
@@ -286,13 +289,16 @@ const Services = () => {
             </div>
 
             <div className="bg-surface-800 rounded-xl p-6 space-y-4">
-              <h3 className="text-white font-semibold text-lg">How It Works</h3>
-              <div className="space-y-3 text-surface-300 text-sm leading-relaxed">
+              <h3 className="text-white font-semibold text-lg">How You Pay</h3>
+              <div className="space-y-4 text-surface-300 text-sm leading-relaxed">
                 <p>
-                  Exergy Relay is not a subscription and there's no credit card charge. You pay with a small hashrate split — a fraction of the mining output from your system.
+                  No subscription. No invoice. No credit card. Exergy Relay costs a <span className="text-white font-semibold">5% hashrate split</span> — five cents of every dollar your system earns goes to Exergy. The other 95% goes directly to your wallet.
                 </p>
                 <p>
-                  When you enable Relay, you join a growing network of homes and buildings contributing hashrate. Your miner participates in decentralized Bitcoin mining, supporting the network alongside other Exergy customers.
+                  The service earns its own keep. If your miner earns $200/month in Bitcoin, Relay costs you $10 — and in exchange, Exergy monitors your system remotely, reports on its performance, and fixes problems before you notice them.
+                </p>
+                <p>
+                  You can disable Relay at any time. Your system continues heating and mining normally — you just lose the remote visibility and reporting.
                 </p>
               </div>
             </div>
