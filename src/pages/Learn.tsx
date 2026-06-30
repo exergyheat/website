@@ -77,75 +77,73 @@ const Learn = () => {
 
   const applications = [
     {
-      id: 'space-heating',
-      title: 'Room Space Heating',
-      description: 'Standalone units for heating individual rooms, garages, workshops, or specific areas. Plug-and-play simplicity.',
+      id: 'zone-heaters',
+      title: 'Smart Zone Heaters',
+      subtitle: 'The non-invasive entry point',
+      description: 'Lower-wattage miners (150W–850W) replace plug-in space heaters room by room. Each pairs with a wireless temperature sensor and a Home Assistant virtual thermostat — on when the room is cold, off when it hits setpoint. No trades required. No ductwork. No plumbing. You can start one room and scale.',
+      tradeoff: 'Whole-home coverage requires multiple units. Works best as a distributed system staged with the existing furnace as backup.',
       image: 'https://images.pexels.com/photos/7745932/pexels-photo-7745932.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
       features: [
-        'Zone-level comfort control',
-        'Wireless temp sensor integration',
-        'Home Assistant controlled',
-        'Silent operation'
+        'No licensed trades — 120V / 15A service sufficient',
+        'Start one room, scale to whole building',
+        'Stage 1 heat with existing system as backup',
+        'Deferred a $10,000+ furnace replacement — indefinitely'
       ]
     },
     {
       id: 'forced-air',
-      title: 'Forced Air Furnaces',
-      description: 'Replace or supplement your traditional furnace with hashrate heating. Perfect for whole-building heating with existing ductwork.',
+      title: 'In-Duct Forced Air',
+      subtitle: 'Working with your existing ductwork',
+      description: 'A miner installs inline with the existing return duct, preheating air before it reaches the air handler. When the thermostat calls for heat, the miner fires first. If it can\'t satisfy the setpoint within the staging delay, the furnace kicks in as backup. If your building has ductwork, you already have an integration point.',
+      tradeoff: 'Requires HVAC trades for the duct penetration. Miners run longer continuous cycles than a furnace — factor that into maintenance planning.',
       image: 'https://images.pexels.com/photos/5505931/pexels-photo-5505931.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
       features: [
-        'Integrates with existing ductwork',
-        'Stage 1 heat, furnace stays as backup',
-        'Thermostat compatible',
-        'Hidden in mechanical room'
+        'Miner is stage 1 — furnace stays as stage 2 backup',
+        'Hides in mechanical room, existing ductwork distributes heat',
+        'Thermostat-compatible — no changes to controls',
+        'Colorado install: gas fired just 4.4 hrs across a 43-day season'
       ]
     },
     {
-      id: 'radiant-systems',
-      title: 'Radiant Floor Heating',
-      description: 'Underfloor heating systems that provide comfortable, even heat distribution throughout your space from the ground up.',
+      id: 'hydronic-radiant',
+      title: 'Hydronic & Radiant',
+      subtitle: 'The high-performance configuration',
+      description: 'The miner plumbs into the hydronic return line upstream of the existing boiler, preheating return water before it reaches the boiler. The boiler sees warm water and stays off. When the building needs more heat than the miner can supply, the boiler fires to top up. If the miner fails entirely, the boiler operates normally — redundancy is built into the plumbing.',
+      tradeoff: 'Requires a licensed plumber. Higher upfront complexity, but delivers the most comfortable heat (radiant floor) with a dry cooler enabling year-round mining.',
       image: 'https://cdn11.bigcommerce.com/s-8s3kdqoux2/product_images/uploaded_images/expert-thumb-pros-and-cons-of-in-floor-radiant-heating-.jpg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
       features: [
-        'Connects to hydronic loop',
-        'Works with existing zone valves',
-        'Electric boiler replacement',
-        'Silent operation'
+        'Miner on return line — boiler sees warm water and stays off',
+        'Dry cooler enables year-round mining outside heating season',
+        'Radiant floor comfort — zero tradeoff vs. conventional boiler',
+        'All-electric install: 45% reduction in effective heating cost'
       ]
     },
     {
-      id: 'pools-spas',
-      title: 'Pools & Hot Tubs',
-      description: 'Keep your pool or spa at the perfect temperature year-round while generating revenue from the heating process.',
+      id: 'water-pool-spa',
+      title: 'Water, Pool & Spa',
+      subtitle: 'Year-round high duty cycle',
+      description: 'Heat transfers from the miner to a water volume via heat exchanger — a domestic hot water tank, hot tub, or pool. Because you want hot water year-round regardless of season, the miner runs at a high duty cycle every month of the year. Someone is heating your hot tub. It might as well be Bitcoin.',
+      tradeoff: 'Pools require a larger miner to move the thermal mass meaningfully. Hot tubs and domestic hot water tanks are the strongest fit — smaller volume, faster response.',
       image: 'https://images.pexels.com/photos/6667425/pexels-photo-6667425.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
       features: [
-        'Year-round heating',
-        'Dedicated miner per water body',
-        'Bitcoin-heated hot tub at The Space',
-        'Runs off excess solar'
-      ]
-    },
-    {
-      id: 'Industrial',
-      title: 'C&I Systems',
-      description: 'Commercial and industrial heating systems for businesses with low-grade heating applications.',
-      image: 'https://images.pexels.com/photos/2886937/pexels-photo-2886937.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-      features: [
-        'Commercial TOU rate optimization',
-        'Multi-zone control',
-        'MEP team integration',
-        'Specialist consulting available'
+        'Heat exchanger to hot tub, pool, or domestic hot water tank',
+        'Year-round operation — highest annual mining duty cycle',
+        'Anyone who pays propane to heat a hot tub grasps this immediately',
+        'Bitcoin-heated hot tub running at Exergy\'s Denver space since 2026'
       ]
     },
     {
       id: 'excess-solar',
-      title: 'Excess Solar Monetization',
-      description: 'If you export solar to the grid for a few cents per kWh and buy it back at ten or twelve, the net metering math is broken. Route your excess generation through a miner instead — same electrons, 3× the value.',
+      title: 'Solar & Excess Energy',
+      subtitle: 'The miner as dispatchable load',
+      description: 'A control layer that stacks on top of any integration type above. When the building\'s circuit receives more solar than it consumes, Home Assistant ramps the miner up to absorb the surplus before it exports at poor rates. When generation drops, the miner throttles back. In summer, your miner stops being a heater and starts being a solar arbitrage machine.',
+      tradeoff: 'Requires a solar system with monitoring Home Assistant can read. A dry cooler or garage placement handles heat dump during non-heating months.',
       image: 'https://images.pexels.com/photos/433308/pexels-photo-433308.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
       features: [
-        'Miner activates on excess solar generation',
-        '3.3× more value vs. grid export at $0.01/kWh',
-        'Garage or outbuilding placement for heat dump',
-        'Home Assistant solar arbitrage automation'
+        'Miner ramps up automatically on surplus solar generation',
+        '3.3× more value per kWh vs. $0.01/kWh net metering export',
+        'Real-time switching: mine vs. export based on hashprice vs. grid rate',
+        'Works on top of any other integration type'
       ]
     }
   ]
@@ -307,9 +305,9 @@ const Learn = () => {
       <div className="bg-surface-50 dark:bg-surface-900 py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-surface-900 dark:text-surface-100 mb-4">Example Applications</h2>
+            <h2 className="text-3xl font-bold text-surface-900 dark:text-surface-100 mb-4">Five Ways to Integrate a Miner</h2>
             <p className="text-xl text-surface-600 dark:text-surface-400">
-              Discover how building-integrated mining works across different building types
+              Every building already has a heat distribution system. The miner connects to it.
             </p>
           </div>
 
@@ -323,28 +321,33 @@ const Learn = () => {
                   <div key={application.id} className="w-full flex-shrink-0">
                     <div className="mx-4">
                       <div className="bg-white dark:bg-surface-800 rounded-lg overflow-hidden shadow-xl">
-                        <div className="relative h-96">
+                        {/* Image header with title/subtitle overlay */}
+                        <div className="relative h-56">
                           <img
                             src={application.image}
-                            alt={`${application.title} hashrate heating application showing ${application.description}`}
+                            alt={application.title}
                             className="w-full h-full object-cover"
                           />
-                          {/* Light blue tint overlay using website's primary blue color */}
-                          <div 
-                            className="absolute inset-0 bg-primary-500 opacity-40"
-                          />
-                          <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
+                          <div className="absolute inset-0 bg-primary-500 opacity-40" />
+                          <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent" />
                           <div className="absolute bottom-0 left-0 right-0 p-6 text-white">
-                            <h3 className="text-2xl font-bold mb-2">{application.title}</h3>
-                            <p className="text-lg text-surface-100 mb-4">{application.description}</p>
-                            <div className="grid grid-cols-2 gap-2">
-                              {application.features.map((feature, index) => (
-                                <div key={index} className="flex items-center text-sm text-surface-200">
-                                  <div className="h-1.5 w-1.5 bg-primary-400 rounded-full mr-2" />
-                                  {feature}
-                                </div>
-                              ))}
-                            </div>
+                            <p className="text-xs font-bold uppercase tracking-widest text-primary-300 mb-1">{application.subtitle}</p>
+                            <h3 className="text-2xl font-bold">{application.title}</h3>
+                          </div>
+                        </div>
+                        {/* Content body */}
+                        <div className="p-6">
+                          <p className="text-surface-600 dark:text-surface-400 text-sm leading-relaxed mb-4">{application.description}</p>
+                          <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 mb-4">
+                            {application.features.map((feature, index) => (
+                              <div key={index} className="flex items-start text-sm text-surface-700 dark:text-surface-300">
+                                <div className="h-1.5 w-1.5 bg-primary-500 rounded-full mr-2 mt-1.5 flex-shrink-0" />
+                                {feature}
+                              </div>
+                            ))}
+                          </div>
+                          <div className="border-t border-surface-200 dark:border-surface-600 pt-3">
+                            <p className="text-xs text-surface-500 dark:text-surface-400 italic"><span className="font-semibold not-italic text-surface-600 dark:text-surface-300">Tradeoff: </span>{application.tradeoff}</p>
                           </div>
                         </div>
                       </div>
