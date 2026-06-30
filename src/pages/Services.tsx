@@ -189,7 +189,7 @@ const Services = () => {
             <div className="bg-primary-600 px-8 py-6 border-b border-primary-500">
               <div className="text-xs font-bold uppercase tracking-widest text-primary-200 mb-2">Tier 3</div>
               <h2 className="text-2xl font-bold text-white mb-1">Done-For-You</h2>
-              <p className="text-primary-200 text-sm">Fully managed project — we hire the trades, install, and commission everything</p>
+              <p className="text-primary-200 text-sm">Fully managed — we handle everything, start to finish</p>
             </div>
             <div className="px-8 py-6 flex flex-col flex-1 gap-6">
               <ul className="space-y-4">
