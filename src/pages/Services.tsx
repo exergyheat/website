@@ -41,11 +41,19 @@ const Services = () => {
       {/* Free Touchpoints Banner */}
       <div className="bg-surface-100 dark:bg-surface-800 py-6 border-b border-surface-200 dark:border-surface-700">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-6 text-sm text-surface-700 dark:text-surface-300">
+          <div className="flex flex-col sm:flex-row flex-wrap items-center justify-center gap-x-6 gap-y-3 text-sm text-surface-700 dark:text-surface-300">
             <span className="font-semibold text-surface-900 dark:text-surface-100 uppercase tracking-wide text-xs">Always Free:</span>
             <span className="flex items-center gap-2">
               <span className="w-2 h-2 rounded-full bg-green-500 inline-block"></span>
-              15-min intro call
+              <a href="https://calc.exergyheat.com" target="_blank" rel="noopener noreferrer" className="underline hover:text-primary-600">Calculators</a>
+            </span>
+            <span className="flex items-center gap-2">
+              <span className="w-2 h-2 rounded-full bg-green-500 inline-block"></span>
+              <a href="https://github.com/exergyheat" target="_blank" rel="noopener noreferrer" className="underline hover:text-primary-600">Open-source HA integrations</a>
+            </span>
+            <span className="flex items-center gap-2">
+              <span className="w-2 h-2 rounded-full bg-green-500 inline-block"></span>
+              <a href="https://docs.exergyheat.com" target="_blank" rel="noopener noreferrer" className="underline hover:text-primary-600">Documentation</a>
             </span>
             <span className="flex items-center gap-2">
               <span className="w-2 h-2 rounded-full bg-green-500 inline-block"></span>
@@ -59,6 +67,10 @@ const Services = () => {
               <a href="https://support.exergyheat.com" target="_blank" rel="noopener noreferrer" className="underline hover:text-primary-600">
                 support.exergyheat.com
               </a>
+            </span>
+            <span className="flex items-center gap-2">
+              <span className="w-2 h-2 rounded-full bg-green-500 inline-block"></span>
+              15-min intro call
             </span>
           </div>
         </div>
