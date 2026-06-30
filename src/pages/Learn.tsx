@@ -179,7 +179,7 @@ const Learn = () => {
         <h2 className="text-3xl font-bold text-surface-900 dark:text-surface-100 text-center mb-12">
           Resources
         </h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
           {resources.map((resource, index) => (
             resource.link.startsWith('http') ? (
               <a
