@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import { Helmet } from 'react-helmet-async'
 import { Link } from 'react-router-dom'
-import { Mail, MapPin, Calendar, Loader2 } from 'lucide-react'
+import { Mail, MapPin, Calendar, Loader2, Users } from 'lucide-react'
 
 const Contact = () => {
   const [isFormLoaded, setIsFormLoaded] = useState(false)
@@ -43,7 +43,7 @@ const Contact = () => {
             Contact Us
           </h1>
           <p className="text-xl text-white/90 max-w-2xl mx-auto">
-            It's time to monetize your heat
+            Get in touch — we'll point you in the right direction.
           </p>
         </div>
       </div>
@@ -71,7 +71,7 @@ const Contact = () => {
               </div>
               <div className="flex items-center">
                 <MapPin className="h-6 w-6 text-primary-600" />
-                <a 
+                <a
                   href="https://maps.app.goo.gl/bp9d8a3GEpfzv3Kg7"
                   target="_blank"
                   rel="noopener noreferrer"
@@ -80,13 +80,17 @@ const Contact = () => {
                   3700 N Franklin St. Denver, CO 80205
                 </a>
               </div>
+              <div className="flex items-center">
+                <Users className="h-6 w-6 text-primary-600" />
+                <span className="ml-4 text-surface-600 dark:text-surface-400">Weekly public office hours — free, open to everyone. See our community forum for times.</span>
+              </div>
             </div>
 
             <div className="mt-12">
               <h3 className="text-lg font-semibold text-surface-900 dark:text-surface-100 mb-4">Office Hours</h3>
               <div className="space-y-2 text-surface-600 dark:text-surface-400">
-                <p>Monday - Friday: 8:00 AM - 5:00 PM Mountain Time</p>
-                <p>Saturday - Sunday: By Appointment</p>
+                <p>We respond to emails within 1 business day</p>
+                <p>Free 15-min intro calls available — book via calendar above</p>
               </div>
             </div>
           </div>

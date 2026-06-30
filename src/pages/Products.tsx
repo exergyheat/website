@@ -1,13 +1,31 @@
 import React, { useState } from 'react'
 import { Helmet } from 'react-helmet-async'
 import { Link } from 'react-router-dom'
-import { ArrowRight, Radiation as Radiator, Fan, Droplets, Cpu, Factory, ChevronDown, ChevronUp, Copy, Check, ChevronLeft, ChevronRight } from 'lucide-react'
+import {
+  ArrowRight,
+  Copy,
+  Check,
+  ChevronLeft,
+  ChevronRight,
+  Github,
+  BookOpen,
+  Cpu,
+  Thermometer,
+  Wind,
+  Droplets,
+  Sun,
+  Waves,
+  ExternalLink,
+  MessageCircle,
+  CalendarDays,
+  Zap,
+  RefreshCw,
+} from 'lucide-react'
 
 const Products = () => {
-  const [activeCategory, setActiveCategory] = useState<string | null>(null)
-  const [expandedProduct, setExpandedProduct] = useState<string | null>(null)
   const [copiedCoupon, setCopiedCoupon] = useState<string | null>(null)
   const [currentImageIndex, setCurrentImageIndex] = useState<{ [key: string]: number }>({})
+  const [expandedSpecs, setExpandedSpecs] = useState<{ [key: string]: boolean }>({})
 
   const handleCopyCoupon = async (couponCode: string) => {
     try {
@@ -22,437 +40,636 @@ const Products = () => {
   const nextImage = (productId: string, totalImages: number) => {
     setCurrentImageIndex(prev => ({
       ...prev,
-      [productId]: ((prev[productId] || 0) + 1) % totalImages
+      [productId]: ((prev[productId] || 0) + 1) % totalImages,
     }))
   }
 
   const prevImage = (productId: string, totalImages: number) => {
     setCurrentImageIndex(prev => ({
       ...prev,
-      [productId]: ((prev[productId] || 0) - 1 + totalImages) % totalImages
+      [productId]: ((prev[productId] || 0) - 1 + totalImages) % totalImages,
     }))
   }
 
-  const categories = [
+  const toggleSpecs = (productId: string) => {
+    setExpandedSpecs(prev => ({ ...prev, [productId]: !prev[productId] }))
+  }
+
+  const integrationTypes = [
     {
-      id: 'space-heating',
-      name: 'Space Heating',
-      icon: Radiator,
-      description: 'Standalone heating solutions for rooms, garages, and homes. Space heaters are the simplest way to monetize your heat.'
+      icon: Thermometer,
+      title: 'Smart Zone Heaters',
+      description:
+        'Standalone miners act as space heaters — one per zone. Simple plug-and-play setup for rooms, garages, workshops, or cabins.',
     },
     {
-      id: 'forced-air',
-      name: 'Forced Air',
-      icon: Fan,
-      description: 'Integrated heating solutions that work with your existing HVAC system or replace traditional furnaces. Perfect for whole-home hashrate heating.'
+      icon: Wind,
+      title: 'In-Duct / Forced Air',
+      description:
+        'Miner sits in your HVAC return duct. Your existing air handler distributes heat throughout the building — no new vents needed.',
     },
     {
-      id: 'hydronic',
-      name: 'Hydronic & Water',
       icon: Droplets,
-      description: 'Water-based heating solutions for radiant heat, hot water tanks, pools, and more. Seamlessly integrates with existing hydronic systems.'
+      title: 'Hydronic / Radiant',
+      description:
+        'Miner heats a water loop that feeds radiant floors, baseboard radiators, or fan-coil units. Consistent, even heat throughout.',
     },
     {
-      id: 'control',
-      name: 'Control Systems',
-      icon: Cpu,
-      description: 'Smart control systems and hardware for managing your hashrate heating devices. From sensors to servers, we provide complete control solutions.'
+      icon: Waves,
+      title: 'Water, Pool & Spa',
+      description:
+        'Dedicated miner heats pools, hot tubs, domestic hot water, or tank-style water heaters. Heat that was already going to waste.',
     },
     {
-      id: 'commercial-industrial',
-      name: 'Commercial & Industrial',
-      icon: Factory,
-      description: 'Large-scale hashrate heating solutions for commercial and industrial applications. High-capacity systems for warehouses, manufacturing, and district heating.'
-    }
+      icon: Sun,
+      title: 'Excess Solar',
+      description:
+        'Miner acts as a dispatchable load — it ramps up when your solar panels overproduce and scales back when grid demand rises.',
+    },
   ]
 
-  const products = [
+  const thirdPartyProducts = [
     {
       id: 'hyd-heatcore',
-      category: ['hydronic', 'forced-air'],
       name: 'Heat Core HS05',
-      images: ['https://48661310.fs1.hubspotusercontent-na2.net/hubfs/48661310/1-Jul-09-2025-09-41-39-7158-AM.png',
-              'https://48661310.fs1.hubspotusercontent-na2.net/hubfs/48661310/2-Jul-09-2025-09-44-53-3264-AM.png',
-              'https://48661310.fs1.hubspotusercontent-na2.net/hubfs/48661310/3-Jul-09-2025-09-45-39-1329-AM.png',
-              'https://48661310.fs1.hubspotusercontent-na2.net/hubfs/48661310/4-Jul-09-2025-09-46-24-4952-AM.png'],
+      badge: 'Hydronic / Forced Air',
+      images: [
+        'https://48661310.fs1.hubspotusercontent-na2.net/hubfs/48661310/1-Jul-09-2025-09-41-39-7158-AM.png',
+        'https://48661310.fs1.hubspotusercontent-na2.net/hubfs/48661310/2-Jul-09-2025-09-44-53-3264-AM.png',
+        'https://48661310.fs1.hubspotusercontent-na2.net/hubfs/48661310/3-Jul-09-2025-09-45-39-1329-AM.png',
+        'https://48661310.fs1.hubspotusercontent-na2.net/hubfs/48661310/4-Jul-09-2025-09-46-24-4952-AM.png',
+      ],
       specs: {
-        applications: 'Radiant, Pools, or Forced Air',
-        heatingPower: '5 kW / 17 MBH',
-        hashrate: '228 TH/s',
-        waterTemp: '158°F max',
-        dimensions: '25.1" x 21.5" x 25.2"',
-        capacity: 'Small-Med Homes'
+        Applications: 'Radiant, Pools, or Forced Air',
+        'Heating Power': '5 kW / 17 MBH',
+        Hashrate: '228 TH/s',
+        'Max Water Temp': '158°F',
+        Dimensions: '25.1" x 21.5" x 25.2"',
+        Capacity: 'Small–Med Homes',
       },
-      price: '$5,999',
-      buttonText: 'Contact for Deposit',
+      priceNote: 'Retail price TBD — contact us for current availability and pricing',
+      buttonText: 'Contact for Availability',
       buttonLink: '/contact',
+      buttonExternal: false,
       pdfLink: 'https://243159145.fs1.hubspotusercontent-na2.net/hubfs/243159145/Heat%20Core%20HS05/HeatCore_HS05_specs.pdf',
-      description: 'Smart, electric water boiler with included radiator for versatile hashrate heating applications. With a high water output temperature and detachable fan unit, this digital boiler can deliver warmth to either liquid loops, air ducts, or both.',
+      description:
+        'Smart electric water boiler for versatile building-integrated mining applications. With a high output water temperature and detachable fan radiator, this digital boiler delivers warmth to liquid loops, air ducts, or both.',
       features: [
-        'Radiant & air heating applications',
+        'Radiant & forced-air heating in one unit',
         'Integrated dry cooler radiator with extension tubing',
         'Integrated miner CDU with circulator pump',
-        'Easy control interface with simple buttons'
-
-      ]
+        'Easy control interface with simple buttons',
+      ],
     },
     {
       id: 'sh-canaan',
-      category: 'space-heating',
       name: 'Canaan Avalon Mini 3',
+      badge: 'Space Heating',
       images: [
         'https://coinminingcentral.com/cdn/shop/files/Canaan_Avalon_Mini_3_Heater___Bitcoin_Miner_1200x1200.png?v=1740763938',
         'https://coinminingcentral.com/cdn/shop/files/Canaan_Avalon_Mini_3_Heater_2_1200x1200.png?v=1740763938',
-        'https://www.canaan.io/static/themes/default/images/official/official_mini3_download.png'
-              ],
+        'https://www.canaan.io/static/themes/default/images/official/official_mini3_download.png',
+      ],
       specs: {
-        applications: 'Room Heating',
-        heatingPower: '800 W / 2.7 MBH',
-        hashrate: '37.5 TH/s',
-        noise: '45 dB',
-        dimensions: '30" x 4.1" x 8.5"',
-        capacity: '~350 sqft'
+        Applications: 'Room Heating',
+        'Heating Power': '800 W / 2.7 MBH',
+        Hashrate: '37.5 TH/s',
+        Noise: '45 dB',
+        Dimensions: '30" x 4.1" x 8.5"',
+        Capacity: '~350 sqft',
       },
       price: '$1,149',
       couponCode: 'EXERGY',
-      buttonText: 'Buy Now at AltairTech.io',
+      buttonText: 'Buy at AltairTech.io',
       buttonLink: 'https://altairtech.io/product/canaan-avalon-mini-3/',
-      description: 'Perfect for heating small to medium-sized rooms while generating passive revenue. The Avalon Mini 3 is easy to setup, can be operated remotely, and has a whisper quiet fan. You won\'t even know it\'s there. Fleet control is coming soon, allowing multiple Mini 3\'s to pair together for larger rooms or full building heating.',
+      buttonExternal: true,
+      description:
+        "Perfect for heating small to medium-sized rooms while generating passive revenue. The Avalon Mini 3 is easy to set up, can be operated remotely, and runs whisper-quiet. You won't even know it's there. Fleet control is coming soon, letting multiple Mini 3s pair together for larger rooms or full building heating.",
       features: [
-        'Simple to follow setup',
-        'WiFi connectivity',
-        'Mobile app control',
-        'Silent operation',
-        'Multi-system fleet control'
-      ]
+        'Simple setup with guided onboarding',
+        'WiFi connectivity & mobile app control',
+        'Silent operation at 45 dB',
+        'Multi-system fleet control (coming soon)',
+      ],
     },
     {
       id: 'fa-canaan',
-      category: 'forced-air',
       name: 'Canaan Avalon Q',
+      badge: 'Forced Air',
       images: [
         'https://www.canaan.io/static/themes/default/images/official/official_minerq_index1.png',
         'https://www.canaan.io/static/themes/default/images/official/official_minerq_functions.png',
         'https://www.canaan.io/static/themes/default/images/official/official_minerq_package.png',
-        'https://www.canaan.io/static/themes/default/images/official/official_mini3_download.png'
-              ],
+        'https://www.canaan.io/static/themes/default/images/official/official_mini3_download.png',
+      ],
       specs: {
-        applications: 'Air Heating',
-        heatingPower: '1674 W / 5.7 MBH',
-        hashrate: '90 TH/s',
-        noise: '45-65 dB',
-        dimensions: '18" x 5.2" x 17.4"',
-        capacity: '~750 sqft'
+        Applications: 'Air Heating',
+        'Heating Power': '1,674 W / 5.7 MBH',
+        Hashrate: '90 TH/s',
+        Noise: '45–65 dB',
+        Dimensions: '18" x 5.2" x 17.4"',
+        Capacity: '~750 sqft',
       },
       price: '$1,799',
       couponCode: 'EXERGY',
-      buttonText: 'Buy Now at AltairTech.io',
+      buttonText: 'Buy at AltairTech.io',
       buttonLink: 'https://altairtech.io/product/avalon-q/',
-      description: 'The Avalon Q is great for forced air heating integration. These 120V miners are already quiet and efficient. Connect them to the supply side ductwork of your furnace to augment heat throughout your living space. Fleet control is coming soon, allowing multiple Q\'s to pair together with thermostats and furnace circulator fans for larger rooms or full building heating.',
+      buttonExternal: true,
+      description:
+        'The Avalon Q integrates cleanly into forced-air systems. Connect it to the supply side of your existing ductwork to augment heat throughout your living space. Fleet control is coming soon, letting multiple units pair with thermostats and furnace circulators for larger rooms or whole-building heating.',
       features: [
-        'Simple to follow setup',
-        'WiFi connectivity',
-        'Mobile app control',
-        'Silent operation',
-        'Furnace integration',
-        'Multi-system fleet control'
-      ]
-    }
+        'Simple setup with guided onboarding',
+        'WiFi connectivity & mobile app control',
+        'Duct-ready forced-air integration',
+        'Multi-system fleet control (coming soon)',
+      ],
+    },
   ]
-
-  const filteredProducts = activeCategory
-    ? products.filter(product => 
-        Array.isArray(product.category) 
-          ? product.category.includes(activeCategory)
-          : product.category === activeCategory
-      )
-    : products
 
   return (
     <div className="bg-surface-50 dark:bg-surface-900">
       <Helmet>
-        <title>Hashrate Heating Products</title>
-        <meta name="description" content="Explore EXERGY's hashrate heating products including space heaters, forced air systems, hydronic boilers, and control systems. Bitcoin mining heaters that pay you while keeping you warm." />
-        <meta name="keywords" content="hashrate heaters, bitcoin mining heaters, space heating, forced air heating, hydronic heating, mining heat reuse products" />
+        <title>Products | Exergy Heat</title>
+        <meta
+          name="description"
+          content="Explore Exergy's building-integrated Bitcoin mining hardware — the CTRL1 Hub, open-source Home Assistant integrations, and Exergy-recommended third-party miners for every heating application."
+        />
+        <meta
+          name="keywords"
+          content="CTRL1 hub, home assistant bitcoin mining, bitcoin mining heater, hashrate heating products, Avalon Mini 3, Avalon Q, Heat Core HS05, building integrated mining, bitcoin heat reuse"
+        />
       </Helmet>
-      
-      {/* Hero Section with Custom Gradient */}
+
+      {/* ── Hero ── */}
       <div className="bg-gradient-to-r from-[#4970A5] to-[#718EBC] py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center">
-            <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              Our Products
-            </h1>
-            <p className="text-xl text-white/90 max-w-2xl mx-auto">
-              Tested and vetted solutions - for every application
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h1 className="text-4xl md:text-5xl font-bold text-white mb-5">Our Products</h1>
+          <p className="text-xl text-white/90 max-w-2xl mx-auto">
+            Hardware we build, test, and recommend for building-integrated Bitcoin mining systems.
+          </p>
+        </div>
+      </div>
+
+      {/* ── No Web Store Banner ── */}
+      <div className="bg-white dark:bg-surface-800 border-b border-surface-200 dark:border-surface-700">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
+          <div className="flex flex-col md:flex-row items-start md:items-center gap-6">
+            <div className="flex-shrink-0 flex items-center justify-center w-12 h-12 rounded-full bg-primary-100 dark:bg-primary-900">
+              <RefreshCw className="h-6 w-6 text-primary-600 dark:text-primary-300" />
+            </div>
+            <div className="flex-1">
+              <p className="text-base font-semibold text-surface-900 dark:text-surface-100 mb-1">
+                Our hardware lineup is always evolving.
+              </p>
+              <p className="text-surface-600 dark:text-surface-400 text-sm leading-relaxed">
+                We're constantly testing, validating, and improving systems for building-integrated mining — which means the products we carry change. We don't have an online store yet. If you want to buy something or want to know what we currently recommend, reach out and we'll tell you exactly what we have and what's right for your setup.
+              </p>
+            </div>
+            <div className="flex flex-col sm:flex-row gap-3 flex-shrink-0">
+              <Link
+                to="/contact"
+                className="inline-flex items-center justify-center px-5 py-2.5 bg-primary-600 text-white text-sm font-subheading rounded-lg hover:bg-primary-700 transition-colors whitespace-nowrap"
+              >
+                <MessageCircle className="h-4 w-4 mr-2" />
+                Contact Us
+              </Link>
+              <Link
+                to="/book-call"
+                className="inline-flex items-center justify-center px-5 py-2.5 border border-primary-600 text-primary-600 dark:text-primary-400 dark:border-primary-400 text-sm font-subheading rounded-lg hover:bg-primary-50 dark:hover:bg-primary-900/30 transition-colors whitespace-nowrap"
+              >
+                <CalendarDays className="h-4 w-4 mr-2" />
+                Book a Call
+              </Link>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 space-y-24">
+
+        {/* ─────────────────────────────────────────────
+            SECTION 1 — Exergy Products
+        ───────────────────────────────────────────── */}
+        <section>
+          {/* Section header */}
+          <div className="mb-10">
+            <div className="inline-flex items-center gap-2 bg-primary-100 dark:bg-primary-900/50 text-primary-700 dark:text-primary-300 text-xs font-semibold uppercase tracking-widest px-3 py-1.5 rounded-full mb-4">
+              <Zap className="h-3.5 w-3.5" />
+              Made by Exergy
+            </div>
+            <h2 className="text-3xl font-bold text-surface-900 dark:text-surface-100 mb-2">
+              Exergy Products
+            </h2>
+            <p className="text-surface-500 dark:text-surface-400 max-w-2xl">
+              Hardware and software we design and build in-house — the control layer that turns a Bitcoin miner into an intelligent heating appliance.
             </p>
           </div>
-        </div>
-      </div>
 
-      {/* Category Navigation */}
-      <div className="sticky top-0 bg-white dark:bg-surface-800 shadow-md z-10">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex overflow-x-auto py-4 gap-4">
-            <button
-              onClick={() => setActiveCategory(null)}
-              className={`flex items-center px-4 py-2 rounded-lg whitespace-nowrap transition-colors ${
-                activeCategory === null
-                  ? 'bg-primary-600 text-white'
-                  : 'bg-surface-100 dark:bg-surface-700 text-surface-700 dark:text-surface-300 hover:bg-primary-50 dark:hover:bg-surface-600'
-              }`}
-            >
-              All Products
-            </button>
-            {categories.map((category) => (
-              <button
-                key={category.id}
-                onClick={() => setActiveCategory(category.id)}
-                className={`flex items-center px-4 py-2 rounded-lg whitespace-nowrap transition-colors ${
-                  activeCategory === category.id
-                    ? 'bg-primary-600 text-white'
-                    : 'bg-surface-100 dark:bg-surface-700 text-surface-700 dark:text-surface-300 hover:bg-primary-50 dark:hover:bg-surface-600'
-                }`}
-              >
-                <category.icon className="h-5 w-5 mr-2" />
-                {category.name}
-              </button>
-            ))}
-          </div>
-        </div>
-      </div>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
 
-      {/* Products Grid */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
-        {filteredProducts.length === 0 ? (
-          <div className="text-center py-20">
-            <div className="bg-white dark:bg-surface-800 rounded-lg shadow-xl p-12 max-w-2xl mx-auto">
-              <div className="mb-6">
-                <div className="inline-flex items-center justify-center w-20 h-20 bg-primary-100 dark:bg-primary-900 rounded-full mb-4">
-                  {activeCategory && (
-                    (() => {
-                      const category = categories.find(cat => cat.id === activeCategory);
-                      const IconComponent = category?.icon;
-                      return IconComponent ? <IconComponent className="h-10 w-10 text-primary-600 dark:text-primary-400" /> : null;
-                    })()
-                  )}
+            {/* ── CTRL1 Hub ── */}
+            <div className="bg-white dark:bg-surface-800 rounded-2xl shadow-lg overflow-hidden flex flex-col">
+              {/* Color bar + icon header */}
+              <div className="bg-gradient-to-r from-[#4970A5] to-[#718EBC] px-8 py-10 flex flex-col items-center justify-center text-center">
+                <div className="w-20 h-20 rounded-2xl bg-white/15 backdrop-blur-sm flex items-center justify-center mb-5 border border-white/20">
+                  <Cpu className="h-10 w-10 text-white" />
                 </div>
-                <h2 className="text-3xl font-bold text-surface-900 dark:text-surface-100 mb-4">
-                  Contact Us
-                </h2>
-                <p className="text-surface-500 dark:text-surface-400">
-                  We offer custom systems and control solutions for Exergy projects. See our services page for more details. More off the shelf products and systems coming soon.
-                </p>
+                <h3 className="text-2xl font-bold text-white mb-1">CTRL1 Hub</h3>
+                <p className="text-white/80 text-sm">Purpose-built Home Assistant control hub</p>
               </div>
-              <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-                <Link
-                  to="/services"
-                  className="inline-flex items-center px-6 py-3 bg-primary-600 text-white rounded-lg hover:bg-primary-700 transition-colors text-base font-subheading"
-                >
-                  Explore Our Services
-                  <ArrowRight className="ml-2 h-5 w-5" />
-                </Link>
+
+              <div className="p-8 flex flex-col flex-1">
+                <div className="flex items-baseline gap-3 mb-5">
+                  <span className="text-3xl font-bold text-surface-900 dark:text-surface-100">$500</span>
+                  <span className="text-sm text-surface-500 dark:text-surface-400">one-time hardware purchase</span>
+                </div>
+
+                <p className="text-surface-600 dark:text-surface-400 text-sm leading-relaxed mb-6">
+                  The CTRL1 is the brain of every Exergy system. It connects your Bitcoin miner to your thermostat, solar inverter, and smart home — and comes pre-loaded with Exergy's open-source Home Assistant integrations right out of the box.
+                </p>
+
+                {/* Specs grid */}
+                <div className="bg-surface-50 dark:bg-surface-700/50 rounded-xl p-5 mb-6">
+                  <p className="text-xs font-semibold uppercase tracking-wider text-surface-400 dark:text-surface-500 mb-3">Hardware</p>
+                  <div className="grid grid-cols-2 gap-x-4 gap-y-2">
+                    {[
+                      ['Processor', 'Raspberry Pi 5'],
+                      ['Storage', 'NVMe SSD'],
+                      ['Wireless', 'Zigbee Antenna'],
+                      ['Case', 'Aluminum w/ Display'],
+                    ].map(([label, value]) => (
+                      <div key={label}>
+                        <dt className="text-xs text-surface-400 dark:text-surface-500">{label}</dt>
+                        <dd className="text-sm font-medium text-surface-800 dark:text-surface-200">{value}</dd>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+
+                {/* Feature bullets */}
+                <ul className="space-y-2.5 mb-8 flex-1">
+                  {[
+                    'Local control only — no cloud, no subscription',
+                    'Your data stays on your network',
+                    'Supports Zigbee, Z-Wave, and other IoT protocols',
+                    'Pre-loaded with Exergy open-source HA integrations',
+                    'Required for Tier 2 and Tier 3 Exergy installs',
+                    'Also sold standalone for DIY setups',
+                  ].map(feat => (
+                    <li key={feat} className="flex items-start text-sm text-surface-600 dark:text-surface-400">
+                      <span className="h-1.5 w-1.5 rounded-full bg-primary-500 mt-2 mr-3 flex-shrink-0" />
+                      {feat}
+                    </li>
+                  ))}
+                </ul>
+
                 <Link
                   to="/contact"
-                  className="inline-flex items-center px-6 py-3 border border-primary-600 text-primary-600 dark:text-primary-400 rounded-lg hover:bg-primary-50 dark:hover:bg-primary-900 transition-colors text-base font-subheading"
+                  className="inline-flex items-center justify-center w-full px-6 py-3 bg-primary-600 text-white rounded-xl hover:bg-primary-700 transition-colors text-sm font-subheading"
                 >
-                  Contact Us
-                  <ArrowRight className="ml-2 h-5 w-5" />
+                  Contact Us to Order
+                  <ArrowRight className="ml-2 h-4 w-4" />
                 </Link>
               </div>
             </div>
-          </div>
-        ) : (
-          <div className="grid grid-cols-1 gap-16">
-            {filteredProducts.map((product) => (
-              <div key={product.id} className="bg-white dark:bg-surface-800 rounded-lg shadow-xl overflow-hidden">
-                <div className="grid grid-cols-1 lg:grid-cols-2">
-                  <div className="relative h-[400px] lg:h-auto group">
-                    {/* Main Image */}
-                    <img
-                      src={product.images[currentImageIndex[product.id] || 0]}
-                      alt={product.name}
-                      className="absolute inset-0 w-full h-full object-cover object-center"
-                    />
-                    
-                    {/* Image Navigation - only show if multiple images */}
-                    {product.images.length > 1 && (
-                      <>
-                        <button
-                          onClick={() => prevImage(product.id, product.images.length)}
-                          className="absolute left-2 top-1/2 transform -translate-y-1/2 bg-black/50 hover:bg-black/70 text-white p-2 rounded-full opacity-0 group-hover:opacity-100 transition-opacity"
-                        >
-                          <ChevronLeft className="h-4 w-4" />
-                        </button>
-                        <button
-                          onClick={() => nextImage(product.id, product.images.length)}
-                          className="absolute right-2 top-1/2 transform -translate-y-1/2 bg-black/50 hover:bg-black/70 text-white p-2 rounded-full opacity-0 group-hover:opacity-100 transition-opacity"
-                        >
-                          <ChevronRight className="h-4 w-4" />
-                        </button>
-                        
-                        {/* Image Indicators */}
-                        <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2">
-                          {product.images.map((_, index) => (
-                            <button
-                              key={index}
-                              onClick={() => setCurrentImageIndex(prev => ({ ...prev, [product.id]: index }))}
-                              className={`w-2 h-2 rounded-full transition-colors ${
-                                index === (currentImageIndex[product.id] || 0)
-                                  ? 'bg-white'
-                                  : 'bg-white/50 hover:bg-white/75'
-                              }`}
-                            />
-                          ))}
-                        </div>
-                      </>
-                    )}
-                    
-                    <div className="absolute top-4 right-4 bg-primary-600 text-white px-4 py-1 rounded-full text-sm">
-                      {categories.find(cat => cat.id === product.category)?.name}
-                    </div>
-                  </div>
-                  <div className="p-8">
-                    <h3 className="text-2xl font-bold text-surface-900 dark:text-surface-100 mb-4">{product.name}</h3>
-                    <div className="flex items-center gap-4 mb-4">
-                      <p className="text-xl font-semibold text-primary-600 dark:text-primary-400">{product.price}</p>
-                      {product.couponCode && (
-                        <button
-                          onClick={() => handleCopyCoupon(product.couponCode)}
-                          className="flex items-center gap-2 bg-green-100 dark:bg-green-900 text-green-800 dark:text-green-200 px-3 py-1 rounded-full text-sm font-medium hover:bg-green-200 dark:hover:bg-green-800 transition-colors"
-                        >
-                          {copiedCoupon === product.couponCode ? (
-                            <>
-                              <Check className="h-4 w-4" />
-                              Copied!
-                            </>
-                          ) : (
-                            <>
-                              <Copy className="h-4 w-4" />
-                              Coupon: {product.couponCode}
-                            </>
-                          )}
-                        </button>
-                      )}
-                    </div>
-                    <p className="text-surface-600 dark:text-surface-400 mb-6">{product.description}</p>
 
-                    {/* Product Features */}
-                    <div className="mb-6">
-                      <h4 className="text-lg font-semibold text-surface-900 dark:text-surface-100 mb-3">Key Features</h4>
-                      <ul className="space-y-2">
-                        {product.features.map((feature, index) => (
-                          <li key={index} className="flex items-start text-surface-600 dark:text-surface-400">
-                            <div className="h-2 w-2 bg-primary-600 dark:bg-primary-400 rounded-full mr-3 mt-2 flex-shrink-0" />
-                            {feature}
+            {/* ── HA Integrations ── */}
+            <div className="bg-white dark:bg-surface-800 rounded-2xl shadow-lg overflow-hidden flex flex-col">
+              {/* Color bar + icon header */}
+              <div className="bg-gradient-to-r from-[#3D5A8A] to-[#4970A5] px-8 py-10 flex flex-col items-center justify-center text-center">
+                <div className="w-20 h-20 rounded-2xl bg-white/15 backdrop-blur-sm flex items-center justify-center mb-5 border border-white/20">
+                  <Github className="h-10 w-10 text-white" />
+                </div>
+                <h3 className="text-2xl font-bold text-white mb-1">Home Assistant Integrations</h3>
+                <p className="text-white/80 text-sm">Open-source smart home connectors for Bitcoin miners</p>
+              </div>
+
+              <div className="p-8 flex flex-col flex-1">
+                <div className="flex items-baseline gap-3 mb-5">
+                  <span className="text-3xl font-bold text-surface-900 dark:text-surface-100">Free</span>
+                  <span className="text-sm text-surface-500 dark:text-surface-400">open source via HACS</span>
+                </div>
+
+                <p className="text-surface-600 dark:text-surface-400 text-sm leading-relaxed mb-6">
+                  The control layer that makes a Bitcoin miner behave like a smart thermostat. It reads heat demand, responds to solar generation, and switches operating modes automatically — all inside Home Assistant.
+                </p>
+
+                {/* Supported platforms */}
+                <div className="bg-surface-50 dark:bg-surface-700/50 rounded-xl p-5 mb-6">
+                  <p className="text-xs font-semibold uppercase tracking-wider text-surface-400 dark:text-surface-500 mb-3">Supported Platforms</p>
+                  <div className="flex flex-wrap gap-2">
+                    {[
+                      'Braiins OS',
+                      'LuxOS',
+                      'Whatsminer',
+                      'BitAxe',
+                      'Ocean Pool',
+                      'Public Pool',
+                      'DATUM',
+                      'Bitcoin Economics',
+                    ].map(platform => (
+                      <span
+                        key={platform}
+                        className="inline-block bg-primary-100 dark:bg-primary-900/50 text-primary-700 dark:text-primary-300 text-xs font-medium px-2.5 py-1 rounded-full"
+                      >
+                        {platform}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+
+                {/* Feature bullets */}
+                <ul className="space-y-2.5 mb-8 flex-1">
+                  {[
+                    'Free to install via HACS (Home Assistant Community Store)',
+                    'Reads heat demand and adjusts miner output automatically',
+                    'Responds to solar generation in real time',
+                    'Switches operating modes based on your rules',
+                    'Works standalone — no CTRL1 required for DIY installs',
+                  ].map(feat => (
+                    <li key={feat} className="flex items-start text-sm text-surface-600 dark:text-surface-400">
+                      <span className="h-1.5 w-1.5 rounded-full bg-primary-500 mt-2 mr-3 flex-shrink-0" />
+                      {feat}
+                    </li>
+                  ))}
+                </ul>
+
+                <div className="flex flex-col sm:flex-row gap-3">
+                  <a
+                    href="https://github.com/exergyheat"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center justify-center flex-1 px-5 py-3 bg-surface-900 dark:bg-surface-700 text-white rounded-xl hover:bg-surface-800 dark:hover:bg-surface-600 transition-colors text-sm font-subheading"
+                  >
+                    <Github className="mr-2 h-4 w-4" />
+                    View on GitHub
+                  </a>
+                  <a
+                    href="https://docs.exergyheat.com"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center justify-center flex-1 px-5 py-3 border border-surface-300 dark:border-surface-600 text-surface-800 dark:text-surface-200 rounded-xl hover:bg-surface-50 dark:hover:bg-surface-700 transition-colors text-sm font-subheading"
+                  >
+                    <BookOpen className="mr-2 h-4 w-4" />
+                    Read the Docs
+                  </a>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </section>
+
+        {/* ─────────────────────────────────────────────
+            SECTION 2 — Integration Types
+        ───────────────────────────────────────────── */}
+        <section>
+          <div className="mb-10">
+            <h2 className="text-3xl font-bold text-surface-900 dark:text-surface-100 mb-2">
+              Integration Types
+            </h2>
+            <p className="text-surface-500 dark:text-surface-400 max-w-2xl">
+              Every building is different. Exergy supports five integration patterns — choose the one that fits your existing system, or mix and match.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-5">
+            {integrationTypes.map(({ icon: Icon, title, description }) => (
+              <div
+                key={title}
+                className="bg-white dark:bg-surface-800 rounded-2xl p-6 shadow-sm border border-surface-200 dark:border-surface-700 flex flex-col"
+              >
+                <div className="flex items-center justify-center w-11 h-11 rounded-xl bg-primary-100 dark:bg-primary-900/50 mb-4">
+                  <Icon className="h-5 w-5 text-primary-600 dark:text-primary-400" />
+                </div>
+                <h3 className="text-sm font-semibold text-surface-900 dark:text-surface-100 mb-2">{title}</h3>
+                <p className="text-xs text-surface-500 dark:text-surface-400 leading-relaxed">{description}</p>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        {/* ─────────────────────────────────────────────
+            SECTION 3 — Recommended Hardware
+        ───────────────────────────────────────────── */}
+        <section>
+          <div className="mb-10">
+            <div className="inline-flex items-center gap-2 bg-surface-100 dark:bg-surface-700 text-surface-600 dark:text-surface-400 text-xs font-semibold uppercase tracking-widest px-3 py-1.5 rounded-full mb-4">
+              Exergy-Recommended
+            </div>
+            <h2 className="text-3xl font-bold text-surface-900 dark:text-surface-100 mb-2">
+              Third-Party Hardware
+            </h2>
+            <p className="text-surface-500 dark:text-surface-400 max-w-2xl">
+              Miners we've tested, validated, and integrated into our systems. Hardware selection evolves — reach out to confirm current availability and what we recommend for your project.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 gap-12">
+            {thirdPartyProducts.map(product => {
+              const imgIdx = currentImageIndex[product.id] || 0
+              const specsOpen = expandedSpecs[product.id] || false
+
+              return (
+                <div
+                  key={product.id}
+                  className="bg-white dark:bg-surface-800 rounded-2xl shadow-lg overflow-hidden"
+                >
+                  <div className="grid grid-cols-1 lg:grid-cols-2">
+                    {/* Image panel */}
+                    <div className="relative h-80 lg:h-auto group bg-surface-100 dark:bg-surface-700">
+                      <img
+                        src={product.images[imgIdx]}
+                        alt={product.name}
+                        className="absolute inset-0 w-full h-full object-contain object-center p-6"
+                      />
+
+                      {/* Nav arrows */}
+                      {product.images.length > 1 && (
+                        <>
+                          <button
+                            onClick={() => prevImage(product.id, product.images.length)}
+                            aria-label="Previous image"
+                            className="absolute left-3 top-1/2 -translate-y-1/2 bg-black/40 hover:bg-black/60 text-white p-2 rounded-full opacity-0 group-hover:opacity-100 transition-opacity"
+                          >
+                            <ChevronLeft className="h-4 w-4" />
+                          </button>
+                          <button
+                            onClick={() => nextImage(product.id, product.images.length)}
+                            aria-label="Next image"
+                            className="absolute right-3 top-1/2 -translate-y-1/2 bg-black/40 hover:bg-black/60 text-white p-2 rounded-full opacity-0 group-hover:opacity-100 transition-opacity"
+                          >
+                            <ChevronRight className="h-4 w-4" />
+                          </button>
+                          {/* Dot indicators */}
+                          <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-1.5">
+                            {product.images.map((_, i) => (
+                              <button
+                                key={i}
+                                onClick={() =>
+                                  setCurrentImageIndex(prev => ({ ...prev, [product.id]: i }))
+                                }
+                                aria-label={`Go to image ${i + 1}`}
+                                className={`w-1.5 h-1.5 rounded-full transition-colors ${
+                                  i === imgIdx
+                                    ? 'bg-primary-500'
+                                    : 'bg-surface-400 dark:bg-surface-500 hover:bg-primary-400'
+                                }`}
+                              />
+                            ))}
+                          </div>
+                        </>
+                      )}
+
+                      {/* Badge */}
+                      <div className="absolute top-4 left-4 bg-primary-600 text-white text-xs font-semibold px-3 py-1 rounded-full">
+                        {product.badge}
+                      </div>
+                    </div>
+
+                    {/* Content panel */}
+                    <div className="p-8 flex flex-col">
+                      <h3 className="text-2xl font-bold text-surface-900 dark:text-surface-100 mb-2">
+                        {product.name}
+                      </h3>
+
+                      {/* Price row */}
+                      <div className="flex flex-wrap items-center gap-3 mb-4">
+                        {product.price && (
+                          <span className="text-2xl font-semibold text-primary-600 dark:text-primary-400">
+                            {product.price}
+                          </span>
+                        )}
+                        {product.priceNote && (
+                          <span className="text-sm text-surface-500 dark:text-surface-400 italic">
+                            {product.priceNote}
+                          </span>
+                        )}
+                        {product.couponCode && (
+                          <button
+                            onClick={() => handleCopyCoupon(product.couponCode!)}
+                            className="inline-flex items-center gap-1.5 bg-green-100 dark:bg-green-900/50 text-green-800 dark:text-green-300 text-xs font-medium px-3 py-1.5 rounded-full hover:bg-green-200 dark:hover:bg-green-900 transition-colors"
+                          >
+                            {copiedCoupon === product.couponCode ? (
+                              <>
+                                <Check className="h-3.5 w-3.5" />
+                                Copied!
+                              </>
+                            ) : (
+                              <>
+                                <Copy className="h-3.5 w-3.5" />
+                                Coupon: {product.couponCode}
+                              </>
+                            )}
+                          </button>
+                        )}
+                      </div>
+
+                      <p className="text-sm text-surface-600 dark:text-surface-400 leading-relaxed mb-5">
+                        {product.description}
+                      </p>
+
+                      {/* Features */}
+                      <ul className="space-y-2 mb-6">
+                        {product.features.map(f => (
+                          <li key={f} className="flex items-start text-sm text-surface-600 dark:text-surface-400">
+                            <span className="h-1.5 w-1.5 rounded-full bg-primary-500 mt-2 mr-3 flex-shrink-0" />
+                            {f}
                           </li>
                         ))}
                       </ul>
-                    </div>
 
-                    <button
-                      onClick={() => setExpandedProduct(expandedProduct === product.id ? null : product.id)}
-                      className="flex items-center justify-between w-full text-left mb-4"
-                    >
-                      <span className="text-lg font-semibold text-surface-900 dark:text-surface-100">Technical Highlights</span>
-                      {expandedProduct === product.id ? (
-                        <ChevronUp className="h-5 w-5 text-surface-600 dark:text-surface-400" />
-                      ) : (
-                        <ChevronDown className="h-5 w-5 text-surface-600 dark:text-surface-400" />
-                      )}
-                    </button>
+                      {/* Expandable specs */}
+                      <div className="mb-6 border-t border-surface-200 dark:border-surface-700 pt-4">
+                        <button
+                          onClick={() => toggleSpecs(product.id)}
+                          className="flex items-center justify-between w-full text-left"
+                        >
+                          <span className="text-sm font-semibold text-surface-700 dark:text-surface-300">
+                            Technical Specs
+                          </span>
+                          <ChevronLeft
+                            className={`h-4 w-4 text-surface-500 transition-transform duration-200 ${
+                              specsOpen ? '-rotate-90' : 'rotate-180'
+                            }`}
+                            style={{ transform: specsOpen ? 'rotate(-90deg)' : 'rotate(90deg)' }}
+                          />
+                        </button>
 
-                    {expandedProduct === product.id && (
-                      <div className="bg-surface-50 dark:bg-surface-700 rounded-lg p-4 mb-6">
-                        <div className="grid grid-cols-2 gap-4">
-                          {Object.entries(product.specs).map(([key, value]) => (
-                            <div key={key}>
-                              <dt className="text-sm font-medium text-surface-500 dark:text-surface-400 capitalize">
-                                {key.replace(/([A-Z])/g, ' $1').trim()}
-                              </dt>
-                              <dd className="text-sm text-surface-900 dark:text-surface-100">{value}</dd>
-                            </div>
-                          ))}
-                        </div>
+                        {specsOpen && (
+                          <div className="mt-4 bg-surface-50 dark:bg-surface-700/50 rounded-xl p-4 grid grid-cols-2 gap-x-4 gap-y-3">
+                            {Object.entries(product.specs).map(([key, value]) => (
+                              <div key={key}>
+                                <dt className="text-xs text-surface-400 dark:text-surface-500">{key}</dt>
+                                <dd className="text-sm font-medium text-surface-800 dark:text-surface-200">{value}</dd>
+                              </div>
+                            ))}
+                          </div>
+                        )}
                       </div>
-                    )}
 
-                    <div className={`${product.pdfLink ? 'flex flex-col sm:flex-row gap-4' : ''} pt-6 border-t border-surface-200 dark:border-surface-700`}>
-                      {product.buttonLink.startsWith('http') ? (
-                        <a
-                          href={product.buttonLink}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className={`${product.pdfLink ? 'w-full sm:flex-1' : 'w-full'} inline-flex items-center justify-center px-6 py-3 bg-primary-600 text-white rounded-lg hover:bg-primary-700 transition-colors text-base font-subheading`}
-                        >
-                          {product.buttonText}
-                          <ArrowRight className="ml-2 h-5 w-5" />
-                        </a>
-                      ) : (
-                        <Link
-                          to={product.buttonLink}
-                          className={`${product.pdfLink ? 'w-full sm:flex-1' : 'w-full'} inline-flex items-center justify-center px-6 py-3 bg-primary-600 text-white rounded-lg hover:bg-primary-700 transition-colors text-base font-subheading`}
-                        >
-                          {product.buttonText}
-                          <ArrowRight className="ml-2 h-5 w-5" />
-                        </Link>
-                      )}
-                      {product.pdfLink && (
-                        <a
-                          href={product.id === 'imm-foghashing-6' ? '/services' : product.pdfLink}
-                          target={product.id === 'imm-foghashing-6' ? undefined : '_blank'}
-                          rel={product.id === 'imm-foghashing-6' ? undefined : 'noopener noreferrer'}
-                          className="w-full sm:w-auto px-6 py-3 bg-surface-100 dark:bg-surface-700 text-surface-900 dark:text-surface-100 rounded-lg hover:bg-surface-200 dark:hover:bg-surface-600 transition-colors text-base font-subheading flex items-center justify-center"
-                        >
-                          {product.id === 'imm-foghashing-6' ? 'Help Me Size' : 'View Specs'}
-                        </a>
-                      )}
+                      {/* CTAs */}
+                      <div className="mt-auto flex flex-col sm:flex-row gap-3">
+                        {product.buttonExternal ? (
+                          <a
+                            href={product.buttonLink}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="inline-flex items-center justify-center flex-1 px-6 py-3 bg-primary-600 text-white rounded-xl hover:bg-primary-700 transition-colors text-sm font-subheading"
+                          >
+                            {product.buttonText}
+                            <ExternalLink className="ml-2 h-4 w-4" />
+                          </a>
+                        ) : (
+                          <Link
+                            to={product.buttonLink}
+                            className="inline-flex items-center justify-center flex-1 px-6 py-3 bg-primary-600 text-white rounded-xl hover:bg-primary-700 transition-colors text-sm font-subheading"
+                          >
+                            {product.buttonText}
+                            <ArrowRight className="ml-2 h-4 w-4" />
+                          </Link>
+                        )}
+                        {product.pdfLink && (
+                          <a
+                            href={product.pdfLink}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="inline-flex items-center justify-center px-5 py-3 border border-surface-300 dark:border-surface-600 text-surface-700 dark:text-surface-300 rounded-xl hover:bg-surface-50 dark:hover:bg-surface-700 transition-colors text-sm font-subheading"
+                          >
+                            View Specs
+                          </a>
+                        )}
+                      </div>
                     </div>
                   </div>
                 </div>
-              </div>
-            ))}
+              )
+            })}
           </div>
-        )}
+        </section>
 
-        {/* Coming Soon Notice - Only show for "All Products" category */}
-        {activeCategory === null && filteredProducts.length > 0 && (
-          <div className="mt-16 text-center">
-            <div className="bg-white dark:bg-surface-800 rounded-lg shadow-lg p-8 max-w-2xl mx-auto">
-              <h3 className="text-2xl font-bold text-surface-900 dark:text-surface-100 mb-4">
-                More Systems Coming Soon
-              </h3>
-              <p className="text-surface-600 dark:text-surface-400 mb-4">
-                We're expanding our product lineup with additional residential and commercial systems.
-              </p>
-              <p className="text-surface-600 dark:text-surface-400">
-                Check back soon for more innovative appliances and devices that monetize heat.
-              </p>
-            </div>
-          </div>
-        )}
       </div>
 
-      {/* CTA Section with Custom Gradient */}
+      {/* ── Bottom CTA ── */}
       <div className="bg-gradient-to-r from-[#4970A5] to-[#718EBC] py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl font-bold text-white mb-6">
-            Not Sure What You Need?
+          <h2 className="text-3xl font-bold text-white mb-4">
+            Not Sure What's Right for Your Setup?
           </h2>
           <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
-            Get a Heat Audit to size the right solution and maximize savings.
+            We'll help you figure out which hardware fits your building, budget, and goals — and tell you what we actually have in stock.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <Link
-              to="/services"
-              className="inline-flex items-center px-8 py-4 bg-white text-primary-600 rounded-lg hover:bg-white/90 transition-colors text-base font-subheading"
+              to="/contact"
+              className="inline-flex items-center px-8 py-4 bg-white text-primary-600 font-subheading rounded-lg hover:bg-white/90 transition-colors"
             >
-              Explore Our Services
+              Contact Us
               <ArrowRight className="ml-2 h-5 w-5" />
             </Link>
             <Link
               to="/book-call"
-              className="inline-flex items-center px-6 py-3 border border-white text-base font-subheading rounded-md text-white hover:bg-white hover:text-primary-500 transition-colors"
+              className="inline-flex items-center px-6 py-3 border border-white text-white font-subheading rounded-lg hover:bg-white hover:text-primary-500 transition-colors"
             >
               Book an Intro Call
               <ArrowRight className="ml-2 h-5 w-5" />

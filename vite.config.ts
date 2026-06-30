@@ -29,6 +29,7 @@ export default defineConfig({
   },
   assetsInclude: ['**/*.md'],
   server: {
+    port: process.env.PORT ? parseInt(process.env.PORT) : 5173,
     headers: {
       'Cache-Control': 'public, max-age=31536000'
     }

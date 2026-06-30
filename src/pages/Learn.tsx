@@ -35,10 +35,10 @@ const Learn = () => {
       link: "/faq"
     },
     {
-      title: "Content",
-      description: "Explore hashrate heating content, videos, guides, tutorials and more.",
+      title: "Community",
+      description: "Join the Exergy community forum — ask questions, share installs, get help from other building-integrated mining operators.",
       icon: BookOpen,
-      link: "/content"
+      link: "https://support.exergyheat.com"
     },
     {
       title: "Blog",
@@ -52,7 +52,7 @@ const Learn = () => {
     {
       title: "Electricity In - Heat Out",
       icon: Zap,
-      description: "Electric heaters convert power into heat with no waste. Typically, electric heat is more expensive than gas heat, and thus less popular. Hashrate Heating changes the norm.",
+      description: "Every watt of electricity consumed by a Bitcoin miner becomes heat — 100% of it. This isn't a feature, it's physics. The same thermodynamic law that makes your laptop warm makes miners ideal heaters.",
       image: "electric_heat_conversion.png",
       details: [
         "100% energy conversion efficiency",
@@ -64,7 +64,7 @@ const Learn = () => {
     {
       title: "Open Monetary Protocol",
       icon: Bitcoin,
-      description: "Bitcoin mining is an open source protocol (like the world wide web) that rewards participants for contributing energy to process bitcoin transactions. The more energy you contribute, the more you earn, and the more heat you generate.",
+      description: "Bitcoin mining is an open protocol — like the internet, anyone can participate. Miners contribute energy to process Bitcoin transactions and earn rewards proportionally. The more heat your building needs, the more your miner runs, the more you earn.",
       image: "bitcoin_miners.png",
       details: [
         "Anyone can participate - like anyone can use the internet",
@@ -74,9 +74,9 @@ const Learn = () => {
       ]
     },
     {
-      title: "Combining the Two: Smart Heat",
+      title: "Building-Integrated Mining",
       icon: Cpu,
-      description: "Regular bitoin miners are purposefully power hungry to maximize earnings. This inherently makes them great for heating. Hashrate Heating does the obvious - put bitcoin miners into heating systems. The result? Heat that pays.",
+      description: "Building-integrated mining puts the miner where the heat is already needed. The result: your heating system earns Bitcoin every time it runs. One device, two outputs, no extra cost.",
       image: "bitcoin_home_heat.png",
       details: [
         "Maximum efficiency. No waste - plus revenue",
@@ -94,22 +94,22 @@ const Learn = () => {
       description: 'Standalone units for heating individual rooms, garages, workshops, or specific areas. Plug-and-play simplicity.',
       image: 'https://images.pexels.com/photos/7745932/pexels-photo-7745932.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
       features: [
-        'Portable and flexible',
-        'Quiet operation',
-        'WiFi connectivity',
-        'Mobile app control'
+        'Zone-level comfort control',
+        'Wireless temp sensor integration',
+        'Home Assistant controlled',
+        'Silent operation'
       ]
-    }, 
+    },
     {
       id: 'forced-air',
       title: 'Forced Air Furnaces',
       description: 'Replace or supplement your traditional furnace with hashrate heating. Perfect for whole-building heating with existing ductwork.',
       image: 'https://images.pexels.com/photos/5505931/pexels-photo-5505931.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
       features: [
-        'Integrates with existing HVAC',
-        'Optimized temperature control',
-        'Smart thermostat connectivity',
-        'Completely hidden passive income'
+        'Integrates with existing ductwork',
+        'Stage 1 heat, furnace stays as backup',
+        'Thermostat compatible',
+        'Hidden in mechanical room'
       ]
     },
     {
@@ -118,10 +118,10 @@ const Learn = () => {
       description: 'Underfloor heating systems that provide comfortable, even heat distribution throughout your space from the ground up.',
       image: 'https://cdn11.bigcommerce.com/s-8s3kdqoux2/product_images/uploaded_images/expert-thumb-pros-and-cons-of-in-floor-radiant-heating-.jpg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
       features: [
-        'Even heat distribution',
-        'Increased efficiency',
-        'Silent operation',
-        'Luxury comfort'
+        'Connects to hydronic loop',
+        'Works with existing zone valves',
+        'Electric boiler replacement',
+        'Silent operation'
       ]
     },
     {
@@ -130,10 +130,10 @@ const Learn = () => {
       description: 'Keep your pool or spa at the perfect temperature year-round while generating revenue from the heating process.',
       image: 'https://images.pexels.com/photos/6667425/pexels-photo-6667425.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
       features: [
-        'Year-round swimming',
-        'Precise temperature control',
-        'Offset heating costs',
-        'Digital control'
+        'Year-round heating',
+        'Dedicated miner per water body',
+        'Bitcoin-heated hot tub at The Space',
+        'Runs off excess solar'
       ]
     },
     {
@@ -142,10 +142,10 @@ const Learn = () => {
       description: 'Commercial and industrial heating systems for businesses with low-grade heating applications.',
       image: 'https://images.pexels.com/photos/2886937/pexels-photo-2886937.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
       features: [
-        'Breweries & distilleries',
-        'Greenhouses',
-        'Apartments and large warehouses',
-        'District heating'
+        'Commercial TOU rate optimization',
+        'Multi-zone control',
+        'MEP team integration',
+        'Specialist consulting available'
       ]
     }
   ]
@@ -181,7 +181,7 @@ const Learn = () => {
             Learn The Technology
           </h1>
           <p className="text-xl text-white/90 max-w-2xl mx-auto">
-            The most revolutionary heating tech in over a century - heat that pays
+            Understand building-integrated mining — the technology, the economics, and the integration options.
           </p>
         </div>
       </div>
@@ -401,7 +401,7 @@ const Learn = () => {
             to="/portfolio"
             className="inline-flex items-center px-8 py-4 bg-white text-primary-600 rounded-lg hover:bg-white/90 transition-colors text-base font-subheading"
           >
-            See our Portfolio
+            See Case Studies
             <Eye className="ml-2 h-5 w-5" />
           </Link>
         </div>

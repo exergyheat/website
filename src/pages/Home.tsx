@@ -1,6 +1,6 @@
 import React from 'react'
 import { Helmet } from 'react-helmet-async'
-import { ArrowRight, Wrench, Cpu, Bitcoin, Flame, DollarSign, Zap, Calculator, Search, Cog, Monitor, Users } from 'lucide-react'
+import { ArrowRight, Wrench, Cpu, Bitcoin, Flame, DollarSign, Zap, Calculator, Users } from 'lucide-react'
 import { Link } from 'react-router-dom'
 import { useTypewriter } from '../hooks/useTypewriter'
 import ProjectCarousel from '../components/ProjectCarousel'
@@ -125,84 +125,30 @@ const Home = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
-            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6"
+            className="grid grid-cols-1 md:grid-cols-3 gap-6"
           >
-            {/* Products Card */}
-            <Link
-              to="/products"
-              className="bg-surface-50 dark:bg-surface-700 rounded-lg p-6 hover:shadow-lg transition-all duration-300 hover:scale-105 group md:col-span-1 lg:col-span-1"
+            {/* Self-Serve Card */}
+            <a
+              href="https://calc.exergyheat.com"
+              className="bg-surface-50 dark:bg-surface-700 rounded-lg p-6 hover:shadow-lg transition-all duration-300 hover:scale-105 group"
             >
               <div className="flex justify-center mb-4">
                 <div className="p-4 bg-primary-100 dark:bg-primary-900 rounded-full group-hover:bg-primary-200 dark:group-hover:bg-primary-800 transition-colors">
-                  <ArrowRight className="h-8 w-8 text-primary-600 dark:text-primary-400" />
+                  <Calculator className="h-8 w-8 text-primary-600 dark:text-primary-400" />
                 </div>
               </div>
               <h3 className="text-lg font-subheading text-surface-900 dark:text-surface-100 mb-2 text-center">
-                View Our<br />Products
+                Self-Serve
               </h3>
               <p className="text-sm font-body text-surface-600 dark:text-surface-400 text-center">
-                Tested and vetted hashrate heating solutions
+                Free calculators, open-source HA integrations, docs, and weekly office hours. Figure it out yourself — we've made that possible.
               </p>
-            </Link>
+            </a>
 
-            {/* Heat Audit Service */}
+            {/* Guided Card */}
             <Link
-              to="/services#audit-service"
-              className="bg-surface-50 dark:bg-surface-700 rounded-lg p-6 hover:shadow-lg transition-all duration-300 hover:scale-105 group md:col-span-1 lg:col-span-1"
-            >
-              <div className="flex justify-center mb-4">
-                <div className="p-4 bg-primary-100 dark:bg-primary-900 rounded-full group-hover:bg-primary-200 dark:group-hover:bg-primary-800 transition-colors">
-                  <Search className="h-8 w-8 text-primary-600 dark:text-primary-400" />
-                </div>
-              </div>
-              <h3 className="text-lg font-subheading text-surface-900 dark:text-surface-100 mb-2 text-center">
-                Sizing &<br />Savings
-              </h3>
-              <p className="text-sm font-body text-surface-600 dark:text-surface-400 text-center">
-                Figure out what you need, and how much you'll earn
-              </p>
-            </Link>
-
-            {/* Installation Service */}
-            <Link
-              to="/services#installation-service"
-              className="bg-surface-50 dark:bg-surface-700 rounded-lg p-6 hover:shadow-lg transition-all duration-300 hover:scale-105 group md:col-span-1 lg:col-span-1"
-            >
-              <div className="flex justify-center mb-4">
-                <div className="p-4 bg-primary-100 dark:bg-primary-900 rounded-full group-hover:bg-primary-200 dark:group-hover:bg-primary-800 transition-colors">
-                  <Cog className="h-8 w-8 text-primary-600 dark:text-primary-400" />
-                </div>
-              </div>
-              <h3 className="text-lg font-subheading text-surface-900 dark:text-surface-100 mb-2 text-center">
-                Install<br />Assistance
-              </h3>
-              <p className="text-sm font-body text-surface-600 dark:text-surface-400 text-center">
-                Get your hardware, install plan and system online
-              </p>
-            </Link>
-
-            {/* Monitoring Service */}
-            <Link
-              to="/services#monitoring-service"
-              className="bg-surface-50 dark:bg-surface-700 rounded-lg p-6 hover:shadow-lg transition-all duration-300 hover:scale-105 group md:col-span-1 lg:col-span-1"
-            >
-              <div className="flex justify-center mb-4">
-                <div className="p-4 bg-primary-100 dark:bg-primary-900 rounded-full group-hover:bg-primary-200 dark:group-hover:bg-primary-800 transition-colors">
-                  <Monitor className="h-8 w-8 text-primary-600 dark:text-primary-400" />
-                </div>
-              </div>
-              <h3 className="text-lg font-subheading text-surface-900 dark:text-surface-100 mb-2 text-center">
-                Automatic<br />Monitoring
-              </h3>
-              <p className="text-sm font-body text-surface-600 dark:text-surface-400 text-center">
-                Receive notifications when it's time for service
-              </p>
-            </Link>
-
-            {/* Consulting Service */}
-            <Link
-              to="/services#consulting-service"
-              className="bg-surface-50 dark:bg-surface-700 rounded-lg p-6 hover:shadow-lg transition-all duration-300 hover:scale-105 group md:col-span-2 lg:col-span-1"
+              to="/services"
+              className="bg-surface-50 dark:bg-surface-700 rounded-lg p-6 hover:shadow-lg transition-all duration-300 hover:scale-105 group"
             >
               <div className="flex justify-center mb-4">
                 <div className="p-4 bg-primary-100 dark:bg-primary-900 rounded-full group-hover:bg-primary-200 dark:group-hover:bg-primary-800 transition-colors">
@@ -210,10 +156,28 @@ const Home = () => {
                 </div>
               </div>
               <h3 className="text-lg font-subheading text-surface-900 dark:text-surface-100 mb-2 text-center">
-                Team<br />Consulting
+                Guided
               </h3>
               <p className="text-sm font-body text-surface-600 dark:text-surface-400 text-center">
-                Size, install, or repair hashrate heat yourself
+                We audit your building, design the integration plan, source hardware, and guide your install remotely. Available anywhere in the US.
+              </p>
+            </Link>
+
+            {/* Done-For-You Card */}
+            <Link
+              to="/services"
+              className="bg-surface-50 dark:bg-surface-700 rounded-lg p-6 hover:shadow-lg transition-all duration-300 hover:scale-105 group"
+            >
+              <div className="flex justify-center mb-4">
+                <div className="p-4 bg-primary-100 dark:bg-primary-900 rounded-full group-hover:bg-primary-200 dark:group-hover:bg-primary-800 transition-colors">
+                  <Wrench className="h-8 w-8 text-primary-600 dark:text-primary-400" />
+                </div>
+              </div>
+              <h3 className="text-lg font-subheading text-surface-900 dark:text-surface-100 mb-2 text-center">
+                Done-For-You
+              </h3>
+              <p className="text-sm font-body text-surface-600 dark:text-surface-400 text-center">
+                Full audit, hardware, installation, and commissioning. We handle everything. Local to Denver, CO (~100mi radius).
               </p>
             </Link>
           </motion.div>
@@ -228,9 +192,9 @@ const Home = () => {
       <div className="py-20 bg-surface-50 dark:bg-surface-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-3xl font-heading text-surface-900 dark:text-surface-100 mb-4">Too Good to Be True?</h2>
+            <h2 className="text-3xl font-heading text-surface-900 dark:text-surface-100 mb-4">How Building-Integrated Mining Works</h2>
             <p className="text-xl font-body text-surface-600 dark:text-surface-400 max-w-2xl mx-auto">
-              Nope - Here's how it works
+              One device. Two outputs. No waste.
             </p>
           </div>
 
@@ -337,21 +301,21 @@ const Home = () => {
           <div className="mt-20 grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="text-center">
               <div className="flex justify-center">
-                <Wrench className="h-12 w-12 text-primary-500 dark:text-secondary-500" />
+                <Cpu className="h-12 w-12 text-primary-500 dark:text-secondary-500" />
               </div>
-              <h3 className="mt-4 text-xl font-subheading text-surface-900 dark:text-surface-100">Best-in-Class Hardware</h3>
+              <h3 className="mt-4 text-xl font-subheading text-surface-900 dark:text-surface-100">Control-First Architecture</h3>
               <p className="mt-2 font-body text-surface-600 dark:text-surface-400">
-                Exergy only offers the best hashrate heating systems. Tested and vetted to deliver the warmth you need, while paying to do so.
+                Every Exergy system runs on Home Assistant — open-source, local, no cloud dependency. Your data stays on your network. Your system works if the internet goes down.
               </p>
             </div>
 
             <div className="text-center">
               <div className="flex justify-center">
-                <Cpu className="h-12 w-12 text-primary-500 dark:text-secondary-500" />
+                <Wrench className="h-12 w-12 text-primary-500 dark:text-secondary-500" />
               </div>
-              <h3 className="mt-4 text-xl font-subheading text-surface-900 dark:text-surface-100">Custom Integration</h3>
+              <h3 className="mt-4 text-xl font-subheading text-surface-900 dark:text-surface-100">Building-Integrated, Not a Gadget</h3>
               <p className="mt-2 font-body text-surface-600 dark:text-surface-400">
-                Exergy ensures proper sizing, control and installation to deliver seemless integration, whatever your heating demands.
+                We integrate miners into your actual HVAC system — ductwork, radiant loops, hydronic circuits, solar arrays. Not a space heater you plug into a wall.
               </p>
             </div>
 
@@ -359,9 +323,9 @@ const Home = () => {
               <div className="flex justify-center">
                 <Bitcoin className="h-12 w-12 text-primary-500 dark:text-secondary-500" />
               </div>
-              <h3 className="mt-4 text-xl font-subheading text-surface-900 dark:text-surface-100">Maximum Revenue</h3>
+              <h3 className="mt-4 text-xl font-subheading text-surface-900 dark:text-surface-100">Real Installs, Real Data</h3>
               <p className="mt-2 font-body text-surface-600 dark:text-surface-400">
-                Exergy's Heat Audit optimizes bitcoin heating power to your demand for maximum earnings and the best recommendation.
+                Our case studies come from buildings we've actually built — with measured duty cycles, real Bitcoin earnings, and actual utility bill deltas. No theoretical projections.
               </p>
             </div>
           </div>
@@ -395,24 +359,7 @@ const Home = () => {
             whileInView="visible"
             viewport={{ once: true, margin: "-100px" }}
           >
-            {/* Card 1: Why Bitcoin? */}
-            <motion.div className="group" variants={cardVariants}>
-              <div className="bg-surface-50 dark:bg-surface-700 rounded-lg p-8 h-full transform transition-transform group-hover:scale-105 shadow-lg">
-                <div className="flex justify-center mb-6">
-                  <div className="p-4 bg-secondary-100 dark:bg-secondary-900 rounded-full">
-                    <Bitcoin className="h-12 w-12 text-primary-500 dark:text-secondary-500" />
-                  </div>
-                </div>
-                <h3 className="text-xl font-subheading text-surface-900 dark:text-surface-100 mb-4 text-center">
-                  Why Bitcoin?
-                </h3>
-                <p className="font-body text-surface-600 dark:text-surface-400 text-center">
-                  Bitcoin is a digital commodity. A neutral protocol, open for anyone to use, with no controlling authority.
-                </p>
-              </div>
-            </motion.div>
-
-            {/* Card 2: Does it Heat Well? */}
+            {/* Card 1: Does it heat as well as a furnace? */}
             <motion.div className="group" variants={cardVariants}>
               <div className="bg-surface-50 dark:bg-surface-700 rounded-lg p-8 h-full transform transition-transform group-hover:scale-105 shadow-lg">
                 <div className="flex justify-center mb-6">
@@ -421,27 +368,44 @@ const Home = () => {
                   </div>
                 </div>
                 <h3 className="text-xl font-subheading text-surface-900 dark:text-surface-100 mb-4 text-center">
-                  Does it Heat The Same?
+                  Does it heat as well as a furnace?
                 </h3>
                 <p className="font-body text-surface-600 dark:text-surface-400 text-center">
-                  Yes. Hashrate heaters can meet all comfort heating needs - while paying you whenever they're used.
+                  Yes. In our Colorado Mountain Home install, a single miner handled 98.6% of total heat demand over 43 days — gas ran for just 4.4 hours.
                 </p>
               </div>
             </motion.div>
 
-            {/* Card 3: Can I Control It? */}
+            {/* Card 2: Will my electric bill go up? */}
             <motion.div className="group" variants={cardVariants}>
               <div className="bg-surface-50 dark:bg-surface-700 rounded-lg p-8 h-full transform transition-transform group-hover:scale-105 shadow-lg">
                 <div className="flex justify-center mb-6">
                   <div className="p-4 bg-secondary-100 dark:bg-secondary-900 rounded-full">
-                    <Cpu className="h-12 w-12 text-primary-500 dark:text-secondary-500" />
+                    <Zap className="h-12 w-12 text-primary-500 dark:text-secondary-500" />
+                  </div>
+                </div>
+                <h3 className="text-xl font-subheading text-surface-900 dark:text-surface-100 mb-4 text-center">
+                  Will my electric bill go up?
+                </h3>
+                <p className="font-body text-surface-600 dark:text-surface-400 text-center">
+                  Yes — and that's expected. Electric goes up, gas drops to near-zero, Bitcoin accumulates. Your Exergy Audit shows you the exact net position before you commit.
+                </p>
+              </div>
+            </motion.div>
+
+            {/* Card 3: How much can I earn? */}
+            <motion.div className="group" variants={cardVariants}>
+              <div className="bg-surface-50 dark:bg-surface-700 rounded-lg p-8 h-full transform transition-transform group-hover:scale-105 shadow-lg">
+                <div className="flex justify-center mb-6">
+                  <div className="p-4 bg-secondary-100 dark:bg-secondary-900 rounded-full">
+                    <Bitcoin className="h-12 w-12 text-primary-500 dark:text-secondary-500" />
                   </div>
                 </div>
                 <h3 className="text-xl font-subheading text-surface-900 dark:text-surface-100 mb-4 text-center">
                   How much can I earn?
                 </h3>
                 <p className="font-body text-surface-600 dark:text-surface-400 text-center">
-                  Hashrate heating can sigificantly offset heating costs with revenue, sometimes exceeding 100% savings.
+                  Depends on your electricity rate, current fuel, and system size. Our calculator runs the real math — or we do it for you with an Exergy Audit.
                 </p>
               </div>
             </motion.div>
@@ -468,19 +432,19 @@ const Home = () => {
         </div>
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl font-heading text-white mb-4">
-            Ready to get paid for heat?
+            Ready to see if your building qualifies?
           </h2>
           <p className="text-xl font-body text-white/90 mb-8">
-            Get in touch for a free consultation.
+            Run the numbers yourself with our free calculator, or talk to us.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <Link
-              to="/contact"
+            <a
+              href="https://calc.exergyheat.com"
               className="inline-flex items-center px-6 py-3 border border-transparent text-base font-subheading rounded-md text-primary-700 bg-white hover:bg-white/90 transition-colors"
             >
-              Contact Us
+              Try the Calculator
               <ArrowRight className="ml-2 h-5 w-5" />
-            </Link>
+            </a>
             <Link
               to="/book-call"
               className="inline-flex items-center px-6 py-3 border border-white text-base font-subheading rounded-md text-white hover:bg-white hover:text-primary-500 transition-colors"

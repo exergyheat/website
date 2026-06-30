@@ -40,7 +40,7 @@ const BookCall = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">Book a Call</h1>
           <p className="text-xl text-white/90 max-w-2xl mx-auto">
-            Chat with our team to discuss your hashrate heating needs
+            15 minutes — we'll figure out if and how building-integrated mining makes sense for your project.
           </p>
         </div>
       </div>
@@ -49,10 +49,10 @@ const BookCall = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
         <div className="text-center mb-8">
           <h2 className="text-2xl font-bold text-surface-900 dark:text-surface-100 mb-4">
-            Talk to an Expert at Exergy
+            Book a Free 15-Minute Intro Call
           </h2>
           <p className="text-lg text-surface-600 dark:text-surface-400 max-w-2xl mx-auto">
-            Book a call with our team to discuss how hashrate heating can benefit you.
+            Tell us about your building, your current heating setup, and what you're hoping to accomplish. We'll tell you honestly whether it's a good fit and which path makes the most sense — Self-Serve, Guided, or Done-For-You.
           </p>
         </div>
         
