@@ -128,6 +128,16 @@ const About = () => {
       buttonText: 'View Our Work',
       buttonLink: '/portfolio',
       external: false
+    },
+    {
+      id: 'monitor',
+      title: 'Monitor, Tune & Stack',
+      subtitle: 'The system keeps working. So does your stack.',
+      description: 'A commissioned system isn\'t a set-and-forget. We log the first full heating season, compare actual performance to estimates, tune setpoints, and manage seasonal transitions. Exergy Relay monitors your system continuously — alerting you to performance degradation before you notice it, and paying for itself through a small hashrate split rather than a subscription. After Year 1, we review the economics and plan for expansion.',
+      icon: Zap,
+      buttonText: 'Learn About Exergy Relay',
+      buttonLink: '/services',
+      external: false
     }
   ]
 
