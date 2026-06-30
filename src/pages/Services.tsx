@@ -63,14 +63,11 @@ const Services = () => {
             </span>
             <span className="flex items-center gap-2">
               <span className="w-2 h-2 rounded-full bg-green-500 inline-block"></span>
-              Community forum at{' '}
-              <a href="https://support.exergyheat.com" target="_blank" rel="noopener noreferrer" className="underline hover:text-primary-600">
-                support.exergyheat.com
-              </a>
+              <a href="https://support.exergyheat.com" target="_blank" rel="noopener noreferrer" className="underline hover:text-primary-600">Support Forum</a>
             </span>
             <span className="flex items-center gap-2">
               <span className="w-2 h-2 rounded-full bg-green-500 inline-block"></span>
-              15-min intro call
+              <Link to="/book-call" className="underline hover:text-primary-600">15-min intro call</Link>
             </span>
           </div>
         </div>
