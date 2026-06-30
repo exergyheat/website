@@ -80,19 +80,19 @@ const About = () => {
   const team = [
     {
       name: 'Tyler Stevens',
-      role: 'CEO',
+      role: 'Founder, Product Lead',
       image: '/IMG_5108.JPG',
       description: 'Author of Bitcoin Mining Heat Reuse and founder of the Heatpunk movement. Tyler leads product vision, brand, and Exergy\'s relationships in the Bitcoin and building science communities.'
     },
     {
       name: 'Dylan',
-      role: 'COO & CFO',
+      role: 'Co-Founder, Technical + Finance Lead',
       image: '/DylanS_headshot.jpeg',
       description: 'Licensed engineer and Exergy\'s technical co-founder. Dylan owns infrastructure, software architecture, and the systems that keep every install running.'
     },
     {
       name: 'Mike',
-      role: 'CRO',
+      role: 'Co-Founder, Sales + Growth Lead',
       image: '/MikeC_headshot.png',
       description: 'Revenue and growth lead. Mike owns the sales process, customer relationships, and making sure the right customers find Exergy.'
     }
