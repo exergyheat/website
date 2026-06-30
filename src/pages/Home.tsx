@@ -222,7 +222,7 @@ const Home = () => {
           <div className="text-center mb-16">
             <h2 className="text-3xl font-heading text-surface-900 dark:text-surface-100 mb-4">How Building-Integrated Mining Works</h2>
             <p className="text-xl font-body text-surface-600 dark:text-surface-400 max-w-2xl mx-auto">
-              One device. Two outputs. No waste.
+              One device. Three value streams. No waste.
             </p>
           </div>
 
@@ -272,6 +272,22 @@ const Home = () => {
                   </h3>
                   <p className="mt-2 text-base font-body text-surface-500 dark:text-surface-400">
                     When your panels overproduce, that surplus exports to the grid at $0.01–$0.08/kWh. Route it through a miner instead: same watts, Bitcoin at hashprice. In our Solar Home case study, the same kilowatt-hour earned 3.3× more as Bitcoin than as a net metering credit. In summer, your miner stops being a heater and starts being a solar arbitrage machine.
+                  </p>
+                </div>
+              </div>
+
+              <div className="flex items-start">
+                <div className="flex-shrink-0">
+                  <div className="flex items-center justify-center h-12 w-12 rounded-md bg-primary-500 text-white">
+                    <DollarSign className="h-6 w-6" />
+                  </div>
+                </div>
+                <div className="ml-4">
+                  <h3 className="text-lg font-subheading text-surface-900 dark:text-surface-100">
+                    When the math is right, it mines for profit
+                  </h3>
+                  <p className="mt-2 text-base font-body text-surface-500 dark:text-surface-400">
+                    When your off-peak electricity rate and the Bitcoin network's hashprice align, the system runs for pure profit — no heating load required. A conventional thermostat has one job. Your mining system knows your electricity rate, the Bitcoin price, your solar output, and the network hashprice — and makes the right call in real time.
                   </p>
                 </div>
               </div>
