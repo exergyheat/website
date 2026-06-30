@@ -16,6 +16,9 @@ export interface Project {
   integrationTypes: string[]
   operatingMode: string
   icon: typeof Building
+  size: string
+  savings: string
+  payback: string
   stats: CaseStat[]
   details: string[]
   pullQuote?: string
@@ -33,6 +36,9 @@ export const projects: Project[] = [
     integrationTypes: ['In-Duct / Forced Air'],
     operatingMode: 'Mode 1: Mine to Heat',
     icon: Home,
+    size: '2,396 sq ft',
+    savings: '98.6% heat share',
+    payback: '< 2 yrs',
     stats: [
       { label: 'Miner Heat Share', value: '98.6%' },
       { label: 'Heating Season', value: '43 days' },
@@ -62,6 +68,9 @@ export const projects: Project[] = [
     integrationTypes: ['Hydronic / Radiant'],
     operatingMode: 'Mode 3: Cheapest BTU',
     icon: Home,
+    size: '3,966 sq ft',
+    savings: '45% cost reduction',
+    payback: '~18 mo',
     stats: [
       { label: 'Effective Heat Cost', value: '$0.049/kWh' },
       { label: 'vs. Electric Resistance', value: '−45%' },
@@ -91,6 +100,9 @@ export const projects: Project[] = [
     integrationTypes: ['Smart Zone Heaters', 'Excess Solar'],
     operatingMode: 'Mode 2: Solar First',
     icon: Sun,
+    size: '900 sq ft',
+    savings: '3.3× solar value',
+    payback: '< 1 yr',
     stats: [
       { label: 'Solar Generated', value: '949 kWh' },
       { label: 'Grid Export Value', value: '$6.74' },
@@ -120,6 +132,9 @@ export const projects: Project[] = [
     integrationTypes: ['Hydronic / Radiant', 'In-Duct / Forced Air', 'Smart Zone Heaters', 'Water / Pool / Spa', 'Excess Solar'],
     operatingMode: 'Mode 2: Cheapest BTU',
     icon: Building,
+    size: '5,250 sq ft',
+    savings: 'All 5 integration types',
+    payback: 'Ongoing BTC',
     stats: [
       { label: 'Building Size', value: '5,250 sq ft' },
       { label: 'Active Mining Zones', value: '4' },
