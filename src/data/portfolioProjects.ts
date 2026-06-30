@@ -11,6 +11,7 @@ export interface Project {
   subtitle: string
   description: string
   image: string
+  chartImage?: string
   category: string
   integrationTypes: string[]
   operatingMode: string
@@ -27,6 +28,7 @@ export const projects: Project[] = [
     subtitle: '2,396 sq ft · Forced Air HVAC · Natural Gas Backup',
     description: 'A single water-cooled miner drops into the existing mechanical room, hot water circulates to a radiator inside the furnace return duct, and the air handler distributes heat exactly as the furnace would — silently, invisibly, and with Bitcoin earnings on top. The goal: maximize hashrate uptime during the heating season. Gas exists only for backup.',
     image: '/StockBackgroundHome_Tinted.png',
+    chartImage: '/case_1_chart.png',
     category: 'Residential',
     integrationTypes: ['In-Duct / Forced Air'],
     operatingMode: 'Mode 1: Mine to Heat',
@@ -55,6 +57,7 @@ export const projects: Project[] = [
     subtitle: '3,966 sq ft · Hydronic Radiant Floors · 40kW Electric Boiler · No Gas',
     description: 'The cleanest possible comparison: same electricity source, same delivered heat, different outcome. Two miners in an immersion tank replace a 40kW electric boiler as the primary heat source for radiant floors. No new thermostats, no new wiring, no contractor beyond a plumber — and a 45% reduction in effective heating cost.',
     image: '/StockBackgroundHome_Tinted.png',
+    chartImage: '/case_2_chart.png',
     category: 'Residential',
     integrationTypes: ['Hydronic / Radiant'],
     operatingMode: 'Mode 3: Cheapest BTU',
@@ -83,6 +86,7 @@ export const projects: Project[] = [
     subtitle: '900 sq ft · Zone Heaters + Garage Miner · Net Metering at $0.01/kWh',
     description: 'A failing furnace with a $10,000 replacement quote and a solar system exporting energy to the grid for a penny a kilowatt-hour. One system solved both problems: $4,000 installed, furnace replacement deferred indefinitely, and solar energy now earns 3.3× more routed through the miner than sent to the utility.',
     image: '/StockBackgroundHome_Tinted.png',
+    chartImage: '/case_3_chart.png',
     category: 'Residential',
     integrationTypes: ['Smart Zone Heaters', 'Excess Solar'],
     operatingMode: 'Mode 2: Solar First',
@@ -111,6 +115,7 @@ export const projects: Project[] = [
     subtitle: '5,250 sq ft · Three HVAC Zones · Large Solar Array · Commercial TOU Pricing',
     description: "Exergy's Denver demo site and office. The most fully integrated building we operate — five miners across four zones, a liquid-cooled Bitcoin boiler on radiant floors, a Bitcoin-heated hot tub, solar-to-mining arbitrage, and a Home Assistant system that knows the cost of every energy input in real time and always routes heat through the cheapest one.",
     image: 'https://denver.space/assets/venue/3700Franklin_Back.webp',
+    chartImage: '/case_4_chart.png',
     category: 'Commercial',
     integrationTypes: ['Hydronic / Radiant', 'In-Duct / Forced Air', 'Smart Zone Heaters', 'Water / Pool / Spa', 'Excess Solar'],
     operatingMode: 'Mode 2: Cheapest BTU',

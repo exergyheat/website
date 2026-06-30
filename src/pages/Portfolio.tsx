@@ -114,6 +114,17 @@ const Portfolio = () => {
                 </div>
               </div>
 
+              {/* Chart / dashboard image */}
+              {project.chartImage && (
+                <div className="mt-8">
+                  <img
+                    src={project.chartImage}
+                    alt={`${project.title} — data chart`}
+                    className="w-full rounded-xl border border-surface-200 dark:border-surface-700 shadow-sm"
+                  />
+                </div>
+              )}
+
               {/* Pull quote */}
               {project.pullQuote && (
                 <blockquote className="mt-8 border-l-4 border-primary-500 pl-6 py-2">
