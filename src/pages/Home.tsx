@@ -119,9 +119,19 @@ const Home = () => {
         </div>
       </div>
 
-      {/* Hashrate Heating Summary Section */}
+      {/* How to Work With Us Section */}
       <div className="py-20 bg-white dark:bg-surface-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+          {/* Section header */}
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-heading text-surface-900 dark:text-surface-100 mb-4">
+              How to Work With Us
+            </h2>
+            <p className="text-lg font-body text-surface-600 dark:text-surface-400 max-w-3xl mx-auto">
+              A building-integrated mining system does three things: displaces heating costs every winter, routes excess solar through hashing instead of the grid every summer, and exercises demand flexibility year-round — running on cheap off-peak electricity whenever the TOU rate and Bitcoin network economics make it the right call. Your system decides in real time. Pick the path that fits where you are.
+            </p>
+          </div>
 
           {/* Services Grid */}
           <motion.div
@@ -185,6 +195,20 @@ const Home = () => {
               </p>
             </Link>
           </motion.div>
+
+          {/* Products nudge */}
+          <div className="mt-10 pt-8 border-t border-surface-200 dark:border-surface-700 flex flex-col sm:flex-row items-center justify-between gap-4">
+            <p className="text-sm font-body text-surface-500 dark:text-surface-400">
+              Already know what hardware you need?
+            </p>
+            <Link
+              to="/products"
+              className="inline-flex items-center px-5 py-2.5 border border-primary-500 text-primary-600 dark:text-primary-400 rounded-lg hover:bg-primary-50 dark:hover:bg-primary-900 transition-colors text-sm font-subheading"
+            >
+              Browse Recommended Products
+              <ArrowRight className="ml-2 h-4 w-4" />
+            </Link>
+          </div>
 
         </div>
       </div>
