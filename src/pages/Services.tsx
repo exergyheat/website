@@ -216,7 +216,8 @@ const Services = () => {
                 </li>
               </ul>
 
-              <div className="mt-auto pt-2 space-y-3">
+              <div className="mt-auto pt-2 space-y-2">
+                <p className="text-center text-xs text-surface-500 dark:text-surface-400">Available within ~100 miles of Denver, CO</p>
                 <Link
                   to="/book-call"
                   className="w-full inline-flex items-center justify-center px-6 py-3 bg-primary-600 text-white rounded-lg hover:bg-primary-700 transition-colors text-base font-subheading"
@@ -224,7 +225,6 @@ const Services = () => {
                   See If You Qualify
                   <ArrowRight className="ml-2 h-5 w-5" />
                 </Link>
-                <p className="text-center text-xs text-surface-500 dark:text-surface-400">Available within ~100 miles of Denver, CO</p>
               </div>
             </div>
           </div>
