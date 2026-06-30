@@ -133,7 +133,7 @@ export const projects: Project[] = [
     operatingMode: 'Mode 2: Cheapest BTU',
     icon: Building,
     size: '5,250 sq ft',
-    savings: 'All 5 integration types',
+    savings: 'Gas nearly eliminated',
     payback: 'Ongoing BTC',
     stats: [
       { label: 'Building Size', value: '5,250 sq ft' },
