@@ -126,7 +126,7 @@ const About = () => {
       description: 'Installation coordinates mechanical, electrical, networking, and controls in sequence. We either do this ourselves (local to Denver), guide you and your contractors remotely, or hand you the full DIY playbook. The system isn\'t done until it\'s heating, mining, and reporting correctly.',
       icon: Monitor,
       buttonText: 'View Our Work',
-      buttonLink: '/portfolio',
+      buttonLink: '/case-studies',
       external: false
     },
     {
@@ -183,8 +183,15 @@ const About = () => {
     <div className="bg-surface-50 dark:bg-surface-900">
       <Helmet>
         <title>EXERGY | About — Building-Integrated Mining</title>
-        <meta name="description" content="Exergy designs and installs building-integrated Bitcoin mining systems for homes and businesses. Learn about our team, our mission, and the technology behind heat that earns." />
-        <meta name="keywords" content="EXERGY about, hashrate heating company, bitcoin mining heat team, Denver heating company, cryptocurrency heating experts" />
+        <meta name="description" content="Building-integrated Bitcoin mining systems for homes and businesses. Learn about our team, our mission, and the technology behind it." />
+        <meta name="keywords" content="EXERGY about, building integrated mining company, bitcoin mining heat team, Denver mining company, cryptocurrency heating experts" />
+        <link rel="canonical" href="https://exergyheat.com/about" />
+        <meta property="og:title" content="About Exergy | Building-Integrated Bitcoin Mining" />
+        <meta property="og:description" content="Building-integrated Bitcoin mining systems for homes and businesses. Learn about our team, our mission, and the technology behind it." />
+        <meta property="og:url" content="https://exergyheat.com/about" />
+        <meta property="og:type" content="website" />
+        <meta name="twitter:title" content="About Exergy | Building-Integrated Bitcoin Mining" />
+        <meta name="twitter:description" content="Building-integrated Bitcoin mining systems for homes and businesses. Learn about our team, our mission, and the technology behind it." />
       </Helmet>
 
       {/* Hero Section with Custom Gradient */}
@@ -355,7 +362,7 @@ const About = () => {
                 </p>
                 <div className="mb-24 sm:mb-0">
                   <a
-                    href="https://braiins.com/books/bitcoin-mining-heat-reuse"
+                    href="https://www.amazon.com/Bitcoin-Mining-Reuse-Tyler-Stevens/dp/B0GYJ8QDK6/ref=sr_1_1?"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="inline-flex items-center justify-center px-6 py-3 bg-primary-600 text-white rounded-lg hover:bg-primary-700 transition-colors text-base font-subheading"

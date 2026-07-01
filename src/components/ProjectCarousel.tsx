@@ -149,7 +149,7 @@ const ProjectCarousel = () => {
           {/* View All Projects Button */}
           <div className="text-center mt-8">
             <Link
-              to="/portfolio"
+              to="/case-studies"
               className="inline-flex items-center px-6 py-3 bg-primary-500 text-white rounded-lg hover:bg-primary-600 transition-colors text-base font-subheading"
             >
               View All Case Studies

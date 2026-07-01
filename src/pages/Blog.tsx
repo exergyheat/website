@@ -135,6 +135,13 @@ const Blog = () => {
         <title>EXERGY Newsroom | Announcements & Updates</title>
         <meta name="description" content="Exergy company announcements, conference coverage, presentations, and updates on building-integrated Bitcoin mining." />
         <meta name="keywords" content="Exergy newsroom, building-integrated mining news, bitcoin heating announcements, EXERGY updates" />
+        <link rel="canonical" href="https://exergyheat.com/newsroom" />
+        <meta property="og:title" content="EXERGY Newsroom | Announcements & Updates" />
+        <meta property="og:description" content="Exergy company announcements, conference coverage, presentations, and updates on building-integrated Bitcoin mining." />
+        <meta property="og:url" content="https://exergyheat.com/newsroom" />
+        <meta property="og:type" content="website" />
+        <meta name="twitter:title" content="EXERGY Newsroom | Announcements & Updates" />
+        <meta name="twitter:description" content="Exergy company announcements, conference coverage, presentations, and updates on building-integrated Bitcoin mining." />
       </Helmet>
       
       {/* Hero Section with Custom Gradient */}
@@ -208,7 +215,7 @@ const Blog = () => {
         ) : (
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {filteredPosts.map((post) => (
-              <Link key={post.id} to={`/blog/${post.id}`}>
+              <Link key={post.id} to={`/newsroom/${post.id}`}>
                 <article className="bg-white dark:bg-surface-800 rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
                   <div className="relative h-48">
                     <img

@@ -17,7 +17,7 @@ const Footer = () => {
               />
             </Link>
             <p className="mt-4 font-body text-surface-400">
-              Heat That Pays
+              Building-Integrated Mining
             </p>
           </div>
 
@@ -35,7 +35,7 @@ const Footer = () => {
                 <Link to="/about" className="font-body text-surface-400 hover:text-surface-200 transition-colors">About</Link>
               </li>
               <li>
-                <Link to="/portfolio" className="font-body text-surface-400 hover:text-surface-200 transition-colors">Case Studies</Link>
+                <Link to="/case-studies" className="font-body text-surface-400 hover:text-surface-200 transition-colors">Case Studies</Link>
               </li>
               <li>
                 <Link to="/privacy-policy" className="font-body text-surface-400 hover:text-surface-200 transition-colors">Privacy Policy</Link>
@@ -103,7 +103,7 @@ const Footer = () => {
             </div>
             <div className="flex space-x-4">
               <a 
-                href="https://x.com/exergy_llc" 
+                href="https://x.com/exergy_"
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="text-surface-400 hover:text-surface-200 transition-colors"

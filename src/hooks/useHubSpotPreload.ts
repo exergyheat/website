@@ -2,6 +2,7 @@ import { useEffect } from 'react'
 
 const HUBSPOT_SCRIPTS = [
   'https://js-na2.hsforms.net/forms/embed/243159145.js',
+  'https://js-na2.hsforms.net/forms/embed/v2.js',
   'https://static.hsappstatic.net/MeetingsEmbed/ex/MeetingsEmbedCode.js'
 ]
 

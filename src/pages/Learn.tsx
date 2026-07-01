@@ -69,7 +69,7 @@ const Learn = () => {
       details: [
         "Your heating season is your primary mining season",
         "In summer, excess solar routes through the miner instead of the grid",
-        "3.3× more value per kWh than net metering at $0.01/kWh",
+        "Solar Home case study: 3.3× more value per kWh at $0.01/kWh net metering — your advantage scales with your rate",
         "One device, two outputs — heat and Bitcoin — at no extra cost"
       ]
     }
@@ -141,7 +141,7 @@ const Learn = () => {
       image: 'https://images.pexels.com/photos/433308/pexels-photo-433308.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
       features: [
         'Miner ramps up automatically on surplus solar generation',
-        '3.3× more value per kWh vs. $0.01/kWh net metering export',
+        'Solar Home case study: 3.3× more value per kWh at $0.01/kWh net metering',
         'Real-time switching: mine vs. export based on hashprice vs. grid rate',
         'Works on top of any other integration type'
       ]
@@ -168,7 +168,14 @@ const Learn = () => {
     <div className="bg-surface-50 dark:bg-surface-900 min-h-screen">
       <Helmet>
         <title>EXERGY | Learn Building-Integrated Mining</title>
-        <meta name="description" content="Learn building-integrated mining — how Bitcoin miners displace heating costs in winter and monetize excess solar in summer. Educational resources, guides, and expert insights." />
+        <meta name="description" content="How Bitcoin miners displace heating costs in winter and monetize excess solar in summer. Guides, case studies, and resources from Exergy." />
+        <link rel="canonical" href="https://exergyheat.com/learn" />
+        <meta property="og:title" content="Learn Building-Integrated Mining | Exergy" />
+        <meta property="og:description" content="How Bitcoin miners displace heating costs in winter and monetize excess solar in summer. Guides, case studies, and resources from Exergy." />
+        <meta property="og:url" content="https://exergyheat.com/learn" />
+        <meta property="og:type" content="website" />
+        <meta name="twitter:title" content="Learn Building-Integrated Mining | Exergy" />
+        <meta name="twitter:description" content="How Bitcoin miners displace heating costs in winter and monetize excess solar in summer. Guides and resources from Exergy." />
         <meta name="keywords" content="building-integrated mining, hashrate heating education, bitcoin mining heat technology, solar monetization bitcoin, heating technology guides" />
       </Helmet>
       
@@ -401,7 +408,7 @@ const Learn = () => {
           </p>
           
           <Link
-            to="/portfolio"
+            to="/case-studies"
             className="inline-flex items-center px-8 py-4 bg-white text-primary-600 rounded-lg hover:bg-white/90 transition-colors text-base font-subheading"
           >
             See Case Studies

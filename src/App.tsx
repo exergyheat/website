@@ -1,5 +1,5 @@
 import React from 'react'
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom'
 import { Helmet } from 'react-helmet-async'
 import { ThemeProvider } from './contexts/ThemeContext'
 import Navbar from './components/Navbar'
@@ -25,8 +25,8 @@ function App() {
   return (
     <ThemeProvider>
       <Helmet>
-        <title>Exergy | Heat That Pays</title>
-        <meta name="description" content="Exergy provides hashrate heating hardware and services that generate warmth and bitcoin rewards simultaneously. Transform your heating system into a revenue-generating asset with our solutions." />
+        <title>Exergy | Building-Integrated Bitcoin Mining</title>
+        <meta name="description" content="Building-integrated Bitcoin mining systems that displace heating costs and earn Bitcoin from excess solar. Real installs. Real data." />
       </Helmet>
       <Router>
         <ScrollToTop />
@@ -43,7 +43,8 @@ function App() {
               <Route path="/privacy-policy" element={<PrivacyPolicy />} />
               <Route path="/faq" element={<FAQ />} />
               <Route path="/book-call" element={<BookCall />} />
-              <Route path="/portfolio" element={<Portfolio />} />
+              <Route path="/case-studies" element={<Portfolio />} />
+              <Route path="/portfolio" element={<Navigate to="/case-studies" replace />} />
               <Route path="/newsroom" element={<Newsroom />} />
               <Route path="/newsroom/:id" element={<NewsroomPostDetail />} />
             </Routes>

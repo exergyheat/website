@@ -8,8 +8,15 @@ const Services = () => {
     <div className="bg-surface-50 dark:bg-surface-900">
       <Helmet>
         <title>Building-Integrated Bitcoin Mining Services | Exergy</title>
-        <meta name="description" content="Exergy offers three tiers of building-integrated Bitcoin mining services — from free self-serve tools and DIY support, to guided remote consulting, to fully done-for-you installation in the Denver area." />
+        <meta name="description" content="Three service tiers for building-integrated mining: self-serve tools, guided remote consulting, or done-for-you installation. Available nationwide." />
         <meta name="keywords" content="bitcoin mining heating, building integrated mining, hashrate heating services, bitcoin heat audit, home bitcoin mining, commercial bitcoin heating, Exergy Relay, Denver bitcoin mining" />
+        <link rel="canonical" href="https://exergyheat.com/services" />
+        <meta property="og:title" content="Building-Integrated Bitcoin Mining Services | Exergy" />
+        <meta property="og:description" content="Three service tiers for building-integrated mining: self-serve tools, guided remote consulting, or done-for-you installation. Available nationwide." />
+        <meta property="og:url" content="https://exergyheat.com/services" />
+        <meta property="og:type" content="website" />
+        <meta name="twitter:title" content="Building-Integrated Bitcoin Mining Services | Exergy" />
+        <meta name="twitter:description" content="Three service tiers for building-integrated mining: self-serve tools, guided remote consulting, or done-for-you installation." />
       </Helmet>
 
       {/* Hero */}
@@ -143,7 +150,7 @@ const Services = () => {
                   <span className="flex-shrink-0 w-6 h-6 rounded-full bg-primary-100 dark:bg-primary-900 text-primary-600 dark:text-primary-400 flex items-center justify-center text-xs font-bold">1</span>
                   <div>
                     <p className="text-surface-800 dark:text-surface-200 text-sm font-medium">Exergy Audit</p>
-                    <p className="text-surface-500 dark:text-surface-400 text-xs mt-0.5">We audit your home or building — tell you exactly what you can save and what you need. <span className="font-medium text-surface-700 dark:text-surface-300">$500 residential / $2,500 commercial.</span></p>
+                    <p className="text-surface-500 dark:text-surface-400 text-xs mt-0.5">We audit your home or building — tell you exactly what you can save and what you need. Sometimes included as part of Guided or Done-For-You engagements; contact us to discuss.</p>
                   </div>
                 </li>
                 <li className="flex gap-3">
@@ -264,7 +271,7 @@ const Services = () => {
           <div className="text-center mb-10">
             <p className="text-xs font-bold uppercase tracking-widest text-primary-400 mb-3">Optional Add-On for All Tiers</p>
             <h2 className="text-3xl font-bold text-white mb-4">Exergy Relay</h2>
-            <p className="text-lg text-surface-400 italic">"Your heating system has an API. This one does."</p>
+            <p className="text-lg text-surface-400 italic">"Your heating system doesn't have an API. This one does."</p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">

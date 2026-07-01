@@ -43,8 +43,15 @@ const Home = () => {
     <div className="bg-surface-50 dark:bg-surface-900">
       <Helmet>
         <title>Exergy | Building-Integrated Bitcoin Mining</title>
-        <meta name="description" content="Exergy designs building-integrated Bitcoin mining systems that displace heating costs and monetize excess solar — simultaneously. Real installs. Real data. Free tools to run your own numbers." />
+        <meta name="description" content="Building-integrated Bitcoin miners that displace heating costs and earn Bitcoin from excess solar. Real installs. Real data. Free calculators." />
         <meta name="keywords" content="building integrated mining, hashrate heating, bitcoin mining heat reuse, solar bitcoin mining, excess solar monetization, bitcoin heating, energy efficient heating, bitcoin heaters, hashrate powered heat, bitcoin mining heat, mine for heat, mining for heat, bitcoin mining at home, solar arbitrage bitcoin" />
+        <link rel="canonical" href="https://exergyheat.com/" />
+        <meta property="og:title" content="Exergy | Building-Integrated Bitcoin Mining" />
+        <meta property="og:description" content="Building-integrated Bitcoin miners that displace heating costs and earn Bitcoin from excess solar. Real installs. Real data." />
+        <meta property="og:url" content="https://exergyheat.com/" />
+        <meta property="og:type" content="website" />
+        <meta name="twitter:title" content="Exergy | Building-Integrated Bitcoin Mining" />
+        <meta name="twitter:description" content="Building-integrated Bitcoin miners that displace heating costs and earn Bitcoin from excess solar. Real installs. Real data." />
       </Helmet>
       
       {/* Hero Section */}
@@ -96,24 +103,6 @@ const Home = () => {
                 Book an Intro Call
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Link>
-              <motion.a
-                href="https://40rqsp.share-na2.hsforms.com/2hJgXKKL6RPWk-LYX5bo3jA"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center px-4 py-2 bg-white/10 backdrop-blur-sm border border-white/30 text-sm font-subheading rounded-md text-white hover:bg-white/20 transition-colors"
-                initial={{ opacity: 0, y: 10 }}
-                animate={{ 
-                  opacity: isTypewriterComplete ? 1 : 0,
-                  y: isTypewriterComplete ? 0 : 10
-                }}
-                transition={{ 
-                  duration: 0.6,
-                  ease: "easeOut",
-                  delay: isTypewriterComplete ? 1.5 : 0
-                }}
-              >
-                Get Started
-              </motion.a>
             </motion.div>
           </div>
         </div>
@@ -271,7 +260,7 @@ const Home = () => {
                     Your solar is worth more than your utility pays you
                   </h3>
                   <p className="mt-2 text-base font-body text-surface-500 dark:text-surface-400">
-                    When your panels overproduce, that surplus exports to the grid at $0.01–$0.08/kWh. Route it through a miner instead: same watts, Bitcoin at hashprice. In our Solar Home case study, the same kilowatt-hour earned 3.3× more as Bitcoin than as a net metering credit. In summer, your miner stops being a heater and starts being a solar arbitrage machine.
+                    When your panels overproduce, that surplus exports to the grid at $0.01–$0.08/kWh. Route it through a miner instead: same watts, Bitcoin at hashprice. In our Solar Home case study — at their $0.01/kWh net metering rate — the same kilowatt-hour earned 3.3× more as Bitcoin than as a net metering credit. Your actual advantage depends on your local rate. In summer, your miner stops being a heater and starts being a solar arbitrage machine.
                   </p>
                 </div>
               </div>

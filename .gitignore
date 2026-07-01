@@ -23,3 +23,7 @@ dist-ssr
 *.sln
 *.sw?
 .env
+
+# Source asset folders (not deployed)
+256F_Team_photos/
+case_study_images/

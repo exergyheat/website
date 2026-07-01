@@ -71,7 +71,7 @@ const FAQ = () => {
         },
         {
           q: 'What\'s a realistic ROI?',
-          a: 'It varies significantly based on your current fuel, electricity rate, and Bitcoin price. Our calculators at calc.exergyheat.com let you run the math with your actual inputs. Real results from our installs: the all-electric mountain home achieved a 45% reduction in effective heating cost ($0.049/kWh vs $0.09/kWh straight electric resistance). The solar home earned 3.3× more value from excess solar routed through the miner versus exported to the grid. An Exergy Audit gives you a personalized monthly model.'
+          a: 'It varies significantly based on your current fuel, electricity rate, and Bitcoin price. Our calculators at calc.exergyheat.com let you run the math with your actual inputs. Real results from our installs: the all-electric mountain home achieved a 45% reduction in effective heating cost ($0.049/kWh vs $0.09/kWh straight electric resistance). The solar home earned 3.3× more value from excess solar routed through the miner versus exported to the grid — at their $0.01/kWh net metering rate, one of the weakest possible deals. Your actual advantage depends on your local net metering rate. An Exergy Audit gives you a personalized monthly model.'
         },
         {
           q: 'Do Bitcoin earnings slow down over time?',
@@ -97,7 +97,7 @@ const FAQ = () => {
         },
         {
           q: 'What is the CTRL1 Hub?',
-          a: 'The CTRL1 is Exergy\'s purpose-built Home Assistant control hub. It\'s a Raspberry Pi 5 with Zigbee antenna, NVMe SSD, and aluminum case — pre-loaded with Exergy\'s open-source integrations. You plug it in, it shows your network IP on the display, and you\'re into Home Assistant with Exergy\'s miner integrations already installed. It\'s the brain of every Exergy install. $500, available through us.'
+          a: 'The CTRL1 is Exergy\'s purpose-built Home Assistant control hub — a Raspberry Pi 5 with Zigbee antenna, NVMe SSD, and aluminum case, pre-loaded with Exergy\'s open-source integrations. You plug it in, it shows your network IP on the display, and you\'re into Home Assistant with Exergy\'s miner integrations already installed. It\'s the brain of every Exergy install. Currently it comes included in Tier 2 and Tier 3 service installs — standalone purchase is coming soon.'
         },
         {
           q: 'What are the five ways to integrate a miner into a building?',
@@ -109,7 +109,7 @@ const FAQ = () => {
         },
         {
           q: 'Does this work with solar panels?',
-          a: 'Yes — solar integration is one of the strongest use cases. When your solar array produces more power than your building uses, that excess typically goes to the grid at low net-metering rates (sometimes as low as $0.01/kWh). Routing that same power through the miner earns Bitcoin at a rate that was 3.3× more valuable than grid export in our Solar Home case study. The miner also throttles its wattage to exactly match surplus generation, so nothing is wasted and nothing goes to the grid at a loss.'
+          a: 'Yes — solar integration is one of the strongest use cases. When your solar array produces more power than your building uses, that excess typically goes to the grid at low net-metering rates (sometimes as low as $0.01/kWh). Routing that same power through the miner earns Bitcoin at a rate that was 3.3× more valuable than grid export in our Solar Home case study, where the net metering rate was $0.01/kWh — a particularly weak deal. At higher net metering rates the gap narrows, at lower rates it widens. The miner also throttles its wattage to exactly match surplus generation, so nothing is wasted and nothing goes to the grid at a loss.'
         }
       ]
     },
@@ -165,7 +165,14 @@ const FAQ = () => {
     <div className="bg-surface-50 dark:bg-surface-900 min-h-screen">
       <Helmet>
         <title>EXERGY | FAQ — Building-Integrated Mining Questions Answered</title>
-        <meta name="description" content="Real questions from real customers about building-integrated Bitcoin mining and hashrate heating — answered honestly. Learn how Exergy systems work, what they cost, and whether your building is a fit." />
+        <meta name="description" content="Real Q&amp;A about building-integrated mining: how it works, what it costs, ROI, technical setup, and whether your building is a good fit." />
+        <link rel="canonical" href="https://exergyheat.com/faq" />
+        <meta property="og:title" content="FAQ | Building-Integrated Mining — Exergy" />
+        <meta property="og:description" content="Real Q&amp;A about building-integrated mining: how it works, what it costs, ROI, technical setup, and whether your building is a good fit." />
+        <meta property="og:url" content="https://exergyheat.com/faq" />
+        <meta property="og:type" content="website" />
+        <meta name="twitter:title" content="FAQ | Building-Integrated Mining — Exergy" />
+        <meta name="twitter:description" content="Real Q&amp;A about building-integrated mining: how it works, what it costs, ROI, and whether your building is a good fit." />
         <meta name="keywords" content="building-integrated mining FAQ, bitcoin miner heater questions, EXERGY FAQ, hashrate heating answers, bitcoin heating system, CTRL1 hub, Exergy Relay" />
         <script type="application/ld+json">
           {JSON.stringify({
