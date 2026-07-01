@@ -71,30 +71,16 @@ const Home = () => {
             <motion.p
               className="text-xl md:text-2xl mb-8 max-w-2xl font-body"
               initial={{ opacity: 0, y: 20 }}
-              animate={{
-                opacity: isTypewriterComplete ? 1 : 0,
-                y: isTypewriterComplete ? 0 : 20
-              }}
-              transition={{
-                duration: 0.8,
-                ease: "easeOut",
-                delay: isTypewriterComplete ? 0.5 : 0
-              }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, ease: "easeOut", delay: 0.4 }}
             >
               Your building is already spending that energy. Make it earn Bitcoin too.
             </motion.p>
-            <motion.div 
+            <motion.div
               className="flex flex-wrap gap-4"
               initial={{ opacity: 0, y: 20 }}
-              animate={{ 
-                opacity: isTypewriterComplete ? 1 : 0,
-                y: isTypewriterComplete ? 0 : 20
-              }}
-              transition={{ 
-                duration: 0.8,
-                ease: "easeOut",
-                delay: isTypewriterComplete ? 1 : 0
-              }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, ease: "easeOut", delay: 0.7 }}
             >
               <Link
                 to="/book-call"
