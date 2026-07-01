@@ -100,12 +100,12 @@ const BlogPostDetail = () => {
           <meta property="article:published_time" content={post.date} />
           <meta property="article:author" content={post.author} />
           <link rel="canonical" href={`https://exergyheat.com/newsroom/${id}`} />
-          <meta property="og:title" content={`${post.title} | EXERGY Newsroom`} />
+          <meta property="og:title" content={`${post.title} | Exergy`} />
           <meta property="og:description" content={post.excerpt} />
           <meta property="og:url" content={`https://exergyheat.com/newsroom/${id}`} />
           <meta property="og:type" content="article" />
           <meta property="og:image" content={`https://exergyheat.com${post.image}`} />
-          <meta name="twitter:title" content={`${post.title} | EXERGY Newsroom`} />
+          <meta name="twitter:title" content={`${post.title} | Exergy`} />
           <meta name="twitter:description" content={post.excerpt} />
           <meta name="twitter:image" content={`https://exergyheat.com${post.image}`} />
           <script type="application/ld+json">{JSON.stringify({

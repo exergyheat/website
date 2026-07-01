@@ -11,12 +11,14 @@ const Services = () => {
         <meta name="description" content="Three service tiers for building-integrated mining: self-serve tools, guided remote consulting, or done-for-you installation. Available nationwide." />
         <meta name="keywords" content="bitcoin mining heating, building integrated mining, hashrate heating services, bitcoin heat audit, home bitcoin mining, commercial bitcoin heating, Exergy Relay, Denver bitcoin mining" />
         <link rel="canonical" href="https://exergyheat.com/services" />
-        <meta property="og:title" content="Building-Integrated Bitcoin Mining Services | Exergy" />
+        <meta property="og:title" content="Services — Self-Serve, Guided, or Done-For-You | Exergy" />
         <meta property="og:description" content="Three service tiers for building-integrated mining: self-serve tools, guided remote consulting, or done-for-you installation. Available nationwide." />
         <meta property="og:url" content="https://exergyheat.com/services" />
         <meta property="og:type" content="website" />
-        <meta name="twitter:title" content="Building-Integrated Bitcoin Mining Services | Exergy" />
+        <meta property="og:image" content="https://exergyheat.com/StockBackgroundHome_Tinted.png" />
+        <meta name="twitter:title" content="Services — Self-Serve, Guided, or Done-For-You | Exergy" />
         <meta name="twitter:description" content="Three service tiers for building-integrated mining: self-serve tools, guided remote consulting, or done-for-you installation." />
+        <meta name="twitter:image" content="https://exergyheat.com/StockBackgroundHome_Tinted.png" />
       </Helmet>
 
       {/* Hero */}

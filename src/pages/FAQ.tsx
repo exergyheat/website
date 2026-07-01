@@ -167,12 +167,14 @@ const FAQ = () => {
         <title>FAQ | Exergy</title>
         <meta name="description" content="Real Q&amp;A about building-integrated mining: how it works, what it costs, ROI, technical setup, and whether your building is a good fit." />
         <link rel="canonical" href="https://exergyheat.com/faq" />
-        <meta property="og:title" content="FAQ | Building-Integrated Mining — Exergy" />
+        <meta property="og:title" content="FAQ — Your Building-Integrated Mining Questions Answered | Exergy" />
         <meta property="og:description" content="Real Q&amp;A about building-integrated mining: how it works, what it costs, ROI, technical setup, and whether your building is a good fit." />
         <meta property="og:url" content="https://exergyheat.com/faq" />
         <meta property="og:type" content="website" />
-        <meta name="twitter:title" content="FAQ | Building-Integrated Mining — Exergy" />
+        <meta property="og:image" content="https://exergyheat.com/StockBackgroundHome_Tinted.png" />
+        <meta name="twitter:title" content="FAQ — Your Building-Integrated Mining Questions Answered | Exergy" />
         <meta name="twitter:description" content="Real Q&amp;A about building-integrated mining: how it works, what it costs, ROI, and whether your building is a good fit." />
+        <meta name="twitter:image" content="https://exergyheat.com/StockBackgroundHome_Tinted.png" />
         <meta name="keywords" content="building-integrated mining FAQ, bitcoin miner heater questions, EXERGY FAQ, hashrate heating answers, bitcoin heating system, CTRL1 hub, Exergy Relay" />
         <script type="application/ld+json">
           {JSON.stringify({

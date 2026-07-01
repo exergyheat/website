@@ -186,12 +186,14 @@ const About = () => {
         <meta name="description" content="Building-integrated Bitcoin mining systems for homes and businesses. Learn about our team, our mission, and the technology behind it." />
         <meta name="keywords" content="EXERGY about, building integrated mining company, bitcoin mining heat team, Denver mining company, cryptocurrency heating experts" />
         <link rel="canonical" href="https://exergyheat.com/about" />
-        <meta property="og:title" content="About Exergy | Building-Integrated Bitcoin Mining" />
+        <meta property="og:title" content="About Exergy — Building-Integrated Mining, Denver CO" />
         <meta property="og:description" content="Building-integrated Bitcoin mining systems for homes and businesses. Learn about our team, our mission, and the technology behind it." />
         <meta property="og:url" content="https://exergyheat.com/about" />
         <meta property="og:type" content="website" />
-        <meta name="twitter:title" content="About Exergy | Building-Integrated Bitcoin Mining" />
+        <meta property="og:image" content="https://exergyheat.com/StockBackgroundHome_Tinted.png" />
+        <meta name="twitter:title" content="About Exergy — Building-Integrated Mining, Denver CO" />
         <meta name="twitter:description" content="Building-integrated Bitcoin mining systems for homes and businesses. Learn about our team, our mission, and the technology behind it." />
+        <meta name="twitter:image" content="https://exergyheat.com/StockBackgroundHome_Tinted.png" />
       </Helmet>
 
       {/* Hero Section with Custom Gradient */}

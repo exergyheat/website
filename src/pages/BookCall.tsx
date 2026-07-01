@@ -33,12 +33,14 @@ const BookCall = () => {
         <meta name="description" content="Book a free 15-minute consultation with Exergy. Discuss your building and learn whether building-integrated mining fits your energy setup." />
         <meta name="keywords" content="book Exergy consultation, building integrated mining call, schedule bitcoin mining demo, Exergy appointment" />
         <link rel="canonical" href="https://exergyheat.com/book-call" />
-        <meta property="og:title" content="Book a Call | Exergy" />
+        <meta property="og:title" content="Book a Free 15-Min Intro Call — Exergy" />
         <meta property="og:description" content="Book a free 15-minute consultation with Exergy. Discuss your building and learn whether building-integrated mining fits your energy setup." />
         <meta property="og:url" content="https://exergyheat.com/book-call" />
         <meta property="og:type" content="website" />
-        <meta name="twitter:title" content="Book a Call | Exergy" />
+        <meta property="og:image" content="https://exergyheat.com/StockBackgroundHome_Tinted.png" />
+        <meta name="twitter:title" content="Book a Free 15-Min Intro Call — Exergy" />
         <meta name="twitter:description" content="Book a free 15-minute consultation with Exergy. Discuss your building and whether building-integrated mining fits." />
+        <meta name="twitter:image" content="https://exergyheat.com/StockBackgroundHome_Tinted.png" />
       </Helmet>
 
       {/* Hero Section with Custom Gradient */}

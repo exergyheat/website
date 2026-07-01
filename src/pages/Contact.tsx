@@ -34,12 +34,14 @@ const Contact = () => {
         <meta name="description" content="Contact Exergy in Denver, CO. Email contact@exergyheat.com or book a free consultation to explore building-integrated mining for your property." />
         <meta name="keywords" content="contact Exergy, building integrated mining consultation, Denver mining company, bitcoin mining heat contact" />
         <link rel="canonical" href="https://exergyheat.com/contact" />
-        <meta property="og:title" content="Contact Exergy | Building-Integrated Mining" />
+        <meta property="og:title" content="Contact Exergy — Denver, CO" />
         <meta property="og:description" content="Contact Exergy in Denver, CO. Email contact@exergyheat.com or book a free consultation to explore building-integrated mining." />
         <meta property="og:url" content="https://exergyheat.com/contact" />
         <meta property="og:type" content="website" />
-        <meta name="twitter:title" content="Contact Exergy | Building-Integrated Mining" />
+        <meta property="og:image" content="https://exergyheat.com/StockBackgroundHome_Tinted.png" />
+        <meta name="twitter:title" content="Contact Exergy — Denver, CO" />
         <meta name="twitter:description" content="Contact Exergy in Denver, CO. Email contact@exergyheat.com or book a free consultation." />
+        <meta name="twitter:image" content="https://exergyheat.com/StockBackgroundHome_Tinted.png" />
       </Helmet>
       
       {/* Hero Section with Custom Gradient */}

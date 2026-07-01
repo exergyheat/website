@@ -136,12 +136,14 @@ const Blog = () => {
         <meta name="description" content="Exergy company announcements, conference coverage, presentations, and updates on building-integrated Bitcoin mining." />
         <meta name="keywords" content="Exergy newsroom, building-integrated mining news, bitcoin heating announcements, EXERGY updates" />
         <link rel="canonical" href="https://exergyheat.com/newsroom" />
-        <meta property="og:title" content="EXERGY Newsroom | Announcements & Updates" />
+        <meta property="og:title" content="Newsroom — Exergy Announcements & Updates" />
         <meta property="og:description" content="Exergy company announcements, conference coverage, presentations, and updates on building-integrated Bitcoin mining." />
         <meta property="og:url" content="https://exergyheat.com/newsroom" />
         <meta property="og:type" content="website" />
-        <meta name="twitter:title" content="EXERGY Newsroom | Announcements & Updates" />
+        <meta property="og:image" content="https://exergyheat.com/StockBackgroundHome_Tinted.png" />
+        <meta name="twitter:title" content="Newsroom — Exergy Announcements & Updates" />
         <meta name="twitter:description" content="Exergy company announcements, conference coverage, presentations, and updates on building-integrated Bitcoin mining." />
+        <meta name="twitter:image" content="https://exergyheat.com/StockBackgroundHome_Tinted.png" />
       </Helmet>
       
       {/* Hero Section with Custom Gradient */}

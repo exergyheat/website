@@ -46,12 +46,14 @@ const Home = () => {
         <meta name="description" content="Building-integrated Bitcoin miners that displace heating costs and earn Bitcoin from excess solar. Real installs. Real data. Free calculators." />
         <meta name="keywords" content="building integrated mining, hashrate heating, bitcoin mining heat reuse, solar bitcoin mining, excess solar monetization, bitcoin heating, energy efficient heating, bitcoin heaters, hashrate powered heat, bitcoin mining heat, mine for heat, mining for heat, bitcoin mining at home, solar arbitrage bitcoin" />
         <link rel="canonical" href="https://exergyheat.com/" />
-        <meta property="og:title" content="Exergy | Building-Integrated Bitcoin Mining" />
+        <meta property="og:title" content="Exergy — Building-Integrated Bitcoin Mining" />
         <meta property="og:description" content="Building-integrated Bitcoin miners that displace heating costs and earn Bitcoin from excess solar. Real installs. Real data." />
         <meta property="og:url" content="https://exergyheat.com/" />
         <meta property="og:type" content="website" />
-        <meta name="twitter:title" content="Exergy | Building-Integrated Bitcoin Mining" />
+        <meta property="og:image" content="https://exergyheat.com/StockBackgroundHome_Tinted.png" />
+        <meta name="twitter:title" content="Exergy — Building-Integrated Bitcoin Mining" />
         <meta name="twitter:description" content="Building-integrated Bitcoin miners that displace heating costs and earn Bitcoin from excess solar. Real installs. Real data." />
+        <meta name="twitter:image" content="https://exergyheat.com/StockBackgroundHome_Tinted.png" />
       </Helmet>
       
       {/* Hero Section */}

@@ -12,12 +12,14 @@ const Portfolio = () => {
         <meta name="description" content="Real case studies from residential and commercial installations — forced air, hydronic, solar, and distributed mining approaches. Real data." />
         <meta name="keywords" content="building integrated mining case studies, bitcoin mining heat installations, hashrate heating results, Exergy portfolio" />
         <link rel="canonical" href="https://exergyheat.com/case-studies" />
-        <meta property="og:title" content="Case Studies | Building-Integrated Mining — Exergy" />
+        <meta property="og:title" content="Case Studies — Real Buildings, Real Bitcoin Earnings | Exergy" />
         <meta property="og:description" content="Real case studies from residential and commercial installations — forced air, hydronic, solar, and distributed mining approaches." />
         <meta property="og:url" content="https://exergyheat.com/case-studies" />
         <meta property="og:type" content="website" />
-        <meta name="twitter:title" content="Case Studies | Building-Integrated Mining — Exergy" />
+        <meta property="og:image" content="https://exergyheat.com/StockBackgroundHome_Tinted.png" />
+        <meta name="twitter:title" content="Case Studies — Real Buildings, Real Bitcoin Earnings | Exergy" />
         <meta name="twitter:description" content="Real case studies from residential and commercial installations — forced air, hydronic, solar, and distributed mining approaches." />
+        <meta name="twitter:image" content="https://exergyheat.com/StockBackgroundHome_Tinted.png" />
       </Helmet>
 
       {/* Hero */}

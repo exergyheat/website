@@ -170,12 +170,14 @@ const Learn = () => {
         <title>Learn | Exergy</title>
         <meta name="description" content="How Bitcoin miners displace heating costs in winter and monetize excess solar in summer. Guides, case studies, and resources from Exergy." />
         <link rel="canonical" href="https://exergyheat.com/learn" />
-        <meta property="og:title" content="Learn Building-Integrated Mining | Exergy" />
+        <meta property="og:title" content="Learn — How Building-Integrated Mining Works | Exergy" />
         <meta property="og:description" content="How Bitcoin miners displace heating costs in winter and monetize excess solar in summer. Guides, case studies, and resources from Exergy." />
         <meta property="og:url" content="https://exergyheat.com/learn" />
         <meta property="og:type" content="website" />
-        <meta name="twitter:title" content="Learn Building-Integrated Mining | Exergy" />
+        <meta property="og:image" content="https://exergyheat.com/StockBackgroundHome_Tinted.png" />
+        <meta name="twitter:title" content="Learn — How Building-Integrated Mining Works | Exergy" />
         <meta name="twitter:description" content="How Bitcoin miners displace heating costs in winter and monetize excess solar in summer. Guides and resources from Exergy." />
+        <meta name="twitter:image" content="https://exergyheat.com/StockBackgroundHome_Tinted.png" />
         <meta name="keywords" content="building-integrated mining, hashrate heating education, bitcoin mining heat technology, solar monetization bitcoin, heating technology guides" />
       </Helmet>
       
