@@ -31,7 +31,7 @@ const ProjectCarousel = () => {
         <div className="text-center mb-12">
           <h2 className="text-3xl font-bold text-surface-900 dark:text-surface-100 mb-4">See it in Action</h2>
           <p className="text-xl text-surface-600 dark:text-surface-400">
-            Explore some of our most recent hashrate heating projects
+            Explore some of our most recent building-integrated mining projects
           </p>
         </div>
 
@@ -73,15 +73,15 @@ const ProjectCarousel = () => {
                             <div className="flex flex-col sm:flex-row sm:space-x-4 space-y-2 sm:space-y-0">
                               <div>
                                 <span className="text-surface-200">Size:</span>
-                                <span className="ml-2 font-bold text-secondary-400">{project.stats.size}</span>
+                                <span className="ml-2 font-bold text-secondary-400">{project.size}</span>
                               </div>
                               <div>
                                 <span className="text-surface-200">Savings:</span>
-                                <span className="ml-2 font-bold text-secondary-400">{project.stats.savings}</span>
+                                <span className="ml-2 font-bold text-secondary-400">{project.savings}</span>
                               </div>
                               <div>
                                 <span className="text-surface-200">Payback:</span>
-                                <span className="ml-2 font-bold text-secondary-400">{project.stats.payback}</span>
+                                <span className="ml-2 font-bold text-secondary-400">{project.payback}</span>
                               </div>
                             </div>
                           </div>
@@ -111,15 +111,15 @@ const ProjectCarousel = () => {
                             <div className="flex flex-col sm:flex-row sm:space-x-4 space-y-2 sm:space-y-0">
                               <div>
                                 <span className="text-surface-200">Size:</span>
-                                <span className="ml-2 font-bold text-secondary-400">{project.stats.size}</span>
+                                <span className="ml-2 font-bold text-secondary-400">{project.size}</span>
                               </div>
                               <div>
                                 <span className="text-surface-200">Savings:</span>
-                                <span className="ml-2 font-bold text-secondary-400">{project.stats.savings}</span>
+                                <span className="ml-2 font-bold text-secondary-400">{project.savings}</span>
                               </div>
                               <div>
                                 <span className="text-surface-200">Payback:</span>
-                                <span className="ml-2 font-bold text-secondary-400">{project.stats.payback}</span>
+                                <span className="ml-2 font-bold text-secondary-400">{project.payback}</span>
                               </div>
                             </div>
                           </div>
@@ -149,10 +149,10 @@ const ProjectCarousel = () => {
           {/* View All Projects Button */}
           <div className="text-center mt-8">
             <Link
-              to="/portfolio"
+              to="/case-studies"
               className="inline-flex items-center px-6 py-3 bg-primary-500 text-white rounded-lg hover:bg-primary-600 transition-colors text-base font-subheading"
             >
-              View All Hashrate Heating Projects
+              View All Case Studies
               <ArrowRight className="ml-2 h-5 w-5" />
             </Link>
           </div>

@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react'
 import { Helmet } from 'react-helmet-async'
-import { Book, Users, Award, Cpu, Flame, Bitcoin, ArrowRight, Target, Lightbulb, FileText, BarChart as ChartBar, Wrench, CheckCircle2, Mail, X, Zap, Network, Package, Monitor, BookOpen, Megaphone, Hammer, Calendar } from 'lucide-react'
+import { Book, Bitcoin, ArrowRight, Target, FileText, Wrench, Mail, Zap, Network, Monitor, BookOpen, Megaphone, Hammer, Calendar } from 'lucide-react'
 import { Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
 
@@ -8,18 +8,18 @@ const About = () => {
   const missionPoints = [
     {
       icon: Zap,
-      title: "A New Standard For Electric Heat",
-      description: "We envision a future where heaters double as revenue generators, keeping you warm while earning money with zero waste."
+      title: "Building-Integrated Mining",
+      description: "We design and install systems where Bitcoin miners are the energy infrastructure — not an add-on. In winter, the miner is sized to the building's heat load and integrated into existing HVAC. In summer, it routes excess solar through hashing instead of selling it back to the grid for pennies."
     },
     {
       icon: Bitcoin,
-      title: "Driving Bitcoin Adoption",
-      description: "We're advancing bitcoin adoption with heating solutions that reward homes and businesses for supporting the network."
+      title: "Open-Source First",
+      description: "Our control software runs on Home Assistant. Our integrations are open source. Our hardware roadmap is built on the 256 Foundation open-source stack. Transparency and community aren't marketing — they're the architecture."
     },
     {
       icon: Network,
-      title: "Maximum Miner Decentralizaton",
-      description: "We see a world where bitcoin mining is decentralized across millions of homes and businesses, with heating systems distributing hashrate and mining-pool choice worldwide."
+      title: "The Useful Miner Principle",
+      description: "A miner doesn't need to be profitable to be worth running. It needs to be useful: heats the building cheaper, captures excess solar, or stacks sats on the margin. That's a much lower bar than industrial mining profitability — and it's a bar millions of buildings can clear."
     }
   ]
 
@@ -34,7 +34,7 @@ const About = () => {
   }
 
   const itemVariants = {
-    hidden: { 
+    hidden: {
       opacity: 0,
       y: 20
     },
@@ -61,7 +61,7 @@ const About = () => {
   }
 
   const letterVariants = {
-    hidden: { 
+    hidden: {
       opacity: 0,
       x: -30,
       scale: 0.8
@@ -80,90 +80,64 @@ const About = () => {
   const team = [
     {
       name: 'Tyler Stevens',
-      role: 'CEO',
+      role: 'Founder, Product Lead',
       image: '/IMG_5108.JPG',
-      description: 'Author of "Bitcoin Mining Heat Reuse" and instigator of the Heatpunk movement.'
+      description: 'Author of Bitcoin Mining Heat Reuse and founder of the Heatpunk movement. Tyler leads product vision, brand, and Exergy\'s relationships in the Bitcoin and building science communities.'
     },
     {
       name: 'Dylan',
-      role: 'COO & CFO',
+      role: 'Co-Founder, Technical + Finance Lead',
       image: '/DylanS_headshot.jpeg',
-      description: 'Operations and bitcoin financial strategy expert with an engineering license.'
+      description: 'Licensed engineer and Exergy\'s technical co-founder. Dylan owns infrastructure, software architecture, and the systems that keep every install running.'
     },
     {
       name: 'Mike',
-      role: 'CRO',
+      role: 'Co-Founder, Sales + Growth Lead',
       image: '/MikeC_headshot.png',
-      description: 'Revenue and growth specialist. Bitcoin mining fanatic.'
+      description: 'Revenue and growth lead. Mike owns the sales process, customer relationships, and making sure the right customers find Exergy.'
     }
   ]
 
   const processSteps = [
     {
-      id: 'audit',
-      title: 'Heat Audit Analysis',
-      subtitle: 'What we recommend, how much you can save, how much it will cost',
-      description: 'The Heat Audit translates your heating needs into bitcoin potential. Want to know if hashrate heating is right for you? Order a Heat Audit to learn sizing, savings, upfront costs and what we recommend. ',
+      id: 'assess',
+      title: 'Assess Your Building',
+      subtitle: 'Is building-integrated mining right for you?',
+      description: 'We start with your building\'s heating load, energy costs, and energy stack — solar, fuel type, utility rate. The Exergy Audit translates these into a clear economic picture: what system fits, how much you save, what you earn. Use our free calculator to run the numbers yourself, or hire us to do it.',
       icon: FileText,
-      buttonText: 'Get Yours',
-      buttonLink: '/services#audit-service'
+      buttonText: 'Run the Calculator',
+      buttonLink: 'https://calc.exergyheat.com',
+      external: true
     },
     {
-      id: 'installation-commissioning',
-      title: 'Procurement, Installation & Commissioning',
-      subtitle: 'Get all the parts, organize installation, bring the system online',
-      description: 'From selecting and organizing parts, to scheduling professional installation or hand holding you or a tradesmen throughout the process, we\'ll get your hashrate heating system up and running - start to finish.',
+      id: 'design',
+      title: 'Design the Integration',
+      subtitle: 'The right hardware, in the right place, controlled correctly',
+      description: 'Sizing is only the first step. The miner has to fit physically, connect to the heating distribution system, and respond intelligently to building demand. We design the full integration: hardware selection, control architecture, Home Assistant configuration, and the install plan your trades need.',
       icon: Wrench,
-      buttonText: 'Help Me Out',
-      buttonLink: '/services#installation-service'
+      buttonText: 'See How We Work',
+      buttonLink: '/services',
+      external: false
     },
     {
-      id: 'monitoring',
-      title: 'Heartbeat Remote Monitoring',
-      subtitle: 'Show us your heater\'s pulse - We\'ll watch it for you',
-      description: 'Because hashrate heaters are connected to the internet, we can monitor their performance remotely. Opting in to remote monitoring ensures Exergy is keeping tabs on your heater. We\'ll tell you if it\'s time for maintenance or an upgrade.',
+      id: 'install',
+      title: 'Install & Commission',
+      subtitle: 'Get the system online and earning',
+      description: 'Installation coordinates mechanical, electrical, networking, and controls in sequence. We either do this ourselves (local to Denver), guide you and your contractors remotely, or hand you the full DIY playbook. The system isn\'t done until it\'s heating, mining, and reporting correctly.',
       icon: Monitor,
-      buttonText: 'Learn More',
-      buttonLink: '/services#monitoring-service'
-    }
-  ]
-
-  const roadmap = [
-    {
-      quarter: 'Q2 2025',
-      title: 'Proof of Concept Phase',
-      events: [
-        'Company "soft" launch',
-        'Heat Audit & services development',
-        'Proof of concept sites and hardware testing'
-      ]
+      buttonText: 'View Our Work',
+      buttonLink: '/case-studies',
+      external: false
     },
     {
-      quarter: 'Q3 2025',
-      title: 'Hand Holding Phase',
-      events: [
-        'Sizing and install handholding',
-        'Monitoring software development',
-        'Early projects data collection'
-      ]
-    },
-    {
-      quarter: 'Q4 2025',
-      title: 'Automation Phase',
-      events: [
-        'Monitoring software refinement',
-        'New hardware partners and offerings',
-        'Build heating company partner network for sizing & install'
-      ]
-    },
-    {
-      quarter: 'Q1 2026',
-      title: 'Growth Phase',
-      events: [
-        'Pre-seed investment',
-        'New product development',
-        'Market expansion'
-      ]
+      id: 'monitor',
+      title: 'Monitor, Tune & Stack',
+      subtitle: 'The system keeps working. So does your stack.',
+      description: 'A commissioned system isn\'t a set-and-forget. We log the first full heating season, compare actual to estimates, tune setpoints, and manage seasonal transitions. Exergy Relay gives you a customer portal at exergy.me, secure remote access to your Home Assistant dashboard, automated alerts for hashrate drops or temperature anomalies, and a monthly mining performance report — all for a 5% hashrate split. No subscription, no invoice. After Year 1, we review the economics and plan for expansion.',
+      icon: Zap,
+      buttonText: 'Learn About Exergy Relay',
+      buttonLink: '/services',
+      external: false
     }
   ]
 
@@ -208,9 +182,16 @@ const About = () => {
   return (
     <div className="bg-surface-50 dark:bg-surface-900">
       <Helmet>
-        <title>EXERGY | About Us - Hashrate Heating Pioneers</title>
-        <meta name="description" content="Learn about EXERGY's mission to revolutionize heating through bitcoin mining. Meet our team of hashrate heating experts dedicated to making heat that pays a reality." />
-        <meta name="keywords" content="EXERGY about, hashrate heating company, bitcoin mining heat team, Denver heating company, cryptocurrency heating experts" />
+        <title>EXERGY | About — Building-Integrated Mining</title>
+        <meta name="description" content="Building-integrated Bitcoin mining systems for homes and businesses. Learn about our team, our mission, and the technology behind it." />
+        <meta name="keywords" content="EXERGY about, building integrated mining company, bitcoin mining heat team, Denver mining company, cryptocurrency heating experts" />
+        <link rel="canonical" href="https://exergyheat.com/about" />
+        <meta property="og:title" content="About Exergy | Building-Integrated Bitcoin Mining" />
+        <meta property="og:description" content="Building-integrated Bitcoin mining systems for homes and businesses. Learn about our team, our mission, and the technology behind it." />
+        <meta property="og:url" content="https://exergyheat.com/about" />
+        <meta property="og:type" content="website" />
+        <meta name="twitter:title" content="About Exergy | Building-Integrated Bitcoin Mining" />
+        <meta name="twitter:description" content="Building-integrated Bitcoin mining systems for homes and businesses. Learn about our team, our mission, and the technology behind it." />
       </Helmet>
 
       {/* Hero Section with Custom Gradient */}
@@ -220,7 +201,7 @@ const About = () => {
             What We're About
           </h1>
           <p className="text-xl text-white/90 max-w-2xl mx-auto">
-            Revolutionize heat, decentralize mining, earn sats
+            Building-integrated mining for homes and businesses
           </p>
         </div>
       </div>
@@ -228,7 +209,7 @@ const About = () => {
       {/* Mission Section */}
       <div className="bg-white dark:bg-surface-800 py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div 
+          <motion.div
             className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center"
             initial="hidden"
             whileInView="visible"
@@ -236,7 +217,7 @@ const About = () => {
             variants={containerVariants}
           >
             <motion.div variants={itemVariants}>
-              <motion.div 
+              <motion.div
                 className="inline-flex items-center mb-6"
                 initial={{ scale: 0 }}
                 whileInView={{ scale: 1 }}
@@ -248,14 +229,14 @@ const About = () => {
                 </div>
                 <h2 className="text-2xl font-bold text-surface-900 dark:text-surface-100">Our Mission</h2>
               </motion.div>
-              <motion.p 
+              <motion.p
                 className="text-lg text-surface-600 dark:text-surface-400 mb-8"
                 variants={itemVariants}
               >
-                Our mission is to decentralize mining by trojan-horsing the heating industry with electric devices powered by hashrate. Heaters powered by bitcoin mining are insensitive to network metrics. And that's a good thing.
+                Exergy builds building-integrated mining systems — the hardware, software, and expertise to put Bitcoin miners where they belong: inside the buildings that are already spending energy or wasting it. Every joule becomes heat AND sats in winter. Every surplus solar watt becomes Bitcoin instead of a penny from the utility. No waste. No separate line item. The most useful thing a miner can do is work inside the building it's in.
               </motion.p>
-              
-              <motion.div 
+
+              <motion.div
                 className="space-y-6"
                 variants={containerVariants}
               >
@@ -276,9 +257,9 @@ const About = () => {
                 ))}
               </motion.div>
             </motion.div>
-            
+
             {/* Single Logo with Letter Cascade on Blue Gradient Background */}
-            <motion.div 
+            <motion.div
               className="relative flex items-center justify-center"
               variants={itemVariants}
             >
@@ -353,7 +334,7 @@ const About = () => {
             </div>
             <h3 className="mt-4 text-xl font-semibold text-surface-900 dark:text-surface-100">Community Builders</h3>
             <p className="mt-2 text-surface-600 dark:text-surface-400">
-              Our Founders host the annual Heatpunk Summit - A first of its kind conference dedicated entierly to hashrate heating, covering technical developments to tradesmen education. 
+              Our Founders host the annual Heatpunk Summit - A first of its kind conference dedicated entierly to hashrate heating, covering technical developments to tradesmen education.
             </p>
           </div>
           <div className="bg-white dark:bg-surface-800 rounded-lg shadow-xl p-8 transform hover:scale-105 transition-transform">
@@ -367,7 +348,7 @@ const About = () => {
           </div>
         </div>
       </div>
-      
+
       {/* Book & Leadership Section */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center mb-16">
@@ -381,7 +362,7 @@ const About = () => {
                 </p>
                 <div className="mb-24 sm:mb-0">
                   <a
-                    href="https://braiins.com/books/bitcoin-mining-heat-reuse"
+                    href="https://www.amazon.com/Bitcoin-Mining-Reuse-Tyler-Stevens/dp/B0GYJ8QDK6/ref=sr_1_1?"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="inline-flex items-center justify-center px-6 py-3 bg-primary-600 text-white rounded-lg hover:bg-primary-700 transition-colors text-base font-subheading"
@@ -413,7 +394,7 @@ const About = () => {
               <Calendar className="h-12 w-12 text-primary-400 mb-4" />
               <h3 className="text-2xl font-bold text-white mb-4">Heatpunk Summit</h3>
               <p className="text-surface-300 mb-6">
-                The annual Heatpunk Summit is a conference dedicated to hashrate heating, started by our founder, Tyler Stevens.
+                The annual Heatpunk Summit is a conference dedicated to building-integrated mining and hashrate heating, started by our founder, Tyler Stevens.
               </p>
               <a
                 href="https://denver.space/heatpunk_summit"
@@ -450,7 +431,7 @@ const About = () => {
             >
               <h2 className="text-3xl font-bold text-surface-900 dark:text-surface-100 mb-6">Our Process</h2>
               <p className="text-xl text-surface-600 dark:text-surface-400 max-w-2xl mx-auto">
-                We've developed a multi-step approach to get your hashrate heating system online.
+                We've developed a multi-step approach to get your building-integrated mining system online.
               </p>
             </motion.div>
           </div>
@@ -497,12 +478,23 @@ const About = () => {
                         <h4 className="text-lg font-medium text-primary-600 dark:text-primary-400 mt-1 mb-2">{step.subtitle}</h4>
                         <p className="mt-2 text-surface-600 dark:text-surface-400">{step.description}</p>
                       </div>
-                      <Link
-                        to={step.buttonLink}
-                        className="mt-4 sm:mt-0 sm:ml-4 px-4 py-2 bg-primary-600 text-white rounded-lg hover:bg-primary-700 transition-colors text-base font-subheading whitespace-nowrap"
-                      >
-                        {step.buttonText}
-                      </Link>
+                      {step.external ? (
+                        <a
+                          href={step.buttonLink}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="mt-4 sm:mt-0 sm:ml-4 px-4 py-2 bg-primary-600 text-white rounded-lg hover:bg-primary-700 transition-colors text-base font-subheading whitespace-nowrap"
+                        >
+                          {step.buttonText}
+                        </a>
+                      ) : (
+                        <Link
+                          to={step.buttonLink}
+                          className="mt-4 sm:mt-0 sm:ml-4 px-4 py-2 bg-primary-600 text-white rounded-lg hover:bg-primary-700 transition-colors text-base font-subheading whitespace-nowrap"
+                        >
+                          {step.buttonText}
+                        </Link>
+                      )}
                     </div>
                   </motion.div>
                 </div>
@@ -535,36 +527,6 @@ const About = () => {
         </div>
       </div>
 
-      {/* Roadmap Section */}
-      <div className="bg-white dark:bg-surface-800 py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold text-surface-900 dark:text-surface-100 text-center mb-12">Our Roadmap</h2>
-          <div className="relative">
-            <div className="absolute left-11 md:left-1/2 transform md:-translate-x-1/2 h-full w-1 bg-primary-200 dark:bg-primary-800"></div>
-            <div className="space-y-12">
-              {roadmap.map((milestone, index) => (
-                <div key={index} className="relative">
-                  <div className="flex items-center">
-                    <div className="absolute left-8 md:left-1/2 transform md:-translate-x-1/2 w-8 h-8 bg-primary-600 dark:bg-primary-500 rounded-full text-white flex items-center justify-center">
-                      {index + 1}
-                    </div>
-                    <div className={`w-full md:w-1/2 pl-20 md:pl-0 ${index === 0 || index === 2 ? 'md:pr-12 md:text-right' : 'md:pl-12 md:ml-auto'}`}>
-                      <h3 className="text-xl font-semibold text-surface-900 dark:text-surface-100 mb-2">{milestone.quarter}</h3>
-                      <h4 className="text-lg font-medium text-primary-600 dark:text-primary-400 mb-2">{milestone.title}</h4>
-                      <ul className="space-y-2">
-                        {milestone.events.map((event, eventIndex) => (
-                          <li key={eventIndex} className="text-surface-600 dark:text-surface-400">{event}</li>
-                        ))}
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-      </div>
-
       {/* Join the Movement Section with Custom Gradient */}
       <div className="bg-gradient-to-r from-[#4970A5] to-[#718EBC] py-20">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -573,14 +535,14 @@ const About = () => {
             Join the Movement
           </h2>
           <p className="text-xl text-white/90 mb-8">
-            Be part of the revolution in heating & mining. Stay informed about our latest developments, products, and opportunities.
+            Be part of the building-integrated mining revolution. Stay informed about our latest developments, products, and opportunities.
           </p>
-          
+
           {/* HubSpot Form Container */}
           <div id="hubspot-form-container" className="max-w-md mx-auto">
             {/* The HubSpot form will be injected here */}
           </div>
-          
+
           <p className="mt-4 text-sm text-white/90">
             We respect your privacy. No spam, just important updates.
           </p>

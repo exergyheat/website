@@ -1,0 +1,36 @@
+# Exergy — Building-Integrated Bitcoin Mining
+# https://exergyheat.com
+
+Exergy designs and installs building-integrated Bitcoin mining systems for residential and commercial buildings. A Bitcoin miner consumes electricity and converts 100% of it to heat — the same heat a building already pays for. By integrating miners into existing heating infrastructure, buildings displace heating costs, monetize excess solar generation, and earn Bitcoin from energy that was already being spent. Exergy is based in Denver, CO.
+
+## What Exergy Does
+
+- Designs and installs Bitcoin mining systems integrated into building HVAC, hydronic, and solar infrastructure
+- Provides three service tiers: Self-Serve (DIY with free tools), Guided (remote consulting), Done-For-You (full installation)
+- Offers Exergy Relay: remote monitoring, alerts, and monthly performance reporting via a 5% hashrate split
+- Publishes open-source Home Assistant integrations for controlling Bitcoin miners as smart building appliances
+- Supports five integration types: Smart Zone Heaters, In-Duct Forced Air, Hydronic/Radiant, Water/Pool/Spa, Excess Solar
+
+## Key Pages
+
+- Homepage: https://exergyheat.com/
+- Services: https://exergyheat.com/services
+- Products: https://exergyheat.com/products
+- About: https://exergyheat.com/about
+- Learn: https://exergyheat.com/learn
+- FAQ: https://exergyheat.com/faq
+- Case Studies: https://exergyheat.com/case-studies
+- Newsroom: https://exergyheat.com/newsroom
+- Contact: https://exergyheat.com/contact
+- Calculators: https://calc.exergyheat.com
+- Documentation: https://docs.exergyheat.com
+- GitHub (open-source integrations): https://github.com/exergyheat
+
+## Sitemap
+
+https://exergyheat.com/sitemap.xml
+
+## Contact
+
+contact@exergyheat.com
+3700 N Franklin St, Denver, CO 80205

@@ -1,5 +1,6 @@
 import React from 'react'
 import { Shield, Lock, Eye, FileText } from 'lucide-react'
+import { Helmet } from 'react-helmet-async'
 
 const PrivacyPolicy = () => {
   const sections = [
@@ -27,6 +28,11 @@ const PrivacyPolicy = () => {
 
   return (
     <div className="bg-surface-50 dark:bg-surface-900 min-h-screen">
+      <Helmet>
+        <title>Privacy Policy | Exergy</title>
+        <meta name="description" content="Exergy's privacy policy — how we collect, use, and protect your data." />
+        <link rel="canonical" href="https://exergyheat.com/privacy-policy" />
+      </Helmet>
       {/* Hero Section */}
       <div className="bg-gradient-to-r from-[#4970A5] to-[#718EBC] py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">

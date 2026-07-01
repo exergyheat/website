@@ -62,11 +62,11 @@ const BlogPostDetail = () => {
       <div className="bg-surface-50 dark:bg-surface-900 min-h-screen">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
           <Link
-            to="/blog"
+            to="/newsroom"
             className="inline-flex items-center text-primary-500 dark:text-primary-400 hover:text-primary-600 dark:hover:text-primary-300 mb-6"
           >
             <ArrowLeft className="h-4 w-4 mr-2" />
-            Back to Blog
+            Back to Newsroom
           </Link>
           <div className="text-center">
             <h1 className="text-2xl font-bold text-surface-900 dark:text-surface-100 mb-4">
@@ -93,14 +93,37 @@ const BlogPostDetail = () => {
     <div className="bg-surface-50 dark:bg-surface-900 min-h-screen">
       {post && (
         <Helmet>
-          <title>{post.title} | EXERGY Blog</title>
+          <title>{post.title} | EXERGY Newsroom</title>
           <meta name="description" content={post.excerpt} />
-          <meta name="keywords" content={`${post.category.join(', ')}, hashrate heating, EXERGY blog`} />
+          <meta name="keywords" content={`${post.category.join(', ')}, building-integrated mining, Exergy newsroom`} />
           <meta name="author" content={post.author} />
           <meta property="article:published_time" content={post.date} />
           <meta property="article:author" content={post.author} />
-          <meta property="og:image" content={post.image} />
-          <link rel="canonical" href={`https://exergyheat.com/blog/${id}`} />
+          <link rel="canonical" href={`https://exergyheat.com/newsroom/${id}`} />
+          <meta property="og:title" content={`${post.title} | EXERGY Newsroom`} />
+          <meta property="og:description" content={post.excerpt} />
+          <meta property="og:url" content={`https://exergyheat.com/newsroom/${id}`} />
+          <meta property="og:type" content="article" />
+          <meta property="og:image" content={`https://exergyheat.com${post.image}`} />
+          <meta name="twitter:title" content={`${post.title} | EXERGY Newsroom`} />
+          <meta name="twitter:description" content={post.excerpt} />
+          <meta name="twitter:image" content={`https://exergyheat.com${post.image}`} />
+          <script type="application/ld+json">{JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "NewsArticle",
+            "headline": post.title,
+            "description": post.excerpt,
+            "image": [`https://exergyheat.com${post.image}`],
+            "datePublished": post.date,
+            "author": [{ "@type": "Organization", "name": post.author, "url": "https://exergyheat.com" }],
+            "publisher": {
+              "@type": "Organization",
+              "name": "Exergy",
+              "url": "https://exergyheat.com",
+              "logo": { "@type": "ImageObject", "url": "https://exergyheat.com/exergy-logo.png" }
+            },
+            "mainEntityOfPage": { "@type": "WebPage", "@id": `https://exergyheat.com/newsroom/${id}` }
+          })}</script>
         </Helmet>
       )}
       
@@ -108,11 +131,11 @@ const BlogPostDetail = () => {
       <div className="bg-white dark:bg-surface-800 py-12">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <Link
-            to="/blog"
+            to="/newsroom"
             className="inline-flex items-center text-primary-500 dark:text-primary-400 hover:text-primary-600 dark:hover:text-primary-300 mb-6"
           >
             <ArrowLeft className="h-4 w-4 mr-2" />
-            Back to All Blog Posts
+            Back to Newsroom
           </Link>
           <h1 className="text-4xl font-bold text-surface-900 dark:text-surface-100 mb-4">
             {post.title}
@@ -150,7 +173,7 @@ const BlogPostDetail = () => {
         <img
           src={post.image}
           alt={post.title}
-          className="w-full h-64 md:h-96 object-cover rounded-lg shadow-lg"
+          className="w-full rounded-lg shadow-lg"
         />
       </div>
 

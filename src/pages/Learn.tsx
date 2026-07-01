@@ -22,29 +22,17 @@ const Learn = () => {
       link: "https://docs.exergyheat.com",
     },
     {
-      title: "Support",
-      description: "General forum, policies, guides, hardware, software and service support.",
+      title: "Support Forum",
+      description: "Community forum, policies, guides, hardware, software and service support.",
       icon: Users,
       link: "https://support.exergyheat.com/",
-     external: true
+      external: true
     },
     {
       title: "FAQ",
-      description: "Find answers to common questions about hashrate heating technology.",
+      description: "Real questions from real customers — answered honestly.",
       icon: HelpCircle,
       link: "/faq"
-    },
-    {
-      title: "Content",
-      description: "Explore hashrate heating content, videos, guides, tutorials and more.",
-      icon: BookOpen,
-      link: "/content"
-    },
-    {
-      title: "Blog",
-      description: "Company updates and insights on the hashrate heating industry",
-      icon: PenTool,
-      link: "/blog"
     }
   ]
 
@@ -52,7 +40,7 @@ const Learn = () => {
     {
       title: "Electricity In - Heat Out",
       icon: Zap,
-      description: "Electric heaters convert power into heat with no waste. Typically, electric heat is more expensive than gas heat, and thus less popular. Hashrate Heating changes the norm.",
+      description: "Every watt of electricity consumed by a Bitcoin miner becomes heat — 100% of it. This isn't a feature, it's physics. The same thermodynamic law that makes your laptop warm makes miners ideal heaters.",
       image: "electric_heat_conversion.png",
       details: [
         "100% energy conversion efficiency",
@@ -64,7 +52,7 @@ const Learn = () => {
     {
       title: "Open Monetary Protocol",
       icon: Bitcoin,
-      description: "Bitcoin mining is an open source protocol (like the world wide web) that rewards participants for contributing energy to process bitcoin transactions. The more energy you contribute, the more you earn, and the more heat you generate.",
+      description: "Bitcoin mining is an open protocol — like the internet, anyone can participate. Miners contribute energy to process Bitcoin transactions and earn rewards proportionally. The more heat your building needs, the more your miner runs, the more you earn.",
       image: "bitcoin_miners.png",
       details: [
         "Anyone can participate - like anyone can use the internet",
@@ -74,78 +62,88 @@ const Learn = () => {
       ]
     },
     {
-      title: "Combining the Two: Smart Heat",
+      title: "Building-Integrated Mining",
       icon: Cpu,
-      description: "Regular bitoin miners are purposefully power hungry to maximize earnings. This inherently makes them great for heating. Hashrate Heating does the obvious - put bitcoin miners into heating systems. The result? Heat that pays.",
+      description: "Building-integrated mining puts the miner where the energy is already going. In winter, your heating system earns Bitcoin every time it runs. In summer, it becomes a solar arbitrage machine — routing surplus generation through hashing instead of selling it back to the utility for pennies. One device. Two modes. No extra operating cost.",
       image: "bitcoin_home_heat.png",
       details: [
-        "Maximum efficiency. No waste - plus revenue",
-        "Digital heat = better control and optimal performance",
-        "Win-Win. Heat + revenue at no extra operating cost",
-        "Consistent passive revenue every time you turn on the heat"
+        "Your heating season is your primary mining season",
+        "In summer, excess solar routes through the miner instead of the grid",
+        "Solar Home case study: 3.3× more value per kWh at $0.01/kWh net metering — your advantage scales with your rate",
+        "One device, two outputs — heat and Bitcoin — at no extra cost"
       ]
     }
   ]
 
   const applications = [
     {
-      id: 'space-heating',
-      title: 'Room Space Heating',
-      description: 'Standalone units for heating individual rooms, garages, workshops, or specific areas. Plug-and-play simplicity.',
+      id: 'zone-heaters',
+      title: 'Smart Zone Heaters',
+      subtitle: 'The non-invasive entry point',
+      description: 'Lower-wattage miners (150W–850W) replace plug-in space heaters room by room. Each pairs with a wireless temperature sensor and a Home Assistant virtual thermostat — on when the room is cold, off when it hits setpoint. No trades required. No ductwork. No plumbing. You can start one room and scale.',
+      tradeoff: 'Whole-home coverage requires multiple units. Works best as a distributed system staged with the existing furnace as backup.',
       image: 'https://images.pexels.com/photos/7745932/pexels-photo-7745932.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
       features: [
-        'Portable and flexible',
-        'Quiet operation',
-        'WiFi connectivity',
-        'Mobile app control'
+        'No licensed trades — 120V / 15A service sufficient',
+        'Start one room, scale to whole building',
+        'Stage 1 heat with existing system as backup',
+        'Deferred a $10,000+ furnace replacement — indefinitely'
       ]
-    }, 
+    },
     {
       id: 'forced-air',
-      title: 'Forced Air Furnaces',
-      description: 'Replace or supplement your traditional furnace with hashrate heating. Perfect for whole-building heating with existing ductwork.',
+      title: 'In-Duct Forced Air',
+      subtitle: 'Working with your existing ductwork',
+      description: 'A miner installs inline with the existing return duct, preheating air before it reaches the air handler. When the thermostat calls for heat, the miner fires first. If it can\'t satisfy the setpoint within the staging delay, the furnace kicks in as backup. If your building has ductwork, you already have an integration point.',
+      tradeoff: 'Requires HVAC trades for the duct penetration. Miners run longer continuous cycles than a furnace — factor that into maintenance planning.',
       image: 'https://images.pexels.com/photos/5505931/pexels-photo-5505931.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
       features: [
-        'Integrates with existing HVAC',
-        'Optimized temperature control',
-        'Smart thermostat connectivity',
-        'Completely hidden passive income'
+        'Miner is stage 1 — furnace stays as stage 2 backup',
+        'Hides in mechanical room, existing ductwork distributes heat',
+        'Thermostat-compatible — no changes to controls',
+        'Colorado install: gas fired just 4.4 hrs across a 43-day season'
       ]
     },
     {
-      id: 'radiant-systems',
-      title: 'Radiant Floor Heating',
-      description: 'Underfloor heating systems that provide comfortable, even heat distribution throughout your space from the ground up.',
+      id: 'hydronic-radiant',
+      title: 'Hydronic & Radiant',
+      subtitle: 'The high-performance configuration',
+      description: 'The miner plumbs into the hydronic return line upstream of the existing boiler, preheating return water before it reaches the boiler. The boiler sees warm water and stays off. When the building needs more heat than the miner can supply, the boiler fires to top up. If the miner fails entirely, the boiler operates normally — redundancy is built into the plumbing.',
+      tradeoff: 'Requires a licensed plumber. Higher upfront complexity, but delivers the most comfortable heat (radiant floor) with a dry cooler enabling year-round mining.',
       image: 'https://cdn11.bigcommerce.com/s-8s3kdqoux2/product_images/uploaded_images/expert-thumb-pros-and-cons-of-in-floor-radiant-heating-.jpg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
       features: [
-        'Even heat distribution',
-        'Increased efficiency',
-        'Silent operation',
-        'Luxury comfort'
+        'Miner on return line — boiler sees warm water and stays off',
+        'Dry cooler enables year-round mining outside heating season',
+        'Radiant floor comfort — zero tradeoff vs. conventional boiler',
+        'All-electric install: 45% reduction in effective heating cost'
       ]
     },
     {
-      id: 'pools-spas',
-      title: 'Pools & Hot Tubs',
-      description: 'Keep your pool or spa at the perfect temperature year-round while generating revenue from the heating process.',
+      id: 'water-pool-spa',
+      title: 'Water, Pool & Spa',
+      subtitle: 'Year-round high duty cycle',
+      description: 'Heat transfers from the miner to a water volume via heat exchanger — a domestic hot water tank, hot tub, or pool. Because you want hot water year-round regardless of season, the miner runs at a high duty cycle every month of the year. Someone is heating your hot tub. It might as well be Bitcoin.',
+      tradeoff: 'Pools require a larger miner to move the thermal mass meaningfully. Hot tubs and domestic hot water tanks are the strongest fit — smaller volume, faster response.',
       image: 'https://images.pexels.com/photos/6667425/pexels-photo-6667425.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
       features: [
-        'Year-round swimming',
-        'Precise temperature control',
-        'Offset heating costs',
-        'Digital control'
+        'Heat exchanger to hot tub, pool, or domestic hot water tank',
+        'Year-round operation — highest annual mining duty cycle',
+        'Anyone who pays propane to heat a hot tub grasps this immediately',
+        'Bitcoin-heated hot tub running at Exergy\'s Denver space since 2026'
       ]
     },
     {
-      id: 'Industrial',
-      title: 'C&I Systems',
-      description: 'Commercial and industrial heating systems for businesses with low-grade heating applications.',
-      image: 'https://images.pexels.com/photos/2886937/pexels-photo-2886937.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+      id: 'excess-solar',
+      title: 'Solar & Excess Energy',
+      subtitle: 'The miner as dispatchable load',
+      description: 'A control layer that stacks on top of any integration type above. When the building\'s circuit receives more solar than it consumes, Home Assistant ramps the miner up to absorb the surplus before it exports at poor rates. When generation drops, the miner throttles back. In summer, your miner stops being a heater and starts being a solar arbitrage machine.',
+      tradeoff: 'Requires a solar system with monitoring Home Assistant can read. A dry cooler or garage placement handles heat dump during non-heating months.',
+      image: 'https://images.pexels.com/photos/433308/pexels-photo-433308.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
       features: [
-        'Breweries & distilleries',
-        'Greenhouses',
-        'Apartments and large warehouses',
-        'District heating'
+        'Miner ramps up automatically on surplus solar generation',
+        'Solar Home case study: 3.3× more value per kWh at $0.01/kWh net metering',
+        'Real-time switching: mine vs. export based on hashprice vs. grid rate',
+        'Works on top of any other integration type'
       ]
     }
   ]
@@ -169,9 +167,16 @@ const Learn = () => {
   return (
     <div className="bg-surface-50 dark:bg-surface-900 min-h-screen">
       <Helmet>
-        <title>EXERGY | Learn Hashrate Heating</title>
-        <meta name="description" content="Learn about hashrate heating technology - the revolutionary heating system that generates Bitcoin while warming your space. Educational resources, guides, and expert insights." />
-        <meta name="keywords" content="hashrate heating education, bitcoin mining heat technology, learn cryptocurrency heating, heating technology guides" />
+        <title>EXERGY | Learn Building-Integrated Mining</title>
+        <meta name="description" content="How Bitcoin miners displace heating costs in winter and monetize excess solar in summer. Guides, case studies, and resources from Exergy." />
+        <link rel="canonical" href="https://exergyheat.com/learn" />
+        <meta property="og:title" content="Learn Building-Integrated Mining | Exergy" />
+        <meta property="og:description" content="How Bitcoin miners displace heating costs in winter and monetize excess solar in summer. Guides, case studies, and resources from Exergy." />
+        <meta property="og:url" content="https://exergyheat.com/learn" />
+        <meta property="og:type" content="website" />
+        <meta name="twitter:title" content="Learn Building-Integrated Mining | Exergy" />
+        <meta name="twitter:description" content="How Bitcoin miners displace heating costs in winter and monetize excess solar in summer. Guides and resources from Exergy." />
+        <meta name="keywords" content="building-integrated mining, hashrate heating education, bitcoin mining heat technology, solar monetization bitcoin, heating technology guides" />
       </Helmet>
       
       {/* Hero Section with Custom Gradient */}
@@ -181,7 +186,7 @@ const Learn = () => {
             Learn The Technology
           </h1>
           <p className="text-xl text-white/90 max-w-2xl mx-auto">
-            The most revolutionary heating tech in over a century - heat that pays
+            Understand building-integrated mining — the technology, the economics, and the integration options.
           </p>
         </div>
       </div>
@@ -191,7 +196,7 @@ const Learn = () => {
         <h2 className="text-3xl font-bold text-surface-900 dark:text-surface-100 text-center mb-12">
           Resources
         </h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
           {resources.map((resource, index) => (
             resource.link.startsWith('http') ? (
               <a
@@ -307,9 +312,9 @@ const Learn = () => {
       <div className="bg-surface-50 dark:bg-surface-900 py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-surface-900 dark:text-surface-100 mb-4">Example Applications</h2>
+            <h2 className="text-3xl font-bold text-surface-900 dark:text-surface-100 mb-4">Five Ways to Integrate a Miner</h2>
             <p className="text-xl text-surface-600 dark:text-surface-400">
-              Discover the versatility of hashrate heating across different applications
+              Every building already has a heat distribution system. The miner connects to it.
             </p>
           </div>
 
@@ -323,28 +328,33 @@ const Learn = () => {
                   <div key={application.id} className="w-full flex-shrink-0">
                     <div className="mx-4">
                       <div className="bg-white dark:bg-surface-800 rounded-lg overflow-hidden shadow-xl">
-                        <div className="relative h-96">
+                        {/* Image header with title/subtitle overlay */}
+                        <div className="relative h-56">
                           <img
                             src={application.image}
-                            alt={`${application.title} hashrate heating application showing ${application.description}`}
+                            alt={application.title}
                             className="w-full h-full object-cover"
                           />
-                          {/* Light blue tint overlay using website's primary blue color */}
-                          <div 
-                            className="absolute inset-0 bg-primary-500 opacity-40"
-                          />
-                          <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
+                          <div className="absolute inset-0 bg-primary-500 opacity-40" />
+                          <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent" />
                           <div className="absolute bottom-0 left-0 right-0 p-6 text-white">
-                            <h3 className="text-2xl font-bold mb-2">{application.title}</h3>
-                            <p className="text-lg text-surface-100 mb-4">{application.description}</p>
-                            <div className="grid grid-cols-2 gap-2">
-                              {application.features.map((feature, index) => (
-                                <div key={index} className="flex items-center text-sm text-surface-200">
-                                  <div className="h-1.5 w-1.5 bg-primary-400 rounded-full mr-2" />
-                                  {feature}
-                                </div>
-                              ))}
-                            </div>
+                            <p className="text-xs font-bold uppercase tracking-widest text-primary-300 mb-1">{application.subtitle}</p>
+                            <h3 className="text-2xl font-bold">{application.title}</h3>
+                          </div>
+                        </div>
+                        {/* Content body */}
+                        <div className="p-6">
+                          <p className="text-surface-600 dark:text-surface-400 text-sm leading-relaxed mb-4">{application.description}</p>
+                          <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 mb-4">
+                            {application.features.map((feature, index) => (
+                              <div key={index} className="flex items-start text-sm text-surface-700 dark:text-surface-300">
+                                <div className="h-1.5 w-1.5 bg-primary-500 rounded-full mr-2 mt-1.5 flex-shrink-0" />
+                                {feature}
+                              </div>
+                            ))}
+                          </div>
+                          <div className="border-t border-surface-200 dark:border-surface-600 pt-3">
+                            <p className="text-xs text-surface-500 dark:text-surface-400 italic"><span className="font-semibold not-italic text-surface-600 dark:text-surface-300">Tradeoff: </span>{application.tradeoff}</p>
                           </div>
                         </div>
                       </div>
@@ -394,14 +404,14 @@ const Learn = () => {
             See it in Action
           </h2>
           <p className="text-xl text-white/90 mb-8">
-            Explore real-world implementations of hashrate heating technology.
+            Explore real-world implementations of building-integrated mining — heating loads displaced, solar monetized, Bitcoin earned.
           </p>
           
           <Link
-            to="/portfolio"
+            to="/case-studies"
             className="inline-flex items-center px-8 py-4 bg-white text-primary-600 rounded-lg hover:bg-white/90 transition-colors text-base font-subheading"
           >
-            See our Portfolio
+            See Case Studies
             <Eye className="ml-2 h-5 w-5" />
           </Link>
         </div>

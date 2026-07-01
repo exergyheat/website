@@ -65,10 +65,10 @@ const Blog = () => {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <PenTool className="h-16 w-16 text-white mx-auto mb-6" />
             <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              EXERGY Blog
+              Exergy Newsroom
             </h1>
             <p className="text-xl text-white/90 max-w-2xl mx-auto">
-              Insights, updates, and deep dives into hashrate heating technology
+              Announcements, conference coverage, and updates from Exergy
             </p>
           </div>
         </div>
@@ -103,10 +103,10 @@ const Blog = () => {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <PenTool className="h-16 w-16 text-white mx-auto mb-6" />
             <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              EXERGY Blog
+              Exergy Newsroom
             </h1>
             <p className="text-xl text-white/90 max-w-2xl mx-auto">
-              Insights, updates, and deep dives into hashrate heating technology
+              Announcements, conference coverage, and updates from Exergy
             </p>
           </div>
         </div>
@@ -132,9 +132,16 @@ const Blog = () => {
   return (
     <div className="bg-surface-50 dark:bg-surface-900 min-h-screen">
       <Helmet>
-        <title>EXERGY Blog | Hashrate Heating Insights & Updates</title>
-        <meta name="description" content="Stay updated with the latest insights on hashrate heating technology, Bitcoin mining heat reuse, and industry developments from EXERGY's expert team." />
-        <meta name="keywords" content="hashrate heating blog, bitcoin mining heat news, cryptocurrency heating insights, EXERGY updates" />
+        <title>EXERGY Newsroom | Announcements & Updates</title>
+        <meta name="description" content="Exergy company announcements, conference coverage, presentations, and updates on building-integrated Bitcoin mining." />
+        <meta name="keywords" content="Exergy newsroom, building-integrated mining news, bitcoin heating announcements, EXERGY updates" />
+        <link rel="canonical" href="https://exergyheat.com/newsroom" />
+        <meta property="og:title" content="EXERGY Newsroom | Announcements & Updates" />
+        <meta property="og:description" content="Exergy company announcements, conference coverage, presentations, and updates on building-integrated Bitcoin mining." />
+        <meta property="og:url" content="https://exergyheat.com/newsroom" />
+        <meta property="og:type" content="website" />
+        <meta name="twitter:title" content="EXERGY Newsroom | Announcements & Updates" />
+        <meta name="twitter:description" content="Exergy company announcements, conference coverage, presentations, and updates on building-integrated Bitcoin mining." />
       </Helmet>
       
       {/* Hero Section with Custom Gradient */}
@@ -142,10 +149,10 @@ const Blog = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <PenTool className="h-16 w-16 text-white mx-auto mb-6" />
           <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
-            EXERGY Blog
+            Exergy Newsroom
           </h1>
           <p className="text-xl text-white/90 max-w-2xl mx-auto">
-            Insights, updates, and deep dives into hashrate heating technology
+            Announcements, conference coverage, and updates from Exergy
           </p>
         </div>
       </div>
@@ -202,13 +209,13 @@ const Blog = () => {
         {blogPosts.length === 0 ? (
           <div className="text-center py-12">
             <p className="text-xl text-surface-600 dark:text-surface-400">
-              No blog posts found. Check back soon for updates!
+              Nothing posted yet — check back soon for announcements and updates.
             </p>
           </div>
         ) : (
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {filteredPosts.map((post) => (
-              <Link key={post.id} to={`/blog/${post.id}`}>
+              <Link key={post.id} to={`/newsroom/${post.id}`}>
                 <article className="bg-white dark:bg-surface-800 rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
                   <div className="relative h-48">
                     <img
