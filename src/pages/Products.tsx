@@ -54,7 +54,7 @@ const Products = () => {
   return (
     <div className="bg-surface-50 dark:bg-surface-900">
       <Helmet>
-        <title>Products | Exergy Heat</title>
+        <title>Products | Exergy</title>
         <meta
           name="description"
           content="Open-source smart home integrations, a purpose-built control hub, and vetted mining hardware for building-integrated systems."

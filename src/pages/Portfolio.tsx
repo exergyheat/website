@@ -8,7 +8,7 @@ const Portfolio = () => {
   return (
     <div className="bg-surface-50 dark:bg-surface-900 min-h-screen">
       <Helmet>
-        <title>EXERGY | Case Studies — Building-Integrated Mining in the Field</title>
+        <title>Case Studies | Exergy</title>
         <meta name="description" content="Real case studies from residential and commercial installations — forced air, hydronic, solar, and distributed mining approaches. Real data." />
         <meta name="keywords" content="building integrated mining case studies, bitcoin mining heat installations, hashrate heating results, Exergy portfolio" />
         <link rel="canonical" href="https://exergyheat.com/case-studies" />

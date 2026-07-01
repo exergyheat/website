@@ -182,7 +182,7 @@ const About = () => {
   return (
     <div className="bg-surface-50 dark:bg-surface-900">
       <Helmet>
-        <title>EXERGY | About — Building-Integrated Mining</title>
+        <title>About | Exergy</title>
         <meta name="description" content="Building-integrated Bitcoin mining systems for homes and businesses. Learn about our team, our mission, and the technology behind it." />
         <meta name="keywords" content="EXERGY about, building integrated mining company, bitcoin mining heat team, Denver mining company, cryptocurrency heating experts" />
         <link rel="canonical" href="https://exergyheat.com/about" />

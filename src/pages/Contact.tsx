@@ -30,7 +30,7 @@ const Contact = () => {
   return (
     <div className="bg-surface-50 dark:bg-surface-900">
       <Helmet>
-        <title>EXERGY | Contact Us</title>
+        <title>Contact | Exergy</title>
         <meta name="description" content="Contact Exergy in Denver, CO. Email contact@exergyheat.com or book a free consultation to explore building-integrated mining for your property." />
         <meta name="keywords" content="contact Exergy, building integrated mining consultation, Denver mining company, bitcoin mining heat contact" />
         <link rel="canonical" href="https://exergyheat.com/contact" />

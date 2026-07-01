@@ -7,7 +7,7 @@ const Services = () => {
   return (
     <div className="bg-surface-50 dark:bg-surface-900">
       <Helmet>
-        <title>Building-Integrated Bitcoin Mining Services | Exergy</title>
+        <title>Services | Exergy</title>
         <meta name="description" content="Three service tiers for building-integrated mining: self-serve tools, guided remote consulting, or done-for-you installation. Available nationwide." />
         <meta name="keywords" content="bitcoin mining heating, building integrated mining, hashrate heating services, bitcoin heat audit, home bitcoin mining, commercial bitcoin heating, Exergy Relay, Denver bitcoin mining" />
         <link rel="canonical" href="https://exergyheat.com/services" />

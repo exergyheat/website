@@ -29,7 +29,7 @@ const BookCall = () => {
   return (
     <div className="bg-surface-50 dark:bg-surface-900 min-h-screen">
       <Helmet>
-        <title>EXERGY | Book a Call - Schedule a Consultation</title>
+        <title>Book a Call | Exergy</title>
         <meta name="description" content="Book a free 15-minute consultation with Exergy. Discuss your building and learn whether building-integrated mining fits your energy setup." />
         <meta name="keywords" content="book Exergy consultation, building integrated mining call, schedule bitcoin mining demo, Exergy appointment" />
         <link rel="canonical" href="https://exergyheat.com/book-call" />

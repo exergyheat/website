@@ -132,7 +132,7 @@ const Blog = () => {
   return (
     <div className="bg-surface-50 dark:bg-surface-900 min-h-screen">
       <Helmet>
-        <title>EXERGY Newsroom | Announcements & Updates</title>
+        <title>Newsroom | Exergy</title>
         <meta name="description" content="Exergy company announcements, conference coverage, presentations, and updates on building-integrated Bitcoin mining." />
         <meta name="keywords" content="Exergy newsroom, building-integrated mining news, bitcoin heating announcements, EXERGY updates" />
         <link rel="canonical" href="https://exergyheat.com/newsroom" />

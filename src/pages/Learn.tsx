@@ -167,7 +167,7 @@ const Learn = () => {
   return (
     <div className="bg-surface-50 dark:bg-surface-900 min-h-screen">
       <Helmet>
-        <title>EXERGY | Learn Building-Integrated Mining</title>
+        <title>Learn | Exergy</title>
         <meta name="description" content="How Bitcoin miners displace heating costs in winter and monetize excess solar in summer. Guides, case studies, and resources from Exergy." />
         <link rel="canonical" href="https://exergyheat.com/learn" />
         <meta property="og:title" content="Learn Building-Integrated Mining | Exergy" />

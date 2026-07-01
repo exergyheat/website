@@ -164,7 +164,7 @@ const FAQ = () => {
   return (
     <div className="bg-surface-50 dark:bg-surface-900 min-h-screen">
       <Helmet>
-        <title>EXERGY | FAQ — Building-Integrated Mining Questions Answered</title>
+        <title>FAQ | Exergy</title>
         <meta name="description" content="Real Q&amp;A about building-integrated mining: how it works, what it costs, ROI, technical setup, and whether your building is a good fit." />
         <link rel="canonical" href="https://exergyheat.com/faq" />
         <meta property="og:title" content="FAQ | Building-Integrated Mining — Exergy" />

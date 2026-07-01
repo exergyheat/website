@@ -93,7 +93,7 @@ const BlogPostDetail = () => {
     <div className="bg-surface-50 dark:bg-surface-900 min-h-screen">
       {post && (
         <Helmet>
-          <title>{post.title} | EXERGY Newsroom</title>
+          <title>{post.title} | Exergy</title>
           <meta name="description" content={post.excerpt} />
           <meta name="keywords" content={`${post.category.join(', ')}, building-integrated mining, Exergy newsroom`} />
           <meta name="author" content={post.author} />
