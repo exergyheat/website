@@ -147,10 +147,11 @@ const BlogPostDetail = () => {
             </div>
             <div className="flex items-center">
               <Calendar className="h-4 w-4 mr-2" />
-              <span>{new Date(post.date).toLocaleDateString('en-US', { 
-                year: 'numeric', 
-                month: 'long', 
-                day: 'numeric' 
+              <span>{new Date(post.date).toLocaleDateString('en-US', {
+                timeZone: 'UTC',
+                year: 'numeric',
+                month: 'long',
+                day: 'numeric'
               })}</span>
             </div>
             <span>{post.readTime}</span>

@@ -251,10 +251,11 @@ const Blog = () => {
                         </div>
                         <div className="flex items-center">
                           <Calendar className="h-4 w-4 mr-1" />
-                          <span>{new Date(post.date).toLocaleDateString('en-US', { 
-                            year: 'numeric', 
-                            month: 'short', 
-                            day: 'numeric' 
+                          <span>{new Date(post.date).toLocaleDateString('en-US', {
+                            timeZone: 'UTC',
+                            year: 'numeric',
+                            month: 'short',
+                            day: 'numeric'
                           })}</span>
                         </div>
                       </div>
