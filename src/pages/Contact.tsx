@@ -1,9 +1,11 @@
-import React, { useState, useEffect } from 'react'
+import { useState, useEffect } from 'react'
 import { Helmet } from 'react-helmet-async'
 import { Link } from 'react-router-dom'
 import { Mail, MapPin, Calendar, Loader2, Users } from 'lucide-react'
+import { useHubSpotPreload } from '../hooks/useHubSpotPreload'
 
 const Contact = () => {
+  useHubSpotPreload()
   const [isFormLoaded, setIsFormLoaded] = useState(false)
   const [formTimedOut, setFormTimedOut] = useState(false)
 
@@ -38,10 +40,10 @@ const Contact = () => {
         <meta property="og:description" content="Contact Exergy in Denver, CO. Email contact@exergyheat.com or book a free consultation to explore building-integrated mining." />
         <meta property="og:url" content="https://exergyheat.com/contact" />
         <meta property="og:type" content="website" />
-        <meta property="og:image" content="https://exergyheat.com/StockBackgroundHome_Tinted.png" />
+        <meta property="og:image" content="https://exergyheat.com/og-image.jpg" />
         <meta name="twitter:title" content="Contact Exergy — Denver, CO" />
         <meta name="twitter:description" content="Contact Exergy in Denver, CO. Email contact@exergyheat.com or book a free consultation." />
-        <meta name="twitter:image" content="https://exergyheat.com/StockBackgroundHome_Tinted.png" />
+        <meta name="twitter:image" content="https://exergyheat.com/og-image.jpg" />
       </Helmet>
       
       {/* Hero Section with Custom Gradient */}

@@ -5,7 +5,6 @@ After=syslog.target network-online.target
 [Service]
 WorkingDirectory=/home/space/exergy/website
 ExecStart=npx serve dist -l 7744
-ExecStop=pkill -f 7744
 Restart=always
 RestartSec=1
 StandardOutput=journal
@@ -13,6 +12,11 @@ StandardError=journal
 SyslogIdentifier=exergy-website
 User=space
 Group=users
+# Basic sandboxing
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectSystem=full
+ProtectHome=read-only
 
 [Install]
 WantedBy=multi-user.target

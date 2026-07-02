@@ -1,42 +1,18 @@
-import React, { useState, useEffect } from 'react'
+import { useState } from 'react'
 import { Helmet } from 'react-helmet-async'
 import { PenTool, Calendar, User, ArrowRight, Search, Filter } from 'lucide-react'
 import { Link } from 'react-router-dom'
-import { loadBlogPosts, getAllCategories, BlogPost } from '../utils/blogLoader'
+import { loadBlogPostsSync, getAllCategories, BlogPost } from '../utils/blogLoader'
 
 type BlogCategory = 'all' | string
 
 const Blog = () => {
   const [activeCategory, setActiveCategory] = useState<BlogCategory>('all')
   const [searchQuery, setSearchQuery] = useState('')
-  const [blogPosts, setBlogPosts] = useState<BlogPost[]>([])
-  const [categories, setCategories] = useState<string[]>([])
-  const [loading, setLoading] = useState(true)
-  const [error, setError] = useState<string | null>(null)
-
-  useEffect(() => {
-    const loadContent = async () => {
-      try {
-        setLoading(true)
-        setError(null)
-        const posts = await loadBlogPosts()
-        const allCategories = getAllCategories(posts)
-        
-        setBlogPosts(posts)
-        setCategories(allCategories)
-        
-        console.log('Loaded blog posts:', posts.length)
-        console.log('Categories:', allCategories)
-      } catch (error) {
-        console.error('Error loading blog content:', error)
-        setError('Failed to load blog posts')
-      } finally {
-        setLoading(false)
-      }
-    }
-
-    loadContent()
-  }, [])
+  // Posts are bundled markdown — loading is synchronous, which also lets
+  // prerendering capture the full list
+  const [blogPosts] = useState<BlogPost[]>(() => loadBlogPostsSync())
+  const categories = getAllCategories(blogPosts)
 
   const contentTypes = [
     { id: 'all', name: 'All Posts', icon: PenTool },
@@ -57,78 +33,6 @@ const Blog = () => {
     return matchesCategory && matchesSearch
   })
 
-  if (loading) {
-    return (
-      <div className="bg-surface-50 dark:bg-surface-900 min-h-screen">
-        {/* Hero Section with Custom Gradient */}
-        <div className="bg-gradient-to-r from-[#4970A5] to-[#718EBC] py-20">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <PenTool className="h-16 w-16 text-white mx-auto mb-6" />
-            <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              Exergy Newsroom
-            </h1>
-            <p className="text-xl text-white/90 max-w-2xl mx-auto">
-              Announcements, conference coverage, and updates from Exergy
-            </p>
-          </div>
-        </div>
-
-        {/* Loading State */}
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-          <div className="animate-pulse">
-            <div className="h-8 bg-surface-200 dark:bg-surface-700 rounded w-1/4 mb-8"></div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {[...Array(6)].map((_, i) => (
-                <div key={i} className="bg-white dark:bg-surface-800 rounded-lg shadow-lg overflow-hidden">
-                  <div className="h-48 bg-surface-200 dark:bg-surface-700"></div>
-                  <div className="p-6 space-y-4">
-                    <div className="h-6 bg-surface-200 dark:bg-surface-700 rounded w-3/4"></div>
-                    <div className="h-4 bg-surface-200 dark:bg-surface-700 rounded"></div>
-                    <div className="h-4 bg-surface-200 dark:bg-surface-700 rounded w-5/6"></div>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-      </div>
-    )
-  }
-
-  if (error) {
-    return (
-      <div className="bg-surface-50 dark:bg-surface-900 min-h-screen">
-        {/* Hero Section with Custom Gradient */}
-        <div className="bg-gradient-to-r from-[#4970A5] to-[#718EBC] py-20">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <PenTool className="h-16 w-16 text-white mx-auto mb-6" />
-            <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              Exergy Newsroom
-            </h1>
-            <p className="text-xl text-white/90 max-w-2xl mx-auto">
-              Announcements, conference coverage, and updates from Exergy
-            </p>
-          </div>
-        </div>
-
-        {/* Error State */}
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-          <div className="text-center">
-            <p className="text-xl text-surface-600 dark:text-surface-400 mb-4">
-              {error}
-            </p>
-            <button 
-              onClick={() => window.location.reload()}
-              className="px-6 py-3 bg-primary-600 text-white rounded-lg hover:bg-primary-700 transition-colors"
-            >
-              Try Again
-            </button>
-          </div>
-        </div>
-      </div>
-    )
-  }
-
   return (
     <div className="bg-surface-50 dark:bg-surface-900 min-h-screen">
       <Helmet>
@@ -140,10 +44,22 @@ const Blog = () => {
         <meta property="og:description" content="Exergy company announcements, conference coverage, presentations, and updates on building-integrated Bitcoin mining." />
         <meta property="og:url" content="https://exergyheat.com/newsroom" />
         <meta property="og:type" content="website" />
-        <meta property="og:image" content="https://exergyheat.com/StockBackgroundHome_Tinted.png" />
+        <meta property="og:image" content="https://exergyheat.com/og-image.jpg" />
         <meta name="twitter:title" content="Newsroom — Exergy Announcements & Updates" />
         <meta name="twitter:description" content="Exergy company announcements, conference coverage, presentations, and updates on building-integrated Bitcoin mining." />
-        <meta name="twitter:image" content="https://exergyheat.com/StockBackgroundHome_Tinted.png" />
+        <meta name="twitter:image" content="https://exergyheat.com/og-image.jpg" />
+        {blogPosts.length > 0 && (
+          <script type="application/ld+json">{JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "ItemList",
+            "itemListElement": blogPosts.map((post, i) => ({
+              "@type": "ListItem",
+              "position": i + 1,
+              "url": `https://exergyheat.com/newsroom/${post.id}`,
+              "name": post.title
+            }))
+          })}</script>
+        )}
       </Helmet>
       
       {/* Hero Section with Custom Gradient */}
@@ -169,6 +85,7 @@ const Blog = () => {
               <input
                 type="text"
                 placeholder="Search articles..."
+                aria-label="Search articles"
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
                 className="w-full pl-10 pr-4 py-3 border border-surface-300 dark:border-surface-600 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500 bg-white dark:bg-surface-700 text-surface-900 dark:text-surface-100"
@@ -224,6 +141,8 @@ const Blog = () => {
                       src={post.image}
                       alt={`Blog post: ${post.title}`}
                       className="w-full h-full object-cover"
+                      loading="lazy"
+                      decoding="async"
                     />
                     <div className="absolute top-4 right-4 flex flex-wrap gap-2">
                       {post.category.slice(0, 2).map((cat) => (

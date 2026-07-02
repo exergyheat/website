@@ -8,14 +8,15 @@ const ScrollToTop = () => {
     // Handle hash navigation (anchor links)
     if (location.hash) {
       // Extract the element ID from the hash (remove the # symbol)
-      const elementId = location.hash.substring(1)
-      
+      const elementId = decodeURIComponent(location.hash.substring(1))
+      const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches
+
       // Use setTimeout to ensure the target component has rendered
       const scrollToElement = () => {
         const element = document.getElementById(elementId)
         if (element) {
-          element.scrollIntoView({ 
-            behavior: 'smooth',
+          element.scrollIntoView({
+            behavior: prefersReducedMotion ? 'auto' : 'smooth',
             block: 'start'
           })
         }

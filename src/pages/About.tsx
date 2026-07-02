@@ -1,10 +1,12 @@
-import React, { useEffect } from 'react'
+import { useEffect } from 'react'
 import { Helmet } from 'react-helmet-async'
 import { Book, Bitcoin, ArrowRight, Target, FileText, Wrench, Mail, Zap, Network, Monitor, BookOpen, Megaphone, Hammer, Calendar } from 'lucide-react'
 import { Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
+import { useHubSpotPreload } from '../hooks/useHubSpotPreload'
 
 const About = () => {
+  useHubSpotPreload()
   const missionPoints = [
     {
       icon: Zap,
@@ -190,10 +192,10 @@ const About = () => {
         <meta property="og:description" content="Building-integrated Bitcoin mining systems for homes and businesses. Learn about our team, our mission, and the technology behind it." />
         <meta property="og:url" content="https://exergyheat.com/about" />
         <meta property="og:type" content="website" />
-        <meta property="og:image" content="https://exergyheat.com/StockBackgroundHome_Tinted.png" />
+        <meta property="og:image" content="https://exergyheat.com/og-image.jpg" />
         <meta name="twitter:title" content="About Exergy — Building-Integrated Mining, Denver CO" />
         <meta name="twitter:description" content="Building-integrated Bitcoin mining systems for homes and businesses. Learn about our team, our mission, and the technology behind it." />
-        <meta name="twitter:image" content="https://exergyheat.com/StockBackgroundHome_Tinted.png" />
+        <meta name="twitter:image" content="https://exergyheat.com/og-image.jpg" />
       </Helmet>
 
       {/* Hero Section with Custom Gradient */}
@@ -381,7 +383,7 @@ const About = () => {
             </div>
           </div>
           <div className="relative flex justify-center">
-            <img
+            <img loading="lazy" decoding="async"
               src="/BookCoverImage.png"
               alt="Bitcoin Mining Heat Reuse Book Cover"
               className="w-80 h-auto rounded-lg shadow-2xl transform rotate-6 hover:rotate-0 transition-transform duration-300"
@@ -411,7 +413,7 @@ const About = () => {
           </div>
           <div className="relative lg:order-1">
             <div className="relative w-full">
-              <img
+              <img loading="lazy" decoding="async"
                 src="/HRHP_logo_nobackground.png"
                 alt="Conference and Summit"
                 className="w-full h-64 sm:h-72 md:h-80 lg:h-96 xl:h-[400px] object-contain object-center rounded-lg"
@@ -514,7 +516,7 @@ const About = () => {
             <div key={index} className="bg-white dark:bg-surface-800 rounded-lg shadow-xl p-6">
               <div className="relative w-48 h-48 mx-auto mb-6">
                 <div className="flex justify-center mb-6">
-                  <img
+                  <img loading="lazy" decoding="async"
                     src={member.image}
                     alt={member.name}
                     className="w-44 h-44 rounded-full object-cover shadow-lg"

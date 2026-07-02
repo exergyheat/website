@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import { ArrowRight, ArrowLeft } from 'lucide-react'
 import { projects } from '../data/portfolioProjects'
@@ -8,14 +8,19 @@ const carouselProjects = projects.slice(0, 5)
 
 const ProjectCarousel = () => {
   const [currentIndex, setCurrentIndex] = useState(0)
+  const [isPaused, setIsPaused] = useState(false)
 
   useEffect(() => {
+    if (isPaused) return
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return
+
     const timer = setInterval(() => {
       setCurrentIndex((prevIndex) => (prevIndex + 1) % carouselProjects.length)
     }, 7500)
 
     return () => clearInterval(timer)
-  }, [])
+    // currentIndex in deps restarts the timer after manual navigation
+  }, [isPaused, currentIndex])
 
   const nextSlide = () => {
     setCurrentIndex((prevIndex) => (prevIndex + 1) % carouselProjects.length)
@@ -35,14 +40,29 @@ const ProjectCarousel = () => {
           </p>
         </div>
 
-        <div className="relative">
+        <div
+          className="relative"
+          role="region"
+          aria-roledescription="carousel"
+          aria-label="Recent building-integrated mining projects"
+          onMouseEnter={() => setIsPaused(true)}
+          onMouseLeave={() => setIsPaused(false)}
+          onFocus={() => setIsPaused(true)}
+          onBlur={() => setIsPaused(false)}
+        >
           <div className="overflow-hidden">
             <div 
               className="flex transition-transform duration-500 ease-in-out"
               style={{ transform: `translateX(-${currentIndex * 100}%)` }}
             >
-              {carouselProjects.map((project) => (
-                <div key={project.id} className="w-full flex-shrink-0">
+              {carouselProjects.map((project, slideIndex) => (
+                <div
+                  key={project.id}
+                  className="w-full flex-shrink-0"
+                  aria-hidden={slideIndex !== currentIndex}
+                  // @ts-expect-error - inert is valid HTML but not yet in React 18's types
+                  inert={slideIndex !== currentIndex ? '' : undefined}
+                >
                   <div className="mx-4">
                     {project.id === 'small-business' ? (
                       <a
@@ -56,6 +76,8 @@ const ProjectCarousel = () => {
                             src={project.image}
                             alt={`${project.title} - ${project.description}`}
                             className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                            loading="lazy"
+                            decoding="async"
                           />
                           {/* Light blue tint overlay using website's primary blue color */}
                           <div 
@@ -94,6 +116,8 @@ const ProjectCarousel = () => {
                             src={project.image}
                             alt={`${project.title} - ${project.description}`}
                             className="w-full h-full object-cover"
+                            loading="lazy"
+                            decoding="async"
                           />
                           {/* Light blue tint overlay using website's primary blue color */}
                           <div 
@@ -135,15 +159,17 @@ const ProjectCarousel = () => {
           {/* Navigation Buttons */}
           <button
             onClick={prevSlide}
+            aria-label="Previous project"
             className="absolute left-0 top-1/2 transform -translate-y-1/2 -translate-x-4 bg-white dark:bg-surface-800 p-2 rounded-full shadow-lg hover:bg-surface-100 dark:hover:bg-surface-700 transition-colors"
           >
-            <ArrowLeft className="h-6 w-6 text-surface-900 dark:text-surface-100" />
+            <ArrowLeft className="h-6 w-6 text-surface-900 dark:text-surface-100" aria-hidden="true" />
           </button>
           <button
             onClick={nextSlide}
+            aria-label="Next project"
             className="absolute right-0 top-1/2 transform -translate-y-1/2 translate-x-4 bg-white dark:bg-surface-800 p-2 rounded-full shadow-lg hover:bg-surface-100 dark:hover:bg-surface-700 transition-colors"
           >
-            <ArrowRight className="h-6 w-6 text-surface-900 dark:text-surface-100" />
+            <ArrowRight className="h-6 w-6 text-surface-900 dark:text-surface-100" aria-hidden="true" />
           </button>
 
           {/* View All Projects Button */}

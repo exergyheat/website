@@ -1,4 +1,4 @@
-import { Building, Home, Sun, Zap } from 'lucide-react'
+import { Building, Home, Sun } from 'lucide-react'
 
 export interface CaseStat {
   label: string
@@ -30,7 +30,7 @@ export const projects: Project[] = [
     title: 'The Colorado Mountain Home',
     subtitle: '2,396 sq ft · Forced Air HVAC · Natural Gas Backup',
     description: 'A single water-cooled miner drops into the existing mechanical room, hot water circulates to a radiator inside the furnace return duct, and the air handler distributes heat exactly as the furnace would — silently, invisibly, and with Bitcoin earnings on top. The goal: maximize hashrate uptime during the heating season. Gas exists only for backup.',
-    image: '/StockBackgroundHome_Tinted.png',
+    image: '/StockBackgroundHome_Tinted.webp',
     chartImage: '/case_1_chart.png',
     category: 'Residential',
     integrationTypes: ['In-Duct / Forced Air'],
@@ -62,7 +62,7 @@ export const projects: Project[] = [
     title: 'The All-Electric Mountain Home',
     subtitle: '3,966 sq ft · Hydronic Radiant Floors · 40kW Electric Boiler · No Gas',
     description: 'The cleanest possible comparison: same electricity source, same delivered heat, different outcome. Two miners in an immersion tank replace a 40kW electric boiler as the primary heat source for radiant floors. No new thermostats, no new wiring, no contractor beyond a plumber — and a 45% reduction in effective heating cost.',
-    image: '/StockBackgroundHome_Tinted.png',
+    image: '/StockBackgroundHome_Tinted.webp',
     chartImage: '/case_2_chart.png',
     category: 'Residential',
     integrationTypes: ['Hydronic / Radiant'],
@@ -94,7 +94,7 @@ export const projects: Project[] = [
     title: 'The Solar Home',
     subtitle: '900 sq ft · Zone Heaters + Garage Miner · Net Metering at $0.01/kWh',
     description: 'A failing furnace with a $10,000 replacement quote and a solar system exporting energy to the grid for a penny a kilowatt-hour. One system solved both problems: $4,000 installed, furnace replacement deferred indefinitely, and solar energy now earns 3.3× more routed through the miner than sent to the utility.',
-    image: '/StockBackgroundHome_Tinted.png',
+    image: '/StockBackgroundHome_Tinted.webp',
     chartImage: '/case_3_chart.png',
     category: 'Residential',
     integrationTypes: ['Smart Zone Heaters', 'Excess Solar'],

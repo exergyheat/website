@@ -1,4 +1,3 @@
-import React from 'react'
 import { Helmet } from 'react-helmet-async'
 import { ArrowRight } from 'lucide-react'
 import { Link } from 'react-router-dom'
@@ -16,10 +15,10 @@ const Portfolio = () => {
         <meta property="og:description" content="Real case studies from residential and commercial installations — forced air, hydronic, solar, and distributed mining approaches." />
         <meta property="og:url" content="https://exergyheat.com/case-studies" />
         <meta property="og:type" content="website" />
-        <meta property="og:image" content="https://exergyheat.com/StockBackgroundHome_Tinted.png" />
+        <meta property="og:image" content="https://exergyheat.com/og-image.jpg" />
         <meta name="twitter:title" content="Case Studies — Real Buildings, Real Bitcoin Earnings | Exergy" />
         <meta name="twitter:description" content="Real case studies from residential and commercial installations — forced air, hydronic, solar, and distributed mining approaches." />
-        <meta name="twitter:image" content="https://exergyheat.com/StockBackgroundHome_Tinted.png" />
+        <meta name="twitter:image" content="https://exergyheat.com/og-image.jpg" />
       </Helmet>
 
       {/* Hero */}
@@ -60,11 +59,11 @@ const Portfolio = () => {
 
       {/* Case Studies */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 space-y-16">
-        {projects.map((project, index) => (
+        {projects.map((project) => (
           <div key={project.id} className="bg-white dark:bg-surface-800 rounded-2xl shadow-xl overflow-hidden">
             {/* Header image */}
             <div className="relative h-64 md:h-80">
-              <img
+              <img loading="lazy" decoding="async"
                 src={project.image}
                 alt={project.title}
                 className="w-full h-full object-cover"
@@ -126,7 +125,7 @@ const Portfolio = () => {
               {/* Chart / dashboard image */}
               {project.chartImage && (
                 <div className="mt-8">
-                  <img
+                  <img loading="lazy" decoding="async"
                     src={project.chartImage}
                     alt={`${project.title} — data chart`}
                     className="w-full rounded-xl border border-surface-200 dark:border-surface-700 shadow-sm"

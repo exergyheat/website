@@ -27,12 +27,12 @@ A comprehensive website for Exergy LLC, the leader in Hashrate Heating system fe
 - **Styling:** Tailwind CSS with Typography plugin
 - **Icons:** Lucide React
 - **Animations:** Framer Motion
-- **Build Tool:** Vite with optimized chunking
-- **Type Checking:** TypeScript with strict mode
+- **Build Tool:** Vite with route-level code splitting and optimized chunking
+- **Type Checking:** TypeScript with strict mode (typechecked on every build)
 - **Linting:** ESLint with React hooks plugin
-- **Content Management:** Markdown with Gray Matter
-- **Markdown Parsing:** Marked
-- **SEO:** React Helmet Async
+- **Content Management:** Markdown with a lightweight built-in frontmatter parser
+- **Markdown Parsing:** Marked + DOMPurify sanitization
+- **SEO:** React Helmet Async + build-time prerendering (static HTML per route for crawlers and AI agents)
 - **Forms:** HubSpot integration
 - **Fonts:** Futura PT with system fallbacks
 
@@ -102,12 +102,7 @@ cd exergy-website
 npm install
 ```
 
-3. Install terser for production builds (required for Vite 3+)
-```bash
-npm install terser --save-dev
-```
-
-4. Start the development server
+3. Start the development server
 ```bash
 npm run dev
 ```
@@ -120,7 +115,7 @@ The application will be available at `http://localhost:5173`
 npm run build
 ```
 
-The built files will be in the `dist` directory with `serve.json` automatically copied for SPA routing.
+The build pipeline: regenerates `sitemap.xml` → typechecks → bundles with Vite → prerenders every route (including newsroom posts) to static HTML in `dist/` → copies `serve.json` for SPA routing. Prerendered HTML means crawlers that don't execute JavaScript (GPTBot, ClaudeBot, PerplexityBot, social scrapers) still see full page content, per-page meta tags, and JSON-LD.
 
 ### Serving Production Build
 
@@ -203,13 +198,7 @@ The project includes `serve.json` for proper SPA routing on static hosts like Ne
 
 ### Server Deployment
 
-For server deployment, use the included Express server:
-
-```bash
-node server.js
-```
-
-Or use the systemd service file in `admin/exergy-website.service` for production servers.
+For self-hosting, use the systemd service file in `admin/exergy-website.service` (serves `dist/` with `serve`). Security and cache headers for both deployments live in `vercel.json` and `serve.json`.
 
 ## Development
 

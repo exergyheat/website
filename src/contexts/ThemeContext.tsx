@@ -10,6 +10,25 @@ interface ThemeContextType {
 
 const ThemeContext = createContext<ThemeContextType | undefined>(undefined)
 
+// localStorage can throw (blocked cookies/site data, some embedded webviews);
+// never let theme persistence take down the whole app
+function readStoredTheme(): Theme | null {
+  try {
+    const saved = localStorage.getItem('theme')
+    return saved && ['light', 'dark', 'system'].includes(saved) ? (saved as Theme) : null
+  } catch {
+    return null
+  }
+}
+
+function storeTheme(theme: Theme) {
+  try {
+    localStorage.setItem('theme', theme)
+  } catch {
+    // ignore — persistence is best-effort
+  }
+}
+
 export function ThemeProvider({ children }: { children: React.ReactNode }) {
   const [theme, setTheme] = useState<Theme>('system')
   const [systemTheme, setSystemTheme] = useState<'light' | 'dark'>('light')
@@ -33,8 +52,8 @@ export function ThemeProvider({ children }: { children: React.ReactNode }) {
 
   // Load saved theme preference or default to system
   useEffect(() => {
-    const savedTheme = localStorage.getItem('theme') as Theme
-    if (savedTheme && ['light', 'dark', 'system'].includes(savedTheme)) {
+    const savedTheme = readStoredTheme()
+    if (savedTheme) {
       setTheme(savedTheme)
     }
   }, [])
@@ -47,7 +66,7 @@ export function ThemeProvider({ children }: { children: React.ReactNode }) {
     const root = window.document.documentElement
     root.classList.remove('light', 'dark')
     root.classList.add(effectiveTheme)
-    localStorage.setItem('theme', theme)
+    storeTheme(theme)
   }, [theme, effectiveTheme])
 
   return (

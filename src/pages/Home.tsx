@@ -1,4 +1,3 @@
-import React from 'react'
 import { Helmet } from 'react-helmet-async'
 import { ArrowRight, Wrench, Cpu, Bitcoin, Sun, DollarSign, Zap, Calculator, Users } from 'lucide-react'
 import { Link } from 'react-router-dom'
@@ -13,7 +12,7 @@ const HERO_PHRASES = [
 ]
 
 const Home = () => {
-  const { displayText: headlineText, initialized: isTypewriterComplete } = useCyclingTypewriter(HERO_PHRASES)
+  const { displayText: headlineText } = useCyclingTypewriter(HERO_PHRASES)
 
   const containerVariants = {
     hidden: {},
@@ -50,25 +49,29 @@ const Home = () => {
         <meta property="og:description" content="Building-integrated Bitcoin miners that displace heating costs and earn Bitcoin from excess solar. Real installs. Real data." />
         <meta property="og:url" content="https://exergyheat.com/" />
         <meta property="og:type" content="website" />
-        <meta property="og:image" content="https://exergyheat.com/StockBackgroundHome_Tinted.png" />
+        <meta property="og:image" content="https://exergyheat.com/og-image.jpg" />
         <meta name="twitter:title" content="Exergy — Building-Integrated Bitcoin Mining" />
         <meta name="twitter:description" content="Building-integrated Bitcoin miners that displace heating costs and earn Bitcoin from excess solar. Real installs. Real data." />
-        <meta name="twitter:image" content="https://exergyheat.com/StockBackgroundHome_Tinted.png" />
+        <meta name="twitter:image" content="https://exergyheat.com/og-image.jpg" />
       </Helmet>
-      
+
       {/* Hero Section */}
-      <div 
-        className="relative bg-cover bg-center h-[600px]" 
-        style={{ 
-          backgroundImage: "url('/StockBackgroundHome_Tinted.png')",
+      <div
+        className="relative bg-cover bg-center h-[600px]"
+        style={{
+          backgroundImage: "url('/StockBackgroundHome_Tinted.webp')",
           backgroundBlendMode: 'overlay',
         }}
       >
         <div className="absolute inset-0 flex items-center">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-white">
             <h1 className="text-4xl md:text-6xl font-heading mb-6">
-              {headlineText}
-              <span className="animate-pulse">|</span>
+              {/* Full text stays in the DOM for crawlers/screen readers; the typewriter is decorative */}
+              <span className="sr-only">{HERO_PHRASES[0]}</span>
+              <span aria-hidden="true">
+                {headlineText}
+                <span className="animate-pulse">|</span>
+              </span>
             </h1>
             <motion.p
               className="text-xl md:text-2xl mb-8 max-w-2xl font-body"
@@ -118,11 +121,14 @@ const Home = () => {
             transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
             className="grid grid-cols-1 md:grid-cols-3 gap-6"
           >
-            {/* Self-Serve Card */}
-            <a
-              href="https://calc.exergyheat.com"
-              className="bg-surface-50 dark:bg-surface-700 rounded-lg p-6 hover:shadow-lg transition-all duration-300 hover:scale-105 group"
-            >
+            {/* Self-Serve Card — stretched-link pattern: nesting <a> inside <a>
+                is invalid HTML and breaks hydration of prerendered pages */}
+            <div className="relative bg-surface-50 dark:bg-surface-700 rounded-lg p-6 hover:shadow-lg transition-all duration-300 hover:scale-105 group">
+              <a
+                href="https://calc.exergyheat.com"
+                className="absolute inset-0 rounded-lg"
+                aria-label="Self-Serve — free calculators and tools"
+              ></a>
               <div className="flex justify-center mb-4">
                 <div className="p-4 bg-primary-100 dark:bg-primary-900 rounded-full group-hover:bg-primary-200 dark:group-hover:bg-primary-800 transition-colors">
                   <Calculator className="h-8 w-8 text-primary-600 dark:text-primary-400" />
@@ -132,9 +138,9 @@ const Home = () => {
                 Self-Serve
               </h3>
               <p className="text-sm font-body text-surface-600 dark:text-surface-400 text-center">
-                Free calculators, open-source smart home integrations, docs, and <a href="https://meet.jit.si/ExergyHomeAssistant" target="_blank" rel="noopener noreferrer" className="underline hover:text-primary-300" onClick={e => e.stopPropagation()}>weekly office hours (Wed 10am MT)</a>. Figure it out yourself — we've made that possible.
+                Free calculators, open-source smart home integrations, docs, and <a href="https://meet.jit.si/ExergyHomeAssistant" target="_blank" rel="noopener noreferrer" className="relative z-10 underline hover:text-primary-300">weekly office hours (Wed 10am MT)</a>. Figure it out yourself — we've made that possible.
               </p>
-            </a>
+            </div>
 
             {/* Guided Card */}
             <Link
@@ -271,8 +277,8 @@ const Home = () => {
             </div>
 
             <div className="relative">
-              <img
-                src="homeheat_withbill.png"
+              <img loading="lazy" decoding="async"
+                src="/homeheat_withbill.png"
                 alt="Hashrate heating system showing home heating with Bitcoin mining integration and utility bill savings"
                 className="rounded-lg shadow-2xl"
               />

@@ -1,4 +1,3 @@
-import React from 'react'
 import { Helmet } from 'react-helmet-async'
 import { Link } from 'react-router-dom'
 import { ArrowRight } from 'lucide-react'
@@ -15,10 +14,10 @@ const Services = () => {
         <meta property="og:description" content="Three service tiers for building-integrated mining: self-serve tools, guided remote consulting, or done-for-you installation. Available nationwide." />
         <meta property="og:url" content="https://exergyheat.com/services" />
         <meta property="og:type" content="website" />
-        <meta property="og:image" content="https://exergyheat.com/StockBackgroundHome_Tinted.png" />
+        <meta property="og:image" content="https://exergyheat.com/og-image.jpg" />
         <meta name="twitter:title" content="Services — Self-Serve, Guided, or Done-For-You | Exergy" />
         <meta name="twitter:description" content="Three service tiers for building-integrated mining: self-serve tools, guided remote consulting, or done-for-you installation." />
-        <meta name="twitter:image" content="https://exergyheat.com/StockBackgroundHome_Tinted.png" />
+        <meta name="twitter:image" content="https://exergyheat.com/og-image.jpg" />
       </Helmet>
 
       {/* Hero */}

@@ -1,65 +1,38 @@
-import React, { useState, useEffect } from 'react'
+import { useMemo } from 'react'
 import { Helmet } from 'react-helmet-async'
 import { useParams, Link } from 'react-router-dom'
 import { Calendar, User, ArrowLeft } from 'lucide-react'
 import { marked } from 'marked'
-import { getBlogPostById, BlogPost } from '../utils/blogLoader'
+import DOMPurify from 'dompurify'
+import { getBlogPostByIdSync } from '../utils/blogLoader'
+
+// Posts are repo-controlled markdown, but sanitize anyway as defense in depth
+// (marked v8+ removed its sanitizer). DOMPurify needs a DOM — during
+// prerendering (Node) it's unsupported, which is fine for repo-controlled content.
+function renderMarkdown(content: string): string {
+  const html = marked.parse(content, { breaks: true, gfm: true, async: false }) as string
+  return DOMPurify.isSupported ? DOMPurify.sanitize(html) : html
+}
+
+// Frontmatter images are usually site-relative (/foo.png) but the loader's
+// fallback is an absolute URL — handle both
+function absoluteImageUrl(image: string): string {
+  return image.startsWith('http') ? image : `https://exergyheat.com${image}`
+}
 
 const BlogPostDetail = () => {
   const { id } = useParams<{ id: string }>()
-  const [post, setPost] = useState<BlogPost | null>(null)
-  const [loading, setLoading] = useState(true)
-  const [error, setError] = useState<string | null>(null)
+  // Posts are bundled markdown — lookup is synchronous, which also lets
+  // prerendering capture the full article (content + meta) for crawlers
+  const post = useMemo(() => (id ? getBlogPostByIdSync(id) : undefined), [id])
 
-  useEffect(() => {
-    const loadPost = async () => {
-      try {
-        setLoading(true)
-        
-        if (id) {
-          const foundPost = await getBlogPostById(id)
-          
-          if (foundPost) {
-            setPost(foundPost)
-          } else {
-            setError('Blog post not found')
-          }
-        } else {
-          setError('No blog post ID provided')
-        }
-      } catch (err) {
-        setError('Failed to load blog post')
-        console.error('Error loading blog post:', err)
-      } finally {
-        setLoading(false)
-      }
-    }
-
-    loadPost()
-  }, [id])
-
-  if (loading) {
+  if (!post) {
     return (
       <div className="bg-surface-50 dark:bg-surface-900 min-h-screen">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
-          <div className="animate-pulse">
-            <div className="h-8 bg-surface-200 dark:bg-surface-700 rounded w-1/4 mb-4"></div>
-            <div className="h-12 bg-surface-200 dark:bg-surface-700 rounded w-3/4 mb-6"></div>
-            <div className="h-64 bg-surface-200 dark:bg-surface-700 rounded mb-8"></div>
-            <div className="space-y-4">
-              <div className="h-4 bg-surface-200 dark:bg-surface-700 rounded"></div>
-              <div className="h-4 bg-surface-200 dark:bg-surface-700 rounded w-5/6"></div>
-              <div className="h-4 bg-surface-200 dark:bg-surface-700 rounded w-4/6"></div>
-            </div>
-          </div>
-        </div>
-      </div>
-    )
-  }
-
-  if (error || !post) {
-    return (
-      <div className="bg-surface-50 dark:bg-surface-900 min-h-screen">
+        <Helmet>
+          <title>Post Not Found | Exergy</title>
+          <meta name="robots" content="noindex" />
+        </Helmet>
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
           <Link
             to="/newsroom"
@@ -70,7 +43,7 @@ const BlogPostDetail = () => {
           </Link>
           <div className="text-center">
             <h1 className="text-2xl font-bold text-surface-900 dark:text-surface-100 mb-4">
-              {error || 'Blog post not found'}
+              Blog post not found
             </h1>
             <p className="text-surface-600 dark:text-surface-400">
               The blog post you're looking for doesn't exist or couldn't be loaded.
@@ -81,13 +54,8 @@ const BlogPostDetail = () => {
     )
   }
 
-  // Configure marked options
-  marked.setOptions({
-    breaks: true,
-    gfm: true,
-  })
-
-  const htmlContent = marked(post.content)
+  const htmlContent = renderMarkdown(post.content)
+  const postImageUrl = absoluteImageUrl(post.image)
 
   return (
     <div className="bg-surface-50 dark:bg-surface-900 min-h-screen">
@@ -104,23 +72,24 @@ const BlogPostDetail = () => {
           <meta property="og:description" content={post.excerpt} />
           <meta property="og:url" content={`https://exergyheat.com/newsroom/${id}`} />
           <meta property="og:type" content="article" />
-          <meta property="og:image" content={`https://exergyheat.com${post.image}`} />
+          <meta property="og:image" content={postImageUrl} />
           <meta name="twitter:title" content={`${post.title} | Exergy`} />
           <meta name="twitter:description" content={post.excerpt} />
-          <meta name="twitter:image" content={`https://exergyheat.com${post.image}`} />
+          <meta name="twitter:image" content={postImageUrl} />
           <script type="application/ld+json">{JSON.stringify({
             "@context": "https://schema.org",
-            "@type": "NewsArticle",
+            "@type": "BlogPosting",
             "headline": post.title,
             "description": post.excerpt,
-            "image": [`https://exergyheat.com${post.image}`],
+            "image": [postImageUrl],
             "datePublished": post.date,
+            "dateModified": post.date,
             "author": [{ "@type": "Organization", "name": post.author, "url": "https://exergyheat.com" }],
             "publisher": {
               "@type": "Organization",
               "name": "Exergy",
               "url": "https://exergyheat.com",
-              "logo": { "@type": "ImageObject", "url": "https://exergyheat.com/exergy-logo.png" }
+              "logo": { "@type": "ImageObject", "url": "https://exergyheat.com/Logo1_black_horizontal.png" }
             },
             "mainEntityOfPage": { "@type": "WebPage", "@id": `https://exergyheat.com/newsroom/${id}` }
           })}</script>
@@ -173,18 +142,16 @@ const BlogPostDetail = () => {
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 mt-8 mb-8">
         <img
           src={post.image}
-          alt={post.title}
+          alt={`Featured image for: ${post.title}`}
           className="w-full rounded-lg shadow-lg"
+          decoding="async"
         />
       </div>
 
       {/* Article Content */}
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 pb-20">
         <div className="bg-white dark:bg-surface-800 rounded-lg shadow-lg p-8">
-          <div 
-            alt={`Featured image for blog post: ${post.title}`}
-            dangerouslySetInnerHTML={{ __html: htmlContent }}
-          />
+          <div className="prose prose-lg dark:prose-invert max-w-none" dangerouslySetInnerHTML={{ __html: htmlContent }} />
         </div>
       </div>
     </div>

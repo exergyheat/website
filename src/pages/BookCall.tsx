@@ -1,8 +1,10 @@
-import React, { useState, useEffect } from 'react'
+import { useState, useEffect } from 'react'
 import { Helmet } from 'react-helmet-async'
-import { Calendar, Loader2 } from 'lucide-react'
+import { Loader2 } from 'lucide-react'
+import { useHubSpotPreload } from '../hooks/useHubSpotPreload'
 
 const BookCall = () => {
+  useHubSpotPreload()
   const [isCalendarLoaded, setIsCalendarLoaded] = useState(false)
   const [calendarTimedOut, setCalendarTimedOut] = useState(false)
 
@@ -37,10 +39,10 @@ const BookCall = () => {
         <meta property="og:description" content="Book a free 15-minute consultation with Exergy. Discuss your building and learn whether building-integrated mining fits your energy setup." />
         <meta property="og:url" content="https://exergyheat.com/book-call" />
         <meta property="og:type" content="website" />
-        <meta property="og:image" content="https://exergyheat.com/StockBackgroundHome_Tinted.png" />
+        <meta property="og:image" content="https://exergyheat.com/og-image.jpg" />
         <meta name="twitter:title" content="Book a Free 15-Min Intro Call — Exergy" />
         <meta name="twitter:description" content="Book a free 15-minute consultation with Exergy. Discuss your building and whether building-integrated mining fits." />
-        <meta name="twitter:image" content="https://exergyheat.com/StockBackgroundHome_Tinted.png" />
+        <meta name="twitter:image" content="https://exergyheat.com/og-image.jpg" />
       </Helmet>
 
       {/* Hero Section with Custom Gradient */}

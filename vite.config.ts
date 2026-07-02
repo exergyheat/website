@@ -2,16 +2,17 @@ import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 
 // https://vitejs.dev/config/
-export default defineConfig({
+export default defineConfig(({ isSsrBuild }) => ({
   plugins: [react()],
   build: {
     rollupOptions: {
-      output: {
+      // manualChunks only applies to the client build; the SSR (prerender)
+      // build externalizes react and would reject these entries
+      output: isSsrBuild ? {} : {
         manualChunks: {
           vendor: ['react', 'react-dom'],
           router: ['react-router-dom'],
-          ui: ['lucide-react', 'framer-motion'],
-          markdown: ['marked', 'gray-matter']
+          ui: ['lucide-react', 'framer-motion']
         }
       }
     },
@@ -24,14 +25,13 @@ export default defineConfig({
       }
     }
   },
-  optimizeDeps: {
-    exclude: ['lucide-react'],
-  },
   assetsInclude: ['**/*.md'],
+  ssr: {
+    // CJS packages must be bundled into the prerender build; Node ESM can't
+    // named-import from them when externalized
+    noExternal: ['react-helmet-async']
+  },
   server: {
-    port: process.env.PORT ? parseInt(process.env.PORT) : 5173,
-    headers: {
-      'Cache-Control': 'public, max-age=31536000'
-    }
+    port: process.env.PORT ? parseInt(process.env.PORT) : 5173
   }
-})
+}))

@@ -1,4 +1,3 @@
-import React from 'react'
 import { Shield, Lock, Eye, FileText } from 'lucide-react'
 import { Helmet } from 'react-helmet-async'
 
@@ -32,6 +31,11 @@ const PrivacyPolicy = () => {
         <title>Privacy Policy | Exergy</title>
         <meta name="description" content="Exergy's privacy policy — how we collect, use, and protect your data." />
         <link rel="canonical" href="https://exergyheat.com/privacy-policy" />
+        <meta property="og:title" content="Privacy Policy | Exergy" />
+        <meta property="og:description" content="Exergy's privacy policy — how we collect, use, and protect your data." />
+        <meta property="og:url" content="https://exergyheat.com/privacy-policy" />
+        <meta property="og:type" content="website" />
+        <meta property="og:image" content="https://exergyheat.com/og-image.jpg" />
       </Helmet>
       {/* Hero Section */}
       <div className="bg-gradient-to-r from-[#4970A5] to-[#718EBC] py-20">

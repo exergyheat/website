@@ -1,7 +1,7 @@
 import React from 'react'
 import { Helmet } from 'react-helmet-async'
 import { Link } from 'react-router-dom'
-import { BookOpen, Calculator, Users, Zap, Bitcoin, Cpu, HelpCircle, Eye, FileText, PenTool, ArrowLeft, ArrowRight, ExternalLink } from 'lucide-react'
+import { Calculator, Users, Zap, Bitcoin, Cpu, HelpCircle, Eye, FileText, ArrowLeft, ArrowRight } from 'lucide-react'
 import { motion } from 'framer-motion'
 
 const Learn = () => {
@@ -41,7 +41,7 @@ const Learn = () => {
       title: "Electricity In - Heat Out",
       icon: Zap,
       description: "Every watt of electricity consumed by a Bitcoin miner becomes heat — 100% of it. This isn't a feature, it's physics. The same thermodynamic law that makes your laptop warm makes miners ideal heaters.",
-      image: "electric_heat_conversion.png",
+      image: "/electric_heat_conversion.png",
       details: [
         "100% energy conversion efficiency",
         "No gas or liquid heating infrastructure",
@@ -53,7 +53,7 @@ const Learn = () => {
       title: "Open Monetary Protocol",
       icon: Bitcoin,
       description: "Bitcoin mining is an open protocol — like the internet, anyone can participate. Miners contribute energy to process Bitcoin transactions and earn rewards proportionally. The more heat your building needs, the more your miner runs, the more you earn.",
-      image: "bitcoin_miners.png",
+      image: "/bitcoin_miners.png",
       details: [
         "Anyone can participate - like anyone can use the internet",
         "Earnings are proportional to the work you contribute ~ heat demand",
@@ -65,7 +65,7 @@ const Learn = () => {
       title: "Building-Integrated Mining",
       icon: Cpu,
       description: "Building-integrated mining puts the miner where the energy is already going. In winter, your heating system earns Bitcoin every time it runs. In summer, it becomes a solar arbitrage machine — routing surplus generation through hashing instead of selling it back to the utility for pennies. One device. Two modes. No extra operating cost.",
-      image: "bitcoin_home_heat.png",
+      image: "/bitcoin_home_heat.png",
       details: [
         "Your heating season is your primary mining season",
         "In summer, excess solar routes through the miner instead of the grid",
@@ -149,11 +149,14 @@ const Learn = () => {
   ]
 
   React.useEffect(() => {
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return
+
     const timer = setInterval(() => {
       setCurrentApplicationIndex((prevIndex) => (prevIndex + 1) % applications.length)
     }, 7500)
 
     return () => clearInterval(timer)
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
   const nextApplication = () => {
@@ -174,10 +177,10 @@ const Learn = () => {
         <meta property="og:description" content="How Bitcoin miners displace heating costs in winter and monetize excess solar in summer. Guides, case studies, and resources from Exergy." />
         <meta property="og:url" content="https://exergyheat.com/learn" />
         <meta property="og:type" content="website" />
-        <meta property="og:image" content="https://exergyheat.com/StockBackgroundHome_Tinted.png" />
+        <meta property="og:image" content="https://exergyheat.com/og-image.jpg" />
         <meta name="twitter:title" content="Learn — How Building-Integrated Mining Works | Exergy" />
         <meta name="twitter:description" content="How Bitcoin miners displace heating costs in winter and monetize excess solar in summer. Guides and resources from Exergy." />
-        <meta name="twitter:image" content="https://exergyheat.com/StockBackgroundHome_Tinted.png" />
+        <meta name="twitter:image" content="https://exergyheat.com/og-image.jpg" />
         <meta name="keywords" content="building-integrated mining, hashrate heating education, bitcoin mining heat technology, solar monetization bitcoin, heating technology guides" />
       </Helmet>
       
@@ -264,7 +267,7 @@ const Learn = () => {
                   transition={{ duration: 0.6, ease: "easeOut", delay: 0.2 }}
                 >
                   <div className="w-full max-w-lg">
-                    <img
+                    <img loading="lazy" decoding="async"
                       src={concept.image}
                       alt={`${concept.title} - ${concept.description}`}
                       className="rounded-lg shadow-2xl w-full h-auto object-contain"
@@ -332,7 +335,7 @@ const Learn = () => {
                       <div className="bg-white dark:bg-surface-800 rounded-lg overflow-hidden shadow-xl">
                         {/* Image header with title/subtitle overlay */}
                         <div className="relative h-56">
-                          <img
+                          <img loading="lazy" decoding="async"
                             src={application.image}
                             alt={application.title}
                             className="w-full h-full object-cover"
@@ -369,15 +372,17 @@ const Learn = () => {
             {/* Navigation Buttons */}
             <button
               onClick={prevApplication}
+              aria-label="Previous integration type"
               className="absolute left-0 top-1/2 transform -translate-y-1/2 -translate-x-4 bg-white dark:bg-surface-800 p-2 rounded-full shadow-lg hover:bg-surface-100 dark:hover:bg-surface-700 transition-colors"
             >
-              <ArrowLeft className="h-6 w-6 text-surface-900 dark:text-surface-100" />
+              <ArrowLeft className="h-6 w-6 text-surface-900 dark:text-surface-100" aria-hidden="true" />
             </button>
             <button
               onClick={nextApplication}
+              aria-label="Next integration type"
               className="absolute right-0 top-1/2 transform -translate-y-1/2 translate-x-4 bg-white dark:bg-surface-800 p-2 rounded-full shadow-lg hover:bg-surface-100 dark:hover:bg-surface-700 transition-colors"
             >
-              <ArrowRight className="h-6 w-6 text-surface-900 dark:text-surface-100" />
+              <ArrowRight className="h-6 w-6 text-surface-900 dark:text-surface-100" aria-hidden="true" />
             </button>
 
             {/* Carousel Indicators */}

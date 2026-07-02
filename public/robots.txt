@@ -1,12 +1,39 @@
 User-agent: *
 Allow: /
 
+# AI crawlers — explicitly welcome (also covered by the wildcard above,
+# stated here so intent survives any future default changes)
+User-agent: GPTBot
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Claude-SearchBot
+Allow: /
+
+User-agent: Claude-User
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Perplexity-User
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: CCBot
+Allow: /
+
 # Sitemap
 Sitemap: https://exergyheat.com/sitemap.xml
 
-# Disallow crawling of admin or private directories (if any)
-# Disallow: /admin/
-# Disallow: /private/
-
-# Allow crawling of all public content
-# This is the default behavior, but explicitly stating it for clarity
+# LLM-friendly site summary: https://exergyheat.com/llms.txt

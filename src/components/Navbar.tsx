@@ -1,10 +1,20 @@
-import React, { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import { Menu, X } from 'lucide-react'
 import ThemeToggle from './ThemeToggle'
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false)
+
+  // Close the mobile menu on Escape
+  useEffect(() => {
+    if (!isOpen) return
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') setIsOpen(false)
+    }
+    document.addEventListener('keydown', handleKeyDown)
+    return () => document.removeEventListener('keydown', handleKeyDown)
+  }, [isOpen])
 
   return (
     <nav className="bg-surface-50 dark:bg-surface-800 shadow-lg">
@@ -16,6 +26,8 @@ const Navbar = () => {
                 src="/Logo1_black_horizontal.png"
                 alt="EXERGY"
                 className="h-10 w-auto dark:filter dark:brightness-0 dark:invert"
+                width={600}
+                height={251}
               />
             </Link>
           </div>
@@ -36,16 +48,19 @@ const Navbar = () => {
             <ThemeToggle />
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="text-surface-600 dark:text-surface-300 hover:text-primary-500 dark:hover:text-primary-400 focus:outline-none transition-colors"
+              aria-label={isOpen ? 'Close menu' : 'Open menu'}
+              aria-expanded={isOpen}
+              aria-controls="mobile-menu"
+              className="text-surface-600 dark:text-surface-300 hover:text-primary-500 dark:hover:text-primary-400 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary-500 rounded transition-colors"
             >
-              {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+              {isOpen ? <X className="h-6 w-6" aria-hidden="true" /> : <Menu className="h-6 w-6" aria-hidden="true" />}
             </button>
           </div>
         </div>
 
         {/* Mobile Menu */}
         {isOpen && (
-          <div className="md:hidden">
+          <div className="md:hidden" id="mobile-menu">
             <div className="px-2 pt-2 pb-3 space-y-1">
               <Link
                 to="/products"

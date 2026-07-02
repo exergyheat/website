@@ -1,4 +1,3 @@
-import React from 'react'
 import { Helmet } from 'react-helmet-async'
 import { Link } from 'react-router-dom'
 import {
@@ -64,10 +63,10 @@ const Products = () => {
         <meta property="og:description" content="Open-source smart home integrations, a purpose-built control hub, and vetted mining hardware for building-integrated systems." />
         <meta property="og:url" content="https://exergyheat.com/products" />
         <meta property="og:type" content="website" />
-        <meta property="og:image" content="https://exergyheat.com/StockBackgroundHome_Tinted.png" />
+        <meta property="og:image" content="https://exergyheat.com/og-image.jpg" />
         <meta name="twitter:title" content="Products — Control Hub, Integrations & Vetted Hardware | Exergy" />
         <meta name="twitter:description" content="Open-source smart home integrations, a purpose-built control hub, and vetted mining hardware for building-integrated systems." />
-        <meta name="twitter:image" content="https://exergyheat.com/StockBackgroundHome_Tinted.png" />
+        <meta name="twitter:image" content="https://exergyheat.com/og-image.jpg" />
         <meta
           name="keywords"
           content="CTRL1 hub, home assistant bitcoin mining, bitcoin mining heater, hashrate heating products, building integrated mining, bitcoin heat reuse, open source mining integration"

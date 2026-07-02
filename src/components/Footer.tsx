@@ -1,6 +1,5 @@
-import React from 'react'
 import { Link } from 'react-router-dom'
-import { Github, Linkedin, Mail, MapPin } from 'lucide-react'
+import { Github, Mail, MapPin } from 'lucide-react'
 
 const Footer = () => {
   return (
@@ -10,7 +9,7 @@ const Footer = () => {
           {/* Company Info */}
           <div>
             <Link to="/" className="flex items-center hover:opacity-80 transition-opacity">
-              <img
+              <img loading="lazy" decoding="async"
                 src="/Logo1_black_horizontal.png"
                 alt="EXERGY"
                 className="h-8 w-auto filter brightness-0 invert"

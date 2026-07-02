@@ -20,7 +20,16 @@ export function useCyclingTypewriter(phrases: string[]) {
   })
 
   useEffect(() => {
-    const phrase = phrases[s.phraseIdx]
+    if (phrases.length === 0) return
+    const phrase = phrases[s.phraseIdx % phrases.length]
+
+    // Reduced motion: show the first phrase immediately, no animation
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      if (s.text !== phrases[0]) {
+        setS(prev => ({ ...prev, text: phrases[0], charIdx: phrases[0].length, initialized: true }))
+      }
+      return
+    }
 
     if (s.phase === 'typing') {
       if (s.charIdx < phrase.length) {
@@ -65,7 +74,7 @@ export function useCyclingTypewriter(phrases: string[]) {
   return {
     displayText: s.text,
     phraseIndex: s.phraseIdx,
-    isTypingComplete: s.charIdx === phrases[s.phraseIdx].length && s.phase !== 'erasing',
+    isTypingComplete: phrases.length > 0 && s.charIdx === phrases[s.phraseIdx % phrases.length].length && s.phase !== 'erasing',
     initialized: s.initialized,
   }
 }

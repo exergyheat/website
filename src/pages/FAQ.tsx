@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import { useState } from 'react'
 import { Helmet } from 'react-helmet-async'
 import { Plus, Minus, Search, MessageCircle, ArrowRight } from 'lucide-react'
 
@@ -171,10 +171,10 @@ const FAQ = () => {
         <meta property="og:description" content="Real Q&amp;A about building-integrated mining: how it works, what it costs, ROI, technical setup, and whether your building is a good fit." />
         <meta property="og:url" content="https://exergyheat.com/faq" />
         <meta property="og:type" content="website" />
-        <meta property="og:image" content="https://exergyheat.com/StockBackgroundHome_Tinted.png" />
+        <meta property="og:image" content="https://exergyheat.com/og-image.jpg" />
         <meta name="twitter:title" content="FAQ — Your Building-Integrated Mining Questions Answered | Exergy" />
         <meta name="twitter:description" content="Real Q&amp;A about building-integrated mining: how it works, what it costs, ROI, and whether your building is a good fit." />
-        <meta name="twitter:image" content="https://exergyheat.com/StockBackgroundHome_Tinted.png" />
+        <meta name="twitter:image" content="https://exergyheat.com/og-image.jpg" />
         <meta name="keywords" content="building-integrated mining FAQ, bitcoin miner heater questions, EXERGY FAQ, hashrate heating answers, bitcoin heating system, CTRL1 hub, Exergy Relay" />
         <script type="application/ld+json">
           {JSON.stringify({
@@ -215,6 +215,7 @@ const FAQ = () => {
             <input
               type="text"
               placeholder="Search questions..."
+              aria-label="Search questions"
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
               className="w-full pl-10 pr-4 py-3 border border-surface-300 dark:border-surface-600 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500 bg-white dark:bg-surface-700 text-surface-900 dark:text-surface-100"
@@ -243,8 +244,8 @@ const FAQ = () => {
 
             {openSections.has(section.id) && (
               <div className="mt-4 space-y-4">
-                {section.questions.map((qa, index) => (
-                  <div key={index} className="bg-white dark:bg-surface-800 rounded-lg shadow-md p-6">
+                {section.questions.map((qa) => (
+                  <div key={qa.q} className="bg-white dark:bg-surface-800 rounded-lg shadow-md p-6">
                     <h3 className="text-lg font-semibold text-surface-900 dark:text-surface-100 mb-3">
                       {qa.q}
                     </h3>
