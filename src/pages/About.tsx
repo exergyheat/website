@@ -5,20 +5,20 @@ import { Seo } from '../components/Seo'
 export default function About() {
   return (
     <>
-      <Seo title="About" description="Engineers who hate waste." />
+      <Seo title="About" description="Waste is optional. Denver engineers, open source first." />
       <section className="section">
         <div className="frame">
           <div className="about-copy">
             <h1 className="display">
-              <span className="line">Engineers who</span>
-              <span className="line">hate waste.</span>
+              <span className="line">Waste is</span>
+              <span className="line">optional.</span>
             </h1>
             <p className="body-2 about-def">EXERGY (n.) The part of energy that can still do useful work.</p>
             <p className="body-3">
-              Buildings throw away useful energy every day. We started this company because that waste is optional.
+              Buildings throw away useful energy every day. Heat goes out a stack. Surplus power goes back to the utility for pennies. We started this company because that waste is optional.
             </p>
             <p className="body-3">
-              We design systems that capture heat a building already makes and put it to work on site.
+              Our systems, with our software, add a monetization path so a building&apos;s energy can earn and offset its own costs. We publish the open tools we can, and we work as engineers beside the people who already take care of the building.
             </p>
             <p className="about-meta">
               <span className="bar" aria-hidden="true" />

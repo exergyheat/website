@@ -25,6 +25,7 @@ export default function Footer() {
   const { pathname } = useLocation()
   const home = pathname === '/'
   const contact = pathname === '/contact'
+  const operations = pathname === '/operations'
 
   if (contact) {
     return (
@@ -87,13 +88,16 @@ export default function Footer() {
             <ul>
               <li><Link to="/contact?intent=pilot" className="body-3">Apply for the pilot</Link></li>
             </ul>
+            <p className="body-3 homeowner-note">Homes can use the same kind of energy system, and the software that runs it. Application only.</p>
           </div>
         </nav>
-        <div className="foot-cta">
-          <Button variant="primary" size="md" to="/contact?intent=feasibility">
-            Get a free feasibility check
-          </Button>
-        </div>
+        {!operations && (
+          <div className="foot-cta">
+            <Button variant="primary" size="md" to="/contact?intent=feasibility">
+              Get a free feasibility check
+            </Button>
+          </div>
+        )}
       </div>
       <div className="legal label">
         <p>© 2026 Exergy — Denver, CO — Open source first</p>

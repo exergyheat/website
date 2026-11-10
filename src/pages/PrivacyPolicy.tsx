@@ -25,7 +25,7 @@ export default function PrivacyPolicy() {
     <>
       <Seo
         title="Privacy policy"
-        description="Exergy's privacy policy — how we collect, use, and protect your data."
+        description="Privacy policy for exergyheat.com."
       />
       <section className="section">
         <div className="frame">

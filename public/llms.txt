@@ -1,14 +1,14 @@
 # Exergy
 
-> Exergy (Denver, CO) works with building owners, hardware makers, and operators so energy a building already pays for can do useful work. Hydronic or forced air. The feasibility check is free. Exergy does not sell hardware.
+> Exergy (Denver, CO) adds a monetization path so a building can help pay for its own energy. Commercial work is the energy system and the software that runs it. Partners work gets hardware into buildings that need it. Operations is AI and operations consulting, separate from the energy systems. The feasibility check is free. Exergy does not sell hardware.
 
 ## Pages
 
-- [Home](https://exergyheat.com/): the field report, what we do, the Denver office, and how a project works
-- [Commercial](https://exergyheat.com/commercial): heat a building with machines that pay their way
-- [Partners](https://exergyheat.com/partners): bring hardware into buildings that need heat
-- [Operations](https://exergyheat.com/operations): run a system after it is in
-- [About](https://exergyheat.com/about): engineers who hate waste
+- [Home](https://exergyheat.com/): your building wastes useful energy; we put it to work
+- [Commercial](https://exergyheat.com/commercial): an energy bill that can offset itself
+- [Partners](https://exergyheat.com/partners): a new reason buildings want your machines
+- [Operations](https://exergyheat.com/operations): AI and operations consulting that helps optimize how a business runs
+- [About](https://exergyheat.com/about): waste is optional
 - [Contact](https://exergyheat.com/contact): a free feasibility check, or a 15 minute call
 - [Privacy policy](https://exergyheat.com/privacy-policy)
 

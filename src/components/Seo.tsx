@@ -26,7 +26,7 @@ export function Seo({
       <meta property="og:url" content={canonical} />
       <meta property="og:type" content="website" />
       <meta property="og:image" content={OG_IMAGE} />
-      <meta property="og:image:alt" content="Engraving of a brick Denver building with rooftop solar and the Front Range behind it" />
+      <meta property="og:image:alt" content="Engraving of a brick Denver building and the Front Range behind it" />
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:title" content={full} />
       <meta name="twitter:description" content={description} />

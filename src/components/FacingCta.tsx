@@ -14,7 +14,7 @@ export function FacingCta() {
               <span className="line">Get a free</span>
               <span className="line">feasibility check.</span>
             </h2>
-            <p className="body-3">Send us your building basics. We tell you if it is a fit.</p>
+            <p className="body-3">Find out what your building could earn.</p>
             <Button variant="primary" size="md" to="/contact?intent=feasibility">
               Start the check
             </Button>

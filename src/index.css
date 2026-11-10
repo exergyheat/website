@@ -605,7 +605,12 @@ main { flex: 1; position: relative; z-index: 1; }
 }
 .pull .bar { background: var(--accent); }
 .story-fig { margin-top: 32px; }
+.story-figs { grid-column: 1 / -1; display: flex; flex-direction: column; gap: 32px; margin-top: 32px; }
+.prose { grid-column: 1 / -1; display: flex; flex-direction: column; gap: 16px; max-width: 44rem; }
+.qa { display: flex; flex-direction: column; gap: 8px; }
+.homeowner-note { margin-top: 8px; max-width: 28ch; }
 @media (min-width: 1024px) {
+  .story-figs { grid-column: 7 / 13; margin-top: 0; }
   .story-copy { grid-column: 1 / 7; padding-right: 24px; }
   .story-copy .display { font-size: clamp(36px, 4.8vw, 74px); }
   .story-fig { grid-column: 7 / 13; margin-top: 0; }
@@ -662,6 +667,7 @@ main { flex: 1; position: relative; z-index: 1; }
   .phase .heading-4 { margin-top: 0; font-size: 20px; line-height: 28px; }
   .phase .body-3 { margin-top: 0; }
   .badge { margin-top: 0; justify-self: start; align-self: start; width: fit-content; }
+  .phases.phases-full { grid-column: 1 / -1; }
 }
 
 /* Facing CTA */
@@ -684,8 +690,8 @@ main { flex: 1; position: relative; z-index: 1; }
 .intro-copy, .intro-aside { grid-column: 1 / -1; }
 .intro-copy .label { color: var(--ink-muted); }
 .intro-copy .display { margin-top: 16px; }
-.intro-aside { margin-top: 32px; }
-.intro-aside .cta-pair { margin-top: 32px; }
+.intro-aside { margin-top: 32px; display: flex; flex-direction: column; gap: 16px; }
+.intro-aside .cta-pair { margin-top: 16px; }
 @media (min-width: 1024px) {
   .intro-band { align-items: end; }
   .intro-copy { grid-column: 1 / 9; padding-right: 24px; }
@@ -790,6 +796,8 @@ main { flex: 1; position: relative; z-index: 1; }
 @media (min-width: 1024px) {
   .contact-col:first-child { grid-column: 1 / 7; padding-right: 32px; }
   .contact-col:last-child { grid-column: 7 / 13; padding-left: 32px; }
+  .operations-lead .contact-form { order: 2; }
+  .operations-lead .contact-book { order: 1; }
 }
 
 /* Footer */

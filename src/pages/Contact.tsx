@@ -132,13 +132,30 @@ export default function Contact() {
         description="Get a free feasibility check, or book a 15 min call."
       />
       <section className="section">
-        <div className="frame cta-grid">
-          <div className="contact-col">
-            <p className="label option-label">Option A</p>
-            <h1 className="display">
-              <span className="line">Get a free</span>
-              <span className="line">feasibility check.</span>
-            </h1>
+        <div className={`frame cta-grid${intent === 'operations' ? ' operations-lead' : ''}`}>
+          <div className="contact-col contact-form">
+            {intent !== 'operations' && <p className="label option-label">Option A</p>}
+            {intent !== 'operations' && (
+              <h1 className="display">
+                <span className="line">Get a free</span>
+                <span className="line">feasibility check.</span>
+              </h1>
+            )}
+            {intent === 'owner' && (
+              <p className="body-3">Find out what your building could earn. Tell us about the heat you buy and whether you have solar, or plan to.</p>
+            )}
+            {intent === 'homeowner' && (
+              <>
+                <p className="body-3">A home can use the same kind of energy system, and the software that runs it. It chooses between the original heat source, miner heat, solar, and mining when that pays, as often as the house calls for, up to real time.</p>
+                <p className="caption hint">The pilot is application only. We read every note, and we cannot take every home.</p>
+              </>
+            )}
+            {intent === 'manufacturer' && (
+              <p className="body-3">Tell us what you make and what you want help with.</p>
+            )}
+            {intent === 'operations' && (
+              <p className="body-3">Tell us how the business runs today, and where it feels slow or expensive. We will start with a call.</p>
+            )}
             {status === 'success' ? (
               <div className="form-status" role="status" aria-live="polite">
                 <p className="body-3">{message}</p>
@@ -217,9 +234,6 @@ export default function Contact() {
                     ))}
                   </div>
                 </fieldset>
-                {intent === 'homeowner' && (
-                  <p className="caption hint">The pilot is application only. We read every note, and we cannot take every home.</p>
-                )}
                 <Field id={`${baseId}-note`} label="Message" error={errors.note}>
                   <textarea id={`${baseId}-note`} name="note" rows={3} value={note} aria-invalid={!!errors.note} onChange={(event) => setNote(event.target.value)} />
                 </Field>
@@ -232,12 +246,19 @@ export default function Contact() {
               </form>
             )}
           </div>
-          <div className="contact-col" id="scheduler">
-            <p className="label option-label">Option B</p>
-            <h2 className="display">
-              <span className="line">Book a</span>
-              <span className="line">15 min call.</span>
-            </h2>
+          <div className="contact-col contact-book" id="scheduler">
+            {intent !== 'operations' && <p className="label option-label">Option B</p>}
+            {intent === 'operations' ? (
+              <h1 className="display">
+                <span className="line">Book a</span>
+                <span className="line">15 min call.</span>
+              </h1>
+            ) : (
+              <h2 className="display">
+                <span className="line">Book a</span>
+                <span className="line">15 min call.</span>
+              </h2>
+            )}
             <p className="body-3">Talk it through with an engineer.</p>
             <div className="scheduler">
               <iframe

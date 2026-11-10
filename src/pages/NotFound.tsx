@@ -5,7 +5,7 @@ import { Seo } from '../components/Seo'
 export default function NotFound() {
   return (
     <>
-      <Seo title="404" description="This page is not on the map." noindex />
+      <Seo title="Not found" description="This page is not on the map." noindex />
       <section className="section">
         <div className="frame">
           <div className="narrow">
