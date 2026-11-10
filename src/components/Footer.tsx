@@ -16,36 +16,40 @@ const Footer = () => {
               />
             </Link>
             <p className="mt-4 font-body text-surface-400">
-              Building-Integrated Mining
+              We find the useful work hiding in your energy and your operations.
             </p>
           </div>
 
-          {/* Home Links */}
           <div>
-            <Link to="/" className="text-lg font-subheading mb-4 text-surface-100 hover:text-surface-200 transition-colors">Home</Link>
+            <Link to="/services" className="text-lg font-subheading mb-4 text-surface-100 hover:text-surface-200 transition-colors">Services</Link>
             <ul className="space-y-2 mt-4">
               <li>
-                <Link to="/products" className="font-body text-surface-400 hover:text-surface-200 transition-colors">Products</Link>
+                <Link to="/services/commercial" className="font-body text-surface-400 hover:text-surface-200 transition-colors">Commercial mining</Link>
               </li>
               <li>
-                <Link to="/services" className="font-body text-surface-400 hover:text-surface-200 transition-colors">Services</Link>
+                <Link to="/services/advisory" className="font-body text-surface-400 hover:text-surface-200 transition-colors">Manufacturer advisory</Link>
               </li>
               <li>
-                <Link to="/about" className="font-body text-surface-400 hover:text-surface-200 transition-colors">About</Link>
+                <Link to="/services/operations" className="font-body text-surface-400 hover:text-surface-200 transition-colors">Operations</Link>
               </li>
               <li>
-                <Link to="/case-studies" className="font-body text-surface-400 hover:text-surface-200 transition-colors">Case Studies</Link>
+                <Link to="/services/residential-pilot" className="font-body text-surface-400 hover:text-surface-200 transition-colors">Residential pilot</Link>
               </li>
               <li>
-                <Link to="/privacy-policy" className="font-body text-surface-400 hover:text-surface-200 transition-colors">Privacy Policy</Link>
+                <Link to="/open-tools" className="font-body text-surface-400 hover:text-surface-200 transition-colors">Open Tools</Link>
+              </li>
+              <li>
+                <Link to="/work" className="font-body text-surface-400 hover:text-surface-200 transition-colors">Work</Link>
               </li>
             </ul>
           </div>
 
-          {/* Learn Links */}
           <div>
             <Link to="/learn" className="text-lg font-subheading mb-4 text-surface-100 hover:text-surface-200 transition-colors">Learn</Link>
             <ul className="space-y-2 mt-4">
+              <li>
+                <Link to="/learn/why-mining-hardware-is-closed" className="font-body text-surface-400 hover:text-surface-200 transition-colors">Why hardware is closed</Link>
+              </li>
               <li>
                 <a href="https://calc.exergyheat.com" className="font-body text-surface-400 hover:text-surface-200 transition-colors">Calculators</a>
               </li>
@@ -74,6 +78,18 @@ const Footer = () => {
               </li>
               <li>
                 <Link to="/newsroom" className="font-body text-surface-400 hover:text-surface-200 transition-colors">Newsroom</Link>
+              </li>
+              <li>
+                <Link to="/about" className="font-body text-surface-400 hover:text-surface-200 transition-colors">About</Link>
+              </li>
+              <li>
+                <Link to="/contact" className="font-body text-surface-400 hover:text-surface-200 transition-colors">Contact</Link>
+              </li>
+              <li>
+                <Link to="/book-call" className="font-body text-surface-400 hover:text-surface-200 transition-colors">Book a Call</Link>
+              </li>
+              <li>
+                <Link to="/privacy-policy" className="font-body text-surface-400 hover:text-surface-200 transition-colors">Privacy Policy</Link>
               </li>
             </ul>
           </div>

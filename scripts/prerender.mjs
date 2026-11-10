@@ -25,8 +25,23 @@ const { render } = await import(path.join(ssrOut, 'entry-server.js'))
 
 // 2. Routes: static pages + newsroom posts from frontmatter ids
 const staticRoutes = [
-  '/', '/products', '/services', '/about', '/contact', '/learn',
-  '/privacy-policy', '/faq', '/book-call', '/case-studies', '/newsroom'
+  '/',
+  '/services',
+  '/services/commercial',
+  '/services/advisory',
+  '/services/operations',
+  '/services/residential-pilot',
+  '/open-tools',
+  '/work',
+  '/case-studies',
+  '/about',
+  '/contact',
+  '/learn',
+  '/learn/why-mining-hardware-is-closed',
+  '/privacy-policy',
+  '/faq',
+  '/book-call',
+  '/newsroom'
 ]
 
 const blogDir = path.join(root, 'src', 'blog-posts')

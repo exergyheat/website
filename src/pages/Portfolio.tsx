@@ -1,23 +1,29 @@
 import { Helmet } from 'react-helmet-async'
 import { ArrowRight } from 'lucide-react'
-import { Link } from 'react-router-dom'
+import { Link, useLocation } from 'react-router-dom'
 import { projects } from '../data/portfolioProjects'
+import ReviewTodo from '../components/ReviewTodo'
 
 const Portfolio = () => {
+  const { pathname } = useLocation()
+  const canonical = pathname === '/case-studies'
+    ? 'https://exergyheat.com/case-studies'
+    : 'https://exergyheat.com/work'
+
   return (
     <div className="bg-surface-50 dark:bg-surface-900 min-h-screen">
       <Helmet>
-        <title>Case Studies | Exergy</title>
-        <meta name="description" content="Real case studies from residential and commercial installations — forced air, hydronic, solar, and distributed mining approaches. Real data." />
-        <meta name="keywords" content="building integrated mining case studies, bitcoin mining heat installations, hashrate heating results, Exergy portfolio" />
-        <link rel="canonical" href="https://exergyheat.com/case-studies" />
-        <meta property="og:title" content="Case Studies — Real Buildings, Real Bitcoin Earnings | Exergy" />
-        <meta property="og:description" content="Real case studies from residential and commercial installations — forced air, hydronic, solar, and distributed mining approaches." />
-        <meta property="og:url" content="https://exergyheat.com/case-studies" />
+        <title>Work | Exergy</title>
+        <meta name="description" content="Case studies from Exergy. The commercial office leads. Three homes are labeled as pilot installs. Hydronic and forced-air integrations." />
+        <meta name="keywords" content="building integrated mining case studies, bitcoin mining heat installations, Exergy work, commercial office mining heat" />
+        <link rel="canonical" href={canonical} />
+        <meta property="og:title" content="Work — Case Studies | Exergy" />
+        <meta property="og:description" content="The commercial office leads. Three homes are pilot installs, labeled that way." />
+        <meta property="og:url" content={canonical} />
         <meta property="og:type" content="website" />
         <meta property="og:image" content="https://exergyheat.com/og-image.jpg" />
-        <meta name="twitter:title" content="Case Studies — Real Buildings, Real Bitcoin Earnings | Exergy" />
-        <meta name="twitter:description" content="Real case studies from residential and commercial installations — forced air, hydronic, solar, and distributed mining approaches." />
+        <meta name="twitter:title" content="Work — Case Studies | Exergy" />
+        <meta name="twitter:description" content="The commercial office leads. Three homes are pilot installs." />
         <meta name="twitter:image" content="https://exergyheat.com/og-image.jpg" />
       </Helmet>
 
@@ -25,10 +31,10 @@ const Portfolio = () => {
       <div className="bg-gradient-to-r from-[#4970A5] to-[#718EBC] py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
-            Case Studies
+            Work
           </h1>
           <p className="text-xl text-white/90 max-w-2xl mx-auto">
-            Four buildings. Four configurations. Four different goals. The same result: a building that heats itself cheaper, earns Bitcoin, and does both autonomously.
+            Case studies. The commercial office comes first. The three homes are pilot installs — early systems, not a finished residential product.
           </p>
         </div>
       </div>
@@ -36,22 +42,25 @@ const Portfolio = () => {
       {/* Aggregate stats bar */}
       <div className="bg-white dark:bg-surface-800 border-b border-surface-200 dark:border-surface-700">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+          <ReviewTodo>
+            Verify these rollup figures before they stay on the page: “~1.2 PH/s” hashrate added, and “0.030+ BTC” earned across installs. Also verify the solar pilot’s “~$4,000 installed” figure, marked on that card. Dollar amounts below are carried forward from the previous site as measured outcomes, not as Exergy’s prices. Strike any figure you cannot stand behind. Exergy’s own fees are not listed anywhere.
+          </ReviewTodo>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
             <div>
               <div className="text-2xl font-bold text-primary-600 dark:text-primary-400">4</div>
-              <div className="text-sm text-surface-600 dark:text-surface-400 mt-1">Buildings Installed</div>
+              <div className="text-sm text-surface-600 dark:text-surface-400 mt-1">Buildings written up</div>
             </div>
             <div>
               <div className="text-2xl font-bold text-primary-600 dark:text-primary-400">~1.2 PH/s</div>
-              <div className="text-sm text-surface-600 dark:text-surface-400 mt-1">Hashrate Added to Bitcoin Network</div>
+              <div className="text-sm text-surface-600 dark:text-surface-400 mt-1">Hashrate added — TODO: verify</div>
             </div>
             <div>
               <div className="text-2xl font-bold text-primary-600 dark:text-primary-400">0.030+ BTC</div>
-              <div className="text-sm text-surface-600 dark:text-surface-400 mt-1">Earned Across Installs</div>
+              <div className="text-sm text-surface-600 dark:text-surface-400 mt-1">Earned across installs — TODO: verify</div>
             </div>
             <div>
               <div className="text-2xl font-bold text-primary-600 dark:text-primary-400">5 types</div>
-              <div className="text-sm text-surface-600 dark:text-surface-400 mt-1">Integration Configurations</div>
+              <div className="text-sm text-surface-600 dark:text-surface-400 mt-1">Integration configurations</div>
             </div>
           </div>
         </div>
@@ -150,7 +159,7 @@ const Portfolio = () => {
           <h2 className="text-3xl font-bold text-surface-900 dark:text-surface-100 mb-8">What These Installations Prove</h2>
           <div className="space-y-6 text-surface-600 dark:text-surface-400">
             <p><strong className="text-surface-900 dark:text-surface-100">The sizing methodology works.</strong> A miner sized to the average heating load, not the peak, runs at high duty cycle and handles the dominant share of heat demand. The existing system covers the rest. Across every install, the backup system rarely fired.</p>
-            <p><strong className="text-surface-900 dark:text-surface-100">Hashrate heat is a viable alternative to conventional equipment upgrades.</strong> A $4,000 mining system extended the life of a furnace with a $10,000 replacement quote. A 6,000W immersion system displaced a 40kW electric boiler. In both cases, the mining system handled the load at a lower effective cost per BTU.</p>
+            <p><strong className="text-surface-900 dark:text-surface-100">A miner can stand in for an equipment upgrade.</strong> The solar pilot deferred a furnace replacement. The all-electric pilot let a 6,000W immersion setup carry a load that had been on a 40kW electric boiler. Both are pilots. The installed-cost comparison is one of the figures marked TODO above.</p>
             <p><strong className="text-surface-900 dark:text-surface-100">The whole building can be smart at the energy and economics layer.</strong> Home Assistant manages zone temperatures, operating modes, TOU rate response, and solar routing simultaneously. The building makes real-time economic decisions — which fuel is cheapest right now, where the heat is needed, should the excess generation mine or export.</p>
             <p><strong className="text-surface-900 dark:text-surface-100">That intelligence lives on hardware you own.</strong> No cloud dependency. No subscription. No vendor with access to your energy data. The automation logic runs locally, the data stays local, and the system keeps working if the internet goes down.</p>
           </div>
@@ -175,10 +184,10 @@ const Portfolio = () => {
               <ArrowRight className="ml-2 h-5 w-5" />
             </a>
             <Link
-              to="/book-call"
+              to="/contact?intent=phase-0"
               className="inline-flex items-center px-8 py-4 bg-white/10 border border-white/30 text-white rounded-lg hover:bg-white/20 transition-colors text-base font-semibold"
             >
-              Book an Intro Call
+              Send us your utility bills
               <ArrowRight className="ml-2 h-5 w-5" />
             </Link>
           </div>

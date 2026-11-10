@@ -15,12 +15,17 @@ import ErrorBoundary from './components/ErrorBoundary'
 // renderToString). Keep this route table in sync with src/App.tsx.
 import Home from './pages/Home'
 import Services from './pages/Services'
+import Commercial from './pages/services/Commercial'
+import Advisory from './pages/services/Advisory'
+import Operations from './pages/services/Operations'
+import ResidentialPilot from './pages/services/ResidentialPilot'
+import OpenTools from './pages/OpenTools'
 import About from './pages/About'
 import Contact from './pages/Contact'
 import Learn from './pages/Learn'
+import ClosedHardware from './pages/ClosedHardware'
 import PrivacyPolicy from './pages/PrivacyPolicy'
 import FAQ from './pages/FAQ'
-import Products from './pages/Products'
 import BookCall from './pages/BookCall'
 import Portfolio from './pages/Portfolio'
 import Newsroom from './pages/Blog'
@@ -32,7 +37,7 @@ function ServerApp({ url }: { url: string }) {
     <ThemeProvider>
       <Helmet>
         <title>Exergy | Building-Integrated Bitcoin Mining</title>
-        <meta name="description" content="Building-integrated Bitcoin mining systems that displace heating costs and earn Bitcoin from excess solar. Real installs. Real data." />
+        <meta name="description" content="Your building wastes useful energy. Exergy puts bitcoin miners to work inside it. Commercial consulting leads. We sell no hardware." />
       </Helmet>
       <StaticRouter location={url}>
         <MotionConfig reducedMotion="user">
@@ -45,16 +50,23 @@ function ServerApp({ url }: { url: string }) {
                 <Suspense fallback={null}>
                 <Routes>
                   <Route path="/" element={<Home />} />
-                  <Route path="/products" element={<Products />} />
                   <Route path="/services" element={<Services />} />
+                  <Route path="/services/commercial" element={<Commercial />} />
+                  <Route path="/services/advisory" element={<Advisory />} />
+                  <Route path="/services/operations" element={<Operations />} />
+                  <Route path="/services/residential-pilot" element={<ResidentialPilot />} />
+                  <Route path="/open-tools" element={<OpenTools />} />
+                  <Route path="/products" element={<Navigate to="/open-tools" replace />} />
                   <Route path="/about" element={<About />} />
                   <Route path="/contact" element={<Contact />} />
                   <Route path="/learn" element={<Learn />} />
+                  <Route path="/learn/why-mining-hardware-is-closed" element={<ClosedHardware />} />
                   <Route path="/privacy-policy" element={<PrivacyPolicy />} />
                   <Route path="/faq" element={<FAQ />} />
                   <Route path="/book-call" element={<BookCall />} />
+                  <Route path="/work" element={<Portfolio />} />
                   <Route path="/case-studies" element={<Portfolio />} />
-                  <Route path="/portfolio" element={<Navigate to="/case-studies" replace />} />
+                  <Route path="/portfolio" element={<Navigate to="/work" replace />} />
                   <Route path="/newsroom" element={<Newsroom />} />
                   <Route path="/newsroom/:id" element={<NewsroomPostDetail />} />
                   <Route path="*" element={<NotFound />} />

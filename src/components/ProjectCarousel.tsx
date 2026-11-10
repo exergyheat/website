@@ -34,9 +34,9 @@ const ProjectCarousel = () => {
     <div className="bg-white dark:bg-surface-800 py-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
-          <h2 className="text-3xl font-bold text-surface-900 dark:text-surface-100 mb-4">See it in Action</h2>
+          <h2 className="text-3xl font-bold text-surface-900 dark:text-surface-100 mb-4">Work</h2>
           <p className="text-xl text-surface-600 dark:text-surface-400">
-            Explore some of our most recent building-integrated mining projects
+            The commercial office leads. The homes are pilot installs.
           </p>
         </div>
 
@@ -175,10 +175,10 @@ const ProjectCarousel = () => {
           {/* View All Projects Button */}
           <div className="text-center mt-8">
             <Link
-              to="/case-studies"
+              to="/work"
               className="inline-flex items-center px-6 py-3 bg-primary-500 text-white rounded-lg hover:bg-primary-600 transition-colors text-base font-subheading"
             >
-              View All Case Studies
+              See all the work
               <ArrowRight className="ml-2 h-5 w-5" />
             </Link>
           </div>

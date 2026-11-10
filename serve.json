@@ -1,4 +1,8 @@
 {
+  "redirects": [
+    { "source": "/products", "destination": "/open-tools" },
+    { "source": "/portfolio", "destination": "/work" }
+  ],
   "rewrites": [
     {
       "source": "**",

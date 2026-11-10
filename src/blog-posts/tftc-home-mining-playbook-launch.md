@@ -17,7 +17,7 @@ It's a 40-page document. We think it's the most complete field guide to building
 
 The playbook is organized in four parts.
 
-**Part 1** makes the case from first principles. Buildings have heating loads. They pay for that heat whether Bitcoin is at $30,000 or $300,000. A miner running on the same electricity produces the same heat — and earns Bitcoin doing it. The playbook introduces the Useful Miner framework: the right question for a building owner isn't whether a miner is profitable in the industrial sense. It's whether it's more useful than what you're already running. For a lot of buildings, that bar is easier to clear than most people assume.
+**Part 1** makes the case from first principles. Buildings have heating loads. They pay for that heat whether the bitcoin price is low or high. A miner running on the same electricity produces the same heat — and earns bitcoin doing it. The playbook introduces the Useful Miner framework: the right question for a building owner isn't whether a miner is profitable in the industrial sense. It's whether it's more useful than what you're already running. For a lot of buildings, that bar is easier to clear than most people assume.
 
 **Part 2** is the tactical playbook. Hardware selection, five distinct integration methods (from smart zone heaters to hydronic and radiant configurations), and how control systems manage a miner across heating season, solar surplus, and straight mining modes.
 
@@ -37,12 +37,10 @@ Dylan and Tyler sat down with Marty Bent for a 1.5-hour conversation walking thr
 
 [**Watch on YouTube →**](https://www.youtube.com/watch?v=2-txiZKNIRk)
 
-## July 14 Roundtable
+## July 14 roundtable
 
-On July 14, paid TFTC subscribers can join a live roundtable with the Exergy and TFTC teams. Ask questions, go deep on the case studies, or talk through whether your building is a fit.
-
-[**Details and signup via TFTC →**](https://x.com/TFTC21/status/2072680254833910192)
+TFTC hosted a subscriber roundtable with the Exergy team on July 14, 2026. That session has passed. The playbook and the podcast above are the record of the same material.
 
 ---
 
-If you want to talk through your building before that, [book a call with us](/book-call) or [reach out directly](/contact).
+If you want to talk through a building now, start with [Phase 0](/contact?intent=phase-0) or [book a call](/book-call).

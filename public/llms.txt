@@ -1,28 +1,39 @@
 # Exergy
 
-> Exergy (Exergy LLC, Denver, CO) designs and installs building-integrated Bitcoin mining systems for homes and commercial buildings. A Bitcoin miner converts 100% of its electricity to heat — the same heat a building already pays for — so integrating miners into heating infrastructure displaces heating costs, monetizes excess solar generation, and earns Bitcoin from energy that was already being spent.
+> Exergy (Exergy LLC, Denver, CO) finds the useful work hiding in a building's energy and in a company's operations, and cuts the waste. The name is the thermodynamic term for the share of energy that can still do useful work. The lead business is commercial consulting for building-integrated bitcoin mining: building energy systems powered by bitcoin miners. Heat recovery and solar monetization are separate value streams. Integration is hydronic or forced air. Exergy sells no hardware. Residential work is an application-only alpha pilot, not the headline. Exergy is open-source first and aligned with the 256 Foundation open mining stack. Founder and CEO Tyler Stevens is president of the 256 Foundation board.
 
-Exergy offers three service tiers — Self-Serve (free tools and open-source integrations), Guided (remote consulting), and Done-For-You (full design and installation) — plus Exergy Relay: remote monitoring, alerts, and monthly performance reporting via a 5% hashrate split. Exergy publishes open-source Home Assistant integrations for controlling Bitcoin miners as smart building appliances. Supported integration types: smart zone heaters, in-duct forced air, hydronic/radiant, water/pool/spa, and excess solar.
+Commercial work is phased, and each phase is its own agreement. A client can stop after any phase. Phase 0 is a free feasibility check from about twelve months of utility bills. Phase 1 is an Exergy Audit (energy, heat, and bitcoin economics, with one to three options and an estimated budget). Phase 2 is engineering coordination alongside the architect, MEP engineer, and general contractor. Phase 3 is procurement support and commissioning. Phase 4, monitoring and warranty, is optional. Fees are scoped per project and are not published.
+
+Other services: manufacturer and market-entry advisory (paid discovery sprint, then a fixed-fee monthly pilot) for companies building miners, heaters, boilers, or water heaters; operations optimization for energy-adjacent small businesses (HVAC and solar installers, property managers, mining operators); and a residential pilot (guided remote anywhere in the US, done with Exergy's crew within about 100 miles of Denver). Pilot systems are tied together with an open-source control hub Exergy installs, and monitored with Exergy Relay (a 5% hashrate split). Neither is for sale.
 
 ## Key pages
 
-- [Services](https://exergyheat.com/services): Self-Serve, Guided, and Done-For-You service tiers plus Exergy Relay monitoring
-- [Products](https://exergyheat.com/products): control systems, integrations, and vetted mining-heat hardware
-- [Learn](https://exergyheat.com/learn): how building-integrated mining works — guides and educational resources
-- [FAQ](https://exergyheat.com/faq): costs, ROI, noise, technical setup, and building fit
-- [Case Studies](https://exergyheat.com/case-studies): real residential and commercial installs with performance data
-- [About](https://exergyheat.com/about): team, mission, and company background
-- [Newsroom](https://exergyheat.com/newsroom): announcements, research, and press
+- [Services](https://exergyheat.com/services): four practices; commercial building-integrated mining leads
+- [Commercial mining](https://exergyheat.com/services/commercial): phased roadmap, start with Phase 0
+- [Manufacturer advisory](https://exergyheat.com/services/advisory): market entry into building and home energy
+- [Operations optimization](https://exergyheat.com/services/operations): wasted work in energy-adjacent businesses
+- [Residential pilot](https://exergyheat.com/services/residential-pilot): application-only alpha
+- [Open Tools](https://exergyheat.com/open-tools): free calculators, Home Assistant integrations, docs, GitHub, office hours, forum
+- [Work](https://exergyheat.com/work): case studies; commercial office first; three homes are pilot installs. Also served at /case-studies
+- [About](https://exergyheat.com/about): mission, why the name, team, 256 Foundation, phased roadmap
+- [Learn](https://exergyheat.com/learn): explainers, including why mining hardware is closed
+- [Why mining hardware is closed](https://exergyheat.com/learn/why-mining-hardware-is-closed)
+- [FAQ](https://exergyheat.com/faq): fit, in this order — commercial, manufacturers, residential pilots — and why Exergy does not sell hardware
+- [Newsroom](https://exergyheat.com/newsroom): announcements and press
 - [Contact](https://exergyheat.com/contact): contact@exergyheat.com — 3700 N Franklin St, Denver, CO 80205
+- [Book a call](https://exergyheat.com/book-call): free 15-minute intro
 
-## Tools & docs
+## Tools and docs
 
-- [Calculators](https://calc.exergyheat.com): free mining-heat economics calculators
-- [Documentation](https://docs.exergyheat.com): technical documentation
-- [GitHub](https://github.com/exergyheat): open-source Home Assistant integrations
+- [Calculators](https://calc.exergyheat.com): Hashrate Heating and Solar Monetization
+- [Documentation](https://docs.exergyheat.com)
+- [GitHub](https://github.com/exergyheat): open-source Home Assistant integrations (Braiins OS, LuxOS, Whatsminer, BitAxe, Ocean, Public Pool, DATUM, and others)
+- [Support forum](https://support.exergyheat.com/)
+- [256 Foundation](https://256foundation.org)
 
 ## Optional
 
-- [Book a call](https://exergyheat.com/book-call): free intro consultation
 - [Privacy policy](https://exergyheat.com/privacy-policy)
 - [Sitemap](https://exergyheat.com/sitemap.xml)
+
+Old URL /products redirects to /open-tools. /portfolio redirects to /work. /case-studies still renders the work page.

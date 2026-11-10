@@ -3,10 +3,22 @@ import { Link } from 'react-router-dom'
 import { Menu, X } from 'lucide-react'
 import ThemeToggle from './ThemeToggle'
 
+const links = [
+  { to: '/services', label: 'Services' },
+  { to: '/open-tools', label: 'Open Tools' },
+  { to: '/work', label: 'Work' },
+  { to: '/about', label: 'About' },
+  { to: '/learn', label: 'Learn' },
+  { to: '/newsroom', label: 'Newsroom' },
+  { to: '/contact', label: 'Contact' },
+]
+
+const linkClass =
+  'font-subheading text-surface-600 dark:text-surface-300 hover:text-primary-500 dark:hover:text-primary-400 transition-colors'
+
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false)
 
-  // Close the mobile menu on Escape
   useEffect(() => {
     if (!isOpen) return
     const handleKeyDown = (e: KeyboardEvent) => {
@@ -32,19 +44,22 @@ const Navbar = () => {
             </Link>
           </div>
 
-          {/* Desktop Menu */}
-          <div className="hidden md:flex items-center space-x-8">
-            <Link to="/products" className="font-subheading text-surface-600 dark:text-surface-300 hover:text-primary-500 dark:hover:text-primary-400 transition-colors">Products</Link>
-            <Link to="/services" className="font-subheading text-surface-600 dark:text-surface-300 hover:text-primary-500 dark:hover:text-primary-400 transition-colors">Services</Link>
-            <Link to="/about" className="font-subheading text-surface-600 dark:text-surface-300 hover:text-primary-500 dark:hover:text-primary-400 transition-colors">About</Link>
-            <Link to="/learn" className="font-subheading text-surface-600 dark:text-surface-300 hover:text-primary-500 dark:hover:text-primary-400 transition-colors">Learn</Link>
-            <Link to="/newsroom" className="font-subheading text-surface-600 dark:text-surface-300 hover:text-primary-500 dark:hover:text-primary-400 transition-colors">Newsroom</Link>
-            <Link to="/contact" className="font-subheading text-surface-600 dark:text-surface-300 hover:text-primary-500 dark:hover:text-primary-400 transition-colors">Contact</Link>
+          <div className="hidden lg:flex items-center space-x-5">
+            {links.map((link) => (
+              <Link key={link.to} to={link.to} className={linkClass}>
+                {link.label}
+              </Link>
+            ))}
+            <Link
+              to="/book-call"
+              className="inline-flex items-center px-3 py-2 rounded-md bg-primary-600 text-white text-sm font-subheading hover:bg-primary-700 transition-colors"
+            >
+              Book a Call
+            </Link>
             <ThemeToggle />
           </div>
 
-          {/* Mobile Menu Button */}
-          <div className="md:hidden flex items-center space-x-4">
+          <div className="lg:hidden flex items-center space-x-4">
             <ThemeToggle />
             <button
               onClick={() => setIsOpen(!isOpen)}
@@ -58,51 +73,25 @@ const Navbar = () => {
           </div>
         </div>
 
-        {/* Mobile Menu */}
         {isOpen && (
-          <div className="md:hidden" id="mobile-menu">
+          <div className="lg:hidden" id="mobile-menu">
             <div className="px-2 pt-2 pb-3 space-y-1">
+              {links.map((link) => (
+                <Link
+                  key={link.to}
+                  to={link.to}
+                  className={`block px-3 py-2 ${linkClass}`}
+                  onClick={() => setIsOpen(false)}
+                >
+                  {link.label}
+                </Link>
+              ))}
               <Link
-                to="/products"
-                className="block px-3 py-2 font-subheading text-surface-600 dark:text-surface-300 hover:text-primary-500 dark:hover:text-primary-400 transition-colors"
+                to="/book-call"
+                className="block px-3 py-2 font-subheading text-primary-600 dark:text-primary-400"
                 onClick={() => setIsOpen(false)}
               >
-                Products
-              </Link>
-              <Link
-                to="/services"
-                className="block px-3 py-2 font-subheading text-surface-600 dark:text-surface-300 hover:text-primary-500 dark:hover:text-primary-400 transition-colors"
-                onClick={() => setIsOpen(false)}
-              >
-                Services
-              </Link>
-              <Link
-                to="/about"
-                className="block px-3 py-2 font-subheading text-surface-600 dark:text-surface-300 hover:text-primary-500 dark:hover:text-primary-400 transition-colors"
-                onClick={() => setIsOpen(false)}
-              >
-                About
-              </Link>
-              <Link
-                to="/learn"
-                className="block px-3 py-2 font-subheading text-surface-600 dark:text-surface-300 hover:text-primary-500 dark:hover:text-primary-400 transition-colors"
-                onClick={() => setIsOpen(false)}
-              >
-                Learn
-              </Link>
-              <Link
-                to="/newsroom"
-                className="block px-3 py-2 font-subheading text-surface-600 dark:text-surface-300 hover:text-primary-500 dark:hover:text-primary-400 transition-colors"
-                onClick={() => setIsOpen(false)}
-              >
-                Newsroom
-              </Link>
-              <Link
-                to="/contact"
-                className="block px-3 py-2 font-subheading text-surface-600 dark:text-surface-300 hover:text-primary-500 dark:hover:text-primary-400 transition-colors"
-                onClick={() => setIsOpen(false)}
-              >
-                Contact
+                Book a Call
               </Link>
             </div>
           </div>

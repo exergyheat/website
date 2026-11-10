@@ -1,10 +1,13 @@
 import { useState, useEffect } from 'react'
 import { Helmet } from 'react-helmet-async'
+import { Link, useSearchParams } from 'react-router-dom'
 import { Loader2 } from 'lucide-react'
 import { useHubSpotPreload } from '../hooks/useHubSpotPreload'
 
 const BookCall = () => {
   useHubSpotPreload()
+  const [searchParams] = useSearchParams()
+  const intent = searchParams.get('intent')
   const [isCalendarLoaded, setIsCalendarLoaded] = useState(false)
   const [calendarTimedOut, setCalendarTimedOut] = useState(false)
 
@@ -62,8 +65,18 @@ const BookCall = () => {
             Book a Free 15-Minute Intro Call
           </h2>
           <p className="text-lg text-surface-600 dark:text-surface-400 max-w-2xl mx-auto">
-            Tell us about your building, your current heating setup, and what you're hoping to accomplish. We'll tell you honestly whether it's a good fit and which path makes the most sense — Self-Serve, Guided, or Done-For-You.
+            Fifteen minutes, free. We will tell you which door fits: a commercial Phase 0, a manufacturer partnership, operations work, or a residential pilot application. We will also tell you if none of them do.
           </p>
+          {intent === 'operations' && (
+            <p className="mt-4 text-primary-700 dark:text-primary-300">
+              You asked about operations optimization. This call is the right first step. Bring one workflow that wastes a day a week.
+            </p>
+          )}
+          <div className="mt-8 flex flex-col sm:flex-row flex-wrap justify-center gap-4 text-sm">
+            <Link to="/contact?intent=phase-0" className="text-primary-600 dark:text-primary-400 hover:underline">Send utility bills instead</Link>
+            <Link to="/contact?intent=partnership" className="text-primary-600 dark:text-primary-400 hover:underline">Talk partnership</Link>
+            <Link to="/contact?intent=pilot" className="text-primary-600 dark:text-primary-400 hover:underline">Apply for the pilot</Link>
+          </div>
         </div>
         
         {/* HubSpot Meetings Embed */}

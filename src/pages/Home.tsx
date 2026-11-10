@@ -1,211 +1,158 @@
 import { Helmet } from 'react-helmet-async'
-import { ArrowRight, Wrench, Cpu, Bitcoin, Sun, DollarSign, Zap, Calculator, Users } from 'lucide-react'
+import { ArrowRight, Building2, Factory, Workflow, Home as HomeIcon, Bitcoin, Sun, Zap, Cpu, Wrench } from 'lucide-react'
 import { Link } from 'react-router-dom'
-import { useCyclingTypewriter } from '../hooks/useCyclingTypewriter'
 import ProjectCarousel from '../components/ProjectCarousel'
 import MediaHighlights from '../components/MediaHighlights'
 import { motion } from 'framer-motion'
 
-const HERO_PHRASES = [
-  "You pay for heat every month",
-  "You export solar for pennies every month",
+const services = [
+  {
+    icon: Building2,
+    eyebrow: 'Lead practice',
+    title: 'Commercial mining',
+    body: 'Phased work for buildings. Start with a free read of your utility bills. Stop after any phase.',
+    to: '/services/commercial',
+  },
+  {
+    icon: Factory,
+    eyebrow: 'Manufacturers',
+    title: 'Market-entry advisory',
+    body: 'Help a miner, heater, boiler, or water heater actually land in a building.',
+    to: '/services/advisory',
+  },
+  {
+    icon: Workflow,
+    eyebrow: 'Operators',
+    title: 'Operations optimization',
+    body: 'Find the wasted work in an energy-adjacent business and automate it.',
+    to: '/services/operations',
+  },
+  {
+    icon: HomeIcon,
+    eyebrow: 'Application only',
+    title: 'Residential pilot',
+    body: 'Alpha systems for owners who want to be early. Not a product, and not the headline.',
+    to: '/services/residential-pilot',
+  },
 ]
 
 const Home = () => {
-  const { displayText: headlineText } = useCyclingTypewriter(HERO_PHRASES)
-
-  const containerVariants = {
-    hidden: {},
-    visible: {
-      transition: {
-        staggerChildren: 0.2
-      }
-    }
-  }
-
-  const cardVariants = {
-    hidden: { 
-      opacity: 0,
-      x: -50
-    },
-    visible: {
-      opacity: 1,
-      x: 0,
-      transition: {
-        type: "spring",
-        stiffness: 100
-      }
-    }
-  }
-
   return (
     <div className="bg-surface-50 dark:bg-surface-900">
       <Helmet>
         <title>Exergy | Building-Integrated Bitcoin Mining</title>
-        <meta name="description" content="Building-integrated Bitcoin miners that displace heating costs and earn Bitcoin from excess solar. Real installs. Real data. Free calculators." />
-        <meta name="keywords" content="building integrated mining, hashrate heating, bitcoin mining heat reuse, solar bitcoin mining, excess solar monetization, bitcoin heating, energy efficient heating, bitcoin heaters, hashrate powered heat, bitcoin mining heat, mine for heat, mining for heat, bitcoin mining at home, solar arbitrage bitcoin" />
+        <meta
+          name="description"
+          content="Your building wastes useful energy. Exergy puts bitcoin miners to work inside it — heat recovery and solar monetization as separate value streams. Commercial consulting leads."
+        />
+        <meta
+          name="keywords"
+          content="building integrated mining, bitcoin miners, hashrate heating, commercial bitcoin mining heat, solar monetization, exergy, open source mining"
+        />
         <link rel="canonical" href="https://exergyheat.com/" />
-        <meta property="og:title" content="Exergy — Building-Integrated Bitcoin Mining" />
-        <meta property="og:description" content="Building-integrated Bitcoin miners that displace heating costs and earn Bitcoin from excess solar. Real installs. Real data." />
+        <meta property="og:title" content="Exergy — Your building wastes useful energy. We put it to work." />
+        <meta
+          property="og:description"
+          content="Building-integrated bitcoin mining. Heat recovery and solar monetization are separate value streams. Commercial consulting leads. We sell no hardware."
+        />
         <meta property="og:url" content="https://exergyheat.com/" />
         <meta property="og:type" content="website" />
         <meta property="og:image" content="https://exergyheat.com/og-image.jpg" />
-        <meta name="twitter:title" content="Exergy — Building-Integrated Bitcoin Mining" />
-        <meta name="twitter:description" content="Building-integrated Bitcoin miners that displace heating costs and earn Bitcoin from excess solar. Real installs. Real data." />
+        <meta name="twitter:title" content="Exergy — Your building wastes useful energy. We put it to work." />
+        <meta
+          name="twitter:description"
+          content="Building-integrated bitcoin mining. Commercial consulting leads. Open source first. No hardware for sale."
+        />
         <meta name="twitter:image" content="https://exergyheat.com/og-image.jpg" />
       </Helmet>
 
-      {/* Hero Section */}
       <div
-        className="relative bg-cover bg-center h-[600px]"
+        className="relative bg-cover bg-center min-h-[600px]"
         style={{
           backgroundImage: "url('/StockBackgroundHome_Tinted.webp')",
           backgroundBlendMode: 'overlay',
         }}
       >
         <div className="absolute inset-0 flex items-center">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-white">
-            <h1 className="text-4xl md:text-6xl font-heading mb-6">
-              {/* Full text stays in the DOM for crawlers/screen readers; the typewriter is decorative */}
-              <span className="sr-only">{HERO_PHRASES[0]}</span>
-              <span aria-hidden="true">
-                {headlineText}
-                <span className="animate-pulse">|</span>
-              </span>
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-white py-16">
+            <p className="text-sm font-subheading uppercase tracking-widest text-white/80 mb-4">
+              Building-integrated bitcoin mining
+            </p>
+            <h1 className="text-4xl md:text-6xl font-heading mb-6 max-w-4xl">
+              Your building wastes useful energy. We put it to work.
             </h1>
-            <motion.p
-              className="text-xl md:text-2xl mb-8 max-w-2xl font-body"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, ease: "easeOut", delay: 0.4 }}
-            >
-              Your building is already spending that energy. Make it earn Bitcoin too.
-            </motion.p>
-            <motion.div
-              className="flex flex-wrap gap-4"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, ease: "easeOut", delay: 0.7 }}
-            >
+            <p className="text-xl md:text-2xl mb-8 max-w-2xl font-body">
+              Exergy is the share of energy that can still do useful work. We find that work in the heat you already pay for and the solar you give away, and we cut the waste.
+            </p>
+            <div className="flex flex-wrap gap-4">
               <Link
-                to="/book-call"
-                className="inline-flex items-center px-6 py-3 border border-white text-base font-subheading rounded-md text-white hover:bg-white hover:text-primary-500 transition-colors"
+                to="/contact?intent=phase-0"
+                className="inline-flex items-center px-6 py-3 bg-white text-primary-700 text-base font-subheading rounded-md hover:bg-white/90 transition-colors"
               >
-                Book an Intro Call
+                Send us your utility bills
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Link>
-            </motion.div>
+              <Link
+                to="/services"
+                className="inline-flex items-center px-6 py-3 border border-white text-base font-subheading rounded-md text-white hover:bg-white hover:text-primary-700 transition-colors"
+              >
+                See the services
+              </Link>
+            </div>
           </div>
         </div>
       </div>
 
-      {/* How to Work With Us Section */}
       <div className="py-20 bg-white dark:bg-surface-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-
-          {/* Section header */}
           <div className="text-center mb-12">
             <h2 className="text-3xl font-heading text-surface-900 dark:text-surface-100 mb-4">
-              How to Work With Us
+              Four ways to work with us
             </h2>
             <p className="text-lg font-body text-surface-600 dark:text-surface-400 max-w-3xl mx-auto">
-              A building-integrated mining system does three things: displaces heating costs every winter, routes excess solar through hashing instead of the grid every summer, and exercises demand flexibility year-round — running on cheap off-peak electricity whenever the TOU rate and Bitcoin network economics make it the right call. Your system decides in real time. Pick the path that fits where you are.
+              Commercial consulting is the business. A bitcoin miner today is industrial equipment, so the buildings that use one well usually already have an engineer. Homes are a pilot, by application. We sell no hardware, and we do not publish prices. Every engagement is scoped per project.
             </p>
           </div>
 
-          {/* Services Grid */}
-          <motion.div
-            initial={{ opacity: 0, y: 50 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
-            className="grid grid-cols-1 md:grid-cols-3 gap-6"
-          >
-            {/* Self-Serve Card — stretched-link pattern: nesting <a> inside <a>
-                is invalid HTML and breaks hydration of prerendered pages */}
-            <div className="relative bg-surface-50 dark:bg-surface-700 rounded-lg p-6 hover:shadow-lg transition-all duration-300 hover:scale-105 group">
-              <a
-                href="https://calc.exergyheat.com"
-                className="absolute inset-0 rounded-lg"
-                aria-label="Self-Serve — free calculators and tools"
-              ></a>
-              <div className="flex justify-center mb-4">
-                <div className="p-4 bg-primary-100 dark:bg-primary-900 rounded-full group-hover:bg-primary-200 dark:group-hover:bg-primary-800 transition-colors">
-                  <Calculator className="h-8 w-8 text-primary-600 dark:text-primary-400" />
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {services.map((service) => (
+              <Link
+                key={service.to}
+                to={service.to}
+                className="bg-surface-50 dark:bg-surface-700 rounded-lg p-6 hover:shadow-lg transition-shadow group"
+              >
+                <div className="flex items-center gap-3 mb-3">
+                  <div className="p-3 bg-primary-100 dark:bg-primary-900 rounded-full">
+                    <service.icon className="h-6 w-6 text-primary-600 dark:text-primary-400" />
+                  </div>
+                  <p className="text-xs font-bold uppercase tracking-widest text-primary-600 dark:text-primary-400">
+                    {service.eyebrow}
+                  </p>
                 </div>
-              </div>
-              <h3 className="text-lg font-subheading text-surface-900 dark:text-surface-100 mb-2 text-center">
-                Self-Serve
-              </h3>
-              <p className="text-sm font-body text-surface-600 dark:text-surface-400 text-center">
-                Free calculators, open-source smart home integrations, docs, and <a href="https://meet.jit.si/ExergyHomeAssistant" target="_blank" rel="noopener noreferrer" className="relative z-10 underline hover:text-primary-300">weekly office hours (Wed 10am MT)</a>. Figure it out yourself — we've made that possible.
-              </p>
-            </div>
-
-            {/* Guided Card */}
-            <Link
-              to="/services"
-              className="bg-surface-50 dark:bg-surface-700 rounded-lg p-6 hover:shadow-lg transition-all duration-300 hover:scale-105 group"
-            >
-              <div className="flex justify-center mb-4">
-                <div className="p-4 bg-primary-100 dark:bg-primary-900 rounded-full group-hover:bg-primary-200 dark:group-hover:bg-primary-800 transition-colors">
-                  <Users className="h-8 w-8 text-primary-600 dark:text-primary-400" />
-                </div>
-              </div>
-              <h3 className="text-lg font-subheading text-surface-900 dark:text-surface-100 mb-2 text-center">
-                Guided
-              </h3>
-              <p className="text-sm font-body text-surface-600 dark:text-surface-400 text-center">
-                We audit your building, design the integration plan, source hardware, and guide your install remotely. Available anywhere in the US.
-              </p>
-            </Link>
-
-            {/* Done-For-You Card */}
-            <Link
-              to="/services"
-              className="bg-surface-50 dark:bg-surface-700 rounded-lg p-6 hover:shadow-lg transition-all duration-300 hover:scale-105 group"
-            >
-              <div className="flex justify-center mb-4">
-                <div className="p-4 bg-primary-100 dark:bg-primary-900 rounded-full group-hover:bg-primary-200 dark:group-hover:bg-primary-800 transition-colors">
-                  <Wrench className="h-8 w-8 text-primary-600 dark:text-primary-400" />
-                </div>
-              </div>
-              <h3 className="text-lg font-subheading text-surface-900 dark:text-surface-100 mb-2 text-center">
-                Done-For-You
-              </h3>
-              <p className="text-sm font-body text-surface-600 dark:text-surface-400 text-center">
-                Full audit, hardware, installation, and commissioning. We handle everything. Local to Denver, CO (~100mi radius).
-              </p>
-            </Link>
-          </motion.div>
-
-          {/* Products nudge */}
-          <div className="mt-10 pt-8 border-t border-surface-200 dark:border-surface-700 flex flex-col sm:flex-row items-center justify-between gap-4">
-            <p className="text-sm font-body text-surface-500 dark:text-surface-400">
-              Already know what hardware you need?
-            </p>
-            <Link
-              to="/products"
-              className="inline-flex items-center px-5 py-2.5 border border-primary-500 text-primary-600 dark:text-primary-400 rounded-lg hover:bg-primary-50 dark:hover:bg-primary-900 transition-colors text-sm font-subheading"
-            >
-              Browse Recommended Products
-              <ArrowRight className="ml-2 h-4 w-4" />
-            </Link>
+                <h3 className="text-xl font-subheading text-surface-900 dark:text-surface-100 mb-2">
+                  {service.title}
+                </h3>
+                <p className="text-sm font-body text-surface-600 dark:text-surface-400">{service.body}</p>
+                <span className="inline-flex items-center mt-4 text-sm font-subheading text-primary-600 dark:text-primary-400">
+                  Learn more
+                  <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
+                </span>
+              </Link>
+            ))}
           </div>
-
         </div>
       </div>
 
-      {/* Media Highlights Section */}
       <MediaHighlights />
 
-      {/* Too Good to Be True Section */}
       <div className="py-20 bg-surface-50 dark:bg-surface-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-3xl font-heading text-surface-900 dark:text-surface-100 mb-4">How Building-Integrated Mining Works</h2>
+            <h2 className="text-3xl font-heading text-surface-900 dark:text-surface-100 mb-4">
+              What the useful work looks like
+            </h2>
             <p className="text-xl font-body text-surface-600 dark:text-surface-400 max-w-2xl mx-auto">
-              One device. Three value streams. No waste.
+              One bitcoin miner. Two value streams that we keep separate: heat recovery, and solar monetization. Hydronic or forced air.
             </p>
           </div>
 
@@ -219,10 +166,10 @@ const Home = () => {
                 </div>
                 <div className="ml-4">
                   <h3 className="text-lg font-subheading text-surface-900 dark:text-surface-100">
-                    One watt in. One watt of heat out. Always.
+                    The electricity was already going to become heat
                   </h3>
                   <p className="mt-2 text-base font-body text-surface-500 dark:text-surface-400">
-                    Every watt a Bitcoin miner consumes becomes heat — 100% of it. Same conversion as your furnace, same thermodynamics as your laptop. The difference: a miner earns Bitcoin for every joule it runs. Every conventional heater does one job per watt. A miner does two. The second one doesn't cost extra.
+                    Every watt a bitcoin miner draws becomes heat. A resistance heater does that and nothing else. A miner does that and earns bitcoin. The second output is the useful work that a plain heater throws away.
                   </p>
                 </div>
               </div>
@@ -235,10 +182,10 @@ const Home = () => {
                 </div>
                 <div className="ml-4">
                   <h3 className="text-lg font-subheading text-surface-900 dark:text-surface-100">
-                    Your heating load is your mining season
+                    Heat recovery is its own value stream
                   </h3>
                   <p className="mt-2 text-base font-body text-surface-500 dark:text-surface-400">
-                    A miner sized to your building's average heat load runs at high duty cycle all winter, displacing your existing fuel. Every hour the furnace stays off is an hour of Bitcoin accumulation on electricity you were already spending. In our installs, the backup furnace rarely fires.
+                    Size the miner to the heat the building already needs, and tie it in as hydronic heat or forced air. The plant you have stays as backup. In our pilot houses the backup barely ran. That is a heating result. It is not the same question as solar.
                   </p>
                 </div>
               </div>
@@ -251,235 +198,163 @@ const Home = () => {
                 </div>
                 <div className="ml-4">
                   <h3 className="text-lg font-subheading text-surface-900 dark:text-surface-100">
-                    Your solar is worth more than your utility pays you
+                    Solar monetization is a different value stream
                   </h3>
                   <p className="mt-2 text-base font-body text-surface-500 dark:text-surface-400">
-                    When your panels overproduce, that surplus exports to the grid at $0.01–$0.08/kWh. Route it through a miner instead: same watts, Bitcoin at hashprice. In our Solar Home case study — at their $0.01/kWh net metering rate — the same kilowatt-hour earned 3.3× more as Bitcoin than as a net metering credit. Your actual advantage depends on your local rate. In summer, your miner stops being a heater and starts being a solar arbitrage machine.
-                  </p>
-                </div>
-              </div>
-
-              <div className="flex items-start">
-                <div className="flex-shrink-0">
-                  <div className="flex items-center justify-center h-12 w-12 rounded-md bg-primary-500 text-white">
-                    <DollarSign className="h-6 w-6" />
-                  </div>
-                </div>
-                <div className="ml-4">
-                  <h3 className="text-lg font-subheading text-surface-900 dark:text-surface-100">
-                    When the math is right, it mines for profit
-                  </h3>
-                  <p className="mt-2 text-base font-body text-surface-500 dark:text-surface-400">
-                    When your off-peak electricity rate and the Bitcoin network's hashprice align, the system runs for pure profit — no heating load required. A conventional thermostat has one job. Your mining system knows your electricity rate, the Bitcoin price, your solar output, and the network hashprice — and makes the right call in real time.
+                    Surplus solar that leaves the building often earns a thin export credit. Route the same kilowatt-hours through a miner and the useful work stays with you. In the solar pilot, that path earned 3.3× the export credit. Your number depends on your rate. We do not blend this into the heating story to make either one look bigger.
                   </p>
                 </div>
               </div>
             </div>
 
             <div className="relative">
-              <img loading="lazy" decoding="async"
+              <img
+                loading="lazy"
+                decoding="async"
                 src="/homeheat_withbill.png"
-                alt="Hashrate heating system showing home heating with Bitcoin mining integration and utility bill savings"
+                alt="A building heating system with bitcoin mining integrated beside the utility bill"
                 className="rounded-lg shadow-2xl"
               />
               <div className="absolute -bottom-6 -right-6 bg-white dark:bg-surface-800 p-6 rounded-lg shadow-xl">
                 <p className="text-2xl font-heading text-primary-500 dark:text-secondary-500">100%</p>
-                <p className="font-body text-surface-600 dark:text-surface-400">Heating Efficiency</p>
+                <p className="font-body text-surface-600 dark:text-surface-400">of the watt becomes heat</p>
               </div>
             </div>
           </div>
 
-          <div className="mt-12 text-center">
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-              <Link
-                to="/learn"
-                className="inline-flex items-center px-6 py-3 bg-primary-500 text-white rounded-lg hover:bg-primary-600 transition-colors text-base font-subheading"
-              >
-                Learn How It Works
-                <ArrowRight className="ml-2 h-5 w-5" />
-              </Link>
-              <a
-                href="https://calc.exergyheat.com"
-                className="inline-flex items-center px-6 py-3 border border-primary-500 text-primary-500 dark:text-secondary-500 rounded-lg hover:bg-primary-50 dark:hover:bg-primary-900 transition-colors text-base font-subheading"
-              >
-                <Calculator className="mr-2 h-5 w-5" />
-                Estimate Your Earnings
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      {/* See it in Action Section (Project Carousel) */}
-      <div className="bg-white dark:bg-surface-800">
-        <ProjectCarousel />
-      </div>
-
-      {/* Why Choose Us Section */}
-      <div className="py-20 bg-surface-50 dark:bg-surface-900">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center">
-            <h2 className="text-3xl font-heading text-surface-900 dark:text-surface-100 mb-4">Why Choose Exergy</h2>
-            <p className="text-xl font-body text-surface-600 dark:text-surface-400 max-w-2xl mx-auto">
-              We're specialists in an emerging industry - in fact, we're defining it
-            </p>
-          </div>
-
-          <div className="mt-20 grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="text-center">
-              <div className="flex justify-center">
-                <Cpu className="h-12 w-12 text-primary-500 dark:text-secondary-500" />
-              </div>
-              <h3 className="mt-4 text-xl font-subheading text-surface-900 dark:text-surface-100">Control-First Architecture</h3>
-              <p className="mt-2 font-body text-surface-600 dark:text-surface-400">
-                Every Exergy system runs on Home Assistant — open-source, local, no cloud dependency. Your data stays on your network. Your system works if the internet goes down.
-              </p>
-            </div>
-
-            <div className="text-center">
-              <div className="flex justify-center">
-                <Wrench className="h-12 w-12 text-primary-500 dark:text-secondary-500" />
-              </div>
-              <h3 className="mt-4 text-xl font-subheading text-surface-900 dark:text-surface-100">Building-Integrated, Not a Gadget</h3>
-              <p className="mt-2 font-body text-surface-600 dark:text-surface-400">
-                We integrate miners into your actual HVAC system — ductwork, radiant loops, hydronic circuits, solar arrays. Not a space heater you plug into a wall.
-              </p>
-            </div>
-
-            <div className="text-center">
-              <div className="flex justify-center">
-                <Bitcoin className="h-12 w-12 text-primary-500 dark:text-secondary-500" />
-              </div>
-              <h3 className="mt-4 text-xl font-subheading text-surface-900 dark:text-surface-100">Real Installs, Real Data</h3>
-              <p className="mt-2 font-body text-surface-600 dark:text-surface-400">
-                Our case studies come from buildings we've actually built — with measured duty cycles, real Bitcoin earnings, and actual utility bill deltas. No theoretical projections.
-              </p>
-            </div>
-          </div>
-
-          <div className="mt-12 text-center">
+          <div className="mt-16 text-center">
             <Link
-              to="/about"
+              to="/learn"
               className="inline-flex items-center px-6 py-3 bg-primary-500 text-white rounded-lg hover:bg-primary-600 transition-colors text-base font-subheading"
             >
-              Learn More About Our Team
+              Read the explainers
               <ArrowRight className="ml-2 h-5 w-5" />
             </Link>
           </div>
         </div>
       </div>
 
-      {/* The Common FAQ Section */}
-      <div className="py-20 bg-white dark:bg-surface-800">
+      <div className="bg-white dark:bg-surface-800">
+        <ProjectCarousel />
+      </div>
+
+      <div className="py-20 bg-surface-50 dark:bg-surface-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl font-heading text-surface-900 dark:text-surface-100 mb-4">Have Questions? We Have Answers</h2>
+          <div className="text-center">
+            <h2 className="text-3xl font-heading text-surface-900 dark:text-surface-100 mb-4">Why Exergy</h2>
             <p className="text-xl font-body text-surface-600 dark:text-surface-400 max-w-2xl mx-auto">
-              Understand the basics of building-integrated mining
+              Open-source first. No hardware catalog. The work is the integration and the judgment.
             </p>
           </div>
 
-          <motion.div 
+          <div className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="text-center">
+              <div className="flex justify-center">
+                <Cpu className="h-12 w-12 text-primary-500 dark:text-secondary-500" />
+              </div>
+              <h3 className="mt-4 text-xl font-subheading text-surface-900 dark:text-surface-100">Open tools, local control</h3>
+              <p className="mt-2 font-body text-surface-600 dark:text-surface-400">
+                Home Assistant integrations anyone can install. On pilot systems, an open-source control hub ties the pieces together. We do not sell that hub.
+              </p>
+            </div>
+            <div className="text-center">
+              <div className="flex justify-center">
+                <Wrench className="h-12 w-12 text-primary-500 dark:text-secondary-500" />
+              </div>
+              <h3 className="mt-4 text-xl font-subheading text-surface-900 dark:text-surface-100">In the building, not beside it</h3>
+              <p className="mt-2 font-body text-surface-600 dark:text-surface-400">
+                Hydronic or forced air, coordinated with the mechanical team you already have. The miner is part of the energy system.
+              </p>
+            </div>
+            <div className="text-center">
+              <div className="flex justify-center">
+                <Bitcoin className="h-12 w-12 text-primary-500 dark:text-secondary-500" />
+              </div>
+              <h3 className="mt-4 text-xl font-subheading text-surface-900 dark:text-surface-100">Aligned with an open mining stack</h3>
+              <p className="mt-2 font-body text-surface-600 dark:text-surface-400">
+                Tyler Stevens, our CEO, is president of the 256 Foundation board. The foundation funds the open hardware, firmware, and pool software this industry still lacks.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div className="py-20 bg-white dark:bg-surface-800">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl font-heading text-surface-900 dark:text-surface-100 mb-4">
+              Questions we get first
+            </h2>
+          </div>
+          <motion.div
             className="grid grid-cols-1 md:grid-cols-3 gap-8"
-            variants={containerVariants}
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: true, margin: "-100px" }}
+            viewport={{ once: true, margin: '-100px' }}
+            variants={{ hidden: {}, visible: { transition: { staggerChildren: 0.15 } } }}
           >
-            {/* Card 1: Does a Bitcoin miner heat as well as a furnace? */}
-            <motion.div className="group" variants={cardVariants}>
-              <div className="bg-surface-50 dark:bg-surface-700 rounded-lg p-8 h-full transform transition-transform group-hover:scale-105 shadow-lg">
+            {[
+              {
+                icon: Building2,
+                q: 'Is a commercial building the point?',
+                a: 'Yes. That is the lead practice. Phase 0 is a free go or no-go from about twelve months of utility bills. You can stop there.',
+              },
+              {
+                icon: Zap,
+                q: 'Will the electric bill go up?',
+                a: 'Often, yes. Fuel you used to burn can fall, and the miner earns bitcoin on energy the building was spending anyway. Whether that is a good trade is what the audit is for. We will not quote you a savings number on this page.',
+              },
+              {
+                icon: HomeIcon,
+                q: 'What about a house?',
+                a: 'Houses are an application-only alpha. The three homes in our work section are pilot installs. If you want to be early, apply. If you want a finished product, we do not sell one.',
+              },
+            ].map((item) => (
+              <motion.div
+                key={item.q}
+                variants={{
+                  hidden: { opacity: 0, y: 24 },
+                  visible: { opacity: 1, y: 0, transition: { type: 'spring', stiffness: 100 } },
+                }}
+                className="bg-surface-50 dark:bg-surface-700 rounded-lg p-8 shadow-lg"
+              >
                 <div className="flex justify-center mb-6">
                   <div className="p-4 bg-secondary-100 dark:bg-secondary-900 rounded-full">
-                    <Zap className="h-12 w-12 text-primary-500 dark:text-secondary-500" />
+                    <item.icon className="h-10 w-10 text-primary-500 dark:text-secondary-500" />
                   </div>
                 </div>
                 <h3 className="text-xl font-subheading text-surface-900 dark:text-surface-100 mb-4 text-center">
-                  Does a Bitcoin miner actually heat my home?
+                  {item.q}
                 </h3>
-                <p className="font-body text-surface-600 dark:text-surface-400 text-center">
-                  Yes. In our Colorado Mountain Home, a single 4,000W miner handled 98.6% of the home's heat demand over a full heating season. The gas furnace ran for 4.4 hours total — across 43 days. The miner was the furnace.
-                </p>
-              </div>
-            </motion.div>
-
-            {/* Card 2: Will my electric bill go up? */}
-            <motion.div className="group" variants={cardVariants}>
-              <div className="bg-surface-50 dark:bg-surface-700 rounded-lg p-8 h-full transform transition-transform group-hover:scale-105 shadow-lg">
-                <div className="flex justify-center mb-6">
-                  <div className="p-4 bg-secondary-100 dark:bg-secondary-900 rounded-full">
-                    <DollarSign className="h-12 w-12 text-primary-500 dark:text-secondary-500" />
-                  </div>
-                </div>
-                <h3 className="text-xl font-subheading text-surface-900 dark:text-surface-100 mb-4 text-center">
-                  Will my electric bill go up?
-                </h3>
-                <p className="font-body text-surface-600 dark:text-surface-400 text-center">
-                  Yes — and that's the point. Electric goes up, gas drops to near-zero, and you accumulate Bitcoin on every joule. For propane and heating oil customers, the net result is often strongly positive before counting the Bitcoin. Our Exergy Audit shows you exactly where you land.
-                </p>
-              </div>
-            </motion.div>
-
-            {/* Card 3: How do I know if my building is a good fit? */}
-            <motion.div className="group" variants={cardVariants}>
-              <div className="bg-surface-50 dark:bg-surface-700 rounded-lg p-8 h-full transform transition-transform group-hover:scale-105 shadow-lg">
-                <div className="flex justify-center mb-6">
-                  <div className="p-4 bg-secondary-100 dark:bg-secondary-900 rounded-full">
-                    <Calculator className="h-12 w-12 text-primary-500 dark:text-secondary-500" />
-                  </div>
-                </div>
-                <h3 className="text-xl font-subheading text-surface-900 dark:text-surface-100 mb-4 text-center">
-                  Is my building a good fit?
-                </h3>
-                <p className="font-body text-surface-600 dark:text-surface-400 text-center">
-                  Strong fits: propane, heating oil, or expensive electric resistance heat. Solar with low net-metering rates. Pools, hot tubs, radiant floors. Weaker fits: cheap natural gas, heat pumps in mild climates. Run our free calculator — it tells you in two minutes.
-                </p>
-              </div>
-            </motion.div>
+                <p className="font-body text-surface-600 dark:text-surface-400 text-center">{item.a}</p>
+              </motion.div>
+            ))}
           </motion.div>
-
           <div className="mt-12 text-center">
             <Link
               to="/faq"
               className="inline-flex items-center px-6 py-3 bg-primary-500 text-white rounded-lg hover:bg-primary-600 transition-colors text-base font-subheading"
             >
-              View All Frequently Asked Questions
+              Read the FAQ
               <ArrowRight className="ml-2 h-5 w-5" />
             </Link>
           </div>
         </div>
       </div>
 
-      {/* CTA Section with Custom Gradient */}
       <div className="relative py-16 overflow-hidden bg-gradient-to-r from-[#4970A5] to-[#718EBC]">
-        <div className="absolute inset-0">
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_-20%,rgba(255,255,255,0.1),transparent_75%)] animate-pulse"></div>
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_80%,rgba(47,59,105,0.3),transparent_50%)] animate-pulse [animation-delay:1s]"></div>
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_50%,rgba(255,255,255,0.1),transparent_50%)] animate-pulse [animation-delay:2s]"></div>
-        </div>
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl font-heading text-white mb-4">
-            Ready to see if your building qualifies?
-          </h2>
-          <p className="text-xl font-body text-white/90 mb-8">
-            Run the numbers yourself with our free calculator, or talk to us.
+          <h2 className="text-3xl font-heading text-white mb-4">Start with the bills.</h2>
+          <p className="text-xl font-body text-white/90 mb-8 max-w-2xl mx-auto">
+            Phase 0 is a free feasibility check. If the building is not a fit, we will say so before anyone writes a scope.
           </p>
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <a
-              href="https://calc.exergyheat.com"
-              className="inline-flex items-center px-6 py-3 border border-transparent text-base font-subheading rounded-md text-primary-700 bg-white hover:bg-white/90 transition-colors"
-            >
-              Try the Calculator
-              <ArrowRight className="ml-2 h-5 w-5" />
-            </a>
-            <Link
-              to="/book-call"
-              className="inline-flex items-center px-6 py-3 border border-white text-base font-subheading rounded-md text-white hover:bg-white hover:text-primary-500 transition-colors"
-            >
-              Book an Intro Call
-              <ArrowRight className="ml-2 h-5 w-5" />
-            </Link>
-          </div>
+          <Link
+            to="/contact?intent=phase-0"
+            className="inline-flex items-center px-6 py-3 text-base font-subheading rounded-md text-primary-700 bg-white hover:bg-white/90 transition-colors"
+          >
+            Send us your utility bills
+            <ArrowRight className="ml-2 h-5 w-5" />
+          </Link>
         </div>
       </div>
     </div>

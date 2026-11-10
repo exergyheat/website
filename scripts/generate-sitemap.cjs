@@ -5,13 +5,19 @@ const { execSync } = require('child_process');
 // Static routes — keep in sync with src/App.tsx
 const routes = [
   { path: '/', priority: '1.0', changefreq: 'weekly' },
-  { path: '/products', priority: '0.9', changefreq: 'monthly' },
   { path: '/services', priority: '0.9', changefreq: 'monthly' },
+  { path: '/services/commercial', priority: '0.9', changefreq: 'monthly' },
+  { path: '/services/advisory', priority: '0.8', changefreq: 'monthly' },
+  { path: '/services/operations', priority: '0.8', changefreq: 'monthly' },
+  { path: '/services/residential-pilot', priority: '0.7', changefreq: 'monthly' },
+  { path: '/open-tools', priority: '0.9', changefreq: 'monthly' },
+  { path: '/work', priority: '0.8', changefreq: 'monthly' },
+  { path: '/case-studies', priority: '0.5', changefreq: 'monthly' },
   { path: '/about', priority: '0.8', changefreq: 'monthly' },
   { path: '/learn', priority: '0.8', changefreq: 'monthly' },
+  { path: '/learn/why-mining-hardware-is-closed', priority: '0.7', changefreq: 'monthly' },
   { path: '/contact', priority: '0.7', changefreq: 'monthly' },
   { path: '/newsroom', priority: '0.8', changefreq: 'weekly' },
-  { path: '/case-studies', priority: '0.8', changefreq: 'monthly' },
   { path: '/faq', priority: '0.7', changefreq: 'monthly' },
   { path: '/book-call', priority: '0.8', changefreq: 'monthly' },
   { path: '/privacy-policy', priority: '0.3', changefreq: 'yearly' }

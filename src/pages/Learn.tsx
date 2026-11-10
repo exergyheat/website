@@ -57,7 +57,7 @@ const Learn = () => {
       details: [
         "Anyone can participate - like anyone can use the internet",
         "Earnings are proportional to the work you contribute ~ heat demand",
-        "Automated reward payouts in a nativie digital asset",
+        "Automated reward payouts in a native digital asset",
         "All the energy used to mine is converted to heat anyways"
       ]
     },
@@ -69,7 +69,7 @@ const Learn = () => {
       details: [
         "Your heating season is your primary mining season",
         "In summer, excess solar routes through the miner instead of the grid",
-        "Solar Home case study: 3.3× more value per kWh at $0.01/kWh net metering — your advantage scales with your rate",
+        "Solar pilot: the same kilowatt-hours earned 3.3× the export credit — your multiple depends on your rate",
         "One device, two outputs — heat and Bitcoin — at no extra cost"
       ]
     }
@@ -87,7 +87,7 @@ const Learn = () => {
         'No licensed trades — 120V / 15A service sufficient',
         'Start one room, scale to whole building',
         'Stage 1 heat with existing system as backup',
-        'Deferred a $10,000+ furnace replacement — indefinitely'
+        'In the solar pilot, miners carried the season and the furnace replacement was deferred'
       ]
     },
     {
@@ -141,7 +141,7 @@ const Learn = () => {
       image: 'https://images.pexels.com/photos/433308/pexels-photo-433308.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
       features: [
         'Miner ramps up automatically on surplus solar generation',
-        'Solar Home case study: 3.3× more value per kWh at $0.01/kWh net metering',
+        'Solar pilot: 3.3× the value of exporting the same kilowatt-hours',
         'Real-time switching: mine vs. export based on hashprice vs. grid rate',
         'Works on top of any other integration type'
       ]
@@ -239,6 +239,27 @@ const Learn = () => {
             )
           ))}
         </div>
+      </div>
+
+      <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 pb-4">
+        <Link
+          to="/learn/why-mining-hardware-is-closed"
+          className="block bg-white dark:bg-surface-800 rounded-2xl shadow-lg p-8 hover:shadow-xl transition-shadow"
+        >
+          <p className="text-xs font-bold uppercase tracking-widest text-primary-600 dark:text-primary-400 mb-2">
+            The industry problem
+          </p>
+          <h2 className="text-2xl font-bold text-surface-900 dark:text-surface-100 mb-3">
+            Why mining hardware is closed, and hard to put in a building
+          </h2>
+          <p className="text-surface-600 dark:text-surface-400">
+            Miners were built for data halls. Firmware is proprietary. Nothing about that plugs cleanly into a thermostat, a furnace, a hydronic loop, or a solar inverter. Open source is how the interface gets stable. Read the argument, then come back to the integration patterns below.
+          </p>
+          <span className="inline-flex items-center mt-4 font-subheading text-primary-600 dark:text-primary-400">
+            Read it
+            <ArrowRight className="ml-2 h-4 w-4" />
+          </span>
+        </Link>
       </div>
 
       {/* Core Concepts */}
@@ -415,10 +436,10 @@ const Learn = () => {
           </p>
           
           <Link
-            to="/case-studies"
+            to="/work"
             className="inline-flex items-center px-8 py-4 bg-white text-primary-600 rounded-lg hover:bg-white/90 transition-colors text-base font-subheading"
           >
-            See Case Studies
+            See the work
             <Eye className="ml-2 h-5 w-5" />
           </Link>
         </div>

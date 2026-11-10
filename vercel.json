@@ -1,4 +1,10 @@
 {
+  "redirects": [
+    { "source": "/products", "destination": "/open-tools", "permanent": true },
+    { "source": "/products/", "destination": "/open-tools", "permanent": true },
+    { "source": "/portfolio", "destination": "/work", "permanent": true },
+    { "source": "/portfolio/", "destination": "/work", "permanent": true }
+  ],
   "rewrites": [
     { "source": "/(.*)", "destination": "/index.html" }
   ],

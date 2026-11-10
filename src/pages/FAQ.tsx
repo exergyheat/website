@@ -1,10 +1,12 @@
 import { useState } from 'react'
 import { Helmet } from 'react-helmet-async'
+import { Link } from 'react-router-dom'
 import { Plus, Minus, Search, MessageCircle, ArrowRight } from 'lucide-react'
+import ReviewTodo from '../components/ReviewTodo'
 
-const FAQ = () => {
+function FAQ() {
   const [openSections, setOpenSections] = useState<Set<string>>(
-    new Set(['basics', 'results', 'economics', 'technical', 'working'])
+    new Set(['basics', 'fit', 'working', 'technical'])
   )
   const [searchQuery, setSearchQuery] = useState('')
 
@@ -15,199 +17,174 @@ const FAQ = () => {
       questions: [
         {
           q: 'What is building-integrated mining?',
-          a: 'Building-integrated mining means using Bitcoin miners as your building\'s heating infrastructure — not as a side project, but as the primary heat source. Bitcoin miners convert electricity into heat with 100% efficiency, the same as any electric heater. The difference: miners also earn Bitcoin for the electricity they consume. Every joule becomes heat AND sats. No waste, no separate cost.'
+          a: 'It means the bitcoin miner is part of the building\'s energy system, not a machine in a spare room. Electricity in becomes heat out, the same as any electric heater, and the miner also earns bitcoin. We integrate that heat as hydronic or forced air. Heat recovery and solar monetization are two different value streams. We account for them separately.',
         },
         {
-          q: 'Do I need to understand Bitcoin to use this?',
-          a: 'No. You need to understand that your heating system earns you something instead of nothing. Whether you think of that as Bitcoin, digital cash, or just a heating rebate is up to you. We can set up payouts in ways that feel familiar — including converting earnings to dollars automatically. The Bitcoin is the mechanism. The heat is the product.'
+          q: 'What does "exergy" mean?',
+          a: 'In thermodynamics, exergy is the share of an energy flow that can still do useful work. The rest is still energy, but it can no longer do work. We are named for the useful share. The job is to find that share in a building\'s energy and in a company\'s operations, and to stop paying for the waste.',
         },
         {
-          q: 'Is this the same as a space heater?',
-          a: 'Conceptually, yes — every watt of electricity becomes heat. But building-integrated mining goes further: the miner connects to your existing heating distribution (ductwork, radiant floors, hydronic loops, pool systems) rather than just heating one room. It responds to your thermostat, tracks your solar generation, and switches operating modes based on real-time economics. A space heater doesn\'t have an API. This does.'
-        },
-        {
-          q: 'Why Bitcoin and not another cryptocurrency?',
-          a: 'Bitcoin is the only proof-of-work network large enough and stable enough to support a heating use case at scale. The reward is proportional to energy contributed — which tracks directly with heat demand. No other network has the same combination of decentralization, longevity, and energy-to-reward relationship. It\'s also the most widely held and understood.'
+          q: 'Do I need to understand bitcoin?',
+          a: 'You need to understand that the heating system can earn something instead of nothing. We can talk about payouts in bitcoin or in a form that feels more like a rebate. The heat is what the building needed. The bitcoin is the useful work a plain heater never did.',
         },
         {
           q: 'Is it bad for the environment?',
-          a: 'Building-integrated mining displaces fossil fuel heating with electric heating that earns money. If you replace a propane furnace, you eliminate propane combustion entirely. The electricity used is 100% converted to heat — nothing wasted. And the Bitcoin earnings offset the electric cost, often dramatically. For solar owners, the miner converts curtailed solar generation (energy that would otherwise go to the grid at a loss) into Bitcoin directly.'
-        }
-      ]
+          a: 'A miner used as heat displaces heat the building was going to make some other way. If that other way was burning propane or oil, the combustion goes away for the hours the miner carries the load. The electricity still comes from whatever supplies the building, including on-site solar when there is surplus. We will not call that carbon-free unless your power actually is.',
+        },
+      ],
     },
     {
-      id: 'results',
-      title: 'Does It Actually Work?',
+      id: 'fit',
+      title: 'Who It Is For',
       questions: [
         {
-          q: 'Does a Bitcoin miner heat as well as a furnace?',
-          a: 'It heats differently, but effectively. In our Colorado Mountain Home install, a single 4,000W miner handled 98.6% of the home\'s heat demand over a 43-day heating season — the gas furnace only ran for 4.4 hours total. The miner runs at longer duty cycles than a gas furnace (it\'s smaller in BTU terms), which actually keeps temperatures more stable. The backup furnace exists for peak cold days.'
+          q: 'Is my commercial building a fit?',
+          a: 'Start there. This is the lead practice. A fit usually has a real heating load, a mechanical system we can tie into (hydronic or forced air), and a project team — architect, MEP, contractor — we can sit beside. New construction and retrofits are both in scope, and they are handled differently. Phase 0 is a free go or no-go from about twelve months of utility bills. You can stop after that phase.',
         },
         {
-          q: 'What happens on the coldest days?',
-          a: 'The miner is sized to handle the average heat load, not the peak. On the coldest days, a backup system (your existing furnace, boiler, or electric resistance) picks up the difference. This is intentional — it\'s called the buddy system. The miner runs as many hours as possible at high duty cycle; backup handles the peaks. Across every install, the backup system rarely fired.'
+          q: 'We build miners, heaters, boilers, or water heaters. Can you help us enter buildings?',
+          a: 'Yes. That is a separate practice from building consulting. The mining industry is largely closed-source, the products do not plug into buildings cleanly, and the regulatory path is a real hurdle. We offer field experience: integration specs for thermostats, HVAC, furnaces, and solar inverters; pilot installs; installer and channel setup; a certification path; and product-market feedback. The shape is a paid discovery sprint, then a fixed-fee monthly pilot. Scoped per engagement.',
         },
         {
-          q: 'How does this interact with my existing heating system?',
-          a: 'The miner integrates as stage 1 heat. Your existing furnace or boiler becomes stage 2 backup. Home Assistant controls the sequencing: when the thermostat calls for heat, the miner fires first. If the miner can\'t maintain setpoint (coldest days only), the backup fires. Your existing system stays in place — it\'s still there when you need it.'
+          q: 'Can you do this in my house?',
+          a: 'Only through the residential pilot, and only by application. These are alpha systems for owners who want to be early. They are not a catalog and they are not the headline of the company. Guidance is remote anywhere in the US. Within about 100 miles of Denver we can do the work ourselves. Pricing is premium and custom, scoped per project. The three homes in our work section are pilot installs.',
         },
         {
-          q: 'Is it noisy?',
-          a: 'Liquid-cooled systems (like the HS05 boiler) are nearly silent — the miner itself makes no noise, only the water circulator pump runs. Air-cooled miners are similar in noise level to a forced-air furnace fan. For in-duct installations, the miner sits in the mechanical room and the ductwork distributes heat silently. For zone space heaters, noise levels are around 45dB — comparable to a quiet conversation.'
+          q: 'Why don\'t you sell hardware?',
+          a: 'Because a closed box is the problem, not the product we want to be. Miners change every generation. Buildings do not. Selling a hub or a miner would lock clients to our inventory and fight the open stack we are aligned with. We specify, coordinate, and commission. On pilot systems we install an open-source control hub to tie the system together, and we monitor with Exergy Relay. Neither is for sale. The free tools are on the Open Tools page. The 256 Foundation funds the open mining hardware and firmware underneath the industry.',
         },
         {
-          q: 'What\'s the maintenance like?',
-          a: 'Miners have fewer moving parts than a furnace — no combustion, no heat exchanger to crack, no gas valves. Primary maintenance is air filter cleaning (for air-cooled units) and periodic firmware updates. Our Exergy Relay monitoring service watches for performance degradation and alerts you before you notice a problem. Most customers go months without touching the system.'
-        }
-      ]
-    },
-    {
-      id: 'economics',
-      title: 'The Economics',
-      questions: [
-        {
-          q: 'Will my electric bill go up?',
-          a: 'Yes — and that\'s expected. Here\'s the full picture: your electric bill goes up, your gas or propane bill drops to near-zero, and you accumulate Bitcoin. Whether the net position is better or worse than today depends on your current fuel costs and what you do with the Bitcoin. For customers on expensive propane or heating oil, the net result is often strongly positive even before counting Bitcoin. For natural gas customers with cheap rates, it\'s better framed as a Bitcoin stacking strategy than a savings play. Our Exergy Audit shows you exactly where you land before you commit to anything.'
+          q: 'What about operations, not energy?',
+          a: 'We also apply the same idea to workflows at energy-adjacent small businesses: HVAC and solar installers, property managers, and mining operators. Find the wasted work, automate it, measure the return. That engagement is a paid workflow audit, a build, and an optional retainer. It does not require a mining project.',
         },
-        {
-          q: 'What\'s a realistic ROI?',
-          a: 'It varies significantly based on your current fuel, electricity rate, and Bitcoin price. Our calculators at calc.exergyheat.com let you run the math with your actual inputs. Real results from our installs: the all-electric mountain home achieved a 45% reduction in effective heating cost ($0.049/kWh vs $0.09/kWh straight electric resistance). The solar home earned 3.3× more value from excess solar routed through the miner versus exported to the grid — at their $0.01/kWh net metering rate, one of the weakest possible deals. Your actual advantage depends on your local net metering rate. An Exergy Audit gives you a personalized monthly model.'
-        },
-        {
-          q: 'Do Bitcoin earnings slow down over time?',
-          a: 'Yes — as the Bitcoin network grows and difficulty increases, each terahash earns slightly less Bitcoin over time. This is a known dynamic. The counter-forces: Bitcoin\'s price has historically appreciated, and building-integrated miners are insulated from the industrial profitability pressure that shuts down data center miners (your miner just needs to be useful, not profitable). Think of it like a Framework laptop — the chassis lasts, you upgrade the compute when the economics call for it.'
-        },
-        {
-          q: 'Can I get paid in dollars instead of Bitcoin?',
-          a: 'Yes. We can configure payouts to convert automatically to USD, or blend Bitcoin and USD. If you\'d rather see a heating rebate than accumulate Bitcoin, that\'s a valid choice. We do recommend holding at least some Bitcoin — historically the appreciation has made a meaningful difference to total returns — but it\'s your system and your choice.'
-        },
-        {
-          q: 'What does Exergy Relay cost?',
-          a: 'Exergy Relay costs a 5% hashrate split — five cents of every dollar your system earns goes to Exergy, and the other 95% goes directly to your wallet. No subscription, no invoice, no credit card. The system pays for its own monitoring. If your miner earns $200/month, Relay costs you $10 — and in exchange you get remote monitoring, automated alerts, a monthly performance report, and priority support. You can disable it at any time; your system continues heating and mining normally without it.'
-        }
-      ]
-    },
-    {
-      id: 'technical',
-      title: 'Technical Setup',
-      questions: [
-        {
-          q: 'What is Home Assistant and do I need it?',
-          a: 'Home Assistant is open-source smart home software that runs on local hardware — no cloud, no subscription. It\'s the control layer for every Exergy system: it reads your thermostat, tracks solar generation, monitors miner performance, and makes real-time decisions about when to heat and when to mine. For Self-Serve customers doing their own install, you set it up yourself. For Guided and Done-For-You customers, we configure it as part of the service.'
-        },
-        {
-          q: 'What is the CTRL1 Hub?',
-          a: 'The CTRL1 is Exergy\'s purpose-built Home Assistant control hub — a Raspberry Pi 5 with Zigbee antenna, NVMe SSD, and aluminum case, pre-loaded with Exergy\'s open-source integrations. You plug it in, it shows your network IP on the display, and you\'re into Home Assistant with Exergy\'s miner integrations already installed. It\'s the brain of every Exergy install. Currently it comes included in Tier 2 and Tier 3 service installs — standalone purchase is coming soon.'
-        },
-        {
-          q: 'What are the five ways to integrate a miner into a building?',
-          a: '1) Smart Zone Heaters — standalone miners as space heaters per zone, no plumbing. 2) In-Duct (Forced Air) — miner in the HVAC return duct, air handler distributes heat. 3) Hydronic/Radiant — miner heats a water loop for radiant floors or baseboard heat. 4) Water, Pool & Spa — dedicated miner heats pools, hot tubs, or domestic water. 5) Excess Solar — miner as a dispatchable load that absorbs excess solar generation before it goes to the grid.'
-        },
-        {
-          q: 'What are the four operating modes?',
-          a: 'Mine to Heat — miner runs whenever heat is called, regardless of economics (maximizes Bitcoin accumulation). Cheapest BTU — system picks the lowest-cost heat source in real time (gas vs. electric vs. miner) based on live pricing. Solar First — miner prioritizes absorbing excess solar generation before buying grid power. Always On — miner runs continuously, heat is the byproduct (for customers who want maximum hashrate uptime). Most systems use a combination of modes depending on time of day and season.'
-        },
-        {
-          q: 'Does this work with solar panels?',
-          a: 'Yes — solar integration is one of the strongest use cases. When your solar array produces more power than your building uses, that excess typically goes to the grid at low net-metering rates (sometimes as low as $0.01/kWh). Routing that same power through the miner earns Bitcoin at a rate that was 3.3× more valuable than grid export in our Solar Home case study, where the net metering rate was $0.01/kWh — a particularly weak deal. At higher net metering rates the gap narrows, at lower rates it widens. The miner also throttles its wattage to exactly match surplus generation, so nothing is wasted and nothing goes to the grid at a loss.'
-        }
-      ]
+      ],
     },
     {
       id: 'working',
       title: 'Working With Exergy',
       questions: [
         {
-          q: 'How do I know if my building is a good fit?',
-          a: 'Start with our free calculator at calc.exergyheat.com — it runs your heating load, electricity rate, and solar inputs through the same model we use internally. Strong fits: buildings on propane, heating oil, or expensive electric resistance heat. Buildings with solar and low net-metering rates. Buildings with sustained heat loads (pools, hot tubs, radiant floors, large spaces). Weaker fits: cheap natural gas with high electricity rates, heat pumps in mild climates, buildings that rarely need heat.'
+          q: 'What does it cost?',
+          a: 'Scoped per project. We are resetting pricing and we do not publish fees, retainers, or hardware prices. Phase 0, the commercial feasibility check, is free. Everything after that is its own agreement, and you can stop after any phase. There is no audit credit toward a purchase, because we do not sell the equipment.',
         },
         {
-          q: 'What does the Exergy Audit include?',
-          a: 'A monthly-resolution thermo-economic model of your building: heat load by month using heating degree days, Bitcoin mining economics at current network conditions, optimal system sizing, estimated Bitcoin earnings, estimated savings vs. your current heating, and ROI projections. You walk away with a clear picture of what system fits your building, what it will cost, and what you\'ll earn. Residential audits are $500, commercial are $2,500. The audit fee is credited toward hardware if you proceed.'
+          q: 'What are the commercial phases?',
+          a: 'Phase 0 is a free feasibility check from your utility bills. Phase 1 is an Exergy Audit: energy, heat, and bitcoin economics, with one to three system options and an estimated budget. Phase 2 is engineering coordination with the MEP team, contractors, and controls. Phase 3 is procurement support and commissioning. We still do not sell the hardware. Phase 4 is optional monitoring and warranty. Each phase is a separate agreement.',
         },
         {
-          q: 'Are you available outside of Colorado?',
-          a: 'Exergy Audit and Guided services are available anywhere — we deliver reports and consult remotely, and hardware ships anywhere in the US. Done-For-You installation is local only, within ~100 miles of Denver. If you\'re outside that radius, we\'ll help you find and train a local HVAC contractor, or guide you and your own trades through the install remotely.'
+          q: 'How is a pilot system monitored?',
+          a: 'Exergy Relay is how we watch a pilot: alerts, a view of performance, and a regular report. It is part of running the pilot, not an add-on for sale. The arrangement is a 5% hashrate split. The rest of the hashrate is yours. It is not a subscription catalog item.',
         },
         {
-          q: 'What does a typical Done-For-You install look like?',
-          a: 'It starts with an Exergy Audit (or we use one you already have). We design the integration, specify all hardware, and coordinate the trades: HVAC for ductwork or hydronic connections, electrician for 240V circuit, low-voltage for networking and controls. We deliver the hardware, oversee the mechanical install, configure Home Assistant and the CTRL1 Hub, and bring the system fully online. Most installs take 1–2 days on-site.'
+          q: 'Are you outside Colorado?',
+          a: 'Commercial phases are coordinated remotely with the project team, wherever the building is. Say so in the Phase 0 note if the site is outside the US — we have not published a foreign-project policy. Residential guidance is remote anywhere in the US. Hands-on residential work is within about 100 miles of Denver.',
         },
         {
-          q: 'How do I get started?',
-          a: 'Four paths: 1) Run the calculator yourself at calc.exergyheat.com — it tells you if you\'re a fit and what the economics look like. 2) Join our free weekly office hours — Wednesdays at 10am Mountain Time at meet.jit.si/ExergyHomeAssistant. Ask anything, no commitment. 3) Book a free 15-minute intro call — we\'ll ask a few questions and tell you which tier makes sense. 4) Contact us directly with your situation and we\'ll route you to the right next step.'
-        }
-      ]
-    }
+          q: 'How do I start?',
+          a: 'Commercial buildings: send utility bills and start Phase 0. Manufacturers: talk partnership. Houses: apply for the pilot. If you are not sure which door is yours, book the free 15-minute intro call and we will point you at one of them. The calculators and integrations are free if you want to look before any of that.',
+        },
+      ],
+    },
+    {
+      id: 'technical',
+      title: 'How the Systems Behave',
+      questions: [
+        {
+          q: 'Does a bitcoin miner actually heat a building?',
+          a: 'Yes. In the Colorado mountain home pilot, one miner carried almost the entire heating season and the gas furnace barely ran. The miner is sized to the typical load, not the coldest hour. The existing plant stays as backup and covers the peak. That house is a pilot, not a guarantee for the next building.',
+        },
+        {
+          q: 'How does it sit with the heating system I have?',
+          a: 'Hydronic: the miner adds heat to the water loop and the boiler sees warmer return water. Forced air: heat is delivered into the duct the air handler already uses. In both cases the miner is the first stage and the existing equipment is the backup. We do not rip out a working plant to make a point.',
+        },
+        {
+          q: 'Is it noisy?',
+          a: 'A hydronic integration keeps the miner in the mechanical space and moves heat with a circulator, so occupied rooms stay quiet. A forced-air integration sounds like the air handler it works with. A miner used as a zone heater is in the room, and it is closer to equipment than to silence. We are not publishing a decibel number in this draft.',
+        },
+        {
+          q: 'What controls it?',
+          a: 'Home Assistant, running locally. Our integrations are open source and free to install through HACS. They speak to miners and pool software including Braiins OS, LuxOS, Whatsminer, BitAxe, Ocean, Public Pool, and DATUM. Pilot systems also get an open-source control hub that we install to tie the miner, the thermostat, and the monitoring together. That hub is not a product.',
+        },
+        {
+          q: 'What are the operating modes?',
+          a: 'Mode 1, Mine to Heat: the miner runs when the building calls for heat. Mode 2, Solar First: surplus solar is absorbed before grid power is bought for hashing. Mode 3, Cheapest BTU: the controls pick the lowest-cost heat source from the inputs they can see. Mode 4, Always On: the miner runs for hashrate and heat is the byproduct. Most buildings use more than one mode across the year.',
+        },
+        {
+          q: 'Does this work with solar?',
+          a: 'Yes, and we keep it separate from the heating result. When the array makes more than the building is using, that surplus can be hashed instead of exported. In the solar home pilot the same kilowatt-hours were worth 3.3× the export credit. Your multiple depends on your export rate. The heating season and the solar surplus are different seasons of the same machine, not one blended claim.',
+        },
+      ],
+    },
   ]
 
   const toggleSection = (sectionId: string) => {
-    setOpenSections(prev => {
+    setOpenSections((prev) => {
       const next = new Set(prev)
-      if (next.has(sectionId)) {
-        next.delete(sectionId)
-      } else {
-        next.add(sectionId)
-      }
+      if (next.has(sectionId)) next.delete(sectionId)
+      else next.add(sectionId)
       return next
     })
   }
 
-  const filteredSections = faqSections.map(section => ({
-    ...section,
-    questions: section.questions.filter(q =>
-      q.q.toLowerCase().includes(searchQuery.toLowerCase()) ||
-      q.a.toLowerCase().includes(searchQuery.toLowerCase())
-    )
-  })).filter(section => section.questions.length > 0)
+  const filteredSections = faqSections
+    .map((section) => ({
+      ...section,
+      questions: section.questions.filter(
+        (q) =>
+          q.q.toLowerCase().includes(searchQuery.toLowerCase()) ||
+          q.a.toLowerCase().includes(searchQuery.toLowerCase())
+      ),
+    }))
+    .filter((section) => section.questions.length > 0)
 
   return (
     <div className="bg-surface-50 dark:bg-surface-900 min-h-screen">
       <Helmet>
         <title>FAQ | Exergy</title>
-        <meta name="description" content="Real Q&amp;A about building-integrated mining: how it works, what it costs, ROI, technical setup, and whether your building is a good fit." />
+        <meta
+          name="description"
+          content="Questions about commercial building-integrated mining, manufacturer advisory, the residential pilot, and why Exergy does not sell hardware. Engagements are scoped per project."
+        />
         <link rel="canonical" href="https://exergyheat.com/faq" />
-        <meta property="og:title" content="FAQ — Your Building-Integrated Mining Questions Answered | Exergy" />
-        <meta property="og:description" content="Real Q&amp;A about building-integrated mining: how it works, what it costs, ROI, technical setup, and whether your building is a good fit." />
+        <meta property="og:title" content="FAQ | Exergy" />
+        <meta
+          property="og:description"
+          content="Commercial fit, manufacturer partnerships, the residential pilot, and why Exergy sells no hardware."
+        />
         <meta property="og:url" content="https://exergyheat.com/faq" />
         <meta property="og:type" content="website" />
         <meta property="og:image" content="https://exergyheat.com/og-image.jpg" />
-        <meta name="twitter:title" content="FAQ — Your Building-Integrated Mining Questions Answered | Exergy" />
-        <meta name="twitter:description" content="Real Q&amp;A about building-integrated mining: how it works, what it costs, ROI, and whether your building is a good fit." />
+        <meta name="twitter:title" content="FAQ | Exergy" />
+        <meta
+          name="twitter:description"
+          content="Commercial fit, manufacturer partnerships, the residential pilot, and why Exergy sells no hardware."
+        />
         <meta name="twitter:image" content="https://exergyheat.com/og-image.jpg" />
-        <meta name="keywords" content="building-integrated mining FAQ, bitcoin miner heater questions, EXERGY FAQ, hashrate heating answers, bitcoin heating system, CTRL1 hub, Exergy Relay" />
         <script type="application/ld+json">
           {JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "FAQPage",
-            "mainEntity": faqSections.flatMap(section =>
-              section.questions.map(item => ({
-                "@type": "Question",
-                "name": item.q,
-                "acceptedAnswer": {
-                  "@type": "Answer",
-                  "text": item.a
-                }
+            '@context': 'https://schema.org',
+            '@type': 'FAQPage',
+            mainEntity: faqSections.flatMap((section) =>
+              section.questions.map((item) => ({
+                '@type': 'Question',
+                name: item.q,
+                acceptedAnswer: { '@type': 'Answer', text: item.a },
               }))
-            )
+            ),
           })}
         </script>
       </Helmet>
 
-      {/* Hero Section */}
       <div className="bg-gradient-to-r from-[#4970A5] to-[#718EBC] py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <MessageCircle className="h-16 w-16 text-white mx-auto mb-6" />
-          <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
-            Frequently Asked Questions
-          </h1>
+          <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">Frequently Asked Questions</h1>
           <p className="text-xl text-white/90 max-w-2xl mx-auto">
-            Real questions from real customers — answered honestly.
+            Commercial buildings first, then manufacturers, then the residential pilot. No price list.
           </p>
         </div>
       </div>
 
-      {/* Search Bar */}
       <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 -mt-8">
         <div className="bg-white dark:bg-surface-800 rounded-lg shadow-lg p-4">
           <div className="relative">
@@ -224,17 +201,20 @@ const FAQ = () => {
         </div>
       </div>
 
-      {/* FAQ Sections */}
-      <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+      <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 pt-10">
+        <ReviewTodo>
+          Confirm operating-mode numbers. This draft uses Mode 1 Mine to Heat, Mode 2 Solar First, Mode 3 Cheapest BTU, Mode 4 Always On. The commercial office had been labeled Mode 2 Cheapest BTU while the all-electric pilot was Mode 3 Cheapest BTU. Both Cheapest BTU installs are now Mode 3. Say if the numbering should be the other way around.
+        </ReviewTodo>
+      </div>
+
+      <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
         {filteredSections.map((section) => (
           <div key={section.id} className="mb-8">
             <button
               onClick={() => toggleSection(section.id)}
               className="w-full flex items-center justify-between bg-white dark:bg-surface-800 p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow"
             >
-              <h2 className="text-2xl font-semibold text-surface-900 dark:text-surface-100">
-                {section.title}
-              </h2>
+              <h2 className="text-2xl font-semibold text-surface-900 dark:text-surface-100">{section.title}</h2>
               {openSections.has(section.id) ? (
                 <Minus className="h-6 w-6 text-primary-500 dark:text-primary-400 flex-shrink-0" />
               ) : (
@@ -246,12 +226,8 @@ const FAQ = () => {
               <div className="mt-4 space-y-4">
                 {section.questions.map((qa) => (
                   <div key={qa.q} className="bg-white dark:bg-surface-800 rounded-lg shadow-md p-6">
-                    <h3 className="text-lg font-semibold text-surface-900 dark:text-surface-100 mb-3">
-                      {qa.q}
-                    </h3>
-                    <p className="text-surface-600 dark:text-surface-400">
-                      {qa.a}
-                    </p>
+                    <h3 className="text-lg font-semibold text-surface-900 dark:text-surface-100 mb-3">{qa.q}</h3>
+                    <p className="text-surface-600 dark:text-surface-400">{qa.a}</p>
                   </div>
                 ))}
               </div>
@@ -260,40 +236,26 @@ const FAQ = () => {
         ))}
       </div>
 
-      {/* Contact Section */}
       <div className="bg-white dark:bg-surface-800 py-20">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl font-bold text-surface-900 dark:text-surface-100 mb-6">
-            Still Have Questions?
-          </h2>
+          <h2 className="text-3xl font-bold text-surface-900 dark:text-surface-100 mb-6">Still have questions?</h2>
           <p className="text-xl text-surface-600 dark:text-surface-400 mb-8">
-            Our team is here to help you with any questions you might have about our technology.
+            Pick the door that matches the work. The 15-minute intro call is free if you are not sure which door.
           </p>
-          <div className="mb-6">
-            <a
-              href="https://support.exergyheat.com/c/faq/5"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center px-6 py-3 bg-surface-100 dark:bg-surface-700 text-surface-900 dark:text-surface-100 rounded-lg hover:bg-surface-200 dark:hover:bg-surface-600 transition-colors text-base font-subheading"
-            >
-              See more FAQ on the Exergy Forum
-            </a>
-          </div>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <a
-              href="/contact"
+            <Link
+              to="/contact"
               className="inline-flex items-center px-8 py-4 bg-primary-600 text-white rounded-lg hover:bg-primary-700 transition-colors text-base font-subheading"
             >
-              Contact Us
+              Contact
               <ArrowRight className="ml-2 h-5 w-5" />
-            </a>
-            <a
-              href="/book-call"
-              className="inline-flex items-center px-8 py-4 bg-primary-600 text-white rounded-lg hover:bg-primary-700 transition-colors text-base font-subheading"
+            </Link>
+            <Link
+              to="/book-call"
+              className="inline-flex items-center px-8 py-4 border border-primary-600 text-primary-700 dark:text-primary-300 rounded-lg hover:bg-primary-50 dark:hover:bg-primary-900/30 transition-colors text-base font-subheading"
             >
-              Book an Intro Call
-              <ArrowRight className="ml-2 h-5 w-5" />
-            </a>
+              Book a 15-minute call
+            </Link>
           </div>
         </div>
       </div>

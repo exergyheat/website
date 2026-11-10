@@ -1,11 +1,40 @@
 import { useState, useEffect } from 'react'
 import { Helmet } from 'react-helmet-async'
-import { Link } from 'react-router-dom'
-import { Mail, MapPin, Calendar, Loader2, Users } from 'lucide-react'
+import { Link, useSearchParams } from 'react-router-dom'
+import { Mail, MapPin, Calendar, Loader2, Building2, Factory, Home } from 'lucide-react'
 import { useHubSpotPreload } from '../hooks/useHubSpotPreload'
+
+const entries = [
+  {
+    id: 'phase-0',
+    icon: Building2,
+    title: 'Commercial — Phase 0',
+    body: 'Send about twelve months of utility bills. We reply with a free go or no-go. This does not start a paid phase.',
+    mailto: 'mailto:contact@exergyheat.com?subject=Phase%200%20%E2%80%94%20utility%20bills',
+    action: 'Email the bills',
+  },
+  {
+    id: 'partnership',
+    icon: Factory,
+    title: 'Manufacturer partnership',
+    body: 'You build miners, heaters, boilers, or water heaters and want them to enter buildings. Tell us the product. We will talk about a discovery sprint.',
+    mailto: 'mailto:contact@exergyheat.com?subject=Manufacturer%20partnership',
+    action: 'Talk partnership',
+  },
+  {
+    id: 'pilot',
+    icon: Home,
+    title: 'Residential pilot application',
+    body: 'Apply if you want to be early. These are alpha systems, not a catalog. Include the house, the heat, and whether there is solar.',
+    mailto: 'mailto:contact@exergyheat.com?subject=Residential%20pilot%20application',
+    action: 'Apply for the pilot',
+  },
+] as const
 
 const Contact = () => {
   useHubSpotPreload()
+  const [searchParams] = useSearchParams()
+  const intent = searchParams.get('intent')
   const [isFormLoaded, setIsFormLoaded] = useState(false)
   const [formTimedOut, setFormTimedOut] = useState(false)
 
@@ -33,7 +62,7 @@ const Contact = () => {
     <div className="bg-surface-50 dark:bg-surface-900">
       <Helmet>
         <title>Contact | Exergy</title>
-        <meta name="description" content="Contact Exergy in Denver, CO. Email contact@exergyheat.com or book a free consultation to explore building-integrated mining for your property." />
+        <meta name="description" content="Three ways in: send utility bills for a commercial Phase 0, talk a manufacturer partnership, or apply for the residential pilot. contact@exergyheat.com" />
         <meta name="keywords" content="contact Exergy, building integrated mining consultation, Denver mining company, bitcoin mining heat contact" />
         <link rel="canonical" href="https://exergyheat.com/contact" />
         <meta property="og:title" content="Contact Exergy — Denver, CO" />
@@ -53,12 +82,34 @@ const Contact = () => {
             Contact Us
           </h1>
           <p className="text-xl text-white/90 max-w-2xl mx-auto">
-            Get in touch — we'll point you in the right direction.
+            Pick the door that matches the work. The free 15-minute intro call is there if you are not sure.
           </p>
         </div>
       </div>
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
+          {entries.map((entry) => {
+            const active = intent === entry.id
+            return (
+              <div
+                key={entry.id}
+                id={entry.id}
+                className={`rounded-2xl bg-white dark:bg-surface-800 p-6 border ${
+                  active ? 'border-primary-500 ring-2 ring-primary-500' : 'border-surface-200 dark:border-surface-700'
+                }`}
+              >
+                <entry.icon className="h-6 w-6 text-primary-600 mb-3" />
+                <h2 className="text-lg font-bold text-surface-900 dark:text-surface-100 mb-2">{entry.title}</h2>
+                <p className="text-sm text-surface-600 dark:text-surface-400 leading-relaxed mb-4">{entry.body}</p>
+                <a href={entry.mailto} className="text-sm font-subheading text-primary-600 dark:text-primary-400 hover:underline">
+                  {entry.action}
+                </a>
+              </div>
+            )
+          })}
+        </div>
+
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
           {/* Contact Information */}
           <div>
@@ -91,8 +142,8 @@ const Contact = () => {
                 </a>
               </div>
               <div className="flex items-center">
-                <Users className="h-6 w-6 text-primary-600" />
-                <a href="https://meet.jit.si/ExergyHomeAssistant" target="_blank" rel="noopener noreferrer" className="ml-4 text-primary-600 dark:text-primary-400 hover:underline">Weekly office hours — Wednesdays at 10am MT, free and open to everyone</a>
+                <Calendar className="h-6 w-6 text-primary-600" />
+                <a href="https://meet.jit.si/ExergyHomeAssistant" target="_blank" rel="noopener noreferrer" className="ml-4 text-primary-600 dark:text-primary-400 hover:underline">Weekly office hours — Wednesdays at 10am MT</a>
               </div>
             </div>
 
@@ -113,7 +164,13 @@ const Contact = () => {
 
           {/* HubSpot Contact Form */}
           <div className="bg-white dark:bg-surface-800 rounded-lg shadow-lg p-8">
-            <h2 className="text-2xl font-bold text-surface-900 dark:text-surface-100 mb-6">Send us a Message</h2>
+            <h2 className="text-2xl font-bold text-surface-900 dark:text-surface-100 mb-2">Send us a Message</h2>
+            <p className="text-sm text-surface-500 dark:text-surface-400 mb-6">
+              {intent === 'phase-0' && 'You are starting Phase 0. Say so in the message and attach or describe about twelve months of utility bills.'}
+              {intent === 'partnership' && 'You are asking about a manufacturer partnership. Name the product and the building type you want to enter.'}
+              {intent === 'pilot' && 'You are applying for the residential pilot. This is a request, not an order. Tell us the house and the heat.'}
+              {intent !== 'phase-0' && intent !== 'partnership' && intent !== 'pilot' && 'Use the form for any of the three doors above. One inbox: contact@exergyheat.com.'}
+            </p>
 
             {/* Loading State */}
             {!isFormLoaded && !formTimedOut && (
