@@ -36,10 +36,23 @@ function intentFromQuery(value: string | null): Intent {
 }
 
 const EMAIL = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
+const FALLBACK_TIME_ZONE = 'America/Denver'
+
+function visitorTimeZone() {
+  try {
+    const zone = Intl.DateTimeFormat().resolvedOptions().timeZone
+    if (!zone) return FALLBACK_TIME_ZONE
+    Intl.DateTimeFormat('en-US', { timeZone: zone }).format()
+    return zone
+  } catch {
+    return FALLBACK_TIME_ZONE
+  }
+}
 
 export default function Contact() {
   const [params] = useSearchParams()
   const { effectiveTheme } = useTheme()
+  const [timeZone, setTimeZone] = useState(FALLBACK_TIME_ZONE)
   const [intent, setIntent] = useState<Intent>('owner')
   const [name, setName] = useState('')
   const [email, setEmail] = useState('')
@@ -59,6 +72,12 @@ export default function Contact() {
   useEffect(() => {
     setIntent(intentFromQuery(params.get('intent')))
   }, [params])
+
+  useEffect(() => {
+    setTimeZone(visitorTimeZone())
+  }, [])
+
+  const schedulerUrl = `${BOOKING_URL}?cal.tz=${encodeURIComponent(timeZone)}`
 
   const buildingDetails = intent === 'owner' || intent === 'homeowner'
   const owner = intent === 'owner'
@@ -123,7 +142,7 @@ export default function Contact() {
             {status === 'success' ? (
               <div className="form-status" role="status" aria-live="polite">
                 <p className="body-3">{message}</p>
-                <Button variant="ink" size="md" href={BOOKING_URL}>Pick a time</Button>
+                <Button variant="ink" size="md" href={schedulerUrl}>Pick a time</Button>
               </div>
             ) : (
               <form className="form" onSubmit={onSubmit} noValidate>
@@ -224,11 +243,11 @@ export default function Contact() {
               <iframe
                 className="cal-frame"
                 title="Book a 15 minute call with Exergy"
-                src={`${BOOKING_URL}?embed=true&theme=${effectiveTheme}`}
+                src={`${schedulerUrl}&embed=true&theme=${effectiveTheme}`}
               />
-              <a className="see scheduler-link" href={BOOKING_URL}>Open the scheduler</a>
+              <a className="see scheduler-link" href={schedulerUrl}>Open the scheduler</a>
             </div>
-            <Button variant="ink" size="md" href={BOOKING_URL}>Pick a time</Button>
+            <Button variant="ink" size="md" href={schedulerUrl}>Pick a time</Button>
           </div>
         </div>
         <div className="band-art">

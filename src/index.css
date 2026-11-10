@@ -418,11 +418,11 @@ main { flex: 1; position: relative; z-index: 1; }
   gap: 24px;
   padding-block: 24px 16px;
 }
-.hero-copy { display: flex; flex-direction: column; position: relative; z-index: 1; }
+.hero-copy { display: flex; flex-direction: column; position: relative; z-index: 1; min-width: 0; }
 .hero .display {
-  font-size: clamp(36px, 8.6vw, 136px);
-  line-height: 0.9;
-  letter-spacing: -0.04em;
+  font-size: clamp(34px, 9.2vw, 56px);
+  line-height: 0.92;
+  letter-spacing: -0.045em;
 }
 .meta-row { display: flex; align-items: center; flex-wrap: wrap; gap: 8px 16px; }
 .meta-sep { display: none; }
@@ -468,17 +468,37 @@ main { flex: 1; position: relative; z-index: 1; }
 @media (min-width: 1100px) {
   .hero-main {
     display: grid;
-    grid-template-columns: repeat(12, minmax(0, 1fr));
-    align-items: center;
-    gap: 0;
-    padding-block: 20px 8px;
+    grid-template-columns: minmax(0, 55fr) minmax(0, 45fr);
+    align-items: stretch;
+    column-gap: 32px;
+    margin-right: 0;
+    padding-block: 0;
+    min-height: calc(100dvh - 64px - 52px);
   }
-  .hero-copy { grid-column: 1 / -1; grid-row: 1; padding-right: 0; align-self: center; }
+  .hero-copy {
+    grid-column: 1;
+    grid-row: 1;
+    align-self: stretch;
+    container-type: inline-size;
+    padding-top: 32px;
+    padding-bottom: 28px;
+    padding-right: 8px;
+  }
+  .hero .display {
+    font-size: clamp(48px, 10.3cqw, 120px);
+  }
+  .status-list { margin-top: auto; }
   .hero-fig {
-    grid-column: 7 / 13;
+    grid-column: 2;
     grid-row: 1;
     z-index: 0;
-    align-self: center;
+    align-self: stretch;
+    min-height: 100%;
+  }
+  .hero-plate {
+    aspect-ratio: auto;
+    height: 100%;
+    border-right: none;
   }
   .hero-ctas { display: none; }
 }
@@ -506,6 +526,16 @@ main { flex: 1; position: relative; z-index: 1; }
 [data-theme="dark"] .plate-dark { display: block; }
 .caption { margin-top: 12px; color: var(--ink-muted); }
 .ratio-4-3 { aspect-ratio: 4 / 3; }
+@media (min-width: 1100px) {
+  .hero-fig { min-width: 0; overflow: hidden; }
+  .hero-plate.ratio-4-3 {
+    aspect-ratio: auto;
+    width: 100%;
+    max-width: 100%;
+    height: 100%;
+    border-right: none;
+  }
+}
 .ratio-3-2 { aspect-ratio: 3 / 2; }
 .ratio-3-4 { aspect-ratio: 3 / 4; }
 .ratio-16-9 { aspect-ratio: 16 / 9; }

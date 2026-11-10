@@ -81,6 +81,7 @@ export default function Home() {
           </div>
           <div className="hero-fig">
             <Plate
+              className="hero-plate"
               slug="hero-building-denver"
               ratio="ratio-4-3"
               sizes="(min-width: 1100px) 46vw, 100vw"
