@@ -11,8 +11,7 @@ export default defineConfig(({ isSsrBuild }) => ({
       output: isSsrBuild ? {} : {
         manualChunks: {
           vendor: ['react', 'react-dom'],
-          router: ['react-router-dom'],
-          ui: ['lucide-react', 'framer-motion']
+          router: ['react-router-dom']
         }
       }
     },

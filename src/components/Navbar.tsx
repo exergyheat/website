@@ -1,115 +1,146 @@
-import { useState, useEffect } from 'react'
-import { Link } from 'react-router-dom'
-import { Menu, X } from 'lucide-react'
+import { useEffect, useRef, useState } from 'react'
+import { Link, useLocation } from 'react-router-dom'
+import { BOOKING_URL, NAV } from '../lib/site'
+import { ctasFor } from '../lib/ctas'
 import ThemeToggle from './ThemeToggle'
 
-const Navbar = () => {
-  const [isOpen, setIsOpen] = useState(false)
+export default function Navbar() {
+  const [open, setOpen] = useState(false)
+  const location = useLocation()
+  const headerRef = useRef<HTMLElement>(null)
+  const toggleRef = useRef<HTMLButtonElement>(null)
+  const { primary, call } = ctasFor(location.pathname, location.search)
 
-  // Close the mobile menu on Escape
   useEffect(() => {
-    if (!isOpen) return
-    const handleKeyDown = (e: KeyboardEvent) => {
-      if (e.key === 'Escape') setIsOpen(false)
+    setOpen(false)
+  }, [location.pathname, location.search])
+
+  useEffect(() => {
+    document.body.classList.toggle('menu-open', open)
+    return () => document.body.classList.remove('menu-open')
+  }, [open])
+
+  useEffect(() => {
+    if (!open) return
+    const header = headerRef.current
+    if (!header) return
+    const focusable = () =>
+      [...header.querySelectorAll<HTMLElement>('a, button')].filter(
+        (node) => node.tabIndex !== -1 && node.getClientRects().length > 0,
+      )
+    const list = focusable()
+    const firstLink = list.find((node) => node.classList.contains('menu-link'))
+    firstLink?.focus()
+
+    const onKey = (event: KeyboardEvent) => {
+      if (event.key === 'Escape') {
+        setOpen(false)
+        toggleRef.current?.focus()
+        return
+      }
+      if (event.key !== 'Tab') return
+      const items = focusable()
+      const first = items[0]
+      const last = items[items.length - 1]
+      if (!first || !last) return
+      if (event.shiftKey && document.activeElement === first) {
+        event.preventDefault()
+        last.focus()
+      } else if (!event.shiftKey && document.activeElement === last) {
+        event.preventDefault()
+        first.focus()
+      }
     }
-    document.addEventListener('keydown', handleKeyDown)
-    return () => document.removeEventListener('keydown', handleKeyDown)
-  }, [isOpen])
+    document.addEventListener('keydown', onKey)
+    return () => document.removeEventListener('keydown', onKey)
+  }, [open])
+
+  const menuItems = [
+    ...NAV.map((item) => ({ ...item, external: false as const })),
+    { to: primary.to, label: primary.label, external: false as const },
+    { to: BOOKING_URL, label: call, external: true as const },
+  ]
+  const step = menuItems.length > 1 ? Math.min(60, 400 / (menuItems.length - 1)) : 0
 
   return (
-    <nav className="bg-surface-50 dark:bg-surface-800 shadow-lg">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between h-16">
-          <div className="flex items-center">
-            <Link to="/" className="flex items-center hover:opacity-80 transition-opacity">
-              <img
-                src="/Logo1_black_horizontal.png"
-                alt="EXERGY"
-                className="h-10 w-auto dark:filter dark:brightness-0 dark:invert"
-                width={600}
-                height={251}
-              />
-            </Link>
-          </div>
-
-          {/* Desktop Menu */}
-          <div className="hidden md:flex items-center space-x-8">
-            <Link to="/products" className="font-subheading text-surface-600 dark:text-surface-300 hover:text-primary-500 dark:hover:text-primary-400 transition-colors">Products</Link>
-            <Link to="/services" className="font-subheading text-surface-600 dark:text-surface-300 hover:text-primary-500 dark:hover:text-primary-400 transition-colors">Services</Link>
-            <Link to="/about" className="font-subheading text-surface-600 dark:text-surface-300 hover:text-primary-500 dark:hover:text-primary-400 transition-colors">About</Link>
-            <Link to="/learn" className="font-subheading text-surface-600 dark:text-surface-300 hover:text-primary-500 dark:hover:text-primary-400 transition-colors">Learn</Link>
-            <Link to="/newsroom" className="font-subheading text-surface-600 dark:text-surface-300 hover:text-primary-500 dark:hover:text-primary-400 transition-colors">Newsroom</Link>
-            <Link to="/contact" className="font-subheading text-surface-600 dark:text-surface-300 hover:text-primary-500 dark:hover:text-primary-400 transition-colors">Contact</Link>
-            <ThemeToggle />
-          </div>
-
-          {/* Mobile Menu Button */}
-          <div className="md:hidden flex items-center space-x-4">
-            <ThemeToggle />
-            <button
-              onClick={() => setIsOpen(!isOpen)}
-              aria-label={isOpen ? 'Close menu' : 'Open menu'}
-              aria-expanded={isOpen}
-              aria-controls="mobile-menu"
-              className="text-surface-600 dark:text-surface-300 hover:text-primary-500 dark:hover:text-primary-400 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary-500 rounded transition-colors"
+    <header className="site-header" ref={headerRef}>
+      <nav className="site-nav" aria-label="Primary">
+        <Link to="/" className="wordmark title-3" aria-current={location.pathname === '/' ? 'page' : undefined}>
+          Exergy
+        </Link>
+        <div className="nav-links">
+          {NAV.map((item) => (
+            <Link
+              key={item.to}
+              to={item.to}
+              className="nav-link title-4"
+              aria-current={location.pathname === item.to ? 'page' : undefined}
             >
-              {isOpen ? <X className="h-6 w-6" aria-hidden="true" /> : <Menu className="h-6 w-6" aria-hidden="true" />}
-            </button>
-          </div>
+              {item.label}
+            </Link>
+          ))}
         </div>
-
-        {/* Mobile Menu */}
-        {isOpen && (
-          <div className="md:hidden" id="mobile-menu">
-            <div className="px-2 pt-2 pb-3 space-y-1">
-              <Link
-                to="/products"
-                className="block px-3 py-2 font-subheading text-surface-600 dark:text-surface-300 hover:text-primary-500 dark:hover:text-primary-400 transition-colors"
-                onClick={() => setIsOpen(false)}
-              >
-                Products
-              </Link>
-              <Link
-                to="/services"
-                className="block px-3 py-2 font-subheading text-surface-600 dark:text-surface-300 hover:text-primary-500 dark:hover:text-primary-400 transition-colors"
-                onClick={() => setIsOpen(false)}
-              >
-                Services
-              </Link>
-              <Link
-                to="/about"
-                className="block px-3 py-2 font-subheading text-surface-600 dark:text-surface-300 hover:text-primary-500 dark:hover:text-primary-400 transition-colors"
-                onClick={() => setIsOpen(false)}
-              >
-                About
-              </Link>
-              <Link
-                to="/learn"
-                className="block px-3 py-2 font-subheading text-surface-600 dark:text-surface-300 hover:text-primary-500 dark:hover:text-primary-400 transition-colors"
-                onClick={() => setIsOpen(false)}
-              >
-                Learn
-              </Link>
-              <Link
-                to="/newsroom"
-                className="block px-3 py-2 font-subheading text-surface-600 dark:text-surface-300 hover:text-primary-500 dark:hover:text-primary-400 transition-colors"
-                onClick={() => setIsOpen(false)}
-              >
-                Newsroom
-              </Link>
-              <Link
-                to="/contact"
-                className="block px-3 py-2 font-subheading text-surface-600 dark:text-surface-300 hover:text-primary-500 dark:hover:text-primary-400 transition-colors"
-                onClick={() => setIsOpen(false)}
-              >
-                Contact
-              </Link>
-            </div>
-          </div>
-        )}
+        <div className="nav-ctas">
+          <Link className="btn btn-copper button-sm" to={primary.to}>
+            {primary.label}
+          </Link>
+          <a className="btn btn-copper button-sm" href={BOOKING_URL} target="_blank" rel="noopener noreferrer">
+            {call}
+          </a>
+        </div>
+        <ThemeToggle />
+        <button
+          ref={toggleRef}
+          type="button"
+          className="nav-toggle"
+          aria-label={open ? 'Close menu' : 'Open menu'}
+          aria-expanded={open}
+          aria-controls="mobile-menu"
+          onClick={() => setOpen((value) => !value)}
+        >
+          <span className="nav-toggle-lines" aria-hidden="true">
+            <span />
+            <span />
+            <span />
+          </span>
+        </button>
+      </nav>
+      <div id="mobile-menu" className={open ? 'mobile-menu is-open' : 'mobile-menu'} aria-hidden={!open}>
+        {NAV.map((item, index) => (
+          <Link
+            key={item.to}
+            to={item.to}
+            className="menu-item menu-link heading-5"
+            aria-current={location.pathname === item.to ? 'page' : undefined}
+            style={{ ['--d' as string]: `${index * step}ms` }}
+            tabIndex={open ? 0 : -1}
+            onClick={() => setOpen(false)}
+          >
+            {item.label}
+          </Link>
+        ))}
+        <div className="menu-ctas">
+          <Link
+            className="menu-item btn btn-copper button-md"
+            to={primary.to}
+            style={{ ['--d' as string]: `${NAV.length * step}ms` }}
+            tabIndex={open ? 0 : -1}
+            onClick={() => setOpen(false)}
+          >
+            {primary.label}
+          </Link>
+          <a
+            className="menu-item btn btn-copper button-md"
+            href={BOOKING_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{ ['--d' as string]: `${(NAV.length + 1) * step}ms` }}
+            tabIndex={open ? 0 : -1}
+          >
+            {call}
+          </a>
+        </div>
       </div>
-    </nav>
+    </header>
   )
 }
-
-export default Navbar

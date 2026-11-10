@@ -3,75 +3,47 @@
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/png" href="/Favicon_blue1.png" />
+    <link rel="apple-touch-icon" href="/Favicon_blue1.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-    <!-- Apply stored/system theme before first paint (prevents dark-mode FOUC) -->
     <script src="/theme-init.js"></script>
-
-    <!-- Home hero background is a CSS background-image the browser would
-         otherwise discover late; preload it to improve LCP -->
-    <link rel="preload" as="image" href="/StockBackgroundHome_Tinted.webp" />
-
-    <!-- HubSpot preconnect — tells browser to open connections before scripts load -->
-    <link rel="preconnect" href="https://js-na2.hsforms.net" />
-    <link rel="preconnect" href="https://static.hsappstatic.net" />
-    <link rel="preconnect" href="https://meetings-na2.hubspot.com" />
-    <link rel="preconnect" href="https://forms.hsforms.com" />
-    <link rel="dns-prefetch" href="https://track.hubspot.com" />
-    <link rel="dns-prefetch" href="https://js.hs-analytics.net" />
-
-    <meta name="author" content="EXERGY LLC" />
+    <meta name="author" content="Exergy LLC" />
     <meta name="robots" content="index, follow" />
 
-    <!-- seo:start — per-page tags; the prerender step replaces this block
-         with each route's react-helmet output -->
-    <meta name="description" content="Building-integrated Bitcoin mining systems that displace heating costs and earn Bitcoin from excess solar. Real installs. Real data. Free calculators." />
+    <!-- seo:start — per-page tags; the prerender step replaces this block -->
+    <meta name="description" content="We design building energy systems powered by bitcoin miners, so heat and solar stop going to waste. Phase 0 is a free feasibility check." />
     <link rel="canonical" href="https://exergyheat.com/" />
-
-    <!-- Open Graph Meta Tags -->
     <meta property="og:url" content="https://exergyheat.com/" />
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="Exergy" />
     <meta property="og:locale" content="en_US" />
-    <meta property="og:title" content="Exergy | Building-Integrated Bitcoin Mining" />
-    <meta property="og:description" content="Building-integrated Bitcoin mining systems that displace heating costs and earn Bitcoin from excess solar. Real installs. Real data." />
+    <meta property="og:title" content="Exergy | Building energy systems powered by bitcoin miners" />
+    <meta property="og:description" content="We design building energy systems powered by bitcoin miners, so heat and solar stop going to waste. Phase 0 is a free feasibility check." />
     <meta property="og:image" content="https://exergyheat.com/og-image.jpg" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
-    <meta property="og:image:alt" content="Exergy building-integrated Bitcoin mining — heat that pays" />
-
-    <!-- Twitter Card Meta Tags -->
+    <meta property="og:image:alt" content="Exergy. Building energy systems powered by bitcoin miners." />
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Exergy | Building-Integrated Bitcoin Mining" />
-    <meta name="twitter:description" content="Building-integrated Bitcoin mining systems that displace heating costs and earn Bitcoin from excess solar. Real installs. Real data." />
+    <meta name="twitter:site" content="@exergy_" />
+    <meta name="twitter:title" content="Exergy | Building energy systems powered by bitcoin miners" />
+    <meta name="twitter:description" content="We design building energy systems powered by bitcoin miners, so heat and solar stop going to waste. Phase 0 is a free feasibility check." />
     <meta name="twitter:image" content="https://exergyheat.com/og-image.jpg" />
-
-    <title>Exergy | Building-Integrated Bitcoin Mining</title>
+    <title>Exergy | Building energy systems powered by bitcoin miners</title>
     <!-- seo:end -->
 
-    <!-- Additional SEO Tags -->
-    <meta name="theme-color" content="#4970A5" />
-    <meta name="application-name" content="EXERGY" />
+    <meta name="theme-color" content="#F4F6F8" />
+    <meta name="application-name" content="Exergy" />
 
-    <!-- Preconnect to font CDN for performance -->
-    <link rel="preconnect" href="https://fonts.cdnfonts.com" />
-
-    <!-- Futura + Valorant fonts (Google Fonts does not host Futura; that request was dead weight) -->
-    <link href="https://fonts.cdnfonts.com/css/futura-pt" rel="stylesheet" />
-    <link href="https://fonts.cdnfonts.com/css/valorant" rel="stylesheet" />
-
-    <!-- Structured Data - Organization Schema -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": ["Organization", "LocalBusiness"],
       "@id": "https://exergyheat.com/#organization",
-      "name": "EXERGY LLC",
-      "alternateName": "EXERGY",
+      "name": "Exergy LLC",
+      "alternateName": "Exergy",
       "url": "https://exergyheat.com",
       "logo": "https://exergyheat.com/Logo1_black_horizontal.png",
       "image": "https://exergyheat.com/og-image.jpg",
-      "description": "Exergy designs and installs building-integrated Bitcoin mining systems for homes and commercial buildings — displacing heating costs, monetizing excess solar, and earning Bitcoin from energy that was already being spent.",
+      "description": "Exergy designs building energy systems powered by bitcoin miners, with heat recovery and solar monetization as separate value streams.",
       "address": {
         "@type": "PostalAddress",
         "streetAddress": "3700 N Franklin St",
@@ -91,7 +63,7 @@
         "https://github.com/exergyheat"
       ],
       "foundingDate": "2023",
-      "knowsAbout": ["hashrate heating", "bitcoin mining heat reuse", "building-integrated mining", "energy efficient heating"]
+      "knowsAbout": ["building integrated mining", "heat recovery", "solar monetization", "bitcoin miners in buildings"]
     }
     </script>
     <script defer src="https://umami.denver.space/script.js" data-website-id="00faa83a-1c23-4195-af3c-ff6089d30d00"></script>

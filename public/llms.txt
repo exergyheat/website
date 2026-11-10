@@ -1,28 +1,21 @@
 # Exergy
 
-> Exergy (Exergy LLC, Denver, CO) designs and installs building-integrated Bitcoin mining systems for homes and commercial buildings. A Bitcoin miner converts 100% of its electricity to heat — the same heat a building already pays for — so integrating miners into heating infrastructure displaces heating costs, monetizes excess solar generation, and earns Bitcoin from energy that was already being spent.
+> Exergy (Exergy LLC, Denver, CO) designs building energy systems powered by bitcoin miners. Heat recovery and solar monetization are separate value streams. Integration can be hydronic or forced air. Exergy does not sell hardware. Work is scoped per project. Phase 0, a feasibility check from about 12 months of utility bills, is free.
 
-Exergy offers three service tiers — Self-Serve (free tools and open-source integrations), Guided (remote consulting), and Done-For-You (full design and installation) — plus Exergy Relay: remote monitoring, alerts, and monthly performance reporting via a 5% hashrate split. Exergy publishes open-source Home Assistant integrations for controlling Bitcoin miners as smart building appliances. Supported integration types: smart zone heaters, in-duct forced air, hydronic/radiant, water/pool/spa, and excess solar.
+## Pages
 
-## Key pages
-
-- [Services](https://exergyheat.com/services): Self-Serve, Guided, and Done-For-You service tiers plus Exergy Relay monitoring
-- [Products](https://exergyheat.com/products): control systems, integrations, and vetted mining-heat hardware
-- [Learn](https://exergyheat.com/learn): how building-integrated mining works — guides and educational resources
-- [FAQ](https://exergyheat.com/faq): costs, ROI, noise, technical setup, and building fit
-- [Case Studies](https://exergyheat.com/case-studies): real residential and commercial installs with performance data
-- [About](https://exergyheat.com/about): team, mission, and company background
-- [Newsroom](https://exergyheat.com/newsroom): announcements, research, and press
-- [Contact](https://exergyheat.com/contact): contact@exergyheat.com — 3700 N Franklin St, Denver, CO 80205
-
-## Tools & docs
-
-- [Calculators](https://calc.exergyheat.com): free mining-heat economics calculators
-- [Documentation](https://docs.exergyheat.com): technical documentation
-- [GitHub](https://github.com/exergyheat): open-source Home Assistant integrations
-
-## Optional
-
-- [Book a call](https://exergyheat.com/book-call): free intro consultation
+- [Home](https://exergyheat.com/): the offer, the project phases, the Denver office, and open tools
+- [Commercial](https://exergyheat.com/commercial): building integrated mining for building owners
+- [Partners](https://exergyheat.com/partners): market entry for manufacturers of miners, heaters, boilers, and water heaters
+- [Operations](https://exergyheat.com/operations): workflow audits for energy adjacent businesses
+- [About](https://exergyheat.com/about): the name, the team, open source, the book, and the Heatpunk Summit
+- [Contact](https://exergyheat.com/contact): feasibility, partnership, operations, and the homeowner pilot
 - [Privacy policy](https://exergyheat.com/privacy-policy)
-- [Sitemap](https://exergyheat.com/sitemap.xml)
+
+## Elsewhere
+
+- [Calculators](https://calc.exergyheat.com): free open source economics calculators
+- [GitHub](https://github.com/exergyheat): Home Assistant integrations
+- [256 Foundation](https://256foundation.org): the open mining stack this work lines up with
+- [X](https://x.com/exergy_)
+- Email: contact@exergyheat.com

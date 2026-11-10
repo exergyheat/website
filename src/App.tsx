@@ -1,72 +1,97 @@
-import { lazy, Suspense } from 'react'
-import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom'
-import { Helmet } from 'react-helmet-async'
-import { MotionConfig } from 'framer-motion'
-import { ThemeProvider } from './contexts/ThemeContext'
-import Navbar from './components/Navbar'
-import Footer from './components/Footer'
-import ScrollToTop from './components/ScrollToTop'
+import { lazy, Suspense, useEffect } from 'react'
+import { BrowserRouter as Router, Navigate, Route, Routes } from 'react-router-dom'
 import ErrorBoundary from './components/ErrorBoundary'
+import Footer from './components/Footer'
+import Navbar from './components/Navbar'
+import ScrollToTop from './components/ScrollToTop'
+import { ThemeProvider } from './contexts/ThemeContext'
+import { LINKS } from './lib/site'
 import Home from './pages/Home'
 
-// Home stays eager for instant first paint; all other routes load on demand
-const Services = lazy(() => import('./pages/Services'))
+const Commercial = lazy(() => import('./pages/Commercial'))
+const Partners = lazy(() => import('./pages/Partners'))
+const Operations = lazy(() => import('./pages/Operations'))
 const About = lazy(() => import('./pages/About'))
 const Contact = lazy(() => import('./pages/Contact'))
-const Learn = lazy(() => import('./pages/Learn'))
 const PrivacyPolicy = lazy(() => import('./pages/PrivacyPolicy'))
-const FAQ = lazy(() => import('./pages/FAQ'))
-const Products = lazy(() => import('./pages/Products'))
-const BookCall = lazy(() => import('./pages/BookCall'))
-const Portfolio = lazy(() => import('./pages/Portfolio'))
-const Newsroom = lazy(() => import('./pages/Blog'))
-const NewsroomPostDetail = lazy(() => import('./pages/BlogPostDetail'))
 const NotFound = lazy(() => import('./pages/NotFound'))
 
-const RouteFallback = () => (
-  <div className="flex items-center justify-center py-32" role="status" aria-label="Loading page">
-    <div className="w-8 h-8 border-2 border-primary-500 border-t-transparent rounded-full animate-spin" />
-  </div>
-)
+function RouteFallback() {
+  return (
+    <div className="page-frame" role="status" aria-label="Loading page">
+      <div className="flow-rail" aria-hidden="true" />
+      <div className="page-body section">
+        <div className="skeleton skeleton-title" />
+        <div className="skeleton skeleton-line" />
+        <div className="skeleton skeleton-line short" />
+      </div>
+    </div>
+  )
+}
+
+function ExternalRedirect({ href }: { href: string }) {
+  useEffect(() => {
+    window.location.replace(href)
+  }, [href])
+  return (
+    <div className="page-frame">
+      <div className="page-body section">
+        <p className="body-3">
+          Continuing to{' '}
+          <a className="inline-link" href={href}>
+            {href}
+          </a>
+        </p>
+      </div>
+    </div>
+  )
+}
 
 function App() {
   return (
     <ThemeProvider>
-      <Helmet>
-        <title>Exergy | Building-Integrated Bitcoin Mining</title>
-        <meta name="description" content="Building-integrated Bitcoin mining systems that displace heating costs and earn Bitcoin from excess solar. Real installs. Real data." />
-      </Helmet>
       <Router>
         <ScrollToTop />
-        {/* reducedMotion="user" disables framer-motion animations when the OS asks for it */}
-        <MotionConfig reducedMotion="user">
-        <div className="flex flex-col min-h-screen bg-surface-50 dark:bg-surface-900 text-surface-900 dark:text-surface-100">
+        <a className="skip button-sm" href="#content">
+          Skip to content
+        </a>
+        <div className="site">
           <Navbar />
-          <main className="flex-grow">
+          <main id="content">
             <ErrorBoundary>
               <Suspense fallback={<RouteFallback />}>
-              <Routes>
-                <Route path="/" element={<Home />} />
-                <Route path="/products" element={<Products />} />
-                <Route path="/services" element={<Services />} />
-                <Route path="/about" element={<About />} />
-                <Route path="/contact" element={<Contact />} />
-                <Route path="/learn" element={<Learn />} />
-                <Route path="/privacy-policy" element={<PrivacyPolicy />} />
-                <Route path="/faq" element={<FAQ />} />
-                <Route path="/book-call" element={<BookCall />} />
-                <Route path="/case-studies" element={<Portfolio />} />
-                <Route path="/portfolio" element={<Navigate to="/case-studies" replace />} />
-                <Route path="/newsroom" element={<Newsroom />} />
-                <Route path="/newsroom/:id" element={<NewsroomPostDetail />} />
-                <Route path="*" element={<NotFound />} />
-              </Routes>
+                <Routes>
+                  <Route path="/" element={<Home />} />
+                  <Route path="/commercial" element={<Commercial />} />
+                  <Route path="/partners" element={<Partners />} />
+                  <Route path="/operations" element={<Operations />} />
+                  <Route path="/about" element={<About />} />
+                  <Route path="/contact" element={<Contact />} />
+                  <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+                  <Route path="/404" element={<NotFound />} />
+
+                  <Route path="/products" element={<Navigate to="/" replace />} />
+                  <Route path="/services" element={<Navigate to="/commercial" replace />} />
+                  <Route path="/learn" element={<Navigate to="/" replace />} />
+                  <Route path="/faq" element={<Navigate to="/#faq" replace />} />
+                  <Route path="/book-call" element={<Navigate to="/contact" replace />} />
+                  <Route path="/case-studies" element={<Navigate to="/" replace />} />
+                  <Route path="/portfolio" element={<Navigate to="/" replace />} />
+                  <Route path="/newsroom" element={<Navigate to="/about" replace />} />
+                  <Route path="/newsroom/*" element={<Navigate to="/about" replace />} />
+                  <Route path="/blog" element={<Navigate to="/about" replace />} />
+                  <Route path="/blog/*" element={<Navigate to="/about" replace />} />
+                  <Route path="/education" element={<Navigate to="/" replace />} />
+                  <Route path="/calculators" element={<ExternalRedirect href={LINKS.calculators} />} />
+                  <Route path="/docs" element={<ExternalRedirect href={LINKS.docs} />} />
+
+                  <Route path="*" element={<NotFound />} />
+                </Routes>
               </Suspense>
             </ErrorBoundary>
           </main>
           <Footer />
         </div>
-        </MotionConfig>
       </Router>
     </ThemeProvider>
   )

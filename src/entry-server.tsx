@@ -1,78 +1,65 @@
+/* eslint-disable react-refresh/only-export-components */
 import { StrictMode, Suspense } from 'react'
 import { renderToPipeableStream } from 'react-dom/server'
 import { Writable } from 'node:stream'
 import { StaticRouter } from 'react-router-dom/server'
-import { Routes, Route, Navigate } from 'react-router-dom'
-import { HelmetProvider, HelmetServerState } from 'react-helmet-async'
-import { Helmet } from 'react-helmet-async'
-import { MotionConfig } from 'framer-motion'
-import { ThemeProvider } from './contexts/ThemeContext'
-import Navbar from './components/Navbar'
-import Footer from './components/Footer'
+import { Navigate, Route, Routes } from 'react-router-dom'
+import { HelmetProvider, type HelmetServerState } from 'react-helmet-async'
 import ErrorBoundary from './components/ErrorBoundary'
-
-// Pages are imported statically here (React.lazy can't be awaited by
-// renderToString). Keep this route table in sync with src/App.tsx.
-import Home from './pages/Home'
-import Services from './pages/Services'
+import Footer from './components/Footer'
+import Navbar from './components/Navbar'
+import { ThemeProvider } from './contexts/ThemeContext'
 import About from './pages/About'
+import Commercial from './pages/Commercial'
 import Contact from './pages/Contact'
-import Learn from './pages/Learn'
-import PrivacyPolicy from './pages/PrivacyPolicy'
-import FAQ from './pages/FAQ'
-import Products from './pages/Products'
-import BookCall from './pages/BookCall'
-import Portfolio from './pages/Portfolio'
-import Newsroom from './pages/Blog'
-import NewsroomPostDetail from './pages/BlogPostDetail'
+import Home from './pages/Home'
 import NotFound from './pages/NotFound'
+import Operations from './pages/Operations'
+import Partners from './pages/Partners'
+import PrivacyPolicy from './pages/PrivacyPolicy'
 
 function ServerApp({ url }: { url: string }) {
   return (
     <ThemeProvider>
-      <Helmet>
-        <title>Exergy | Building-Integrated Bitcoin Mining</title>
-        <meta name="description" content="Building-integrated Bitcoin mining systems that displace heating costs and earn Bitcoin from excess solar. Real installs. Real data." />
-      </Helmet>
       <StaticRouter location={url}>
-        <MotionConfig reducedMotion="user">
-          <div className="flex flex-col min-h-screen bg-surface-50 dark:bg-surface-900 text-surface-900 dark:text-surface-100">
-            <Navbar />
-            <main className="flex-grow">
-              <ErrorBoundary>
-                {/* Must mirror the client's Suspense boundary so hydration
-                    markers line up (client routes are lazy) */}
-                <Suspense fallback={null}>
+        <div className="site">
+          <Navbar />
+          <main id="content">
+            <ErrorBoundary>
+              <Suspense fallback={null}>
                 <Routes>
                   <Route path="/" element={<Home />} />
-                  <Route path="/products" element={<Products />} />
-                  <Route path="/services" element={<Services />} />
+                  <Route path="/commercial" element={<Commercial />} />
+                  <Route path="/partners" element={<Partners />} />
+                  <Route path="/operations" element={<Operations />} />
                   <Route path="/about" element={<About />} />
                   <Route path="/contact" element={<Contact />} />
-                  <Route path="/learn" element={<Learn />} />
                   <Route path="/privacy-policy" element={<PrivacyPolicy />} />
-                  <Route path="/faq" element={<FAQ />} />
-                  <Route path="/book-call" element={<BookCall />} />
-                  <Route path="/case-studies" element={<Portfolio />} />
-                  <Route path="/portfolio" element={<Navigate to="/case-studies" replace />} />
-                  <Route path="/newsroom" element={<Newsroom />} />
-                  <Route path="/newsroom/:id" element={<NewsroomPostDetail />} />
+                  <Route path="/404" element={<NotFound />} />
+                  <Route path="/products" element={<Navigate to="/" replace />} />
+                  <Route path="/services" element={<Navigate to="/commercial" replace />} />
+                  <Route path="/learn" element={<Navigate to="/" replace />} />
+                  <Route path="/faq" element={<Navigate to="/#faq" replace />} />
+                  <Route path="/book-call" element={<Navigate to="/contact" replace />} />
+                  <Route path="/case-studies" element={<Navigate to="/" replace />} />
+                  <Route path="/portfolio" element={<Navigate to="/" replace />} />
+                  <Route path="/newsroom" element={<Navigate to="/about" replace />} />
+                  <Route path="/newsroom/*" element={<Navigate to="/about" replace />} />
+                  <Route path="/blog" element={<Navigate to="/about" replace />} />
+                  <Route path="/blog/*" element={<Navigate to="/about" replace />} />
+                  <Route path="/education" element={<Navigate to="/" replace />} />
                   <Route path="*" element={<NotFound />} />
                 </Routes>
-                </Suspense>
-              </ErrorBoundary>
-            </main>
-            <Footer />
-          </div>
-        </MotionConfig>
+              </Suspense>
+            </ErrorBoundary>
+          </main>
+          <Footer />
+        </div>
       </StaticRouter>
     </ThemeProvider>
   )
 }
 
-// renderToPipeableStream (not renderToString) so Suspense boundary markers
-// are emitted — without them the client's lazy-route Suspense boundary can't
-// hydrate the server HTML and React falls back to a full client re-render.
 export function render(url: string): Promise<{ html: string; helmet: HelmetServerState }> {
   const helmetContext: { helmet?: HelmetServerState } = {}
 
@@ -86,7 +73,7 @@ export function render(url: string): Promise<{ html: string; helmet: HelmetServe
       final(cb) {
         resolve({ html: Buffer.concat(chunks).toString('utf8'), helmet: helmetContext.helmet! })
         cb()
-      }
+      },
     })
 
     const stream = renderToPipeableStream(
@@ -101,8 +88,8 @@ export function render(url: string): Promise<{ html: string; helmet: HelmetServe
         },
         onError(err) {
           reject(err)
-        }
-      }
+        },
+      },
     )
   })
 }

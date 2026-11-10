@@ -9,6 +9,8 @@
       ((!theme || theme === 'system') &&
         window.matchMedia('(prefers-color-scheme: dark)').matches)
     document.documentElement.classList.add(dark ? 'dark' : 'light')
+    var meta = document.querySelector('meta[name="theme-color"]')
+    if (meta) meta.setAttribute('content', dark ? '#131209' : '#F4F6F8')
   } catch (e) {
     /* default to light */
   }

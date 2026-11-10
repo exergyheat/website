@@ -1,168 +1,94 @@
-import { Shield, Lock, Eye, FileText } from 'lucide-react'
-import { Helmet } from 'react-helmet-async'
+import { Page, Section } from '../components/Page'
+import { Seo } from '../components/Seo'
+import { CONTACT_EMAIL } from '../lib/site'
 
-const PrivacyPolicy = () => {
-  const sections = [
-    {
-      icon: Shield,
-      title: "Data Protection",
-      content: "We implement industry-standard security measures to protect your personal information from unauthorized access, disclosure, alteration, and destruction."
-    },
-    {
-      icon: Lock,
-      title: "Information Security",
-      content: "All data is securely stored on our private Exergy servers. We avoid big tech platforms to maintain complete control over your data protection."
-    },
-    {
-      icon: Eye,
-      title: "Data Usage",
-      content: "We only collect and use information that is necessary for providing and improving our services. Your data is never sold to third parties."
-    },
-    {
-      icon: FileText,
-      title: "Transparency",
-      content: "We are committed to being transparent about our data collection and use practices, ensuring you always know how your information is being handled."
-    }
-  ]
+const title = 'Privacy policy | Exergy'
+const description = 'How Exergy collects, uses, and shares information you send us, including utility bills uploaded with a request.'
 
+export default function PrivacyPolicy() {
   return (
-    <div className="bg-surface-50 dark:bg-surface-900 min-h-screen">
-      <Helmet>
-        <title>Privacy Policy | Exergy</title>
-        <meta name="description" content="Exergy's privacy policy — how we collect, use, and protect your data." />
-        <link rel="canonical" href="https://exergyheat.com/privacy-policy" />
-        <meta property="og:title" content="Privacy Policy | Exergy" />
-        <meta property="og:description" content="Exergy's privacy policy — how we collect, use, and protect your data." />
-        <meta property="og:url" content="https://exergyheat.com/privacy-policy" />
-        <meta property="og:type" content="website" />
-        <meta property="og:image" content="https://exergyheat.com/og-image.jpg" />
-      </Helmet>
-      {/* Hero Section */}
-      <div className="bg-gradient-to-r from-[#4970A5] to-[#718EBC] py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
-            Privacy Policy
-          </h1>
-          <p className="text-xl text-white/90 max-w-2xl mx-auto">
-            Your privacy is important to us. Learn how we protect and manage your data.
+    <Page>
+      <Seo title={title} description={description} path="/privacy-policy" />
+      <Section>
+        <div className="stack-16 measure">
+          <h1 className="heading-3">Privacy policy</h1>
+          <p className="caption-2 muted">Last updated November 10, 2026</p>
+          <p className="body-3">
+            Exergy LLC (“Exergy”, “we”) designs building energy systems. This policy says what we collect, why we collect
+            it, and the choices you have.
           </p>
         </div>
-      </div>
+      </Section>
 
-      {/* Key Points */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {sections.map((section, index) => (
-            <div key={index} className="bg-white dark:bg-surface-800 rounded-lg shadow-lg p-6">
-              <div className="flex items-center mb-4">
-                <div className="p-3 bg-primary-100 dark:bg-primary-900 rounded-lg">
-                  <section.icon className="h-6 w-6 text-primary-600 dark:text-primary-400" />
-                </div>
-              </div>
-              <h3 className="text-xl font-semibold text-surface-900 dark:text-surface-100 mb-2">
-                {section.title}
-              </h3>
-              <p className="text-surface-600 dark:text-surface-400">
-                {section.content}
-              </p>
-            </div>
-          ))}
+      <Section>
+        <div className="stack-16 measure">
+          <h2 className="heading-5">Information we collect</h2>
+          <p className="body-3">
+            We collect what you send us: your name, email, company, building or business details, and files you choose to
+            upload, such as utility bills. Page visits are counted with Umami, hosted for this site. We do not build an
+            advertising profile from that count.
+          </p>
         </div>
-      </div>
+      </Section>
 
-      {/* Detailed Policy */}
-      <div className="bg-white dark:bg-surface-800 py-20">
-        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="prose prose-lg dark:prose-invert">
-            <h2 className="text-3xl font-bold text-surface-900 dark:text-surface-100 mb-8">
-              Detailed Privacy Policy
-            </h2>
-
-            <section className="mb-12">
-              <h3 className="text-2xl font-semibold text-surface-900 dark:text-surface-100 mb-4">
-                1. Information We Collect
-              </h3>
-              <p className="text-surface-600 dark:text-surface-400 mb-4">
-                We collect information that you provide directly to us, including:
-              </p>
-              <ul className="list-disc pl-6 text-surface-600 dark:text-surface-400 space-y-2">
-                <li>Name and contact information</li>
-                <li>System performance data</li>
-                <li>Usage statistics</li>
-                <li>Project location (when required)</li>
-              </ul>
-            </section>
-
-            <section className="mb-12">
-              <h3 className="text-2xl font-semibold text-surface-900 dark:text-surface-100 mb-4">
-                2. How We Use Your Information
-              </h3>
-              <p className="text-surface-600 dark:text-surface-400 mb-4">
-                We use the collected information for:
-              </p>
-              <ul className="list-disc pl-6 text-surface-600 dark:text-surface-400 space-y-2">
-                <li>Providing and maintaining our services</li>
-                <li>Processing your transactions</li>
-                <li>Sending you important updates</li>
-                <li>Improving our products and services</li>
-                <li>Responding to your requests and inquiries</li>
-              </ul>
-            </section>
-
-            <section className="mb-12">
-              <h3 className="text-2xl font-semibold text-surface-900 dark:text-surface-100 mb-4">
-                3. Data Sharing and Disclosure
-              </h3>
-              <p className="text-surface-600 dark:text-surface-400 mb-4">
-                We may share your information with:
-              </p>
-              <ul className="list-disc pl-6 text-surface-600 dark:text-surface-400 space-y-2">
-                <li>Service providers and business partners</li>
-                <li>Legal authorities when required by law</li>
-                <li>Third parties with your explicit consent</li>
-              </ul>
-            </section>
-
-            <section className="mb-12">
-              <h3 className="text-2xl font-semibold text-surface-900 dark:text-surface-100 mb-4">
-                4. Your Rights and Choices
-              </h3>
-              <p className="text-surface-600 dark:text-surface-400 mb-4">
-                You have the right to:
-              </p>
-              <ul className="list-disc pl-6 text-surface-600 dark:text-surface-400 space-y-2">
-                <li>Access your personal information</li>
-                <li>Correct inaccurate data</li>
-                <li>Request deletion of your data</li>
-                <li>Opt-out of marketing communications</li>
-                <li>Export your data</li>
-              </ul>
-            </section>
-
-            <section className="mb-12">
-              <h3 className="text-2xl font-semibold text-surface-900 dark:text-surface-100 mb-4">
-                5. Contact Us
-              </h3>
-              <p className="text-surface-600 dark:text-surface-400">
-                If you have any questions about this Privacy Policy, please contact us at:
-              </p>
-              <div className="mt-4 p-4 bg-surface-50 dark:bg-surface-700 rounded-lg">
-                <p className="text-surface-600 dark:text-surface-400">Email: support@exergyheat.com</p>
-                <p className="text-surface-600 dark:text-surface-400">Address: 3700 N Franklin St. Denver, CO 80205</p>
-              </div>
-            </section>
-          </div>
+      <Section>
+        <div className="stack-16 measure">
+          <h2 className="heading-5">How we use it</h2>
+          <p className="body-3">
+            We use the information to answer you, to scope a project, and to do the work you asked for. Utility bills are
+            used for the feasibility check or the audit they belong to. We do not sell your information.
+          </p>
         </div>
-      </div>
+      </Section>
 
-      {/* Last Updated */}
-      <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-8 text-center">
-        <p className="text-surface-500 dark:text-surface-400">
-          Last updated: June 4, 2025
-        </p>
-      </div>
-    </div>
+      <Section>
+        <div className="stack-16 measure">
+          <h2 className="heading-5">Who we share it with</h2>
+          <p className="body-3">
+            We share information with the people who help us do the work, for example a hosting provider or, when you are
+            a client, the engineers on your project. We also share it when the law requires it, and when you ask us to.
+            We do not share it for advertising.
+          </p>
+        </div>
+      </Section>
+
+      <Section>
+        <div className="stack-16 measure">
+          <h2 className="heading-5">How long we keep it</h2>
+          <p className="body-3">
+            We keep project files for as long as the project needs them, and for a reasonable period after, then we
+            delete them. You can ask us to delete your information sooner, unless a legal duty says we have to keep it.
+          </p>
+        </div>
+      </Section>
+
+      <Section>
+        <div className="stack-16 measure">
+          <h2 className="heading-5">Your choices</h2>
+          <p className="body-3">
+            You can ask to see, correct, or delete the information we hold about you. You can opt out of email that is
+            not required for a project. Write to{' '}
+            <a className="inline-link" href={`mailto:${CONTACT_EMAIL}`}>
+              {CONTACT_EMAIL}
+            </a>
+            .
+          </p>
+        </div>
+      </Section>
+
+      <Section>
+        <div className="stack-8 measure">
+          <h2 className="heading-5">Contact</h2>
+          <p className="body-3">Exergy LLC</p>
+          <p className="body-3">3700 N Franklin Street</p>
+          <p className="body-3">Denver, CO 80205</p>
+          <p className="body-3">
+            <a className="inline-link" href={`mailto:${CONTACT_EMAIL}`}>
+              {CONTACT_EMAIL}
+            </a>
+          </p>
+        </div>
+      </Section>
+    </Page>
   )
 }
-
-export default PrivacyPolicy
