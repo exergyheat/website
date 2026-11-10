@@ -2,96 +2,69 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/png" href="/Favicon_blue1.png" />
+    <link rel="icon" type="image/png" href="/favicon-32.png" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <!-- Apply stored/system theme before first paint (prevents dark-mode FOUC) -->
     <script src="/theme-init.js"></script>
 
-    <!-- Home hero background is a CSS background-image the browser would
-         otherwise discover late; preload it to improve LCP -->
-    <link rel="preload" as="image" href="/StockBackgroundHome_Tinted.webp" />
-
-    <!-- HubSpot preconnect — tells browser to open connections before scripts load -->
-    <link rel="preconnect" href="https://js-na2.hsforms.net" />
-    <link rel="preconnect" href="https://static.hsappstatic.net" />
-    <link rel="preconnect" href="https://meetings-na2.hubspot.com" />
-    <link rel="preconnect" href="https://forms.hsforms.com" />
-    <link rel="dns-prefetch" href="https://track.hubspot.com" />
-    <link rel="dns-prefetch" href="https://js.hs-analytics.net" />
+    <link rel="preload" as="image" href="/illustrations/hero-building-denver.light.1152.webp" data-hero-preload="true" />
 
     <meta name="author" content="EXERGY LLC" />
     <meta name="robots" content="index, follow" />
 
     <!-- seo:start — per-page tags; the prerender step replaces this block
          with each route's react-helmet output -->
-    <meta name="description" content="Building-integrated Bitcoin mining systems that displace heating costs and earn Bitcoin from excess solar. Real installs. Real data. Free calculators." />
+    <meta name="description" content="Your building wastes useful energy. We put it to work." />
     <link rel="canonical" href="https://exergyheat.com/" />
 
-    <!-- Open Graph Meta Tags -->
     <meta property="og:url" content="https://exergyheat.com/" />
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="Exergy" />
     <meta property="og:locale" content="en_US" />
-    <meta property="og:title" content="Exergy | Building-Integrated Bitcoin Mining" />
-    <meta property="og:description" content="Building-integrated Bitcoin mining systems that displace heating costs and earn Bitcoin from excess solar. Real installs. Real data." />
+    <meta property="og:title" content="Home | Exergy" />
+    <meta property="og:description" content="Your building wastes useful energy. We put it to work." />
     <meta property="og:image" content="https://exergyheat.com/og-image.jpg" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
-    <meta property="og:image:alt" content="Exergy building-integrated Bitcoin mining — heat that pays" />
+    <meta property="og:image:alt" content="Engraving of a brick Denver building with rooftop solar and the Front Range behind it" />
 
-    <!-- Twitter Card Meta Tags -->
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Exergy | Building-Integrated Bitcoin Mining" />
-    <meta name="twitter:description" content="Building-integrated Bitcoin mining systems that displace heating costs and earn Bitcoin from excess solar. Real installs. Real data." />
+    <meta name="twitter:title" content="Home | Exergy" />
+    <meta name="twitter:description" content="Your building wastes useful energy. We put it to work." />
     <meta name="twitter:image" content="https://exergyheat.com/og-image.jpg" />
 
-    <title>Exergy | Building-Integrated Bitcoin Mining</title>
+    <title>Home | Exergy</title>
     <!-- seo:end -->
 
-    <!-- Additional SEO Tags -->
-    <meta name="theme-color" content="#4970A5" />
-    <meta name="application-name" content="EXERGY" />
+    <meta name="theme-color" content="#F3EAD9" media="(prefers-color-scheme: light)" />
+    <meta name="theme-color" content="#0B171D" media="(prefers-color-scheme: dark)" />
+    <meta name="application-name" content="Exergy" />
 
-    <!-- Preconnect to font CDN for performance -->
-    <link rel="preconnect" href="https://fonts.cdnfonts.com" />
-
-    <!-- Futura + Valorant fonts (Google Fonts does not host Futura; that request was dead weight) -->
-    <link href="https://fonts.cdnfonts.com/css/futura-pt" rel="stylesheet" />
-    <link href="https://fonts.cdnfonts.com/css/valorant" rel="stylesheet" />
-
-    <!-- Structured Data - Organization Schema -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": ["Organization", "LocalBusiness"],
+      "@type": "Organization",
       "@id": "https://exergyheat.com/#organization",
-      "name": "EXERGY LLC",
-      "alternateName": "EXERGY",
+      "name": "Exergy",
+      "legalName": "EXERGY LLC",
       "url": "https://exergyheat.com",
-      "logo": "https://exergyheat.com/Logo1_black_horizontal.png",
+      "logo": "https://exergyheat.com/logo/exergy-wordmark.png",
       "image": "https://exergyheat.com/og-image.jpg",
-      "description": "Exergy designs and installs building-integrated Bitcoin mining systems for homes and commercial buildings — displacing heating costs, monetizing excess solar, and earning Bitcoin from energy that was already being spent.",
+      "description": "Exergy puts energy a building already pays for to useful work. Commercial buildings, hardware partners, and operations. Denver, CO.",
       "address": {
         "@type": "PostalAddress",
-        "streetAddress": "3700 N Franklin St",
         "addressLocality": "Denver",
         "addressRegion": "CO",
-        "postalCode": "80205",
         "addressCountry": "US"
       },
       "areaServed": "US",
-      "contactPoint": {
-        "@type": "ContactPoint",
-        "contactType": "customer service",
-        "email": "contact@exergyheat.com"
-      },
+      "email": "contact@exergyheat.com",
+      "foundingDate": "2025",
       "sameAs": [
-        "https://x.com/exergy_",
         "https://github.com/exergyheat"
-      ],
-      "foundingDate": "2023",
-      "knowsAbout": ["hashrate heating", "bitcoin mining heat reuse", "building-integrated mining", "energy efficient heating"]
+      ]
     }
     </script>
     <script defer src="https://umami.denver.space/script.js" data-website-id="00faa83a-1c23-4195-af3c-ff6089d30d00"></script>

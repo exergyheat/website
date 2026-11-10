@@ -1,9 +1,22 @@
 {
+  "redirects": [
+    { "source": "/products", "destination": "/", "type": 301 },
+    { "source": "/services", "destination": "/commercial", "type": 301 },
+    { "source": "/learn", "destination": "/", "type": 301 },
+    { "source": "/faq", "destination": "/contact", "type": 301 },
+    { "source": "/book-call", "destination": "/contact", "type": 301 },
+    { "source": "/case-studies", "destination": "/", "type": 301 },
+    { "source": "/portfolio", "destination": "/", "type": 301 },
+    { "source": "/newsroom", "destination": "/about", "type": 301 },
+    { "source": "/newsroom/:path*", "destination": "/about", "type": 301 },
+    { "source": "/blog", "destination": "/about", "type": 301 },
+    { "source": "/blog/:path*", "destination": "/about", "type": 301 },
+    { "source": "/education", "destination": "/", "type": 301 },
+    { "source": "/calculators", "destination": "https://calc.exergyheat.com", "type": 301 },
+    { "source": "/docs", "destination": "https://docs.exergyheat.com", "type": 301 }
+  ],
   "rewrites": [
-    {
-      "source": "**",
-      "destination": "/index.html"
-    }
+    { "source": "**", "destination": "/index.html" }
   ],
   "headers": [
     {
@@ -13,7 +26,7 @@
         { "key": "Referrer-Policy", "value": "strict-origin-when-cross-origin" },
         { "key": "Permissions-Policy", "value": "camera=(), microphone=(), geolocation=(), payment=(), usb=()" },
         { "key": "X-Frame-Options", "value": "DENY" },
-        { "key": "Content-Security-Policy", "value": "default-src 'self'; script-src 'self' https://js-na2.hsforms.net https://js.hsforms.net https://static.hsappstatic.net https://js.hs-analytics.net https://js-na2.hs-analytics.net https://js.hs-banner.com https://js-na2.hs-banner.com https://js.hsadspixel.net https://js-na2.hsadspixel.net https://js.hs-scripts.com https://js-na2.hs-scripts.com https://umami.denver.space; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://fonts.cdnfonts.com; font-src 'self' data: https://fonts.gstatic.com https://fonts.cdnfonts.com; img-src 'self' data: https:; frame-src https://meetings-na2.hubspot.com https://forms.hsforms.com https://forms-na2.hsforms.com https://app-na2.hubspot.com; connect-src 'self' https://*.hsforms.com https://*.hsforms.net https://*.hubspot.com https://*.hubapi.com https://*.hs-analytics.net https://*.hs-banner.com https://*.hscollectedforms.net https://umami.denver.space; object-src 'none'; base-uri 'self'; form-action 'self' https://forms.hsforms.com https://forms-na2.hsforms.com; frame-ancestors 'none'; upgrade-insecure-requests" }
+        { "key": "Content-Security-Policy", "value": "default-src 'self'; script-src 'self' https://umami.denver.space; style-src 'self' 'unsafe-inline'; font-src 'self' data:; img-src 'self' data:; connect-src 'self' https://umami.denver.space; frame-src https://cal.com https://app.cal.com; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'none'; upgrade-insecure-requests" }
       ]
     },
     {

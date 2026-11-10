@@ -2,6 +2,12 @@ import { StrictMode } from 'react'
 import { createRoot, hydrateRoot } from 'react-dom/client'
 import { HelmetProvider } from 'react-helmet-async'
 import App from './App.tsx'
+import '@fontsource/geist-sans/latin-400.css'
+import '@fontsource/geist-sans/latin-500.css'
+import '@fontsource/geist-sans/latin-600.css'
+import '@fontsource/geist-sans/latin-700.css'
+import '@fontsource/geist-mono/latin-400.css'
+import '@fontsource/geist-mono/latin-500.css'
 import './index.css'
 
 const container = document.getElementById('root')!
@@ -13,11 +19,7 @@ const app = (
   </StrictMode>
 )
 
-// Prerendered pages ship with server HTML in #root. The homepage's chunk is
-// eager, so it hydrates cleanly; other routes are lazy (their chunk isn't
-// loaded when hydration starts), so they render client-side — the prerendered
-// HTML stays visible until React takes over either way.
-if (container.hasChildNodes() && window.location.pathname === '/') {
+if (container.hasChildNodes()) {
   hydrateRoot(container, app)
 } else {
   createRoot(container).render(app)
