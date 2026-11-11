@@ -231,10 +231,9 @@ For self-hosting, use the systemd service file in `admin/exergy-website.service`
 
 ## Integrations
 
-- **HubSpot Forms**: Contact and newsletter signup
-- **HubSpot Meetings**: Consultation booking system
-- **External Links**: Press coverage and partner sites
-- **Social Media**: X (Twitter) and GitHub links
+- **Contact form**: posts through `submitLead` to `VITE_LEAD_ENDPOINT` when set
+- **Booking**: [Cal.com](https://cal.com/tylerkstevens)
+- **Open tools**: calculators, Home Assistant integrations, and GitHub
 
 ## Contributing
 
@@ -254,7 +253,7 @@ For inquiries about the website or hashrate heating solutions:
 
 - **Email**: contact@exergyheat.com
 - **Website**: https://exergyheat.com
-- **Address**: 3700 N Franklin St, Denver, CO 80205
+- **City**: Denver, CO
 
 ---
 

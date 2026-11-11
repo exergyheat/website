@@ -1,85 +1,60 @@
-import React, { createContext, useContext, useEffect, useState } from 'react'
+import { useEffect, useState, type ReactNode } from 'react'
+import { ThemeContext, type ThemeChoice } from '../theme'
 
-type Theme = 'light' | 'dark' | 'system'
-
-interface ThemeContextType {
-  theme: Theme
-  setTheme: (theme: Theme) => void
-  effectiveTheme: 'light' | 'dark'
-}
-
-const ThemeContext = createContext<ThemeContextType | undefined>(undefined)
-
-// localStorage can throw (blocked cookies/site data, some embedded webviews);
-// never let theme persistence take down the whole app
-function readStoredTheme(): Theme | null {
+function readStoredTheme(): ThemeChoice | null {
   try {
     const saved = localStorage.getItem('theme')
-    return saved && ['light', 'dark', 'system'].includes(saved) ? (saved as Theme) : null
+    return saved && ['light', 'dark', 'system'].includes(saved) ? (saved as ThemeChoice) : null
   } catch {
     return null
   }
 }
 
-function storeTheme(theme: Theme) {
+function storeTheme(theme: ThemeChoice) {
   try {
     localStorage.setItem('theme', theme)
   } catch {
-    // ignore — persistence is best-effort
+    // Persistence is best-effort.
   }
 }
 
-export function ThemeProvider({ children }: { children: React.ReactNode }) {
-  const [theme, setTheme] = useState<Theme>('system')
+function applyTheme(effective: 'light' | 'dark') {
+  const root = document.documentElement
+  root.dataset.theme = effective
+  root.classList.remove('light', 'dark')
+  root.classList.add(effective)
+  root.style.colorScheme = effective
+}
+
+export function ThemeProvider({ children }: { children: ReactNode }) {
+  const [theme, setTheme] = useState<ThemeChoice>('system')
   const [systemTheme, setSystemTheme] = useState<'light' | 'dark'>('light')
+  const [ready, setReady] = useState(false)
 
-  // Detect system theme preference
   useEffect(() => {
-    const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)')
-    
-    // Set initial system theme
-    setSystemTheme(mediaQuery.matches ? 'dark' : 'light')
-    
-    // Listen for system theme changes
-    const handleChange = (e: MediaQueryListEvent) => {
-      setSystemTheme(e.matches ? 'dark' : 'light')
+    const saved = readStoredTheme()
+    if (saved) setTheme(saved)
+    const mq = window.matchMedia('(prefers-color-scheme: dark)')
+    setSystemTheme(mq.matches ? 'dark' : 'light')
+    const onChange = (event: MediaQueryListEvent) => {
+      setSystemTheme(event.matches ? 'dark' : 'light')
     }
-    
-    mediaQuery.addEventListener('change', handleChange)
-    
-    return () => mediaQuery.removeEventListener('change', handleChange)
+    mq.addEventListener('change', onChange)
+    setReady(true)
+    return () => mq.removeEventListener('change', onChange)
   }, [])
 
-  // Load saved theme preference or default to system
-  useEffect(() => {
-    const savedTheme = readStoredTheme()
-    if (savedTheme) {
-      setTheme(savedTheme)
-    }
-  }, [])
-
-  // Calculate effective theme (what actually gets applied)
   const effectiveTheme = theme === 'system' ? systemTheme : theme
 
-  // Apply theme to document
   useEffect(() => {
-    const root = window.document.documentElement
-    root.classList.remove('light', 'dark')
-    root.classList.add(effectiveTheme)
+    if (!ready) return
+    applyTheme(effectiveTheme)
     storeTheme(theme)
-  }, [theme, effectiveTheme])
+  }, [ready, theme, effectiveTheme])
 
   return (
     <ThemeContext.Provider value={{ theme, setTheme, effectiveTheme }}>
       {children}
     </ThemeContext.Provider>
   )
-}
-
-export function useTheme() {
-  const context = useContext(ThemeContext)
-  if (context === undefined) {
-    throw new Error('useTheme must be used within a ThemeProvider')
-  }
-  return context
 }

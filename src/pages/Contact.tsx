@@ -1,150 +1,272 @@
-import { useState, useEffect } from 'react'
-import { Helmet } from 'react-helmet-async'
-import { Link } from 'react-router-dom'
-import { Mail, MapPin, Calendar, Loader2, Users } from 'lucide-react'
-import { useHubSpotPreload } from '../hooks/useHubSpotPreload'
+import { useEffect, useId, useState, type FormEvent } from 'react'
+import { Link, Navigate, useSearchParams } from 'react-router-dom'
+import { useTheme } from '../theme'
+import { Button } from '../components/Button'
+import { Field } from '../components/Field'
+import { Plate } from '../components/Plate'
+import { Seo } from '../components/Seo'
+import { bookingUrl, FALLBACK_TIME_ZONE, visitorTimeZone } from '../lib/site'
+import { submitLead, type Intent } from '../lib/submitLead'
 
-const Contact = () => {
-  useHubSpotPreload()
-  const [isFormLoaded, setIsFormLoaded] = useState(false)
-  const [formTimedOut, setFormTimedOut] = useState(false)
+const BUILDING_TYPES = ['Office', 'Warehouse', 'Multifamily', 'Retail', 'Industrial', 'Mixed use', 'Other'] as const
 
-  useEffect(() => {
-    const checkFormLoaded = setInterval(() => {
-      const formContainer = document.querySelector('.hs-form-frame iframe, .hs-form-frame form')
-      if (formContainer) {
-        setIsFormLoaded(true)
-        clearInterval(checkFormLoaded)
-      }
-    }, 200)
+const CHIPS: { intent: Intent; label: string }[] = [
+  { intent: 'owner', label: 'Commercial building' },
+  { intent: 'manufacturer', label: 'Hardware partner' },
+  { intent: 'operations', label: 'Operations help' },
+]
 
-    const timeout = setTimeout(() => {
-      clearInterval(checkFormLoaded)
-      setFormTimedOut(true)
-    }, 10000)
+const SOLAR = [
+  { value: 'yes', label: 'Yes' },
+  { value: 'no', label: 'No' },
+  { value: 'planned', label: 'Planned' },
+] as const
 
-    return () => {
-      clearInterval(checkFormLoaded)
-      clearTimeout(timeout)
-    }
-  }, [])
-
-  return (
-    <div className="bg-surface-50 dark:bg-surface-900">
-      <Helmet>
-        <title>Contact | Exergy</title>
-        <meta name="description" content="Contact Exergy in Denver, CO. Email contact@exergyheat.com or book a free consultation to explore building-integrated mining for your property." />
-        <meta name="keywords" content="contact Exergy, building integrated mining consultation, Denver mining company, bitcoin mining heat contact" />
-        <link rel="canonical" href="https://exergyheat.com/contact" />
-        <meta property="og:title" content="Contact Exergy — Denver, CO" />
-        <meta property="og:description" content="Contact Exergy in Denver, CO. Email contact@exergyheat.com or book a free consultation to explore building-integrated mining." />
-        <meta property="og:url" content="https://exergyheat.com/contact" />
-        <meta property="og:type" content="website" />
-        <meta property="og:image" content="https://exergyheat.com/og-image.jpg" />
-        <meta name="twitter:title" content="Contact Exergy — Denver, CO" />
-        <meta name="twitter:description" content="Contact Exergy in Denver, CO. Email contact@exergyheat.com or book a free consultation." />
-        <meta name="twitter:image" content="https://exergyheat.com/og-image.jpg" />
-      </Helmet>
-      
-      {/* Hero Section with Custom Gradient */}
-      <div className="bg-gradient-to-r from-[#4970A5] to-[#718EBC] py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
-            Contact Us
-          </h1>
-          <p className="text-xl text-white/90 max-w-2xl mx-auto">
-            Get in touch — we'll point you in the right direction.
-          </p>
-        </div>
-      </div>
-
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
-          {/* Contact Information */}
-          <div>
-            <h2 className="text-2xl font-bold text-surface-900 dark:text-surface-100 mb-8">Get in Touch</h2>
-            <div className="space-y-6">
-              <div className="flex items-center">
-                <Mail className="h-6 w-6 text-primary-600" />
-                <a 
-                  href="mailto:contact@exergyheat.com" 
-                  className="ml-4 text-primary-600 dark:text-primary-400 hover:text-primary-400 dark:hover:text-primary-600 transition-colors"
-                >
-                  contact@exergyheat.com
-                </a>
-              </div>
-              <div className="flex items-center">
-                <Calendar className="h-6 w-6 text-primary-600" />
-                <Link to="/book-call" className="ml-4 text-primary-600 dark:text-primary-400 hover:text-primary-400 dark:hover:text-primary-600 transition-colors">
-                  Book a Call with someone at Exergy
-                </Link>
-              </div>
-              <div className="flex items-center">
-                <MapPin className="h-6 w-6 text-primary-600" />
-                <a
-                  href="https://maps.app.goo.gl/bp9d8a3GEpfzv3Kg7"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="ml-4 text-primary-600 dark:text-primary-400 hover:text-primary-400 dark:hover:text-primary-600 transition-colors"
-                >
-                  3700 N Franklin St. Denver, CO 80205
-                </a>
-              </div>
-              <div className="flex items-center">
-                <Users className="h-6 w-6 text-primary-600" />
-                <a href="https://meet.jit.si/ExergyHomeAssistant" target="_blank" rel="noopener noreferrer" className="ml-4 text-primary-600 dark:text-primary-400 hover:underline">Weekly office hours — Wednesdays at 10am MT, free and open to everyone</a>
-              </div>
-            </div>
-
-            <div className="mt-12">
-              <h3 className="text-lg font-semibold text-surface-900 dark:text-surface-100 mb-4">Office Hours</h3>
-              <div className="space-y-2 text-surface-600 dark:text-surface-400">
-                <p>We respond to emails within 1 business day</p>
-                <p>Free 15-min intro calls available — book via calendar above</p>
-                <p>
-                  <a href="https://meet.jit.si/ExergyHomeAssistant" target="_blank" rel="noopener noreferrer" className="text-primary-600 dark:text-primary-400 hover:underline font-medium">
-                    Join weekly office hours →
-                  </a>{' '}
-                  Wednesdays at 10am Mountain Time
-                </p>
-              </div>
-            </div>
-          </div>
-
-          {/* HubSpot Contact Form */}
-          <div className="bg-white dark:bg-surface-800 rounded-lg shadow-lg p-8">
-            <h2 className="text-2xl font-bold text-surface-900 dark:text-surface-100 mb-6">Send us a Message</h2>
-
-            {/* Loading State */}
-            {!isFormLoaded && !formTimedOut && (
-              <div className="flex flex-col items-center justify-center py-12">
-                <Loader2 className="h-8 w-8 text-primary-600 animate-spin mb-4" />
-                <p className="text-surface-600 dark:text-surface-400">Loading form...</p>
-              </div>
-            )}
-
-            {/* Fallback if form never loads */}
-            {formTimedOut && !isFormLoaded && (
-              <div className="flex flex-col items-center justify-center py-12 text-center">
-                <p className="text-surface-600 dark:text-surface-400 mb-2">Form not loading?</p>
-                <a href="mailto:contact@exergyheat.com" className="text-primary-600 dark:text-primary-400 font-medium hover:underline">
-                  contact@exergyheat.com
-                </a>
-              </div>
-            )}
-
-            {/* HubSpot Form Container */}
-            <div
-              className={`hs-form-frame transition-opacity duration-300 ${isFormLoaded ? 'opacity-100' : 'opacity-0 h-0 overflow-hidden'}`}
-              data-region="na2"
-              data-form-id="106749ae-0515-4d1a-925d-edf71b3bfcae"
-              data-portal-id="243159145"
-            ></div>
-          </div>
-        </div>
-      </div>
-    </div>
-  )
+function intentFromQuery(value: string | null): Intent {
+  switch (value) {
+    case 'partner':
+      return 'manufacturer'
+    case 'operations':
+      return 'operations'
+    default:
+      return 'owner'
+  }
 }
 
-export default Contact
+const EMAIL = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
+
+export default function Contact() {
+  const [params] = useSearchParams()
+  const { effectiveTheme } = useTheme()
+  const [timeZone, setTimeZone] = useState(FALLBACK_TIME_ZONE)
+  const [intent, setIntent] = useState<Intent>('owner')
+  const [name, setName] = useState('')
+  const [email, setEmail] = useState('')
+  const [buildingType, setBuildingType] = useState('')
+  const [city, setCity] = useState('')
+  const [size, setSize] = useState('')
+  const [utilityCost, setUtilityCost] = useState('')
+  const [solar, setSolar] = useState('')
+  const [note, setNote] = useState('')
+  const [errors, setErrors] = useState<Record<string, string>>({})
+  const [status, setStatus] = useState<'idle' | 'sending' | 'success' | 'error'>('idle')
+  const [message, setMessage] = useState('')
+  const baseId = useId()
+  const intentLabel = `${baseId}-intent`
+  const solarLabel = `${baseId}-solar`
+
+  useEffect(() => {
+    setIntent(intentFromQuery(params.get('intent')))
+  }, [params])
+
+  useEffect(() => {
+    setTimeZone(visitorTimeZone())
+  }, [])
+
+  const schedulerUrl = bookingUrl(timeZone)
+
+  const owner = intent === 'owner'
+
+  if (params.get('intent') === 'pilot') {
+    return <Navigate to="/homes/apply" replace />
+  }
+
+  async function onSubmit(event: FormEvent<HTMLFormElement>) {
+    event.preventDefault()
+    const next: Record<string, string> = {}
+    if (!name.trim()) next.name = 'Enter your name.'
+    if (!EMAIL.test(email.trim())) next.email = 'Enter a valid email.'
+    if (!city.trim()) next.city = 'Enter a city.'
+    if (!note.trim()) next.note = 'Enter a message.'
+    if (owner && !buildingType) next.buildingType = 'Choose a building type.'
+    if (owner && !size.trim()) next.size = 'Enter the building size.'
+    if (owner && !solar) next.solar = 'Tell us about solar.'
+    setErrors(next)
+    if (Object.keys(next).length > 0) {
+      setStatus('error')
+      setMessage('Check the form. Some fields need attention.')
+      const first = Object.keys(next)[0]
+      document.getElementById(`${baseId}-${first}`)?.focus()
+      return
+    }
+
+    setStatus('sending')
+    setMessage('')
+    const fields: Record<string, string> = { location: city.trim(), note: note.trim() }
+    if (buildingType) fields.buildingType = buildingType
+    if (owner && size.trim()) fields.size = size.trim()
+    if (owner && utilityCost.trim()) fields.utilityCost = utilityCost.trim()
+    if (owner && solar) fields.solar = solar
+
+    const result = await submitLead({
+      intent,
+      name: name.trim(),
+      email: email.trim(),
+      fields,
+      files: [],
+    })
+    if (result.ok) {
+      setStatus('success')
+      setMessage(`We have your note. We will reply at ${email.trim()}.`)
+      return
+    }
+    setStatus('error')
+    setMessage(result.message)
+  }
+
+  return (
+    <>
+      <Seo
+        title="Contact"
+        description="Get a free feasibility check, or book a 15 min call."
+      />
+      <section className="section">
+        <div className={`frame cta-grid${intent === 'operations' ? ' operations-lead' : ''}`}>
+          <div className="contact-col contact-form">
+            {intent !== 'operations' && <p className="label option-label">Option A</p>}
+            {intent !== 'operations' && (
+              <h1 className="display">
+                <span className="line">Get a free</span>
+                <span className="line">feasibility check.</span>
+              </h1>
+            )}
+            {intent === 'owner' && (
+              <p className="body-3">Find out what your building could earn. Tell us about the heat you buy and whether you have solar, or plan to.</p>
+            )}
+            {intent === 'manufacturer' && (
+              <p className="body-3">Tell us what you make and what you want help with.</p>
+            )}
+            {intent === 'operations' && (
+              <p className="body-3">Tell us how the business runs today, and where it feels slow or expensive. We will start with a call.</p>
+            )}
+            {status === 'success' ? (
+              <div className="form-status" role="status" aria-live="polite">
+                <p className="body-3">{message}</p>
+                <Button variant="ink" size="md" href={schedulerUrl}>Pick a time</Button>
+              </div>
+            ) : (
+              <form className="form" onSubmit={onSubmit} noValidate>
+                <div className="form-grid two">
+                  <Field id={`${baseId}-name`} label="Name" error={errors.name}>
+                    <input id={`${baseId}-name`} name="name" autoComplete="name" value={name} aria-invalid={!!errors.name} onChange={(event) => setName(event.target.value)} />
+                  </Field>
+                  <Field id={`${baseId}-email`} label="Email" error={errors.email}>
+                    <input id={`${baseId}-email`} name="email" type="email" autoComplete="email" inputMode="email" value={email} aria-invalid={!!errors.email} onChange={(event) => setEmail(event.target.value)} />
+                  </Field>
+                </div>
+                <div className="form-grid two">
+                  <Field id={`${baseId}-buildingType`} label="Building type" error={errors.buildingType}>
+                    <div className="select-wrap">
+                      <select id={`${baseId}-buildingType`} name="buildingType" value={buildingType} aria-invalid={!!errors.buildingType} aria-describedby={errors.buildingType ? `${baseId}-buildingType-error` : undefined} onChange={(event) => setBuildingType(event.target.value)}>
+                        <option value="">Select</option>
+                        {BUILDING_TYPES.map((type) => (
+                          <option key={type} value={type}>{type}</option>
+                        ))}
+                      </select>
+                      <span className="caret" aria-hidden="true" />
+                    </div>
+                  </Field>
+                  <Field id={`${baseId}-city`} label="City" error={errors.city}>
+                    <input id={`${baseId}-city`} name="city" autoComplete="address-level2" value={city} aria-invalid={!!errors.city} onChange={(event) => setCity(event.target.value)} />
+                  </Field>
+                </div>
+                {owner && (
+                  <div className="form-grid two">
+                    <Field id={`${baseId}-size`} label="Building size" hint="Square feet, or a short description." error={errors.size}>
+                      <input id={`${baseId}-size`} name="size" value={size} aria-invalid={!!errors.size} onChange={(event) => setSize(event.target.value)} />
+                    </Field>
+                    <Field id={`${baseId}-utility`} label="Monthly utility cost" hint="A recent monthly total is enough. Do not include account numbers.">
+                      <input id={`${baseId}-utility`} name="utilityCost" value={utilityCost} onChange={(event) => setUtilityCost(event.target.value)} />
+                    </Field>
+                  </div>
+                )}
+                {owner && (
+                  <fieldset className="plain" id={`${baseId}-solar`} tabIndex={-1}>
+                    <legend id={solarLabel} className="label">Solar</legend>
+                    <div className="chips" role="radiogroup" aria-labelledby={solarLabel} aria-describedby={errors.solar ? `${baseId}-solar-error` : undefined}>
+                      {SOLAR.map((option) => (
+                        <label className="chip body-3" key={option.value}>
+                          <input
+                            type="radio"
+                            name="solar"
+                            value={option.value}
+                            checked={solar === option.value}
+                            onChange={() => setSolar(option.value)}
+                          />
+                          {option.label}
+                        </label>
+                      ))}
+                    </div>
+                    {errors.solar && <p className="caption field-error" id={`${baseId}-solar-error`}>{errors.solar}</p>}
+                  </fieldset>
+                )}
+                <fieldset className="plain">
+                  <legend id={intentLabel} className="label">What are you trying to do?</legend>
+                  <div className="chips">
+                    <div className="chips" role="radiogroup" aria-labelledby={intentLabel}>
+                      {CHIPS.map((chip) => (
+                        <label className="chip body-3" key={chip.intent}>
+                          <input
+                            type="radio"
+                            name="intent"
+                            value={chip.intent}
+                            checked={intent === chip.intent}
+                            onChange={() => setIntent(chip.intent)}
+                          />
+                          {chip.label}
+                        </label>
+                      ))}
+                    </div>
+                    <Link className="chip body-3" to="/homes/apply">Homeowner pilot</Link>
+                  </div>
+                </fieldset>
+                <Field id={`${baseId}-note`} label="Message" error={errors.note}>
+                  <textarea id={`${baseId}-note`} name="note" rows={3} value={note} aria-invalid={!!errors.note} onChange={(event) => setNote(event.target.value)} />
+                </Field>
+                <div className="form-status" role="status" aria-live="polite">
+                  {message && status === 'error' && <p className="body-3">{message}</p>}
+                </div>
+                <Button variant="primary" size="md" type="submit" disabled={status === 'sending'}>
+                  {status === 'sending' ? 'Sending' : 'Send it'}
+                </Button>
+              </form>
+            )}
+          </div>
+          <div className="contact-col contact-book" id="scheduler">
+            {intent !== 'operations' && <p className="label option-label">Option B</p>}
+            {intent === 'operations' ? (
+              <h1 className="display">
+                <span className="line">Book a</span>
+                <span className="line">15 min call.</span>
+              </h1>
+            ) : (
+              <h2 className="display">
+                <span className="line">Book a</span>
+                <span className="line">15 min call.</span>
+              </h2>
+            )}
+            <p className="body-3">Talk it through with an engineer.</p>
+            <div className="scheduler">
+              <iframe
+                className="cal-frame"
+                title="Book a 15 minute call with Exergy"
+                src={`${schedulerUrl}&embed=true&theme=${effectiveTheme}`}
+              />
+              <a className="see scheduler-link" href={schedulerUrl}>Open the scheduler</a>
+            </div>
+            <Button variant="ink" size="md" href={schedulerUrl}>Pick a time</Button>
+          </div>
+        </div>
+        <div className="band-art">
+          <Plate
+            slug="cta-rooftops"
+            plain
+            ratio="ratio-21-8"
+            sizes="100vw"
+            alt="Copperplate engraving of brick rooftops with solar arrays and a city beyond, under an open sky."
+          />
+        </div>
+      </section>
+    </>
+  )
+}
