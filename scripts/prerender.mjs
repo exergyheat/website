@@ -17,7 +17,7 @@ execSync('npx vite build --ssr src/entry-server.tsx --outDir dist-ssr --logLevel
 
 const { render } = await import(path.join(ssrOut, 'entry-server.js'))
 
-const routes = ['/', '/commercial', '/partners', '/operations', '/about', '/contact', '/privacy-policy']
+const routes = ['/', '/commercial', '/homes', '/homes/apply', '/industry', '/operations', '/open-tools', '/about', '/contact', '/privacy-policy']
 
 const template = fs.readFileSync(path.join(dist, 'index.html'), 'utf8')
 const SEO_BLOCK = /<!-- seo:start[\s\S]*?<!-- seo:end -->/

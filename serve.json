@@ -1,5 +1,7 @@
 {
   "redirects": [
+    { "source": "/partners", "destination": "/industry", "type": 301 },
+    { "source": "/apply", "destination": "/homes/apply", "type": 301 },
     { "source": "/products", "destination": "/", "type": 301 },
     { "source": "/services", "destination": "/commercial", "type": 301 },
     { "source": "/learn", "destination": "/", "type": 301 },

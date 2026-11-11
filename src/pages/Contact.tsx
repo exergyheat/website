@@ -1,10 +1,11 @@
-import { cloneElement, isValidElement, useEffect, useId, useState, type FormEvent, type ReactElement, type ReactNode } from 'react'
-import { useSearchParams } from 'react-router-dom'
+import { useEffect, useId, useState, type FormEvent } from 'react'
+import { Link, Navigate, useSearchParams } from 'react-router-dom'
 import { useTheme } from '../theme'
 import { Button } from '../components/Button'
+import { Field } from '../components/Field'
 import { Plate } from '../components/Plate'
 import { Seo } from '../components/Seo'
-import { BOOKING_URL } from '../lib/site'
+import { bookingUrl, FALLBACK_TIME_ZONE, visitorTimeZone } from '../lib/site'
 import { submitLead, type Intent } from '../lib/submitLead'
 
 const BUILDING_TYPES = ['Office', 'Warehouse', 'Multifamily', 'Retail', 'Industrial', 'Mixed use', 'Other'] as const
@@ -13,7 +14,6 @@ const CHIPS: { intent: Intent; label: string }[] = [
   { intent: 'owner', label: 'Commercial building' },
   { intent: 'manufacturer', label: 'Hardware partner' },
   { intent: 'operations', label: 'Operations help' },
-  { intent: 'homeowner', label: 'Homeowner pilot' },
 ]
 
 const SOLAR = [
@@ -28,26 +28,12 @@ function intentFromQuery(value: string | null): Intent {
       return 'manufacturer'
     case 'operations':
       return 'operations'
-    case 'pilot':
-      return 'homeowner'
     default:
       return 'owner'
   }
 }
 
 const EMAIL = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
-const FALLBACK_TIME_ZONE = 'America/Denver'
-
-function visitorTimeZone() {
-  try {
-    const zone = Intl.DateTimeFormat().resolvedOptions().timeZone
-    if (!zone) return FALLBACK_TIME_ZONE
-    Intl.DateTimeFormat('en-US', { timeZone: zone }).format()
-    return zone
-  } catch {
-    return FALLBACK_TIME_ZONE
-  }
-}
 
 export default function Contact() {
   const [params] = useSearchParams()
@@ -77,10 +63,13 @@ export default function Contact() {
     setTimeZone(visitorTimeZone())
   }, [])
 
-  const schedulerUrl = `${BOOKING_URL}?cal.tz=${encodeURIComponent(timeZone)}`
+  const schedulerUrl = bookingUrl(timeZone)
 
-  const buildingDetails = intent === 'owner' || intent === 'homeowner'
   const owner = intent === 'owner'
+
+  if (params.get('intent') === 'pilot') {
+    return <Navigate to="/homes/apply" replace />
+  }
 
   async function onSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault()
@@ -105,9 +94,9 @@ export default function Contact() {
     setMessage('')
     const fields: Record<string, string> = { location: city.trim(), note: note.trim() }
     if (buildingType) fields.buildingType = buildingType
-    if (buildingDetails && size.trim()) fields.size = size.trim()
-    if (buildingDetails && utilityCost.trim()) fields.utilityCost = utilityCost.trim()
-    if (buildingDetails && solar) fields.solar = solar
+    if (owner && size.trim()) fields.size = size.trim()
+    if (owner && utilityCost.trim()) fields.utilityCost = utilityCost.trim()
+    if (owner && solar) fields.solar = solar
 
     const result = await submitLead({
       intent,
@@ -143,12 +132,6 @@ export default function Contact() {
             )}
             {intent === 'owner' && (
               <p className="body-3">Find out what your building could earn. Tell us about the heat you buy and whether you have solar, or plan to.</p>
-            )}
-            {intent === 'homeowner' && (
-              <>
-                <p className="body-3">A home can use the same kind of energy system, and the software that runs it. It chooses between the original heat source, miner heat, solar, and mining when that pays, as often as the house calls for, up to real time.</p>
-                <p className="caption hint">The pilot is application only. We read every note, and we cannot take every home.</p>
-              </>
             )}
             {intent === 'manufacturer' && (
               <p className="body-3">Tell us what you make and what you want help with.</p>
@@ -187,7 +170,7 @@ export default function Contact() {
                     <input id={`${baseId}-city`} name="city" autoComplete="address-level2" value={city} aria-invalid={!!errors.city} onChange={(event) => setCity(event.target.value)} />
                   </Field>
                 </div>
-                {buildingDetails && (
+                {owner && (
                   <div className="form-grid two">
                     <Field id={`${baseId}-size`} label="Building size" hint="Square feet, or a short description." error={errors.size}>
                       <input id={`${baseId}-size`} name="size" value={size} aria-invalid={!!errors.size} onChange={(event) => setSize(event.target.value)} />
@@ -197,7 +180,7 @@ export default function Contact() {
                     </Field>
                   </div>
                 )}
-                {buildingDetails && (
+                {owner && (
                   <fieldset className="plain" id={`${baseId}-solar`} tabIndex={-1}>
                     <legend id={solarLabel} className="label">Solar</legend>
                     <div className="chips" role="radiogroup" aria-labelledby={solarLabel} aria-describedby={errors.solar ? `${baseId}-solar-error` : undefined}>
@@ -219,19 +202,22 @@ export default function Contact() {
                 )}
                 <fieldset className="plain">
                   <legend id={intentLabel} className="label">What are you trying to do?</legend>
-                  <div className="chips" role="radiogroup" aria-labelledby={intentLabel}>
-                    {CHIPS.map((chip) => (
-                      <label className="chip body-3" key={chip.intent}>
-                        <input
-                          type="radio"
-                          name="intent"
-                          value={chip.intent}
-                          checked={intent === chip.intent}
-                          onChange={() => setIntent(chip.intent)}
-                        />
-                        {chip.label}
-                      </label>
-                    ))}
+                  <div className="chips">
+                    <div className="chips" role="radiogroup" aria-labelledby={intentLabel}>
+                      {CHIPS.map((chip) => (
+                        <label className="chip body-3" key={chip.intent}>
+                          <input
+                            type="radio"
+                            name="intent"
+                            value={chip.intent}
+                            checked={intent === chip.intent}
+                            onChange={() => setIntent(chip.intent)}
+                          />
+                          {chip.label}
+                        </label>
+                      ))}
+                    </div>
+                    <Link className="chip body-3" to="/homes/apply">Homeowner pilot</Link>
                   </div>
                 </fieldset>
                 <Field id={`${baseId}-note`} label="Message" error={errors.note}>
@@ -282,34 +268,5 @@ export default function Contact() {
         </div>
       </section>
     </>
-  )
-}
-
-function Field({
-  id,
-  label,
-  hint,
-  error,
-  children,
-}: {
-  id: string
-  label: string
-  hint?: string
-  error?: string
-  children: ReactNode
-}) {
-  const described = [hint ? `${id}-hint` : '', error ? `${id}-error` : ''].filter(Boolean).join(' ')
-  const control = isValidElement(children)
-    ? cloneElement(children as ReactElement<{ 'aria-describedby'?: string }>, {
-        'aria-describedby': described || undefined,
-      })
-    : children
-  return (
-    <div className="field">
-      <label className="label" htmlFor={id}>{label}</label>
-      {control}
-      {hint && <p className="caption hint" id={`${id}-hint`}>{hint}</p>}
-      {error && <p className="caption field-error" id={`${id}-error`}>{error}</p>}
-    </div>
   )
 }

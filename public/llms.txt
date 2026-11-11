@@ -1,13 +1,16 @@
 # Exergy
 
-> Exergy (Denver, CO) adds a monetization path so a building can help pay for its own energy. Commercial work is the energy system and the software that runs it. Partners work gets hardware into buildings that need it. Operations is AI and operations consulting, separate from the energy systems. The feasibility check is free. Exergy does not sell hardware.
+> Exergy (Denver, CO) adds a way to earn on site so a building can help pay for its own energy. Commercial work is for building owners and operators. Homes is an alpha pilot, application only. Industry is for companies building in this space. Operations is AI and operations consulting that helps optimize how a business runs. Open tools can be used with Exergy, or without Exergy. The feasibility check is free. Exergy does not sell hardware.
 
 ## Pages
 
 - [Home](https://exergyheat.com/): your building wastes useful energy; we put it to work
 - [Commercial](https://exergyheat.com/commercial): an energy bill that can offset itself
-- [Partners](https://exergyheat.com/partners): a new reason buildings want your machines
+- [Homes](https://exergyheat.com/homes): for homeowners who want to mine at home
+- [Apply](https://exergyheat.com/homes/apply): apply for the homeowner pilot
+- [Industry](https://exergyheat.com/industry): building something for this industry
 - [Operations](https://exergyheat.com/operations): AI and operations consulting that helps optimize how a business runs
+- [Open Tools](https://exergyheat.com/open-tools): it doesn't depend on us
 - [About](https://exergyheat.com/about): waste is optional
 - [Contact](https://exergyheat.com/contact): a free feasibility check, or a 15 minute call
 - [Privacy policy](https://exergyheat.com/privacy-policy)
@@ -15,7 +18,6 @@
 ## Elsewhere
 
 - [Calculators](https://calc.exergyheat.com)
-- [Home Assistant](https://github.com/exergyheat): public integrations until a dedicated URL is provided
 - [GitHub](https://github.com/exergyheat)
 - [Book a 15 min call](https://cal.com/tylerkstevens)
 - Email: contact@exergyheat.com

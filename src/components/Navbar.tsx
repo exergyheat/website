@@ -42,7 +42,12 @@ export default function Navbar() {
         <div className="header-end">
           <nav className="nav-desktop" aria-label="Primary">
             {NAV.map((item) => (
-              <NavLink key={item.to} to={item.to} className="nav-link label">
+              <NavLink
+                key={item.to}
+                to={item.to}
+                end
+                className={item.featured ? 'nav-link label is-featured' : 'nav-link label'}
+              >
                 {item.label}
               </NavLink>
             ))}
@@ -89,7 +94,12 @@ export default function Navbar() {
         <div className="menu-inner">
           <nav aria-label="Mobile" className="menu-links">
             {NAV.map((item) => (
-              <NavLink key={item.to} to={item.to} className="nav-link label">
+              <NavLink
+                key={item.to}
+                to={item.to}
+                end
+                className={item.featured ? 'nav-link label is-featured' : 'nav-link label'}
+              >
                 {item.label}
               </NavLink>
             ))}

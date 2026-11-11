@@ -1,5 +1,7 @@
 {
   "redirects": [
+    { "source": "/partners", "destination": "/industry", "permanent": true },
+    { "source": "/apply", "destination": "/homes/apply", "permanent": true },
     { "source": "/products", "destination": "/", "permanent": true },
     { "source": "/services", "destination": "/commercial", "permanent": true },
     { "source": "/learn", "destination": "/", "permanent": true },

@@ -11,9 +11,12 @@ import About from './pages/About'
 import Commercial from './pages/Commercial'
 import Contact from './pages/Contact'
 import Home from './pages/Home'
+import Homes from './pages/Homes'
+import HomesApply from './pages/HomesApply'
+import Industry from './pages/Industry'
 import NotFound from './pages/NotFound'
+import OpenTools from './pages/OpenTools'
 import Operations from './pages/Operations'
-import Partners from './pages/Partners'
 import PrivacyPolicy from './pages/PrivacyPolicy'
 
 export function Shell({ children }: { children: ReactNode }) {
@@ -44,12 +47,17 @@ export function AppRoutes() {
     <Routes>
       <Route path="/" element={<Home />} />
       <Route path="/commercial" element={<Commercial />} />
-      <Route path="/partners" element={<Partners />} />
+      <Route path="/homes" element={<Homes />} />
+      <Route path="/homes/apply" element={<HomesApply />} />
+      <Route path="/industry" element={<Industry />} />
       <Route path="/operations" element={<Operations />} />
+      <Route path="/open-tools" element={<OpenTools />} />
       <Route path="/about" element={<About />} />
       <Route path="/contact" element={<Contact />} />
       <Route path="/privacy-policy" element={<PrivacyPolicy />} />
 
+      <Route path="/partners" element={<Navigate to="/industry" replace />} />
+      <Route path="/apply" element={<Navigate to="/homes/apply" replace />} />
       <Route path="/products" element={<Navigate to="/" replace />} />
       <Route path="/services" element={<Navigate to="/commercial" replace />} />
       <Route path="/learn" element={<Navigate to="/" replace />} />

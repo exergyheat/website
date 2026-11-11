@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom'
 import { CtaPair } from '../components/Button'
 import { FacingCta } from '../components/FacingCta'
+import { Phases } from '../components/Phases'
 import { Plate } from '../components/Plate'
 import { Reveal } from '../components/Reveal'
 import { Seo } from '../components/Seo'
@@ -16,10 +17,10 @@ const SERVICES = [
   },
   {
     num: '02',
-    title: 'Manufacturers + partners',
-    body: 'A new reason buildings want your machines.',
-    href: '/partners',
-    link: 'See partners',
+    title: 'Industry',
+    body: 'Building something for this industry.',
+    href: '/industry',
+    link: 'See industry',
     lead: false,
   },
   {
@@ -32,12 +33,12 @@ const SERVICES = [
   },
 ] as const
 
-const PHASES = [
-  { num: '00', title: 'Feasibility check', body: 'Find out what your building could earn.', free: true },
-  { num: '01', title: 'Exergy audit', body: '', free: false },
-  { num: '02', title: 'Engineering coordination', body: '', free: false },
-  { num: '03', title: 'Procurement + commissioning', body: '', free: false },
-  { num: '04', title: 'Monitoring (optional)', body: '', free: false },
+const ROUTES = [
+  { num: '01', title: 'Commercial', body: 'For building owners and operators.', href: '/commercial', link: 'See commercial' },
+  { num: '02', title: 'Homes', body: 'For homeowners who want to mine at home.', href: '/homes', link: 'See homes' },
+  { num: '03', title: 'Industry', body: 'For companies building in this space.', href: '/industry', link: 'See industry' },
+  { num: '04', title: 'Operations', body: 'For businesses that want to run better.', href: '/operations', link: 'See operations' },
+  { num: '05', title: 'Open Tools', body: "It doesn't depend on us.", href: '/open-tools', link: 'See open tools' },
 ] as const
 
 const STATUS = [
@@ -46,18 +47,25 @@ const STATUS = [
   ['Wasted energy', '0'],
 ] as const
 
-const ASKS = [
-  ['Is this a crypto gimmick?', 'No. It is engineered equipment in a mechanical room. Mining is how the energy earns. It is not a billboard for bitcoin.'],
-  ['Is this more stuff to maintain?', 'It works with the systems you already have. The original boiler or furnace stays.'],
-  ['What about the risk?', 'The energy software only runs a path when it pays. If heating with your original source is cheaper, that is what the building does.'],
-] as const
+function Verse({ lines }: { lines: readonly string[] }) {
+  return (
+    <p className="body-3">
+      {lines.map((line, index) => (
+        <span key={line}>
+          {index > 0 && <br />}
+          {line}
+        </span>
+      ))}
+    </p>
+  )
+}
 
 export default function Home() {
   return (
     <>
       <Seo
-        title="Home"
-        description="Your building wastes useful energy. We put it to work. A monetization path so your building can help pay for its own energy."
+        title="Exergy"
+        description="Your building wastes useful energy. We put it to work. Earn on site, and keep 100% of the control."
       />
       <section className="hero" id="hero">
         <div className="hero-main">
@@ -101,13 +109,14 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="section">
+      <section className="section" id="earn">
         <Reveal>
           <div className="frame">
             <div className="prose">
-              <h2 className="heading-1">From a cost to an asset.</h2>
-              <p className="body-3">A building&apos;s energy bill is usually just a cost. Heat goes out. Extra power goes back to the utility, or sits there. The meter only runs one way.</p>
-              <p className="body-3">Our systems, with our software, add a monetization path. The same bill can earn, and offset itself. The building you already have. A new way for its energy to pay.</p>
+              <h2 className="heading-1">You've been paid for your energy before.</h2>
+              <p className="body-3">On someone else's terms.</p>
+              <p className="body-3">We add a way to earn on site.</p>
+              <p className="body-3">You keep 100% of the control.</p>
             </div>
           </div>
         </Reveal>
@@ -150,68 +159,70 @@ export default function Home() {
         </Reveal>
       </section>
 
-      <section className="section" id="story">
+      <section className="section" id="denver">
         <Reveal>
           <div className="frame">
             <div className="story-copy">
               <p className="label story-kicker">Field report 002 / Denver office</p>
-              <h2 className="display">
-                <span className="line">An office that heats</span>
-                <span className="line">itself with the work</span>
-                <span className="line">it already does.</span>
-              </h2>
-              <p className="body-3">Before. The boiler heats the rooms. The panels send extra power back to the utility for a weak credit, or go unused. The meter is a bill.</p>
-              <p className="body-3">After. Same boiler. Same panels. Same meter. We add an energy system and the software that runs it. The energy the building already pays for can earn, and offset the cost.</p>
-              <p className="body-3">Our Denver office is a working building, not a showroom. The machines in the mechanical room heat the rooms upstairs. The building has solar, and when there is extra power the system uses it on site.</p>
+              <blockquote className="pull">
+                <span className="bar" aria-hidden="true" />
+                <h2 className="display">
+                  <span className="line">Our office is</span>
+                  <span className="line">our demo site.</span>
+                </h2>
+              </blockquote>
+              <Verse lines={['The boiler and the furnace', 'both run on hashrate heat.']} />
+              <Verse lines={['Like a hybrid choosing gas or battery,', 'the building decides in real time', 'the cheapest way to run itself.']} />
+              <Verse lines={['Heat, sun, grid, mining.', 'Lowest operating cost, every second.']} />
             </div>
-            <div className="story-figs">
-              <figure className="figure">
-                <Plate
-                  slug="story-mechanical-room"
-                  ratio="ratio-4-3"
-                  sizes="(min-width: 1024px) 46vw, 100vw"
-                  alt="Copperplate engraving of a brick mechanical room with a central machine, pipes rising to the ceiling, and a factory window."
-                />
-                <figcaption className="caption">Fig. 1 — Mechanical room, Denver</figcaption>
-              </figure>
-              <figure className="figure">
-                <Plate
-                  slug="phases-blueprint"
-                  plain
-                  ratio="ratio-3-4"
-                  sizes="(min-width: 1024px) 40vw, 100vw"
-                  alt="Blueprint line drawing of a cabinet, a heat exchanger, and an air handler connected by supply and return pipes."
-                />
-                <figcaption className="caption">Fig. 5 — The path we add</figcaption>
-              </figure>
+            <figure className="figure story-fig">
+              <Plate
+                slug="story-mechanical-room"
+                ratio="ratio-4-3"
+                sizes="(min-width: 1024px) 46vw, 100vw"
+                alt="Copperplate engraving of a brick mechanical room with a central machine, pipes rising to the ceiling, and a factory window."
+              />
+              <figcaption className="caption">Fig. 1 — Mechanical room, Denver</figcaption>
+            </figure>
+          </div>
+        </Reveal>
+      </section>
+
+      <section className="section" id="how">
+        <Reveal>
+          <div className="frame">
+            <div className="prose">
+              <h2 className="heading-1">How it works.</h2>
+              <Verse lines={['Computing that earns.']} />
+              <Verse lines={['Bitcoin mining turns electricity into revenue,', 'and every watt comes back out as heat.']} />
+              <Verse lines={['Need the heat? It warms the building.', "Don't? It goes outside.", 'Either way, the energy pays.']} />
+              <p className="body-3 quiet">Engineers in Denver. Open source first.</p>
             </div>
           </div>
         </Reveal>
       </section>
 
-      <section className="section">
+      <section className="section" id="router">
         <Reveal>
           <div className="frame">
-            <div className="prose">
-              <h2 className="heading-1">Three things people ask.</h2>
-              {ASKS.map(([question, answer]) => (
-                <div className="qa" key={question}>
-                  <p className="body-2">{question}</p>
-                  <p className="body-3">{answer}</p>
-                </div>
+            <div className="services-head">
+              <h2 className="heading-1">Which one are you?</h2>
+            </div>
+            <div className="index">
+              {ROUTES.map((row) => (
+                <article className="index-row" key={row.num}>
+                  <p className="index-num">{row.num}</p>
+                  <div className="index-copy">
+                    <h3 className="heading-3">
+                      <Link to={row.href}>{row.title}</Link>
+                    </h3>
+                    <p className="body-3">{row.body}</p>
+                  </div>
+                  <Link className="see" to={row.href}>
+                    {row.link} <span aria-hidden="true">→</span>
+                  </Link>
+                </article>
               ))}
-            </div>
-          </div>
-        </Reveal>
-      </section>
-
-      <section className="section">
-        <Reveal>
-          <div className="frame">
-            <div className="prose">
-              <h2 className="heading-1">Why believe a word of this.</h2>
-              <p className="body-3">We are engineers in Denver. Open source first.</p>
-              <p className="body-3">A mixed-use building in Colorado is underway.</p>
             </div>
           </div>
         </Reveal>
@@ -219,20 +230,7 @@ export default function Home() {
 
       <section className="section" id="phases">
         <Reveal>
-          <div className="frame">
-            <h2 className="heading-1 phases-title">How it starts.</h2>
-            <div className="phases phases-full">
-              {PHASES.map((phase) => (
-                <article className="phase" key={phase.num}>
-                  <p className="index-num">{phase.num}</p>
-                  <h3 className="heading-4">{phase.title}</h3>
-                  {phase.body ? <p className="body-3">{phase.body}</p> : <span />}
-                  {phase.free ? <span className="badge button-sm">Free</span> : <span />}
-                </article>
-              ))}
-            </div>
-            <p className="label phase-foot">Each phase is its own agreement / stop after any phase</p>
-          </div>
+          <Phases plate />
         </Reveal>
       </section>
 

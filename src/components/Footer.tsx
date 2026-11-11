@@ -6,7 +6,8 @@ import { Tagline } from './Tagline'
 
 const WORK = [
   { to: '/commercial', label: 'Commercial' },
-  { to: '/partners', label: 'Partners' },
+  { to: '/homes', label: 'Homes' },
+  { to: '/industry', label: 'Industry' },
   { to: '/operations', label: 'Operations' },
 ]
 
@@ -16,16 +17,15 @@ const COMPANY = [
 ]
 
 const TOOLS = [
-  { href: LINKS.calculators, label: 'Calculators' },
-  { href: LINKS.homeAssistant, label: 'Home Assistant' },
-  { href: LINKS.github, label: 'GitHub' },
+  { kind: 'internal' as const, to: '/open-tools', label: 'Open Tools' },
+  { kind: 'external' as const, href: LINKS.calculators, label: 'Calculators' },
+  { kind: 'external' as const, href: LINKS.github, label: 'GitHub' },
 ]
 
 export default function Footer() {
   const { pathname } = useLocation()
   const home = pathname === '/'
   const contact = pathname === '/contact'
-  const operations = pathname === '/operations'
 
   if (contact) {
     return (
@@ -78,26 +78,27 @@ export default function Footer() {
             <ul>
               {TOOLS.map((item) => (
                 <li key={item.label}>
-                  <a className="body-3" href={item.href} rel="noopener noreferrer">{item.label}</a>
+                  {item.kind === 'internal' ? (
+                    <Link to={item.to} className="body-3">{item.label}</Link>
+                  ) : (
+                    <a className="body-3" href={item.href} rel="noopener noreferrer">{item.label}</a>
+                  )}
                 </li>
               ))}
             </ul>
           </div>
           <div>
-            <p className="label">Homeowner?</p>
             <ul>
-              <li><Link to="/contact?intent=pilot" className="body-3">Apply for the pilot</Link></li>
+              <li><Link to="/homes/apply" className="body-3">Homeowner? Apply for the pilot</Link></li>
             </ul>
             <p className="body-3 homeowner-note">Homes can use the same kind of energy system, and the software that runs it. Application only.</p>
           </div>
         </nav>
-        {!operations && (
-          <div className="foot-cta">
-            <Button variant="primary" size="md" to="/contact?intent=feasibility">
-              Get a free feasibility check
-            </Button>
-          </div>
-        )}
+        <div className="foot-cta">
+          <Button variant="primary" size="md" to="/contact?intent=feasibility">
+            Get a free feasibility check
+          </Button>
+        </div>
       </div>
       <div className="legal label">
         <p>© 2026 Exergy — Denver, CO — Open source first</p>

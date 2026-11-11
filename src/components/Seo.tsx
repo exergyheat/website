@@ -12,7 +12,7 @@ export function Seo({
   noindex?: boolean
 }) {
   const { pathname } = useLocation()
-  const full = `${title} | Exergy`
+  const full = title === 'Exergy' ? 'Exergy' : `${title} | Exergy`
   const canonical = `${SITE_URL}${pathname === '/' ? '/' : pathname}`
 
   return (
